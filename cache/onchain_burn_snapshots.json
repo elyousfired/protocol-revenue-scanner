@@ -1,0 +1,295 @@
+{
+  "updatedAt": 1790381937053,
+  "chains": {
+    "solana": {
+      "JUP": {
+        "symbol": "JUP",
+        "mintOrCoinType": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+        "initialSupply": 10000000000,
+        "firstSeenAt": 1790381937053,
+        "snapshots": [
+          {
+            "timestamp": 1790381937053,
+            "currentSupply": 6861486573,
+            "burnedTokens": 3138513427
+          }
+        ]
+      },
+      "RAY": {
+        "symbol": "RAY",
+        "mintOrCoinType": "4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R",
+        "initialSupply": 555000000,
+        "firstSeenAt": 1790381937053,
+        "snapshots": [
+          {
+            "timestamp": 1790381937053,
+            "currentSupply": 554997439,
+            "burnedTokens": 54822561
+          }
+        ]
+      },
+      "BONK": {
+        "symbol": "BONK",
+        "mintOrCoinType": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+        "initialSupply": 100000000000000,
+        "firstSeenAt": 1790381937053,
+        "snapshots": [
+          {
+            "timestamp": 1790381937053,
+            "currentSupply": 87994383525104,
+            "burnedTokens": 12005616474896
+          }
+        ]
+      },
+      "ORCA": {
+        "symbol": "ORCA",
+        "mintOrCoinType": "orcaEKTdK7LKz57vaAYr9QeNsVEPfiu6QeMU1kektZE",
+        "initialSupply": 100000000,
+        "firstSeenAt": 1790381937053,
+        "snapshots": [
+          {
+            "timestamp": 1790381937053,
+            "currentSupply": 74999534,
+            "burnedTokens": 25000466
+          }
+        ]
+      },
+      "MPLX": {
+        "symbol": "MPLX",
+        "mintOrCoinType": "METAewgxyPbgwsseH8T16a39CQ5VyVxZi9zXiDPY18m",
+        "initialSupply": 1000000000,
+        "firstSeenAt": 1790381937053,
+        "snapshots": [
+          {
+            "timestamp": 1790381937053,
+            "currentSupply": 999981374,
+            "burnedTokens": 42518626
+          }
+        ]
+      },
+      "JTO": {
+        "symbol": "JTO",
+        "mintOrCoinType": "jtojtomepa8beP8AuQc6eXt5FriJwfFMwQx2v2f9mCL",
+        "initialSupply": 1000000000,
+        "firstSeenAt": 1790381937053,
+        "snapshots": [
+          {
+            "timestamp": 1790381937053,
+            "currentSupply": 986522479,
+            "burnedTokens": 13477521
+          }
+        ]
+      },
+      "KMNO": {
+        "symbol": "KMNO",
+        "mintOrCoinType": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+        "initialSupply": 10000000000,
+        "firstSeenAt": 1790381937053,
+        "snapshots": [
+          {
+            "timestamp": 1790381937053,
+            "currentSupply": 9999956793,
+            "burnedTokens": 43207
+          }
+        ]
+      },
+      "MNDE": {
+        "symbol": "MNDE",
+        "mintOrCoinType": "MNDEFzGvMt87ueuHvVU9VcTqsAP5b3fTGPsHuuPA5ey",
+        "initialSupply": 1000000000,
+        "firstSeenAt": 1790381937053,
+        "snapshots": [
+          {
+            "timestamp": 1790381937053,
+            "currentSupply": 699997226,
+            "burnedTokens": 300002774
+          }
+        ]
+      },
+      "CLOUD": {
+        "symbol": "CLOUD",
+        "mintOrCoinType": "CLoUDKc4Ane7HeQcPpE3YHnznRxhMimJ4MyaUqyHFzAu",
+        "initialSupply": 1000000000,
+        "firstSeenAt": 1790381937053,
+        "snapshots": [
+          {
+            "timestamp": 1790381937053,
+            "currentSupply": 999991440,
+            "burnedTokens": 8560
+          }
+        ]
+      },
+      "DRIFT": {
+        "symbol": "DRIFT",
+        "mintOrCoinType": "DriFtupJYLTosbwoN8koMbEYSx54aFAVLddWsbksjwg7",
+        "initialSupply": 1000000000,
+        "firstSeenAt": 1790381937053,
+        "snapshots": [
+          {
+            "timestamp": 1790381937053,
+            "currentSupply": 999998363,
+            "burnedTokens": 1637
+          }
+        ]
+      },
+      "RENDER": {
+        "symbol": "RENDER",
+        "mintOrCoinType": "rndrizKT3MK1iimdxRdWabcF7Zg7AR5T4nud4EkHBof",
+        "initialSupply": 536870912,
+        "firstSeenAt": 1790381937053,
+        "snapshots": [
+          {
+            "timestamp": 1790381937053,
+            "currentSupply": 486168174,
+            "burnedTokens": 50702738
+          }
+        ]
+      },
+      "HNT": {
+        "symbol": "HNT",
+        "mintOrCoinType": "hntyVP6YFm1Hg25TN9WGLqM12b8TQmcknKrdu1oxWux",
+        "initialSupply": 223000000,
+        "firstSeenAt": 1790381937053,
+        "snapshots": [
+          {
+            "timestamp": 1790381937053,
+            "currentSupply": 191846407,
+            "burnedTokens": 31153593
+          }
+        ]
+      },
+      "PYTH": {
+        "symbol": "PYTH",
+        "mintOrCoinType": "HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3",
+        "initialSupply": 10000000000,
+        "firstSeenAt": 1790381937053,
+        "snapshots": [
+          {
+            "timestamp": 1790381937053,
+            "currentSupply": 9999959386,
+            "burnedTokens": 40614
+          }
+        ]
+      },
+      "MET": {
+        "symbol": "MET",
+        "mintOrCoinType": "METvsvVRapdj9cFLzq4Tr43xK4tAjQfwX76z3n6mWQL",
+        "initialSupply": 1000000000,
+        "firstSeenAt": 1790381937053,
+        "snapshots": [
+          {
+            "timestamp": 1790381937053,
+            "currentSupply": 997732516,
+            "burnedTokens": 2267484
+          }
+        ]
+      },
+      "ORE": {
+        "symbol": "ORE",
+        "mintOrCoinType": "oreoU2P8bN6jkk3jbaiVxYnG1dCXcYxwhwyK9jSybcp",
+        "initialSupply": 681353,
+        "firstSeenAt": 1790381937053,
+        "snapshots": [
+          {
+            "timestamp": 1790381937053,
+            "currentSupply": 496912,
+            "burnedTokens": 184441
+          }
+        ]
+      },
+      "DBR": {
+        "symbol": "DBR",
+        "mintOrCoinType": "DBRiDgJAMsM95moTzJs7M9LnkGErpbv9v6CUR1DXnUu5",
+        "initialSupply": 10000000000,
+        "firstSeenAt": 1790381937053,
+        "snapshots": [
+          {
+            "timestamp": 1790381937053,
+            "currentSupply": 9999946812,
+            "burnedTokens": 53188
+          }
+        ]
+      },
+      "STONK": {
+        "symbol": "STONK",
+        "mintOrCoinType": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
+        "initialSupply": 1000000000,
+        "firstSeenAt": 1790381937053,
+        "snapshots": [
+          {
+            "timestamp": 1790381937053,
+            "currentSupply": 817665695,
+            "burnedTokens": 182334305
+          }
+        ]
+      },
+      "CARDS": {
+        "symbol": "CARDS",
+        "mintOrCoinType": "CARDSccUMFKoPRZxt5vt3ksUbxEFEcnZ3H2pd3dKxYjp",
+        "initialSupply": 2000000000,
+        "firstSeenAt": 1790381937053,
+        "snapshots": [
+          {
+            "timestamp": 1790381937053,
+            "currentSupply": 1977216207,
+            "burnedTokens": 22783793
+          }
+        ]
+      },
+      "GP": {
+        "symbol": "GP",
+        "mintOrCoinType": "31k88G5Mq7ptbRDf3AM13HAq6wRQHXHikR8hik7wPygk",
+        "initialSupply": 65000000,
+        "firstSeenAt": 1790381937053,
+        "snapshots": [
+          {
+            "timestamp": 1790381937053,
+            "currentSupply": 58648953,
+            "burnedTokens": 6351047
+          }
+        ]
+      }
+    },
+    "sui": {
+      "DEEP": {
+        "symbol": "DEEP",
+        "mintOrCoinType": "0xdeeb7a4662eec9f2f3def03fb937a663dddaa2e215b8078a284d026b7946c270::deep::DEEP",
+        "initialSupply": 10000000000,
+        "firstSeenAt": 1790381933063,
+        "snapshots": [
+          {
+            "timestamp": 1790381933063,
+            "currentSupply": 9965231046,
+            "burnedTokens": 34768954
+          }
+        ]
+      },
+      "TURBOS": {
+        "symbol": "TURBOS",
+        "mintOrCoinType": "0x5d1f47ea69bb0de31c313d7acf89b890dbb8991ea8e03c6c355171f84bb1ba4a::turbos::TURBOS",
+        "initialSupply": 10000000000,
+        "firstSeenAt": 1790381933065,
+        "snapshots": [
+          {
+            "timestamp": 1790381933065,
+            "currentSupply": 9815000000,
+            "burnedTokens": 185000000
+          }
+        ]
+      },
+      "FAITH": {
+        "symbol": "FAITH",
+        "mintOrCoinType": "0x965c6cb391f2e240cea5f43a10de3495004c78c057d4c233159205c40c7e03e3::faith::FAITH",
+        "initialSupply": 10827069,
+        "firstSeenAt": 1790381933069,
+        "snapshots": [
+          {
+            "timestamp": 1790381933069,
+            "currentSupply": 10827068,
+            "burnedTokens": 1
+          }
+        ]
+      }
+    }
+  }
+}

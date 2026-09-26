@@ -1,0 +1,12 @@
+{
+  "name": "protocol-revenue-scanner",
+  "version": "1.0.0",
+  "description": "Scans DefiLlama for all blockchain protocols and their revenues",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "scan": "node src/scanner.js"
+  },
+  "dependencies": {}
+}
