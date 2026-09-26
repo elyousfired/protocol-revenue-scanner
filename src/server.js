@@ -45,7 +45,8 @@ export async function handleRequest(req, res) {
     // API 1: Financial Terminal Protocols (Yield, Revenues, Fees)
     // -------------------------------------------------------------
     if (pathname === '/api/protocols' && req.method === 'GET') {
-      const data = await scanProtocols(false);
+      const forceRefresh = reqUrl.searchParams.get('refresh') === 'true';
+      const data = await scanProtocols(forceRefresh);
       let protocols = data.protocols.filter(p => isProtocolTokenVerified(p, true));
 
       // 1. Search filter
@@ -353,8 +354,9 @@ export async function handleRequest(req, res) {
       const scope = reqUrl.searchParams.get('scope') || defaultScope;
       const limit = parseInt(reqUrl.searchParams.get('limit') || '50', 10);
       const timeframe = reqUrl.searchParams.get('timeframe') || '7d';
+      const force = reqUrl.searchParams.get('refresh') === 'true';
 
-      const leaderboardData = await getLeaderboard({ category, scope, limit, timeframe });
+      const leaderboardData = await getLeaderboard({ category, scope, limit, timeframe, force });
       res.writeHead(200, { 
         'Content-Type': 'application/json',
         'Cache-Control': 'no-cache, no-store, must-revalidate'

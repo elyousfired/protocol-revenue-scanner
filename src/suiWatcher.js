@@ -18,7 +18,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const CACHE_DIR = path.join(__dirname, '..', 'cache');
 const SUI_CACHE_FILE = path.join(CACHE_DIR, 'sui_ecosystem.json');
+const TMP_SUI_CACHE_FILE = path.join('/tmp', 'sui_ecosystem.json');
 const CACHE_TTL_MS = 10 * 60 * 1000; // 10 minutes
+let memorySuiCache = null;
 
 const SUI_RPC = 'https://mainnet.sui.rpcpool.com';
 
@@ -310,14 +312,20 @@ async function suiRpcCall(method, params = []) {
 
 export async function getSuiEcosystem(force = false) {
   if (!force) {
-    try {
-      const raw = await fs.readFile(SUI_CACHE_FILE, 'utf-8');
-      const cached = JSON.parse(raw);
-      if (process.env.VERCEL || (cached.lastUpdated && (Date.now() - new Date(cached.lastUpdated).getTime() < CACHE_TTL_MS))) {
-        return cached;
+    if (memorySuiCache?.lastUpdated && (Date.now() - new Date(memorySuiCache.lastUpdated).getTime() < CACHE_TTL_MS)) {
+      return memorySuiCache;
+    }
+    for (const candidateFile of [TMP_SUI_CACHE_FILE, SUI_CACHE_FILE]) {
+      try {
+        const raw = await fs.readFile(candidateFile, 'utf-8');
+        const cached = JSON.parse(raw);
+        if (cached.lastUpdated && (Date.now() - new Date(cached.lastUpdated).getTime() < CACHE_TTL_MS)) {
+          memorySuiCache = cached;
+          return cached;
+        }
+      } catch {
+        // try next cache candidate
       }
-    } catch {
-      // cache miss
     }
   }
 
@@ -791,12 +799,19 @@ export async function getSuiEcosystem(force = false) {
     }
   };
 
+  memorySuiCache = payload;
+  const serialized = JSON.stringify(payload, null, 2);
   try {
     await fs.mkdir(CACHE_DIR, { recursive: true });
-    await fs.writeFile(SUI_CACHE_FILE, JSON.stringify(payload, null, 2), 'utf-8');
+    await fs.writeFile(SUI_CACHE_FILE, serialized, 'utf-8');
     console.log(`[SuiWatcher] Successfully saved multi-timeframe Sui ecosystem telemetry to ${SUI_CACHE_FILE}`);
   } catch (err) {
     console.warn('[SuiWatcher] Failed to write cache:', err.message);
+  }
+  try {
+    await fs.writeFile(TMP_SUI_CACHE_FILE, serialized, 'utf-8');
+  } catch {
+    // ignore /tmp write warning on Windows
   }
 
   return payload;

@@ -20,7 +20,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const CACHE_DIR = path.join(__dirname, '..', 'cache');
 const SOLANA_CACHE_FILE = path.join(CACHE_DIR, 'solana_ecosystem.json');
+const TMP_SOLANA_CACHE_FILE = path.join('/tmp', 'solana_ecosystem.json');
 const CACHE_TTL_MS = 10 * 60 * 1000; // 10 minutes
+let memorySolanaCache = null;
 
 const SOLANA_RPC_ENDPOINTS = [
   'https://api.mainnet-beta.solana.com',
@@ -965,14 +967,20 @@ async function solanaRpcBatch(requests) {
 
 export async function getSolanaEcosystem(force = false) {
   if (!force) {
-    try {
-      const raw = await fs.readFile(SOLANA_CACHE_FILE, 'utf-8');
-      const cached = JSON.parse(raw);
-      if (process.env.VERCEL || (cached.lastUpdated && (Date.now() - new Date(cached.lastUpdated).getTime() < CACHE_TTL_MS))) {
-        return cached;
+    if (memorySolanaCache?.lastUpdated && (Date.now() - new Date(memorySolanaCache.lastUpdated).getTime() < CACHE_TTL_MS)) {
+      return memorySolanaCache;
+    }
+    for (const candidateFile of [TMP_SOLANA_CACHE_FILE, SOLANA_CACHE_FILE]) {
+      try {
+        const raw = await fs.readFile(candidateFile, 'utf-8');
+        const cached = JSON.parse(raw);
+        if (cached.lastUpdated && (Date.now() - new Date(cached.lastUpdated).getTime() < CACHE_TTL_MS)) {
+          memorySolanaCache = cached;
+          return cached;
+        }
+      } catch {
+        // try next cache candidate
       }
-    } catch {
-      // cache miss
     }
   }
 
@@ -1529,12 +1537,19 @@ export async function getSolanaEcosystem(force = false) {
     }
   };
 
+  memorySolanaCache = payload;
+  const serialized = JSON.stringify(payload, null, 2);
   try {
     await fs.mkdir(CACHE_DIR, { recursive: true });
-    await fs.writeFile(SOLANA_CACHE_FILE, JSON.stringify(payload, null, 2), 'utf-8');
+    await fs.writeFile(SOLANA_CACHE_FILE, serialized, 'utf-8');
     console.log(`[SolanaWatcher] Saved live Solana ecosystem telemetry (${protocols.length} protocols across 8 sectors) to ${SOLANA_CACHE_FILE}`);
   } catch (err) {
     console.warn('[SolanaWatcher] Cache write warning:', err.message);
+  }
+  try {
+    await fs.writeFile(TMP_SOLANA_CACHE_FILE, serialized, 'utf-8');
+  } catch {
+    // ignore /tmp write warning on Windows
   }
 
   return payload;

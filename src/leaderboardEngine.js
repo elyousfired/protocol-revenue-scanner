@@ -485,7 +485,8 @@ export async function getLeaderboard({
   category = 'revenue',
   scope = 'all',
   limit = 50,
-  timeframe = '7d'
+  timeframe = '7d',
+  force = false
 } = {}) {
   const normCategory = (category || 'revenue').toLowerCase();
   const normScope = (scope || 'all').toLowerCase();
@@ -494,9 +495,9 @@ export async function getLeaderboard({
 
   // Load datasets
   const [globalScan, suiData, solanaData] = await Promise.all([
-    scanProtocols(false).catch(() => ({ protocols: [] })),
-    getSuiEcosystem(false).catch(() => ({ protocols: [] })),
-    normScope === 'solana' ? getSolanaEcosystem(false).catch(() => ({ protocols: [], whaleAnalytics: [], l1Chain: {} })) : Promise.resolve({ protocols: [], whaleAnalytics: [], l1Chain: {} })
+    scanProtocols(force).catch(() => ({ protocols: [] })),
+    getSuiEcosystem(force).catch(() => ({ protocols: [] })),
+    normScope === 'solana' ? getSolanaEcosystem(force).catch(() => ({ protocols: [], whaleAnalytics: [], l1Chain: {} })) : Promise.resolve({ protocols: [], whaleAnalytics: [], l1Chain: {} })
   ]);
 
   const suiProtocols = suiData.protocols || [];

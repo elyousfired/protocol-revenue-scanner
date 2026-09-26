@@ -8,7 +8,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const CACHE_DIR = path.join(__dirname, '..', 'cache');
 const CACHE_FILE = path.join(CACHE_DIR, 'protocols_data.json');
+const TMP_CACHE_FILE = path.join('/tmp', 'protocols_data.json');
 const CACHE_TTL_MS = 15 * 60 * 1000;
+let memoryScannerCache = null;
 
 async function fetchWithRetry(url, retries = 3, delay = 2000) {
   for (let i = 0; i < retries; i++) {
@@ -27,17 +29,21 @@ async function fetchWithRetry(url, retries = 3, delay = 2000) {
 export async function scanProtocols(force = false) {
   try {
     if (!force) {
-      try {
-        const cachedRaw = await fs.readFile(CACHE_FILE, 'utf-8');
-        const cached = JSON.parse(cachedRaw);
-        if (process.env.VERCEL || (cached.lastUpdated && (Date.now() - new Date(cached.lastUpdated).getTime() < CACHE_TTL_MS))) {
-          // Strictly filter to ensure no tokenless protocol slipped in
-          cached.protocols = cached.protocols.filter(p => isProtocolTokenVerified(p, true));
-          console.log(`[Scanner] Loaded from cache (${cached.protocols.length} verified tokenized protocols, updated at ${cached.lastUpdated})`);
-          return cached;
+      if (memoryScannerCache?.lastUpdated && (Date.now() - new Date(memoryScannerCache.lastUpdated).getTime() < CACHE_TTL_MS)) {
+        return memoryScannerCache;
+      }
+      for (const candidateFile of [TMP_CACHE_FILE, CACHE_FILE]) {
+        try {
+          const cachedRaw = await fs.readFile(candidateFile, 'utf-8');
+          const cached = JSON.parse(cachedRaw);
+          if (cached.lastUpdated && (Date.now() - new Date(cached.lastUpdated).getTime() < CACHE_TTL_MS)) {
+            cached.protocols = cached.protocols.filter(p => isProtocolTokenVerified(p, true));
+            memoryScannerCache = cached;
+            return cached;
+          }
+        } catch {
+          // try next cache candidate
         }
-      } catch (err) {
-        // Cache miss
       }
     }
 
@@ -252,17 +258,25 @@ export async function scanProtocols(force = false) {
       protocols
     };
 
+    memoryScannerCache = result;
+    const serialized = JSON.stringify(result, null, 2);
     try {
       await fs.mkdir(CACHE_DIR, { recursive: true });
-      await fs.writeFile(CACHE_FILE, JSON.stringify(result, null, 2), 'utf-8');
+      await fs.writeFile(CACHE_FILE, serialized, 'utf-8');
     } catch {
       // Ignore read-only filesystem warning in serverless environments
+    }
+    try {
+      await fs.writeFile(TMP_CACHE_FILE, serialized, 'utf-8');
+    } catch {
+      // Ignore /tmp write warning on Windows if /tmp doesn't exist
     }
     console.log(`[Scanner] Successfully indexed ${protocols.length} strictly verified tokenized protocols!`);
 
     return result;
   } catch (err) {
     console.error('[Scanner] Scan error:', err);
+    if (memoryScannerCache) return memoryScannerCache;
     try {
       const cachedRaw = await fs.readFile(CACHE_FILE, 'utf-8');
       return JSON.parse(cachedRaw);
