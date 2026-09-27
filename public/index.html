@@ -2818,7 +2818,8 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
                 <th class="py-3 px-4 text-right">24H Change</th>
                 <th class="py-3 px-4 text-right">24H Volume (USD)</th>
                 <th class="py-3 px-4 w-44">Category / Spot Share</th>
-                <th class="py-3 px-4 text-right">24H High / Low</th>
+                <th class="py-3 px-4 text-right">Vol/MC %</th>
+                  <th class="py-3 px-4 w-32">24H Range (Resist.)</th>
                 <th class="py-3 px-4 text-right">On-Chain 7D Rev</th>
               </tr>
             </thead>
@@ -3882,7 +3883,7 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
 
     async function loadContractsData() {
       const tbody = document.getElementById('contracts-tbody');
-      tbody.innerHTML = `<tr><td colspan="9" class="py-12 text-center text-slate-500 font-mono">Loading contracts directory...</td></tr>`;
+      tbody.innerHTML = `<tr><td colspan="10" class="py-12 text-center text-slate-500 font-mono">Loading contracts directory...</td></tr>`;
 
       try {
         const url = `/api/registry/protocols?chain=${encodeURIComponent(contractsChain)}&category=${encodeURIComponent(contractsCategory)}&search=${encodeURIComponent(contractsSearch)}&sortBy=${contractsSort}&page=${contractsPage}&limit=${contractsLimit}&onlyWithContract=true`;
@@ -3898,7 +3899,7 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
         document.getElementById('contracts-total-count').textContent = total.toLocaleString();
 
         if (protocols.length === 0) {
-          tbody.innerHTML = `<tr><td colspan="9" class="py-12 text-center text-slate-500 font-mono">No smart contracts found matching your filters.</td></tr>`;
+          tbody.innerHTML = `<tr><td colspan="10" class="py-12 text-center text-slate-500 font-mono">No smart contracts found matching your filters.</td></tr>`;
           document.getElementById('contracts-pagination-info').textContent = 'Showing 0 of 0 contracts';
           document.getElementById('contracts-pagination-controls').innerHTML = '';
           return;
@@ -3977,7 +3978,7 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
         `;
       } catch (err) {
         console.error('Error loading contracts data:', err);
-        tbody.innerHTML = `<tr><td colspan="9" class="py-12 text-center text-rose-400 font-mono">Failed to load directory: ${err.message}</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="10" class="py-12 text-center text-rose-400 font-mono">Failed to load directory: ${err.message}</td></tr>`;
       }
     }
 
@@ -4280,7 +4281,7 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
       if (refreshIcon) refreshIcon.classList.add('animate-spin');
 
       if (!suiEcosystemData) {
-        tbody.innerHTML = `<tr><td colspan="9" class="py-12 text-center text-slate-500 font-mono"><div class="flex items-center justify-center gap-2"><span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span> Loading Sui on-chain telemetry & Move protocols...</div></td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="10" class="py-12 text-center text-slate-500 font-mono"><div class="flex items-center justify-center gap-2"><span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span> Loading Sui on-chain telemetry & Move protocols...</div></td></tr>`;
       } else if (tbody) {
         tbody.style.opacity = '0.35';
         tbody.style.transition = 'opacity 0.2s ease';
@@ -4561,7 +4562,7 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
 
       } catch (err) {
         console.error('Failed to load Sui data:', err);
-        tbody.innerHTML = `<tr><td colspan="9" class="py-12 text-center text-rose-400 font-mono">Failed to load Sui telemetry: ${err.message}</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="10" class="py-12 text-center text-rose-400 font-mono">Failed to load Sui telemetry: ${err.message}</td></tr>`;
       } finally {
         if (refreshIcon) refreshIcon.classList.remove('animate-spin');
       }
@@ -5877,7 +5878,7 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
       if (!tbody) return;
 
       if (protocols.length === 0) {
-        tbody.innerHTML = '<tr><td colspan="9" class="py-12 text-center text-slate-500">No verified tokenized Solana protocols match your current sector/search filter.</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="10" class="py-12 text-center text-slate-500">No verified tokenized Solana protocols match your current sector/search filter.</td></tr>';
         return;
       }
 
@@ -6362,7 +6363,7 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
         btn.innerHTML = '<span class="animate-spin">⏳</span><span>Syncing Bybit...</span>';
       }
       if (!bybitDataStore && tbody) {
-        tbody.innerHTML = `<tr><td colspan="9" class="py-12 text-center text-slate-400 font-mono">Loading live Bybit V5 Spot Tickers &amp; Category Volume Flow...</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="10" class="py-12 text-center text-slate-400 font-mono">Loading live Bybit V5 Spot Tickers &amp; Category Volume Flow...</td></tr>`;
       }
 
       try {
@@ -6381,7 +6382,7 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
       } catch (err) {
         console.error('[BybitSpot] Error:', err);
         if (tbody) {
-          tbody.innerHTML = `<tr><td colspan="9" class="py-12 text-center text-rose-400 font-mono">Error loading Bybit Spot data: ${err.message}</td></tr>`;
+          tbody.innerHTML = `<tr><td colspan="10" class="py-12 text-center text-rose-400 font-mono">Error loading Bybit Spot data: ${err.message}</td></tr>`;
         }
         if (btn && force) {
           btn.innerHTML = '<span>🔄</span><span>Sync Bybit Spot</span>';
@@ -6695,7 +6696,7 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
       if (countBadge) countBadge.textContent = `${list.length} Tokens`;
 
       if (list.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="9" class="py-12 text-center text-slate-500 font-mono">No Bybit Spot tokens match this filter.</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="10" class="py-12 text-center text-slate-500 font-mono">No Bybit Spot tokens match this filter.</td></tr>`;
         return;
       }
 
