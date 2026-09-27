@@ -105,18 +105,18 @@ export const BYBIT_CATEGORIES = {
 // Curated token-to-category mapping for Bybit Spot assets
 const TOKEN_CATEGORY_MAP = {
   // Layer 1
-  BTC: 'l1', ETH: 'l1', SOL: 'l1', SUI: 'l1', XRP: 'rwa', ADA: 'l1', AVAX: 'l1',
+  BTC: 'l1', ETH: 'l1', SOL: 'l1', SUI: 'l1', XRP: 'rwa', ADAVAX: 'l1',
   TON: 'l1', DOT: 'l1', TRX: 'l1', APT: 'l1', SEI: 'l1', INJ: 'l1', TIA: 'l1',
-  ATOM: 'l1', KAS: 'l1', ALGO: 'rwa', FTM: 'l1', S: 'l1', SONIC: 'l1', BERA: 'l1',
-  MON: 'l1', KAVA: 'l1', EGLD: 'l1', MINA: 'l1', FLOW: 'l1', XTZ: 'l1', EOS: 'l1',
-  A: 'l1', IOTA: 'l1', NEO: 'l1', VET: 'l1', ZIL: 'l1', ONE: 'l1', CELO: 'l1',
+  ATOM: 'l1', KAALGO: 'rwa', FTM: 'l1', SONIC: 'l1', BERA: 'l1',
+  MON: 'gaming', KAVEGLD: 'l1', MINFLOW: 'l1', XTZ: 'l1', EOS: 'l1',
+  IOTNEO: 'l1', VET: 'l1', ZIL: 'l1', ONE: 'l1', CELO: 'l1',
   ROSE: 'l1', KSM: 'l1', ASTR: 'l1', GLMR: 'l1', CFX: 'l1', CKB: 'l1', CORE: 'l1',
-  ZETA: 'l1', MOVE: 'l1', INIT: 'l1', SOMI: 'l1', IP: 'l1', LTC: 'l1', BCH: 'l1',
+  ZETMOVE: 'l2', INIT: 'l1', IP: 'l1', LTC: 'l1', BCH: 'l1',
   ETC: 'l1', DOGE: 'memes', XLM: 'rwa', HBAR: 'rwa', FLR: 'l1', SGB: 'l1', XDC: 'rwa',
-  QTUM: 'l1', ICX: 'l1', ONT: 'l1', WAVES: 'l1', RVN: 'l1', XEC: 'l1', CSPR: 'l1',
-  XCH: 'l1', KLAY: 'l1', KAIA: 'l1', VTHO: 'l1', GAS: 'l1', LUNA: 'l1', LUNC: 'l1',
-  XPL: 'l1', CC: 'l1', GRAM: 'l1', PARTI: 'l1', DYM: 'l1', SUPRA: 'l1', MOVR: 'l1',
-  WEMIX: 'l1', KUB: 'l1', ETHW: 'l1', DIAM: 'l1', KII: 'l1', LAYER: 'l1', STABLE: 'l1',
+  QTUM: 'l1', ICX: 'l1', ONT: 'l1', WAVERVN: 'l1', XEC: 'l1', CSPR: 'l1',
+  XCH: 'l1', KLAY: 'l1', KAIVTHO: 'l1', GALUNLUNC: 'l1',
+  XPL: 'l1', GRAM: 'memes', PARTI: 'l1', DYM: 'l1', SUPRMOVR: 'l1',
+  WEMIX: 'l1', KUB: 'l1', ETHW: 'l1', DIAM: 'l1', KII: 'l1', LAYER: 'l2', STABLE: 'l1',
   NTRN: 'l1', XEM: 'l1',
 
   // Memes
@@ -141,12 +141,12 @@ const TOKEN_CATEGORY_MAP = {
   TAO: 'ai', FET: 'ai', NEAR: 'ai', ICP: 'ai', VIRTUAL: 'ai', AI16Z: 'ai',
   AIXBT: 'ai', ZEREBRO: 'ai', GRIFFAIN: 'ai', ARC: 'ai', SWARMS: 'ai', COOKIE: 'ai',
   CGPT: 'ai', PHB: 'ai', AGIX: 'ai', OCEAN: 'ai', ARKM: 'ai', WLD: 'ai', KAITO: 'ai',
-  GRASS: 'ai', IO: 'ai', ATH: 'ai', AKT: 'ai', AIOZ: 'ai', GLM: 'ai',
+  GRASS: 'ai', IO: 'ai', ATAKT: 'ai', AIOZ: 'ai', GLM: 'ai',
   NMR: 'ai', TRAC: 'ai', VANA: 'ai', SAHARA: 'ai', PAAL: 'ai', PRIME: 'ai',
   NFP: 'ai', AI: 'ai', SHELL: 'ai', REI: 'ai', NOS: 'ai', FLUX: 'ai',
   SPEC: 'ai', GTAI: 'ai', RSS3: 'ai', ORAI: 'ai', RLC: 'ai', CTXC: 'ai',
-  IQ: 'ai', ALI: 'ai', AITECH: 'ai', PROMPT: 'ai', NIL: 'ai', SIGN: 'ai',
-  VVV: 'ai', ALCH: 'ai', '0G': 'ai', FHE: 'ai', RECALL: 'ai', ROBO: 'ai',
+  IQ: 'ai', ALI: 'ai', AITECPROMPT: 'ai', NIL: 'ai', SIGN: 'ai',
+  VVV: 'ai', ALC'0G': 'ai', FHE: 'ai', RECALL: 'ai', ROBO: 'ai',
   SXT: 'ai', SENT: 'ai', ELSA: 'ai', CARV: 'ai', LMWR: 'ai', TA: 'ai',
   OPG: 'ai', NEWT: 'ai', H: 'ai',
 
@@ -206,8 +206,8 @@ const TOKEN_CATEGORY_MAP = {
   SCROLL: 'l2', SCR: 'l2', TAIKO: 'l2', LINEA: 'l2', ZRC: 'l2',
   BOBA: 'l2', LRC: 'l2', SKL: 'l2', CTSI: 'l2', CYBER: 'l2',
   MERL: 'l2', STX: 'l2', B2: 'l2', AZTEC: 'l2', SOON: 'l2',
-  ZKF: 'l2', AURORA: 'l2', MEGA: 'l2', CORN: 'l2', ERA: 'l2',
-  BREV: 'l2', PROVE: 'l2', LA: 'l2', ZAMA: 'l2', ZEN: 'l2',
+  ZKF: 'l2', AURORA: 'l2', CORN: 'l2', ERA: 'l2',
+  ZEN: 'l1',
 
   // Gaming, NFT & Metaverse
   GALA: 'gaming', SAND: 'gaming', MANA: 'gaming', AXS: 'gaming', APE: 'gaming',
