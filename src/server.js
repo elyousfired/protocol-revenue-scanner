@@ -479,7 +479,7 @@ export async function handleRequest(req, res) {
       const contentType = MIME_TYPES[ext] || 'application/octet-stream';
       const content = await fs.readFile(filePath);
 
-      res.writeHead(200, { 'Content-Type': contentType });
+      res.writeHead(200, { 'Content-Type': contentType, 'Cache-Control': ext === '.html' ? 'public, max-age=0, must-revalidate' : 'public, max-age=3600' });
       res.end(content);
     } catch (err) {
       res.writeHead(404, { 'Content-Type': 'text/plain' });
