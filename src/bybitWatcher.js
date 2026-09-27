@@ -1,0 +1,471 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { scanProtocols } from './scanner.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const CACHE_DIR = path.join(__dirname, '..', 'cache');
+const BYBIT_CACHE_FILE = path.join(CACHE_DIR, 'bybit_spot.json');
+const TMP_BYBIT_CACHE_FILE = path.join('/tmp', 'bybit_spot.json');
+const CACHE_TTL_MS = 3 * 60 * 1000; // 3 minutes live market TTL
+
+let memoryBybitCache = null;
+
+// Stablecoins and leveraged tokens to exclude from spot token rankings
+const EXCLUDED_BASE_SYMBOLS = new Set([
+  'USDC', 'FDUSD', 'USDE', 'DAI', 'TUSD', 'USDD', 'PYUSD', 'USDP', 'USD1', 'USDY', 'USDTB',
+  'RLUSD', 'USTC', 'USAT', 'USDS', 'USD0', 'FRAX', 'LUSD', 'GHO', 'DEUSD',
+  'EUR', 'EURC', 'EURT', 'BRZ', 'TRY', 'BRL'
+]);
+
+export const BYBIT_CATEGORIES = {
+  l1: {
+    id: 'l1',
+    name: 'Layer 1 Chains',
+    arabicLabel: 'شبكات الطبقة الأولى',
+    icon: '⛓️',
+    color: 'cyan',
+    description: 'Base layer blockchains & native gas tokens traded on Bybit Spot'
+  },
+  memes: {
+    id: 'memes',
+    name: 'Memes & Culture',
+    arabicLabel: 'عملات الميمز',
+    icon: '🐸',
+    color: 'amber',
+    description: 'High-velocity community meme tokens & viral cultural assets'
+  },
+  ai: {
+    id: 'ai',
+    name: 'AI & Autonomous Agents',
+    arabicLabel: 'الذكاء الاصطناعي',
+    icon: '🤖',
+    color: 'purple',
+    description: 'Artificial intelligence networks, LLM agents & decentralized machine learning'
+  },
+  defi: {
+    id: 'defi',
+    name: 'DeFi, DEX & Yield',
+    arabicLabel: 'التمويل اللامركزي',
+    icon: '🏦',
+    color: 'emerald',
+    description: 'Decentralized exchanges, lending markets, liquid staking & perp protocols'
+  },
+  launchpad: {
+    id: 'launchpad',
+    name: 'Launchpads & Exchange',
+    arabicLabel: 'منصات الإطلاق والتداول',
+    icon: '🚀',
+    color: 'pink',
+    description: 'Token launchpads, IDO ecosystems & exchange utility tokens'
+  },
+  rwa: {
+    id: 'rwa',
+    name: 'RWA & PayFi',
+    arabicLabel: 'الأصول الواقعية والمدفوعات',
+    icon: '🏛️',
+    color: 'teal',
+    description: 'Tokenized real-world assets, equities, treasuries, credit & global payments'
+  },
+  depin: {
+    id: 'depin',
+    name: 'DePIN & Compute',
+    arabicLabel: 'البنية التحتية الفيزيائية',
+    icon: '📡',
+    color: 'indigo',
+    description: 'Decentralized physical infrastructure, GPU rendering, storage & wireless nodes'
+  },
+  l2: {
+    id: 'l2',
+    name: 'Layer 2 & Zero-Knowledge',
+    arabicLabel: 'شبكات الطبقة الثانية',
+    icon: '⚡',
+    color: 'blue',
+    description: 'Rollups, modular scaling layers & zero-knowledge proof networks'
+  },
+  gaming: {
+    id: 'gaming',
+    name: 'Gaming, NFT & Metaverse',
+    arabicLabel: 'الألعاب والميتافيرس',
+    icon: '🎮',
+    color: 'rose',
+    description: 'Web3 gaming studios, NFT marketplaces, fan tokens & metaverse worlds'
+  },
+  infra: {
+    id: 'infra',
+    name: 'Oracles, Bridges & Infra',
+    arabicLabel: 'الأوراكل والبنية التحتية',
+    icon: '🔮',
+    color: 'slate',
+    description: 'Cross-chain bridges, oracle feeds, identity, security & middleware'
+  }
+};
+
+// Curated token-to-category mapping for Bybit Spot assets
+const TOKEN_CATEGORY_MAP = {
+  // Layer 1
+  BTC: 'l1', ETH: 'l1', SOL: 'l1', SUI: 'l1', XRP: 'rwa', ADA: 'l1', AVAX: 'l1',
+  TON: 'l1', DOT: 'l1', TRX: 'l1', APT: 'l1', SEI: 'l1', INJ: 'l1', TIA: 'l1',
+  ATOM: 'l1', KAS: 'l1', ALGO: 'rwa', FTM: 'l1', S: 'l1', SONIC: 'l1', BERA: 'l1',
+  MON: 'l1', KAVA: 'l1', EGLD: 'l1', MINA: 'l1', FLOW: 'l1', XTZ: 'l1', EOS: 'l1',
+  A: 'l1', IOTA: 'l1', NEO: 'l1', VET: 'l1', ZIL: 'l1', ONE: 'l1', CELO: 'l1',
+  ROSE: 'l1', KSM: 'l1', ASTR: 'l1', GLMR: 'l1', CFX: 'l1', CKB: 'l1', CORE: 'l1',
+  ZETA: 'l1', MOVE: 'l1', INIT: 'l1', SOMI: 'l1', IP: 'l1', LTC: 'l1', BCH: 'l1',
+  ETC: 'l1', DOGE: 'memes', XLM: 'rwa', HBAR: 'rwa', FLR: 'l1', SGB: 'l1', XDC: 'rwa',
+  QTUM: 'l1', ICX: 'l1', ONT: 'l1', WAVES: 'l1', RVN: 'l1', XEC: 'l1', CSPR: 'l1',
+  XCH: 'l1', KLAY: 'l1', KAIA: 'l1', VTHO: 'l1', GAS: 'l1', LUNA: 'l1', LUNC: 'l1',
+  XPL: 'l1', CC: 'l1', GRAM: 'l1', PARTI: 'l1', DYM: 'l1', SUPRA: 'l1', MOVR: 'l1',
+  WEMIX: 'l1', KUB: 'l1', ETHW: 'l1', DIAM: 'l1', KII: 'l1', LAYER: 'l1', STABLE: 'l1',
+  NTRN: 'l1', XEM: 'l1',
+
+  // Memes
+  PEPE: 'memes', SHIB: 'memes', BONK: 'memes', WIF: 'memes', FLOKI: 'memes',
+  POPCAT: 'memes', MOG: 'memes', BRETT: 'memes', MEW: 'memes', NEIRO: 'memes',
+  NEIROCTO: 'memes', TURBO: 'memes', PNUT: 'memes', GOAT: 'memes', FARTCOIN: 'memes',
+  ACT: 'memes', MOODENG: 'memes', CHILLGUY: 'memes', PENGU: 'memes', SPX: 'memes',
+  GIGA: 'memes', BOME: 'memes', SLERF: 'memes', MYRO: 'memes', WEN: 'memes',
+  PONKE: 'memes', TOSHI: 'memes', DOG: 'memes', BABYDOGE: 'memes', MEME: 'memes',
+  PEOPLE: 'memes', SUNDOG: 'memes', CATI: 'gaming', DOGS: 'memes', HMSTR: 'gaming',
+  NOT: 'gaming', TRUMP: 'memes', MELANIA: 'memes', VINE: 'memes', JELLYJELLY: 'memes',
+  TST: 'memes', BROCCOLI: 'memes', CHEEMS: 'memes', KOMA: 'memes', DEGEN: 'memes',
+  COQ: 'memes', AIDOGE: 'memes', LADYS: 'memes', ELON: 'memes', SNEK: 'memes',
+  FOXY: 'memes', MANEKI: 'memes', MICHI: 'memes', BILLY: 'memes', MOTHER: 'memes',
+  DADDY: 'memes', FWOG: 'memes', RETARDIO: 'memes', HIPPO: 'memes',
+  BAN: 'memes', LUCE: 'memes', RIF: 'memes', URO: 'memes', MAJOR: 'memes',
+  MEMEFI: 'memes', X: 'memes', PONK: 'memes', PUFF: 'memes',
+  ORDI: 'memes', SATS: 'memes', RATS: 'memes', BILL: 'memes', BASED: 'memes',
+  DOOD: 'memes', BIRB: 'memes', PYBOBO: 'memes', FIGHT: 'memes', FOGO: 'memes',
+
+  // AI & Agents
+  TAO: 'ai', FET: 'ai', NEAR: 'ai', ICP: 'ai', VIRTUAL: 'ai', AI16Z: 'ai',
+  AIXBT: 'ai', ZEREBRO: 'ai', GRIFFAIN: 'ai', ARC: 'ai', SWARMS: 'ai', COOKIE: 'ai',
+  CGPT: 'ai', PHB: 'ai', AGIX: 'ai', OCEAN: 'ai', ARKM: 'ai', WLD: 'ai', KAITO: 'ai',
+  GRASS: 'ai', IO: 'ai', ATH: 'ai', AKT: 'ai', AIOZ: 'ai', GLM: 'ai',
+  NMR: 'ai', TRAC: 'ai', VANA: 'ai', SAHARA: 'ai', PAAL: 'ai', PRIME: 'ai',
+  NFP: 'ai', AI: 'ai', SHELL: 'ai', REI: 'ai', NOS: 'ai', FLUX: 'ai',
+  SPEC: 'ai', GTAI: 'ai', RSS3: 'ai', ORAI: 'ai', RLC: 'ai', CTXC: 'ai',
+  IQ: 'ai', ALI: 'ai', AITECH: 'ai', PROMPT: 'ai', NIL: 'ai', SIGN: 'ai',
+  VVV: 'ai', ALCH: 'ai', '0G': 'ai', FHE: 'ai', RECALL: 'ai', ROBO: 'ai',
+  SXT: 'ai', SENT: 'ai', ELSA: 'ai', CARV: 'ai', LMWR: 'ai', TA: 'ai',
+  OPG: 'ai', NEWT: 'ai', H: 'ai',
+
+  // DePIN & Compute
+  RENDER: 'depin', RNDR: 'depin', FIL: 'depin', AR: 'depin', HNT: 'depin',
+  IOTX: 'depin', THETA: 'depin', TFUEL: 'depin', JASMY: 'depin', STORJ: 'depin',
+  SC: 'depin', BTT: 'depin', LPT: 'depin', POKT: 'depin', DIMO: 'depin',
+  HONEY: 'depin', GEOD: 'depin', MOBILE: 'depin', PEAQ: 'depin', NATIX: 'depin',
+  PHA: 'depin', NYM: 'depin', HOPR: 'depin', DATA: 'depin', OXT: 'depin',
+  ANKR: 'depin', DENT: 'depin', HOT: 'depin', NODE: 'depin', WAL: 'depin',
+  ROAM: 'depin', ICNT: 'depin',
+
+  // Launchpads & Exchange Tokens
+  PUMP: 'launchpad', JUP: 'launchpad', RAY: 'launchpad', CAKE: 'launchpad',
+  BNB: 'launchpad', MNT: 'launchpad', BGB: 'launchpad', OKB: 'launchpad',
+  CRO: 'launchpad', GT: 'launchpad', KCS: 'launchpad', MX: 'launchpad',
+  WOO: 'launchpad', AUCTION: 'launchpad', BAKE: 'launchpad', POLS: 'launchpad',
+  DAO: 'launchpad', SFUND: 'launchpad', TKO: 'launchpad', HOOK: 'launchpad',
+  EDU: 'launchpad', PORTAL: 'launchpad', ALT: 'launchpad', MANTA: 'launchpad',
+  SAGA: 'launchpad', OMNI: 'launchpad', REZ: 'launchpad', BB: 'launchpad',
+  LISTA: 'launchpad', BANANA: 'launchpad', MET: 'launchpad', BMT: 'launchpad',
+  BIO: 'launchpad', PONS: 'launchpad', FTT: 'launchpad', HTX: 'launchpad',
+
+  // DeFi, DEX & Yield
+  UNI: 'defi', AAVE: 'defi', MKR: 'defi', SKY: 'defi', LDO: 'defi',
+  PENDLE: 'defi', ENA: 'defi', CRV: 'defi', CVX: 'defi', COMP: 'defi',
+  SNX: 'defi', '1INCH': 'defi', SUSHI: 'defi', DYDX: 'defi', GMX: 'defi',
+  GNS: 'defi', JTO: 'defi', KMNO: 'defi', DRIFT: 'defi', ORCA: 'defi',
+  CETUS: 'defi', DEEP: 'defi', NAVX: 'defi', SCA: 'defi', TURBOS: 'defi',
+  MORPHO: 'defi', EIGEN: 'defi', ETHFI: 'defi', PUFFER: 'defi', SWELL: 'defi',
+  RPL: 'defi', FXS: 'defi', BAL: 'defi', YFI: 'defi', ZRX: 'defi',
+  UMA: 'defi', LQTY: 'defi', SPELL: 'defi', JOE: 'defi', AERO: 'defi',
+  THE: 'defi', COW: 'defi', KERNEL: 'defi', ORDER: 'defi', APEX: 'defi',
+  HYPE: 'defi', OSMO: 'defi', RUNE: 'defi', KNC: 'defi', PERP: 'defi',
+  DODO: 'defi', MAV: 'defi', HFT: 'defi', QUICK: 'defi', RDNT: 'defi',
+  VENUS: 'defi', XVS: 'defi', ALPACA: 'defi', BEL: 'defi', ALPHA: 'defi',
+  STG: 'defi', SYN: 'defi', ACX: 'defi', FLUID: 'defi', EUL: 'defi',
+  SPK: 'defi', WLFI: 'defi', BARD: 'defi', FF: 'defi', VELO: 'defi',
+  HAEDAL: 'defi', MMT: 'defi', ASTER: 'defi', STETH: 'defi', BBSOL: 'defi',
+  METH: 'defi', WBTC: 'defi', RESOLV: 'defi', BLEND: 'defi', AEVO: 'defi',
+  VOOI: 'defi', GRVT: 'defi', SOLV: 'defi', ENSO: 'defi', ZIG: 'defi',
+  ARX: 'defi', TRIA: 'defi', SLX: 'defi', HOME: 'defi', TREE: 'defi',
+
+  // RWA & PayFi
+  ONDO: 'rwa', OM: 'rwa', USUAL: 'rwa', SYRUP: 'rwa', MPL: 'rwa', CFG: 'rwa',
+  TRU: 'rwa', POLYX: 'rwa', PRO: 'rwa', GFI: 'rwa', CPOOL: 'rwa',
+  CTC: 'rwa', QNT: 'rwa', ACH: 'rwa', AMP: 'rwa', PLUME: 'rwa',
+  PRCL: 'rwa', RSR: 'rwa', CHR: 'rwa', LTO: 'rwa', DUSK: 'rwa',
+  HIFI: 'rwa', TOKEN: 'rwa', PAXG: 'rwa', XAUT: 'rwa', HUMA: 'rwa',
+  MANTRA: 'rwa', TEL: 'rwa', AVA: 'rwa', NEXO: 'rwa',
+  CRCLX: 'rwa', SPCXX: 'rwa', COINX: 'rwa', NVDAX: 'rwa', AMZNX: 'rwa',
+  HOODX: 'rwa', TSLAX: 'rwa', GOOGLX: 'rwa', AAPLX: 'rwa', MCDX: 'rwa',
+
+  // Layer 2 & Zero-Knowledge
+  ARB: 'l2', OP: 'l2', POL: 'l2', MATIC: 'l2', STRK: 'l2',
+  ZK: 'l2', IMX: 'l2', METIS: 'l2', BLAST: 'l2', MODE: 'l2',
+  SCROLL: 'l2', SCR: 'l2', TAIKO: 'l2', LINEA: 'l2', ZRC: 'l2',
+  BOBA: 'l2', LRC: 'l2', SKL: 'l2', CTSI: 'l2', CYBER: 'l2',
+  MERL: 'l2', STX: 'l2', B2: 'l2', AZTEC: 'l2', SOON: 'l2',
+  ZKF: 'l2', AURORA: 'l2', MEGA: 'l2', CORN: 'l2', ERA: 'l2',
+  BREV: 'l2', PROVE: 'l2', LA: 'l2', ZAMA: 'l2', ZEN: 'l2',
+
+  // Gaming, NFT & Metaverse
+  GALA: 'gaming', SAND: 'gaming', MANA: 'gaming', AXS: 'gaming', APE: 'gaming',
+  BLUR: 'gaming', ME: 'gaming', TNSR: 'gaming', BEAM: 'gaming', RON: 'gaming',
+  ILV: 'gaming', SUPER: 'gaming', YGG: 'gaming', PIXEL: 'gaming', XAI: 'gaming',
+  BIGTIME: 'gaming', GMT: 'gaming', ALICE: 'gaming', TLM: 'gaming', ENJ: 'gaming',
+  CHZ: 'gaming', WAXP: 'gaming', GODS: 'gaming', MAGIC: 'gaming', HIGH: 'gaming',
+  VOXEL: 'gaming', DAR: 'gaming', LOKA: 'gaming', COMBO: 'gaming', ACE: 'gaming',
+  MAVIA: 'gaming', PIRATE: 'gaming', ZENT: 'gaming', ANIME: 'gaming', SLP: 'gaming',
+  MBOX: 'gaming', PYR: 'gaming', GHST: 'gaming', RACA: 'gaming', AGLD: 'gaming',
+  XTER: 'gaming', B3: 'gaming', MOCA: 'gaming', PIEVERSE: 'gaming', NXPC: 'gaming',
+  A8: 'gaming', MBX: 'gaming', MCRT: 'gaming', MEE: 'gaming', PSG: 'gaming',
+  JUV: 'gaming', CITY: 'gaming', ESE: 'gaming',
+
+  // Oracles, Bridges & Infra
+  LINK: 'infra', PYTH: 'infra', API3: 'infra', BAND: 'infra', TRB: 'infra',
+  GRT: 'infra', ENS: 'infra', ID: 'infra', W: 'infra', AXL: 'infra',
+  ZRO: 'infra', SAFE: 'infra', BICO: 'infra', SSV: 'infra', OBOL: 'infra',
+  ZEC: 'infra', XMR: 'infra', DASH: 'infra', SCRT: 'infra', MASK: 'infra',
+  ARK: 'infra', RAD: 'infra', GTC: 'infra', C98: 'infra', TWT: 'infra',
+  SFP: 'infra', BAT: 'infra', CVC: 'infra', CELR: 'infra', DBR: 'infra',
+  RED: 'infra', LAVA: 'infra', SQD: 'infra', WCT: 'infra', TOWNS: 'infra',
+  FORT: 'infra', GPS: 'infra', NS: 'infra', FIDA: 'infra', G: 'infra'
+};
+
+function classifyTokenCategory(symbol, scannerMap) {
+  const upper = symbol.toUpperCase();
+  if (TOKEN_CATEGORY_MAP[upper]) {
+    return TOKEN_CATEGORY_MAP[upper];
+  }
+
+  // Pattern heuristics for new listings
+  if (/AI|GPT|AGENT|BOT|AGI|LLM|NEURAL/.test(upper)) return 'ai';
+  if (/DOGE|PEPE|INU|CAT|SHIB|MOON|BABY|MEME|FROG|CHAD|PUMP|BONK|FLOKI/.test(upper)) return 'memes';
+  if (/ZK|ROLL|L2/.test(upper)) return 'l2';
+  if (/GAME|PLAY|META|NFT|PIXEL|QUEST/.test(upper)) return 'gaming';
+  if (/USD|RWA|PAY|GOLD|BOND/.test(upper)) return 'rwa';
+
+  // Check our verified DeFi/Protocol scanner registry
+  const proto = scannerMap.get(upper);
+  if (proto && proto.category) {
+    const c = proto.category.toLowerCase();
+    if (c.includes('dex') || c.includes('lending') || c.includes('yield') || c.includes('liquid') || c.includes('derivatives') || c.includes('cdp') || c.includes('Synthetics')) return 'defi';
+    if (c.includes('launchpad')) return 'launchpad';
+    if (c.includes('rwa') || c.includes('payment')) return 'rwa';
+    if (c.includes('gaming') || c.includes('nft')) return 'gaming';
+    if (c.includes('ai')) return 'ai';
+    if (c.includes('chain')) return 'l1';
+    if (c.includes('bridge') || c.includes('oracle')) return 'infra';
+  }
+
+  return 'infra';
+}
+
+export async function getBybitSpotEcosystem(force = false) {
+  if (!force) {
+    if (memoryBybitCache?.lastUpdated && (Date.now() - new Date(memoryBybitCache.lastUpdated).getTime() < CACHE_TTL_MS)) {
+      return memoryBybitCache;
+    }
+    for (const candidateFile of [TMP_BYBIT_CACHE_FILE, BYBIT_CACHE_FILE]) {
+      try {
+        const raw = await fs.readFile(candidateFile, 'utf-8');
+        const cached = JSON.parse(raw);
+        if (cached.lastUpdated && (Date.now() - new Date(cached.lastUpdated).getTime() < CACHE_TTL_MS)) {
+          memoryBybitCache = cached;
+          return cached;
+        }
+      } catch {
+        // try next
+      }
+    }
+  }
+
+  console.log('[BybitWatcher] Fetching live Bybit V5 Spot Tickers & computing Category Volume Flow...');
+
+  const [bybitRes, scannerData] = await Promise.all([
+    fetch('https://api.bybit.com/v5/market/tickers?category=spot', {
+      signal: AbortSignal.timeout(15000)
+    }).then(r => r.json()),
+    scanProtocols(false).catch(() => ({ protocols: [] }))
+  ]);
+
+  const rawTickers = bybitRes?.result?.list || [];
+  if (rawTickers.length === 0) {
+    throw new Error('Bybit V5 Spot API returned an empty ticker list');
+  }
+
+  // Index our verified protocol revenue data by token symbol
+  const scannerMap = new Map();
+  for (const p of scannerData.protocols || []) {
+    if (p.tokenSymbol) {
+      const sym = p.tokenSymbol.toUpperCase();
+      const existing = scannerMap.get(sym);
+      if (!existing || (p.revenue7d || 0) > (existing.revenue7d || 0)) {
+        scannerMap.set(sym, p);
+      }
+    }
+  }
+
+  const tokens = [];
+  let totalSpotVolume24hUsd = 0;
+
+  for (const t of rawTickers) {
+    const pairSymbol = t.symbol || '';
+    if (!pairSymbol.endsWith('USDT')) continue;
+
+    const baseSymbol = pairSymbol.slice(0, -4).toUpperCase();
+    if (!baseSymbol || EXCLUDED_BASE_SYMBOLS.has(baseSymbol)) continue;
+    // Exclude 2L/2S/3L/3S leveraged ETPs
+    if (/[235][LS]$/.test(baseSymbol)) continue;
+
+    const price = Number(t.lastPrice || 0);
+    const volume24hUsd = Number(t.turnover24h || 0);
+    const volume24hTokens = Number(t.volume24h || 0);
+    const change24hPct = Math.round(Number(t.price24hPcnt || 0) * 10000) / 100;
+    const high24h = Number(t.highPrice24h || price);
+    const low24h = Number(t.lowPrice24h || price);
+    const bid1 = Number(t.bid1Price || price);
+    const ask1 = Number(t.ask1Price || price);
+    const spreadPct = price > 0 && ask1 >= bid1 ? Math.round(((ask1 - bid1) / price) * 10000) / 100 : 0;
+
+    if (volume24hUsd <= 0) continue;
+
+    const catId = classifyTokenCategory(baseSymbol, scannerMap);
+    const catMeta = BYBIT_CATEGORIES[catId] || BYBIT_CATEGORIES.infra;
+    const matchedProtocol = scannerMap.get(baseSymbol) || null;
+
+    totalSpotVolume24hUsd += volume24hUsd;
+
+    tokens.push({
+      symbol: baseSymbol,
+      pair: `${baseSymbol}/USDT`,
+      bybitSymbol: pairSymbol,
+      bybitTradeUrl: `https://www.bybit.com/en/trade/spot/${baseSymbol}/USDT`,
+      category: catId,
+      categoryName: catMeta.name,
+      categoryArabic: catMeta.arabicLabel,
+      categoryIcon: catMeta.icon,
+      price,
+      change24hPct,
+      high24h,
+      low24h,
+      volume24hUsd: Math.round(volume24hUsd),
+      volume24hTokens: Math.round(volume24hTokens * 100) / 100,
+      spreadPct,
+      hasProtocolRevenue: Boolean(matchedProtocol && (matchedProtocol.revenue7d > 0 || matchedProtocol.revenue24h > 0)),
+      protocolName: matchedProtocol?.name || null,
+      protocolSlug: matchedProtocol?.slug || null,
+      protocolRevenue7d: matchedProtocol?.revenue7d ? Math.round(matchedProtocol.revenue7d) : 0,
+      protocolRevenue24h: matchedProtocol?.revenue24h ? Math.round(matchedProtocol.revenue24h) : 0,
+      mcap: matchedProtocol?.mcap || 0,
+      logo: matchedProtocol?.logo || `https://assets.coincap.io/assets/icons/${baseSymbol.toLowerCase()}@2x.png`
+    });
+  }
+
+  // Sort tokens by 24H Volume USD descending
+  tokens.sort((a, b) => b.volume24hUsd - a.volume24hUsd);
+  tokens.forEach((item, idx) => {
+    item.rank = idx + 1;
+    item.volumeSharePct = totalSpotVolume24hUsd > 0
+      ? Math.round((item.volume24hUsd / totalSpotVolume24hUsd) * 10000) / 100
+      : 0;
+  });
+
+  // Aggregate by Category
+  const categoryStatsMap = {};
+  for (const [id, meta] of Object.entries(BYBIT_CATEGORIES)) {
+    categoryStatsMap[id] = {
+      ...meta,
+      tokensCount: 0,
+      volume24hUsd: 0,
+      volumeSharePct: 0,
+      avgChange24hPct: 0,
+      weightedChangeSum: 0,
+      gainersCount: 0,
+      losersCount: 0,
+      topTokens: []
+    };
+  }
+
+  for (const tok of tokens) {
+    const cat = categoryStatsMap[tok.category] || categoryStatsMap.infra;
+    cat.tokensCount += 1;
+    cat.volume24hUsd += tok.volume24hUsd;
+    cat.avgChange24hPct += tok.change24hPct;
+    cat.weightedChangeSum += tok.change24hPct * tok.volume24hUsd;
+    if (tok.change24hPct >= 0) cat.gainersCount += 1;
+    else cat.losersCount += 1;
+    if (cat.topTokens.length < 4) {
+      cat.topTokens.push({
+        symbol: tok.symbol,
+        volume24hUsd: tok.volume24hUsd,
+        change24hPct: tok.change24hPct,
+        price: tok.price
+      });
+    }
+  }
+
+  const categories = Object.values(categoryStatsMap)
+    .filter(c => c.tokensCount > 0)
+    .map(c => {
+      const avgChange = c.tokensCount > 0 ? Math.round((c.avgChange24hPct / c.tokensCount) * 100) / 100 : 0;
+      const weightedChange = c.volume24hUsd > 0 ? Math.round((c.weightedChangeSum / c.volume24hUsd) * 100) / 100 : avgChange;
+      return {
+        id: c.id,
+        name: c.name,
+        arabicLabel: c.arabicLabel,
+        icon: c.icon,
+        color: c.color,
+        description: c.description,
+        tokensCount: c.tokensCount,
+        volume24hUsd: Math.round(c.volume24hUsd),
+        volumeSharePct: totalSpotVolume24hUsd > 0
+          ? Math.round((c.volume24hUsd / totalSpotVolume24hUsd) * 10000) / 100
+          : 0,
+        avgChange24hPct: avgChange,
+        weightedChange24hPct: weightedChange,
+        gainersCount: c.gainersCount,
+        losersCount: c.losersCount,
+        leaderToken: c.topTokens[0] || null,
+        topTokens: c.topTokens
+      };
+    })
+    .sort((a, b) => b.volume24hUsd - a.volume24hUsd);
+
+  // Also compute Volume excluding BTC & ETH so the user can see Altcoin Narrative Rotation clearly
+  const altcoinTokens = tokens.filter(t => t.symbol !== 'BTC' && t.symbol !== 'ETH');
+  const totalAltcoinVolume24hUsd = altcoinTokens.reduce((acc, t) => acc + t.volume24hUsd, 0);
+
+  const payload = {
+    success: true,
+    lastUpdated: new Date().toISOString(),
+    summary: {
+      totalPairsTracked: tokens.length,
+      totalSpotVolume24hUsd: Math.round(totalSpotVolume24hUsd),
+      totalAltcoinVolume24hUsd: Math.round(totalAltcoinVolume24hUsd),
+      categoriesCount: categories.length,
+      topCategoryByVolume: categories[0] || null,
+      topAltcoinCategory: categories.find(c => c.id !== 'l1') || categories[0] || null,
+      topGainerToken: [...tokens].sort((a, b) => b.change24hPct - a.change24hPct)[0] || null
+    },
+    categories,
+    tokens
+  };
+
+  memoryBybitCache = payload;
+  const serialized = JSON.stringify(payload, null, 2);
+  try {
+    await fs.mkdir(CACHE_DIR, { recursive: true });
+    await fs.writeFile(BYBIT_CACHE_FILE, serialized, 'utf-8');
+  } catch {
+    // ignore read-only warning on Vercel
+  }
+  try {
+    await fs.writeFile(TMP_BYBIT_CACHE_FILE, serialized, 'utf-8');
+  } catch {
+    // ignore /tmp warning on Windows
+  }
+
+  return payload;
+}

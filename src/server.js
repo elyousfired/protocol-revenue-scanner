@@ -9,6 +9,7 @@ import { getSuiEcosystem } from './suiWatcher.js';
 import { getSolanaEcosystem } from './solanaWatcher.js';
 import { getProtocolHistorical, getMacroEcosystemHistorical } from './historicalEngine.js';
 import { getLeaderboard } from './leaderboardEngine.js';
+import { getBybitSpotEcosystem } from './bybitWatcher.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -342,6 +343,20 @@ export async function handleRequest(req, res) {
       const solanaData = await getSolanaEcosystem(true);
       res.writeHead(200, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify({ success: true, message: 'Solana telemetry refreshed', data: solanaData }));
+      return;
+    }
+
+    // -------------------------------------------------------------
+    // API 2f: Bybit Spot Tokens & Category 24H Volume Radar
+    // -------------------------------------------------------------
+    if (pathname === '/api/bybit' && req.method === 'GET') {
+      const forceRefresh = reqUrl.searchParams.get('refresh') === 'true';
+      const bybitData = await getBybitSpotEcosystem(forceRefresh);
+      res.writeHead(200, {
+        'Content-Type': 'application/json',
+        'Cache-Control': 'no-cache, no-store, must-revalidate'
+      });
+      res.end(JSON.stringify(bybitData));
       return;
     }
 

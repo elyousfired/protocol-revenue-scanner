@@ -190,6 +190,15 @@
           <span>⚙️</span>
           <span>Solana Blueprint</span>
         </button>
+
+        <!-- Page 9 Button: Bybit Spot Category & Volume Radar -->
+        <button 
+          id="nav-btn-bybit" 
+          onclick="switchPage('bybit')" 
+          class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-amber-300 hover:text-white transition-all font-bold">
+          <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+          <span>🟡 Bybit Spot</span>
+        </button>
       </nav>
 
       <!-- Sync Info & Rescan Button -->
@@ -2645,6 +2654,169 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
 
     </section>
 
+    <!-- ============================================================== -->
+    <!-- PAGE 9: BYBIT SPOT TOKENS & CATEGORY 24H VOLUME RADAR          -->
+    <!-- ============================================================== -->
+    <section id="page-bybit" class="hidden space-y-6">
+
+      <!-- Hero Banner -->
+      <div class="card-terminal rounded-2xl p-5 sm:p-6 border border-amber-500/40 bg-gradient-to-br from-[#17130a]/95 via-[#0f172a]/95 to-[#0c1322]/95 relative overflow-hidden">
+        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+          <div class="space-y-1.5">
+            <div class="flex items-center gap-2.5 flex-wrap">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono uppercase bg-amber-500/20 text-amber-300 border border-amber-500/40 font-bold flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+                LIVE BYBIT V5 SPOT API
+              </span>
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono uppercase bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 font-semibold">
+                10 Narrative Categories
+              </span>
+              <span id="bybit-pairs-badge" class="px-2.5 py-0.5 rounded-full text-[11px] font-mono uppercase bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 font-semibold">
+                385+ Spot USDT Pairs
+              </span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight flex items-center gap-2.5">
+              <span>🟡 Bybit Spot — Category &amp; Token 24H Volume Radar</span>
+            </h2>
+            <p class="text-slate-400 text-xs sm:text-sm max-w-3xl">
+              Real-time 24H liquidity &amp; volume distribution across every narrative category on Bybit Spot (Memes, AI, DeFi, Launchpads, RWA, DePIN, Layer 1, Layer 2, Gaming &amp; Oracles).
+            </p>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2.5 font-mono text-xs">
+            <!-- Toggle BTC/ETH inclusion in Category Volume Share -->
+            <div class="flex items-center bg-slate-900/90 p-1 rounded-xl border border-slate-800">
+              <button onclick="setBybitVolumeMode('all')" id="bybit-mode-all" class="px-3 py-1.5 rounded-lg font-bold transition-all bg-amber-400 text-black shadow-sm">
+                🌐 All Spot
+              </button>
+              <button onclick="setBybitVolumeMode('altcoins')" id="bybit-mode-altcoins" class="px-3 py-1.5 rounded-lg font-medium transition-all text-slate-400 hover:text-white">
+                🔥 Excl. BTC &amp; ETH
+              </button>
+            </div>
+
+            <button onclick="loadBybitData(true)" id="btn-bybit-refresh" class="px-3.5 py-2 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 font-bold transition-all flex items-center gap-1.5">
+              <span id="bybit-refresh-icon">🔄</span>
+              <span>Sync Bybit Spot</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 4 Hero KPI Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-5 font-mono">
+          <div class="bg-black/40 p-4 rounded-xl border border-slate-800/90">
+            <div class="text-[11px] text-slate-400 uppercase">Total Bybit Spot 24H Vol</div>
+            <div id="bybit-kpi-total-vol" class="text-2xl font-extrabold text-amber-400 mt-1">$0</div>
+            <div id="bybit-kpi-total-sub" class="text-[11px] text-slate-500 mt-1">Across 385 USDT Spot Pairs</div>
+          </div>
+          <div class="bg-black/40 p-4 rounded-xl border border-slate-800/90">
+            <div class="text-[11px] text-slate-400 uppercase">Altcoin 24H Volume (Excl. BTC/ETH)</div>
+            <div id="bybit-kpi-alt-vol" class="text-2xl font-extrabold text-cyan-400 mt-1">$0</div>
+            <div id="bybit-kpi-alt-sub" class="text-[11px] text-slate-500 mt-1">Pure Altcoin Narrative Flow</div>
+          </div>
+          <div class="bg-black/40 p-4 rounded-xl border border-slate-800/90">
+            <div class="text-[11px] text-slate-400 uppercase">#1 Narrative Category (24H Vol)</div>
+            <div id="bybit-kpi-top-cat" class="text-xl font-extrabold text-emerald-400 mt-1 truncate">—</div>
+            <div id="bybit-kpi-top-cat-sub" class="text-[11px] text-slate-500 mt-1">—</div>
+          </div>
+          <div class="bg-black/40 p-4 rounded-xl border border-slate-800/90">
+            <div class="text-[11px] text-slate-400 uppercase">#1 Spot Gainer (24H)</div>
+            <div id="bybit-kpi-top-gainer" class="text-2xl font-extrabold text-emerald-300 mt-1">—</div>
+            <div id="bybit-kpi-top-gainer-sub" class="text-[11px] text-slate-500 mt-1">—</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 1: CATEGORY 24H VOLUME RANKING & LIQUIDITY FLOW -->
+      <div class="card-terminal rounded-2xl p-5 sm:p-6 border border-slate-800/90 space-y-5">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800/80 pb-4">
+          <div>
+            <h3 class="text-lg sm:text-xl font-extrabold text-white font-mono flex items-center gap-2">
+              <span>📊 Bybit Spot Volume by Category (24H Liquidity Rotation)</span>
+            </h3>
+            <p class="text-xs text-slate-400 mt-0.5">
+              Click on any category card below to filter all Bybit Spot tokens belonging to that sector.
+            </p>
+          </div>
+          <div id="bybit-active-mode-label" class="text-xs font-mono text-amber-300 bg-amber-500/10 border border-amber-500/30 px-3 py-1 rounded-xl">
+            Showing: All Bybit Spot Pairs
+          </div>
+        </div>
+
+        <!-- Category Cards Grid -->
+        <div id="bybit-categories-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+          <!-- Injected via JS -->
+        </div>
+
+        <!-- Category Horizontal Volume Comparison Bars -->
+        <div class="pt-2 space-y-2.5" id="bybit-categories-bars">
+          <!-- Injected via JS -->
+        </div>
+      </div>
+
+      <!-- SECTION 2: BYBIT SPOT TOKENS TABLE (FILTERABLE BY CATEGORY) -->
+      <div class="card-terminal rounded-2xl p-5 sm:p-6 border border-slate-800/90 space-y-4">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2.5">
+              <h3 class="text-lg sm:text-xl font-extrabold text-white font-mono">🪙 Bybit Spot Tokens — 24H Volume &amp; Category Breakdown</h3>
+              <span id="bybit-filtered-count" class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">0 Tokens</span>
+            </div>
+            <p class="text-xs text-slate-400 mt-0.5">
+              Every USDT Spot token on Bybit sorted by 24H USD Volume, mapped to its sector &amp; cross-referenced with on-chain protocol revenue.
+            </p>
+          </div>
+
+          <!-- Search & Sort Controls -->
+          <div class="flex flex-wrap items-center gap-2.5">
+            <div class="relative">
+              <input 
+                type="text" 
+                id="bybit-search-input"
+                oninput="handleBybitSearch(this.value)" 
+                placeholder="Search symbol (PEPE, TAO, SOL)..." 
+                class="w-56 bg-slate-900/90 border border-slate-700/80 focus:border-amber-400 rounded-xl px-3 py-1.5 text-xs text-white placeholder-slate-500 outline-none font-mono"
+              />
+            </div>
+
+            <select id="bybit-sort-select" onchange="handleBybitSort(this.value)" class="bg-slate-900 border border-slate-700/80 rounded-xl px-3 py-1.5 text-xs text-slate-200 font-mono outline-none">
+              <option value="volume_desc">Sort: 24H Volume (High → Low)</option>
+              <option value="change_desc">Sort: 24H Gainers (% Up)</option>
+              <option value="change_asc">Sort: 24H Losers (% Down)</option>
+              <option value="rev_desc">Sort: Protocol 7D Revenue</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div id="bybit-category-pills" class="flex items-center gap-2 overflow-x-auto pb-2 font-mono text-xs">
+          <!-- Injected via JS -->
+        </div>
+
+        <!-- Tokens Table -->
+        <div class="overflow-x-auto rounded-xl border border-slate-800/90">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="border-b border-slate-800 bg-slate-900/90 text-[11px] font-mono text-slate-400 uppercase">
+                <th class="py-3 px-3 text-center w-12">#</th>
+                <th class="py-3 px-4">Token / Pair</th>
+                <th class="py-3 px-4">Category</th>
+                <th class="py-3 px-4 text-right">Spot Price</th>
+                <th class="py-3 px-4 text-right">24H Change</th>
+                <th class="py-3 px-4 text-right">24H Volume (USD)</th>
+                <th class="py-3 px-4 w-44">Category / Spot Share</th>
+                <th class="py-3 px-4 text-right">24H High / Low</th>
+                <th class="py-3 px-4 text-right">On-Chain 7D Rev</th>
+              </tr>
+            </thead>
+            <tbody id="bybit-tokens-tbody" class="divide-y divide-slate-800/60 text-sm font-mono">
+              <!-- Injected via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
   </main>
 
   
@@ -2935,12 +3107,14 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
       window.location.hash = page;
 
       // Update Nav buttons styling
-      ['table', 'weekly', 'yield', 'contracts', 'sui', 'schema', 'solana', 'solana-schema'].forEach(p => {
+      ['table', 'weekly', 'yield', 'contracts', 'sui', 'schema', 'solana', 'solana-schema', 'bybit'].forEach(p => {
         const btn = document.getElementById(`nav-btn-${p}`);
         const sec = document.getElementById(`page-${p}`);
         if (!btn || !sec) return;
         if (p === page) {
-          btn.className = 'flex items-center gap-1.5 px-3 py-1.5 rounded-xl font-bold transition-all bg-cyan-400 text-black shadow-md shadow-cyan-400/20';
+          btn.className = p === 'bybit'
+            ? 'flex items-center gap-1.5 px-3 py-1.5 rounded-xl font-bold transition-all bg-amber-400 text-black shadow-md shadow-amber-400/20'
+            : 'flex items-center gap-1.5 px-3 py-1.5 rounded-xl font-bold transition-all bg-cyan-400 text-black shadow-md shadow-cyan-400/20';
           sec.classList.remove('hidden');
         } else {
           btn.className = 'flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-slate-400 hover:text-white transition-all font-medium';
@@ -2957,6 +3131,7 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
       else if (page === 'schema') renderSchemaPage();
       else if (page === 'solana') loadSolanaData();
       else if (page === 'solana-schema') renderSolanaSchemaPage();
+      else if (page === 'bybit') loadBybitData();
     }
 
     // Load initial data
@@ -2988,7 +3163,7 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
 
         // Check hash or keep activePage
         const hash = window.location.hash.replace('#', '');
-        const targetPage = ['table', 'weekly', 'yield', 'contracts', 'sui', 'schema', 'solana', 'solana-schema'].includes(hash)
+        const targetPage = ['table', 'weekly', 'yield', 'contracts', 'sui', 'schema', 'solana', 'solana-schema', 'bybit'].includes(hash)
           ? hash
           : (typeof activePage === 'string' && activePage ? activePage : 'table');
         if (!force) {
@@ -4497,6 +4672,8 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
           await renderLeaderboardPage(true);
         } else if (curPage === 'contracts') {
           await loadContractsData();
+        } else if (curPage === 'bybit') {
+          await loadBybitData(true);
         }
         const now = new Date();
         const updEl = document.getElementById('last-updated');
@@ -6144,6 +6321,402 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
       `).join('');
 
       document.getElementById('modal-protocol-blueprint').classList.remove('hidden');
+    }
+
+    // ============================================================== //
+    // PAGE 9: BYBIT SPOT TOKENS & CATEGORY 24H VOLUME RADAR LOGIC
+    // ============================================================== //
+    let bybitDataStore = null;
+    let bybitActiveCategory = 'all';
+    let bybitVolumeMode = 'all'; // 'all' | 'altcoins' (Excl. BTC & ETH)
+    let bybitSearchQuery = '';
+    let bybitSortMode = 'volume_desc';
+
+    function formatSpotPrice(p) {
+      if (!p || p <= 0) return '$0.00';
+      if (p >= 1000) return '$' + p.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      if (p >= 1) return '$' + p.toFixed(3);
+      if (p >= 0.01) return '$' + p.toFixed(4);
+      if (p >= 0.0001) return '$' + p.toFixed(6);
+      return '$' + p.toFixed(8);
+    }
+
+    async function loadBybitData(force = false) {
+      const btn = document.getElementById('btn-bybit-refresh');
+      const tbody = document.getElementById('bybit-tokens-tbody');
+      if (btn && force) {
+        btn.innerHTML = '<span class="animate-spin">⏳</span><span>Syncing Bybit...</span>';
+      }
+      if (!bybitDataStore && tbody) {
+        tbody.innerHTML = `<tr><td colspan="9" class="py-12 text-center text-slate-400 font-mono">Loading live Bybit V5 Spot Tickers &amp; Category Volume Flow...</td></tr>`;
+      }
+
+      try {
+        const res = await fetch(`/api/bybit?_t=${Date.now()}${force ? '&refresh=true' : ''}`);
+        const data = await res.json();
+        if (!data.success) throw new Error(data.error || 'Failed to load Bybit Spot data');
+
+        bybitDataStore = data;
+        renderBybitPage();
+        if (btn && force) {
+          btn.innerHTML = '<span>✅</span><span>Synced!</span>';
+          setTimeout(() => {
+            btn.innerHTML = '<span>🔄</span><span>Sync Bybit Spot</span>';
+          }, 1500);
+        }
+      } catch (err) {
+        console.error('[BybitSpot] Error:', err);
+        if (tbody) {
+          tbody.innerHTML = `<tr><td colspan="9" class="py-12 text-center text-rose-400 font-mono">Error loading Bybit Spot data: ${err.message}</td></tr>`;
+        }
+        if (btn && force) {
+          btn.innerHTML = '<span>🔄</span><span>Sync Bybit Spot</span>';
+        }
+      }
+    }
+
+    function setBybitVolumeMode(mode) {
+      bybitVolumeMode = mode;
+      const btnAll = document.getElementById('bybit-mode-all');
+      const btnAlt = document.getElementById('bybit-mode-altcoins');
+      const lbl = document.getElementById('bybit-active-mode-label');
+
+      if (mode === 'altcoins') {
+        if (btnAll) btnAll.className = 'px-3 py-1.5 rounded-lg font-medium transition-all text-slate-400 hover:text-white';
+        if (btnAlt) btnAlt.className = 'px-3 py-1.5 rounded-lg font-bold transition-all bg-amber-400 text-black shadow-sm';
+        if (lbl) lbl.textContent = 'Showing: Altcoins Only (Excl. BTC & ETH)';
+      } else {
+        if (btnAll) btnAll.className = 'px-3 py-1.5 rounded-lg font-bold transition-all bg-amber-400 text-black shadow-sm';
+        if (btnAlt) btnAlt.className = 'px-3 py-1.5 rounded-lg font-medium transition-all text-slate-400 hover:text-white';
+        if (lbl) lbl.textContent = 'Showing: All Bybit Spot Pairs';
+      }
+      renderBybitPage();
+    }
+
+    function setBybitCategoryFilter(catId) {
+      bybitActiveCategory = catId;
+      renderBybitPage();
+    }
+
+    function handleBybitSearch(val) {
+      bybitSearchQuery = (val || '').toLowerCase().trim();
+      renderBybitTokensTable();
+    }
+
+    function handleBybitSort(val) {
+      bybitSortMode = val;
+      renderBybitTokensTable();
+    }
+
+    function getComputedBybitCategories() {
+      if (!bybitDataStore) return { categories: [], totalVolume: 0 };
+      const allTokens = bybitVolumeMode === 'altcoins'
+        ? (bybitDataStore.tokens || []).filter(t => t.symbol !== 'BTC' && t.symbol !== 'ETH')
+        : (bybitDataStore.tokens || []);
+
+      const totalVol = allTokens.reduce((acc, t) => acc + t.volume24hUsd, 0);
+      const map = new Map();
+
+      for (const c of bybitDataStore.categories || []) {
+        map.set(c.id, {
+          ...c,
+          tokensCount: 0,
+          volume24hUsd: 0,
+          weightedSum: 0,
+          gainersCount: 0,
+          losersCount: 0,
+          topTokens: []
+        });
+      }
+
+      for (const tok of allTokens) {
+        const entry = map.get(tok.category);
+        if (!entry) continue;
+        entry.tokensCount += 1;
+        entry.volume24hUsd += tok.volume24hUsd;
+        entry.weightedSum += tok.change24hPct * tok.volume24hUsd;
+        if (tok.change24hPct >= 0) entry.gainersCount += 1;
+        else entry.losersCount += 1;
+        if (entry.topTokens.length < 4) {
+          entry.topTokens.push(tok);
+        }
+      }
+
+      const list = Array.from(map.values())
+        .filter(c => c.tokensCount > 0)
+        .map(c => ({
+          ...c,
+          volumeSharePct: totalVol > 0 ? Math.round((c.volume24hUsd / totalVol) * 10000) / 100 : 0,
+          weightedChange24hPct: c.volume24hUsd > 0 ? Math.round((c.weightedSum / c.volume24hUsd) * 100) / 100 : 0
+        }))
+        .sort((a, b) => b.volume24hUsd - a.volume24hUsd);
+
+      return { categories: list, totalVolume: totalVol };
+    }
+
+    function renderBybitPage() {
+      if (!bybitDataStore) return;
+      const summary = bybitDataStore.summary || {};
+      const { categories, totalVolume } = getComputedBybitCategories();
+
+      // Update Hero Badges & 4 KPI Cards
+      const pairsBadge = document.getElementById('bybit-pairs-badge');
+      if (pairsBadge) pairsBadge.textContent = `${summary.totalPairsTracked || 385} Spot USDT Pairs`;
+
+      const kpiTotal = document.getElementById('bybit-kpi-total-vol');
+      const kpiTotalSub = document.getElementById('bybit-kpi-total-sub');
+      if (kpiTotal) kpiTotal.textContent = formatUSD(summary.totalSpotVolume24hUsd || 0);
+      if (kpiTotalSub) kpiTotalSub.textContent = `Across ${summary.totalPairsTracked || 0} Active USDT Spot Pairs`;
+
+      const kpiAlt = document.getElementById('bybit-kpi-alt-vol');
+      const kpiAltSub = document.getElementById('bybit-kpi-alt-sub');
+      if (kpiAlt) kpiAlt.textContent = formatUSD(summary.totalAltcoinVolume24hUsd || 0);
+      if (kpiAltSub) {
+        const altPct = summary.totalSpotVolume24hUsd > 0
+          ? Math.round((summary.totalAltcoinVolume24hUsd / summary.totalSpotVolume24hUsd) * 1000) / 10
+          : 0;
+        kpiAltSub.textContent = `${altPct}% of Total Bybit Spot Volume`;
+      }
+
+      const topCat = categories[0];
+      const kpiTopCat = document.getElementById('bybit-kpi-top-cat');
+      const kpiTopCatSub = document.getElementById('bybit-kpi-top-cat-sub');
+      if (topCat && kpiTopCat) {
+        kpiTopCat.textContent = `${topCat.icon} ${topCat.name}`;
+        kpiTopCatSub.textContent = `${formatUSD(topCat.volume24hUsd)} (${topCat.volumeSharePct}% Share • ${topCat.arabicLabel})`;
+      }
+
+      const gainer = summary.topGainerToken;
+      const kpiGainer = document.getElementById('bybit-kpi-top-gainer');
+      const kpiGainerSub = document.getElementById('bybit-kpi-top-gainer-sub');
+      if (gainer && kpiGainer) {
+        kpiGainer.textContent = `$${gainer.symbol} (+${gainer.change24hPct.toFixed(2)}%)`;
+        kpiGainerSub.textContent = `${formatSpotPrice(gainer.price)} • Vol: ${formatUSD(gainer.volume24hUsd)}`;
+      }
+
+      // Render 10 Category Cards Grid
+      const gridEl = document.getElementById('bybit-categories-grid');
+      if (gridEl) {
+        const maxCatVol = categories[0]?.volume24hUsd || 1;
+        gridEl.innerHTML = categories.map((cat, idx) => {
+          const isSelected = bybitActiveCategory === cat.id;
+          const barWidth = Math.max(8, Math.min(100, Math.round((cat.volume24hUsd / maxCatVol) * 100)));
+          const changeClass = cat.weightedChange24hPct >= 0 ? 'text-emerald-400' : 'text-rose-400';
+          const changeSign = cat.weightedChange24hPct >= 0 ? '+' : '';
+          const topList = (cat.topTokens || []).slice(0, 3).map(t => `$${t.symbol}`).join(' • ');
+
+          return `
+            <div 
+              onclick="setBybitCategoryFilter('${isSelected ? 'all' : cat.id}')" 
+              class="p-4 rounded-2xl border transition-all cursor-pointer flex flex-col justify-between space-y-3 ${
+                isSelected
+                  ? 'bg-amber-500/15 border-amber-400 shadow-lg shadow-amber-500/10'
+                  : 'bg-slate-900/80 hover:bg-slate-900 border-slate-800 hover:border-amber-500/40'
+              }">
+              <div class="space-y-1.5">
+                <div class="flex items-center justify-between gap-2">
+                  <span class="px-2 py-0.5 rounded-lg bg-slate-800 text-[10px] font-mono text-slate-300 font-bold">#${idx + 1} • ${cat.tokensCount} Tokens</span>
+                  <span class="font-mono text-xs font-extrabold ${changeClass}">${changeSign}${cat.weightedChange24hPct.toFixed(2)}%</span>
+                </div>
+                <div class="flex items-center gap-2 pt-1">
+                  <span class="text-xl">${cat.icon}</span>
+                  <div class="min-w-0">
+                    <div class="text-sm font-extrabold text-white truncate">${cat.name}</div>
+                    <div class="text-[11px] text-amber-300/90 font-semibold">${cat.arabicLabel}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="space-y-1.5 font-mono">
+                <div class="flex items-baseline justify-between">
+                  <span class="text-lg font-black text-amber-400">${formatUSD(cat.volume24hUsd)}</span>
+                  <span class="text-xs font-bold text-cyan-300">${cat.volumeSharePct}%</span>
+                </div>
+                <div class="w-full h-2 rounded-full bg-slate-950 overflow-hidden p-[1px]">
+                  <div class="h-full rounded-full bg-gradient-to-r from-amber-400 to-cyan-400" style="width: ${barWidth}%"></div>
+                </div>
+                <div class="flex items-center justify-between text-[10px] text-slate-400 pt-1">
+                  <span class="truncate" title="${topList}">Leaders: <strong class="text-slate-200">${topList}</strong></span>
+                  <span>🟢${cat.gainersCount} 🔴${cat.losersCount}</span>
+                </div>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      // Render Horizontal Category Volume Comparison Bars
+      const barsEl = document.getElementById('bybit-categories-bars');
+      if (barsEl) {
+        const maxVol = categories[0]?.volume24hUsd || 1;
+        barsEl.innerHTML = categories.map((cat, idx) => {
+          const pct = Math.max(4, Math.min(100, Math.round((cat.volume24hUsd / maxVol) * 100)));
+          const isSelected = bybitActiveCategory === cat.id;
+          return `
+            <div onclick="setBybitCategoryFilter('${isSelected ? 'all' : cat.id}')" class="flex items-center gap-3 p-2 rounded-xl hover:bg-slate-900/70 cursor-pointer transition-colors font-mono text-xs ${isSelected ? 'bg-amber-500/10 border border-amber-500/30' : ''}">
+              <div class="w-48 sm:w-64 flex items-center gap-2 flex-shrink-0 truncate">
+                <span class="text-slate-500 w-5">#${idx + 1}</span>
+                <span>${cat.icon}</span>
+                <span class="font-bold text-white truncate">${cat.name}</span>
+                <span class="text-[10px] text-slate-400 hidden sm:inline">(${cat.arabicLabel})</span>
+              </div>
+              <div class="flex-1 h-3 bg-slate-900 rounded-full overflow-hidden p-[1px]">
+                <div class="h-full rounded-full bg-gradient-to-r from-amber-400 via-emerald-400 to-cyan-400 transition-all duration-500" style="width: ${pct}%"></div>
+              </div>
+              <div class="w-28 text-right font-extrabold text-amber-400 flex-shrink-0">${formatUSD(cat.volume24hUsd)}</div>
+              <div class="w-16 text-right font-bold text-cyan-300 flex-shrink-0">${cat.volumeSharePct}%</div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      // Render Category Filter Pills
+      const pillsEl = document.getElementById('bybit-category-pills');
+      if (pillsEl) {
+        const totalTokensCount = (bybitVolumeMode === 'altcoins'
+          ? (bybitDataStore.tokens || []).filter(t => t.symbol !== 'BTC' && t.symbol !== 'ETH')
+          : (bybitDataStore.tokens || [])).length;
+
+        const allPill = `
+          <button 
+            onclick="setBybitCategoryFilter('all')" 
+            class="px-3 py-1.5 rounded-xl whitespace-nowrap transition-all flex items-center gap-1.5 ${
+              bybitActiveCategory === 'all'
+                ? 'bg-amber-400 text-black font-bold shadow-md shadow-amber-400/20'
+                : 'bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800'
+            }">
+            <span>🌐 All Categories</span>
+            <span class="text-[10px] opacity-80">(${totalTokensCount})</span>
+          </button>
+        `;
+
+        const catPills = categories.map(c => {
+          const active = bybitActiveCategory === c.id;
+          return `
+            <button 
+              onclick="setBybitCategoryFilter('${c.id}')" 
+              class="px-3 py-1.5 rounded-xl whitespace-nowrap transition-all flex items-center gap-1.5 ${
+                active
+                  ? 'bg-amber-400 text-black font-bold shadow-md shadow-amber-400/20'
+                  : 'bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800'
+              }">
+              <span>${c.icon} ${c.name}</span>
+              <span class="text-[10px] opacity-80">(${c.tokensCount})</span>
+            </button>
+          `;
+        }).join('');
+
+        pillsEl.innerHTML = allPill + catPills;
+      }
+
+      renderBybitTokensTable();
+    }
+
+    function renderBybitTokensTable() {
+      if (!bybitDataStore) return;
+      const tbody = document.getElementById('bybit-tokens-tbody');
+      const countBadge = document.getElementById('bybit-filtered-count');
+      if (!tbody) return;
+
+      const { categories, totalVolume } = getComputedBybitCategories();
+      const catVolMap = new Map(categories.map(c => [c.id, c.volume24hUsd]));
+
+      let list = [...(bybitDataStore.tokens || [])];
+      if (bybitVolumeMode === 'altcoins') {
+        list = list.filter(t => t.symbol !== 'BTC' && t.symbol !== 'ETH');
+      }
+      if (bybitActiveCategory !== 'all') {
+        list = list.filter(t => t.category === bybitActiveCategory);
+      }
+      if (bybitSearchQuery) {
+        list = list.filter(t =>
+          t.symbol.toLowerCase().includes(bybitSearchQuery) ||
+          t.categoryName.toLowerCase().includes(bybitSearchQuery) ||
+          (t.protocolName && t.protocolName.toLowerCase().includes(bybitSearchQuery))
+        );
+      }
+
+      if (bybitSortMode === 'change_desc') {
+        list.sort((a, b) => b.change24hPct - a.change24hPct);
+      } else if (bybitSortMode === 'change_asc') {
+        list.sort((a, b) => a.change24hPct - b.change24hPct);
+      } else if (bybitSortMode === 'rev_desc') {
+        list.sort((a, b) => (b.protocolRevenue7d || 0) - (a.protocolRevenue7d || 0) || b.volume24hUsd - a.volume24hUsd);
+      } else {
+        list.sort((a, b) => b.volume24hUsd - a.volume24hUsd);
+      }
+
+      if (countBadge) countBadge.textContent = `${list.length} Tokens`;
+
+      if (list.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="9" class="py-12 text-center text-slate-500 font-mono">No Bybit Spot tokens match this filter.</td></tr>`;
+        return;
+      }
+
+      const maxRowVol = list[0]?.volume24hUsd || 1;
+
+      tbody.innerHTML = list.slice(0, 200).map((tok, idx) => {
+        const isUp = tok.change24hPct >= 0;
+        const changeSign = isUp ? '+' : '';
+        const changeBadgeClass = isUp
+          ? 'bg-emerald-500/15 text-emerald-400 border-emerald-500/30'
+          : 'bg-rose-500/15 text-rose-400 border-rose-500/30';
+
+        const catVol = catVolMap.get(tok.category) || tok.volume24hUsd || 1;
+        const shareOfCatPct = Math.min(100, Math.round((tok.volume24hUsd / catVol) * 1000) / 10);
+        const barWidth = Math.max(6, Math.min(100, Math.round((tok.volume24hUsd / maxRowVol) * 100)));
+
+        const revDisplay = tok.hasProtocolRevenue && tok.protocolRevenue7d > 0
+          ? `<span class="text-cyan-300 font-bold" title="${tok.protocolName || tok.symbol}">${formatUSD(tok.protocolRevenue7d)}</span>`
+          : `<span class="text-slate-600">—</span>`;
+
+        return `
+          <tr class="hover:bg-slate-800/50 transition-colors">
+            <td class="py-3 px-3 text-center text-xs text-slate-500">${idx + 1}</td>
+            <td class="py-3 px-4">
+              <div class="flex items-center gap-2.5">
+                <img src="${tok.logo}" class="w-7 h-7 rounded-full bg-slate-800 object-cover border border-slate-700" onerror="this.src='https://placehold.co/28x28/1e293b/fbbf24?text=${tok.symbol.charAt(0)}'">
+                <div>
+                  <div class="flex items-center gap-1.5">
+                    <span class="font-extrabold text-white">$${tok.symbol}</span>
+                    <a href="${tok.bybitTradeUrl}" target="_blank" class="text-[10px] px-1.5 py-0.5 rounded bg-amber-500/15 text-amber-300 border border-amber-500/30 hover:bg-amber-500/25">Bybit ↗</a>
+                  </div>
+                  <div class="text-[10px] text-slate-500">${tok.pair}${tok.protocolName ? ' • ' + tok.protocolName : ''}</div>
+                </div>
+              </div>
+            </td>
+            <td class="py-3 px-4">
+              <button onclick="setBybitCategoryFilter('${tok.category}')" class="px-2.5 py-1 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/80 text-xs text-slate-200 flex items-center gap-1.5">
+                <span>${tok.categoryIcon}</span>
+                <span>${tok.categoryName}</span>
+              </button>
+            </td>
+            <td class="py-3 px-4 text-right font-bold text-slate-100">${formatSpotPrice(tok.price)}</td>
+            <td class="py-3 px-4 text-right">
+              <span class="px-2 py-0.5 rounded-lg border text-xs font-bold ${changeBadgeClass}">
+                ${changeSign}${tok.change24hPct.toFixed(2)}%
+              </span>
+            </td>
+            <td class="py-3 px-4 text-right font-extrabold text-amber-400">${formatUSD(tok.volume24hUsd)}</td>
+            <td class="py-3 px-4">
+              <div class="space-y-1">
+                <div class="flex justify-between text-[10px] text-slate-400">
+                  <span>${shareOfCatPct}% of ${tok.categoryIcon}</span>
+                  <span>${tok.volumeSharePct}% Spot</span>
+                </div>
+                <div class="w-full h-1.5 bg-slate-900 rounded-full overflow-hidden">
+                  <div class="h-full bg-amber-400 rounded-full" style="width: ${barWidth}%"></div>
+                </div>
+              </div>
+            </td>
+            <td class="py-3 px-4 text-right text-xs text-slate-400">
+              <div>H: <span class="text-slate-200">${formatSpotPrice(tok.high24h)}</span></div>
+              <div>L: <span class="text-slate-500">${formatSpotPrice(tok.low24h)}</span></div>
+            </td>
+            <td class="py-3 px-4 text-right text-xs">${revDisplay}</td>
+          </tr>
+        `;
+      }).join('');
     }
 
   </script>
