@@ -146,7 +146,7 @@ const TOKEN_CATEGORY_MAP = {
   NFP: 'ai', AI: 'ai', SHELL: 'ai', REI: 'ai', NOS: 'ai', FLUX: 'ai',
   SPEC: 'ai', GTAI: 'ai', RSS3: 'ai', ORAI: 'ai', RLC: 'ai', CTXC: 'ai',
   IQ: 'ai', ALI: 'ai', AITECPROMPT: 'ai', NIL: 'ai', SIGN: 'ai',
-  VVV: 'ai', ALC'0G': 'ai', FHE: 'ai', RECALL: 'ai', ROBO: 'ai',
+  VVV: 'ai', ALCH: 'ai', '0G': 'ai', FHE: 'ai', RECALL: 'ai', ROBO: 'ai',
   SXT: 'ai', SENT: 'ai', ELSA: 'ai', CARV: 'ai', LMWR: 'ai', TA: 'ai',
   OPG: 'ai', NEWT: 'ai', H: 'ai',
 
