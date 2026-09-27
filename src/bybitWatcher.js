@@ -286,7 +286,14 @@ export async function getBybitSpotEcosystem(force = false) {
   const [bybitRes, scannerData] = await Promise.all([
     fetch('https://api.bybit.com/v5/market/tickers?category=spot', {
       signal: AbortSignal.timeout(15000)
-    }).then(r => r.json()),
+    }).then(async r => {
+      const text = await r.text();
+      try {
+        return JSON.parse(text);
+      } catch (err) {
+        throw new Error("Bybit fetch failed: " + err.message + " | Raw response: " + text.substring(0, 150));
+      }
+    }),
     scanProtocols(false).catch(() => ({ protocols: [] }))
   ]);
 
