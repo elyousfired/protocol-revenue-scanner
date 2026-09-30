@@ -393,7 +393,9 @@ async function buildDynamicProtocolEvolution(slug) {
 
   let solProto = null;
   let suiProto = null;
+  let ethProto = null;
   let solBurnLedger = {};
+  let ethBurnLedger = {};
   let discProto = null;
   let globalProto = null;
   try {
@@ -404,6 +406,15 @@ async function buildDynamicProtocolEvolution(slug) {
   } catch {}
 
   if (!solProto) {
+    try {
+      const ethRaw = await fs.readFile(path.join(CACHE_DIR, 'ethereum_ecosystem.json'), 'utf-8');
+      const ethData = JSON.parse(ethRaw);
+      ethProto = (ethData.protocols || []).find(p => p.slug === slug);
+      ethBurnLedger = ethData.l1Chain?.erc20BurnLedger || {};
+    } catch {}
+  }
+
+  if (!solProto && !ethProto) {
     try {
       const suiRaw = await fs.readFile(path.join(CACHE_DIR, 'sui_ecosystem.json'), 'utf-8');
       const suiData = JSON.parse(suiRaw);
@@ -419,7 +430,7 @@ async function buildDynamicProtocolEvolution(slug) {
     }
   } catch {}
 
-  if (!solProto && !suiProto) {
+  if (!solProto && !ethProto && !suiProto) {
     try {
       const globRaw = await fs.readFile(path.join(CACHE_DIR, 'protocols_data.json'), 'utf-8');
       const globData = JSON.parse(globRaw);
@@ -427,7 +438,7 @@ async function buildDynamicProtocolEvolution(slug) {
     } catch {}
   }
 
-  const ref = solProto || suiProto || globalProto || discProto;
+  const ref = solProto || ethProto || suiProto || globalProto || discProto;
   if (!ref) return null;
 
   const KNOWN_BURN_TOKENS = {
@@ -448,7 +459,21 @@ async function buildDynamicProtocolEvolution(slug) {
     MET: 2267484,
     SOL: 285000,
     DEEP: 34704432,
-    TURBOS: 185000000
+    TURBOS: 185000000,
+    ETH: 4524800,
+    SKY: 975376,
+    AAVE: 1760000,
+    UNI: 112775581,
+    ENA: 35200000,
+    PENDLE: 23081420,
+    CRV: 814903031,
+    ETHFI: 31600000,
+    SNX: 16200000,
+    FXS: 24700000,
+    COW: 17200000,
+    BANANA: 1597107,
+    SHIB: 410745000000000,
+    PEPE: 6918000000000
   };
 
   const name = ref.name || slug;
@@ -458,6 +483,7 @@ async function buildDynamicProtocolEvolution(slug) {
   const hasBuyback = Boolean(ref.mechanism?.buyback ?? discProto?.hasBuyback ?? (ref.revenue7d > 25000));
   const totalBurnedTokens =
     solBurnLedger[symbol]?.burnedTokens ||
+    ethBurnLedger[symbol]?.burnedTokens ||
     KNOWN_BURN_TOKENS[symbol] ||
     ref.mechanism?.burnedAmount ||
     discProto?.burnedTokens ||
