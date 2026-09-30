@@ -119,20 +119,11 @@
 
       <!-- MAIN PAGE NAVIGATION BUTTONS -->
       <nav class="flex items-center bg-slate-900/95 p-1 rounded-2xl border border-slate-800 font-mono text-xs shadow-inner">
-        <!-- Page 4 Button: Blockchains & Smart Contracts Directory -->
-        <button 
-          id="nav-btn-contracts" 
-          onclick="switchPage('contracts')" 
-          class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl font-bold transition-all bg-cyan-400 text-black shadow-md shadow-cyan-400/20">
-          <span>⛓️</span>
-          <span>Chains & Contracts</span>
-        </button>
-
         <!-- Page 5 Button: Sui Ecosystem & On-Chain Hub -->
         <button 
           id="nav-btn-sui" 
           onclick="switchPage('sui')" 
-          class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-cyan-300 hover:text-white transition-all font-bold">
+          class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl font-bold transition-all bg-cyan-400 text-black shadow-md shadow-cyan-400/20">
           <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
           <span>💧 Sui Ecosystem</span>
         </button>
@@ -3712,7 +3703,7 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
   </div>
 
   <script>
-    let activePage = 'contracts';
+    let activePage = 'sui';
     let allProtocols = [];
     let initialStats = null;
     let currentModalContract = '';
@@ -3775,7 +3766,7 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
 
     // ================= PAGE SWITCHING LOGIC ================= //
     function switchPage(page) {
-      if (['table', 'weekly', 'yield'].includes(page)) page = 'contracts';
+      if (['table', 'weekly', 'yield', 'contracts'].includes(page)) page = 'sui';
       activePage = page;
       window.location.hash = page;
 
@@ -3802,8 +3793,7 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
       });
 
       // Render the active view
-      if (page === 'contracts') loadContractsData();
-      else if (page === 'sui') loadSuiData();
+      if (page === 'sui') loadSuiData();
       else if (page === 'schema') renderSchemaPage();
       else if (page === 'solana') loadSolanaData();
       else if (page === 'solana-schema') renderSolanaSchemaPage();
@@ -3833,18 +3823,12 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
           document.getElementById('last-updated').textContent = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
         }
 
-        initTablePills(json.topChains);
-        if (!force) {
-          initCategorySelects(json.filters.categories);
-          loadChainsOverview();
-        }
-
         // Check hash or keep activePage
         const hash = window.location.hash.replace('#', '');
-        const validPages = ['contracts', 'sui', 'schema', 'solana', 'solana-schema', 'ethereum', 'bybit', 'monad'];
+        const validPages = ['sui', 'schema', 'solana', 'solana-schema', 'ethereum', 'bybit', 'monad'];
         const targetPage = validPages.includes(hash)
           ? hash
-          : (validPages.includes(activePage) ? activePage : 'contracts');
+          : (validPages.includes(activePage) ? activePage : 'sui');
         if (!force) {
           switchPage(targetPage);
         }
