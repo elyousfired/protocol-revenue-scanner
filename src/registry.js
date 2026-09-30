@@ -204,6 +204,8 @@ export async function getProtocolRegistry(force = false) {
   try {
     const monadRaw = await fs.readFile(path.join(CACHE_DIR, 'monad_ecosystem.json'), 'utf-8');
     const monadData = JSON.parse(monadRaw);
+    // Remove any DefiLlama Monad entries so Monad is 100% pure on-chain
+    baseList = baseList.filter(p => (p.primaryChain || '').toLowerCase() !== 'monad');
     const existingSlugs = new Set(baseList.map(p => (p.slug || '').toLowerCase()));
     for (const mp of (monadData.protocols || [])) {
       if (!existingSlugs.has((mp.slug || '').toLowerCase())) {
@@ -220,7 +222,7 @@ export async function getProtocolRegistry(force = false) {
           explorerUrl: mp.explorerUrl || getExplorerUrl('monad', mp.contractAddress),
           explorerName: 'Monadscan',
           mcap: mp.mcap || 0,
-          tvl: mp.tvl || mp.mcap || 0,
+          tvl: mp.tvl || 0,
           logo: mp.logo || null,
           geckoId: mp.slug,
           parentProtocol: null

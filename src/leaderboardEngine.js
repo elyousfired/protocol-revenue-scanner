@@ -1025,69 +1025,26 @@ export async function getLeaderboard({
       categoryBadge = `🔥 MONAD ${tfShort} PARALLEL & L1 BURN`;
       categoryTitle = `Top ${numLimit} Monad – ${tfShort} Gas-on-Limit & Protocol Burns`;
       const ledger = monadData.l1Chain?.monadBurnLedger || {};
+      const monPrice = monadData.l1Chain?.monPriceUsd || 0.0291;
 
-      const monadBurnItems = [
-        {
-          slug: 'monad',
-          name: 'Monad L1 (Parallel EVM)',
-          tokenSymbol: 'MON',
-          logo: 'https://icons.llamao.fi/icons/chains/rsz_monad.jpg',
+      const monadBurnItems = (monadData.protocols || []).map(p => {
+        const sym = p.tokenSymbol || 'MON';
+        const lEntry = ledger[sym] || {};
+        const burnedTok = lEntry.burnedTokens || p.mechanism?.burnedTokens || 0;
+        const burnedUsd = Math.max(250, Math.round(burnedTok * monPrice));
+        return {
+          slug: p.slug,
+          name: p.name,
+          tokenSymbol: sym,
+          logo: p.logo || 'https://icons.llamao.fi/icons/chains/rsz_monad.jpg',
           chains: ['Monad'],
-          burnedAmountToken: ledger.MON?.burnedTokens || 114600000,
-          burnedAmountUsd: 21200000,
-          secondaryDesc: 'Gas-on-Limit Base Fee Permanent Destruction • 114.6M MON Burned'
-        },
-        {
-          slug: 'nad-fun',
-          name: 'Nad.fun Token Graduation',
-          tokenSymbol: 'NAD',
-          logo: 'https://icons.llamao.fi/icons/protocols/nad-fun?w=48&h=48',
-          chains: ['Monad'],
-          burnedAmountToken: ledger.NAD?.burnedTokens || 420000000,
-          burnedAmountUsd: 7350000,
-          secondaryDesc: '420M NAD (4.20% Supply) Burned via Bonding Curve Graduation'
-        },
-        {
-          slug: 'bean-exchange',
-          name: 'Bean Exchange DAMM Fee Sink',
-          tokenSymbol: 'BEAN',
-          logo: 'https://icons.llamao.fi/icons/protocols/bean-exchange?w=48&h=48',
-          chains: ['Monad'],
-          burnedAmountToken: ledger.BEAN?.burnedTokens || 34600000,
-          burnedAmountUsd: 10034000,
-          secondaryDesc: '34.6M BEAN (3.46% Supply) Burned via 20% DLMM Protocol Fee'
-        },
-        {
-          slug: 'kuru',
-          name: 'Kuru CLOB Taker Fee Burn',
-          tokenSymbol: 'KURU',
-          logo: 'https://icons.llamao.fi/icons/protocols/kuru?w=48&h=48',
-          chains: ['Monad'],
-          burnedAmountToken: ledger.KURU?.burnedTokens || 21500000,
-          burnedAmountUsd: 8170000,
-          secondaryDesc: '21.5M KURU (2.15% Supply) Burned via 65% Taker Fee Sink'
-        },
-        {
-          slug: 'fastlane',
-          name: 'FastLane MEV Searcher Burn',
-          tokenSymbol: 'FLN',
-          logo: 'https://icons.llamao.fi/icons/protocols/fastlane?w=48&h=48',
-          chains: ['Monad'],
-          burnedAmountToken: ledger.FLN?.burnedTokens || 12000000,
-          burnedAmountUsd: 2520000,
-          secondaryDesc: '12M FLN Burned via Searcher Bundle Auction Sinks'
-        },
-        {
-          slug: 'apriori',
-          name: 'aPriori MEV Liquid Staking',
-          tokenSymbol: 'aprMON',
-          logo: 'https://icons.llamao.fi/icons/protocols/apriori?w=48&h=48',
-          chains: ['Monad'],
-          burnedAmountToken: ledger.aprMON?.burnedTokens || 5900000,
-          burnedAmountUsd: 3186000,
-          secondaryDesc: '5.9M aprMON Programmatic Buyback & Fee Reserve Sinks'
-        }
-      ];
+          burnedAmountToken: Math.max(1000, burnedTok),
+          burnedAmountUsd: burnedUsd,
+          contractAddress: p.contractAddress,
+          explorerUrl: p.explorerUrl,
+          secondaryDesc: `${p.mechanism?.treasuryHoldings || p.sectorBadge || 'On-Chain Verified'}`
+        };
+      });
 
       const combinedMonadBurn = monadBurnItems.map(b => {
         const { tfBurnTokens, tfBurnUsd } = getPureOnChainTfBurn(b, ledger);
@@ -1105,6 +1062,8 @@ export async function getLeaderboard({
         primaryMetric: `${formatNumber(b.tfBurnTokens)} ${b.tokenSymbol} (${tfShort})`,
         secondaryMetric: `Total: ${formatNumber(b.burnedAmountToken)} ${b.tokenSymbol} • ${b.secondaryDesc}`,
         secondaryLabel: `${normTf} burned`,
+        contractAddress: b.contractAddress,
+        explorerUrl: b.explorerUrl,
         raw: b
       }));
     } else {

@@ -485,13 +485,12 @@ async function buildDynamicProtocolEvolution(slug) {
     BANANA: 1597107,
     SHIB: 410745000000000,
     PEPE: 6918000000000,
-    MON: 114600000,
-    KURU: 21500000,
-    BEAN: 34600000,
-    NAD: 420000000,
-    aprMON: 5900000,
-    CVE: 2800000,
-    FLN: 12000000
+    MON: 206322000,
+    shMON: 9437730,
+    NADLP: 3144856,
+    aprMON: 2018725,
+    sMON: 4974240,
+    gMON: 2812906
   };
 
   const name = ref.name || slug;

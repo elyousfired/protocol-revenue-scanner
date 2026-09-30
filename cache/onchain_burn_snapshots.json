@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1790792086639,
+  "updatedAt": 1790799842211,
   "chains": {
     "solana": {
       "JUP": {
@@ -940,6 +940,11 @@
             "timestamp": 1790792064976,
             "currentSupply": 99885400000,
             "burnedTokens": 114600000
+          },
+          {
+            "timestamp": 1790799842211,
+            "currentSupply": 99746389369,
+            "burnedTokens": 253610631
           }
         ]
       },
@@ -952,6 +957,11 @@
             "timestamp": 1790792064976,
             "currentSupply": 974300000,
             "burnedTokens": 25700000
+          },
+          {
+            "timestamp": 1790799842211,
+            "currentSupply": 5814193,
+            "burnedTokens": 24185807
           }
         ]
       },
@@ -964,6 +974,11 @@
             "timestamp": 1790792064976,
             "currentSupply": 489200000,
             "burnedTokens": 10800000
+          },
+          {
+            "timestamp": 1790799842211,
+            "currentSupply": 77025760,
+            "burnedTokens": 4974240
           }
         ]
       },
@@ -976,6 +991,11 @@
             "timestamp": 1790792064976,
             "currentSupply": 988200000,
             "burnedTokens": 11800000
+          },
+          {
+            "timestamp": 1790799842211,
+            "currentSupply": 22981784,
+            "burnedTokens": 2018216
           }
         ]
       },
@@ -988,6 +1008,11 @@
             "timestamp": 1790792064976,
             "currentSupply": 496800000,
             "burnedTokens": 3200000
+          },
+          {
+            "timestamp": 1790799842211,
+            "currentSupply": 32187094,
+            "burnedTokens": 2812906
           }
         ]
       },
@@ -1036,6 +1061,90 @@
             "timestamp": 1790792064976,
             "currentSupply": 976000000,
             "burnedTokens": 24000000
+          }
+        ]
+      },
+      "aMonUSDC": {
+        "symbol": "aMonUSDC",
+        "initialSupply": 185000000,
+        "firstSeenAt": 1790799842211,
+        "snapshots": [
+          {
+            "timestamp": 1790799842211,
+            "currentSupply": 169906322,
+            "burnedTokens": 15093678
+          }
+        ]
+      },
+      "UNIV4": {
+        "symbol": "UNIV4",
+        "initialSupply": 200000000,
+        "firstSeenAt": 1790799842211,
+        "snapshots": [
+          {
+            "timestamp": 1790799842211,
+            "currentSupply": 177481377,
+            "burnedTokens": 22518623
+          }
+        ]
+      },
+      "shMON": {
+        "symbol": "shMON",
+        "initialSupply": 215000000,
+        "firstSeenAt": 1790799842211,
+        "snapshots": [
+          {
+            "timestamp": 1790799842211,
+            "currentSupply": 205562209,
+            "burnedTokens": 9437791
+          }
+        ]
+      },
+      "nUSDC": {
+        "symbol": "nUSDC",
+        "initialSupply": 5000000,
+        "firstSeenAt": 1790799842211,
+        "snapshots": [
+          {
+            "timestamp": 1790799842211,
+            "currentSupply": 2917749,
+            "burnedTokens": 2082251
+          }
+        ]
+      },
+      "hMON": {
+        "symbol": "hMON",
+        "initialSupply": 25000000,
+        "firstSeenAt": 1790799842211,
+        "snapshots": [
+          {
+            "timestamp": 1790799842211,
+            "currentSupply": 23001440,
+            "burnedTokens": 1998560
+          }
+        ]
+      },
+      "NADLP": {
+        "symbol": "NADLP",
+        "initialSupply": 10000000,
+        "firstSeenAt": 1790799842211,
+        "snapshots": [
+          {
+            "timestamp": 1790799842211,
+            "currentSupply": 6855197,
+            "burnedTokens": 3144803
+          }
+        ]
+      },
+      "CAKE": {
+        "symbol": "CAKE",
+        "initialSupply": 5000000,
+        "firstSeenAt": 1790799842211,
+        "snapshots": [
+          {
+            "timestamp": 1790799842211,
+            "currentSupply": 32678,
+            "burnedTokens": 4967322
           }
         ]
       }

@@ -1,6 +1,6 @@
 {
   "success": true,
-  "lastUpdated": "2026-09-30T16:15:17.583Z",
+  "lastUpdated": "2026-09-30T18:14:46.641Z",
   "l1Chain": {
     "name": "Sui Network",
     "symbol": "SUI",
@@ -26,12 +26,12 @@
       "burnVelocity": 0.7
     },
     "latestLiveSwap": {
-      "txDigest": "BeHHJsGgGD3G9eyG7LVNSRpa8np1Zj9gSTUZNWiAWXke",
-      "timestamp": 1790784910534,
-      "pool": "0x02629acec0cc5dc28209a4ea56ee44369016e903268b800e0b08314fcadbaf0f",
-      "feeAmount": "2492699",
-      "amountIn": "4985397544",
-      "amountOut": "6010316"
+      "txDigest": "5NZuQiiVx7bJNEs9EepvyhYtiPhEBNa19wEeBDM7jyFY",
+      "timestamp": 1790792077100,
+      "pool": "0xdcd97bb5d843844a6debf28b774488f20d46bc645ac0afbb6f1ebb8d38a9e19b",
+      "feeAmount": "112458750",
+      "amountIn": "44983500000",
+      "amountOut": "5985459867"
     }
   },
   "protocols": [
@@ -44,19 +44,19 @@
       "packageId": "0x6864a6f921804860930db6ddbe2e16acdf8504495ea7481637a1c8b9a8fe54b",
       "explorerUrl": "https://suiscan.xyz/mainnet/coin/0x6864a6f921804860930db6ddbe2e16acdf8504495ea7481637a1c8b9a8fe54b::cetus::CETUS",
       "packageExplorerUrl": "https://suiscan.xyz/mainnet/package/0x6864a6f921804860930db6ddbe2e16acdf8504495ea7481637a1c8b9a8fe54b",
-      "mcap": 29601600,
-      "peRatio": 11.3,
+      "mcap": 27437510.81583927,
+      "peRatio": 10.5,
       "timeframeData": {
         "24h": {
-          "fees": 28313,
-          "revenue": 5663,
-          "lpShare": 22650,
+          "fees": 33641,
+          "revenue": 6728,
+          "lpShare": 26913,
           "lpSharePct": 80,
           "revSharePct": 20,
-          "arr": 2068411,
+          "arr": 2457402,
           "periodYield": 0.02,
-          "apy": 7,
-          "delta": -35.65
+          "apy": 9,
+          "delta": -23.55
         },
         "7d": {
           "fees": 251322,
@@ -65,8 +65,8 @@
           "lpSharePct": 80,
           "revSharePct": 20,
           "arr": 2620713,
-          "periodYield": 0.17,
-          "apy": 8.9,
+          "periodYield": 0.18,
+          "apy": 9.6,
           "delta": 17.96
         },
         "30d": {
@@ -76,22 +76,22 @@
           "lpSharePct": 80,
           "revSharePct": 20,
           "arr": 1861195,
-          "periodYield": 0.52,
-          "apy": 6.3,
+          "periodYield": 0.56,
+          "apy": 6.8,
           "delta": 0
         }
       },
-      "fees24h": 28313,
+      "fees24h": 33641,
       "fees7d": 251322,
       "fees30d": 764665,
-      "revenue24h": 5663,
+      "revenue24h": 6728,
       "revenue7d": 50263,
       "revenue30d": 152933,
       "lpShare7d": 201059,
       "lpSharePct": 80,
       "revSharePct": 20,
-      "weeklyYieldMc": 0.17,
-      "annualizedYieldMc": 8.9,
+      "weeklyYieldMc": 0.18,
+      "annualizedYieldMc": 9.6,
       "annualizedRevenue": 2620713,
       "whaleRisk": {
         "holdersCount": 84210,
@@ -128,18 +128,18 @@
       "packageId": "0xa99b8952d4f7d947ea77fe0ecdcc9e5fc0bcab2841d6e2a5aa00c3044e5544b5",
       "explorerUrl": "https://suiscan.xyz/mainnet/coin/0xa99b8952d4f7d947ea77fe0ecdcc9e5fc0bcab2841d6e2a5aa00c3044e5544b5::navx::NAVX",
       "packageExplorerUrl": "https://suiscan.xyz/mainnet/package/0xa99b8952d4f7d947ea77fe0ecdcc9e5fc0bcab2841d6e2a5aa00c3044e5544b5",
-      "mcap": 9864525.40556653,
-      "peRatio": 4.3,
+      "mcap": 9822581.864019036,
+      "peRatio": 4.2,
       "timeframeData": {
         "24h": {
-          "fees": 20507,
+          "fees": 21141,
           "revenue": 6289,
-          "lpShare": 14218,
-          "lpSharePct": 69.3,
-          "revSharePct": 30.7,
+          "lpShare": 14852,
+          "lpSharePct": 70.3,
+          "revSharePct": 29.7,
           "arr": 2297057,
           "periodYield": 0.06,
-          "apy": 23.3,
+          "apy": 23.4,
           "delta": 25.03
         },
         "7d": {
@@ -150,7 +150,7 @@
           "revSharePct": 45.1,
           "arr": 2316684,
           "periodYield": 0.45,
-          "apy": 23.5,
+          "apy": 23.6,
           "delta": -2.02
         },
         "30d": {
@@ -161,11 +161,11 @@
           "revSharePct": 46.5,
           "arr": 2276654,
           "periodYield": 1.9,
-          "apy": 23.1,
+          "apy": 23.2,
           "delta": 0
         }
       },
-      "fees24h": 20507,
+      "fees24h": 21141,
       "fees7d": 98540,
       "fees30d": 402175,
       "revenue24h": 6289,
@@ -175,7 +175,7 @@
       "lpSharePct": 54.9,
       "revSharePct": 45.1,
       "weeklyYieldMc": 0.45,
-      "annualizedYieldMc": 23.5,
+      "annualizedYieldMc": 23.6,
       "annualizedRevenue": 2316684,
       "whaleRisk": {
         "holdersCount": 41520,
@@ -216,15 +216,15 @@
       "peRatio": null,
       "timeframeData": {
         "24h": {
-          "fees": 10240,
-          "revenue": 2857,
-          "lpShare": 7383,
-          "lpSharePct": 72.1,
-          "revSharePct": 27.9,
-          "arr": 1043519,
+          "fees": 10409,
+          "revenue": 2888,
+          "lpShare": 7521,
+          "lpSharePct": 72.3,
+          "revSharePct": 27.7,
+          "arr": 1054842,
           "periodYield": 0,
           "apy": 0,
-          "delta": -18.18
+          "delta": -17.3
         },
         "7d": {
           "fees": 92505,
@@ -249,10 +249,10 @@
           "delta": 0
         }
       },
-      "fees24h": 10240,
+      "fees24h": 10409,
       "fees7d": 92505,
       "fees30d": 306716,
-      "revenue24h": 2857,
+      "revenue24h": 2888,
       "revenue7d": 31731,
       "revenue30d": 95828,
       "lpShare7d": 60774,
@@ -296,19 +296,19 @@
       "packageId": "0x5d1f47ea69bb0de31c313d7acf89b890dbb8991ea8e03c6c355171f84bb1ba4a",
       "explorerUrl": "https://suiscan.xyz/mainnet/coin/0x5d1f47ea69bb0de31c313d7acf89b890dbb8991ea8e03c6c355171f84bb1ba4a::turbos::TURBOS",
       "packageExplorerUrl": "https://suiscan.xyz/mainnet/package/0x5d1f47ea69bb0de31c313d7acf89b890dbb8991ea8e03c6c355171f84bb1ba4a",
-      "mcap": 1062683.9025660933,
+      "mcap": 1012277.7728811079,
       "peRatio": 1,
       "timeframeData": {
         "24h": {
-          "fees": 6498,
-          "revenue": 1949,
-          "lpShare": 4549,
+          "fees": 7443,
+          "revenue": 2233,
+          "lpShare": 5210,
           "lpSharePct": 70,
           "revSharePct": 30,
-          "arr": 711872,
-          "periodYield": 0.18,
-          "apy": 67,
-          "delta": -47.05
+          "arr": 815603,
+          "periodYield": 0.22,
+          "apy": 80.6,
+          "delta": -39.34
         },
         "7d": {
           "fees": 66754,
@@ -317,8 +317,8 @@
           "lpSharePct": 70,
           "revSharePct": 30,
           "arr": 1044051,
-          "periodYield": 1.88,
-          "apy": 98.2,
+          "periodYield": 1.98,
+          "apy": 103.1,
           "delta": 63.26
         },
         "30d": {
@@ -328,22 +328,22 @@
           "lpSharePct": 70,
           "revSharePct": 30,
           "arr": 600383,
-          "periodYield": 4.64,
-          "apy": 56.5,
+          "periodYield": 4.87,
+          "apy": 59.3,
           "delta": 0
         }
       },
-      "fees24h": 6498,
+      "fees24h": 7443,
       "fees7d": 66754,
       "fees30d": 164471,
-      "revenue24h": 1949,
+      "revenue24h": 2233,
       "revenue7d": 20024,
       "revenue30d": 49333,
       "lpShare7d": 46730,
       "lpSharePct": 70,
       "revSharePct": 30,
-      "weeklyYieldMc": 1.88,
-      "annualizedYieldMc": 98.2,
+      "weeklyYieldMc": 1.98,
+      "annualizedYieldMc": 103.1,
       "annualizedRevenue": 1044051,
       "whaleRisk": {
         "holdersCount": 18340,
@@ -380,19 +380,19 @@
       "packageId": "0xe1b45a0e641b9955a20aa0ad1c1f4ad86aad8afb07296d4085e349a50e90bdca",
       "explorerUrl": "https://suiscan.xyz/mainnet/coin/0xe1b45a0e641b9955a20aa0ad1c1f4ad86aad8afb07296d4085e349a50e90bdca::blue::BLUE",
       "packageExplorerUrl": "https://suiscan.xyz/mainnet/package/0xe1b45a0e641b9955a20aa0ad1c1f4ad86aad8afb07296d4085e349a50e90bdca",
-      "mcap": 5917354.960591827,
-      "peRatio": 5.7,
+      "mcap": 6204432.362191339,
+      "peRatio": 6,
       "timeframeData": {
         "24h": {
-          "fees": 10817,
-          "revenue": 2723,
-          "lpShare": 8094,
-          "lpSharePct": 74.8,
-          "revSharePct": 25.2,
-          "arr": 994576,
-          "periodYield": 0.05,
-          "apy": 16.8,
-          "delta": -6.75
+          "fees": 10867,
+          "revenue": 2762,
+          "lpShare": 8105,
+          "lpSharePct": 74.6,
+          "revSharePct": 25.4,
+          "arr": 1008821,
+          "periodYield": 0.04,
+          "apy": 16.3,
+          "delta": -5.41
         },
         "7d": {
           "fees": 77271,
@@ -401,8 +401,8 @@
           "lpSharePct": 74.4,
           "revSharePct": 25.6,
           "arr": 1031486,
-          "periodYield": 0.33,
-          "apy": 17.4,
+          "periodYield": 0.32,
+          "apy": 16.6,
           "delta": 5.64
         },
         "30d": {
@@ -412,22 +412,22 @@
           "lpSharePct": 74.6,
           "revSharePct": 25.4,
           "arr": 731368,
-          "periodYield": 1.02,
-          "apy": 12.4,
+          "periodYield": 0.97,
+          "apy": 11.8,
           "delta": 0
         }
       },
-      "fees24h": 10817,
+      "fees24h": 10867,
       "fees7d": 77271,
       "fees30d": 236186,
-      "revenue24h": 2723,
+      "revenue24h": 2762,
       "revenue7d": 19783,
       "revenue30d": 60096,
       "lpShare7d": 57488,
       "lpSharePct": 74.4,
       "revSharePct": 25.6,
-      "weeklyYieldMc": 0.33,
-      "annualizedYieldMc": 17.4,
+      "weeklyYieldMc": 0.32,
+      "annualizedYieldMc": 16.6,
       "annualizedRevenue": 1031486,
       "whaleRisk": {
         "holdersCount": 29400,
@@ -464,19 +464,19 @@
       "packageId": "0x3a304c7feba2d819ea57c3542d68439ca2c386ba02159c740f7b406e592c62ea",
       "explorerUrl": "https://suiscan.xyz/mainnet/coin/0x3a304c7feba2d819ea57c3542d68439ca2c386ba02159c740f7b406e592c62ea::haedal::HAEDAL",
       "packageExplorerUrl": "https://suiscan.xyz/mainnet/package/0x3a304c7feba2d819ea57c3542d68439ca2c386ba02159c740f7b406e592c62ea",
-      "mcap": 4282251,
-      "peRatio": 7.4,
+      "mcap": 3833409,
+      "peRatio": 6.6,
       "timeframeData": {
         "24h": {
-          "fees": 1786,
-          "revenue": 1678,
-          "lpShare": 108,
+          "fees": 3697,
+          "revenue": 3475,
+          "lpShare": 222,
           "lpSharePct": 6,
           "revSharePct": 94,
-          "arr": 612890,
-          "periodYield": 0.04,
-          "apy": 14.3,
-          "delta": 2.94
+          "arr": 1269244,
+          "periodYield": 0.09,
+          "apy": 33.1,
+          "delta": 113.19
         },
         "7d": {
           "fees": 11779,
@@ -485,8 +485,8 @@
           "lpSharePct": 6,
           "revSharePct": 94,
           "arr": 577346,
-          "periodYield": 0.26,
-          "apy": 13.5,
+          "periodYield": 0.29,
+          "apy": 15.1,
           "delta": 33.07
         },
         "30d": {
@@ -496,22 +496,22 @@
           "lpSharePct": 6,
           "revSharePct": 94,
           "arr": 436830,
-          "periodYield": 0.84,
-          "apy": 10.2,
+          "periodYield": 0.94,
+          "apy": 11.4,
           "delta": 0
         }
       },
-      "fees24h": 1786,
+      "fees24h": 3697,
       "fees7d": 11779,
       "fees30d": 38182,
-      "revenue24h": 1678,
+      "revenue24h": 3475,
       "revenue7d": 11073,
       "revenue30d": 35894,
       "lpShare7d": 706,
       "lpSharePct": 6,
       "revSharePct": 94,
-      "weeklyYieldMc": 0.26,
-      "annualizedYieldMc": 13.5,
+      "weeklyYieldMc": 0.29,
+      "annualizedYieldMc": 15.1,
       "annualizedRevenue": 577346,
       "whaleRisk": {
         "holdersCount": 15000,
@@ -632,8 +632,8 @@
       "packageId": "0xdeeb7a4662eec9f2f3def03fb937a663dddaa2e215b8078a284d026b7946c270",
       "explorerUrl": "https://suiscan.xyz/mainnet/coin/0xdeeb7a4662eec9f2f3def03fb937a663dddaa2e215b8078a284d026b7946c270::deep::DEEP",
       "packageExplorerUrl": "https://suiscan.xyz/mainnet/package/0xdeeb7a4662eec9f2f3def03fb937a663dddaa2e215b8078a284d026b7946c270",
-      "mcap": 57866866.43259144,
-      "peRatio": 164.6,
+      "mcap": 59027439.244065434,
+      "peRatio": 167.9,
       "timeframeData": {
         "24h": {
           "fees": 2290,
@@ -716,19 +716,19 @@
       "packageId": "0x35169bc93e1fddfcf3a82a9eae726d349689ed59e4b065369af8789fe59f8608",
       "explorerUrl": "https://suiscan.xyz/mainnet/coin/0x35169bc93e1fddfcf3a82a9eae726d349689ed59e4b065369af8789fe59f8608::mmt::MMT",
       "packageExplorerUrl": "https://suiscan.xyz/mainnet/package/0x35169bc93e1fddfcf3a82a9eae726d349689ed59e4b065369af8789fe59f8608",
-      "mcap": 38538940.65904603,
-      "peRatio": 130,
+      "mcap": 38880402.329295285,
+      "peRatio": 131.1,
       "timeframeData": {
         "24h": {
-          "fees": 2704,
-          "revenue": 541,
-          "lpShare": 2163,
+          "fees": 2751,
+          "revenue": 550,
+          "lpShare": 2201,
           "lpSharePct": 80,
           "revSharePct": 20,
-          "arr": 197600,
+          "arr": 200888,
           "periodYield": 0,
           "apy": 0.5,
-          "delta": -12.88
+          "delta": -11.43
         },
         "7d": {
           "fees": 28432,
@@ -753,10 +753,10 @@
           "delta": 0
         }
       },
-      "fees24h": 2704,
+      "fees24h": 2751,
       "fees7d": 28432,
       "fees30d": 59278,
-      "revenue24h": 541,
+      "revenue24h": 550,
       "revenue7d": 5687,
       "revenue30d": 11857,
       "lpShare7d": 22745,
@@ -776,19 +776,19 @@
       },
       "mechanism": {
         "buyback": false,
-        "burn": false,
+        "burn": true,
         "yieldStaking": true,
         "stakingToken": "MMT Vault",
         "description": "Verified Sui Move protocol (MMT) with automated fee distribution between LPs and protocol reserve.",
         "treasuryAddress": "0x35169bc93e1fddfcf3a82a9eae726d349689ed59e4b065369af8789fe59f8608",
         "treasuryNetWorthUsd": 1000000,
         "treasuryHoldings": "SUI & MMT Protocol Reserve",
-        "burnedAmount": null,
-        "burn24hTokens": null,
-        "burn7dTokens": null,
-        "burn30dTokens": null,
+        "burnedAmount": 15000001,
+        "burn24hTokens": 41096,
+        "burn7dTokens": 276165,
+        "burn30dTokens": 1134250,
         "burnUsdEstimate": null,
-        "burnVelocity": null
+        "burnVelocity": {}
       }
     },
     {
@@ -800,19 +800,19 @@
       "packageId": "0xe1b45a0e641b9955a20aa0ad1c1f4ad86aad8afb07296d4085e349a50e90bdca",
       "explorerUrl": "https://suiscan.xyz/mainnet/coin/0xe1b45a0e641b9955a20aa0ad1c1f4ad86aad8afb07296d4085e349a50e90bdca::blue::BLUE",
       "packageExplorerUrl": "https://suiscan.xyz/mainnet/package/0xe1b45a0e641b9955a20aa0ad1c1f4ad86aad8afb07296d4085e349a50e90bdca",
-      "mcap": 5917354.960591827,
-      "peRatio": 37.2,
+      "mcap": 6204432.362191339,
+      "peRatio": 39,
       "timeframeData": {
         "24h": {
-          "fees": 1338,
-          "revenue": 1338,
+          "fees": 1337,
+          "revenue": 1337,
           "lpShare": 0,
           "lpSharePct": 0,
           "revSharePct": 100,
-          "arr": 488705,
+          "arr": 488339,
           "periodYield": 0.02,
-          "apy": 8.3,
-          "delta": 89.52
+          "apy": 7.9,
+          "delta": 89.38
         },
         "7d": {
           "fees": 3050,
@@ -822,7 +822,7 @@
           "revSharePct": 100,
           "arr": 159027,
           "periodYield": 0.05,
-          "apy": 2.7,
+          "apy": 2.6,
           "delta": -31.1
         },
         "30d": {
@@ -832,22 +832,22 @@
           "lpSharePct": 0,
           "revSharePct": 100,
           "arr": 222090,
-          "periodYield": 0.31,
-          "apy": 3.8,
+          "periodYield": 0.29,
+          "apy": 3.6,
           "delta": 0
         }
       },
-      "fees24h": 1338,
+      "fees24h": 1337,
       "fees7d": 3050,
       "fees30d": 18249,
-      "revenue24h": 1338,
+      "revenue24h": 1337,
       "revenue7d": 3050,
       "revenue30d": 18249,
       "lpShare7d": 0,
       "lpSharePct": 0,
       "revSharePct": 100,
       "weeklyYieldMc": 0.05,
-      "annualizedYieldMc": 2.7,
+      "annualizedYieldMc": 2.6,
       "annualizedRevenue": 159027,
       "whaleRisk": {
         "holdersCount": 29400,
@@ -884,19 +884,19 @@
       "packageId": "0x6864a6f921804860930db6ddbe2e16acdf8504495ea7481637a1c8b9a8fe54b",
       "explorerUrl": "https://suiscan.xyz/mainnet/coin/0x6864a6f921804860930db6ddbe2e16acdf8504495ea7481637a1c8b9a8fe54b::cetus::CETUS",
       "packageExplorerUrl": "https://suiscan.xyz/mainnet/package/0x6864a6f921804860930db6ddbe2e16acdf8504495ea7481637a1c8b9a8fe54b",
-      "mcap": 29601600,
-      "peRatio": 256.4,
+      "mcap": 27437510.81583927,
+      "peRatio": 237.7,
       "timeframeData": {
         "24h": {
-          "fees": 1273,
-          "revenue": 255,
-          "lpShare": 1018,
+          "fees": 1572,
+          "revenue": 314,
+          "lpShare": 1258,
           "lpSharePct": 80,
           "revSharePct": 20,
-          "arr": 93139,
+          "arr": 114689,
           "periodYield": 0,
-          "apy": 0.3,
-          "delta": -25.66
+          "apy": 0.4,
+          "delta": -8.45
         },
         "7d": {
           "fees": 11068,
@@ -921,10 +921,10 @@
           "delta": 0
         }
       },
-      "fees24h": 1273,
+      "fees24h": 1572,
       "fees7d": 11068,
       "fees30d": 38334,
-      "revenue24h": 255,
+      "revenue24h": 314,
       "revenue7d": 2214,
       "revenue30d": 7667,
       "lpShare7d": 8854,
@@ -968,8 +968,8 @@
       "packageId": "0xa99b8952d4f7d947ea77fe0ecdcc9e5fc0bcab2841d6e2a5aa00c3044e5544b5",
       "explorerUrl": "https://suiscan.xyz/mainnet/coin/0xa99b8952d4f7d947ea77fe0ecdcc9e5fc0bcab2841d6e2a5aa00c3044e5544b5::navx::NAVX",
       "packageExplorerUrl": "https://suiscan.xyz/mainnet/package/0xa99b8952d4f7d947ea77fe0ecdcc9e5fc0bcab2841d6e2a5aa00c3044e5544b5",
-      "mcap": 928406,
-      "peRatio": 8.7,
+      "mcap": 903662,
+      "peRatio": 8.4,
       "timeframeData": {
         "24h": {
           "fees": 958,
@@ -979,7 +979,7 @@
           "revSharePct": 13.9,
           "arr": 48578,
           "periodYield": 0.01,
-          "apy": 5.2,
+          "apy": 5.4,
           "delta": -50.19
         },
         "7d": {
@@ -989,8 +989,8 @@
           "lpSharePct": 83.2,
           "revSharePct": 16.8,
           "arr": 107304,
-          "periodYield": 0.22,
-          "apy": 11.6,
+          "periodYield": 0.23,
+          "apy": 11.9,
           "delta": -7.21
         },
         "30d": {
@@ -1000,8 +1000,8 @@
           "lpSharePct": 85.2,
           "revSharePct": 14.8,
           "arr": 64939,
-          "periodYield": 0.57,
-          "apy": 7,
+          "periodYield": 0.59,
+          "apy": 7.2,
           "delta": 0
         }
       },
@@ -1014,8 +1014,8 @@
       "lpShare7d": 10222,
       "lpSharePct": 83.2,
       "revSharePct": 16.8,
-      "weeklyYieldMc": 0.22,
-      "annualizedYieldMc": 11.6,
+      "weeklyYieldMc": 0.23,
+      "annualizedYieldMc": 11.9,
       "annualizedRevenue": 107304,
       "whaleRisk": {
         "holdersCount": 15000,
@@ -1052,19 +1052,19 @@
       "packageId": "0x7016aae72cfc67f2fadf55769c0a7dd54291a583b63051a5ed71081cce836ac6",
       "explorerUrl": "https://suiscan.xyz/mainnet/coin/0x7016aae72cfc67f2fadf55769c0a7dd54291a583b63051a5ed71081cce836ac6::sca::SCA",
       "packageExplorerUrl": "https://suiscan.xyz/mainnet/package/0x7016aae72cfc67f2fadf55769c0a7dd54291a583b63051a5ed71081cce836ac6",
-      "mcap": 1769166.7558008665,
-      "peRatio": 17.4,
+      "mcap": 1700184.2786037491,
+      "peRatio": 16.7,
       "timeframeData": {
         "24h": {
-          "fees": 576,
-          "revenue": 177,
-          "lpShare": 399,
-          "lpSharePct": 69.3,
-          "revSharePct": 30.7,
-          "arr": 64649,
+          "fees": 556,
+          "revenue": 152,
+          "lpShare": 404,
+          "lpSharePct": 72.7,
+          "revSharePct": 27.3,
+          "arr": 55518,
           "periodYield": 0.01,
-          "apy": 3.7,
-          "delta": -54.26
+          "apy": 3.3,
+          "delta": -60.72
         },
         "7d": {
           "fees": 4566,
@@ -1074,7 +1074,7 @@
           "revSharePct": 42.8,
           "arr": 101829,
           "periodYield": 0.11,
-          "apy": 5.8,
+          "apy": 6,
           "delta": 68.65
         },
         "30d": {
@@ -1084,22 +1084,22 @@
           "lpSharePct": 66,
           "revSharePct": 34,
           "arr": 64854,
-          "periodYield": 0.3,
-          "apy": 3.7,
+          "periodYield": 0.31,
+          "apy": 3.8,
           "delta": 0
         }
       },
-      "fees24h": 576,
+      "fees24h": 556,
       "fees7d": 4566,
       "fees30d": 15664,
-      "revenue24h": 177,
+      "revenue24h": 152,
       "revenue7d": 1953,
       "revenue30d": 5329,
       "lpShare7d": 2613,
       "lpSharePct": 57.2,
       "revSharePct": 42.8,
       "weeklyYieldMc": 0.11,
-      "annualizedYieldMc": 5.8,
+      "annualizedYieldMc": 6,
       "annualizedRevenue": 101829,
       "whaleRisk": {
         "holdersCount": 24890,
@@ -1220,8 +1220,8 @@
       "packageId": "0x356a26eb9e012a68958082340d4c4116e7f55615cf27affcff209cf0ae544f59",
       "explorerUrl": "https://suiscan.xyz/mainnet/coin/0x356a26eb9e012a68958082340d4c4116e7f55615cf27affcff209cf0ae544f59::wal::WAL",
       "packageExplorerUrl": "https://suiscan.xyz/mainnet/package/0x356a26eb9e012a68958082340d4c4116e7f55615cf27affcff209cf0ae544f59",
-      "mcap": 87127948.57713218,
-      "peRatio": 2096.7,
+      "mcap": 87865788.0426739,
+      "peRatio": 2114.4,
       "timeframeData": {
         "24h": {
           "fees": 115,
@@ -1308,15 +1308,15 @@
       "peRatio": 22.2,
       "timeframeData": {
         "24h": {
-          "fees": 1729,
-          "revenue": 812,
+          "fees": 1725,
+          "revenue": 808,
           "lpShare": 917,
-          "lpSharePct": 53,
-          "revSharePct": 47,
-          "arr": 296583,
+          "lpSharePct": 53.2,
+          "revSharePct": 46.8,
+          "arr": 295122,
           "periodYield": 0.09,
-          "apy": 32.5,
-          "delta": 625
+          "apy": 32.3,
+          "delta": 621.43
         },
         "7d": {
           "fees": 6724,
@@ -1341,10 +1341,10 @@
           "delta": 0
         }
       },
-      "fees24h": 1729,
+      "fees24h": 1725,
       "fees7d": 6724,
       "fees30d": 22817,
-      "revenue24h": 812,
+      "revenue24h": 808,
       "revenue7d": 788,
       "revenue30d": 3468,
       "lpShare7d": 5936,
@@ -1388,19 +1388,19 @@
       "packageId": "0xfe3afec26c59e874f3c1d60b8203cb3852d2bb2aa415df9548b8d688e6683f93",
       "explorerUrl": "https://suiscan.xyz/mainnet/coin/0xfe3afec26c59e874f3c1d60b8203cb3852d2bb2aa415df9548b8d688e6683f93::alpha::ALPHA",
       "packageExplorerUrl": "https://suiscan.xyz/mainnet/package/0xfe3afec26c59e874f3c1d60b8203cb3852d2bb2aa415df9548b8d688e6683f93",
-      "mcap": 4393677,
-      "peRatio": 123,
+      "mcap": 45551,
+      "peRatio": 1.3,
       "timeframeData": {
         "24h": {
-          "fees": 650,
-          "revenue": 23,
-          "lpShare": 627,
+          "fees": 683,
+          "revenue": 24,
+          "lpShare": 659,
           "lpSharePct": 96.5,
           "revSharePct": 3.5,
-          "arr": 8401,
-          "periodYield": 0,
-          "apy": 0.2,
-          "delta": -72.94
+          "arr": 8766,
+          "periodYield": 0.05,
+          "apy": 19.2,
+          "delta": -71.76
         },
         "7d": {
           "fees": 28989,
@@ -1409,8 +1409,8 @@
           "lpSharePct": 97.6,
           "revSharePct": 2.4,
           "arr": 35716,
-          "periodYield": 0.02,
-          "apy": 0.8,
+          "periodYield": 1.5,
+          "apy": 78.4,
           "delta": 98.55
         },
         "30d": {
@@ -1420,22 +1420,22 @@
           "lpSharePct": 99,
           "revSharePct": 1,
           "arr": 18511,
-          "periodYield": 0.03,
-          "apy": 0.4,
+          "periodYield": 3.34,
+          "apy": 40.6,
           "delta": 0
         }
       },
-      "fees24h": 650,
+      "fees24h": 683,
       "fees7d": 28989,
       "fees30d": 147917,
-      "revenue24h": 23,
+      "revenue24h": 24,
       "revenue7d": 685,
       "revenue30d": 1521,
       "lpShare7d": 28304,
       "lpSharePct": 97.6,
       "revSharePct": 2.4,
-      "weeklyYieldMc": 0.02,
-      "annualizedYieldMc": 0.8,
+      "weeklyYieldMc": 1.5,
+      "annualizedYieldMc": 78.4,
       "annualizedRevenue": 35716,
       "whaleRisk": {
         "holdersCount": 15000,
@@ -1476,15 +1476,15 @@
       "peRatio": 0.2,
       "timeframeData": {
         "24h": {
-          "fees": 19,
-          "revenue": 19,
+          "fees": 20,
+          "revenue": 20,
           "lpShare": 0,
           "lpSharePct": 0,
           "revSharePct": 100,
-          "arr": 6940,
-          "periodYield": 1.08,
-          "apy": 393.4,
-          "delta": -24
+          "arr": 7305,
+          "periodYield": 1.13,
+          "apy": 414.1,
+          "delta": -20
         },
         "7d": {
           "fees": 215,
@@ -1509,10 +1509,10 @@
           "delta": 0
         }
       },
-      "fees24h": 19,
+      "fees24h": 20,
       "fees7d": 215,
       "fees30d": 898,
-      "revenue24h": 19,
+      "revenue24h": 20,
       "revenue7d": 215,
       "revenue30d": 898,
       "lpShare7d": 0,
@@ -1556,19 +1556,19 @@
       "packageId": "0x1d4a2bdbc1602a0adaa98194942c220202dcc56bb0a205838dfaa63db0d5497e",
       "explorerUrl": "https://suiscan.xyz/mainnet/coin/0x1d4a2bdbc1602a0adaa98194942c220202dcc56bb0a205838dfaa63db0d5497e::SAIL::SAIL",
       "packageExplorerUrl": "https://suiscan.xyz/mainnet/package/0x1d4a2bdbc1602a0adaa98194942c220202dcc56bb0a205838dfaa63db0d5497e",
-      "mcap": 11414.713397050735,
-      "peRatio": 1.5,
+      "mcap": 1795.591914377828,
+      "peRatio": 0.2,
       "timeframeData": {
         "24h": {
-          "fees": 15,
-          "revenue": 15,
+          "fees": 18,
+          "revenue": 18,
           "lpShare": 0,
           "lpSharePct": 0,
           "revSharePct": 100,
-          "arr": 5420,
-          "periodYield": 0.13,
-          "apy": 47.5,
-          "delta": -38.53
+          "arr": 6571,
+          "periodYield": 1,
+          "apy": 365.9,
+          "delta": -25.48
         },
         "7d": {
           "fees": 149,
@@ -1577,8 +1577,8 @@
           "lpSharePct": 0,
           "revSharePct": 100,
           "arr": 7784,
-          "periodYield": 1.31,
-          "apy": 68.2,
+          "periodYield": 8.31,
+          "apy": 433.5,
           "delta": -45.33
         },
         "30d": {
@@ -1588,22 +1588,22 @@
           "lpSharePct": 0,
           "revSharePct": 100,
           "arr": 20014,
-          "periodYield": 14.41,
-          "apy": 175.3,
+          "periodYield": 91.59,
+          "apy": 1114.6,
           "delta": 0
         }
       },
-      "fees24h": 15,
+      "fees24h": 18,
       "fees7d": 149,
       "fees30d": 1645,
-      "revenue24h": 15,
+      "revenue24h": 18,
       "revenue7d": 149,
       "revenue30d": 1645,
       "lpShare7d": 0,
       "lpSharePct": 0,
       "revSharePct": 100,
-      "weeklyYieldMc": 1.31,
-      "annualizedYieldMc": 68.2,
+      "weeklyYieldMc": 8.31,
+      "annualizedYieldMc": 433.5,
       "annualizedRevenue": 7784,
       "whaleRisk": {
         "holdersCount": 15000,
@@ -1640,8 +1640,8 @@
       "packageId": "0x6dae8ca14311574fdfe555524ea48558e3d1360d1607d1c7f98af867e3b7976c",
       "explorerUrl": "https://suiscan.xyz/mainnet/coin/0x6dae8ca14311574fdfe555524ea48558e3d1360d1607d1c7f98af867e3b7976c::flx::FLX",
       "packageExplorerUrl": "https://suiscan.xyz/mainnet/package/0x6dae8ca14311574fdfe555524ea48558e3d1360d1607d1c7f98af867e3b7976c",
-      "mcap": 99243,
-      "peRatio": 56.9,
+      "mcap": 563575,
+      "peRatio": 323,
       "timeframeData": {
         "24h": {
           "fees": 32,
@@ -1650,8 +1650,8 @@
           "lpSharePct": 80.8,
           "revSharePct": 19.2,
           "arr": 2239,
-          "periodYield": 0.01,
-          "apy": 2.3,
+          "periodYield": 0,
+          "apy": 0.4,
           "delta": 32.4
         },
         "7d": {
@@ -1661,8 +1661,8 @@
           "lpSharePct": 82.4,
           "revSharePct": 17.6,
           "arr": 1745,
-          "periodYield": 0.03,
-          "apy": 1.8,
+          "periodYield": 0.01,
+          "apy": 0.3,
           "delta": 8.07
         },
         "30d": {
@@ -1672,8 +1672,8 @@
           "lpSharePct": 82.1,
           "revSharePct": 17.9,
           "arr": 1314,
-          "periodYield": 0.11,
-          "apy": 1.3,
+          "periodYield": 0.02,
+          "apy": 0.2,
           "delta": 0
         }
       },
@@ -1686,8 +1686,8 @@
       "lpShare7d": 157,
       "lpSharePct": 82.4,
       "revSharePct": 17.6,
-      "weeklyYieldMc": 0.03,
-      "annualizedYieldMc": 1.8,
+      "weeklyYieldMc": 0.01,
+      "annualizedYieldMc": 0.3,
       "annualizedRevenue": 1745,
       "whaleRisk": {
         "holdersCount": 15000,
@@ -2027,7 +2027,7 @@
         "protocol": "Cetus Protocol",
         "symbol": "CETUS",
         "timeAgo": "4 hours ago",
-        "timestamp": 1790770506977,
+        "timestamp": 1790777676917,
         "spentUsd": 12450,
         "spentAsset": "12,450 USDC",
         "boughtTokens": "45,820 CETUS",
@@ -2039,7 +2039,7 @@
         "protocol": "NAVI Protocol",
         "symbol": "NAVX",
         "timeAgo": "11 hours ago",
-        "timestamp": 1790745306977,
+        "timestamp": 1790752476917,
         "spentUsd": 18900,
         "spentAsset": "18,300 SUI",
         "boughtTokens": "198,500 NAVX",
@@ -2051,7 +2051,7 @@
         "protocol": "Turbos Finance",
         "symbol": "TURBOS",
         "timeAgo": "1 day ago",
-        "timestamp": 1790694906977,
+        "timestamp": 1790702076917,
         "spentUsd": 4200,
         "spentAsset": "4,100 SUI",
         "boughtTokens": "26,850,000 TURBOS",
@@ -2063,7 +2063,7 @@
         "protocol": "AlphaFi",
         "symbol": "ALPHA",
         "timeAgo": "2 days ago",
-        "timestamp": 1790608506977,
+        "timestamp": 1790615676917,
         "spentUsd": 3150,
         "spentAsset": "3,050 SUI",
         "boughtTokens": "38,200 ALPHA",
@@ -2075,7 +2075,7 @@
         "protocol": "Cetus Protocol",
         "symbol": "CETUS",
         "timeAgo": "3 days ago",
-        "timestamp": 1790525706977,
+        "timestamp": 1790532876917,
         "spentUsd": 15200,
         "spentAsset": "15,200 USDC",
         "boughtTokens": "56,100 CETUS",
