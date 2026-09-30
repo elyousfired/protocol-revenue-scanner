@@ -37,6 +37,9 @@ export function getExplorerUrl(chain, address) {
   if (lowerChain.includes('hyperliquid')) {
     return `https://hypurrscan.io/address/${address}`;
   }
+  if (lowerChain === 'monad' || lowerChain.includes('monad')) {
+    return `https://monadscan.com/address/${address}`;
+  }
   if (lowerChain === 'sui') {
     return `https://suiscan.xyz/mainnet/account/${address}`;
   }
@@ -91,6 +94,7 @@ export function getExplorerName(chain) {
   if (lowerChain === 'optimism' || lowerChain === 'op mainnet') return 'Optimism Etherscan';
   if (lowerChain === 'avalanche') return 'Snowtrace';
   if (lowerChain.includes('hyperliquid')) return 'Hypurrscan';
+  if (lowerChain === 'monad' || lowerChain.includes('monad')) return 'Monadscan';
   if (lowerChain === 'sui') return 'Suiscan';
   if (lowerChain === 'sonic') return 'Sonicscan';
   if (lowerChain === 'fantom') return 'FtmScan';
@@ -177,22 +181,57 @@ export async function buildProtocolRegistry() {
   }
 }
 
-// Load cached registry or build if missing
+// Load cached registry or build if missing (and enrich with pure on-chain Monad protocols)
 export async function getProtocolRegistry(force = false) {
+  let baseList = [];
   if (!force) {
     try {
       const raw = await fs.readFile(REGISTRY_FILE, 'utf-8');
       const parsed = JSON.parse(raw);
       if (Array.isArray(parsed) && parsed.length > 0) {
-        // Enforce verification filter even on cached data
-        return parsed.filter(isProtocolTokenVerified);
+        baseList = parsed.filter(isProtocolTokenVerified);
       }
     } catch {
       // file not found or corrupted, rebuild
     }
   }
-  const { registry } = await buildProtocolRegistry();
-  return registry;
+  if (baseList.length === 0) {
+    const { registry } = await buildProtocolRegistry();
+    baseList = registry;
+  }
+
+  // Merge native Monad ecosystem protocols (100% on-chain, zero DefiLlama)
+  try {
+    const monadRaw = await fs.readFile(path.join(CACHE_DIR, 'monad_ecosystem.json'), 'utf-8');
+    const monadData = JSON.parse(monadRaw);
+    const existingSlugs = new Set(baseList.map(p => (p.slug || '').toLowerCase()));
+    for (const mp of (monadData.protocols || [])) {
+      if (!existingSlugs.has((mp.slug || '').toLowerCase())) {
+        baseList.push({
+          id: `monad-${mp.slug}`,
+          name: mp.name,
+          slug: mp.slug,
+          tokenSymbol: mp.tokenSymbol,
+          category: mp.category || mp.sectorLabel || 'DeFi',
+          primaryChain: 'Monad',
+          chains: ['Monad'],
+          contractAddress: mp.contractAddress,
+          addressChain: 'monad',
+          explorerUrl: mp.explorerUrl || getExplorerUrl('monad', mp.contractAddress),
+          explorerName: 'Monadscan',
+          mcap: mp.mcap || 0,
+          tvl: mp.tvl || mp.mcap || 0,
+          logo: mp.logo || null,
+          geckoId: mp.slug,
+          parentProtocol: null
+        });
+      }
+    }
+  } catch {
+    // ignore if monad cache not yet generated
+  }
+
+  return baseList;
 }
 
 // Compute chain-level statistics

@@ -13,11 +13,11 @@ const SNAPSHOTS_FILE = path.join(CACHE_DIR, 'onchain_burn_snapshots.json');
  * and computes real-time 24H, 7D, and 30D on-chain burn deltas & burn velocity.
  */
 export async function recordAndComputeOnChainBurnDeltas(chain, burnLedgerMap = {}) {
-  let store = { updatedAt: 0, chains: { solana: {}, sui: {}, ethereum: {} } };
+  let store = { updatedAt: 0, chains: { solana: {}, sui: {}, ethereum: {}, monad: {} } };
   try {
     const raw = await fs.readFile(SNAPSHOTS_FILE, 'utf-8');
     store = JSON.parse(raw);
-    if (!store.chains) store.chains = { solana: {}, sui: {}, ethereum: {} };
+    if (!store.chains) store.chains = { solana: {}, sui: {}, ethereum: {}, monad: {} };
     if (!store.chains[chain]) store.chains[chain] = {};
   } catch {
     // initialize fresh store

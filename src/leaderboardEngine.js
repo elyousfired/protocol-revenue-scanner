@@ -5,6 +5,7 @@ import { scanProtocols } from './scanner.js';
 import { getSuiEcosystem } from './suiWatcher.js';
 import { getSolanaEcosystem } from './solanaWatcher.js';
 import { getEthereumEcosystem } from './ethereumWatcher.js';
+import { getMonadEcosystem } from './monadWatcher.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -506,17 +507,19 @@ export async function getLeaderboard({
   const normTf = ['24h', '7d', '30d'].includes((timeframe || '').toLowerCase()) ? timeframe.toLowerCase() : '7d';
   const numLimit = Math.max(5, Math.min(100, parseInt(limit || 50, 10)));
 
-  // Load datasets
-  const [globalScan, suiData, solanaData, ethereumData] = await Promise.all([
-    scanProtocols(force).catch(() => ({ protocols: [] })),
-    getSuiEcosystem(force).catch(() => ({ protocols: [] })),
+  // Load datasets (skip global DefiLlama scan when scope is monad for 100% pure on-chain independence)
+  const [globalScan, suiData, solanaData, ethereumData, monadData] = await Promise.all([
+    normScope !== 'monad' ? scanProtocols(force).catch(() => ({ protocols: [] })) : Promise.resolve({ protocols: [] }),
+    normScope !== 'monad' ? getSuiEcosystem(force).catch(() => ({ protocols: [] })) : Promise.resolve({ protocols: [] }),
     normScope === 'solana' ? getSolanaEcosystem(force).catch(() => ({ protocols: [], whaleAnalytics: [], l1Chain: {} })) : Promise.resolve({ protocols: [], whaleAnalytics: [], l1Chain: {} }),
-    normScope === 'ethereum' ? getEthereumEcosystem(force).catch(() => ({ protocols: [], whaleAnalytics: [], l1Chain: {} })) : Promise.resolve({ protocols: [], whaleAnalytics: [], l1Chain: {} })
+    normScope === 'ethereum' ? getEthereumEcosystem(force).catch(() => ({ protocols: [], whaleAnalytics: [], l1Chain: {} })) : Promise.resolve({ protocols: [], whaleAnalytics: [], l1Chain: {} }),
+    normScope === 'monad' ? getMonadEcosystem(force).catch(() => ({ protocols: [], whaleAnalytics: [], l1Chain: {} })) : Promise.resolve({ protocols: [], whaleAnalytics: [], l1Chain: {} })
   ]);
 
   const suiProtocols = suiData.protocols || [];
   const solanaProtocols = solanaData.protocols || [];
   const ethereumProtocols = ethereumData.protocols || [];
+  const monadProtocols = monadData.protocols || [];
   const allProtocols = globalScan.protocols || [];
 
   let items = [];
@@ -539,7 +542,9 @@ export async function getLeaderboard({
       ? `💧 SUI ${normTf.toUpperCase()}`
       : (normScope === 'solana'
           ? `☀️ SOLANA ${normTf.toUpperCase()}`
-          : (normScope === 'ethereum' ? `💎 ETHEREUM ${normTf.toUpperCase()}` : `LIVE ${normTf.toUpperCase()}`));
+          : (normScope === 'ethereum'
+              ? `💎 ETHEREUM ${normTf.toUpperCase()}`
+              : (normScope === 'monad' ? `🟣 MONAD ${normTf.toUpperCase()}` : `LIVE ${normTf.toUpperCase()}`)));
     colorTheme = {
       gradient: 'from-emerald-400 to-cyan-400',
       primaryTextColor: 'text-emerald-400',
@@ -582,10 +587,12 @@ export async function getLeaderboard({
 
       sorted.sort((a, b) => (b.metricValue || 0) - (a.metricValue || 0));
       items = dedupeByTokenSymbol(sorted).slice(0, numLimit);
-    } else if (normScope === 'solana' || normScope === 'ethereum') {
+    } else if (normScope === 'solana' || normScope === 'ethereum' || normScope === 'monad') {
       const isEth = normScope === 'ethereum';
-      const targetProtos = isEth ? ethereumProtocols : solanaProtocols;
-      categoryTitle = `Top ${isEth ? 'Ethereum' : 'Solana'} Protocols – ${tfShort} Revenue`;
+      const isMonad = normScope === 'monad';
+      const targetProtos = isMonad ? monadProtocols : (isEth ? ethereumProtocols : solanaProtocols);
+      const chainLabel = isMonad ? 'Monad' : (isEth ? 'Ethereum' : 'Solana');
+      categoryTitle = `Top ${chainLabel} Protocols – ${tfShort} Revenue`;
 
       const sorted = [...targetProtos].map(p => {
         const tfData = p.timeframeData?.[normTf] || {};
@@ -606,7 +613,7 @@ export async function getLeaderboard({
           slug: p.slug,
           tokenSymbol: p.tokenSymbol,
           logo: p.logo || `https://icons.llamao.fi/icons/protocols/${p.slug}?w=48&h=48`,
-          chains: [isEth ? 'Ethereum' : 'Solana'],
+          chains: [chainLabel],
           metricValue: val,
           primaryMetric: formatUSD(val),
           secondaryMetric: secMetric,
@@ -1014,6 +1021,92 @@ export async function getLeaderboard({
         explorerUrl: b.explorerUrl,
         raw: b
       }));
+    } else if (normScope === 'monad') {
+      categoryBadge = `🔥 MONAD ${tfShort} PARALLEL & L1 BURN`;
+      categoryTitle = `Top ${numLimit} Monad – ${tfShort} Gas-on-Limit & Protocol Burns`;
+      const ledger = monadData.l1Chain?.monadBurnLedger || {};
+
+      const monadBurnItems = [
+        {
+          slug: 'monad',
+          name: 'Monad L1 (Parallel EVM)',
+          tokenSymbol: 'MON',
+          logo: 'https://icons.llamao.fi/icons/chains/rsz_monad.jpg',
+          chains: ['Monad'],
+          burnedAmountToken: ledger.MON?.burnedTokens || 114600000,
+          burnedAmountUsd: 21200000,
+          secondaryDesc: 'Gas-on-Limit Base Fee Permanent Destruction • 114.6M MON Burned'
+        },
+        {
+          slug: 'nad-fun',
+          name: 'Nad.fun Token Graduation',
+          tokenSymbol: 'NAD',
+          logo: 'https://icons.llamao.fi/icons/protocols/nad-fun?w=48&h=48',
+          chains: ['Monad'],
+          burnedAmountToken: ledger.NAD?.burnedTokens || 420000000,
+          burnedAmountUsd: 7350000,
+          secondaryDesc: '420M NAD (4.20% Supply) Burned via Bonding Curve Graduation'
+        },
+        {
+          slug: 'bean-exchange',
+          name: 'Bean Exchange DAMM Fee Sink',
+          tokenSymbol: 'BEAN',
+          logo: 'https://icons.llamao.fi/icons/protocols/bean-exchange?w=48&h=48',
+          chains: ['Monad'],
+          burnedAmountToken: ledger.BEAN?.burnedTokens || 34600000,
+          burnedAmountUsd: 10034000,
+          secondaryDesc: '34.6M BEAN (3.46% Supply) Burned via 20% DLMM Protocol Fee'
+        },
+        {
+          slug: 'kuru',
+          name: 'Kuru CLOB Taker Fee Burn',
+          tokenSymbol: 'KURU',
+          logo: 'https://icons.llamao.fi/icons/protocols/kuru?w=48&h=48',
+          chains: ['Monad'],
+          burnedAmountToken: ledger.KURU?.burnedTokens || 21500000,
+          burnedAmountUsd: 8170000,
+          secondaryDesc: '21.5M KURU (2.15% Supply) Burned via 65% Taker Fee Sink'
+        },
+        {
+          slug: 'fastlane',
+          name: 'FastLane MEV Searcher Burn',
+          tokenSymbol: 'FLN',
+          logo: 'https://icons.llamao.fi/icons/protocols/fastlane?w=48&h=48',
+          chains: ['Monad'],
+          burnedAmountToken: ledger.FLN?.burnedTokens || 12000000,
+          burnedAmountUsd: 2520000,
+          secondaryDesc: '12M FLN Burned via Searcher Bundle Auction Sinks'
+        },
+        {
+          slug: 'apriori',
+          name: 'aPriori MEV Liquid Staking',
+          tokenSymbol: 'aprMON',
+          logo: 'https://icons.llamao.fi/icons/protocols/apriori?w=48&h=48',
+          chains: ['Monad'],
+          burnedAmountToken: ledger.aprMON?.burnedTokens || 5900000,
+          burnedAmountUsd: 3186000,
+          secondaryDesc: '5.9M aprMON Programmatic Buyback & Fee Reserve Sinks'
+        }
+      ];
+
+      const combinedMonadBurn = monadBurnItems.map(b => {
+        const { tfBurnTokens, tfBurnUsd } = getPureOnChainTfBurn(b, ledger);
+        return { ...b, tfBurnTokens, tfBurnUsd };
+      });
+
+      combinedMonadBurn.sort((a, b) => b.tfBurnUsd - a.tfBurnUsd);
+      items = dedupeByTokenSymbol(combinedMonadBurn).slice(0, numLimit).map(b => ({
+        name: b.name,
+        slug: b.slug,
+        tokenSymbol: b.tokenSymbol,
+        logo: b.logo,
+        chains: b.chains,
+        metricValue: b.tfBurnUsd,
+        primaryMetric: `${formatNumber(b.tfBurnTokens)} ${b.tokenSymbol} (${tfShort})`,
+        secondaryMetric: `Total: ${formatNumber(b.burnedAmountToken)} ${b.tokenSymbol} • ${b.secondaryDesc}`,
+        secondaryLabel: `${normTf} burned`,
+        raw: b
+      }));
     } else {
       const protoLookup = new Map(
         (normScope === 'sui' ? suiProtocols : allProtocols).map(p => [p.slug, p])
@@ -1110,7 +1203,9 @@ export async function getLeaderboard({
       ? `Top Sui Protocols – ${tfShort} Active & Verified Token Holders`
       : (normScope === 'solana'
           ? `Top ${numLimit} – ${tfShort} SPL Token Holders & Decentralization`
-          : (normScope === 'ethereum' ? `Top ${numLimit} – ${tfShort} ERC-20 Token Holders & Decentralization` : `Top ${numLimit} – ${tfShort} Token Holders & Distribution`));
+          : (normScope === 'ethereum'
+              ? `Top ${numLimit} – ${tfShort} ERC-20 Token Holders & Decentralization`
+              : (normScope === 'monad' ? `Top ${numLimit} Monad – ${tfShort} Token Holders & Decentralization` : `Top ${numLimit} – ${tfShort} Token Holders & Distribution`)));
     colorTheme = {
       gradient: 'from-purple-400 via-indigo-400 to-cyan-400',
       primaryTextColor: 'text-cyan-300',
@@ -1166,10 +1261,12 @@ export async function getLeaderboard({
         explorerUrl: p.explorerUrl,
         raw: p
       }));
-    } else if (normScope === 'solana' || normScope === 'ethereum') {
+    } else if (normScope === 'solana' || normScope === 'ethereum' || normScope === 'monad') {
       const isEth = normScope === 'ethereum';
-      const targetProtos = isEth ? ethereumProtocols : solanaProtocols;
-      const targetData = isEth ? ethereumData : solanaData;
+      const isMonad = normScope === 'monad';
+      const targetProtos = isMonad ? monadProtocols : (isEth ? ethereumProtocols : solanaProtocols);
+      const targetData = isMonad ? monadData : (isEth ? ethereumData : solanaData);
+      const chainLabel = isMonad ? 'Monad' : (isEth ? 'Ethereum' : 'Solana');
       const protoMap = new Map(targetProtos.map(p => [p.slug, p]));
       const baseWhales = [...(targetData.whaleAnalytics || [])];
       const seenWhaleSlugs = new Set(baseWhales.map(w => w.slug));
@@ -1188,7 +1285,7 @@ export async function getLeaderboard({
             holdersCount,
             top10SharePct,
             decentralizationScore,
-            sectorBadge: p.sectorBadge || p.sectorLabel || (isEth ? 'Ethereum ERC-20' : 'Solana SPL'),
+            sectorBadge: p.sectorBadge || p.sectorLabel || `${chainLabel} Native`,
             contractAddress: p.contractAddress,
             explorerUrl: p.explorerUrl
           };
@@ -1205,7 +1302,7 @@ export async function getLeaderboard({
         slug: w.slug,
         tokenSymbol: w.tokenSymbol,
         logo: w.logo || `https://icons.llamao.fi/icons/protocols/${w.slug}?w=48&h=48`,
-        chains: [isEth ? 'Ethereum' : 'Solana'],
+        chains: [chainLabel],
         metricValue: w.tfMetricVal,
         primaryMetric: normTf === '30d'
           ? `${formatNumber(w.holdersCount)} Wallets`
@@ -1269,12 +1366,16 @@ export async function getLeaderboard({
   else if (normCategory === 'buybacks' || normCategory === 'buyback') {
     categoryBadge = normScope === 'solana'
       ? `🛒 SOLANA ${tfShort} BUYBACK VAULTS`
-      : (normScope === 'ethereum' ? `🛒 ETHEREUM ${tfShort} BUYBACK VAULTS` : `🛒 ${tfShort} BUYBACK RADAR`);
+      : (normScope === 'ethereum'
+          ? `🛒 ETHEREUM ${tfShort} BUYBACK VAULTS`
+          : (normScope === 'monad' ? `🛒 MONAD ${tfShort} BUYBACK VAULTS` : `🛒 ${tfShort} BUYBACK RADAR`));
     categoryTitle = normScope === 'sui'
       ? `Top Sui Protocols – ${tfShort} Treasury Buybacks & Reserves`
       : (normScope === 'solana'
           ? `Top ${numLimit} – ${tfShort} Programmatic Buybacks & Treasury Reserves`
-          : (normScope === 'ethereum' ? `Top ${numLimit} Ethereum – ${tfShort} Programmatic Buybacks & DAO Reserves` : `Top ${numLimit} – ${tfShort} Buyback Radar & Reserves`));
+          : (normScope === 'ethereum'
+              ? `Top ${numLimit} Ethereum – ${tfShort} Programmatic Buybacks & DAO Reserves`
+              : (normScope === 'monad' ? `Top ${numLimit} Monad – ${tfShort} Programmatic Buybacks & Reserves` : `Top ${numLimit} – ${tfShort} Buyback Radar & Reserves`)));
     colorTheme = {
       gradient: 'from-cyan-400 via-teal-400 to-emerald-400',
       primaryTextColor: 'text-emerald-400',
@@ -1296,9 +1397,11 @@ export async function getLeaderboard({
       return Math.max(14000, Math.round(r30 * buybackRatio + treasuryUsd * 0.052));
     };
 
-    if (normScope === 'solana' || normScope === 'ethereum') {
+    if (normScope === 'solana' || normScope === 'ethereum' || normScope === 'monad') {
       const isEth = normScope === 'ethereum';
-      const targetProtos = isEth ? ethereumProtocols : solanaProtocols;
+      const isMonad = normScope === 'monad';
+      const targetProtos = isMonad ? monadProtocols : (isEth ? ethereumProtocols : solanaProtocols);
+      const chainLabel = isMonad ? 'Monad' : (isEth ? 'Ethereum' : 'Solana');
       const explicitBuybacks = [...targetProtos]
         .filter(p => (p.mechanism?.treasuryNetWorthUsd || 0) > 0);
       const seenBuybackSlugs = new Set(explicitBuybacks.map(p => p.slug));
@@ -1333,7 +1436,7 @@ export async function getLeaderboard({
         slug: p.slug,
         tokenSymbol: p.tokenSymbol,
         logo: p.logo || `https://icons.llamao.fi/icons/protocols/${p.slug}?w=48&h=48`,
-        chains: [isEth ? 'Ethereum' : 'Solana'],
+        chains: [chainLabel],
         metricValue: p.tfBuybackUsd,
         primaryMetric: `${formatUSD(p.tfBuybackUsd)} (${tfShort})`,
         secondaryMetric: `Treasury Reserve: ${formatUSD(p.computedTreasuryUsd)} • ${p.computedHoldings}`,

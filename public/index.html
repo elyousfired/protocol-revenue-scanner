@@ -208,6 +208,15 @@
           <span class="w-2 h-2 rounded-full bg-cyan-500 animate-pulse"></span>
           <span>🟡 Bybit Spot</span>
         </button>
+
+        <!-- Page 11 Button: Monad Ecosystem & Parallel EVM Hub -->
+        <button 
+          id="nav-btn-monad" 
+          onclick="switchPage('monad')" 
+          class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-purple-300 hover:text-white transition-all font-bold">
+          <span class="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span>
+          <span>🟣 Monad Hub</span>
+        </button>
       </nav>
 
       <!-- Sync Info & Rescan Button -->
@@ -403,8 +412,8 @@
             <button id="lb-tf-30d" onclick="setLeaderboardTimeframe('30d')" class="px-2.5 py-1 rounded-lg text-slate-400 hover:text-white transition-all font-medium">🗓️ 30D</button>
           </div>
 
-          <!-- Scope Selector (Global vs Solana vs Sui) -->
-          <div class="flex items-center bg-slate-900/90 p-1 rounded-xl border border-slate-800 font-mono text-xs">
+          <!-- Scope Selector (Global vs Solana vs Sui vs Ethereum vs Monad) -->
+          <div class="flex items-center bg-slate-900/90 p-1 rounded-xl border border-slate-800 font-mono text-xs flex-wrap">
             <button 
               id="lb-scope-all" 
               onclick="setLeaderboardScope('all')" 
@@ -422,6 +431,18 @@
               onclick="setLeaderboardScope('sui')" 
               class="px-2.5 py-1 rounded-lg text-slate-400 hover:text-white transition-all font-medium">
               💧 Sui Focus
+            </button>
+            <button 
+              id="lb-scope-ethereum" 
+              onclick="setLeaderboardScope('ethereum')" 
+              class="px-2.5 py-1 rounded-lg text-slate-400 hover:text-white transition-all font-medium">
+              💎 Ethereum Focus
+            </button>
+            <button 
+              id="lb-scope-monad" 
+              onclick="setLeaderboardScope('monad')" 
+              class="px-2.5 py-1 rounded-lg text-slate-400 hover:text-white transition-all font-medium">
+              🟣 Monad Focus
             </button>
           </div>
 
@@ -3168,6 +3189,333 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
 
     </section>
 
+    <!-- ============================================================== -->
+    <!-- PAGE 11: MONAD BLOCKCHAIN ECOSYSTEM & PARALLEL EVM HUB         -->
+    <!-- ============================================================== -->
+    <section id="page-monad" class="space-y-6 hidden">
+      <!-- Hero Header & Controls -->
+      <div class="card-terminal rounded-3xl p-6 border border-purple-500/30 bg-gradient-to-br from-[#0c0817] via-[#120b24] to-[#080d1a] relative overflow-hidden">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+          <div class="space-y-1.5">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="px-2.5 py-1 rounded-lg bg-purple-500/20 border border-purple-400/40 text-purple-300 text-xs font-mono font-bold flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-purple-400 animate-pulse"></span>
+                MONAD PARALLEL EVM (10,000 TPS) + MONADSCAN ENGINE
+              </span>
+              <span id="monad-rpc-badge" class="px-2.5 py-1 rounded-lg bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 text-xs font-mono">
+                JSON-RPC: rpc.monad.xyz (Chain ID 143)
+              </span>
+              <span id="monad-protocols-badge" class="px-2.5 py-1 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs font-mono font-bold">
+                9 Native Protocols Indexed
+              </span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight flex items-center gap-2.5">
+              <span>🟣 Monad Ecosystem, Gas-on-Limit REV &amp; Parallel EVM Telemetry</span>
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-400 max-w-3xl">
+              100% on-chain JSON-RPC telemetry (Chain ID 143, pure on-chain smart contracts &amp; native tokenomics — zero DefiLlama dependency). Tracks Gas-on-Limit Base Fee Burns, FastLane MEV Tips, CLOB DEXs, LSTs &amp; Meme Launchpads.
+            </p>
+          </div>
+
+          <!-- Controls: Timeframe (24H / 7D / 30D) + Refresh -->
+          <div class="flex flex-wrap items-center gap-2">
+            <div class="flex items-center bg-slate-950/90 p-1 rounded-xl border border-slate-800">
+              <button id="monad-tf-24h" onclick="setMonadTimeframe('24h')" class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all text-slate-400 hover:text-white">24H</button>
+              <button id="monad-tf-7d" onclick="setMonadTimeframe('7d')" class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all bg-purple-600 text-white shadow-md shadow-purple-600/30">7D</button>
+              <button id="monad-tf-30d" onclick="setMonadTimeframe('30d')" class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all text-slate-400 hover:text-white">30D</button>
+            </div>
+            <button onclick="refreshMonadData()" id="btn-monad-refresh" class="px-3.5 py-2 rounded-xl bg-purple-500/20 hover:bg-purple-500/30 border border-purple-400/40 text-purple-200 text-xs font-mono font-bold transition-all flex items-center gap-1.5">
+              <span>🔄</span>
+              <span>Sync Monad RPC</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 4 Hero Telemetry Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 mt-6">
+          <!-- Card 1: Ecosystem Gross Fees & Net Revenue -->
+          <div class="bg-slate-950/80 border border-purple-500/25 rounded-2xl p-4 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono uppercase text-slate-400" id="monad-card1-title">Monad DApps Gross Fees (7D)</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 font-mono">5 Sectors</span>
+            </div>
+            <div class="text-2xl font-black text-white font-mono" id="monad-hero-fees">$0</div>
+            <div class="grid grid-cols-2 gap-2 pt-2 border-t border-slate-800/80 text-xs font-mono">
+              <div>
+                <div class="text-[10px] text-slate-500">Net Protocol Rev</div>
+                <div class="text-cyan-300 font-bold" id="monad-hero-net-rev">$0</div>
+              </div>
+              <div>
+                <div class="text-[10px] text-slate-500">Holder Value Accrual</div>
+                <div class="text-emerald-300 font-bold" id="monad-hero-holder-rev">$0</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Monad L1 Real Economic Value (REV) -->
+          <div class="bg-slate-950/80 border border-cyan-500/25 rounded-2xl p-4 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono uppercase text-slate-400" id="monad-card2-title">Monad L1 REV (7D)</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 font-mono">Gas-on-Limit + MEV</span>
+            </div>
+            <div class="text-2xl font-black text-cyan-300 font-mono" id="monad-hero-rev">$0</div>
+            <div class="grid grid-cols-3 gap-1.5 pt-2 border-t border-slate-800/80 text-[11px] font-mono">
+              <div>
+                <div class="text-[9px] text-slate-500">Base Burn 🔥</div>
+                <div class="text-purple-300 font-bold" id="monad-hero-rev-base">$0</div>
+              </div>
+              <div>
+                <div class="text-[9px] text-slate-500">FastLane MEV</div>
+                <div class="text-cyan-300 font-bold" id="monad-hero-rev-mev">$0</div>
+              </div>
+              <div>
+                <div class="text-[9px] text-slate-500">Priority Tips</div>
+                <div class="text-indigo-300 font-bold" id="monad-hero-rev-tips">$0</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Verified On-Chain Burns & Buybacks -->
+          <div class="bg-slate-950/80 border border-purple-500/25 rounded-2xl p-4 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono uppercase text-slate-400" id="monad-card3-title">On-Chain Burns &amp; Buybacks</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 font-mono">Native Contracts</span>
+            </div>
+            <div class="text-2xl font-black text-purple-300 font-mono" id="monad-hero-burn-usd">$0</div>
+            <div class="grid grid-cols-2 gap-2 pt-2 border-t border-slate-800/80 text-xs font-mono">
+              <div>
+                <div class="text-[10px] text-slate-500">MON Burned</div>
+                <div class="text-purple-300 font-bold" id="monad-hero-mon-burned">0 MON</div>
+              </div>
+              <div>
+                <div class="text-[10px] text-slate-500">Active Burn Assets</div>
+                <div class="text-emerald-300 font-bold" id="monad-hero-burn-count">7 Assets</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Live Monad Mainnet JSON-RPC Telemetry -->
+          <div class="bg-slate-950/80 border border-emerald-500/25 rounded-2xl p-4 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono uppercase text-slate-400">Parallel EVM State</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono" id="monad-hero-tps">10,000 TPS Target</span>
+            </div>
+            <div class="text-2xl font-black text-emerald-300 font-mono" id="monad-hero-block">#8,941,200</div>
+            <div class="grid grid-cols-2 gap-2 pt-2 border-t border-slate-800/80 text-xs font-mono">
+              <div>
+                <div class="text-[10px] text-slate-500">MON Spot Price</div>
+                <div class="text-white font-bold" id="monad-hero-mon-price">$4.20</div>
+              </div>
+              <div>
+                <div class="text-[10px] text-slate-500">Circulating Supply</div>
+                <div class="text-cyan-300 font-bold" id="monad-hero-circ-supply">100M MON</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5-Sector Interactive Strip -->
+      <div class="space-y-2">
+        <div class="flex items-center justify-between">
+          <div class="text-xs font-mono uppercase text-slate-400 font-bold">
+            🏛️ Monad 5-Sector Architecture (Click to Filter)
+          </div>
+          <button onclick="setMonadSector('all')" id="monad-sector-reset" class="text-xs font-mono text-purple-400 hover:text-purple-300">
+            Show All Sectors (9)
+          </button>
+        </div>
+        <div id="monad-sectors-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5">
+          <!-- Populated via JS -->
+        </div>
+      </div>
+
+      <!-- Sub-View Navigation & Search Bar -->
+      <div class="card-terminal rounded-2xl p-4 border border-slate-800/90 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3">
+        <div class="flex flex-wrap items-center gap-1.5">
+          <button id="monad-subtab-cashflow" onclick="switchMonadSubTab('cashflow')" class="px-3.5 py-2 rounded-xl text-xs font-mono font-bold transition-all bg-purple-600 text-white shadow-md shadow-purple-600/20">
+            📊 Cash Flows &amp; Splits
+          </button>
+          <button id="monad-subtab-burn" onclick="switchMonadSubTab('burn')" class="px-3.5 py-2 rounded-xl text-xs font-mono font-bold transition-all text-slate-400 hover:text-white bg-slate-900/80 border border-slate-800">
+            🔥 Whales &amp; Token Burns
+          </button>
+          <button id="monad-subtab-treasury" onclick="switchMonadSubTab('treasury')" class="px-3.5 py-2 rounded-xl text-xs font-mono font-bold transition-all text-slate-400 hover:text-white bg-slate-900/80 border border-slate-800">
+            🛒 Treasury &amp; Buyback Radar
+          </button>
+          <button id="monad-subtab-leaderboard" onclick="switchMonadSubTab('leaderboard')" class="px-3.5 py-2 rounded-xl text-xs font-mono font-bold transition-all text-cyan-300 hover:text-white bg-cyan-500/15 border border-cyan-500/40">
+            ⚡ Neon Leaderboard
+          </button>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <input
+            type="text"
+            id="monad-search-input"
+            oninput="handleMonadSearch(this.value)"
+            placeholder="Search Monad protocol, symbol, contract..."
+            class="px-3.5 py-2 rounded-xl bg-slate-950 border border-slate-800 text-xs font-mono text-white placeholder-slate-500 focus:outline-none focus:border-purple-500 w-full md:w-64"
+          />
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- MONAD NEON LEADERBOARD (TOP REVENUES / BURN / HOLDERS / BB)    -->
+      <!-- ============================================================== -->
+      <div id="monad-subview-leaderboard" class="card-terminal rounded-3xl p-5 sm:p-6 space-y-5 border border-purple-500/30 bg-gradient-to-b from-[#130c25] to-[#080b16]">
+        <!-- Top Bar: 4 Category Pills + Timeframe + Limit -->
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-4 border-b border-slate-800/80 font-mono text-xs">
+          <div class="flex flex-wrap items-center gap-1.5">
+            <button id="monad-lb-cat-revenue" onclick="setMonadLbCategory('revenue')" class="px-3.5 py-1.5 rounded-xl font-bold bg-cyan-400 text-black shadow-md shadow-cyan-400/20 transition-all">
+              ⚡ Top Revenues
+            </button>
+            <button id="monad-lb-cat-burn" onclick="setMonadLbCategory('burn')" class="px-3.5 py-1.5 rounded-xl font-medium bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 transition-all">
+              🔥 Top Burn
+            </button>
+            <button id="monad-lb-cat-holders" onclick="setMonadLbCategory('holders')" class="px-3.5 py-1.5 rounded-xl font-medium bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 transition-all">
+              👥 Top Holders
+            </button>
+            <button id="monad-lb-cat-buybacks" onclick="setMonadLbCategory('buybacks')" class="px-3.5 py-1.5 rounded-xl font-medium bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 transition-all">
+              🛒 Top Buybacks
+            </button>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2.5">
+            <!-- Timeframe Switcher (24H / 7D / 30D) -->
+            <div class="flex items-center bg-slate-900/95 p-1 rounded-xl border border-slate-800">
+              <button id="monad-lb-tf-24h" onclick="setMonadTimeframe('24h')" class="px-2.5 py-1 rounded-lg text-slate-400 hover:text-white transition-all font-medium">24H</button>
+              <button id="monad-lb-tf-7d" onclick="setMonadTimeframe('7d')" class="px-2.5 py-1 rounded-lg font-bold bg-cyan-400 text-black shadow-sm transition-all">7D</button>
+              <button id="monad-lb-tf-30d" onclick="setMonadTimeframe('30d')" class="px-2.5 py-1 rounded-lg text-slate-400 hover:text-white transition-all font-medium">30D</button>
+            </div>
+
+            <!-- Limit Selector -->
+            <div class="flex items-center bg-slate-900/95 p-1 rounded-xl border border-slate-800">
+              <button id="monad-lb-limit-10" onclick="setMonadLbLimit(10)" class="px-2.5 py-1 rounded-lg text-slate-400 hover:text-white transition-all font-medium">Top 10</button>
+              <button id="monad-lb-limit-25" onclick="setMonadLbLimit(25)" class="px-2.5 py-1 rounded-lg text-slate-400 hover:text-white transition-all font-medium">Top 25</button>
+              <button id="monad-lb-limit-50" onclick="setMonadLbLimit(50)" class="px-2.5 py-1 rounded-lg font-bold bg-purple-600 text-white shadow-sm transition-all">Top 50</button>
+            </div>
+
+            <span class="text-[11px] text-purple-300 font-mono hidden xl:inline">Click any row for Deep Intel →</span>
+          </div>
+        </div>
+
+        <!-- Leaderboard Card Header -->
+        <div class="flex flex-wrap items-center justify-between gap-3 pb-1">
+          <div class="flex items-center gap-2.5">
+            <span id="monad-lb-icon" class="text-purple-400 text-lg sm:text-xl font-bold select-none">⚡</span>
+            <h3 id="monad-lb-title" class="text-base sm:text-lg font-extrabold tracking-tight text-white font-mono">
+              Top Monad Protocols – 7D Weekly Revenue
+            </h3>
+            <span id="monad-lb-badge" class="text-[11px] font-mono uppercase bg-purple-500/15 text-purple-300 border border-purple-500/30 px-2.5 py-0.5 rounded-full font-bold">
+              🟣 MONAD 7D
+            </span>
+          </div>
+          <span class="px-2.5 py-1 rounded-lg bg-purple-500/10 text-purple-300 border border-purple-500/30 font-mono text-[11px] font-bold">
+            ⚡ 100% Pure On-Chain Telemetry (Zero DefiLlama)
+          </span>
+        </div>
+
+        <!-- Neon Rows Container -->
+        <div id="monad-leaderboard-list" class="space-y-1 divide-y divide-slate-800/40">
+          <!-- Populated via JS -->
+        </div>
+
+        <!-- Leaderboard Footer -->
+        <div class="pt-3 border-t border-slate-800/60 flex flex-wrap items-center justify-between text-xs font-mono text-slate-400 gap-2">
+          <div id="monad-lb-summary-count">Showing 9 Native Monad Protocols</div>
+          <div id="monad-lb-summary-total" class="text-cyan-400 font-bold">Click 📈 Trend on any row for Historical Evolution</div>
+        </div>
+      </div>
+
+      <!-- SUB-VIEW 1: CASH FLOW & TOKENOMICS TABLE -->
+      <div id="monad-subview-cashflow" class="card-terminal rounded-3xl border border-slate-800/90 overflow-hidden">
+        <div class="p-4 border-b border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <h3 class="text-sm font-bold text-white font-mono">
+              🟣 Native Monad Protocols — Multi-Timeframe Cash Flow &amp; Parallel EVM Architecture
+            </h3>
+            <p class="text-[11px] text-slate-400 font-mono">
+              On-chain data across Kuru, aPriori, Kintsu, Magma, Bean Exchange, Curvance, nad.fun, FastLane &amp; Monad L1.
+            </p>
+          </div>
+          <span id="monad-table-count-badge" class="text-xs font-mono text-purple-300 bg-purple-500/15 border border-purple-500/30 px-3 py-1 rounded-xl">
+            Showing 9 protocols
+          </span>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="border-b border-slate-800 text-[10px] font-mono uppercase text-slate-400 bg-slate-950/70">
+                <th class="py-3 px-3">#</th>
+                <th class="py-3 px-3">Protocol &amp; Token</th>
+                <th class="py-3 px-3">Sector</th>
+                <th class="py-3 px-3 text-right" id="monad-th-fees">Gross Fees (7D)</th>
+                <th class="py-3 px-3 text-right" id="monad-th-netrev">Net Protocol Rev</th>
+                <th class="py-3 px-3 text-right" id="monad-th-burn">Burn / Buyback</th>
+                <th class="py-3 px-3 text-right">Real Yield APY</th>
+                <th class="py-3 px-3 text-right">Supply &amp; Burns</th>
+                <th class="py-3 px-3 text-center">Whale Risk</th>
+                <th class="py-3 px-3 text-center">Evolution &amp; Scan</th>
+              </tr>
+            </thead>
+            <tbody id="monad-protocols-tbody" class="divide-y divide-slate-800/60 text-xs font-mono">
+              <!-- Populated via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- SUB-VIEW 2: ON-CHAIN BURN & WHALES -->
+      <div id="monad-subview-burn" class="space-y-6 hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <!-- Left: Verified On-Chain Burns -->
+          <div class="card-terminal rounded-3xl border border-purple-500/30 p-5 space-y-4">
+            <div class="flex items-center justify-between">
+              <div>
+                <h3 class="text-base font-bold text-white font-mono">🔥 Live Monad Supply Contraction &amp; Burn Tracker</h3>
+                <p class="text-xs text-slate-400">Gas-on-Limit Base Fee Burn + Native protocol contract burns (KURU, BEAN, NAD, aprMON, CVE, FLN)</p>
+              </div>
+              <span class="px-2.5 py-1 rounded-lg bg-purple-500/20 text-purple-300 text-xs font-mono font-bold">On-Chain Proof</span>
+            </div>
+            <div id="monad-burn-cards-list" class="space-y-3 max-h-[600px] overflow-y-auto pr-1">
+              <!-- Populated via JS -->
+            </div>
+          </div>
+
+          <!-- Right: Whale Concentration Radar -->
+          <div class="card-terminal rounded-3xl border border-cyan-500/30 p-5 space-y-4">
+            <div class="flex items-center justify-between">
+              <div>
+                <h3 class="text-base font-bold text-white font-mono">🐋 Monad Whale Concentration &amp; Holder Distribution</h3>
+                <p class="text-xs text-slate-400">Top-10 holder concentration, active wallet count, and decentralization telemetry</p>
+              </div>
+              <span class="px-2.5 py-1 rounded-lg bg-cyan-500/20 text-cyan-300 text-xs font-mono font-bold">Holder Distribution</span>
+            </div>
+            <div id="monad-whale-cards-list" class="space-y-3 max-h-[600px] overflow-y-auto pr-1">
+              <!-- Populated via JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUB-VIEW 3: BUYBACK VAULTS & TREASURIES -->
+      <div id="monad-subview-treasury" class="space-y-6 hidden">
+        <div class="card-terminal rounded-3xl border border-purple-500/30 p-5 space-y-4">
+          <div class="flex items-center justify-between">
+            <div>
+              <h3 class="text-base font-bold text-white font-mono">🏦 Monad Smart Contract Buyback Vaults &amp; Treasuries</h3>
+              <p class="text-xs text-slate-400">Programmatic repurchases, fee switches, and DAO treasury reserves on Monad Mainnet</p>
+            </div>
+            <span class="px-2.5 py-1 rounded-lg bg-purple-500/20 text-purple-300 text-xs font-mono font-bold">Parallel EVM Vaults</span>
+          </div>
+          <div id="monad-treasury-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+      </div>
+
+    </section>
+
   </main>
 
   
@@ -3458,7 +3806,7 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
       window.location.hash = page;
 
       // Update Nav buttons styling
-      ['table', 'weekly', 'yield', 'contracts', 'sui', 'schema', 'solana', 'solana-schema', 'ethereum', 'bybit'].forEach(p => {
+      ['table', 'weekly', 'yield', 'contracts', 'sui', 'schema', 'solana', 'solana-schema', 'ethereum', 'bybit', 'monad'].forEach(p => {
         const btn = document.getElementById(`nav-btn-${p}`);
         const sec = document.getElementById(`page-${p}`);
         if (!btn || !sec) return;
@@ -3467,6 +3815,8 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
             ? 'flex items-center gap-1.5 px-3 py-1.5 rounded-xl font-bold transition-all bg-cyan-500/20 text-cyan-300 border border-cyan-500/50 shadow-md shadow-cyan-400/20'
             : p === 'ethereum'
             ? 'flex items-center gap-1.5 px-3 py-1.5 rounded-xl font-bold transition-all bg-indigo-500 text-white shadow-md shadow-indigo-500/30'
+            : p === 'monad'
+            ? 'flex items-center gap-1.5 px-3 py-1.5 rounded-xl font-bold transition-all bg-purple-600 text-white shadow-md shadow-purple-600/30'
             : 'flex items-center gap-1.5 px-3 py-1.5 rounded-xl font-bold transition-all bg-cyan-400 text-black shadow-md shadow-cyan-400/20';
           sec.classList.remove('hidden');
         } else {
@@ -3486,6 +3836,7 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
       else if (page === 'solana-schema') renderSolanaSchemaPage();
       else if (page === 'ethereum') loadEthereumData();
       else if (page === 'bybit') loadBybitData();
+      else if (page === 'monad') loadMonadData();
     }
 
     // Load initial data
@@ -3517,7 +3868,7 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
 
         // Check hash or keep activePage
         const hash = window.location.hash.replace('#', '');
-        const targetPage = ['table', 'weekly', 'yield', 'contracts', 'sui', 'schema', 'solana', 'solana-schema', 'ethereum', 'bybit'].includes(hash)
+        const targetPage = ['table', 'weekly', 'yield', 'contracts', 'sui', 'schema', 'solana', 'solana-schema', 'ethereum', 'bybit', 'monad'].includes(hash)
           ? hash
           : (typeof activePage === 'string' && activePage ? activePage : 'table');
         if (!force) {
@@ -3543,16 +3894,18 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
 
     function initTablePills(topChains) {
       const container = document.getElementById('table-chain-pills');
-      const popular = ['all', 'Solana', 'Ethereum', 'Base', 'Hyperliquid L1', 'Sui', 'Arbitrum', 'BSC', 'Polygon', 'Avalanche'];
+      const popular = ['all', 'Solana', 'Ethereum', 'Monad', 'Base', 'Hyperliquid L1', 'Sui', 'Arbitrum', 'BSC', 'Polygon', 'Avalanche'];
       container.innerHTML = popular.map(c => {
         const isSelected = tableChain.toLowerCase() === c.toLowerCase();
-        const label = c === 'all' ? 'All Blockchains' : (c === 'Sui' ? '💧 Sui' : c);
+        const label = c === 'all' ? 'All Blockchains' : (c === 'Sui' ? '💧 Sui' : (c === 'Monad' ? '🟣 Monad' : c));
         return `
           <button 
             onclick="setTableChain('${c}')" 
             class="px-2.5 py-1 rounded-lg text-xs font-mono transition-all ${
               c === 'Sui'
                 ? 'bg-cyan-950/80 hover:bg-cyan-900/90 text-cyan-300 border border-cyan-500/40 font-bold'
+                : c === 'Monad'
+                ? 'bg-purple-950/80 hover:bg-purple-900/90 text-purple-300 border border-purple-500/40 font-bold'
                 : (isSelected 
                   ? 'bg-cyan-400 text-black font-bold shadow-md shadow-cyan-400/20' 
                   : 'bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800')
@@ -3582,6 +3935,10 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
     function setTableChain(chain) {
       if (chain.toLowerCase() === 'sui') {
         switchPage('sui');
+        return;
+      }
+      if (chain.toLowerCase() === 'monad') {
+        switchPage('monad');
         return;
       }
       tableChain = chain;
@@ -3783,7 +4140,7 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
 
     function setLeaderboardScope(scope) {
       lbScope = scope;
-      ['all', 'solana', 'sui'].forEach(s => {
+      ['all', 'solana', 'sui', 'ethereum', 'monad'].forEach(s => {
         const btn = document.getElementById('lb-scope-' + s);
         if (!btn) return;
         if (s === scope) {
@@ -3967,6 +4324,12 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
       // Check if it's a Sui protocol
       if (item.chains && item.chains.includes('Sui')) {
         openHistoricalModal(item.slug || 'cetus-clmm');
+        return;
+      }
+
+      // Check if it's a Monad protocol
+      if (item.chains && (item.chains.includes('Monad') || item.chains.includes('monad'))) {
+        openHistoricalModal(item.slug || 'kuru');
         return;
       }
 
@@ -4154,7 +4517,8 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
         { name: 'Avalanche', label: '🔺 Avalanche', count: '380' },
         { name: 'Fantom', label: '👻 Sonic / Fantom', count: '296' },
         { name: 'Optimism', label: '🔴 Optimism', count: '230' },
-        { name: 'Solana', label: '🟣 Solana', count: '208' },
+        { name: 'Solana', label: '☀️ Solana', count: '208' },
+        { name: 'Monad', label: '🟣 Monad', count: '9' },
         { name: 'Hyperliquid L1', label: '⚡ Hyperliquid', count: '74' },
         { name: 'Sui', label: '💧 Sui', count: '57' },
         { name: 'Linea', label: '⬛ Linea', count: '95' },
@@ -7732,6 +8096,615 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
           `Sector: ${p.sectorLabel}`
         ];
         structsEl.innerHTML = items.map(s => `<span class="px-2.5 py-1 rounded-lg bg-indigo-500/20 border border-indigo-400/40 text-indigo-300 text-xs font-mono">${s}</span>`).join('');
+      }
+
+      modal.classList.remove('hidden');
+    }
+
+    // ============================================================== //
+    // PAGE 11: MONAD BLOCKCHAIN ECOSYSTEM & PARALLEL EVM CONTROLLER  //
+    // ============================================================== //
+    let monadData = null;
+    let monadTimeframe = '7d';
+    let monadSector = 'all';
+    let monadSearch = '';
+    let monadSubTab = 'cashflow';
+    let monadLbCategory = 'revenue';
+    let monadLbLimit = 50;
+
+    async function loadMonadData(force = false) {
+      try {
+        const tbody = document.getElementById('monad-protocols-tbody');
+        if (tbody) tbody.style.opacity = '0.45';
+
+        const params = new URLSearchParams({
+          timeframe: monadTimeframe,
+          sector: monadSector,
+          search: monadSearch,
+          _t: String(Date.now())
+        });
+        if (force) params.set('refresh', 'true');
+
+        const res = await fetch('/api/monad?' + params.toString());
+        const data = await res.json();
+        if (!data.success) throw new Error(data.error || 'Failed to load Monad data');
+
+        monadData = data;
+        renderMonadHeroAndSectors(data);
+        renderMonadProtocolsTable(data.protocols || []);
+        renderMonadBurnAndWhales(data);
+        renderMonadTreasuryView(data);
+        renderMonadEmbeddedLeaderboard();
+
+        if (tbody) tbody.style.opacity = '1';
+      } catch (err) {
+        console.error('[MonadHub] Error loading data:', err);
+      }
+    }
+
+    async function refreshMonadData() {
+      const btn = document.getElementById('btn-monad-refresh');
+      if (btn) btn.innerHTML = '<span>⏳</span><span>Syncing Monad...</span>';
+      await loadMonadData(true);
+      if (btn) btn.innerHTML = '<span>✅</span><span>Synced!</span>';
+      setTimeout(() => {
+        if (btn) btn.innerHTML = '<span>🔄</span><span>Sync Monad RPC</span>';
+      }, 1500);
+    }
+
+    function setMonadTimeframe(tf) {
+      monadTimeframe = tf;
+      ['24h', '7d', '30d'].forEach(t => {
+        const btn = document.getElementById('monad-tf-' + t);
+        if (btn) {
+          if (t === tf) {
+            btn.className = 'px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all bg-purple-600 text-white shadow-md shadow-purple-600/30';
+          } else {
+            btn.className = 'px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all text-slate-400 hover:text-white';
+          }
+        }
+        const lbBtn = document.getElementById('monad-lb-tf-' + t);
+        if (lbBtn) {
+          if (t === tf) {
+            lbBtn.className = 'px-2.5 py-1 rounded-lg font-bold bg-cyan-400 text-black shadow-sm transition-all';
+          } else {
+            lbBtn.className = 'px-2.5 py-1 rounded-lg text-slate-400 hover:text-white transition-all font-medium';
+          }
+        }
+      });
+
+      const thFees = document.getElementById('monad-th-fees');
+      if (thFees) thFees.textContent = 'Gross Fees (' + tf.toUpperCase() + ')';
+
+      loadMonadData(false);
+    }
+
+    function setMonadSector(sec) {
+      monadSector = sec;
+      const resetBtn = document.getElementById('monad-sector-reset');
+      if (resetBtn) {
+        resetBtn.textContent = sec === 'all' ? 'Show All Sectors (9)' : 'Clear Filter (' + sec + ')';
+      }
+      loadMonadData(false);
+    }
+
+    let monadSearchDebounce;
+    function handleMonadSearch(query) {
+      clearTimeout(monadSearchDebounce);
+      monadSearchDebounce = setTimeout(() => {
+        monadSearch = (query || '').toLowerCase().trim();
+        loadMonadData(false);
+      }, 200);
+    }
+
+    function switchMonadSubTab(tab) {
+      monadSubTab = tab;
+      ['cashflow', 'burn', 'treasury', 'leaderboard'].forEach(t => {
+        const btn = document.getElementById('monad-subtab-' + t);
+        if (!btn) return;
+        if (t === tab) {
+          btn.className = t === 'leaderboard'
+            ? 'px-3.5 py-2 rounded-xl text-xs font-mono font-bold transition-all bg-cyan-400 text-black shadow-md shadow-cyan-400/20'
+            : 'px-3.5 py-2 rounded-xl text-xs font-mono font-bold transition-all bg-purple-600 text-white shadow-md shadow-purple-600/20';
+        } else {
+          btn.className = 'px-3.5 py-2 rounded-xl text-xs font-mono font-bold transition-all text-slate-400 hover:text-white bg-slate-900/80 border border-slate-800';
+        }
+      });
+
+      ['cashflow', 'burn', 'treasury'].forEach(t => {
+        const view = document.getElementById('monad-subview-' + t);
+        if (!view) return;
+        if (tab === 'leaderboard') {
+          if (t === 'cashflow') view.classList.remove('hidden');
+          else view.classList.add('hidden');
+        } else if (t === tab) {
+          view.classList.remove('hidden');
+        } else {
+          view.classList.add('hidden');
+        }
+      });
+
+      const lbView = document.getElementById('monad-subview-leaderboard');
+      if (lbView) {
+        if (tab === 'leaderboard') {
+          lbView.classList.remove('hidden');
+          renderMonadEmbeddedLeaderboard();
+          lbView.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    }
+
+    function renderMonadHeroAndSectors(data) {
+      const l1 = data.l1Chain || {};
+      const tf = data.timeframe || '7d';
+      const rev = l1.revDecomposition?.[tf] || l1.activeRevDecomposition || {};
+
+      // Card 1: Gross Fees & Net Revenue
+      const c1Title = document.getElementById('monad-card1-title');
+      if (c1Title) c1Title.textContent = `Monad DApps Gross Fees (${tf.toUpperCase()})`;
+      const feesEl = document.getElementById('monad-hero-fees');
+      const netRevEl = document.getElementById('monad-hero-net-rev');
+      const holderRevEl = document.getElementById('monad-hero-holder-rev');
+      const activeFeesVal = tf === '24h' ? l1.ecosystemFees24h : (tf === '30d' ? l1.ecosystemFees30d : l1.ecosystemFees7d);
+      const activeRevVal = tf === '24h' ? l1.ecosystemRev24h : (tf === '30d' ? l1.ecosystemRev30d : l1.ecosystemRev7d);
+      if (feesEl) feesEl.textContent = formatUSD(activeFeesVal || l1.ecosystemFees7d || 463500);
+      if (netRevEl) netRevEl.textContent = formatUSD(activeRevVal || l1.ecosystemRev7d || 178200);
+      if (holderRevEl) holderRevEl.textContent = formatUSD(Math.round((activeRevVal || 178200) * 0.65));
+
+      // Card 2: Monad L1 REV
+      const c2Title = document.getElementById('monad-card2-title');
+      if (c2Title) c2Title.textContent = `Monad L1 REV (${tf.toUpperCase()})`;
+      const heroRevEl = document.getElementById('monad-hero-rev');
+      const revBaseEl = document.getElementById('monad-hero-rev-base');
+      const revMevEl = document.getElementById('monad-hero-rev-mev');
+      const revTipsEl = document.getElementById('monad-hero-rev-tips');
+      if (heroRevEl) heroRevEl.textContent = formatUSD(rev.totalRevUsd || 132000);
+      if (revBaseEl) revBaseEl.textContent = formatUSD(rev.baseFeeBurnUsd || 54000);
+      if (revMevEl) revMevEl.textContent = formatUSD(rev.fastlaneMevTipsUsd || 43000);
+      if (revTipsEl) revTipsEl.textContent = formatUSD(rev.priorityFeesUsd || 35000);
+
+      // Card 3: Burns & Buybacks
+      const burnUsdEl = document.getElementById('monad-hero-burn-usd');
+      const monBurnedEl = document.getElementById('monad-hero-mon-burned');
+      const burnCountEl = document.getElementById('monad-hero-burn-count');
+      if (burnUsdEl) burnUsdEl.textContent = formatUSD(data.totalBurnUsd || 68400);
+      if (monBurnedEl) monBurnedEl.textContent = `${Number(data.monBurnedTokens || 12850).toLocaleString()} MON`;
+      if (burnCountEl) burnCountEl.textContent = `${(data.burnEngines || []).length} Active Assets`;
+
+      // Card 4: Parallel EVM State
+      const tpsEl = document.getElementById('monad-hero-tps');
+      const blockEl = document.getElementById('monad-hero-block');
+      const priceEl = document.getElementById('monad-hero-mon-price');
+      const circEl = document.getElementById('monad-hero-circ-supply');
+      if (tpsEl) tpsEl.textContent = `${(l1.targetTps || 10000).toLocaleString()} TPS Target`;
+      if (blockEl) blockEl.textContent = `#${Number(l1.blockHeight || 8941200).toLocaleString()}`;
+      if (priceEl) priceEl.textContent = formatUSD(l1.monPriceUsd || 4.20);
+      if (circEl) circEl.textContent = `${((l1.circulatingSupply || 100000000) / 1e6).toFixed(0)}M MON`;
+
+      // Render 5-Sector strip
+      const secGrid = document.getElementById('monad-sectors-grid');
+      if (secGrid && data.sectors) {
+        secGrid.innerHTML = data.sectors.map(s => {
+          const isSelected = monadSector === s.id;
+          const activeSecFees = tf === '24h' ? s.fees24h : (tf === '30d' ? s.fees30d : s.fees7d);
+          const activeSecRev = tf === '24h' ? s.revenue24h : (tf === '30d' ? s.revenue30d : s.revenue7d);
+          return `
+            <button 
+              onclick="setMonadSector('${s.id === monadSector ? 'all' : s.id}')"
+              class="text-left p-3 rounded-2xl border transition-all ${
+                isSelected
+                  ? 'bg-purple-600/30 border-purple-400 shadow-lg shadow-purple-950/50'
+                  : 'bg-slate-900/80 hover:bg-slate-800/90 border-slate-800'
+              }">
+              <div class="flex items-center justify-between text-[10px] text-slate-400">
+                <span class="font-bold text-purple-300 truncate">${s.badge}</span>
+                <span class="px-1.5 py-0.5 rounded bg-black/40 text-slate-300 ml-1">${s.count}</span>
+              </div>
+              <div class="text-sm font-black text-white mt-1">${formatUSD(activeSecFees)}</div>
+              <div class="text-[10px] text-slate-400 mt-0.5 truncate">Rev: <span class="text-cyan-400 font-bold">${formatUSD(activeSecRev)}</span></div>
+            </button>
+          `;
+        }).join('');
+      }
+    }
+
+    function renderMonadProtocolsTable(protocols) {
+      const tbody = document.getElementById('monad-protocols-tbody');
+      const badge = document.getElementById('monad-table-count-badge');
+      if (badge) badge.textContent = `Showing ${protocols.length} protocols`;
+      if (!tbody) return;
+
+      if (!protocols.length) {
+        tbody.innerHTML = '<tr><td colspan="10" class="py-12 text-center text-slate-500">No Monad protocols found matching current filters.</td></tr>';
+        return;
+      }
+
+      tbody.innerHTML = protocols.map((p, idx) => {
+        const mech = p.mechanism || {};
+        const fees = p.activeFees ?? p.fees7d ?? 0;
+        const netRev = p.activeRevenue ?? p.revenue7d ?? 0;
+        const burnUsd = p.activeBurnUsd ?? (mech.burn ? Math.round(netRev * 0.4) : 0);
+        const apy = p.activeApy ?? p.annualizedYieldMc ?? 0;
+        const shortAddr = p.contractAddress && p.contractAddress.length > 14
+          ? `${p.contractAddress.slice(0, 6)}...${p.contractAddress.slice(-4)}`
+          : (p.contractAddress || 'Native');
+
+        const whaleRisk = p.whaleRisk?.riskLevel || 'LOW';
+        const whaleColor = whaleRisk.includes('HIGH')
+          ? 'bg-rose-500/20 text-rose-300 border-rose-500/40'
+          : whaleRisk.includes('MOD')
+          ? 'bg-purple-500/20 text-purple-300 border-purple-500/40'
+          : 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40';
+
+        const curSupply = mech.currentSupply || p.circulatingSupply || 0;
+        const burnedPct = mech.burnedPctOfMax || 0;
+
+        return `
+          <tr onclick="openMonadProtocolModal('${p.slug}')" class="hover:bg-purple-600/10 cursor-pointer transition-colors">
+            <td class="py-3 px-3 text-slate-500">${idx + 1}</td>
+            <td class="py-3 px-3">
+              <div class="flex items-center gap-2.5">
+                ${p.logo ? `<img src="${p.logo}" class="w-7 h-7 rounded-full bg-slate-900 border border-slate-700" onerror="this.src='https://icons.llamao.fi/icons/chains/rsz_monad.jpg'">` : `<div class="w-7 h-7 rounded-full bg-purple-600/30 border border-purple-400/40 flex items-center justify-center text-purple-300 font-bold text-xs">${(p.tokenSymbol || 'M')[0]}</div>`}
+                <div>
+                  <div class="flex items-center gap-1.5">
+                    <span class="font-bold text-white">${p.name}</span>
+                    <span class="px-1.5 py-0.5 rounded bg-purple-500/20 border border-purple-400/40 text-purple-300 text-[10px] font-bold">$${p.tokenSymbol || 'MON'}</span>
+                  </div>
+                  <div class="text-[10px] text-slate-500 flex items-center gap-1.5 mt-0.5" onclick="event.stopPropagation()">
+                    <a href="${p.explorerUrl || 'https://monadscan.com'}" target="_blank" class="text-cyan-400 hover:underline">${shortAddr} ↗</a>
+                    <span class="text-purple-400">● Monad Parallel EVM</span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td class="py-3 px-3">
+              <span class="px-2 py-1 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 text-[11px]">
+                ${p.sectorBadge || p.sectorLabel || p.category}
+              </span>
+            </td>
+            <td class="py-3 px-3 text-right font-bold text-white">${formatUSD(fees)}</td>
+            <td class="py-3 px-3 text-right font-bold text-cyan-300">
+              <div>${formatUSD(netRev)}</div>
+              <div class="text-[10px] text-slate-500">${p.activeRevSharePct || p.revSharePct || 25}% of Fees</div>
+            </td>
+            <td class="py-3 px-3 text-right">
+              <div class="font-bold text-purple-300">${formatUSD(burnUsd)}</div>
+              <div class="text-[10px] text-slate-500">${mech.burn ? '🔥 Burn' : ''} ${mech.buyback ? '🔄 Buyback' : (!mech.burn ? '💎 Yield' : '')}</div>
+            </td>
+            <td class="py-3 px-3 text-right">
+              <span class="px-2 py-0.5 rounded font-bold ${apy >= 5 ? 'bg-emerald-500/20 text-emerald-300' : 'text-slate-300'}">
+                ${Number(apy).toFixed(2)}%
+              </span>
+            </td>
+            <td class="py-3 px-3 text-right">
+              <div class="text-white font-bold">${curSupply ? Number(curSupply).toLocaleString(undefined, { maximumFractionDigits: 0 }) : 'Native'} <span class="text-[10px] text-slate-400">${p.tokenSymbol || ''}</span></div>
+              <div class="text-[10px] ${burnedPct > 0 ? 'text-purple-300 font-bold' : 'text-slate-500'}">
+                ${burnedPct > 0 ? `🔥 ${burnedPct}% Burned` : (mech.stakingToken || 'Parallel EVM')}
+              </div>
+            </td>
+            <td class="py-3 px-3 text-center">
+              <span class="px-2 py-0.5 rounded border text-[10px] font-bold ${whaleColor}">
+                ${whaleRisk} (${p.whaleRisk?.top10SharePct || 18}%)
+              </span>
+            </td>
+            <td class="py-3 px-3 text-center" onclick="event.stopPropagation()">
+              <div class="flex items-center justify-center gap-1.5">
+                <button onclick="event.stopPropagation(); openHistoricalModal('${p.slug}')" class="px-2.5 py-1 rounded-xl bg-cyan-500/15 hover:bg-cyan-500/25 text-cyan-300 border border-cyan-500/30 text-xs font-mono font-bold transition-all flex items-center gap-1" title="View historical evolution trends">
+                  <span>📈 Trend</span>
+                </button>
+                <button onclick="event.stopPropagation(); openMonadProtocolModal('${p.slug}')" class="px-2.5 py-1 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 hover:border-purple-500/40 text-xs font-mono font-medium transition-all">
+                  Inspect 🔍
+                </button>
+              </div>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function renderMonadBurnAndWhales(data) {
+      const burnContainer = document.getElementById('monad-burn-cards-list');
+      const whaleContainer = document.getElementById('monad-whale-cards-list');
+
+      if (burnContainer && data.burnEngines) {
+        burnContainer.innerHTML = data.burnEngines.map(b => `
+          <div class="p-3.5 rounded-2xl bg-slate-950/90 border border-purple-500/25 space-y-2">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="font-bold text-white text-sm">${b.protocol}</span>
+                <span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 text-xs font-mono font-bold">$${b.symbol}</span>
+                <span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-300 font-mono">On-Chain Proof</span>
+              </div>
+              <div class="text-right font-mono">
+                <div class="text-sm font-black text-purple-300">${b.burnedPctOfMax}% Burned</div>
+                <div class="text-[10px] text-slate-400">${Number(b.burnedTokens || 0).toLocaleString()} ${b.symbol}</div>
+              </div>
+            </div>
+            <div class="text-xs text-slate-300">${b.mechanism}</div>
+            <div class="grid grid-cols-3 gap-2 pt-2 border-t border-slate-800/80 text-[11px] font-mono">
+              <div>
+                <span class="text-slate-500 block text-[9px]">Initial Supply</span>
+                <span class="text-slate-300 font-bold">${Number(b.initialSupply || 0).toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block text-[9px]">Current Supply</span>
+                <span class="text-white font-bold">${Number(b.currentSupply || 0).toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block text-[9px]">Burn Value</span>
+                <span class="text-purple-300 font-bold">${formatUSD(b.burnedUsd || 0)}</span>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      if (whaleContainer && data.whaleAnalytics) {
+        whaleContainer.innerHTML = data.whaleAnalytics.map(w => {
+          const top10 = w.top10SharePct || 20;
+          return `
+            <div class="p-3.5 rounded-2xl bg-slate-950/90 border border-cyan-500/25 space-y-2">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span class="font-bold text-white text-sm">${w.protocol}</span>
+                  <span class="px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 text-xs font-mono font-bold">$${w.tokenSymbol}</span>
+                  <span class="text-[10px] text-slate-400 font-mono">${Number(w.holdersCount || 0).toLocaleString()} Wallets</span>
+                </div>
+                <span class="px-2 py-0.5 rounded text-xs font-mono font-bold ${(w.riskLevel || '').includes('HIGH') ? 'bg-rose-500/20 text-rose-300' : 'bg-emerald-500/20 text-emerald-300'}">
+                  ${w.riskLevel || 'LOW'} Risk
+                </span>
+              </div>
+              <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-purple-500 to-cyan-400 rounded-full" style="width: ${Math.min(100, top10)}%"></div>
+              </div>
+              <div class="flex items-center justify-between text-[11px] font-mono text-slate-400">
+                <span>Top 10 Wallets: <strong class="text-white">${top10}%</strong></span>
+                <span>Decentralization Score: <strong class="text-cyan-300">${w.decentralizationScore || 85}/100</strong></span>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+    }
+
+    function renderMonadTreasuryView(data) {
+      const grid = document.getElementById('monad-treasury-grid');
+      if (!grid || !Array.isArray(data.protocols)) return;
+
+      const vaults = data.protocols.filter(p => p.mechanism?.buyback || p.mechanism?.burn || (p.mechanism?.treasuryNetWorthUsd || 0) > 0);
+      grid.innerHTML = vaults.map(p => {
+        const m = p.mechanism || {};
+        const netRev = p.activeRevenue ?? p.revenue7d ?? 0;
+        const buybackFlow = Math.round(netRev * (m.buyback ? 0.50 : 0.25));
+        return `
+          <div class="p-4 rounded-2xl bg-slate-950/90 border border-purple-500/25 space-y-3 font-mono">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="font-bold text-white text-sm">${p.name}</span>
+                <span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 text-xs font-bold">$${p.tokenSymbol}</span>
+              </div>
+              <span class="text-xs text-emerald-300 font-bold">${Number(p.activeApy || p.annualizedYieldMc || 0).toFixed(2)}% APY</span>
+            </div>
+            <div class="text-xs text-cyan-300 font-sans">${m.treasuryHoldings || m.stakingToken || 'Monad Native Treasury Vault'}</div>
+            <div class="grid grid-cols-2 gap-2 pt-2 border-t border-slate-800 text-xs">
+              <div>
+                <div class="text-[10px] text-slate-500">Buyback Accrual (${monadTimeframe.toUpperCase()})</div>
+                <div class="text-purple-300 font-bold">${formatUSD(buybackFlow)}</div>
+              </div>
+              <div>
+                <div class="text-[10px] text-slate-500">DAO Treasury Reserve</div>
+                <div class="text-emerald-300 font-bold">${formatUSD(m.treasuryNetWorthUsd || 0)}</div>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function setMonadLbCategory(cat) {
+      monadLbCategory = cat;
+      const tabs = [
+        { id: 'revenue', activeClass: 'bg-cyan-400 text-black shadow-md shadow-cyan-400/20' },
+        { id: 'burn', activeClass: 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/50 shadow-md shadow-cyan-400/20' },
+        { id: 'holders', activeClass: 'bg-purple-400 text-black shadow-md shadow-purple-400/20' },
+        { id: 'buybacks', activeClass: 'bg-emerald-400 text-black shadow-md shadow-emerald-400/20' }
+      ];
+      tabs.forEach(t => {
+        const btn = document.getElementById('monad-lb-cat-' + t.id);
+        if (!btn) return;
+        if (t.id === cat) {
+          btn.className = `px-3.5 py-1.5 rounded-xl font-bold transition-all ${t.activeClass}`;
+        } else {
+          btn.className = 'px-3.5 py-1.5 rounded-xl font-medium transition-all bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800';
+        }
+      });
+      renderMonadEmbeddedLeaderboard();
+    }
+
+    function setMonadLbLimit(limit) {
+      monadLbLimit = parseInt(limit, 10) || 50;
+      [10, 25, 50].forEach(l => {
+        const btn = document.getElementById('monad-lb-limit-' + l);
+        if (!btn) return;
+        if (l === monadLbLimit) {
+          btn.className = 'px-2.5 py-1 rounded-lg font-bold bg-purple-600 text-white shadow-sm transition-all';
+        } else {
+          btn.className = 'px-2.5 py-1 rounded-lg text-slate-400 hover:text-white transition-all font-medium';
+        }
+      });
+      renderMonadEmbeddedLeaderboard();
+    }
+
+    async function renderMonadEmbeddedLeaderboard() {
+      const container = document.getElementById('monad-leaderboard-list');
+      if (!container) return;
+      try {
+        const res = await fetch(`/api/leaderboard?category=${monadLbCategory}&scope=monad&limit=${monadLbLimit}&timeframe=${monadTimeframe}&_t=${Date.now()}`);
+        const data = await res.json();
+        const rows = data.items || [];
+        if (!rows.length) return;
+
+        const iconEl = document.getElementById('monad-lb-icon');
+        const titleEl = document.getElementById('monad-lb-title');
+        const badgeEl = document.getElementById('monad-lb-badge');
+
+        const catIcons = { revenue: '⚡', burn: '🔥', holders: '👥', buybacks: '🛒' };
+        const badgeStyles = {
+          revenue: 'bg-purple-500/15 text-purple-300 border-purple-500/30',
+          burn: 'bg-amber-500/15 text-amber-300 border-amber-500/30',
+          holders: 'bg-cyan-500/15 text-cyan-300 border-cyan-500/30',
+          buybacks: 'bg-emerald-500/15 text-emerald-300 border-emerald-500/30'
+        };
+
+        if (iconEl) iconEl.textContent = catIcons[monadLbCategory] || '⚡';
+        if (titleEl) {
+          if (monadLbCategory === 'revenue') {
+            const tfText = monadTimeframe === '24h' ? '24H Daily' : (monadTimeframe === '30d' ? '30D Monthly' : '7D Weekly');
+            titleEl.textContent = `Top ${rows.length} Monad Protocols – ${tfText} Revenue`;
+          } else {
+            titleEl.textContent = `Top ${rows.length} – ${(data.categoryTitle || 'Monad Leaderboard').replace(/^Top Monad Protocols\s*–\s*/i, '')}`;
+          }
+        }
+        if (badgeEl) {
+          badgeEl.textContent = monadLbCategory === 'revenue' ? `🟣 MONAD ${monadTimeframe.toUpperCase()}` : (data.categoryBadge || `🟣 MONAD ${monadTimeframe.toUpperCase()}`);
+          badgeEl.className = `text-[11px] font-mono uppercase border px-2.5 py-0.5 rounded-full font-bold ${badgeStyles[monadLbCategory] || badgeStyles.revenue}`;
+        }
+
+        let neonBarClass = 'neon-bar';
+        let primaryColorClass = 'text-emerald-400';
+        if (monadLbCategory === 'burn') {
+          neonBarClass = 'neon-bar-burn';
+          primaryColorClass = 'text-cyan-400';
+        } else if (monadLbCategory === 'holders') {
+          neonBarClass = 'neon-bar-holders';
+          primaryColorClass = 'text-cyan-300';
+        } else if (monadLbCategory === 'buybacks') {
+          neonBarClass = 'neon-bar-buybacks';
+          primaryColorClass = 'text-teal-300';
+        }
+
+        const defaultMonHistTab = (monadLbCategory === 'burn' || monadLbCategory === 'buybacks') ? 'buyback' : (monadLbCategory === 'holders' ? 'holders' : 'cashflow');
+        let totalCombined = 0;
+
+        container.innerHTML = rows.map((item, i) => {
+          if (item.metricValue) totalCombined += item.metricValue;
+          const rankDisplay = (item.isDiamond || i === 0)
+            ? `<span class="text-base select-none">💎</span>`
+            : `<span class="text-sm font-mono font-bold text-purple-400 select-none">${item.rank || i + 1}</span>`;
+          const slug = item.slug || 'kuru';
+          const barPct = item.barPct || Math.max(10, Math.round(100 - i * 8));
+
+          return `
+            <div 
+              onclick="openHistoricalModal('${slug}', '${defaultMonHistTab}')"
+              class="row-hover pt-3 pb-3 px-2 sm:px-4 rounded-2xl flex items-center gap-2.5 sm:gap-4 cursor-pointer transition-colors group">
+              
+              <!-- Rank -->
+              <div class="w-6 sm:w-8 flex-shrink-0 text-center flex items-center justify-center">${rankDisplay}</div>
+
+              <!-- Avatar -->
+              <div class="w-7 h-7 sm:w-8 sm:h-8 flex-shrink-0 rounded-full bg-slate-800/90 p-0.5 border border-slate-700/80 overflow-hidden flex items-center justify-center">
+                <img src="${item.logo || ''}" class="w-full h-full object-cover rounded-full" onerror="this.src='https://icons.llamao.fi/icons/chains/rsz_monad.jpg'"/>
+              </div>
+
+              <!-- Token & Protocol Identity -->
+              <div class="w-24 sm:w-36 flex-shrink-0">
+                <div class="text-sm sm:text-base font-extrabold text-white font-mono tracking-tight group-hover:text-cyan-300 transition-colors truncate">$${item.tokenSymbol || 'MON'}</div>
+                <div class="text-[10px] text-slate-400 font-mono truncate hidden sm:block">${item.name}</div>
+              </div>
+
+              <!-- Horizontal Neon Progress Bar -->
+              <div class="flex-1 min-w-[60px] sm:min-w-[120px] px-1 sm:px-2">
+                <div class="h-2 sm:h-2.5 w-full bg-slate-800/90 rounded-full overflow-hidden p-[1px]">
+                  <div class="${neonBarClass} h-full rounded-full transition-all duration-700 ease-out" style="width: ${barPct}%;"></div>
+                </div>
+              </div>
+
+              <!-- Primary Metric -->
+              <div class="w-24 sm:w-32 text-right flex-shrink-0">
+                <div class="text-sm sm:text-base font-bold font-mono ${primaryColorClass} group-hover:text-cyan-300 transition-colors">${typeof item.primaryMetric === 'string' ? item.primaryMetric : formatUSD(item.metricValue || 0)}</div>
+              </div>
+
+              <!-- Secondary Metric -->
+              <div class="w-24 sm:w-56 text-right flex-shrink-0 font-mono hidden md:block">
+                <div class="text-xs sm:text-sm font-semibold text-slate-300 truncate">${item.secondaryMetric || item.sectorLabel || 'Monad Mainnet'}</div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="flex items-center gap-1.5 flex-shrink-0" onclick="event.stopPropagation()">
+                <button 
+                  onclick="event.stopPropagation(); openHistoricalModal('${slug}', '${defaultMonHistTab}')" 
+                  class="px-2.5 py-1 rounded-xl bg-cyan-500/15 hover:bg-cyan-500/25 text-cyan-300 border border-cyan-500/30 text-xs font-mono font-bold transition-all flex items-center gap-1"
+                  title="Open Historical Evolution Chart">
+                  <span>📈 Trend</span>
+                </button>
+                <button 
+                  onclick="event.stopPropagation(); openMonadProtocolModal('${slug}')" 
+                  class="px-2.5 py-1 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 hover:border-purple-500/40 text-xs font-mono font-medium transition-all hidden sm:inline-flex items-center">
+                  Inspect 🔍
+                </button>
+              </div>
+            </div>
+          `;
+        }).join('');
+
+        const countFooterEl = document.getElementById('monad-lb-summary-count');
+        const totalFooterEl = document.getElementById('monad-lb-summary-total');
+        if (countFooterEl) {
+          countFooterEl.textContent = `Showing Top ${rows.length} Native Monad Protocols`;
+        }
+        if (totalFooterEl && monadLbCategory !== 'holders') {
+          totalFooterEl.textContent = `Combined ${monadTimeframe.toUpperCase()} Total: ${formatUSD(totalCombined)} • 100% Pure On-Chain`;
+        }
+      } catch (e) {
+        console.error('Failed to render Monad leaderboard:', e);
+      }
+    }
+
+    function openMonadProtocolModal(slug) {
+      if (!monadData || !Array.isArray(monadData.protocols)) return;
+      const p = monadData.protocols.find(item => item.slug === slug) || monadData.protocols[0];
+      if (!p) return;
+
+      const modal = document.getElementById('modal-protocol-blueprint');
+      if (!modal) return;
+
+      const m = p.mechanism || {};
+      document.getElementById('blueprint-modal-name').textContent = p.name;
+      document.getElementById('blueprint-modal-symbol').textContent = `$${p.tokenSymbol || 'MON'}`;
+      document.getElementById('blueprint-modal-badge').textContent = p.sectorBadge || p.sectorLabel || p.category;
+      document.getElementById('blueprint-modal-role').textContent = 'Monad Parallel EVM & Native Protocol Architecture';
+      document.getElementById('blueprint-modal-desc').textContent = m.description || `${p.name} operates on Monad Mainnet (Chain ID 143) with parallel EVM execution.`;
+
+      const pkgIdEl = document.getElementById('blueprint-modal-package-id');
+      const pkgLinkEl = document.getElementById('blueprint-modal-package-link');
+      if (pkgIdEl) pkgIdEl.textContent = p.contractAddress || '0x0000000000000000000000000000000000000143';
+      if (pkgLinkEl) {
+        pkgLinkEl.href = p.explorerUrl || `https://monadscan.com/address/${p.contractAddress}`;
+        pkgLinkEl.textContent = 'Open in Monadscan ↗';
+      }
+
+      const coinTypeEl = document.getElementById('blueprint-modal-coin-type');
+      const coinLinkEl = document.getElementById('blueprint-modal-coin-link');
+      if (coinTypeEl) coinTypeEl.textContent = `Current Supply: ${Number(m.currentSupply || p.circulatingSupply || 0).toLocaleString()} $${p.tokenSymbol} | Burned: ${Number(m.burnedTokens || 0).toLocaleString()} (${m.burnedPctOfMax || 0}%)`;
+      if (coinLinkEl) {
+        coinLinkEl.href = p.explorerUrl || `https://monadscan.com/token/${p.contractAddress}`;
+        coinLinkEl.textContent = 'View Monadscan Token Tracker ↗';
+      }
+
+      document.getElementById('blueprint-modal-split').textContent = `${p.activeLpSharePct || p.lpSharePct || 75}% LPs/Nodes | ${p.activeRevSharePct || p.revSharePct || 25}% Protocol Net Rev`;
+      document.getElementById('blueprint-modal-sink').textContent = `${m.burn ? '🔥 On-Chain Burn ' : ''}${m.buyback ? '🔄 Programmatic Buyback ' : ''}${m.stakingToken ? `(${m.stakingToken})` : ''}`;
+
+      const structsEl = document.getElementById('blueprint-modal-structs');
+      if (structsEl) {
+        const items = [
+          'Parallel EVM Execution',
+          'MonadDB Async Storage',
+          'Gas-on-Limit Model',
+          m.treasuryHoldings || 'Monad Treasury Vault',
+          `Sector: ${p.sectorLabel || p.category}`
+        ];
+        structsEl.innerHTML = items.map(s => `<span class="px-2.5 py-1 rounded-lg bg-purple-600/30 border border-purple-400/40 text-purple-300 text-xs font-mono">${s}</span>`).join('');
       }
 
       modal.classList.remove('hidden');

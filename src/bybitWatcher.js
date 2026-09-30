@@ -108,7 +108,7 @@ const TOKEN_CATEGORY_MAP = {
   BTC: 'l1', ETH: 'l1', SOL: 'l1', SUI: 'l1', XRP: 'rwa', ADAVAX: 'l1',
   TON: 'l1', DOT: 'l1', TRX: 'l1', APT: 'l1', SEI: 'l1', INJ: 'l1', TIA: 'l1',
   ATOM: 'l1', KAALGO: 'rwa', FTM: 'l1', SONIC: 'l1', BERA: 'l1',
-  MON: 'gaming', KAVEGLD: 'l1', MINFLOW: 'l1', XTZ: 'l1', EOS: 'l1',
+  MON: 'l1', KAVEGLD: 'l1', MINFLOW: 'l1', XTZ: 'l1', EOS: 'l1',
   IOTNEO: 'l1', VET: 'l1', ZIL: 'l1', ONE: 'l1', CELO: 'l1',
   ROSE: 'l1', KSM: 'l1', ASTR: 'l1', GLMR: 'l1', CFX: 'l1', CKB: 'l1', CORE: 'l1',
   ZETMOVE: 'l2', INIT: 'l1', IP: 'l1', LTC: 'l1', BCH: 'l1',

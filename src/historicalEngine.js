@@ -394,8 +394,10 @@ async function buildDynamicProtocolEvolution(slug) {
   let solProto = null;
   let suiProto = null;
   let ethProto = null;
+  let monadProto = null;
   let solBurnLedger = {};
   let ethBurnLedger = {};
+  let monadBurnLedger = {};
   let discProto = null;
   let globalProto = null;
   try {
@@ -416,6 +418,15 @@ async function buildDynamicProtocolEvolution(slug) {
 
   if (!solProto && !ethProto) {
     try {
+      const monadRaw = await fs.readFile(path.join(CACHE_DIR, 'monad_ecosystem.json'), 'utf-8');
+      const monadData = JSON.parse(monadRaw);
+      monadProto = (monadData.protocols || []).find(p => p.slug === slug);
+      monadBurnLedger = monadData.l1Chain?.monadBurnLedger || {};
+    } catch {}
+  }
+
+  if (!solProto && !ethProto && !monadProto) {
+    try {
       const suiRaw = await fs.readFile(path.join(CACHE_DIR, 'sui_ecosystem.json'), 'utf-8');
       const suiData = JSON.parse(suiRaw);
       suiProto = (suiData.protocols || []).find(p => p.slug === slug);
@@ -430,7 +441,7 @@ async function buildDynamicProtocolEvolution(slug) {
     }
   } catch {}
 
-  if (!solProto && !ethProto && !suiProto) {
+  if (!solProto && !ethProto && !monadProto && !suiProto) {
     try {
       const globRaw = await fs.readFile(path.join(CACHE_DIR, 'protocols_data.json'), 'utf-8');
       const globData = JSON.parse(globRaw);
@@ -438,7 +449,7 @@ async function buildDynamicProtocolEvolution(slug) {
     } catch {}
   }
 
-  const ref = solProto || ethProto || suiProto || globalProto || discProto;
+  const ref = solProto || ethProto || monadProto || suiProto || globalProto || discProto;
   if (!ref) return null;
 
   const KNOWN_BURN_TOKENS = {
@@ -473,7 +484,14 @@ async function buildDynamicProtocolEvolution(slug) {
     COW: 17200000,
     BANANA: 1597107,
     SHIB: 410745000000000,
-    PEPE: 6918000000000
+    PEPE: 6918000000000,
+    MON: 114600000,
+    KURU: 21500000,
+    BEAN: 34600000,
+    NAD: 420000000,
+    aprMON: 5900000,
+    CVE: 2800000,
+    FLN: 12000000
   };
 
   const name = ref.name || slug;
@@ -484,6 +502,7 @@ async function buildDynamicProtocolEvolution(slug) {
   const totalBurnedTokens =
     solBurnLedger[symbol]?.burnedTokens ||
     ethBurnLedger[symbol]?.burnedTokens ||
+    monadBurnLedger[symbol]?.burnedTokens ||
     KNOWN_BURN_TOKENS[symbol] ||
     ref.mechanism?.burnedAmount ||
     discProto?.burnedTokens ||
@@ -492,29 +511,31 @@ async function buildDynamicProtocolEvolution(slug) {
   const currentHolders = ref.whaleRisk?.holdersCount || 48500;
   const currentDecentralization = ref.whaleRisk?.decentralizationScore || 68;
 
-  // Attempt fast live DefiLlama chart lookup (dailyFees, dailyRevenue, dailyHoldersRevenue)
+  // Attempt fast live DefiLlama chart lookup only if not Monad (Zero-DefiLlama policy for Monad)
   let feeSeries = [];
   let revSeries = [];
   let holdersRevSeries = [];
-  try {
-    const [fS, rS, hS] = await Promise.all([
-      fetch(`https://api.llama.fi/summary/fees/${slug}?dataType=dailyFees`, { signal: AbortSignal.timeout(3500) })
-        .then(r => (r.ok ? r.json() : null))
-        .then(d => (Array.isArray(d?.totalDataChart) ? d.totalDataChart : []))
-        .catch(() => []),
-      fetch(`https://api.llama.fi/summary/fees/${slug}?dataType=dailyRevenue`, { signal: AbortSignal.timeout(3500) })
-        .then(r => (r.ok ? r.json() : null))
-        .then(d => (Array.isArray(d?.totalDataChart) ? d.totalDataChart : []))
-        .catch(() => []),
-      fetch(`https://api.llama.fi/summary/fees/${slug}?dataType=dailyHoldersRevenue`, { signal: AbortSignal.timeout(3500) })
-        .then(r => (r.ok ? r.json() : null))
-        .then(d => (Array.isArray(d?.totalDataChart) ? d.totalDataChart : []))
-        .catch(() => [])
-    ]);
-    feeSeries = fS;
-    revSeries = rS;
-    holdersRevSeries = hS;
-  } catch {}
+  if (!monadProto) {
+    try {
+      const [fS, rS, hS] = await Promise.all([
+        fetch(`https://api.llama.fi/summary/fees/${slug}?dataType=dailyFees`, { signal: AbortSignal.timeout(3500) })
+          .then(r => (r.ok ? r.json() : null))
+          .then(d => (Array.isArray(d?.totalDataChart) ? d.totalDataChart : []))
+          .catch(() => []),
+        fetch(`https://api.llama.fi/summary/fees/${slug}?dataType=dailyRevenue`, { signal: AbortSignal.timeout(3500) })
+          .then(r => (r.ok ? r.json() : null))
+          .then(d => (Array.isArray(d?.totalDataChart) ? d.totalDataChart : []))
+          .catch(() => []),
+        fetch(`https://api.llama.fi/summary/fees/${slug}?dataType=dailyHoldersRevenue`, { signal: AbortSignal.timeout(3500) })
+          .then(r => (r.ok ? r.json() : null))
+          .then(d => (Array.isArray(d?.totalDataChart) ? d.totalDataChart : []))
+          .catch(() => [])
+      ]);
+      feeSeries = fS;
+      revSeries = rS;
+      holdersRevSeries = hS;
+    } catch {}
+  }
 
   const feeMap = new Map(feeSeries.map(([ts, val]) => [ts, val]));
   const revMap = new Map(revSeries.map(([ts, val]) => [ts, val]));

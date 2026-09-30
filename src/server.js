@@ -8,6 +8,7 @@ import { isProtocolTokenVerified } from './tokenFilter.js';
 import { getSuiEcosystem } from './suiWatcher.js';
 import { getSolanaEcosystem } from './solanaWatcher.js';
 import { getEthereumEcosystem } from './ethereumWatcher.js';
+import { getMonadEcosystem } from './monadWatcher.js';
 import { getProtocolHistorical, getMacroEcosystemHistorical } from './historicalEngine.js';
 import { getLeaderboard } from './leaderboardEngine.js';
 import { getBybitSpotEcosystem } from './bybitWatcher.js';
@@ -429,6 +430,83 @@ export async function handleRequest(req, res) {
     }
 
     // -------------------------------------------------------------
+    // API 2h: Monad Blockchain Dedicated Ecosystem & On-Chain Hub
+    // -------------------------------------------------------------
+    if (pathname === '/api/monad' && req.method === 'GET') {
+      const forceRefresh = reqUrl.searchParams.get('refresh') === 'true';
+      const timeframe = (reqUrl.searchParams.get('timeframe') || '7d').toLowerCase();
+      const validTf = ['24h', '7d', '30d'].includes(timeframe) ? timeframe : '7d';
+      const sectorFilter = (reqUrl.searchParams.get('sector') || 'all').toLowerCase();
+      const search = (reqUrl.searchParams.get('search') || '').toLowerCase().trim();
+
+      const monadData = await getMonadEcosystem(forceRefresh);
+
+      let activeProtocols = (monadData.protocols || []).map(p => {
+        const tfData = p.timeframeData?.[validTf] || p.timeframeData?.['7d'] || {};
+        return {
+          ...p,
+          activeTimeframe: validTf,
+          activeFees: tfData.fees ?? p.fees7d ?? 0,
+          activeRevenue: tfData.revenue ?? p.revenue7d ?? 0,
+          activeLpShare: tfData.lpShare ?? p.lpShare7d ?? 0,
+          activeLpSharePct: tfData.lpSharePct ?? p.lpSharePct ?? 72,
+          activeRevSharePct: tfData.revSharePct ?? p.revSharePct ?? 28,
+          activeArr: tfData.arr ?? p.annualizedRevenue ?? 0,
+          activeYield: tfData.periodYield ?? p.weeklyYieldMc ?? 0,
+          activeApy: tfData.apy ?? p.annualizedYieldMc ?? 0,
+          activeDelta: tfData.delta ?? 0
+        };
+      });
+
+      if (sectorFilter && sectorFilter !== 'all') {
+        activeProtocols = activeProtocols.filter(p => p.sector === sectorFilter);
+      }
+      if (search) {
+        activeProtocols = activeProtocols.filter(p =>
+          p.name.toLowerCase().includes(search) ||
+          (p.tokenSymbol && p.tokenSymbol.toLowerCase().includes(search)) ||
+          (p.sectorLabel && p.sectorLabel.toLowerCase().includes(search)) ||
+          (p.contractAddress && p.contractAddress.toLowerCase().includes(search))
+        );
+      }
+
+      activeProtocols.sort((a, b) => (b.activeRevenue || 0) - (a.activeRevenue || 0) || (b.activeFees || 0) - (a.activeFees || 0));
+
+      const activeRevDecomposition = monadData.l1Chain?.revDecomposition?.[validTf] || monadData.l1Chain?.revDecomposition?.['7d'];
+
+      const responsePayload = {
+        success: true,
+        lastUpdated: monadData.lastUpdated,
+        timeframe: validTf,
+        totalProtocolsCount: (monadData.protocols || []).length,
+        filteredCount: activeProtocols.length,
+        l1Chain: {
+          ...monadData.l1Chain,
+          activeRevDecomposition
+        },
+        sectors: monadData.sectors || [],
+        protocols: activeProtocols,
+        whaleAnalytics: monadData.whaleAnalytics || [],
+        burnEngines: monadData.burnEngines || [],
+        treasuryRadar: monadData.treasuryRadar || {}
+      };
+
+      res.writeHead(200, {
+        'Content-Type': 'application/json',
+        'Cache-Control': 'no-cache, no-store, must-revalidate'
+      });
+      res.end(JSON.stringify(responsePayload));
+      return;
+    }
+
+    if (pathname === '/api/monad/refresh' && req.method === 'POST') {
+      const monadData = await getMonadEcosystem(true);
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ success: true, message: 'Monad telemetry refreshed', data: monadData }));
+      return;
+    }
+
+    // -------------------------------------------------------------
     // API 2f: Bybit Spot Tokens & Category 24H Volume Radar
     // -------------------------------------------------------------
     if (pathname === '/api/bybit' && req.method === 'GET') {
@@ -445,13 +523,15 @@ export async function handleRequest(req, res) {
     // -------------------------------------------------------------
     // API 2e: Institutional Leaderboard Matrix (Revenues, Burn, Holders, Buybacks)
     // -------------------------------------------------------------
-    if ((pathname === '/api/leaderboard' || pathname === '/api/sui/leaderboard' || pathname === '/api/solana/leaderboard' || pathname === '/api/ethereum/leaderboard') && req.method === 'GET') {
+    if ((pathname === '/api/leaderboard' || pathname === '/api/sui/leaderboard' || pathname === '/api/solana/leaderboard' || pathname === '/api/ethereum/leaderboard' || pathname === '/api/monad/leaderboard') && req.method === 'GET') {
       const category = reqUrl.searchParams.get('category') || 'revenue';
       const defaultScope = pathname === '/api/sui/leaderboard'
         ? 'sui'
         : (pathname === '/api/solana/leaderboard'
             ? 'solana'
-            : (pathname === '/api/ethereum/leaderboard' ? 'ethereum' : 'all'));
+            : (pathname === '/api/ethereum/leaderboard'
+                ? 'ethereum'
+                : (pathname === '/api/monad/leaderboard' ? 'monad' : 'all')));
       const scope = reqUrl.searchParams.get('scope') || defaultScope;
       const limit = parseInt(reqUrl.searchParams.get('limit') || '50', 10);
       const timeframe = reqUrl.searchParams.get('timeframe') || '7d';

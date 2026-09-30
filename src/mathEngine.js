@@ -253,4 +253,36 @@ export function calculateEthereumREV(totalL1ChainFeesUsd, l1BurnedRevenueUsd, me
   };
 }
 
+/**
+ * Calculates Monad L1 Parallel EVM Real Economic Value (REV) vector
+ * (Gas-on-Limit Base Fee Burn + Priority Leader Tips + FastLane MEV Bundles + Carriage Cost Reserve)
+ * @param {number} totalL1ChainFeesUsd - L1 total gas_limit execution + carriage fees
+ * @param {number} l1BurnedRevenueUsd - Verified on-chain Base Fee MON burn in USD
+ * @param {number} fastlaneMevTipsUsd - FastLane MEV auction tips to Validators & LSTs (aprMON/gMON/sMON)
+ * @returns {object} Mathematical Monad REV decomposition
+ */
+export function calculateMonadREV(totalL1ChainFeesUsd, l1BurnedRevenueUsd, fastlaneMevTipsUsd) {
+  const safeChainFees = Math.max(0, totalL1ChainFeesUsd || 0);
+  const baseFeeBurnUsd = Math.max(0, l1BurnedRevenueUsd || safeChainFees * 0.72);
+  const priorityFeesValidatorUsd = Math.max(0, safeChainFees - baseFeeBurnUsd);
+  const carriageReserveCostUsd = Math.round(baseFeeBurnUsd * 0.14); // Consensus pre-execution Carriage Cost share
+  const safeMevTips = Math.max(0, fastlaneMevTipsUsd || safeChainFees * 0.31);
 
+  const totalRevUsd = baseFeeBurnUsd + priorityFeesValidatorUsd + safeMevTips;
+  const denom = totalRevUsd > 0 ? totalRevUsd : 1;
+
+  return {
+    totalRevUsd: Math.round(totalRevUsd),
+    baseFeeBurnUsd: Math.round(baseFeeBurnUsd),
+    priorityFeesValidatorUsd: Math.round(priorityFeesValidatorUsd),
+    fastlaneMevTipsUsd: Math.round(safeMevTips),
+    carriageReserveCostUsd: Math.round(carriageReserveCostUsd),
+    totalValidatorAndLstRealYieldUsd: Math.round(priorityFeesValidatorUsd + safeMevTips),
+    shares: {
+      burnPct: Math.round((baseFeeBurnUsd / denom) * 1000) / 10,
+      priorityPct: Math.round((priorityFeesValidatorUsd / denom) * 1000) / 10,
+      mevPct: Math.round((safeMevTips / denom) * 1000) / 10,
+      carriagePct: Math.round((carriageReserveCostUsd / denom) * 1000) / 10
+    }
+  };
+}
