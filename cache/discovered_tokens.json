@@ -1,77 +1,77 @@
 {
-  "updatedAt": 1790792078768,
+  "updatedAt": 1790802761592,
   "protocols": {
     "marginfi-lst": {
       "hasToken": false,
-      "checkedAt": 1790416309761
+      "checkedAt": 1790802744341
     },
     "maestro": {
       "hasToken": false,
-      "checkedAt": 1790783834806
+      "checkedAt": 1790802744341
     },
     "crypto.com-liquid-staking": {
       "hasToken": false,
-      "checkedAt": 1790416309761
+      "checkedAt": 1790802744341
     },
     "marginfi-lending": {
       "hasToken": false,
-      "checkedAt": 1790416309761
+      "checkedAt": 1790802744341
     },
     "jpool": {
       "hasToken": false,
-      "checkedAt": 1790416309761
+      "checkedAt": 1790802744341
     },
     "photon": {
       "hasToken": false,
-      "checkedAt": 1790416309761
+      "checkedAt": 1790802744341
     },
     "trojan": {
       "hasToken": false,
-      "checkedAt": 1790416309761
+      "checkedAt": 1790802744341
     },
     "mevx": {
       "hasToken": false,
-      "checkedAt": 1790416309761
+      "checkedAt": 1790802744341
     },
     "dex-screener": {
       "hasToken": false,
-      "checkedAt": 1790416309761
+      "checkedAt": 1790802744341
     },
     "bloxroute": {
       "hasToken": false,
-      "checkedAt": 1790416309761
+      "checkedAt": 1790802744341
     },
     "helius-staked-sol": {
       "hasToken": false,
-      "checkedAt": 1790416309761
+      "checkedAt": 1790802744341
     },
     "lulo": {
       "hasToken": false,
-      "checkedAt": 1790416309761
+      "checkedAt": 1790802744341
     },
     "bitwise-uscc": {
       "hasToken": false,
-      "checkedAt": 1790416309761
+      "checkedAt": 1790802744341
     },
     "helio": {
       "hasToken": false,
-      "checkedAt": 1790416309761
+      "checkedAt": 1790802744341
     },
     "raybot": {
       "hasToken": false,
-      "checkedAt": 1790416309761
+      "checkedAt": 1790802744341
     },
     "binance-staked-sol": {
       "hasToken": false,
-      "checkedAt": 1790416309761
+      "checkedAt": 1790802744341
     },
     "moonshot.money": {
       "hasToken": false,
-      "checkedAt": 1790416309761
+      "checkedAt": 1790802744341
     },
     "bybit-staked-sol": {
       "hasToken": false,
-      "checkedAt": 1790416309761
+      "checkedAt": 1790802744341
     },
     "aftermath-amm": {
       "hasToken": false,
@@ -834,6 +834,78 @@
     "aegis-yusd": {
       "hasToken": false,
       "checkedAt": 1790784643383
+    },
+    "k3-capital": {
+      "hasToken": false,
+      "checkedAt": 1790802761592
+    },
+    "hyperithm": {
+      "hasToken": false,
+      "checkedAt": 1790802761592
+    },
+    "ambient": {
+      "hasToken": false,
+      "checkedAt": 1790802761592
+    },
+    "gauntlet": {
+      "hasToken": false,
+      "checkedAt": 1790802761592
+    },
+    "hakutora": {
+      "hasToken": false,
+      "checkedAt": 1790802761592
+    },
+    "vault-bridge": {
+      "hasToken": false,
+      "checkedAt": 1790802761592
+    },
+    "infinifi": {
+      "hasToken": false,
+      "checkedAt": 1790802761592
+    },
+    "angstrom": {
+      "hasToken": false,
+      "checkedAt": 1790802761592
+    },
+    "steakhouse-financial": {
+      "hasToken": false,
+      "checkedAt": 1790802761592
+    },
+    "aera-v3": {
+      "hasToken": false,
+      "checkedAt": 1790802761592
+    },
+    "alphagrowth": {
+      "hasToken": false,
+      "checkedAt": 1790802761592
+    },
+    "wisdomtree": {
+      "hasToken": false,
+      "checkedAt": 1790802761592
+    },
+    "tokenworks": {
+      "hasToken": false,
+      "checkedAt": 1790802761592
+    },
+    "theo-network-thbill": {
+      "hasToken": false,
+      "checkedAt": 1790802761592
+    },
+    "3jane-lending": {
+      "hasToken": false,
+      "checkedAt": 1790802761592
+    },
+    "avant-aveth": {
+      "hasToken": false,
+      "checkedAt": 1790802761592
+    },
+    "ultrayield-vaults": {
+      "hasToken": false,
+      "checkedAt": 1790802761592
+    },
+    "strata-markets": {
+      "hasToken": false,
+      "checkedAt": 1790802761592
     }
   }
 }

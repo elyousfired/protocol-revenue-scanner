@@ -1,7 +1,10 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { scanProtocols } from './scanner.js';
+import { getSuiEcosystem } from './suiWatcher.js';
+import { getSolanaEcosystem } from './solanaWatcher.js';
+import { getEthereumEcosystem } from './ethereumWatcher.js';
+import { getMonadEcosystem } from './monadWatcher.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -283,7 +286,7 @@ export async function getBybitSpotEcosystem(force = false) {
 
   console.log('[BybitWatcher] Fetching live Bybit V5 Spot Tickers & computing Category Volume Flow...');
 
-  const [bybitRes, scannerData, cgMap] = await Promise.all([
+  const [bybitRes, suiEco, solEco, ethEco, monEco, cgMap] = await Promise.all([
     fetch('https://api.bybit.com/v5/market/tickers?category=spot', {
       signal: AbortSignal.timeout(15000)
     }).then(async r => {
@@ -294,7 +297,10 @@ export async function getBybitSpotEcosystem(force = false) {
         throw new Error("Bybit fetch failed: " + err.message + " | Raw response: " + text.substring(0, 150));
       }
     }),
-    scanProtocols(false).catch(() => ({ protocols: [] })),
+    getSuiEcosystem(false).catch(() => ({ protocols: [] })),
+    getSolanaEcosystem(false).catch(() => ({ protocols: [] })),
+    getEthereumEcosystem(false).catch(() => ({ protocols: [] })),
+    getMonadEcosystem(false).catch(() => ({ protocols: [] })),
     (async () => {
       const CG_CACHE_FILE = './cache/cg_mcap.json';
       const TMP_CG_CACHE_FILE = '/tmp/cg_mcap.json';
@@ -341,9 +347,17 @@ export async function getBybitSpotEcosystem(force = false) {
 
   // Index our verified protocol revenue data by token symbol
   const scannerMap = new Map();
-  for (const p of scannerData.protocols || []) {
-    if (p.tokenSymbol) {
-      const sym = p.tokenSymbol.toUpperCase();
+  const allProts = [
+    ...[...(suiEco.l1Chain ? [suiEco.l1Chain] : []), ...(suiEco.protocols || [])].map(p => ({ ...p, _injectedChain: 'sui' })),
+    ...[...(solEco.l1Chain ? [solEco.l1Chain] : []), ...(solEco.protocols || [])].map(p => ({ ...p, _injectedChain: 'solana' })),
+    ...[...(ethEco.l1Chain ? [ethEco.l1Chain] : []), ...(ethEco.protocols || [])].map(p => ({ ...p, _injectedChain: 'ethereum' })),
+    ...[...(monEco.l1Chain ? [monEco.l1Chain] : []), ...(monEco.protocols || [])].map(p => ({ ...p, _injectedChain: 'monad' }))
+  ];
+
+  for (const p of allProts) {
+    const rawSym = p.tokenSymbol || p.symbol;
+    if (rawSym) {
+      const sym = rawSym.toUpperCase();
       const existing = scannerMap.get(sym);
       if (!existing || (p.revenue7d || 0) > (existing.revenue7d || 0)) {
         scannerMap.set(sym, p);
@@ -377,7 +391,32 @@ export async function getBybitSpotEcosystem(force = false) {
 
     const catId = classifyTokenCategory(baseSymbol, scannerMap);
     const catMeta = BYBIT_CATEGORIES[catId] || BYBIT_CATEGORIES.infra;
-    const matchedProtocol = scannerMap.get(baseSymbol) || null;
+    let matchedProtocol = scannerMap.get(baseSymbol) || null;
+
+    let isOnOurChains = false;
+    let onChainChains = [];
+    if (matchedProtocol) {
+      const allowedChains = ['ethereum', 'sui', 'solana', 'monad'];
+      let protChains = (matchedProtocol.chains || [matchedProtocol.primaryChain || '']).map(c => c.toLowerCase());
+      
+      // Force native tokens to be recognized on their own chains
+      if (baseSymbol === 'SUI') protChains.push('sui');
+      if (baseSymbol === 'SOL') protChains.push('solana');
+      if (baseSymbol === 'ETH' || baseSymbol === 'WETH') protChains.push('ethereum');
+      if (baseSymbol === 'MON' || baseSymbol === 'WMON') protChains.push('monad');
+      
+      if (matchedProtocol._injectedChain) protChains.push(matchedProtocol._injectedChain);
+
+      isOnOurChains = protChains.some(c => allowedChains.includes(c));
+      onChainChains = protChains.filter(c => allowedChains.includes(c));
+      
+      // Deduplicate
+      onChainChains = [...new Set(onChainChains)];
+
+      if (!isOnOurChains) {
+        matchedProtocol = null;
+      }
+    }
 
     totalSpotVolume24hUsd += volume24hUsd;
 
@@ -402,6 +441,8 @@ export async function getBybitSpotEcosystem(force = false) {
       protocolSlug: matchedProtocol?.slug || null,
       protocolRevenue7d: matchedProtocol?.revenue7d ? Math.round(matchedProtocol.revenue7d) : 0,
       protocolRevenue24h: matchedProtocol?.revenue24h ? Math.round(matchedProtocol.revenue24h) : 0,
+      protocolTvl: matchedProtocol?.tvl || 0,
+      onChainChains: onChainChains.map(c => c.charAt(0).toUpperCase() + c.slice(1)), // Capitalize
       mcap: matchedProtocol?.mcap || cgMap[baseSymbol] || 0,
       logo: matchedProtocol?.logo || `https://assets.coincap.io/assets/icons/${baseSymbol.toLowerCase()}@2x.png`
     });
