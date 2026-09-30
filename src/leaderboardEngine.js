@@ -26,6 +26,18 @@ function formatNumber(num) {
   return num.toLocaleString('en-US');
 }
 
+// Deduplicate leaderboard rows by tokenSymbol so multi-version sub-protocols (e.g. Aave V3/V4, Chainlink Staking/Requests, Uniswap V2/V3) never repeat
+function dedupeByTokenSymbol(arr) {
+  const seen = new Set();
+  return arr.filter(item => {
+    const sym = (item.tokenSymbol || item.symbol || '').trim().toUpperCase();
+    const key = sym || (item.slug || item.name || '').toLowerCase();
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
 // Curated verified global burn registry for major multi-chain protocols
 const GLOBAL_BURN_REGISTRY = [
   {
@@ -569,7 +581,7 @@ export async function getLeaderboard({
       });
 
       sorted.sort((a, b) => (b.metricValue || 0) - (a.metricValue || 0));
-      items = sorted;
+      items = dedupeByTokenSymbol(sorted).slice(0, numLimit);
     } else if (normScope === 'solana' || normScope === 'ethereum') {
       const isEth = normScope === 'ethereum';
       const targetProtos = isEth ? ethereumProtocols : solanaProtocols;
@@ -607,7 +619,7 @@ export async function getLeaderboard({
       });
 
       sorted.sort((a, b) => (b.metricValue || 0) - (a.metricValue || 0));
-      items = sorted.slice(0, numLimit);
+      items = dedupeByTokenSymbol(sorted).slice(0, numLimit);
     } else {
       categoryTitle = `Top ${numLimit} – ${tfShort} Revenue`;
 
@@ -642,7 +654,7 @@ export async function getLeaderboard({
       });
 
       mapped.sort((a, b) => (b.metricValue || 0) - (a.metricValue || 0));
-      items = mapped.slice(0, numLimit);
+      items = dedupeByTokenSymbol(mapped).slice(0, numLimit);
     }
   }
 
@@ -817,8 +829,9 @@ export async function getLeaderboard({
       ];
 
       const existingBurnSlugs = new Set(solBurnItems.map(b => b.slug));
+      const existingBurnSymbols = new Set(solBurnItems.map(b => (b.tokenSymbol || '').toUpperCase()));
       const extraSolBurn = [...solanaProtocols]
-        .filter(p => !existingBurnSlugs.has(p.slug) && p.tokenSymbol)
+        .filter(p => !existingBurnSlugs.has(p.slug) && p.tokenSymbol && !existingBurnSymbols.has(p.tokenSymbol.toUpperCase()))
         .map((p, idx) => {
           const explicitBurn = p.mechanism?.burnedAmount || 0;
           const estBurnUsd = explicitBurn > 0
@@ -852,7 +865,7 @@ export async function getLeaderboard({
       });
 
       combinedSolBurn.sort((a, b) => b.tfBurnUsd - a.tfBurnUsd);
-      items = combinedSolBurn.slice(0, numLimit).map(b => ({
+      items = dedupeByTokenSymbol(combinedSolBurn).slice(0, numLimit).map(b => ({
         name: b.name,
         slug: b.slug,
         tokenSymbol: b.tokenSymbol,
@@ -955,8 +968,9 @@ export async function getLeaderboard({
       ];
 
       const existingEthBurnSlugs = new Set(ethBurnItems.map(b => b.slug));
+      const existingEthBurnSymbols = new Set(ethBurnItems.map(b => (b.tokenSymbol || '').toUpperCase()));
       const extraEthBurn = [...ethereumProtocols]
-        .filter(p => !existingEthBurnSlugs.has(p.slug) && p.tokenSymbol)
+        .filter(p => !existingEthBurnSlugs.has(p.slug) && p.tokenSymbol && !existingEthBurnSymbols.has(p.tokenSymbol.toUpperCase()))
         .map((p, idx) => {
           const explicitBurn = p.mechanism?.burnedAmount || 0;
           const estBurnUsd = explicitBurn > 0
@@ -986,7 +1000,7 @@ export async function getLeaderboard({
       });
 
       combinedEthBurn.sort((a, b) => b.tfBurnUsd - a.tfBurnUsd);
-      items = combinedEthBurn.slice(0, numLimit).map(b => ({
+      items = dedupeByTokenSymbol(combinedEthBurn).slice(0, numLimit).map(b => ({
         name: b.name,
         slug: b.slug,
         tokenSymbol: b.tokenSymbol,
@@ -1072,7 +1086,7 @@ export async function getLeaderboard({
 
       scaledBurnList.sort((a, b) => (b.tfBurnUsd || 0) - (a.tfBurnUsd || 0));
 
-      items = scaledBurnList.slice(0, numLimit).map(b => ({
+      items = dedupeByTokenSymbol(scaledBurnList).slice(0, numLimit).map(b => ({
         name: b.name,
         slug: b.slug,
         tokenSymbol: b.tokenSymbol,
@@ -1136,7 +1150,7 @@ export async function getLeaderboard({
         })
         .sort((a, b) => b.tfMetricVal - a.tfMetricVal);
 
-      items = enriched.slice(0, numLimit).map(p => ({
+      items = dedupeByTokenSymbol(enriched).slice(0, numLimit).map(p => ({
         name: p.name,
         slug: p.slug,
         tokenSymbol: p.tokenSymbol,
@@ -1159,8 +1173,9 @@ export async function getLeaderboard({
       const protoMap = new Map(targetProtos.map(p => [p.slug, p]));
       const baseWhales = [...(targetData.whaleAnalytics || [])];
       const seenWhaleSlugs = new Set(baseWhales.map(w => w.slug));
+      const seenWhaleSymbols = new Set(baseWhales.map(w => (w.tokenSymbol || '').toUpperCase()));
       const extraWhales = [...targetProtos]
-        .filter(p => !seenWhaleSlugs.has(p.slug) && p.tokenSymbol)
+        .filter(p => !seenWhaleSlugs.has(p.slug) && p.tokenSymbol && !seenWhaleSymbols.has(p.tokenSymbol.toUpperCase()))
         .map((p, idx) => {
           const holdersCount = p.whaleRisk?.holdersCount || Math.max(8400, Math.round(28000 + ((p.mcap || 15000000) / 2200) + ((p.fees7d || 50000) / 35)));
           const top10SharePct = p.whaleRisk?.top10SharePct || Number((22.4 + (idx % 14) * 1.35).toFixed(1));
@@ -1185,7 +1200,7 @@ export async function getLeaderboard({
         return { ...w, tfMetricVal, newWallets };
       }).sort((a, b) => b.tfMetricVal - a.tfMetricVal);
 
-      items = whales.slice(0, numLimit).map(w => ({
+      items = dedupeByTokenSymbol(whales).slice(0, numLimit).map(w => ({
         name: w.protocol,
         slug: w.slug,
         tokenSymbol: w.tokenSymbol,
@@ -1231,7 +1246,7 @@ export async function getLeaderboard({
         return { ...h, tfMetricVal, newWallets };
       }).sort((a, b) => b.tfMetricVal - a.tfMetricVal);
 
-      items = enrichedGlobal.slice(0, numLimit).map(h => ({
+      items = dedupeByTokenSymbol(enrichedGlobal).slice(0, numLimit).map(h => ({
         name: h.name,
         slug: h.slug,
         tokenSymbol: h.tokenSymbol,
@@ -1287,9 +1302,10 @@ export async function getLeaderboard({
       const explicitBuybacks = [...targetProtos]
         .filter(p => (p.mechanism?.treasuryNetWorthUsd || 0) > 0);
       const seenBuybackSlugs = new Set(explicitBuybacks.map(p => p.slug));
+      const seenBuybackSymbols = new Set(explicitBuybacks.map(p => (p.tokenSymbol || '').toUpperCase()));
 
       const extraBuybacks = [...targetProtos]
-        .filter(p => !seenBuybackSlugs.has(p.slug) && p.tokenSymbol)
+        .filter(p => !seenBuybackSlugs.has(p.slug) && p.tokenSymbol && !seenBuybackSymbols.has(p.tokenSymbol.toUpperCase()))
         .map(p => {
           const rev30d = p.revenue30d || (p.revenue7d || 18000) * 4.2;
           const estTreasuryUsd = Math.max(180000, Math.round(rev30d * 3.6 + (p.mcap || 0) * 0.015));
@@ -1312,7 +1328,7 @@ export async function getLeaderboard({
         tfBuybackUsd: computeTfBuybackUsd(p.computedTreasuryUsd, p)
       })).sort((a, b) => (b.tfBuybackUsd || 0) - (a.tfBuybackUsd || 0));
 
-      items = allBuybacks.slice(0, numLimit).map(p => ({
+      items = dedupeByTokenSymbol(allBuybacks).slice(0, numLimit).map(p => ({
         name: p.name,
         slug: p.slug,
         tokenSymbol: p.tokenSymbol,
@@ -1380,7 +1396,7 @@ export async function getLeaderboard({
         return { ...b, tfBuybackUsd };
       }).sort((a, b) => (b.tfBuybackUsd || 0) - (a.tfBuybackUsd || 0));
 
-      items = enrichedBb.slice(0, numLimit).map(b => ({
+      items = dedupeByTokenSymbol(enrichedBb).slice(0, numLimit).map(b => ({
         name: b.name,
         slug: b.slug,
         tokenSymbol: b.tokenSymbol,
