@@ -117,40 +117,13 @@
         </div>
       </div>
 
-      <!-- MAIN PAGE NAVIGATION BUTTONS (4 Pages) -->
+      <!-- MAIN PAGE NAVIGATION BUTTONS -->
       <nav class="flex items-center bg-slate-900/95 p-1 rounded-2xl border border-slate-800 font-mono text-xs shadow-inner">
-        <!-- Page 1 Button: Full Table View -->
-        <button 
-          id="nav-btn-table" 
-          onclick="switchPage('table')" 
-          class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl font-bold transition-all bg-cyan-400 text-black shadow-md shadow-cyan-400/20">
-          <span>📊</span>
-          <span>Full Leaderboard</span>
-        </button>
-
-        <!-- Page 2 Button: Leaderboard Matrix (Neon View) -->
-        <button 
-          id="nav-btn-weekly" 
-          onclick="switchPage('weekly')" 
-          class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-slate-400 hover:text-white transition-all font-medium">
-          <span>⚡</span>
-          <span>Leaderboard Matrix</span>
-        </button>
-
-        <!-- Page 3 Button: Weekly Yield / MC % Alpha View -->
-        <button 
-          id="nav-btn-yield" 
-          onclick="switchPage('yield')" 
-          class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-slate-400 hover:text-white transition-all font-medium">
-          <span>💎</span>
-          <span>Yield / MC %</span>
-        </button>
-
         <!-- Page 4 Button: Blockchains & Smart Contracts Directory -->
         <button 
           id="nav-btn-contracts" 
           onclick="switchPage('contracts')" 
-          class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-slate-400 hover:text-white transition-all font-medium">
+          class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl font-bold transition-all bg-cyan-400 text-black shadow-md shadow-cyan-400/20">
           <span>⛓️</span>
           <span>Chains & Contracts</span>
         </button>
@@ -266,9 +239,9 @@
     </div>
 
     <!-- ============================================================== -->
-    <!-- PAGE 1: FULL LEADERBOARD TABLE (Image 1 - media_1790292957687) -->
+    <!-- PAGE 1: FULL LEADERBOARD TABLE (Hidden) -->
     <!-- ============================================================== -->
-    <section id="page-table" class="space-y-4">
+    <section id="page-table" class="space-y-4 hidden">
       
       <!-- Popular Chains Pills -->
       <div class="card-terminal rounded-2xl p-3.5 space-y-2">
@@ -3739,7 +3712,7 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
   </div>
 
   <script>
-    let activePage = 'table'; // 'table', 'weekly', 'yield', 'contracts'
+    let activePage = 'contracts';
     let allProtocols = [];
     let initialStats = null;
     let currentModalContract = '';
@@ -3802,6 +3775,7 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
 
     // ================= PAGE SWITCHING LOGIC ================= //
     function switchPage(page) {
+      if (['table', 'weekly', 'yield'].includes(page)) page = 'contracts';
       activePage = page;
       window.location.hash = page;
 
@@ -3809,7 +3783,11 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
       ['table', 'weekly', 'yield', 'contracts', 'sui', 'schema', 'solana', 'solana-schema', 'ethereum', 'bybit', 'monad'].forEach(p => {
         const btn = document.getElementById(`nav-btn-${p}`);
         const sec = document.getElementById(`page-${p}`);
-        if (!btn || !sec) return;
+        if (sec) {
+          if (p === page) sec.classList.remove('hidden');
+          else sec.classList.add('hidden');
+        }
+        if (!btn) return;
         if (p === page) {
           btn.className = p === 'bybit'
             ? 'flex items-center gap-1.5 px-3 py-1.5 rounded-xl font-bold transition-all bg-cyan-500/20 text-cyan-300 border border-cyan-500/50 shadow-md shadow-cyan-400/20'
@@ -3818,18 +3796,13 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
             : p === 'monad'
             ? 'flex items-center gap-1.5 px-3 py-1.5 rounded-xl font-bold transition-all bg-purple-600 text-white shadow-md shadow-purple-600/30'
             : 'flex items-center gap-1.5 px-3 py-1.5 rounded-xl font-bold transition-all bg-cyan-400 text-black shadow-md shadow-cyan-400/20';
-          sec.classList.remove('hidden');
         } else {
           btn.className = 'flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-slate-400 hover:text-white transition-all font-medium';
-          sec.classList.add('hidden');
         }
       });
 
       // Render the active view
-      if (page === 'table') renderTablePage();
-      else if (page === 'weekly') renderWeeklyPage();
-      else if (page === 'yield') renderYieldPage();
-      else if (page === 'contracts') loadContractsData();
+      if (page === 'contracts') loadContractsData();
       else if (page === 'sui') loadSuiData();
       else if (page === 'schema') renderSchemaPage();
       else if (page === 'solana') loadSolanaData();
@@ -3868,14 +3841,12 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
 
         // Check hash or keep activePage
         const hash = window.location.hash.replace('#', '');
-        const targetPage = ['table', 'weekly', 'yield', 'contracts', 'sui', 'schema', 'solana', 'solana-schema', 'ethereum', 'bybit', 'monad'].includes(hash)
+        const validPages = ['contracts', 'sui', 'schema', 'solana', 'solana-schema', 'ethereum', 'bybit', 'monad'];
+        const targetPage = validPages.includes(hash)
           ? hash
-          : (typeof activePage === 'string' && activePage ? activePage : 'table');
+          : (validPages.includes(activePage) ? activePage : 'contracts');
         if (!force) {
           switchPage(targetPage);
-        } else {
-          if (targetPage === 'table') renderTablePage();
-          else if (targetPage === 'yield') renderYieldPage();
         }
       } catch (err) {
         console.error('Failed to load data:', err);
