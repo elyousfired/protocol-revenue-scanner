@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1790416309761,
+  "updatedAt": 1790784643383,
   "protocols": {
     "marginfi-lst": {
       "hasToken": false,
@@ -7,7 +7,7 @@
     },
     "maestro": {
       "hasToken": false,
-      "checkedAt": 1790416309761
+      "checkedAt": 1790783834806
     },
     "crypto.com-liquid-staking": {
       "hasToken": false,
@@ -658,6 +658,182 @@
     "copyfomo": {
       "hasToken": false,
       "checkedAt": 1790377541329
+    },
+    "defi-saver-asset-management": {
+      "hasToken": false,
+      "checkedAt": 1790783834806
+    },
+    "ensuro": {
+      "hasToken": false,
+      "checkedAt": 1790783834806
+    },
+    "bancor-v2.1": {
+      "hasToken": true,
+      "slug": "bancor-v2.1",
+      "name": "Bancor V2.1",
+      "symbol": "BNT",
+      "chain": "ethereum",
+      "addressChain": "ethereum",
+      "contractAddress": "0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c",
+      "geckoId": null,
+      "mcap": 34470664,
+      "priceUsd": 0.3471,
+      "liquidityUsd": 1814.52,
+      "decimals": 18,
+      "initialSupply": 100000000,
+      "currentSupply": 99304566,
+      "burnedTokens": 695434,
+      "burnedPctOfMax": 0.7,
+      "hasBuyback": false,
+      "hasBurn": true,
+      "cumulativeHoldersRevUsd": 0,
+      "checkedAt": 1790783834806
+    },
+    "matrixdock-stbt": {
+      "hasToken": false,
+      "checkedAt": 1790783834806
+    },
+    "shibaswap-v1": {
+      "hasToken": true,
+      "slug": "shibaswap-v1",
+      "name": "ShibaSwap V1",
+      "symbol": "BONE",
+      "chain": "ethereum",
+      "addressChain": "ethereum",
+      "contractAddress": "0x9813037ee2218799597d83d4a5b6f3b6778218d9",
+      "geckoId": null,
+      "mcap": 13168096,
+      "priceUsd": 0.05267,
+      "liquidityUsd": 1374591.57,
+      "decimals": 18,
+      "initialSupply": 250000000,
+      "currentSupply": 249987646,
+      "burnedTokens": 12354,
+      "burnedPctOfMax": 0,
+      "hasBuyback": false,
+      "hasBurn": true,
+      "cumulativeHoldersRevUsd": 0,
+      "checkedAt": 1790783834806
+    },
+    "binance-staked-eth": {
+      "hasToken": false,
+      "checkedAt": 1790783834806
+    },
+    "liquid-collective": {
+      "hasToken": false,
+      "checkedAt": 1790783834806
+    },
+    "nodedao": {
+      "hasToken": false,
+      "checkedAt": 1790783834806
+    },
+    "coinbase-wrapped-staked-eth": {
+      "hasToken": false,
+      "checkedAt": 1790783834806
+    },
+    "ring-swap": {
+      "hasToken": false,
+      "checkedAt": 1790783834806
+    },
+    "mellow-restaking": {
+      "hasToken": false,
+      "checkedAt": 1790783834806
+    },
+    "wildcat-protocol": {
+      "hasToken": false,
+      "checkedAt": 1790783834806
+    },
+    "zircuit-staking": {
+      "hasToken": false,
+      "checkedAt": 1790783834806
+    },
+    "invesco-ustb": {
+      "hasToken": false,
+      "checkedAt": 1790783834806
+    },
+    "spiko": {
+      "hasToken": false,
+      "checkedAt": 1790783834806
+    },
+    "symbiotic": {
+      "hasToken": false,
+      "checkedAt": 1790783834806
+    },
+    "midas-rwa": {
+      "hasToken": false,
+      "checkedAt": 1790783834806
+    },
+    "capyfi": {
+      "hasToken": false,
+      "checkedAt": 1790784643383
+    },
+    "arrakis-modular": {
+      "hasToken": false,
+      "checkedAt": 1790784643383
+    },
+    "okx-swap": {
+      "hasToken": false,
+      "checkedAt": 1790784643383
+    },
+    "fusion-by-ipor": {
+      "hasToken": false,
+      "checkedAt": 1790784643383
+    },
+    "plume-vaults": {
+      "hasToken": false,
+      "checkedAt": 1790784643383
+    },
+    "upshift": {
+      "hasToken": false,
+      "checkedAt": 1790784643383
+    },
+    "base-app": {
+      "hasToken": false,
+      "checkedAt": 1790784643383
+    },
+    "lagoon": {
+      "hasToken": false,
+      "checkedAt": 1790784643383
+    },
+    "mantle-restaking": {
+      "hasToken": false,
+      "checkedAt": 1790784643383
+    },
+    "gondi-v3": {
+      "hasToken": false,
+      "checkedAt": 1790784643383
+    },
+    "flashbots": {
+      "hasToken": false,
+      "checkedAt": 1790784643383
+    },
+    "veda": {
+      "hasToken": false,
+      "checkedAt": 1790784643383
+    },
+    "rabby-wallet": {
+      "hasToken": false,
+      "checkedAt": 1790784643383
+    },
+    "noon": {
+      "hasToken": false,
+      "checkedAt": 1790784643383
+    },
+    "concrete": {
+      "hasToken": false,
+      "checkedAt": 1790784643383
+    },
+    "clearstar": {
+      "hasToken": false,
+      "checkedAt": 1790784643383
+    },
+    "li.fi-bridge-aggregator": {
+      "hasToken": false,
+      "checkedAt": 1790784643383
+    },
+    "aegis-yusd": {
+      "hasToken": false,
+      "checkedAt": 1790784643383
     }
   }
 }

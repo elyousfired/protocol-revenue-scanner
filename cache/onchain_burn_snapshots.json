@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1790416341643,
+  "updatedAt": 1790784917552,
   "chains": {
     "solana": {
       "JUP": {
@@ -461,6 +461,11 @@
             "timestamp": 1790416327745,
             "currentSupply": 9965231046,
             "burnedTokens": 34768954
+          },
+          {
+            "timestamp": 1790784917489,
+            "currentSupply": 9965295568,
+            "burnedTokens": 34704432
           }
         ]
       },
@@ -482,6 +487,11 @@
           },
           {
             "timestamp": 1790416327748,
+            "currentSupply": 9815000000,
+            "burnedTokens": 185000000
+          },
+          {
+            "timestamp": 1790784917524,
             "currentSupply": 9815000000,
             "burnedTokens": 185000000
           }
@@ -507,6 +517,387 @@
             "timestamp": 1790416327749,
             "currentSupply": 10827068,
             "burnedTokens": 1
+          },
+          {
+            "timestamp": 1790784917552,
+            "currentSupply": 10827068,
+            "burnedTokens": 1
+          }
+        ]
+      }
+    },
+    "ethereum": {
+      "ETH": {
+        "symbol": "ETH",
+        "initialSupply": 125045000,
+        "firstSeenAt": 1790783837890,
+        "snapshots": [
+          {
+            "timestamp": 1790783837890,
+            "currentSupply": 120520200,
+            "burnedTokens": 4524800
+          },
+          {
+            "timestamp": 1790784644712,
+            "currentSupply": 120520200,
+            "burnedTokens": 4524800
+          }
+        ]
+      },
+      "AAVE": {
+        "symbol": "AAVE",
+        "initialSupply": 16000000,
+        "firstSeenAt": 1790783837890,
+        "snapshots": [
+          {
+            "timestamp": 1790783837890,
+            "currentSupply": 14240000,
+            "burnedTokens": 1760000
+          },
+          {
+            "timestamp": 1790784644712,
+            "currentSupply": 14240000,
+            "burnedTokens": 1760000
+          }
+        ]
+      },
+      "SKY": {
+        "symbol": "SKY",
+        "initialSupply": 1005577,
+        "firstSeenAt": 1790783837890,
+        "snapshots": [
+          {
+            "timestamp": 1790783837890,
+            "currentSupply": 30201,
+            "burnedTokens": 975376
+          },
+          {
+            "timestamp": 1790784644712,
+            "currentSupply": 30201,
+            "burnedTokens": 975376
+          }
+        ]
+      },
+      "UNI": {
+        "symbol": "UNI",
+        "initialSupply": 1000000000,
+        "firstSeenAt": 1790783837890,
+        "snapshots": [
+          {
+            "timestamp": 1790783837890,
+            "currentSupply": 887224419,
+            "burnedTokens": 112775581
+          },
+          {
+            "timestamp": 1790784644712,
+            "currentSupply": 887224419,
+            "burnedTokens": 112775581
+          }
+        ]
+      },
+      "ENA": {
+        "symbol": "ENA",
+        "initialSupply": 15000000000,
+        "firstSeenAt": 1790783837890,
+        "snapshots": [
+          {
+            "timestamp": 1790783837890,
+            "currentSupply": 14964800000,
+            "burnedTokens": 35200000
+          },
+          {
+            "timestamp": 1790784644712,
+            "currentSupply": 14964800000,
+            "burnedTokens": 35200000
+          }
+        ]
+      },
+      "LDO": {
+        "symbol": "LDO",
+        "initialSupply": 1000000000,
+        "firstSeenAt": 1790783837890,
+        "snapshots": [
+          {
+            "timestamp": 1790783837890,
+            "currentSupply": 997600000,
+            "burnedTokens": 2400000
+          },
+          {
+            "timestamp": 1790784644712,
+            "currentSupply": 997600000,
+            "burnedTokens": 2400000
+          }
+        ]
+      },
+      "PENDLE": {
+        "symbol": "PENDLE",
+        "initialSupply": 281527448,
+        "firstSeenAt": 1790783837890,
+        "snapshots": [
+          {
+            "timestamp": 1790783837890,
+            "currentSupply": 258446028,
+            "burnedTokens": 23081420
+          },
+          {
+            "timestamp": 1790784644712,
+            "currentSupply": 258446028,
+            "burnedTokens": 23081420
+          }
+        ]
+      },
+      "CRV": {
+        "symbol": "CRV",
+        "initialSupply": 3030303031,
+        "firstSeenAt": 1790783837890,
+        "snapshots": [
+          {
+            "timestamp": 1790783837890,
+            "currentSupply": 2215400000,
+            "burnedTokens": 814903031
+          },
+          {
+            "timestamp": 1790784644712,
+            "currentSupply": 2215400000,
+            "burnedTokens": 814903031
+          }
+        ]
+      },
+      "MORPHO": {
+        "symbol": "MORPHO",
+        "initialSupply": 1000000000,
+        "firstSeenAt": 1790783837890,
+        "snapshots": [
+          {
+            "timestamp": 1790783837890,
+            "currentSupply": 999840000,
+            "burnedTokens": 160000
+          },
+          {
+            "timestamp": 1790784644712,
+            "currentSupply": 999840000,
+            "burnedTokens": 160000
+          }
+        ]
+      },
+      "ETHFI": {
+        "symbol": "ETHFI",
+        "initialSupply": 1000000000,
+        "firstSeenAt": 1790783837890,
+        "snapshots": [
+          {
+            "timestamp": 1790783837890,
+            "currentSupply": 968400000,
+            "burnedTokens": 31600000
+          },
+          {
+            "timestamp": 1790784644712,
+            "currentSupply": 968400000,
+            "burnedTokens": 31600000
+          }
+        ]
+      },
+      "EIGEN": {
+        "symbol": "EIGEN",
+        "initialSupply": 1673646668,
+        "firstSeenAt": 1790783837890,
+        "snapshots": [
+          {
+            "timestamp": 1790783837890,
+            "currentSupply": 1673646668,
+            "burnedTokens": 0
+          },
+          {
+            "timestamp": 1790784644712,
+            "currentSupply": 1673646668,
+            "burnedTokens": 0
+          }
+        ]
+      },
+      "LINK": {
+        "symbol": "LINK",
+        "initialSupply": 1000000000,
+        "firstSeenAt": 1790783837890,
+        "snapshots": [
+          {
+            "timestamp": 1790783837890,
+            "currentSupply": 999980000,
+            "burnedTokens": 20000
+          },
+          {
+            "timestamp": 1790784644712,
+            "currentSupply": 999980000,
+            "burnedTokens": 20000
+          }
+        ]
+      },
+      "ENS": {
+        "symbol": "ENS",
+        "initialSupply": 100000000,
+        "firstSeenAt": 1790783837890,
+        "snapshots": [
+          {
+            "timestamp": 1790783837890,
+            "currentSupply": 99985000,
+            "burnedTokens": 15000
+          },
+          {
+            "timestamp": 1790784644712,
+            "currentSupply": 99985000,
+            "burnedTokens": 15000
+          }
+        ]
+      },
+      "SNX": {
+        "symbol": "SNX",
+        "initialSupply": 328193104,
+        "firstSeenAt": 1790783837890,
+        "snapshots": [
+          {
+            "timestamp": 1790783837890,
+            "currentSupply": 311993104,
+            "burnedTokens": 16200000
+          },
+          {
+            "timestamp": 1790784644712,
+            "currentSupply": 311993104,
+            "burnedTokens": 16200000
+          }
+        ]
+      },
+      "CVX": {
+        "symbol": "CVX",
+        "initialSupply": 100000000,
+        "firstSeenAt": 1790783837890,
+        "snapshots": [
+          {
+            "timestamp": 1790783837890,
+            "currentSupply": 99360000,
+            "burnedTokens": 640000
+          },
+          {
+            "timestamp": 1790784644712,
+            "currentSupply": 99360000,
+            "burnedTokens": 640000
+          }
+        ]
+      },
+      "FXS": {
+        "symbol": "FXS",
+        "initialSupply": 100000000,
+        "firstSeenAt": 1790783837890,
+        "snapshots": [
+          {
+            "timestamp": 1790783837890,
+            "currentSupply": 75300000,
+            "burnedTokens": 24700000
+          },
+          {
+            "timestamp": 1790784644712,
+            "currentSupply": 75300000,
+            "burnedTokens": 24700000
+          }
+        ]
+      },
+      "COW": {
+        "symbol": "COW",
+        "initialSupply": 1000000000,
+        "firstSeenAt": 1790783837890,
+        "snapshots": [
+          {
+            "timestamp": 1790783837890,
+            "currentSupply": 982800000,
+            "burnedTokens": 17200000
+          },
+          {
+            "timestamp": 1790784644712,
+            "currentSupply": 982800000,
+            "burnedTokens": 17200000
+          }
+        ]
+      },
+      "BANANA": {
+        "symbol": "BANANA",
+        "initialSupply": 10000000,
+        "firstSeenAt": 1790783837890,
+        "snapshots": [
+          {
+            "timestamp": 1790783837890,
+            "currentSupply": 8402893,
+            "burnedTokens": 1597107
+          },
+          {
+            "timestamp": 1790784644712,
+            "currentSupply": 8402893,
+            "burnedTokens": 1597107
+          }
+        ]
+      },
+      "SHIB": {
+        "symbol": "SHIB",
+        "initialSupply": 1000000000000000,
+        "firstSeenAt": 1790783837890,
+        "snapshots": [
+          {
+            "timestamp": 1790783837890,
+            "currentSupply": 589255000000000,
+            "burnedTokens": 410745000000000
+          },
+          {
+            "timestamp": 1790784644712,
+            "currentSupply": 589255000000000,
+            "burnedTokens": 410745000000000
+          }
+        ]
+      },
+      "PEPE": {
+        "symbol": "PEPE",
+        "initialSupply": 420690000000000,
+        "firstSeenAt": 1790783837890,
+        "snapshots": [
+          {
+            "timestamp": 1790783837890,
+            "currentSupply": 413772000000000,
+            "burnedTokens": 6918000000000
+          },
+          {
+            "timestamp": 1790784644712,
+            "currentSupply": 413772000000000,
+            "burnedTokens": 6918000000000
+          }
+        ]
+      },
+      "BNT": {
+        "symbol": "BNT",
+        "initialSupply": 100000000,
+        "firstSeenAt": 1790783837890,
+        "snapshots": [
+          {
+            "timestamp": 1790783837890,
+            "currentSupply": 99304566,
+            "burnedTokens": 695434
+          },
+          {
+            "timestamp": 1790784644712,
+            "currentSupply": 99304566,
+            "burnedTokens": 695434
+          }
+        ]
+      },
+      "BONE": {
+        "symbol": "BONE",
+        "initialSupply": 250000000,
+        "firstSeenAt": 1790783837890,
+        "snapshots": [
+          {
+            "timestamp": 1790783837890,
+            "currentSupply": 249987646,
+            "burnedTokens": 12354
+          },
+          {
+            "timestamp": 1790784644712,
+            "currentSupply": 249987646,
+            "burnedTokens": 12354
           }
         ]
       }

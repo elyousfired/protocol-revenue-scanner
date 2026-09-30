@@ -11,6 +11,7 @@ const DISCOVERY_TTL_MS = 30 * 60 * 1000; // 30 minutes metadata cache
 
 const SOLANA_RPC = 'https://api.mainnet-beta.solana.com';
 const SUI_RPC = 'https://mainnet.sui.rpcpool.com';
+const ETH_RPC = 'https://ethereum-rpc.publicnode.com';
 
 // Canonical token max-supply caps used across SPL & Sui Move standards when mint authority is capped/revoked
 const CANONICAL_CAPS = [
@@ -132,6 +133,55 @@ export async function querySuiCoinSupply(coinType) {
 }
 
 /**
+ * Queries live Ethereum Mainnet JSON-RPC for an ERC-20 token's totalSupply, decimals, and dead-wallet burned balances
+ */
+export async function queryEthereumErc20Supply(contractAddress) {
+  if (!contractAddress || !contractAddress.startsWith('0x') || contractAddress.length !== 42) return null;
+  try {
+    const batch = [
+      { jsonrpc: '2.0', id: 1, method: 'eth_call', params: [{ to: contractAddress, data: '0x18160ddd' }, 'latest'] }, // totalSupply()
+      { jsonrpc: '2.0', id: 2, method: 'eth_call', params: [{ to: contractAddress, data: '0x313ce567' }, 'latest'] }, // decimals()
+      { jsonrpc: '2.0', id: 3, method: 'eth_call', params: [{ to: contractAddress, data: '0x70a08231000000000000000000000000000000000000000000000000000000000000dead' }, 'latest'] }, // balanceOf(0x...dead)
+      { jsonrpc: '2.0', id: 4, method: 'eth_call', params: [{ to: contractAddress, data: '0x70a082310000000000000000000000000000000000000000000000000000000000000000' }, 'latest'] }  // balanceOf(0x...0000)
+    ];
+    const res = await fetch(ETH_RPC, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(batch),
+      signal: AbortSignal.timeout(6000)
+    });
+    if (!res.ok) return null;
+    const json = await res.json();
+    if (!Array.isArray(json)) return null;
+
+    const byId = new Map(json.map(item => [item.id, item.result]));
+    const rawSupplyHex = byId.get(1);
+    if (!rawSupplyHex || rawSupplyHex === '0x') return null;
+
+    const rawDecHex = byId.get(2);
+    const decimals = (rawDecHex && rawDecHex !== '0x') ? Math.min(36, Math.max(0, Number(BigInt(rawDecHex)))) : 18;
+    const divisor = Math.pow(10, decimals);
+
+    const totalSupplyTokens = Number(BigInt(rawSupplyHex)) / divisor;
+    const dead1Hex = byId.get(3);
+    const dead2Hex = byId.get(4);
+    const dead1 = (dead1Hex && dead1Hex !== '0x') ? Number(BigInt(dead1Hex)) / divisor : 0;
+    const dead2 = (dead2Hex && dead2Hex !== '0x') ? Number(BigInt(dead2Hex)) / divisor : 0;
+    const deadBurned = dead1 + dead2;
+    const effectiveSupply = Math.max(0, totalSupplyTokens - deadBurned);
+
+    return {
+      currentSupply: effectiveSupply,
+      rawTotalSupply: totalSupplyTokens,
+      deadWalletBurned: deadBurned,
+      decimals
+    };
+  } catch {
+    return null;
+  }
+}
+
+/**
  * Queries DexScreener for live market cap, FDV, price, and liquidity verification
  */
 async function queryDexScreenerToken(address, expectedChain = '') {
@@ -170,7 +220,7 @@ async function queryDexScreenerToken(address, expectedChain = '') {
 
 /**
  * Auto-discovers token metadata, live on-chain supply/burn, and buyback status for unknown protocols
- * across Solana and Sui without touching already-verified core protocols.
+ * across Solana, Sui, and Ethereum without touching already-verified core protocols.
  */
 export async function autoDiscoverProtocolTokens(candidateSlugs = [], targetChain = 'solana', knownSlugsSet = new Set()) {
   let cache = { updatedAt: 0, protocols: {} };
@@ -226,7 +276,7 @@ export async function autoDiscoverProtocolTokens(candidateSlugs = [], targetChai
             let rawAddr = (feeSummary.address || '').trim();
             const geckoId = feeSummary.gecko_id || null;
 
-            // Clean chain prefix from address (e.g., "solana:Mint..." or "sui:0x...::mod::COIN")
+            // Clean chain prefix from address (e.g., "solana:Mint..." or "sui:0x...::mod::COIN" or "ethereum:0x...")
             let addressChain = targetChain;
             let cleanAddress = rawAddr;
             if (rawAddr.includes(':')) {
@@ -265,12 +315,12 @@ export async function autoDiscoverProtocolTokens(candidateSlugs = [], targetChai
               return;
             }
 
-            // 3. Query Live On-Chain Supply & Burn (Solana RPC or Sui RPC)
+            // 3. Query Live On-Chain Supply & Burn (Solana RPC, Sui RPC, or Ethereum RPC)
             let currentSupply = 0;
             let initialSupply = 0;
             let burnedTokens = 0;
             let burnedPctOfMax = 0;
-            let decimals = targetChain === 'sui' ? 9 : 6;
+            let decimals = targetChain === 'ethereum' ? 18 : (targetChain === 'sui' ? 9 : 6);
 
             if (targetChain === 'solana' && cleanAddress && !cleanAddress.startsWith('0x')) {
               const solSupply = await querySolanaMintSupply(cleanAddress);
@@ -288,6 +338,18 @@ export async function autoDiscoverProtocolTokens(candidateSlugs = [], targetChai
                 decimals = suiSupply.decimals;
                 initialSupply = inferInitialSupplyFromCurrent(currentSupply, dexInfo?.fdv, dexInfo?.priceUsd);
                 burnedTokens = Math.max(0, Math.round(initialSupply - currentSupply));
+                burnedPctOfMax = initialSupply > 0 ? Math.round((burnedTokens / initialSupply) * 10000) / 100 : 0;
+              }
+            } else if (targetChain === 'ethereum' && cleanAddress && cleanAddress.startsWith('0x') && cleanAddress.length === 42) {
+              const ethSupply = await queryEthereumErc20Supply(cleanAddress);
+              if (ethSupply && ethSupply.currentSupply > 0) {
+                currentSupply = ethSupply.currentSupply;
+                decimals = ethSupply.decimals;
+                initialSupply = Math.max(
+                  ethSupply.rawTotalSupply || currentSupply,
+                  inferInitialSupplyFromCurrent(ethSupply.rawTotalSupply || currentSupply, dexInfo?.fdv, dexInfo?.priceUsd)
+                );
+                burnedTokens = Math.max(0, Math.round((initialSupply - currentSupply)));
                 burnedPctOfMax = initialSupply > 0 ? Math.round((burnedTokens / initialSupply) * 10000) / 100 : 0;
               }
             }

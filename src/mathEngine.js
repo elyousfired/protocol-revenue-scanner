@@ -220,3 +220,37 @@ export function calculateDepinBmeEquilibrium(burnedUsd, emittedUsd) {
   return { bmeRatio, netBurnUsd, regime };
 }
 
+/**
+ * Calculates Ethereum L1 Real Economic Value (REV) vector (EIP-1559 Burn + Priority Fees + MEV-Boost + EIP-4844 Blobs)
+ * @param {number} totalL1ChainFeesUsd - L1 total execution + blob fees
+ * @param {number} l1BurnedRevenueUsd - Verified EIP-1559 base + blob fee burn in USD
+ * @param {number} mevBoostTipsUsd - MEV-Boost / Flashbots proposer block rewards in USD
+ * @returns {object} Mathematical Ethereum REV decomposition
+ */
+export function calculateEthereumREV(totalL1ChainFeesUsd, l1BurnedRevenueUsd, mevBoostTipsUsd) {
+  const safeChainFees = Math.max(0, totalL1ChainFeesUsd || 0);
+  const eip1559BurnUsd = Math.max(0, l1BurnedRevenueUsd || safeChainFees * 0.78);
+  const priorityFeesValidatorUsd = Math.max(0, safeChainFees - eip1559BurnUsd);
+  const blobFeesUsd = Math.round(eip1559BurnUsd * 0.085); // L2 EIP-4844 Blob DA burn share
+  const safeMevTips = Math.max(0, mevBoostTipsUsd || safeChainFees * 0.24);
+
+  const totalRevUsd = eip1559BurnUsd + priorityFeesValidatorUsd + safeMevTips;
+  const denom = totalRevUsd > 0 ? totalRevUsd : 1;
+
+  return {
+    totalRevUsd: Math.round(totalRevUsd),
+    eip1559BurnUsd: Math.round(eip1559BurnUsd),
+    priorityFeesValidatorUsd: Math.round(priorityFeesValidatorUsd),
+    mevBoostTipsUsd: Math.round(safeMevTips),
+    blobFeesUsd: Math.round(blobFeesUsd),
+    totalValidatorAndLstRealYieldUsd: Math.round(priorityFeesValidatorUsd + safeMevTips),
+    shares: {
+      burnPct: Math.round((eip1559BurnUsd / denom) * 1000) / 10,
+      priorityPct: Math.round((priorityFeesValidatorUsd / denom) * 1000) / 10,
+      mevPct: Math.round((safeMevTips / denom) * 1000) / 10,
+      blobPct: Math.round((blobFeesUsd / denom) * 1000) / 10
+    }
+  };
+}
+
+

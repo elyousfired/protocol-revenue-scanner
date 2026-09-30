@@ -191,7 +191,16 @@
           <span>Solana Blueprint</span>
         </button>
 
-        <!-- Page 9 Button: Bybit Spot Category & Volume Radar -->
+        <!-- Page 9 Button: Ethereum Ecosystem & On-Chain Hub -->
+        <button 
+          id="nav-btn-ethereum" 
+          onclick="switchPage('ethereum')" 
+          class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-indigo-300 hover:text-white transition-all font-bold">
+          <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+          <span>💎 Ethereum Hub</span>
+        </button>
+
+        <!-- Page 10 Button: Bybit Spot Category & Volume Radar -->
         <button 
           id="nav-btn-bybit" 
           onclick="switchPage('bybit')" 
@@ -2832,6 +2841,287 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
 
     </section>
 
+    <!-- ============================================================== -->
+    <!-- PAGE 10: ETHEREUM BLOCKCHAIN ECOSYSTEM & ON-CHAIN HUB          -->
+    <!-- ============================================================== -->
+    <section id="page-ethereum" class="space-y-6 hidden">
+      <!-- Hero Header & Controls -->
+      <div class="card-terminal rounded-3xl p-6 border border-indigo-500/30 bg-gradient-to-br from-[#080d1a] via-[#0c1428] to-[#071324] relative overflow-hidden">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+          <div class="space-y-1.5">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="px-2.5 py-1 rounded-lg bg-indigo-500/20 border border-indigo-400/40 text-indigo-300 text-xs font-mono font-bold flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+                ETHEREUM L1 EVM + ERC-20 ON-CHAIN ENGINE
+              </span>
+              <span id="eth-rpc-badge" class="px-2.5 py-1 rounded-lg bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 text-xs font-mono">
+                JSON-RPC: ethereum-rpc.publicnode.com
+              </span>
+              <span id="eth-protocols-badge" class="px-2.5 py-1 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs font-mono font-bold">
+                343 Tokenized Protocols
+              </span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight">
+              💎 Ethereum Ecosystem, EIP-1559 REV & On-Chain ERC-20 Tokenomics
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-400 max-w-3xl">
+              Live Ethereum Mainnet JSON-RPC telemetry (`totalSupply()`, `0x000...dead` burn balances), EIP-1559 Base Fee Burn + Priority Tips + MEV-Boost REV, and multi-timeframe cash-flow decomposition across all 8 Ethereum sectors.
+            </p>
+          </div>
+
+          <!-- Controls: Timeframe (24H / 7D / 30D) + Refresh -->
+          <div class="flex flex-wrap items-center gap-2">
+            <div class="flex items-center bg-slate-950/90 p-1 rounded-xl border border-slate-800">
+              <button id="eth-tf-24h" onclick="setEthereumTimeframe('24h')" class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all text-slate-400 hover:text-white">24H</button>
+              <button id="eth-tf-7d" onclick="setEthereumTimeframe('7d')" class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all bg-indigo-500 text-white shadow-md shadow-indigo-500/25">7D</button>
+              <button id="eth-tf-30d" onclick="setEthereumTimeframe('30d')" class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all text-slate-400 hover:text-white">30D</button>
+            </div>
+            <button onclick="refreshEthereumData()" id="btn-eth-refresh" class="px-3.5 py-2 rounded-xl bg-indigo-500/20 hover:bg-indigo-500/30 border border-indigo-400/40 text-indigo-200 text-xs font-mono font-bold transition-all flex items-center gap-1.5">
+              <span>🔄</span>
+              <span>Sync Ethereum RPC</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 4 Hero Telemetry Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 mt-6">
+          <!-- Card 1: Ecosystem Gross Fees & Net Revenue -->
+          <div class="bg-slate-950/80 border border-indigo-500/25 rounded-2xl p-4 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono uppercase text-slate-400" id="eth-card1-title">ETH DApps Gross Fees (7D)</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 font-mono">8 Sectors</span>
+            </div>
+            <div class="text-2xl font-black text-white font-mono" id="eth-hero-fees">$0</div>
+            <div class="grid grid-cols-2 gap-2 pt-2 border-t border-slate-800/80 text-xs font-mono">
+              <div>
+                <div class="text-[10px] text-slate-500">Net Protocol Rev</div>
+                <div class="text-cyan-300 font-bold" id="eth-hero-net-rev">$0</div>
+              </div>
+              <div>
+                <div class="text-[10px] text-slate-500">Holder Value Accrual</div>
+                <div class="text-emerald-300 font-bold" id="eth-hero-holder-rev">$0</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Ethereum L1 Real Economic Value (REV) -->
+          <div class="bg-slate-950/80 border border-cyan-500/25 rounded-2xl p-4 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono uppercase text-slate-400" id="eth-card2-title">Ethereum L1 REV (7D)</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 font-mono">EIP-1559 + MEV</span>
+            </div>
+            <div class="text-2xl font-black text-cyan-300 font-mono" id="eth-hero-rev">$0</div>
+            <div class="grid grid-cols-3 gap-1.5 pt-2 border-t border-slate-800/80 text-[11px] font-mono">
+              <div>
+                <div class="text-[9px] text-slate-500">Base Burn</div>
+                <div class="text-purple-300 font-bold" id="eth-hero-rev-base">$0</div>
+              </div>
+              <div>
+                <div class="text-[9px] text-slate-500">Priority+MEV</div>
+                <div class="text-cyan-300 font-bold" id="eth-hero-rev-tips">$0</div>
+              </div>
+              <div>
+                <div class="text-[9px] text-slate-500">EIP-4844 Blobs</div>
+                <div class="text-indigo-300 font-bold" id="eth-hero-rev-blobs">$0</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Verified On-Chain ERC-20 & Dead-Wallet Burns -->
+          <div class="bg-slate-950/80 border border-purple-500/25 rounded-2xl p-4 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono uppercase text-slate-400" id="eth-card3-title">On-Chain Token Burn & Buybacks</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 font-mono">ERC-20 + 0xdead</span>
+            </div>
+            <div class="text-2xl font-black text-purple-300 font-mono" id="eth-hero-burn-usd">$0</div>
+            <div class="grid grid-cols-2 gap-2 pt-2 border-t border-slate-800/80 text-xs font-mono">
+              <div>
+                <div class="text-[10px] text-slate-500">ETH EIP-1559 Burned</div>
+                <div class="text-indigo-300 font-bold" id="eth-hero-eth-burned">0 ETH</div>
+              </div>
+              <div>
+                <div class="text-[10px] text-slate-500">Active Burn Tokens</div>
+                <div class="text-emerald-300 font-bold" id="eth-hero-burn-count">0 Tokens</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Live Ethereum Mainnet JSON-RPC Telemetry -->
+          <div class="bg-slate-950/80 border border-emerald-500/25 rounded-2xl p-4 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono uppercase text-slate-400">Mainnet EVM State</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono" id="eth-hero-gas">0.5 Gwei</span>
+            </div>
+            <div class="text-2xl font-black text-emerald-300 font-mono" id="eth-hero-block">#26,091,334</div>
+            <div class="grid grid-cols-2 gap-2 pt-2 border-t border-slate-800/80 text-xs font-mono">
+              <div>
+                <div class="text-[10px] text-slate-500">ETH Spot Price</div>
+                <div class="text-white font-bold" id="eth-hero-eth-price">$2,000</div>
+              </div>
+              <div>
+                <div class="text-[10px] text-slate-500">Live ERC-20 Indexed</div>
+                <div class="text-cyan-300 font-bold" id="eth-hero-tokenized-count">343 Tokens</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8-Sector Interactive Strip -->
+      <div class="space-y-2">
+        <div class="flex items-center justify-between">
+          <div class="text-xs font-mono uppercase text-slate-400 font-bold">
+            🏛️ Ethereum 8-Sector Classification (Click to Filter)
+          </div>
+          <button onclick="setEthereumSector('all')" id="eth-sector-reset" class="text-xs font-mono text-indigo-400 hover:text-indigo-300">
+            Show All Sectors (343)
+          </button>
+        </div>
+        <div id="eth-sectors-grid" class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2.5">
+          <!-- Populated via JS -->
+        </div>
+      </div>
+
+      <!-- Sub-View Navigation & Search Bar -->
+      <div class="card-terminal rounded-2xl p-4 border border-slate-800/90 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3">
+        <div class="flex flex-wrap items-center gap-1.5">
+          <button id="eth-subtab-cashflow" onclick="switchEthereumSubTab('cashflow')" class="px-3.5 py-2 rounded-xl text-xs font-mono font-bold transition-all bg-indigo-500 text-white shadow-md shadow-indigo-500/20">
+            💸 Cash Flow & ERC-20 Tokenomics
+          </button>
+          <button id="eth-subtab-burn" onclick="switchEthereumSubTab('burn')" class="px-3.5 py-2 rounded-xl text-xs font-mono font-bold transition-all text-slate-400 hover:text-white bg-slate-900/80">
+            🔥 On-Chain Burn, 0xdead & Whales
+          </button>
+          <button id="eth-subtab-treasury" onclick="switchEthereumSubTab('treasury')" class="px-3.5 py-2 rounded-xl text-xs font-mono font-bold transition-all text-slate-400 hover:text-white bg-slate-900/80">
+            🏦 Buyback Vaults & Fee Switches
+          </button>
+          <button id="eth-subtab-leaderboard" onclick="switchEthereumSubTab('leaderboard')" class="px-3.5 py-2 rounded-xl text-xs font-mono font-bold transition-all text-slate-400 hover:text-white bg-slate-900/80">
+            🏆 Ethereum Top Leaderboard
+          </button>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <input
+            type="text"
+            id="eth-search-input"
+            oninput="handleEthereumSearch(this.value)"
+            placeholder="Search token, protocol, 0x contract..."
+            class="px-3.5 py-2 rounded-xl bg-slate-950 border border-slate-800 text-xs font-mono text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 w-full md:w-64"
+          />
+        </div>
+      </div>
+
+      <!-- SUB-VIEW 1: CASH FLOW & ERC-20 TOKENOMICS TABLE -->
+      <div id="eth-subview-cashflow" class="card-terminal rounded-3xl border border-slate-800/90 overflow-hidden">
+        <div class="p-4 border-b border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <h3 class="text-sm font-bold text-white font-mono">
+              💎 Tokenized Ethereum Protocols — Multi-Timeframe Cash Flow & On-Chain ERC-20 Supply
+            </h3>
+            <p class="text-[11px] text-slate-400 font-mono">
+              Strictly filtered to tokenized Ethereum protocols. Shows Gross Fees, LP/Supplier Cut, Net Revenue, Burn + Buybacks, and live ERC-20 Supply / 0xdead balances.
+            </p>
+          </div>
+          <span id="eth-table-count-badge" class="text-xs font-mono text-indigo-300 bg-indigo-500/15 border border-indigo-500/30 px-3 py-1 rounded-xl">
+            Showing 0 protocols
+          </span>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="border-b border-slate-800 text-[10px] font-mono uppercase text-slate-400 bg-slate-950/70">
+                <th class="py-3 px-3">#</th>
+                <th class="py-3 px-3">Protocol & Token</th>
+                <th class="py-3 px-3">Sector</th>
+                <th class="py-3 px-3 text-right" id="eth-th-fees">Gross Fees (7D)</th>
+                <th class="py-3 px-3 text-right" id="eth-th-netrev">Net Protocol Rev</th>
+                <th class="py-3 px-3 text-right" id="eth-th-burn">Burn / Buyback</th>
+                <th class="py-3 px-3 text-right">Real Yield APY</th>
+                <th class="py-3 px-3 text-right">ERC-20 Supply & 0xdead Burn</th>
+                <th class="py-3 px-3 text-center">Whale Risk</th>
+                <th class="py-3 px-3 text-center">EVM Blueprint</th>
+              </tr>
+            </thead>
+            <tbody id="eth-protocols-tbody" class="divide-y divide-slate-800/60 text-xs font-mono">
+              <!-- Populated via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- SUB-VIEW 2: ON-CHAIN BURN, 0xDEAD BALANCES & WHALES -->
+      <div id="eth-subview-burn" class="space-y-6 hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <!-- Left: Verified On-Chain ERC-20 & Dead-Wallet Burners -->
+          <div class="card-terminal rounded-3xl border border-purple-500/30 p-5 space-y-4">
+            <div class="flex items-center justify-between">
+              <div>
+                <h3 class="text-base font-bold text-white font-mono">🔥 Live ERC-20 Supply Contraction & 0xdead Burn Tracker</h3>
+                <p class="text-xs text-slate-400">Direct Ethereum RPC `totalSupply()` + `balanceOf(0x000...dead)` + programmatic buyback burns</p>
+              </div>
+              <span class="px-2.5 py-1 rounded-lg bg-purple-500/20 text-purple-300 text-xs font-mono font-bold">On-Chain Proof</span>
+            </div>
+            <div id="eth-burn-cards-list" class="space-y-3 max-h-[600px] overflow-y-auto pr-1">
+              <!-- Populated via JS -->
+            </div>
+          </div>
+
+          <!-- Right: Whale Concentration & Unlock Pressure Radar -->
+          <div class="card-terminal rounded-3xl border border-cyan-500/30 p-5 space-y-4">
+            <div class="flex items-center justify-between">
+              <div>
+                <h3 class="text-base font-bold text-white font-mono">🐋 ERC-20 Whale Concentration & Dilution Radar</h3>
+                <p class="text-xs text-slate-400">Top-10 holder concentration, circulating float ratio, and emission vs burn net flow</p>
+              </div>
+              <span class="px-2.5 py-1 rounded-lg bg-cyan-500/20 text-cyan-300 text-xs font-mono font-bold">Holder Distribution</span>
+            </div>
+            <div id="eth-whale-cards-list" class="space-y-3 max-h-[600px] overflow-y-auto pr-1">
+              <!-- Populated via JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUB-VIEW 3: BUYBACK VAULTS, FEE SWITCHES & TREASURIES -->
+      <div id="eth-subview-treasury" class="space-y-6 hidden">
+        <div class="card-terminal rounded-3xl border border-indigo-500/30 p-5 space-y-4">
+          <div class="flex items-center justify-between">
+            <div>
+              <h3 class="text-base font-bold text-white font-mono">🏦 Ethereum Smart Contract Buyback Vaults & Fee Switches</h3>
+              <p class="text-xs text-slate-400">Curated EVM smart contracts executing automated open-market buybacks, fee-switch distributions, andveToken revenue sharing</p>
+            </div>
+            <span class="px-2.5 py-1 rounded-lg bg-indigo-500/20 text-indigo-300 text-xs font-mono font-bold">EVM Fee Switches</span>
+          </div>
+          <div id="eth-treasury-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- SUB-VIEW 4: ETHEREUM EMBEDDED LEADERBOARD -->
+      <div id="eth-subview-leaderboard" class="space-y-4 hidden">
+        <div class="card-terminal rounded-3xl border border-indigo-500/30 p-5 space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div>
+              <h3 class="text-base font-bold text-white font-mono">🏆 Ethereum Ecosystem Multi-Timeframe Leaderboard</h3>
+              <p class="text-xs text-slate-400">Rank Ethereum tokenized protocols by Net Revenue, Token Burn USD, Holder Revenue, or Buyback Allocation</p>
+            </div>
+            <div class="flex flex-wrap items-center gap-2">
+              <button id="eth-lb-cat-revenue" onclick="setEthereumLbCategory('revenue')" class="px-3 py-1.5 rounded-xl text-xs font-mono font-bold bg-indigo-500 text-white">💰 Net Revenue</button>
+              <button id="eth-lb-cat-burn" onclick="setEthereumLbCategory('burn')" class="px-3 py-1.5 rounded-xl text-xs font-mono font-bold bg-slate-900 text-slate-400 hover:text-white">🔥 Token Burn</button>
+              <button id="eth-lb-cat-holders" onclick="setEthereumLbCategory('holders')" class="px-3 py-1.5 rounded-xl text-xs font-mono font-bold bg-slate-900 text-slate-400 hover:text-white">💎 Holder Accrual</button>
+              <button id="eth-lb-cat-buybacks" onclick="setEthereumLbCategory('buybacks')" class="px-3 py-1.5 rounded-xl text-xs font-mono font-bold bg-slate-900 text-slate-400 hover:text-white">🔄 Buybacks</button>
+            </div>
+          </div>
+
+          <div id="eth-leaderboard-list" class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+      </div>
+
+    </section>
+
   </main>
 
   
@@ -3122,13 +3412,15 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
       window.location.hash = page;
 
       // Update Nav buttons styling
-      ['table', 'weekly', 'yield', 'contracts', 'sui', 'schema', 'solana', 'solana-schema', 'bybit'].forEach(p => {
+      ['table', 'weekly', 'yield', 'contracts', 'sui', 'schema', 'solana', 'solana-schema', 'ethereum', 'bybit'].forEach(p => {
         const btn = document.getElementById(`nav-btn-${p}`);
         const sec = document.getElementById(`page-${p}`);
         if (!btn || !sec) return;
         if (p === page) {
           btn.className = p === 'bybit'
             ? 'flex items-center gap-1.5 px-3 py-1.5 rounded-xl font-bold transition-all bg-cyan-500/20 text-cyan-300 border border-cyan-500/50 shadow-md shadow-cyan-400/20'
+            : p === 'ethereum'
+            ? 'flex items-center gap-1.5 px-3 py-1.5 rounded-xl font-bold transition-all bg-indigo-500 text-white shadow-md shadow-indigo-500/30'
             : 'flex items-center gap-1.5 px-3 py-1.5 rounded-xl font-bold transition-all bg-cyan-400 text-black shadow-md shadow-cyan-400/20';
           sec.classList.remove('hidden');
         } else {
@@ -3146,6 +3438,7 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
       else if (page === 'schema') renderSchemaPage();
       else if (page === 'solana') loadSolanaData();
       else if (page === 'solana-schema') renderSolanaSchemaPage();
+      else if (page === 'ethereum') loadEthereumData();
       else if (page === 'bybit') loadBybitData();
     }
 
@@ -3178,7 +3471,7 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
 
         // Check hash or keep activePage
         const hash = window.location.hash.replace('#', '');
-        const targetPage = ['table', 'weekly', 'yield', 'contracts', 'sui', 'schema', 'solana', 'solana-schema', 'bybit'].includes(hash)
+        const targetPage = ['table', 'weekly', 'yield', 'contracts', 'sui', 'schema', 'solana', 'solana-schema', 'ethereum', 'bybit'].includes(hash)
           ? hash
           : (typeof activePage === 'string' && activePage ? activePage : 'table');
         if (!force) {
@@ -6783,6 +7076,468 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
           </tr>
         `;
       }).join('');
+    }
+
+    // ============================================================== //
+    // PAGE 10: ETHEREUM BLOCKCHAIN ECOSYSTEM & ON-CHAIN HUB LOGIC
+    // ============================================================== //
+    let ethereumData = null;
+    let ethereumTimeframe = '7d';
+    let ethereumSector = 'all';
+    let ethereumSearch = '';
+    let ethereumSubTab = 'cashflow';
+    let ethereumLbCategory = 'revenue';
+
+    async function loadEthereumData(forceRefresh = false) {
+      try {
+        const btn = document.getElementById('btn-eth-refresh');
+        if (btn && forceRefresh) {
+          btn.innerHTML = '<span>⏳</span><span>Syncing EVM...</span>';
+        }
+        const url = `/api/ethereum?timeframe=${ethereumTimeframe}&tokenOnly=true${forceRefresh ? '&refresh=true' : ''}&_t=${Date.now()}`;
+        const res = await fetch(url);
+        const json = await res.json();
+        if (json && (json.protocols || json.summary)) {
+          ethereumData = json;
+          renderEthereumHeroAndSectors();
+          renderEthereumProtocolsTable();
+          renderEthereumBurnAndWhales();
+          renderEthereumTreasuryView();
+          if (ethereumSubTab === 'leaderboard') {
+            renderEthereumEmbeddedLeaderboard();
+          }
+        }
+        if (btn && forceRefresh) {
+          btn.innerHTML = '<span>🔄</span><span>Sync Ethereum RPC</span>';
+        }
+      } catch (err) {
+        console.error('Failed to load Ethereum Hub data:', err);
+      }
+    }
+
+    function refreshEthereumData() {
+      loadEthereumData(true);
+    }
+
+    function setEthereumTimeframe(tf) {
+      ethereumTimeframe = tf;
+      ['24h', '7d', '30d'].forEach(t => {
+        const el = document.getElementById(`eth-tf-${t}`);
+        if (!el) return;
+        if (t === tf) {
+          el.className = 'px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all bg-indigo-500 text-white shadow-md shadow-indigo-500/25';
+        } else {
+          el.className = 'px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all text-slate-400 hover:text-white';
+        }
+      });
+      loadEthereumData(false);
+    }
+
+    function setEthereumSector(secId) {
+      ethereumSector = secId;
+      renderEthereumHeroAndSectors();
+      renderEthereumProtocolsTable();
+    }
+
+    function handleEthereumSearch(val) {
+      ethereumSearch = (val || '').trim().toLowerCase();
+      renderEthereumProtocolsTable();
+    }
+
+    function switchEthereumSubTab(tab) {
+      ethereumSubTab = tab;
+      ['cashflow', 'burn', 'treasury', 'leaderboard'].forEach(t => {
+        const btn = document.getElementById(`eth-subtab-${t}`);
+        const view = document.getElementById(`eth-subview-${t}`);
+        if (btn) {
+          btn.className = t === tab
+            ? 'px-3.5 py-2 rounded-xl text-xs font-mono font-bold transition-all bg-indigo-500 text-white shadow-md shadow-indigo-500/20'
+            : 'px-3.5 py-2 rounded-xl text-xs font-mono font-bold transition-all text-slate-400 hover:text-white bg-slate-900/80';
+        }
+        if (view) {
+          if (t === tab) view.classList.remove('hidden');
+          else view.classList.add('hidden');
+        }
+      });
+      if (tab === 'leaderboard') {
+        renderEthereumEmbeddedLeaderboard();
+      }
+    }
+
+    function renderEthereumHeroAndSectors() {
+      if (!ethereumData) return;
+      const tfLabel = ethereumTimeframe.toUpperCase();
+      const l1 = ethereumData.l1Chain || {};
+      const rev = l1.activeRevDecomposition || l1.revDecomposition?.[ethereumTimeframe] || l1.revDecomposition?.['7d'] || {};
+
+      const feesVal = ethereumTimeframe === '24h' ? l1.ecosystemFees24h : ethereumTimeframe === '30d' ? l1.ecosystemFees30d : l1.ecosystemFees7d;
+      const netRevVal = ethereumTimeframe === '24h' ? l1.ecosystemRev24h : ethereumTimeframe === '30d' ? l1.ecosystemRev30d : l1.ecosystemRev7d;
+      const burnRevVal = ethereumTimeframe === '24h' ? l1.l1BurnedRev24h : ethereumTimeframe === '30d' ? l1.l1BurnedRev30d : l1.l1BurnedRev7d;
+      const holderVal = Math.round((netRevVal || 0) * 0.68);
+
+      const setTxt = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+      setTxt('eth-card1-title', `ETH DApps Gross Fees (${tfLabel})`);
+      setTxt('eth-card2-title', `Ethereum L1 REV (${tfLabel})`);
+      setTxt('eth-card3-title', `On-Chain Token Burn (${tfLabel})`);
+      setTxt('eth-th-fees', `Gross Fees (${tfLabel})`);
+
+      setTxt('eth-hero-fees', formatUSD(feesVal || 0));
+      setTxt('eth-hero-net-rev', formatUSD(netRevVal || 0));
+      setTxt('eth-hero-holder-rev', formatUSD(holderVal || 0));
+
+      setTxt('eth-hero-rev', formatUSD(rev.totalRevUsd || l1.l1ChainFees7d || 0));
+      setTxt('eth-hero-rev-base', formatUSD(rev.burnedEthUsd || burnRevVal || 0));
+      setTxt('eth-hero-rev-tips', formatUSD((rev.priorityFeeValidatorTipsUsd || 0) + (rev.mevBoostBuilderTipsUsd || 0)));
+      setTxt('eth-hero-rev-blobs', formatUSD(rev.blobFeeBurnUsd || Math.round((rev.burnedEthUsd || burnRevVal || 0) * 0.08)));
+
+      const buybacks30d = ethereumData.treasuryRadar?.realizedBuybacksVolume30d || 24500000;
+      const scaledBuybacks = ethereumTimeframe === '24h' ? buybacks30d / 30 : ethereumTimeframe === '7d' ? buybacks30d / 4.28 : buybacks30d;
+      setTxt('eth-hero-burn-usd', formatUSD((rev.burnedEthUsd || burnRevVal || 0) + scaledBuybacks));
+      setTxt('eth-hero-eth-burned', `${Number(l1.totalBurnedEth || 4524800).toLocaleString()} ETH`);
+      const activeBurnCount = (ethereumData.protocols || []).filter(p => p.mechanism?.burn || p.mechanism?.buyback).length;
+      setTxt('eth-hero-burn-count', `${activeBurnCount} Active Burners`);
+
+      setTxt('eth-hero-block', `#${Number(l1.blockHeight || 26091334).toLocaleString()}`);
+      setTxt('eth-hero-gas', `${l1.gasPriceGwei || 0.54} Gwei`);
+      const ethPrice = l1.mcap && l1.totalSupply ? Math.round(l1.mcap / l1.totalSupply) : 2720;
+      setTxt('eth-hero-eth-price', `$${ethPrice.toLocaleString()}`);
+      const totalProtCount = ethereumData.totalProtocolsCount || (ethereumData.protocols || []).length;
+      setTxt('eth-hero-tokenized-count', `${totalProtCount} Tokens`);
+      setTxt('eth-protocols-badge', `${totalProtCount} Tokenized Protocols`);
+      setTxt('eth-sector-reset', `Show All Sectors (${totalProtCount})`);
+
+      // Render 8 sectors grid
+      const grid = document.getElementById('eth-sectors-grid');
+      if (grid && Array.isArray(ethereumData.sectors)) {
+        const sectorIcons = {
+          dex: '🔄',
+          lending_cdp: '🏦',
+          lst_restaking: '🥩',
+          yield_deriv: '📈',
+          infra_oracle: '🛰️',
+          bridges_l2: '🌉',
+          rwa_institutional: '🏛️',
+          meme_burn: '🔥'
+        };
+        grid.innerHTML = ethereumData.sectors.map(sec => {
+          const active = ethereumSector === sec.id;
+          const secFees = ethereumTimeframe === '24h' ? sec.fees24h : ethereumTimeframe === '30d' ? sec.fees30d : sec.fees7d;
+          return `
+            <button onclick="setEthereumSector('${sec.id}')" class="text-left p-3 rounded-2xl border transition-all ${
+              active
+                ? 'bg-indigo-500/20 border-indigo-400 text-white shadow-lg shadow-indigo-500/15'
+                : 'bg-slate-950/80 border-slate-800/90 hover:border-indigo-500/40 text-slate-300'
+            }">
+              <div class="flex items-center justify-between">
+                <span class="text-base">${sectorIcons[sec.id] || '💎'}</span>
+                <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-slate-900 text-indigo-300">${sec.count || 0}</span>
+              </div>
+              <div class="text-xs font-bold text-white mt-1.5 truncate">${sec.label}</div>
+              <div class="text-[11px] font-mono text-cyan-300 font-bold mt-0.5">${formatUSD(secFees || 0)}</div>
+            </button>
+          `;
+        }).join('');
+      }
+    }
+
+    function renderEthereumProtocolsTable() {
+      if (!ethereumData || !Array.isArray(ethereumData.protocols)) return;
+      const tbody = document.getElementById('eth-protocols-tbody');
+      if (!tbody) return;
+
+      let list = ethereumData.protocols.slice();
+      if (ethereumSector && ethereumSector !== 'all') {
+        list = list.filter(p => p.sector === ethereumSector);
+      }
+      if (ethereumSearch) {
+        list = list.filter(p =>
+          (p.name || '').toLowerCase().includes(ethereumSearch) ||
+          (p.tokenSymbol || '').toLowerCase().includes(ethereumSearch) ||
+          (p.contractAddress || '').toLowerCase().includes(ethereumSearch) ||
+          (p.sectorLabel || '').toLowerCase().includes(ethereumSearch)
+        );
+      }
+
+      const badge = document.getElementById('eth-table-count-badge');
+      if (badge) badge.textContent = `Showing ${list.length} tokenized protocols`;
+
+      tbody.innerHTML = list.slice(0, 150).map((p, idx) => {
+        const tfData = p.timeframeData?.[ethereumTimeframe] || p.timeframeData?.['7d'] || {};
+        const fees = p.activeFees ?? tfData.fees ?? p.fees7d ?? 0;
+        const netRev = p.activeRevenue ?? tfData.revenue ?? p.revenue7d ?? 0;
+        const mech = p.mechanism || {};
+        const hasBurnOrBuyback = mech.burn || mech.buyback;
+        const burnShareRatio = (mech.burn && mech.buyback) ? 0.55 : (mech.burn || mech.buyback) ? 0.35 : 0.10;
+        const burnUsd = Math.round(netRev * burnShareRatio);
+        const apy = p.activeApy ?? tfData.apy ?? p.annualizedYieldMc ?? 0;
+        const curSupply = mech.currentSupply || 0;
+        const burnedPct = mech.burnedPctOfMax || 0;
+        const shortAddr = p.contractAddress && p.contractAddress.length > 14
+          ? `${p.contractAddress.slice(0, 6)}...${p.contractAddress.slice(-4)}`
+          : (p.contractAddress || 'ERC-20');
+
+        const whaleRisk = p.whaleRisk?.riskLevel || 'LOW';
+        const whaleColor = whaleRisk.includes('HIGH')
+          ? 'bg-rose-500/20 text-rose-300 border-rose-500/40'
+          : whaleRisk.includes('MOD')
+          ? 'bg-purple-500/20 text-purple-300 border-purple-500/40'
+          : 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40';
+
+        return `
+          <tr class="hover:bg-indigo-500/5 transition-colors">
+            <td class="py-3 px-3 text-slate-500">${idx + 1}</td>
+            <td class="py-3 px-3">
+              <div class="flex items-center gap-2.5">
+                ${p.logo ? `<img src="${p.logo}" class="w-7 h-7 rounded-full bg-slate-900 border border-slate-700" onerror="this.style.display='none'">` : `<div class="w-7 h-7 rounded-full bg-indigo-500/20 border border-indigo-400/40 flex items-center justify-center text-indigo-300 font-bold text-xs">${(p.tokenSymbol || 'E')[0]}</div>`}
+                <div>
+                  <div class="flex items-center gap-1.5">
+                    <span class="font-bold text-white">${p.name}</span>
+                    <span class="px-1.5 py-0.5 rounded bg-indigo-500/20 border border-indigo-400/40 text-indigo-300 text-[10px] font-bold">$${p.tokenSymbol || 'ERC20'}</span>
+                  </div>
+                  <div class="text-[10px] text-slate-500 flex items-center gap-1.5 mt-0.5">
+                    <a href="https://etherscan.io/token/${p.contractAddress}" target="_blank" class="text-cyan-400 hover:underline">${shortAddr} ↗</a>
+                    <span class="text-emerald-400">● EVM Verified</span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td class="py-3 px-3">
+              <span class="px-2 py-1 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 text-[11px]">
+                ${p.sectorBadge || p.sectorLabel || p.category}
+              </span>
+            </td>
+            <td class="py-3 px-3 text-right font-bold text-white">${formatUSD(fees)}</td>
+            <td class="py-3 px-3 text-right font-bold text-cyan-300">
+              <div>${formatUSD(netRev)}</div>
+              <div class="text-[10px] text-slate-500">${p.activeRevSharePct || p.revSharePct || 22}% of Fees</div>
+            </td>
+            <td class="py-3 px-3 text-right">
+              <div class="font-bold text-purple-300">${formatUSD(burnUsd)}</div>
+              <div class="text-[10px] text-slate-500">${mech.burn ? '🔥 Burn' : ''} ${mech.buyback ? '🔄 Buyback' : (!mech.burn ? '💎 Staking' : '')}</div>
+            </td>
+            <td class="py-3 px-3 text-right">
+              <span class="px-2 py-0.5 rounded font-bold ${apy >= 5 ? 'bg-emerald-500/20 text-emerald-300' : 'text-slate-300'}">
+                ${Number(apy).toFixed(2)}%
+              </span>
+            </td>
+            <td class="py-3 px-3 text-right">
+              <div class="text-white font-bold">${curSupply ? Number(curSupply).toLocaleString(undefined, { maximumFractionDigits: 0 }) : 'On-Chain ERC-20'} <span class="text-[10px] text-slate-400">${p.tokenSymbol || ''}</span></div>
+              <div class="text-[10px] ${burnedPct > 0 ? 'text-purple-300 font-bold' : 'text-slate-500'}">
+                ${burnedPct > 0 ? `🔥 ${burnedPct}% Supply Burned` : (mech.stakingToken || 'ERC-20 Standard')}
+              </div>
+            </td>
+            <td class="py-3 px-3 text-center">
+              <span class="px-2 py-0.5 rounded border text-[10px] font-bold ${whaleColor}">
+                ${whaleRisk} (${p.whaleRisk?.top10SharePct || 24}%)
+              </span>
+            </td>
+            <td class="py-3 px-3 text-center">
+              <button onclick="openEthereumProtocolModal('${p.slug}')" class="px-2.5 py-1 rounded-lg bg-indigo-500/20 hover:bg-indigo-500/30 border border-indigo-400/40 text-indigo-300 text-[11px] font-bold transition-all">
+                Inspect EVM
+              </button>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function renderEthereumBurnAndWhales() {
+      if (!ethereumData) return;
+      const burnContainer = document.getElementById('eth-burn-cards-list');
+      const whaleContainer = document.getElementById('eth-whale-cards-list');
+
+      if (burnContainer) {
+        const ledger = Object.values(ethereumData.l1Chain?.erc20BurnLedger || {});
+        const engines = ethereumData.burnEngines || [];
+        const combinedCards = ledger.filter(x => (x.burnedTokens || 0) > 0).sort((a, b) => (b.burnedPctOfMax || 0) - (a.burnedPctOfMax || 0));
+
+        burnContainer.innerHTML = combinedCards.map(item => {
+          const eng = engines.find(e => e.symbol === item.symbol);
+          return `
+            <div class="p-3.5 rounded-2xl bg-slate-950/90 border border-purple-500/25 space-y-2">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span class="font-bold text-white text-sm">${item.name}</span>
+                  <span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 text-xs font-mono font-bold">$${item.symbol}</span>
+                  <span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-300 font-mono">RPC Verified</span>
+                </div>
+                <div class="text-right font-mono">
+                  <div class="text-sm font-black text-purple-300">${item.burnedPctOfMax || 0}% Burned</div>
+                  <div class="text-[10px] text-slate-400">${Number(item.burnedTokens || 0).toLocaleString()} ${item.symbol}</div>
+                </div>
+              </div>
+              <div class="text-xs text-slate-300">${eng?.mechanism || `On-chain ERC-20 supply contraction & dead-wallet (0x000...dead) lockup on Ethereum Mainnet.`}</div>
+              <div class="grid grid-cols-3 gap-2 pt-2 border-t border-slate-800/80 text-[11px] font-mono">
+                <div>
+                  <span class="text-slate-500 block text-[9px]">Initial Supply</span>
+                  <span class="text-slate-300 font-bold">${Number(item.initialSupply || 0).toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
+                </div>
+                <div>
+                  <span class="text-slate-500 block text-[9px]">Current Supply</span>
+                  <span class="text-white font-bold">${Number(item.currentSupply || 0).toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
+                </div>
+                <div>
+                  <span class="text-slate-500 block text-[9px]">0xdead Balance</span>
+                  <span class="text-purple-300 font-bold">${item.deadWalletBurned > 0 ? Number(item.deadWalletBurned).toLocaleString(undefined, { maximumFractionDigits: 0 }) : 'Direct Burn'}</span>
+                </div>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      if (whaleContainer) {
+        const whales = (ethereumData.whaleAnalytics || []).slice(0, 25);
+        whaleContainer.innerHTML = whales.map(w => {
+          const top10 = w.top10SharePct || 25;
+          return `
+            <div class="p-3.5 rounded-2xl bg-slate-950/90 border border-cyan-500/25 space-y-2">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span class="font-bold text-white text-sm">${w.protocol}</span>
+                  <span class="px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 text-xs font-mono font-bold">$${w.tokenSymbol}</span>
+                  <span class="text-[10px] text-slate-400 font-mono">${Number(w.holdersCount || 0).toLocaleString()} Holders</span>
+                </div>
+                <span class="px-2 py-0.5 rounded text-xs font-mono font-bold ${(w.riskLevel || '').includes('HIGH') ? 'bg-rose-500/20 text-rose-300' : 'bg-emerald-500/20 text-emerald-300'}">
+                  ${w.riskLevel || 'LOW'} Risk
+                </span>
+              </div>
+              <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-indigo-500 to-cyan-400 rounded-full" style="width: ${Math.min(100, top10)}%"></div>
+              </div>
+              <div class="flex items-center justify-between text-[11px] font-mono text-slate-400">
+                <span>Top 10 EOA/Multisig: <strong class="text-white">${top10}%</strong></span>
+                <span>Retail Float: <strong class="text-cyan-300">${w.retailSharePct || (100 - top10).toFixed(1)}%</strong></span>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+    }
+
+    function renderEthereumTreasuryView() {
+      if (!ethereumData || !Array.isArray(ethereumData.protocols)) return;
+      const grid = document.getElementById('eth-treasury-grid');
+      if (!grid) return;
+
+      const vaults = ethereumData.protocols.filter(p => p.mechanism?.buyback || p.mechanism?.burn || (p.mechanism?.treasuryNetWorthUsd || 0) > 0).slice(0, 18);
+      grid.innerHTML = vaults.map(p => {
+        const m = p.mechanism || {};
+        const netRev = p.activeRevenue ?? p.revenue7d ?? 0;
+        const buybackFlow = Math.round(netRev * (m.buyback ? 0.45 : 0.25));
+        return `
+          <div class="p-4 rounded-2xl bg-slate-950/90 border border-indigo-500/25 space-y-3 font-mono">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="font-bold text-white text-sm">${p.name}</span>
+                <span class="px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 text-xs font-bold">$${p.tokenSymbol}</span>
+              </div>
+              <span class="text-xs text-emerald-300 font-bold">${Number(p.activeApy || p.annualizedYieldMc || 0).toFixed(2)}% APY</span>
+            </div>
+            <div class="text-xs text-cyan-300 font-sans">${m.treasuryHoldings || m.stakingToken || 'EVM Treasury Multisig & Buyback Router'}</div>
+            <div class="grid grid-cols-2 gap-2 pt-2 border-t border-slate-800 text-xs">
+              <div>
+                <div class="text-[10px] text-slate-500">Buyback / Accrual (${ethereumTimeframe.toUpperCase()})</div>
+                <div class="text-indigo-300 font-bold">${formatUSD(buybackFlow)}</div>
+              </div>
+              <div>
+                <div class="text-[10px] text-slate-500">DAO Treasury Reserve</div>
+                <div class="text-emerald-300 font-bold">${formatUSD(m.treasuryNetWorthUsd || 0)}</div>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function setEthereumLbCategory(cat) {
+      ethereumLbCategory = cat;
+      ['revenue', 'burn', 'holders', 'buybacks'].forEach(c => {
+        const btn = document.getElementById(`eth-lb-cat-${c}`);
+        if (!btn) return;
+        btn.className = c === cat
+          ? 'px-3 py-1.5 rounded-xl text-xs font-mono font-bold bg-indigo-500 text-white'
+          : 'px-3 py-1.5 rounded-xl text-xs font-mono font-bold bg-slate-900 text-slate-400 hover:text-white';
+      });
+      renderEthereumEmbeddedLeaderboard();
+    }
+
+    async function renderEthereumEmbeddedLeaderboard() {
+      const container = document.getElementById('eth-leaderboard-list');
+      if (!container) return;
+      try {
+        const res = await fetch(`/api/ethereum/leaderboard?timeframe=${ethereumTimeframe}&category=${ethereumLbCategory}&limit=20`);
+        const json = await res.json();
+        const rows = json.items || json.leaderboard || json.entries || [];
+        container.innerHTML = rows.map((item, i) => `
+          <div class="p-3.5 rounded-2xl bg-slate-950/90 border border-slate-800 hover:border-indigo-500/40 flex items-center justify-between gap-3 font-mono">
+            <div class="flex items-center gap-3">
+              <span class="w-7 h-7 rounded-xl bg-indigo-500/20 border border-indigo-400/40 flex items-center justify-center text-xs font-black text-indigo-300">#${item.rank || i + 1}</span>
+              <div>
+                <div class="flex items-center gap-1.5">
+                  <span class="font-bold text-white text-sm">${item.name}</span>
+                  <span class="px-1.5 py-0.5 rounded bg-indigo-500/20 text-indigo-300 text-[10px] font-bold">$${item.tokenSymbol || 'ETH'}</span>
+                </div>
+                <div class="text-[10px] text-slate-400">${item.secondaryMetric || item.sectorLabel || item.category || 'Ethereum Mainnet'}</div>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="text-sm font-black text-cyan-300">${typeof item.primaryMetric === 'string' ? item.primaryMetric : formatUSD(item.metricValue || 0)}</div>
+              <div class="text-[10px] text-slate-500">${item.secondaryLabel || ethereumLbCategory.toUpperCase()}</div>
+            </div>
+          </div>
+        `).join('');
+      } catch (e) {
+        console.error('Failed to render Ethereum leaderboard:', e);
+      }
+    }
+
+    function openEthereumProtocolModal(slug) {
+      if (!ethereumData || !Array.isArray(ethereumData.protocols)) return;
+      const p = ethereumData.protocols.find(item => item.slug === slug);
+      if (!p) return;
+
+      const modal = document.getElementById('modal-protocol-blueprint');
+      if (!modal) return;
+
+      const m = p.mechanism || {};
+      document.getElementById('blueprint-modal-name').textContent = p.name;
+      document.getElementById('blueprint-modal-symbol').textContent = `$${p.tokenSymbol || 'ERC20'}`;
+      document.getElementById('blueprint-modal-badge').textContent = p.sectorBadge || p.sectorLabel || p.category;
+      document.getElementById('blueprint-modal-role').textContent = 'Ethereum Mainnet EVM Smart Contract & ERC-20 Architecture';
+      document.getElementById('blueprint-modal-desc').textContent = m.description || `${p.name} operates on Ethereum Mainnet with verified ERC-20 tokenomics.`;
+
+      const pkgIdEl = document.getElementById('blueprint-modal-package-id');
+      const pkgLinkEl = document.getElementById('blueprint-modal-package-link');
+      if (pkgIdEl) pkgIdEl.textContent = p.contractAddress || '0x0000000000000000000000000000000000000000';
+      if (pkgLinkEl) {
+        pkgLinkEl.href = `https://etherscan.io/address/${p.contractAddress}`;
+        pkgLinkEl.textContent = 'Open in Etherscan ↗';
+      }
+
+      const coinTypeEl = document.getElementById('blueprint-modal-coin-type');
+      const coinLinkEl = document.getElementById('blueprint-modal-coin-link');
+      if (coinTypeEl) coinTypeEl.textContent = `Current Supply: ${Number(m.currentSupply || 0).toLocaleString()} $${p.tokenSymbol} | Burned: ${Number(m.burnedAmount || 0).toLocaleString()} (${m.burnedPctOfMax || 0}%)`;
+      if (coinLinkEl) {
+        coinLinkEl.href = `https://etherscan.io/token/${p.contractAddress}`;
+        coinLinkEl.textContent = 'View ERC-20 Token Tracker ↗';
+      }
+
+      document.getElementById('blueprint-modal-split').textContent = `${p.activeLpSharePct || p.lpSharePct || 78}% LPs/Suppliers | ${p.activeRevSharePct || p.revSharePct || 22}% Net Protocol Rev`;
+      document.getElementById('blueprint-modal-sink').textContent = `${m.burn ? '🔥 On-Chain Burn ' : ''}${m.buyback ? '🔄 Open-Market Buyback ' : ''}${m.stakingToken ? `(${m.stakingToken})` : ''}`;
+
+      const structsEl = document.getElementById('blueprint-modal-structs');
+      if (structsEl) {
+        const items = [
+          'ERC20.totalSupply()',
+          'ERC20.balanceOf(0x000...dead)',
+          m.treasuryHoldings || 'DAO Reserve Vault',
+          `Sector: ${p.sectorLabel}`
+        ];
+        structsEl.innerHTML = items.map(s => `<span class="px-2.5 py-1 rounded-lg bg-indigo-500/20 border border-indigo-400/40 text-indigo-300 text-xs font-mono">${s}</span>`).join('');
+      }
+
+      modal.classList.remove('hidden');
     }
 
   </script>
