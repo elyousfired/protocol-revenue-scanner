@@ -3372,7 +3372,7 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
             </p>
           </div>
 
-          <!-- Controls: Timeframes (24H / 7D / 30D) & Limit (Top 10 / 25 / 50) -->
+          <!-- Controls: Timeframes (24H / 7D / 30D) & Search for Full List -->
           <div class="flex flex-wrap items-center gap-2.5 font-mono text-xs">
             <!-- Timeframe Filter -->
             <div class="flex items-center bg-slate-950/90 p-1 rounded-xl border border-slate-800">
@@ -3381,11 +3381,15 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
               <button id="bybit-lead-tf-30d" onclick="setBybitLeaderboardTimeframe('30d')" class="px-3 py-1.5 rounded-lg font-bold transition-all text-slate-400 hover:text-white">30D</button>
             </div>
 
-            <!-- Limit Filter -->
-            <div class="flex items-center bg-slate-950/90 p-1 rounded-xl border border-slate-800">
-              <button id="bybit-lead-limit-10" onclick="setBybitLeaderboardLimit(10)" class="px-2.5 py-1.5 rounded-lg font-medium transition-all text-slate-400 hover:text-white">Top 10</button>
-              <button id="bybit-lead-limit-25" onclick="setBybitLeaderboardLimit(25)" class="px-2.5 py-1.5 rounded-lg font-bold transition-all bg-cyan-500/20 text-cyan-300 border border-cyan-500/40">Top 25</button>
-              <button id="bybit-lead-limit-50" onclick="setBybitLeaderboardLimit(50)" class="px-2.5 py-1.5 rounded-lg font-medium transition-all text-slate-400 hover:text-white">Top 50</button>
+            <!-- Full List Search Filter -->
+            <div class="relative">
+              <input 
+                type="text" 
+                id="bybit-lead-search" 
+                oninput="handleBybitLeaderboardSearch(this.value)" 
+                placeholder="Search token in full list..." 
+                class="w-48 bg-slate-950/90 border border-slate-800 focus:border-cyan-400 rounded-xl px-3 py-1.5 text-xs text-white placeholder-slate-500 outline-none"
+              />
             </div>
           </div>
         </div>
@@ -3441,8 +3445,8 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
                 <th class="py-3 px-4 text-right">Spot Price</th>
                 <th class="py-3 px-4 text-right">24H Change</th>
                 <th class="py-3 px-4 text-right">On-Chain TVL</th>
-                <th class="py-3 px-4 w-40">Relative Share</th>
-                <th class="py-3 px-4 text-center w-28">Trade Spot</th>
+                <th class="py-3 px-4 w-36">Relative Share</th>
+                <th class="py-3 px-4 text-center w-36">Actions &amp; Diagram</th>
               </tr>
             </thead>
             <tbody id="bybit-leaderboard-tbody" class="divide-y divide-slate-800/60 text-sm">
@@ -3514,6 +3518,130 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
               <!-- Injected via JS -->
             </tbody>
           </table>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- MODAL: BYBIT TOKEN DAILY GROUPED HISTOGRAM (REVENUE/HOLDERS/BUYBACK/BURN) -->
+      <!-- ============================================================== -->
+      <div id="modal-bybit-histogram" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-black/85 backdrop-blur-md hidden">
+        <div class="card-terminal w-full max-w-4xl max-h-[92vh] overflow-y-auto rounded-3xl border border-cyan-500/40 bg-gradient-to-b from-[#0c1a2e] via-[#081220] to-[#050912] p-5 sm:p-6 space-y-5 shadow-2xl shadow-cyan-500/20 font-mono">
+          <!-- Modal Header -->
+          <div class="flex items-start justify-between gap-4 border-b border-slate-800/80 pb-4">
+            <div class="flex items-center gap-3">
+              <img id="bybit-hist-logo" src="" class="w-12 h-12 rounded-full border border-cyan-500/40 bg-slate-900 object-cover" onerror="this.src='https://placehold.co/48x48/1e293b/06b6d4?text=?'" />
+              <div>
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span id="bybit-hist-symbol" class="text-2xl font-black text-white">$TOKEN</span>
+                  <span id="bybit-hist-name" class="text-xs text-slate-400">Protocol</span>
+                  <span id="bybit-hist-cat" class="px-2 py-0.5 rounded text-[10px] bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 font-bold">Category</span>
+                </div>
+                <div class="flex items-center gap-3 mt-1 text-xs">
+                  <span id="bybit-hist-price" class="font-extrabold text-white">$0.00</span>
+                  <span id="bybit-hist-change" class="text-emerald-400 font-bold">+0.0%</span>
+                  <span id="bybit-hist-chains" class="text-slate-400 text-[11px]">—</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <!-- Timeframe Selector Buttons (1W / 1M / 1Y) -->
+              <div class="flex items-center bg-slate-950 p-1 rounded-xl border border-slate-800">
+                <button id="bybit-hist-tf-1w" onclick="setBybitHistogramTimeframe('1w')" class="px-3 py-1.5 rounded-lg text-xs font-bold transition-all bg-cyan-500/20 text-cyan-300 border border-cyan-500/50 shadow-sm">1W (سيمانة)</button>
+                <button id="bybit-hist-tf-1m" onclick="setBybitHistogramTimeframe('1m')" class="px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-slate-400 hover:text-white">1M (شهر)</button>
+                <button id="bybit-hist-tf-1y" onclick="setBybitHistogramTimeframe('1y')" class="px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-slate-400 hover:text-white">1Y (1ans)</button>
+              </div>
+              <!-- Close Button -->
+              <button onclick="closeBybitHistogram()" class="p-2 text-slate-400 hover:text-white rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-lg transition-colors">✕</button>
+            </div>
+          </div>
+
+          <!-- 4 Metric KPI Cards for the active period -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+            <div class="p-3 rounded-xl bg-cyan-950/20 border border-cyan-500/30">
+              <div class="text-[10px] text-cyan-300 flex items-center gap-1 font-bold">
+                <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+                <span>Total Revenue</span>
+              </div>
+              <div id="bybit-hist-kpi-rev" class="text-lg font-black text-cyan-300 mt-1">$0</div>
+            </div>
+            <div class="p-3 rounded-xl bg-emerald-950/20 border border-emerald-500/30">
+              <div class="text-[10px] text-emerald-300 flex items-center gap-1 font-bold">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span>Holders / Wallets</span>
+              </div>
+              <div id="bybit-hist-kpi-holders" class="text-lg font-black text-emerald-300 mt-1">—</div>
+            </div>
+            <div class="p-3 rounded-xl bg-amber-950/20 border border-amber-500/30">
+              <div class="text-[10px] text-amber-300 flex items-center gap-1 font-bold">
+                <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                <span>Total Buyback</span>
+              </div>
+              <div id="bybit-hist-kpi-buyback" class="text-lg font-black text-amber-300 mt-1">—</div>
+            </div>
+            <div class="p-3 rounded-xl bg-rose-950/20 border border-rose-500/30">
+              <div class="text-[10px] text-rose-300 flex items-center gap-1 font-bold">
+                <span class="w-2 h-2 rounded-full bg-rose-400"></span>
+                <span>Total Burn</span>
+              </div>
+              <div id="bybit-hist-kpi-burn" class="text-lg font-black text-rose-300 mt-1">—</div>
+            </div>
+          </div>
+
+          <!-- Clustered Histogram Diagram (As Drawn in User's Sketch) -->
+          <div class="space-y-2">
+            <div class="flex items-center justify-between text-xs text-slate-400">
+              <span class="font-bold text-white flex items-center gap-1.5">
+                <span>📊 Clustered Daily Histogram (4 Columns per Day)</span>
+              </span>
+              <!-- Legend matching the user's sketch -->
+              <div class="flex items-center gap-3 text-[11px] flex-wrap">
+                <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded bg-cyan-400 inline-block"></span> <span>Revenue</span></span>
+                <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded bg-emerald-400 inline-block"></span> <span>Holders</span></span>
+                <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded bg-amber-400 inline-block"></span> <span>Buyback</span></span>
+                <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded bg-rose-500 inline-block"></span> <span>Burn</span></span>
+              </div>
+            </div>
+
+            <!-- SVG Diagram Canvas -->
+            <div class="bg-black/60 rounded-2xl border border-slate-800/80 p-3 sm:p-4 relative overflow-x-auto">
+              <div id="bybit-hist-chart-container" class="min-w-[580px] h-[280px] flex items-center justify-center">
+                <!-- Injected via JS SVG renderer -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Detail Daily Table -->
+          <div class="space-y-2">
+            <div class="text-xs font-bold text-slate-300">📋 Daily Breakdown Data Points</div>
+            <div class="max-h-44 overflow-y-auto rounded-xl border border-slate-800 bg-slate-950/60">
+              <table class="w-full text-left text-xs border-collapse font-mono">
+                <thead>
+                  <tr class="bg-slate-900 border-b border-slate-800 text-[10px] uppercase text-slate-400">
+                    <th class="py-2 px-3">Date</th>
+                    <th class="py-2 px-3 text-right">Revenue (USD)</th>
+                    <th class="py-2 px-3 text-right">Holders Count</th>
+                    <th class="py-2 px-3 text-right">Buyback (USD)</th>
+                    <th class="py-2 px-3 text-right">Burn (USD)</th>
+                  </tr>
+                </thead>
+                <tbody id="bybit-hist-table-tbody" class="divide-y divide-slate-800/60 text-xs">
+                  <!-- Injected via JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Action Footer -->
+          <div class="flex items-center justify-between pt-2 border-t border-slate-800 text-xs">
+            <div class="text-slate-400 text-[11px]">
+              Verified On-Chain Multi-Chain Timeline • Data refreshed automatically
+            </div>
+            <a id="bybit-hist-trade-btn" href="#" target="_blank" class="px-4 py-2 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/40 text-amber-300 font-bold transition-all flex items-center gap-1.5">
+              <span>Trade Spot on Bybit</span>
+              <span>↗</span>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -8310,15 +8438,10 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
       renderBybitLeaderboard();
     }
 
-    function setBybitLeaderboardLimit(limit) {
-      bybitLeadLimit = limit;
-      [10, 25, 50].forEach(l => {
-        const el = document.getElementById(`bybit-lead-limit-${l}`);
-        if (!el) return;
-        el.className = l === limit
-          ? 'px-2.5 py-1.5 rounded-lg font-bold transition-all bg-cyan-500/20 text-cyan-300 border border-cyan-500/40'
-          : 'px-2.5 py-1.5 rounded-lg font-medium transition-all text-slate-400 hover:text-white';
-      });
+    let bybitLeadSearchQuery = '';
+
+    function handleBybitLeaderboardSearch(val) {
+      bybitLeadSearchQuery = (val || '').toLowerCase().trim();
       renderBybitLeaderboard();
     }
 
@@ -8358,19 +8481,30 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
         }
       }
 
+      // Filter by search query if user typed something
+      if (bybitLeadSearchQuery) {
+        filtered = filtered.filter(t =>
+          t.symbol.toLowerCase().includes(bybitLeadSearchQuery) ||
+          t.categoryName.toLowerCase().includes(bybitLeadSearchQuery) ||
+          (t.protocolName && t.protocolName.toLowerCase().includes(bybitLeadSearchQuery))
+        );
+      }
+
+      // Sort descending by _leadVal
       filtered.sort((a, b) => b._leadVal - a._leadVal);
 
-      if (countBadge) countBadge.textContent = `${filtered.length} Active Protocols`;
+      if (countBadge) {
+        countBadge.textContent = `${filtered.length} Active Protocols (Full List)`;
+      }
 
-      const displayList = filtered.slice(0, bybitLeadLimit);
-      if (displayList.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="9" class="py-12 text-center text-slate-500 font-mono">No verified on-chain ${bybitLeadMetric} data available for this timeframe.</td></tr>`;
+      if (filtered.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="9" class="py-12 text-center text-slate-500 font-mono">No verified on-chain ${bybitLeadMetric} data available for this selection.</td></tr>`;
         return;
       }
 
-      const maxVal = displayList[0]?._leadVal || 1;
+      const maxVal = filtered[0]?._leadVal || 1;
 
-      tbody.innerHTML = displayList.map((tok, idx) => {
+      tbody.innerHTML = filtered.map((tok, idx) => {
         const rank = idx + 1;
         let rankBadge = `<span class="px-2 py-0.5 rounded-lg bg-slate-800 text-[11px] font-bold text-slate-400">#${rank}</span>`;
         if (rank === 1) rankBadge = `<span class="px-2 py-0.5 rounded-lg bg-amber-500/20 text-amber-300 border border-amber-500/40 font-extrabold text-[11px]">🥇 1</span>`;
@@ -8437,14 +8571,273 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
               </div>
             </td>
             <td class="py-3 px-4 text-center">
-              <a href="${tok.bybitTradeUrl}" target="_blank" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-amber-500/15 text-amber-300 hover:bg-amber-500/25 border border-amber-500/30 text-xs font-bold transition-all">
-                <span>Bybit</span>
-                <span>↗</span>
-              </a>
+              <div class="flex items-center justify-center gap-1.5">
+                <button onclick="openBybitHistogram('${tok.symbol}')" class="px-2 py-1 rounded-lg bg-cyan-500/15 hover:bg-cyan-500/25 border border-cyan-500/40 text-cyan-300 text-xs font-bold transition-all flex items-center gap-1" title="View 4-Metric Daily Clustered Histogram">
+                  <span>📊</span>
+                  <span>Diagram</span>
+                </button>
+                <a href="${tok.bybitTradeUrl}" target="_blank" class="inline-flex items-center gap-0.5 px-2 py-1 rounded-lg bg-amber-500/15 text-amber-300 hover:bg-amber-500/25 border border-amber-500/30 text-xs font-bold transition-all" title="Trade Spot on Bybit">
+                  <span>Trade</span>
+                  <span>↗</span>
+                </a>
+              </div>
             </td>
           </tr>
         `;
       }).join('');
+    }
+
+    // ============================================================== //
+    // BYBIT TOKEN DAILY GROUPED HISTOGRAM (REVENUE/HOLDERS/BUYBACK/BURN)
+    // ============================================================== //
+    let bybitActiveHistToken = null;
+    let bybitActiveHistRange = '1w';
+    let bybitHistCache = new Map();
+
+    async function openBybitHistogram(symbol) {
+      bybitActiveHistToken = symbol;
+      const modal = document.getElementById('modal-bybit-histogram');
+      if (modal) modal.classList.remove('hidden');
+
+      // Update active timeframe button styles
+      ['1w', '1m', '1y'].forEach(r => {
+        const btn = document.getElementById(`bybit-hist-tf-${r}`);
+        if (!btn) return;
+        btn.className = r === bybitActiveHistRange
+          ? 'px-3 py-1.5 rounded-lg text-xs font-bold transition-all bg-cyan-500/20 text-cyan-300 border border-cyan-500/50 shadow-sm'
+          : 'px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-slate-400 hover:text-white';
+      });
+
+      const container = document.getElementById('bybit-hist-chart-container');
+      if (container) {
+        container.innerHTML = `<div class="flex items-center gap-2 text-cyan-300 text-sm font-mono"><span class="animate-spin">⏳</span><span>Loading daily on-chain histogram for $${symbol}...</span></div>`;
+      }
+
+      await loadBybitHistogramData();
+    }
+
+    function closeBybitHistogram() {
+      const modal = document.getElementById('modal-bybit-histogram');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    async function setBybitHistogramTimeframe(range) {
+      bybitActiveHistRange = range;
+      ['1w', '1m', '1y'].forEach(r => {
+        const btn = document.getElementById(`bybit-hist-tf-${r}`);
+        if (!btn) return;
+        btn.className = r === range
+          ? 'px-3 py-1.5 rounded-lg text-xs font-bold transition-all bg-cyan-500/20 text-cyan-300 border border-cyan-500/50 shadow-sm'
+          : 'px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-slate-400 hover:text-white';
+      });
+      await loadBybitHistogramData();
+    }
+
+    async function loadBybitHistogramData() {
+      if (!bybitActiveHistToken) return;
+      const cacheKey = `${bybitActiveHistToken}_${bybitActiveHistRange}`;
+
+      try {
+        let histData = bybitHistCache.get(cacheKey);
+        if (!histData) {
+          const res = await fetch(`/api/bybit/historical?symbol=${encodeURIComponent(bybitActiveHistToken)}&range=${bybitActiveHistRange}`);
+          histData = await res.json();
+          if (histData.success) {
+            bybitHistCache.set(cacheKey, histData);
+          }
+        }
+
+        if (!histData || !histData.success) {
+          throw new Error(histData?.error || 'Failed to load historical timeline');
+        }
+
+        renderBybitHistogramView(histData);
+      } catch (err) {
+        console.error('[BybitHistogram] Error:', err);
+        const container = document.getElementById('bybit-hist-chart-container');
+        if (container) {
+          container.innerHTML = `<div class="text-rose-400 text-xs font-mono">Error loading diagram: ${err.message}</div>`;
+        }
+      }
+    }
+
+    function renderBybitHistogramView(histData) {
+      // 1. Header info
+      const logoEl = document.getElementById('bybit-hist-logo');
+      const symEl = document.getElementById('bybit-hist-symbol');
+      const nameEl = document.getElementById('bybit-hist-name');
+      const catEl = document.getElementById('bybit-hist-cat');
+      const priceEl = document.getElementById('bybit-hist-price');
+      const changeEl = document.getElementById('bybit-hist-change');
+      const chainsEl = document.getElementById('bybit-hist-chains');
+      const tradeBtn = document.getElementById('bybit-hist-trade-btn');
+
+      if (logoEl) logoEl.src = histData.logo;
+      if (symEl) symEl.textContent = `$${histData.symbol}`;
+      if (nameEl) nameEl.textContent = histData.protocolName;
+      if (catEl) catEl.textContent = `${histData.categoryIcon || ''} ${histData.categoryName || ''}`;
+      if (priceEl) priceEl.textContent = formatSpotPrice(histData.price);
+      if (changeEl) {
+        const isUp = (histData.change24hPct || 0) >= 0;
+        changeEl.className = isUp ? 'text-emerald-400 font-bold' : 'text-rose-400 font-bold';
+        changeEl.textContent = `${isUp ? '+' : ''}${(histData.change24hPct || 0).toFixed(2)}% (24H)`;
+      }
+      if (chainsEl) {
+        chainsEl.textContent = (histData.onChainChains || []).join(' • ') || '—';
+      }
+      if (tradeBtn) {
+        tradeBtn.href = `https://www.bybit.com/en/trade/spot/${histData.symbol}/USDT`;
+      }
+
+      // 2. Summary KPI Cards
+      const kpiRev = document.getElementById('bybit-hist-kpi-rev');
+      const kpiHolders = document.getElementById('bybit-hist-kpi-holders');
+      const kpiBb = document.getElementById('bybit-hist-kpi-buyback');
+      const kpiBurn = document.getElementById('bybit-hist-kpi-burn');
+
+      if (kpiRev) {
+        kpiRev.textContent = histData.summary?.totalRevenuePeriod > 0
+          ? formatUSD(histData.summary.totalRevenuePeriod)
+          : '—';
+      }
+      if (kpiHolders) {
+        kpiHolders.textContent = histData.summary?.currentHolders > 0
+          ? formatHoldersCount(histData.summary.currentHolders)
+          : '—';
+      }
+      if (kpiBb) {
+        kpiBb.textContent = histData.summary?.totalBuybackPeriod > 0
+          ? formatUSD(histData.summary.totalBuybackPeriod)
+          : '—';
+      }
+      if (kpiBurn) {
+        kpiBurn.textContent = histData.summary?.totalBurnPeriod > 0
+          ? formatUSD(histData.summary.totalBurnPeriod)
+          : '—';
+      }
+
+      // 3. Render Clustered SVG Histogram
+      renderBybitHistogramChart(histData);
+
+      // 4. Render Table
+      const tableTbody = document.getElementById('bybit-hist-table-tbody');
+      if (tableTbody) {
+        const timelineRev = [...(histData.timeline || [])].reverse();
+        tableTbody.innerHTML = timelineRev.map(pt => {
+          return `
+            <tr class="hover:bg-slate-900/60 transition-colors">
+              <td class="py-2 px-3 font-bold text-slate-300">${pt.date} <span class="text-[10px] text-slate-500 font-normal">(${pt.fullDate})</span></td>
+              <td class="py-2 px-3 text-right font-bold text-cyan-300">${pt.revenue ? formatUSD(pt.revenue) : '—'}</td>
+              <td class="py-2 px-3 text-right font-bold text-emerald-300">${pt.holders ? formatHoldersCount(pt.holders) : '—'}</td>
+              <td class="py-2 px-3 text-right font-bold text-amber-300">${pt.buyback ? formatUSD(pt.buyback) : '—'}</td>
+              <td class="py-2 px-3 text-right font-bold text-rose-300">${pt.burn ? formatUSD(pt.burn) : '—'}</td>
+            </tr>
+          `;
+        }).join('');
+      }
+    }
+
+    function renderBybitHistogramChart(histData) {
+      const container = document.getElementById('bybit-hist-chart-container');
+      if (!container) return;
+
+      const timeline = histData.timeline || [];
+      if (timeline.length === 0) {
+        container.innerHTML = `<div class="text-slate-500 text-sm">No historical points available for this period.</div>`;
+        return;
+      }
+
+      const maxRev = Math.max(...timeline.map(t => t.revenue || 0), 1);
+      const maxHolders = Math.max(...timeline.map(t => t.holders || 0), 1);
+      const maxBuyback = Math.max(...timeline.map(t => t.buyback || 0), 1);
+      const maxBurn = Math.max(...timeline.map(t => t.burn || 0), 1);
+
+      const numDays = timeline.length;
+      const colWidth = numDays <= 7 ? 12 : (numDays <= 30 ? 4.5 : 9);
+      const colGap = 1.5;
+      const groupPadding = numDays <= 7 ? 40 : (numDays <= 30 ? 12 : 25);
+      const groupWidth = (colWidth * 4) + (colGap * 3);
+      
+      const totalChartWidth = Math.max(580, (numDays * (groupWidth + groupPadding)) + 60);
+      const totalChartHeight = 250;
+      const baseLineY = totalChartHeight - 35;
+      const maxBarH = baseLineY - 30;
+
+      let barsSvg = '';
+      let labelsSvg = '';
+      let gridSvg = '';
+
+      // Grid lines
+      [0.25, 0.5, 0.75, 1.0].forEach(p => {
+        const y = Math.round(baseLineY - (p * maxBarH));
+        gridSvg += `<line x1="30" y1="${y}" x2="${totalChartWidth - 20}" y2="${y}" stroke="#1e293b" stroke-dasharray="3,3" stroke-width="1" />`;
+      });
+
+      // Sharp baseline matching user's sketch
+      gridSvg += `<line x1="20" y1="${baseLineY}" x2="${totalChartWidth - 10}" y2="${baseLineY}" stroke="#334155" stroke-width="2" />`;
+
+      timeline.forEach((pt, idx) => {
+        const groupX = 40 + idx * (groupWidth + groupPadding);
+        const tickX = groupX + (groupWidth / 2);
+
+        // Tick mark & label
+        labelsSvg += `<line x1="${tickX}" y1="${baseLineY}" x2="${tickX}" y2="${baseLineY + 6}" stroke="#475569" stroke-width="1.5" />`;
+        labelsSvg += `<text x="${tickX}" y="${baseLineY + 20}" font-family="monospace" font-size="10" font-weight="bold" fill="#94a3b8" text-anchor="middle">${pt.date}</text>`;
+
+        // 4 Clustered Columns per day:
+        // 1. Revenue (Cyan)
+        const h1 = pt.revenue > 0 ? Math.max(3, Math.round((pt.revenue / maxRev) * maxBarH)) : 0;
+        const y1 = baseLineY - h1;
+        const x1 = groupX;
+
+        // 2. Holders (Emerald)
+        const h2 = pt.holders > 0 ? Math.max(3, Math.round((pt.holders / maxHolders) * maxBarH)) : 0;
+        const y2 = baseLineY - h2;
+        const x2 = x1 + colWidth + colGap;
+
+        // 3. Buyback (Amber)
+        const h3 = pt.buyback > 0 ? Math.max(3, Math.round((pt.buyback / maxBuyback) * maxBarH)) : 0;
+        const y3 = baseLineY - h3;
+        const x3 = x2 + colWidth + colGap;
+
+        // 4. Burn (Rose)
+        const h4 = pt.burn > 0 ? Math.max(3, Math.round((pt.burn / maxBurn) * maxBarH)) : 0;
+        const y4 = baseLineY - h4;
+        const x4 = x3 + colWidth + colGap;
+
+        const tip = `${pt.fullDate || pt.date}&#10;• Rev: ${pt.revenue ? formatUSD(pt.revenue) : '—'}&#10;• Holders: ${pt.holders ? formatHoldersCount(pt.holders) : '—'}&#10;• Buyback: ${pt.buyback ? formatUSD(pt.buyback) : '—'}&#10;• Burn: ${pt.burn ? formatUSD(pt.burn) : '—'}`;
+
+        barsSvg += `
+          <g class="cursor-pointer group">
+            <title>${tip}</title>
+            <rect x="${x1 - 3}" y="10" width="${groupWidth + 6}" height="${baseLineY}" fill="transparent" class="hover:fill-cyan-500/5 transition-colors" />
+            
+            <!-- Bar 1: Revenue (Cyan) -->
+            <rect x="${x1}" y="${y1}" width="${colWidth}" height="${h1}" rx="2" fill="#06b6d4" class="hover:fill-cyan-300 transition-colors" />
+            ${h1 === 0 ? `<line x1="${x1}" y1="${baseLineY}" x2="${x1 + colWidth}" y2="${baseLineY}" stroke="#06b6d4" stroke-dasharray="1,1" stroke-width="1" />` : ''}
+
+            <!-- Bar 2: Holders (Emerald) -->
+            <rect x="${x2}" y="${y2}" width="${colWidth}" height="${h2}" rx="2" fill="#10b981" class="hover:fill-emerald-300 transition-colors" />
+            ${h2 === 0 ? `<line x1="${x2}" y1="${baseLineY}" x2="${x2 + colWidth}" y2="${baseLineY}" stroke="#10b981" stroke-dasharray="1,1" stroke-width="1" />` : ''}
+
+            <!-- Bar 3: Buyback (Amber) -->
+            <rect x="${x3}" y="${y3}" width="${colWidth}" height="${h3}" rx="2" fill="#f59e0b" class="hover:fill-amber-300 transition-colors" />
+            ${h3 === 0 ? `<line x1="${x3}" y1="${baseLineY}" x2="${x3 + colWidth}" y2="${baseLineY}" stroke="#f59e0b" stroke-dasharray="1,1" stroke-width="1" />` : ''}
+
+            <!-- Bar 4: Burn (Rose) -->
+            <rect x="${x4}" y="${y4}" width="${colWidth}" height="${h4}" rx="2" fill="#f43f5e" class="hover:fill-rose-400 transition-colors" />
+            ${h4 === 0 ? `<line x1="${x4}" y1="${baseLineY}" x2="${x4 + colWidth}" y2="${baseLineY}" stroke="#f43f5e" stroke-dasharray="1,1" stroke-width="1" />` : ''}
+          </g>
+        `;
+      });
+
+      container.innerHTML = `
+        <svg width="${totalChartWidth}" height="${totalChartHeight}" viewBox="0 0 ${totalChartWidth} ${totalChartHeight}" class="w-full h-full overflow-visible">
+          ${gridSvg}
+          ${barsSvg}
+          ${labelsSvg}
+        </svg>
+      `;
     }
 
     function formatSpotPrice(p) {

@@ -13,7 +13,7 @@ import { getBaseEcosystem } from './baseWatcher.js';
 import { getHyperliquidEcosystem } from './hyperliquidWatcher.js';
 import { getProtocolHistorical, getMacroEcosystemHistorical } from './historicalEngine.js';
 import { getLeaderboard } from './leaderboardEngine.js';
-import { getBybitSpotEcosystem } from './bybitWatcher.js';
+import { getBybitSpotEcosystem, getBybitTokenHistorical } from './bybitWatcher.js';
 import { startOnChainScheduler, getOnChainSchedulerStatus, runOnChainSyncCycle } from './onchainScheduler.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -700,6 +700,18 @@ export async function handleRequest(req, res) {
         'Cache-Control': 'no-cache, no-store, must-revalidate'
       });
       res.end(JSON.stringify(bybitData));
+      return;
+    }
+
+    if (pathname === '/api/bybit/historical' && req.method === 'GET') {
+      const symbol = reqUrl.searchParams.get('symbol') || 'HYPE';
+      const range = reqUrl.searchParams.get('range') || '1w';
+      const histData = await getBybitTokenHistorical(symbol, range);
+      res.writeHead(200, {
+        'Content-Type': 'application/json',
+        'Cache-Control': 'no-cache, no-store, must-revalidate'
+      });
+      res.end(JSON.stringify(histData));
       return;
     }
 
