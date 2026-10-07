@@ -7,6 +7,7 @@ import { getSolanaEcosystem } from './solanaWatcher.js';
 import { getEthereumEcosystem } from './ethereumWatcher.js';
 import { getMonadEcosystem } from './monadWatcher.js';
 import { getBaseEcosystem } from './baseWatcher.js';
+import { getHyperliquidEcosystem } from './hyperliquidWatcher.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -510,13 +511,14 @@ export async function getLeaderboard({
 
   // Load datasets conditionally based on requested scope for maximum performance
   const isGlobal = normScope === 'all' || normScope === 'global';
-  const [globalScan, suiData, solanaData, ethereumData, monadData, baseData] = await Promise.all([
+  const [globalScan, suiData, solanaData, ethereumData, monadData, baseData, hyperliquidData] = await Promise.all([
     isGlobal ? scanProtocols(force).catch(() => ({ protocols: [] })) : Promise.resolve({ protocols: [] }),
     isGlobal || normScope === 'sui' ? getSuiEcosystem(force).catch(() => ({ protocols: [] })) : Promise.resolve({ protocols: [] }),
     normScope === 'solana' ? getSolanaEcosystem(force).catch(() => ({ protocols: [], whaleAnalytics: [], l1Chain: {} })) : Promise.resolve({ protocols: [], whaleAnalytics: [], l1Chain: {} }),
     normScope === 'ethereum' ? getEthereumEcosystem(force).catch(() => ({ protocols: [], whaleAnalytics: [], l1Chain: {} })) : Promise.resolve({ protocols: [], whaleAnalytics: [], l1Chain: {} }),
     normScope === 'monad' ? getMonadEcosystem(force).catch(() => ({ protocols: [], whaleAnalytics: [], l1Chain: {} })) : Promise.resolve({ protocols: [], whaleAnalytics: [], l1Chain: {} }),
-    normScope === 'base' ? getBaseEcosystem(force).catch(() => ({ protocols: [], whaleAnalytics: [], l2Chain: {} })) : Promise.resolve({ protocols: [], whaleAnalytics: [], l2Chain: {} })
+    normScope === 'base' ? getBaseEcosystem(force).catch(() => ({ protocols: [], whaleAnalytics: [], l2Chain: {} })) : Promise.resolve({ protocols: [], whaleAnalytics: [], l2Chain: {} }),
+    normScope === 'hyperliquid' ? getHyperliquidEcosystem(force).catch(() => ({ protocols: [], l1Chain: {} })) : Promise.resolve({ protocols: [], l1Chain: {} })
   ]);
 
   const suiProtocols = suiData.protocols || [];
@@ -524,6 +526,7 @@ export async function getLeaderboard({
   const ethereumProtocols = ethereumData.protocols || [];
   const monadProtocols = monadData.protocols || [];
   const baseProtocols = baseData.protocols || [];
+  const hyperliquidProtocols = hyperliquidData.protocols || [];
   const allProtocols = globalScan.protocols || [];
 
   let items = [];
@@ -591,12 +594,13 @@ export async function getLeaderboard({
 
       sorted.sort((a, b) => (b.metricValue || 0) - (a.metricValue || 0));
       items = dedupeByTokenSymbol(sorted).slice(0, numLimit);
-    } else if (normScope === 'solana' || normScope === 'ethereum' || normScope === 'monad' || normScope === 'base') {
+    } else if (normScope === 'solana' || normScope === 'ethereum' || normScope === 'monad' || normScope === 'base' || normScope === 'hyperliquid') {
       const isEth = normScope === 'ethereum';
       const isMonad = normScope === 'monad';
       const isBase = normScope === 'base';
-      const targetProtos = isBase ? baseProtocols : (isMonad ? monadProtocols : (isEth ? ethereumProtocols : solanaProtocols));
-      const chainLabel = isBase ? 'Base' : (isMonad ? 'Monad' : (isEth ? 'Ethereum' : 'Solana'));
+      const isHl = normScope === 'hyperliquid';
+      const targetProtos = isHl ? hyperliquidProtocols : (isBase ? baseProtocols : (isMonad ? monadProtocols : (isEth ? ethereumProtocols : solanaProtocols)));
+      const chainLabel = isHl ? 'Hyperliquid' : (isBase ? 'Base' : (isMonad ? 'Monad' : (isEth ? 'Ethereum' : 'Solana')));
       categoryTitle = `Top ${chainLabel} Protocols – ${tfShort} Revenue`;
 
       const sorted = [...targetProtos].map(p => {
@@ -1352,13 +1356,14 @@ export async function getLeaderboard({
         explorerUrl: p.explorerUrl,
         raw: p
       }));
-    } else if (normScope === 'solana' || normScope === 'ethereum' || normScope === 'monad' || normScope === 'base') {
+    } else if (normScope === 'solana' || normScope === 'ethereum' || normScope === 'monad' || normScope === 'base' || normScope === 'hyperliquid') {
       const isEth = normScope === 'ethereum';
       const isMonad = normScope === 'monad';
       const isBase = normScope === 'base';
-      const targetProtos = isBase ? baseProtocols : (isMonad ? monadProtocols : (isEth ? ethereumProtocols : solanaProtocols));
-      const targetData = isBase ? baseData : (isMonad ? monadData : (isEth ? ethereumData : solanaData));
-      const chainLabel = isBase ? 'Base' : (isMonad ? 'Monad' : (isEth ? 'Ethereum' : 'Solana'));
+      const isHl = normScope === 'hyperliquid';
+      const targetProtos = isHl ? hyperliquidProtocols : (isBase ? baseProtocols : (isMonad ? monadProtocols : (isEth ? ethereumProtocols : solanaProtocols)));
+      const targetData = isHl ? hyperliquidData : (isBase ? baseData : (isMonad ? monadData : (isEth ? ethereumData : solanaData)));
+      const chainLabel = isHl ? 'Hyperliquid' : (isBase ? 'Base' : (isMonad ? 'Monad' : (isEth ? 'Ethereum' : 'Solana')));
       const protoMap = new Map(targetProtos.map(p => [p.slug, p]));
       const baseWhales = [...(targetData.whaleAnalytics || [])];
       const seenWhaleSlugs = new Set(baseWhales.map(w => w.slug));
@@ -1493,12 +1498,13 @@ export async function getLeaderboard({
       return Math.max(14000, Math.round(r30 * buybackRatio + treasuryUsd * 0.052));
     };
 
-    if (normScope === 'solana' || normScope === 'ethereum' || normScope === 'monad' || normScope === 'base') {
+    if (normScope === 'solana' || normScope === 'ethereum' || normScope === 'monad' || normScope === 'base' || normScope === 'hyperliquid') {
       const isEth = normScope === 'ethereum';
       const isMonad = normScope === 'monad';
       const isBase = normScope === 'base';
-      const targetProtos = isBase ? baseProtocols : (isMonad ? monadProtocols : (isEth ? ethereumProtocols : solanaProtocols));
-      const chainLabel = isBase ? 'Base' : (isMonad ? 'Monad' : (isEth ? 'Ethereum' : 'Solana'));
+      const isHl = normScope === 'hyperliquid';
+      const targetProtos = isHl ? hyperliquidProtocols : (isBase ? baseProtocols : (isMonad ? monadProtocols : (isEth ? ethereumProtocols : solanaProtocols)));
+      const chainLabel = isHl ? 'Hyperliquid' : (isBase ? 'Base' : (isMonad ? 'Monad' : (isEth ? 'Ethereum' : 'Solana')));
       const explicitBuybacks = [...targetProtos]
         .filter(p => (p.mechanism?.treasuryNetWorthUsd || 0) > 0);
       const seenBuybackSlugs = new Set(explicitBuybacks.map(p => p.slug));

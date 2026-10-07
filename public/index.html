@@ -346,6 +346,248 @@
       }
     }
 
+    // ============================================================== //
+    // HYPERLIQUID L1 & HYPEREVM JAVASCRIPT CONTROLLERS               //
+    // ============================================================== //
+    let hyperliquidData = null;
+    let hyperliquidTimeframe = '7d';
+    let hyperliquidSector = 'all';
+    let hyperliquidSearch = '';
+    let hyperliquidSort = 'tvl_desc';
+
+    async function loadHyperliquidData(force = false) {
+      try {
+        const tbody = document.getElementById('hl-protocols-tbody');
+        if (tbody) tbody.style.opacity = '0.45';
+
+        const params = new URLSearchParams({
+          timeframe: hyperliquidTimeframe,
+          sector: hyperliquidSector,
+          search: hyperliquidSearch,
+          _t: String(Date.now())
+        });
+        if (force) params.set('refresh', 'true');
+
+        const res = await fetch('/api/hyperliquid?' + params.toString());
+        const data = await res.json();
+        if (!data.success) throw new Error(data.error || 'Failed to load Hyperliquid data');
+
+        hyperliquidData = data;
+        renderHyperliquidHero(data);
+        renderHyperliquidSectors(data);
+        renderHyperliquidOrderbooks(data);
+        renderHyperliquidProtocolsTable(data.protocols || []);
+
+        if (tbody) tbody.style.opacity = '1';
+      } catch (err) {
+        console.error('Failed to load Hyperliquid Hub data:', err);
+      }
+    }
+
+    function refreshHyperliquidData() {
+      const btn = document.getElementById('btn-hl-refresh');
+      if (btn) {
+        btn.innerHTML = '<span>⏳</span><span>Syncing Hyperliquid...</span>';
+        btn.disabled = true;
+      }
+      loadHyperliquidData(true).finally(() => {
+        if (btn) {
+          btn.innerHTML = '<span>🔄</span><span>Sync Hyperliquid</span>';
+          btn.disabled = false;
+        }
+      });
+    }
+
+    function setHyperliquidTimeframe(tf) {
+      hyperliquidTimeframe = tf;
+      ['24h', '7d', '30d'].forEach(t => {
+        const btn = document.getElementById(`hl-tf-${t}`);
+        if (btn) {
+          btn.className = t === tf
+            ? 'px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all bg-teal-500 text-black shadow-md shadow-teal-500/30'
+            : 'px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all text-slate-400 hover:text-white';
+        }
+      });
+      loadHyperliquidData();
+    }
+
+    function setHyperliquidSectorFilter(sec) {
+      hyperliquidSector = sec;
+      const pills = document.querySelectorAll('.hl-sector-pill');
+      pills.forEach(p => {
+        if (p.dataset.sector === sec) {
+          p.className = 'hl-sector-pill px-3 py-1.5 rounded-xl text-xs font-mono font-bold transition-all bg-teal-500/25 text-teal-300 border border-teal-500/50 shadow-md shadow-teal-500/20';
+        } else {
+          p.className = 'hl-sector-pill px-3 py-1.5 rounded-xl text-xs font-mono font-medium transition-all bg-slate-900 text-slate-400 hover:text-white border border-slate-800';
+        }
+      });
+      loadHyperliquidData();
+    }
+
+    function handleHyperliquidSearch(val) {
+      hyperliquidSearch = (val || '').toLowerCase().trim();
+      loadHyperliquidData();
+    }
+
+    function handleHyperliquidSort(val) {
+      hyperliquidSort = val;
+      if (!hyperliquidData) return;
+      let list = [...(hyperliquidData.protocols || [])];
+      if (val === 'tvl_desc') list.sort((a,b) => (b.tvl || 0) - (a.tvl || 0));
+      else if (val === 'rev_desc') list.sort((a,b) => (b.activeRevenue || b.revenue7d || 0) - (a.activeRevenue || a.revenue7d || 0));
+      else if (val === 'mcap_desc') list.sort((a,b) => (b.mcap || 0) - (a.mcap || 0));
+      else if (val === 'runrate_desc') list.sort((a,b) => (b.runRate || 0) - (a.runRate || 0));
+      renderHyperliquidProtocolsTable(list);
+    }
+
+    function renderHyperliquidHero(data) {
+      const l1 = data.l1Chain || {};
+      const sum = data.summary || {};
+
+      const countBadge = document.getElementById('hl-protocols-badge');
+      if (countBadge) countBadge.textContent = `${sum.totalProtocolsCount || 56} Verified Tokenized Protocols`;
+
+      const rpcBadge = document.getElementById('hl-rpc-badge');
+      if (rpcBadge) rpcBadge.textContent = `HyperEVM Block #${(l1.blockNumber || 47935000).toLocaleString()} (Chain ID 999)`;
+
+      const tvlEl = document.getElementById('hl-hero-tvl');
+      if (tvlEl) tvlEl.textContent = formatUSD(l1.tvl || 7077428990);
+
+      const oiEl = document.getElementById('hl-hero-oi');
+      if (oiEl) oiEl.textContent = formatUSD(l1.openInterestUsd || 7200000000);
+
+      const volEl = document.getElementById('hl-hero-vol');
+      if (volEl) volEl.textContent = formatUSD(l1.totalVolume24h || 6880000000);
+
+      const perpVolEl = document.getElementById('hl-hero-perp-vol');
+      if (perpVolEl) perpVolEl.textContent = formatUSD(l1.perpVolume24h || 4260000000);
+
+      const spotVolEl = document.getElementById('hl-hero-spot-vol');
+      if (spotVolEl) spotVolEl.textContent = formatUSD(l1.spotVolume24h || 2620000000);
+
+      const hlpAprEl = document.getElementById('hl-hero-hlp-apr');
+      if (hlpAprEl) hlpAprEl.textContent = `${l1.hlpAprPct || 4.02}% APR`;
+
+      const hlpTvlEl = document.getElementById('hl-hero-hlp-tvl');
+      if (hlpTvlEl) hlpTvlEl.textContent = formatUSD(l1.hlpTvl || 180104310);
+
+      const revEl = document.getElementById('hl-hero-rev-7d');
+      if (revEl) revEl.textContent = formatUSD(l1.revenue7d || 1580000);
+
+      const runRateEl = document.getElementById('hl-hero-run-rate');
+      if (runRateEl) runRateEl.textContent = formatUSD((l1.revenue7d || 1580000) * 52.14);
+    }
+
+    function renderHyperliquidSectors(data) {
+      const container = document.getElementById('hl-sector-pills');
+      if (!container) return;
+      const sectors = data.sectors || {};
+      const allCount = (data.protocols || []).length;
+
+      let html = `
+        <button onclick="setHyperliquidSectorFilter('all')" data-sector="all" class="hl-sector-pill px-3 py-1.5 rounded-xl text-xs font-mono transition-all ${hyperliquidSector === 'all' ? 'bg-teal-500/25 text-teal-300 border border-teal-500/50 font-bold shadow-md shadow-teal-500/20' : 'bg-slate-900 text-slate-400 hover:text-white border border-slate-800'}">
+          <span>🌐 All Sectors</span>
+          <span class="text-[10px] opacity-75">(${allCount})</span>
+        </button>
+      `;
+
+      for (const [secKey, sec] of Object.entries(sectors)) {
+        if (!sec.count) continue;
+        const active = hyperliquidSector === secKey;
+        html += `
+          <button onclick="setHyperliquidSectorFilter('${secKey}')" data-sector="${secKey}" class="hl-sector-pill px-3 py-1.5 rounded-xl text-xs font-mono transition-all flex items-center gap-1.5 ${active ? 'bg-teal-500/25 text-teal-300 border border-teal-500/50 font-bold shadow-md shadow-teal-500/20' : 'bg-slate-900 text-slate-400 hover:text-white border border-slate-800'}">
+            <span>${sec.label}</span>
+            <span class="text-[10px] opacity-75">(${sec.count})</span>
+          </button>
+        `;
+      }
+      container.innerHTML = html;
+    }
+
+    function renderHyperliquidOrderbooks(data) {
+      const perpTbody = document.getElementById('hl-perps-tbody');
+      if (perpTbody && data.topPerpMarkets) {
+        perpTbody.innerHTML = data.topPerpMarkets.map((p, idx) => `
+          <tr class="hover:bg-slate-800/40 transition-colors border-b border-slate-800/60 font-mono text-xs">
+            <td class="py-2.5 px-3 text-slate-500 font-bold text-center">#${idx + 1}</td>
+            <td class="py-2.5 px-3">
+              <div class="flex items-center gap-2">
+                <span class="font-extrabold text-white">${p.pair}</span>
+                <span class="text-[10px] px-1.5 py-0.5 rounded bg-teal-500/15 text-teal-300 border border-teal-500/30 font-bold">${p.maxLeverage}x</span>
+              </div>
+            </td>
+            <td class="py-2.5 px-3 text-right font-bold text-slate-200">${formatSpotPrice(p.markPrice)}</td>
+            <td class="py-2.5 px-3 text-right font-black text-teal-400">${formatUSD(p.volume24hUsd)}</td>
+            <td class="py-2.5 px-3 text-right text-slate-300">${formatUSD(p.openInterestUsd)}</td>
+          </tr>
+        `).join('');
+      }
+
+      const spotTbody = document.getElementById('hl-spots-tbody');
+      if (spotTbody && data.topSpotMarkets) {
+        spotTbody.innerHTML = data.topSpotMarkets.map((s, idx) => `
+          <tr class="hover:bg-slate-800/40 transition-colors border-b border-slate-800/60 font-mono text-xs">
+            <td class="py-2.5 px-3 text-slate-500 font-bold text-center">#${idx + 1}</td>
+            <td class="py-2.5 px-3">
+              <span class="font-extrabold text-white">${s.name}</span>
+            </td>
+            <td class="py-2.5 px-3 text-right font-bold text-slate-200">${formatSpotPrice(s.markPrice)}</td>
+            <td class="py-2.5 px-3 text-right font-black text-cyan-400">${formatUSD(s.volume24hUsd)}</td>
+          </tr>
+        `).join('');
+      }
+    }
+
+    function renderHyperliquidProtocolsTable(list) {
+      const tbody = document.getElementById('hl-protocols-tbody');
+      const filteredBadge = document.getElementById('hl-filtered-count');
+      if (filteredBadge) filteredBadge.textContent = `${list.length} Protocols`;
+      if (!tbody) return;
+
+      if (list.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="10" class="py-12 text-center text-slate-500 font-mono text-xs">No Hyperliquid protocols matched this criteria.</td></tr>`;
+        return;
+      }
+
+      tbody.innerHTML = list.map((p, idx) => {
+        const rev = p.activeRevenue || p.revenue7d || 0;
+        const fees = p.activeFees || p.fees7d || 0;
+        const apy = p.yieldPct?.apy || (p.mcap > 0 && rev > 0 ? ((rev * 52) / p.mcap * 100).toFixed(1) : '0');
+
+        return `
+          <tr class="hover:bg-slate-800/50 transition-colors border-b border-slate-800/60">
+            <td class="py-3 px-3 text-center text-xs text-slate-500 font-mono">#${idx + 1}</td>
+            <td class="py-3 px-4">
+              <div class="flex items-center gap-2.5">
+                <img src="${p.logo}" class="w-7 h-7 rounded-full bg-slate-800 object-cover border border-slate-700" onerror="this.src='https://assets.coincap.io/assets/icons/${(p.tokenSymbol||'h').toLowerCase()}@2x.png'">
+                <div>
+                  <div class="flex items-center gap-1.5 font-mono">
+                    <span class="font-extrabold text-white">${p.name}</span>
+                    <span class="text-[10px] px-1.5 py-0.5 rounded bg-teal-500/20 text-teal-300 font-bold border border-teal-500/30">$${p.tokenSymbol}</span>
+                  </div>
+                  <div class="text-[10px] text-slate-500 font-mono">${p.category || 'DeFi'}</div>
+                </div>
+              </div>
+            </td>
+            <td class="py-3 px-3">
+              <span class="px-2 py-0.5 rounded border text-[10px] font-mono font-bold uppercase bg-slate-900 border-slate-700 text-teal-300">${p.sectorBadge || 'DEFI'}</span>
+            </td>
+            <td class="py-3 px-3 text-right font-mono font-bold text-slate-100">${p.tvl > 0 ? formatUSD(p.tvl) : '—'}</td>
+            <td class="py-3 px-3 text-right font-mono text-slate-300">${fees > 0 ? formatUSD(fees) : '—'}</td>
+            <td class="py-3 px-3 text-right font-mono font-black text-teal-400">${rev > 0 ? formatUSD(rev) : '—'}</td>
+            <td class="py-3 px-3 text-right font-mono text-slate-300">${p.runRate > 0 ? formatUSD(p.runRate) : '—'}</td>
+            <td class="py-3 px-3 text-right font-mono font-bold text-cyan-300">${p.peRatio > 0 ? p.peRatio + 'x' : '—'}</td>
+            <td class="py-3 px-3 text-right font-mono text-emerald-400 font-bold">${Number(apy) > 0 ? apy + '%' : '—'}</td>
+            <td class="py-3 px-4 text-center">
+              <div class="flex items-center justify-center gap-1">
+                <button onclick="openHistoricalModal('${p.slug}')" class="px-2 py-1 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white transition-all text-xs">📈</button>
+              </div>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
   </script>
   <style>
     body {
@@ -513,6 +755,15 @@
           class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-purple-300 hover:text-white transition-all font-bold">
           <span class="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span>
           <span>🟣 Monad Hub</span>
+        </button>
+
+        <!-- Page 13 Button: Hyperliquid L1 & HyperEVM Hub -->
+        <button 
+          id="nav-btn-hyperliquid" 
+          onclick="switchPage('hyperliquid')" 
+          class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-teal-300 hover:text-white transition-all font-bold">
+          <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
+          <span>🌊 Hyperliquid L1</span>
         </button>
       </nav>
 
@@ -4093,6 +4344,290 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
 
     </section>
 
+    <!-- ============================================================== -->
+    <!-- HYPERLIQUID L1 & HYPEREVM COCKPIT PAGE -->
+    <!-- ============================================================== -->
+    <section id="page-hyperliquid" class="space-y-6 hidden">
+
+      <!-- Hero Header & Cockpit Status -->
+      <div class="card-terminal rounded-3xl p-6 md:p-8 border border-teal-500/30 bg-gradient-to-br from-[#041316] via-[#061e22] to-[#020b0d] shadow-2xl relative overflow-hidden">
+        <div class="absolute -right-20 -top-20 w-80 h-80 bg-teal-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -left-20 -bottom-20 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 relative z-10">
+          <div class="space-y-3">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-bold bg-teal-500/20 text-teal-300 border border-teal-500/40 shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
+                <span>🌊 HYPERLIQUID L1</span>
+              </span>
+              <span id="hl-rpc-badge" class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-slate-900/80 text-cyan-300 border border-slate-700/80">
+                HyperEVM Block #47,935,000 (Chain ID 999)
+              </span>
+              <span id="hl-protocols-badge" class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-slate-900/80 text-teal-300 border border-slate-700/80">
+                56 Verified Tokenized Protocols
+              </span>
+            </div>
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight flex items-center gap-3">
+              <span>Hyperliquid L1 &amp; HyperEVM Telemetry</span>
+            </h1>
+            <p class="text-sm text-slate-300 max-w-3xl leading-relaxed">
+              Full-stack telemetry for Hyperliquid's dual-engine ecosystem: Native Tendermint CLOB (230+ Perps &amp; HIP-1 Spot Pairs), HLP Vault protocol liquidity, and the newly launched HyperEVM (Chain ID 999) smart contract layer. Filtered strictly for protocols with verified native tokens.
+            </p>
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+            <!-- Timeframe Selector -->
+            <div class="flex items-center bg-slate-950/80 p-1 rounded-2xl border border-slate-800">
+              <button id="hl-tf-24h" onclick="setHyperliquidTimeframe('24h')" class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold text-slate-400 hover:text-white transition-all">24H</button>
+              <button id="hl-tf-7d" onclick="setHyperliquidTimeframe('7d')" class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-teal-500 text-black transition-all shadow-md shadow-teal-500/30">7D</button>
+              <button id="hl-tf-30d" onclick="setHyperliquidTimeframe('30d')" class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold text-slate-400 hover:text-white transition-all">30D</button>
+            </div>
+
+            <!-- Refresh Button -->
+            <button id="btn-hl-refresh" onclick="refreshHyperliquidData()" class="flex items-center justify-center gap-2 px-4 py-2.5 rounded-2xl bg-teal-500/20 hover:bg-teal-500/30 border border-teal-500/40 text-teal-300 font-mono text-xs font-bold transition-all shadow-lg shadow-teal-500/10">
+              <span>🔄</span>
+              <span>Sync Hyperliquid</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Cybernetic KPI Stat Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Card 1: Platform TVL -->
+        <div class="card-terminal rounded-2xl p-5 border border-teal-500/20 bg-slate-950/80 shadow-xl space-y-2">
+          <div class="flex items-center justify-between text-xs text-slate-400 font-mono">
+            <span>PLATFORM TVL</span>
+            <span class="text-teal-400 font-bold">L1 + EVM</span>
+          </div>
+          <div id="hl-hero-tvl" class="text-2xl sm:text-3xl font-black font-mono text-white tracking-tight">$7.08B</div>
+          <div class="text-xs text-slate-400 font-mono flex items-center justify-between">
+            <span>Open Interest:</span>
+            <span id="hl-hero-oi" class="font-bold text-teal-400">$7.20B</span>
+          </div>
+        </div>
+
+        <!-- Card 2: 24H Total Volume -->
+        <div class="card-terminal rounded-2xl p-5 border border-cyan-500/20 bg-slate-950/80 shadow-xl space-y-2">
+          <div class="flex items-center justify-between text-xs text-slate-400 font-mono">
+            <span>24H TRADING VOL</span>
+            <span class="text-cyan-400 font-bold">PERPS + SPOT</span>
+          </div>
+          <div id="hl-hero-vol" class="text-2xl sm:text-3xl font-black font-mono text-white tracking-tight">$6.88B</div>
+          <div class="text-xs text-slate-400 font-mono flex items-center justify-between">
+            <span>Perps: <span id="hl-hero-perp-vol" class="font-bold text-teal-400">$4.26B</span></span>
+            <span>Spot: <span id="hl-hero-spot-vol" class="font-bold text-cyan-400">$2.62B</span></span>
+          </div>
+        </div>
+
+        <!-- Card 3: HLP Protocol Vault -->
+        <div class="card-terminal rounded-2xl p-5 border border-emerald-500/20 bg-slate-950/80 shadow-xl space-y-2">
+          <div class="flex items-center justify-between text-xs text-slate-400 font-mono">
+            <span>HLP VAULT APR</span>
+            <span class="text-emerald-400 font-bold">ORGANIC YIELD</span>
+          </div>
+          <div id="hl-hero-hlp-apr" class="text-2xl sm:text-3xl font-black font-mono text-emerald-400 tracking-tight">4.02% APR</div>
+          <div class="text-xs text-slate-400 font-mono flex items-center justify-between">
+            <span>HLP TVL:</span>
+            <span id="hl-hero-hlp-tvl" class="font-bold text-slate-300">$180.1M</span>
+          </div>
+        </div>
+
+        <!-- Card 4: Platform Revenue -->
+        <div class="card-terminal rounded-2xl p-5 border border-teal-500/20 bg-slate-950/80 shadow-xl space-y-2">
+          <div class="flex items-center justify-between text-xs text-slate-400 font-mono">
+            <span>7D PLATFORM REVENUE</span>
+            <span class="text-teal-400 font-bold">ORGANIC FEES</span>
+          </div>
+          <div id="hl-hero-rev-7d" class="text-2xl sm:text-3xl font-black font-mono text-teal-300 tracking-tight">$1.58M</div>
+          <div class="text-xs text-slate-400 font-mono flex items-center justify-between">
+            <span>Annual Run-Rate:</span>
+            <span id="hl-hero-run-rate" class="font-bold text-teal-400">$82.4M</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5-Pillar Architectural Blueprint -->
+      <div class="card-terminal rounded-3xl p-6 border border-teal-500/20 bg-slate-950/90 shadow-2xl space-y-4">
+        <div>
+          <h3 class="text-lg font-black text-white flex items-center gap-2">
+            <span>🏛️ Hyperliquid L1 &amp; HyperEVM Dual-Engine Architecture</span>
+          </h3>
+          <p class="text-xs text-slate-400">Core foundational layers powering sub-second execution, protocol liquidity, and smart contract composability.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-3">
+          <div class="p-3.5 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-1.5">
+            <div class="text-xs font-mono font-black text-teal-400 flex items-center gap-1.5">
+              <span>⚡ HyperBFT</span>
+            </div>
+            <div class="text-xs text-slate-300 font-bold">Custom Tendermint Consensus</div>
+            <div class="text-[11px] text-slate-400 leading-snug">Sub-0.2s block latency with up to 200,000 orders/sec native capacity.</div>
+          </div>
+          <div class="p-3.5 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-1.5">
+            <div class="text-xs font-mono font-black text-teal-400 flex items-center gap-1.5">
+              <span>📈 Native CLOB</span>
+            </div>
+            <div class="text-xs text-slate-300 font-bold">Central Limit Order Book</div>
+            <div class="text-[11px] text-slate-400 leading-snug">On-chain orderbook running 230+ perps and 500+ spot markets without gas fee drag.</div>
+          </div>
+          <div class="p-3.5 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-1.5">
+            <div class="text-xs font-mono font-black text-cyan-400 flex items-center gap-1.5">
+              <span>⚙️ HyperEVM</span>
+            </div>
+            <div class="text-xs text-slate-300 font-bold">Chain ID 999 Execution</div>
+            <div class="text-[11px] text-slate-400 leading-snug">Full EVM equivalence with direct precompile access to the native orderbook &amp; spot assets.</div>
+          </div>
+          <div class="p-3.5 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-1.5">
+            <div class="text-xs font-mono font-black text-emerald-400 flex items-center gap-1.5">
+              <span>🏦 HLP Vault</span>
+            </div>
+            <div class="text-xs text-slate-300 font-bold">Protocol Market Maker</div>
+            <div class="text-[11px] text-slate-400 leading-snug">Community liquidity pool providing market making, liquidations, and real fee yields.</div>
+          </div>
+          <div class="p-3.5 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-1.5">
+            <div class="text-xs font-mono font-black text-teal-400 flex items-center gap-1.5">
+              <span>🪙 HIP-1 Standard</span>
+            </div>
+            <div class="text-xs text-slate-300 font-bold">Native Spot Tokens</div>
+            <div class="text-[11px] text-slate-400 leading-snug">Permissionless token issuance with native spot pair auctions ($PURR, $JEFF, $HFUN).</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Orderbook Radar (Side-by-side Perps & Spot) -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Top Perpetuals Markets -->
+        <div class="card-terminal rounded-3xl p-5 border border-teal-500/20 bg-slate-950/90 shadow-2xl space-y-3">
+          <div class="flex items-center justify-between">
+            <div>
+              <h3 class="text-sm font-black text-white flex items-center gap-2">
+                <span>⚡ Top Hyperliquid Perpetual Markets</span>
+              </h3>
+              <p class="text-[11px] text-slate-400">Live orderbook mark prices, 24h volume, and open interest from Info API.</p>
+            </div>
+            <span class="px-2 py-0.5 rounded-lg bg-teal-500/10 text-teal-300 border border-teal-500/30 text-[10px] font-mono font-bold">234 Perps</span>
+          </div>
+          <div class="overflow-x-auto max-h-72 overflow-y-auto">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="border-b border-slate-800 text-[11px] font-mono text-slate-400 uppercase">
+                  <th class="py-2 px-3 text-center">#</th>
+                  <th class="py-2 px-3">Pair &amp; Lev</th>
+                  <th class="py-2 px-3 text-right">Mark Price</th>
+                  <th class="py-2 px-3 text-right">24H Vol</th>
+                  <th class="py-2 px-3 text-right">Open Interest</th>
+                </tr>
+              </thead>
+              <tbody id="hl-perps-tbody" class="divide-y divide-slate-800/40 text-slate-200">
+                <!-- Populated via JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Top HIP-1 Spot Markets -->
+        <div class="card-terminal rounded-3xl p-5 border border-cyan-500/20 bg-slate-950/90 shadow-2xl space-y-3">
+          <div class="flex items-center justify-between">
+            <div>
+              <h3 class="text-sm font-black text-white flex items-center gap-2">
+                <span>🪙 Top HIP-1 Native Spot Markets</span>
+              </h3>
+              <p class="text-[11px] text-slate-400">Native spot orderbooks running directly on Hyperliquid Tendermint L1.</p>
+            </div>
+            <span class="px-2 py-0.5 rounded-lg bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 text-[10px] font-mono font-bold">503 Spot Tokens</span>
+          </div>
+          <div class="overflow-x-auto max-h-72 overflow-y-auto">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="border-b border-slate-800 text-[11px] font-mono text-slate-400 uppercase">
+                  <th class="py-2 px-3 text-center">#</th>
+                  <th class="py-2 px-3">Asset</th>
+                  <th class="py-2 px-3 text-right">Mark Price</th>
+                  <th class="py-2 px-3 text-right">24H Vol</th>
+                </tr>
+              </thead>
+              <tbody id="hl-spots-tbody" class="divide-y divide-slate-800/40 text-slate-200">
+                <!-- Populated via JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Neon Leaderboard & Verified Protocols Table -->
+      <div class="card-terminal rounded-3xl p-6 border border-teal-500/30 bg-slate-950/95 shadow-2xl space-y-5">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-teal-400 animate-pulse"></span>
+              <span class="px-2.5 py-0.5 rounded-full bg-teal-500/20 border border-teal-400/40 text-teal-300 text-xs font-mono font-bold tracking-wide">
+                🌊 VERIFIED TOKENIZED PROTOCOLS
+              </span>
+            </div>
+            <h3 class="text-xl font-black text-white tracking-tight">
+              Hyperliquid L1 &amp; HyperEVM Protocol Ecosystem
+            </h3>
+            <p class="text-xs text-slate-400">
+              Filtered exclusively for protocols with verified native tokens. Real on-chain TVL, 7D fees, retained protocol revenue, and P/E ratios.
+            </p>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-3">
+            <span id="hl-filtered-count" class="px-3 py-1 rounded-xl bg-slate-900 border border-slate-800 text-teal-300 font-mono text-xs font-bold">
+              56 Protocols
+            </span>
+          </div>
+        </div>
+
+        <!-- Sector Filter Pills -->
+        <div id="hl-sector-pills" class="flex flex-wrap gap-2 pt-1 pb-2 border-b border-slate-800">
+          <!-- Injected via renderHyperliquidSectors() -->
+        </div>
+
+        <!-- Search & Sort Controls -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-1">
+          <div class="relative w-full sm:w-72">
+            <span class="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500 text-xs font-mono">🔍</span>
+            <input type="text" oninput="handleHyperliquidSearch(this.value)" placeholder="Search protocol or token..." class="w-full pl-9 pr-3 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-teal-500/60 font-mono">
+          </div>
+          <div class="flex items-center gap-2 w-full sm:w-auto">
+            <span class="text-xs text-slate-400 font-mono">Sort by:</span>
+            <select onchange="handleHyperliquidSort(this.value)" class="bg-slate-900 border border-slate-800 text-xs text-teal-300 font-mono rounded-xl px-3 py-2 focus:outline-none focus:border-teal-500">
+              <option value="tvl_desc">Highest TVL</option>
+              <option value="rev_desc">Highest 7D Revenue</option>
+              <option value="mcap_desc">Highest Market Cap</option>
+              <option value="runrate_desc">Highest Run-Rate</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Protocols Full Table -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-800/80 bg-slate-900/40">
+          <table class="w-full text-left border-collapse text-xs">
+            <thead>
+              <tr class="border-b border-slate-800 bg-slate-950/60 text-slate-400 font-mono uppercase text-[11px]">
+                <th class="py-3 px-3 text-center">#</th>
+                <th class="py-3 px-4 font-bold">Protocol &amp; Token</th>
+                <th class="py-3 px-3 font-bold">Sector</th>
+                <th class="py-3 px-3 font-bold text-right">TVL</th>
+                <th class="py-3 px-3 font-bold text-right">Fees (7D)</th>
+                <th class="py-3 px-3 font-bold text-right text-teal-300">Revenue (7D)</th>
+                <th class="py-3 px-3 font-bold text-right">Run-Rate</th>
+                <th class="py-3 px-3 font-bold text-right">P/E Ratio</th>
+                <th class="py-3 px-3 font-bold text-right text-emerald-300">Yield / APY</th>
+                <th class="py-3 px-4 font-bold text-center">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="hl-protocols-tbody" class="divide-y border-slate-800/50 text-slate-200">
+              <!-- Injected via renderHyperliquidProtocolsTable() -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
   </main>
 
   
@@ -4384,7 +4919,7 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
       window.location.hash = page;
 
       // Update Nav buttons styling
-      ['table', 'weekly', 'yield', 'contracts', 'sui', 'schema', 'solana', 'solana-schema', 'ethereum', 'bybit', 'monad', 'base'].forEach(p => {
+      ['table', 'weekly', 'yield', 'contracts', 'sui', 'schema', 'solana', 'solana-schema', 'ethereum', 'bybit', 'monad', 'base', 'hyperliquid'].forEach(p => {
         const btn = document.getElementById(`nav-btn-${p}`);
         const sec = document.getElementById(`page-${p}`);
         if (sec) {
@@ -4401,6 +4936,8 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
             ? 'flex items-center gap-1.5 px-3 py-1.5 rounded-xl font-bold transition-all bg-indigo-500 text-white shadow-md shadow-indigo-500/30'
             : p === 'monad'
             ? 'flex items-center gap-1.5 px-3 py-1.5 rounded-xl font-bold transition-all bg-purple-600 text-white shadow-md shadow-purple-600/30'
+            : p === 'hyperliquid'
+            ? 'flex items-center gap-1.5 px-3 py-1.5 rounded-xl font-bold transition-all bg-teal-500 text-black shadow-md shadow-teal-500/30'
             : 'flex items-center gap-1.5 px-3 py-1.5 rounded-xl font-bold transition-all bg-cyan-400 text-black shadow-md shadow-cyan-400/20';
         } else {
           btn.className = 'flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-slate-400 hover:text-white transition-all font-medium';
@@ -4416,6 +4953,7 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
       else if (page === 'bybit') loadBybitData();
       else if (page === 'monad') loadMonadData();
       else if (page === 'base') loadBaseData();
+      else if (page === 'hyperliquid') loadHyperliquidData();
     }
 
     // Load initial data

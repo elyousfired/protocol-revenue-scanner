@@ -6,6 +6,7 @@ import { getSolanaEcosystem } from './solanaWatcher.js';
 import { getEthereumEcosystem } from './ethereumWatcher.js';
 import { getMonadEcosystem } from './monadWatcher.js';
 import { getBaseEcosystem } from './baseWatcher.js';
+import { getHyperliquidEcosystem } from './hyperliquidWatcher.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -1058,7 +1059,7 @@ export async function getBybitSpotEcosystem(force = false) {
 
   console.log('[BybitWatcher] Fetching live Bybit V5 Spot Tickers & computing Category Volume Flow...');
 
-  const [bybitRes, suiEco, solEco, ethEco, monEco, baseEco, cgMap, llamaIndex] = await Promise.all([
+  const [bybitRes, suiEco, solEco, ethEco, monEco, baseEco, hlEco, cgMap, llamaIndex] = await Promise.all([
     fetch('https://api.bybit.com/v5/market/tickers?category=spot', {
       signal: AbortSignal.timeout(15000)
     }).then(async r => {
@@ -1074,6 +1075,7 @@ export async function getBybitSpotEcosystem(force = false) {
     getEthereumEcosystem(false).catch(() => ({ protocols: [] })),
     getMonadEcosystem(false).catch(() => ({ protocols: [] })),
     getBaseEcosystem(false).catch(() => ({ protocols: [] })),
+    getHyperliquidEcosystem(false).catch(() => ({ protocols: [] })),
     (async () => {
       const CG_CACHE_FILE = './cache/cg_mcap.json';
       const TMP_CG_CACHE_FILE = '/tmp/cg_mcap.json';
@@ -1126,7 +1128,8 @@ export async function getBybitSpotEcosystem(force = false) {
     ...[...(solEco.l1Chain ? [solEco.l1Chain] : []), ...(solEco.protocols || [])].map(p => ({ ...p, _injectedChain: 'solana' })),
     ...[...(ethEco.l1Chain ? [ethEco.l1Chain] : []), ...(ethEco.protocols || [])].map(p => ({ ...p, _injectedChain: 'ethereum' })),
     ...[...(monEco.l1Chain ? [monEco.l1Chain] : []), ...(monEco.protocols || [])].map(p => ({ ...p, _injectedChain: 'monad' })),
-    ...[...(baseEco.l2Chain ? [baseEco.l2Chain] : []), ...(baseEco.protocols || [])].map(p => ({ ...p, _injectedChain: 'base' }))
+    ...[...(baseEco.l2Chain ? [baseEco.l2Chain] : []), ...(baseEco.protocols || [])].map(p => ({ ...p, _injectedChain: 'base' })),
+    ...[...(hlEco.l1Chain ? [hlEco.l1Chain] : []), ...(hlEco.protocols || [])].map(p => ({ ...p, _injectedChain: 'hyperliquid' }))
   ];
 
   for (const p of allProts) {

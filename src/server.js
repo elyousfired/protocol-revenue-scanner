@@ -10,6 +10,7 @@ import { getSolanaEcosystem } from './solanaWatcher.js';
 import { getEthereumEcosystem } from './ethereumWatcher.js';
 import { getMonadEcosystem } from './monadWatcher.js';
 import { getBaseEcosystem } from './baseWatcher.js';
+import { getHyperliquidEcosystem } from './hyperliquidWatcher.js';
 import { getProtocolHistorical, getMacroEcosystemHistorical } from './historicalEngine.js';
 import { getLeaderboard } from './leaderboardEngine.js';
 import { getBybitSpotEcosystem } from './bybitWatcher.js';
@@ -613,6 +614,77 @@ export async function handleRequest(req, res) {
       const baseData = await getBaseEcosystem(true);
       res.writeHead(200, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify({ success: true, message: 'Base telemetry refreshed', data: baseData }));
+      return;
+    }
+
+    // -------------------------------------------------------------
+    // API 2j: Hyperliquid L1 & HyperEVM Dedicated Ecosystem Hub
+    // -------------------------------------------------------------
+    if (pathname === '/api/hyperliquid' && req.method === 'GET') {
+      const forceRefresh = reqUrl.searchParams.get('refresh') === 'true';
+      const timeframe = (reqUrl.searchParams.get('timeframe') || '7d').toLowerCase();
+      const validTf = ['24h', '7d', '30d'].includes(timeframe) ? timeframe : '7d';
+      const sectorFilter = reqUrl.searchParams.get('sector');
+      const search = (reqUrl.searchParams.get('search') || '').toLowerCase().trim();
+
+      const hlData = await getHyperliquidEcosystem(forceRefresh);
+
+      let activeProtocols = (hlData.protocols || []).map(p => {
+        let rev = p.revenue7d || 0;
+        let fees = p.fees7d || 0;
+        if (validTf === '24h') {
+          rev = p.revenue24h || 0;
+          fees = p.fees24h || 0;
+        } else if (validTf === '30d') {
+          rev = p.revenue30d || 0;
+          fees = p.fees30d || 0;
+        }
+        return {
+          ...p,
+          activeTimeframe: validTf,
+          activeFees: fees,
+          activeRevenue: rev
+        };
+      });
+
+      if (sectorFilter && sectorFilter !== 'all') {
+        activeProtocols = activeProtocols.filter(p => p.sector === sectorFilter);
+      }
+
+      if (search) {
+        activeProtocols = activeProtocols.filter(p =>
+          (p.name && p.name.toLowerCase().includes(search)) ||
+          (p.tokenSymbol && p.tokenSymbol.toLowerCase().includes(search)) ||
+          (p.slug && p.slug.toLowerCase().includes(search))
+        );
+      }
+
+      const responsePayload = {
+        success: true,
+        lastUpdated: hlData.lastUpdated,
+        timeframe: validTf,
+        totalProtocolsCount: (hlData.protocols || []).length,
+        filteredCount: activeProtocols.length,
+        l1Chain: hlData.l1Chain,
+        summary: hlData.summary,
+        sectors: hlData.sectors,
+        protocols: activeProtocols,
+        topPerpMarkets: hlData.topPerpMarkets,
+        topSpotMarkets: hlData.topSpotMarkets
+      };
+
+      res.writeHead(200, {
+        'Content-Type': 'application/json',
+        'Cache-Control': 'no-cache, no-store, must-revalidate'
+      });
+      res.end(JSON.stringify(responsePayload));
+      return;
+    }
+
+    if (pathname === '/api/hyperliquid/refresh' && req.method === 'POST') {
+      const hlData = await getHyperliquidEcosystem(true);
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ success: true, message: 'Hyperliquid telemetry refreshed', data: hlData }));
       return;
     }
 
