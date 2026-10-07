@@ -14,6 +14,7 @@ import { getHyperliquidEcosystem } from './hyperliquidWatcher.js';
 import { getProtocolHistorical, getMacroEcosystemHistorical } from './historicalEngine.js';
 import { getLeaderboard } from './leaderboardEngine.js';
 import { getBybitSpotEcosystem } from './bybitWatcher.js';
+import { startOnChainScheduler, getOnChainSchedulerStatus, runOnChainSyncCycle } from './onchainScheduler.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -809,6 +810,23 @@ export async function handleRequest(req, res) {
     }
 
     // -------------------------------------------------------------
+    // API 5: Real-Time On-Chain 15M/1H Scheduler & Delta Telemetry
+    // -------------------------------------------------------------
+    if (pathname === '/api/sync/status' && req.method === 'GET') {
+      const status = getOnChainSchedulerStatus();
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ success: true, ...status }));
+      return;
+    }
+
+    if (pathname === '/api/sync/trigger' && req.method === 'POST') {
+      const status = await runOnChainSyncCycle('manual_api_trigger');
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ success: true, message: 'On-chain sync cycle completed', ...status }));
+      return;
+    }
+
+    // -------------------------------------------------------------
     // Static Files (public/index.html, styles, etc.)
     // -------------------------------------------------------------
     let filePath = path.join(PUBLIC_DIR, pathname === '/' ? 'index.html' : pathname);
@@ -849,7 +867,11 @@ if (!process.env.VERCEL) {
     console.log(`📡 Protocols API:  http://localhost:${PORT}/api/protocols`);
     console.log(`⛓️ Chains API:     http://localhost:${PORT}/api/registry/chains`);
     console.log(`📋 Directory API:  http://localhost:${PORT}/api/registry/protocols`);
+    console.log(`⚡ On-Chain Sync:  http://localhost:${PORT}/api/sync/status`);
     console.log(`======================================================\n`);
+
+    // Start 15m/1h Adaptive On-Chain Telemetry Background Scheduler
+    startOnChainScheduler();
   });
 }
 
