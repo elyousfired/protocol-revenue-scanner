@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1791400164648,
+  "updatedAt": 1791400872014,
   "protocols": {
     "marginfi-lst": {
       "hasToken": false,
@@ -3026,6 +3026,312 @@
       "hasBurn": false,
       "cumulativeHoldersRevUsd": 1323350,
       "checkedAt": 1791400164648
+    },
+    "flux-finance": {
+      "hasToken": false,
+      "checkedAt": 1791400693974
+    },
+    "li.fi-dex-aggregator": {
+      "hasToken": false,
+      "checkedAt": 1791400693974
+    },
+    "rocksolid-network": {
+      "hasToken": false,
+      "checkedAt": 1791400693974
+    },
+    "syntropia": {
+      "hasToken": false,
+      "checkedAt": 1791400693974
+    },
+    "makina": {
+      "hasToken": false,
+      "checkedAt": 1791400693974
+    },
+    "gtbtc": {
+      "hasToken": false,
+      "checkedAt": 1791400693974
+    },
+    "beaverbuild": {
+      "hasToken": false,
+      "checkedAt": 1791400693974
+    },
+    "fira": {
+      "hasToken": false,
+      "checkedAt": 1791400693974
+    },
+    "accountable": {
+      "hasToken": false,
+      "checkedAt": 1791400693974
+    },
+    "yuzu-money": {
+      "hasToken": false,
+      "checkedAt": 1791400693974
+    },
+    "titan-builder": {
+      "hasToken": false,
+      "checkedAt": 1791400693974
+    },
+    "quasar-builder": {
+      "hasToken": false,
+      "checkedAt": 1791400693974
+    },
+    "saturn": {
+      "hasToken": false,
+      "checkedAt": 1791400693974
+    },
+    "matcha": {
+      "hasToken": false,
+      "checkedAt": 1791400693974
+    },
+    "apyx-protocol": {
+      "hasToken": false,
+      "checkedAt": 1791400693974
+    },
+    "xaue-protocol": {
+      "hasToken": false,
+      "checkedAt": 1791400693974
+    },
+    "armitage-by-wintermute": {
+      "hasToken": false,
+      "checkedAt": 1791400693974
+    },
+    "galaxy-curation": {
+      "hasToken": false,
+      "checkedAt": 1791400693974
+    },
+    "uniswap-labs": {
+      "hasToken": false,
+      "checkedAt": 1791400872014
+    },
+    "intentx": {
+      "hasToken": false,
+      "checkedAt": 1791400872014
+    },
+    "xena-finance": {
+      "hasToken": true,
+      "slug": "xena-finance",
+      "name": "Xena Finance",
+      "symbol": "XEN",
+      "chain": "base",
+      "addressChain": "base",
+      "contractAddress": "0x981D41C115a2d48Cb1215D13Bda8f989d407c9c5",
+      "geckoId": "xena-finance",
+      "mcap": 0,
+      "priceUsd": 0,
+      "liquidityUsd": 0,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": false,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 0,
+      "checkedAt": 1791400872014
+    },
+    "pooltogether-v5": {
+      "hasToken": true,
+      "slug": "pooltogether-v5",
+      "name": "PoolTogether V5",
+      "symbol": "POOL",
+      "chain": "base",
+      "addressChain": "base",
+      "contractAddress": "0x0cec1a9154ff802e7934fc916ed7ca50bde6844e",
+      "geckoId": null,
+      "mcap": 36255,
+      "priceUsd": 0.01838,
+      "liquidityUsd": 7801.63,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": true,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 37740,
+      "checkedAt": 1791400872014
+    },
+    "chainchat": {
+      "hasToken": false,
+      "checkedAt": 1791400872014
+    },
+    "sumer.money": {
+      "hasToken": false,
+      "checkedAt": 1791400872014
+    },
+    "amped-finance": {
+      "hasToken": true,
+      "slug": "amped-finance",
+      "name": "Amped Finance",
+      "symbol": "AMPED",
+      "chain": "base",
+      "addressChain": "sonic",
+      "contractAddress": "0x4Cae73a23078e7A94D1e828Fa3bABa5080c04FcA",
+      "geckoId": "amped-finance",
+      "mcap": 0,
+      "priceUsd": 0,
+      "liquidityUsd": 0,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": true,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 35737,
+      "checkedAt": 1791400872014
+    },
+    "charm-finance-v2": {
+      "hasToken": false,
+      "checkedAt": 1791400872014
+    },
+    "voodoo-trade-base": {
+      "hasToken": true,
+      "slug": "voodoo-trade-base",
+      "name": "Voodoo Trade Base",
+      "symbol": "VMX",
+      "chain": "base",
+      "addressChain": "base",
+      "contractAddress": "0x44d05c7Bf593b4cC4322088fFCa35613079E8D37",
+      "geckoId": null,
+      "mcap": 0,
+      "priceUsd": 0,
+      "liquidityUsd": 0,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": true,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 23966,
+      "checkedAt": 1791400872014
+    },
+    "stryke-clamm": {
+      "hasToken": true,
+      "slug": "stryke-clamm",
+      "name": "Stryke CLAMM",
+      "symbol": "DPX",
+      "chain": "base",
+      "addressChain": "base",
+      "contractAddress": "0xEec2bE5c91ae7f8a338e1e5f3b5DE49d07AfdC81",
+      "geckoId": null,
+      "mcap": 0,
+      "priceUsd": 0,
+      "liquidityUsd": 0,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": false,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 0,
+      "checkedAt": 1791400872014
+    },
+    "thick": {
+      "hasToken": false,
+      "checkedAt": 1791400872014
+    },
+    "allbridge-core": {
+      "hasToken": false,
+      "checkedAt": 1791400872014
+    },
+    "kelp": {
+      "hasToken": true,
+      "slug": "kelp",
+      "name": "Kelp",
+      "symbol": "KERNEL",
+      "chain": "base",
+      "addressChain": "base",
+      "contractAddress": "0x3f80b1c54ae920be41a77f8b902259d48cf24ccf",
+      "geckoId": null,
+      "mcap": 8178784,
+      "priceUsd": 0.05038,
+      "liquidityUsd": 12208.22,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": false,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 0,
+      "checkedAt": 1791400872014
+    },
+    "odos": {
+      "hasToken": true,
+      "slug": "odos",
+      "name": "ODOS",
+      "symbol": "ODOS",
+      "chain": "base",
+      "addressChain": "base",
+      "contractAddress": "0xca73ed1815e5915489570014e024b7ebe65de679",
+      "geckoId": "odos",
+      "mcap": 3165879,
+      "priceUsd": 0.0008392,
+      "liquidityUsd": 18595.84,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": false,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 0,
+      "checkedAt": 1791400872014
+    },
+    "d8x": {
+      "hasToken": true,
+      "slug": "d8x",
+      "name": "D8X",
+      "symbol": "D8X",
+      "chain": "base",
+      "addressChain": "polygon_zkevm",
+      "contractAddress": "0xDc28023CCdfbE553643c41A335a4F555Edf937Df",
+      "geckoId": null,
+      "mcap": 0,
+      "priceUsd": 0,
+      "liquidityUsd": 0,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": false,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 0,
+      "checkedAt": 1791400872014
+    },
+    "surf-protocol": {
+      "hasToken": false,
+      "checkedAt": 1791400872014
+    },
+    "squadefi": {
+      "hasToken": false,
+      "checkedAt": 1791400872014
+    },
+    "kyberswap-aggregator": {
+      "hasToken": true,
+      "slug": "kyberswap-aggregator",
+      "name": "KyberSwap Aggregator",
+      "symbol": "KNC",
+      "chain": "base",
+      "addressChain": "base",
+      "contractAddress": "0xdefa4e8a7bcba345f687a2f1456f5edd9ce97202",
+      "geckoId": null,
+      "mcap": 32559000,
+      "priceUsd": 0.135,
+      "liquidityUsd": 836102.66,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": false,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 0,
+      "checkedAt": 1791400872014
     }
   }
 }

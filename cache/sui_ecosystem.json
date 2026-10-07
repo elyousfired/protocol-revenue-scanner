@@ -1,6 +1,6 @@
 {
   "success": true,
-  "lastUpdated": "2026-10-07T19:05:25.513Z",
+  "lastUpdated": "2026-10-07T19:18:15.122Z",
   "l1Chain": {
     "name": "Sui Network",
     "symbol": "SUI",
@@ -26,12 +26,12 @@
       "burnVelocity": 0.7
     },
     "latestLiveSwap": {
-      "txDigest": "8zZyDii343j1wXFftUhKqAYgAZV7TCLfNP7QmEB9YsMu",
-      "timestamp": 1791399904410,
-      "pool": "0x968f1f73b8e766e2ce0198c807d0c956aa384bfe64c98a18e56bfb970a13e7bb",
-      "feeAmount": "687300000",
-      "amountIn": "6873000000000",
-      "amountOut": "99743386"
+      "txDigest": "A55y9HouAtVkPCSobxeLpvQvfcLtWhmZKxPVZPHrmo9A",
+      "timestamp": 1791400685125,
+      "pool": "0xdcd97bb5d843844a6debf28b774488f20d46bc645ac0afbb6f1ebb8d38a9e19b",
+      "feeAmount": "385750",
+      "amountIn": "154300000",
+      "amountOut": "19949060"
     }
   },
   "protocols": [
@@ -1052,8 +1052,8 @@
       "packageId": "0x7016aae72cfc67f2fadf55769c0a7dd54291a583b63051a5ed71081cce836ac6",
       "explorerUrl": "https://suiscan.xyz/mainnet/coin/0x7016aae72cfc67f2fadf55769c0a7dd54291a583b63051a5ed71081cce836ac6::sca::SCA",
       "packageExplorerUrl": "https://suiscan.xyz/mainnet/package/0x7016aae72cfc67f2fadf55769c0a7dd54291a583b63051a5ed71081cce836ac6",
-      "mcap": 0,
-      "peRatio": null,
+      "mcap": 975619.1669613828,
+      "peRatio": 17.5,
       "timeframeData": {
         "24h": {
           "fees": 551,
@@ -1062,8 +1062,8 @@
           "lpSharePct": 74,
           "revSharePct": 26,
           "arr": 52231,
-          "periodYield": 0,
-          "apy": 0,
+          "periodYield": 0.01,
+          "apy": 5.4,
           "delta": -10.06
         },
         "7d": {
@@ -1073,8 +1073,8 @@
           "lpSharePct": 73.2,
           "revSharePct": 26.8,
           "arr": 55633,
-          "periodYield": 0,
-          "apy": 0,
+          "periodYield": 0.11,
+          "apy": 5.7,
           "delta": -45.37
         },
         "30d": {
@@ -1084,8 +1084,8 @@
           "lpSharePct": 67.3,
           "revSharePct": 32.7,
           "arr": 64075,
-          "periodYield": 0,
-          "apy": 0,
+          "periodYield": 0.54,
+          "apy": 6.6,
           "delta": 0
         }
       },
@@ -1098,8 +1098,8 @@
       "lpShare7d": 2918,
       "lpSharePct": 73.2,
       "revSharePct": 26.8,
-      "weeklyYieldMc": 0,
-      "annualizedYieldMc": 0,
+      "weeklyYieldMc": 0.11,
+      "annualizedYieldMc": 5.7,
       "annualizedRevenue": 55633,
       "whaleRisk": {
         "holdersCount": 24890,
@@ -2027,7 +2027,7 @@
         "protocol": "Cetus Protocol",
         "symbol": "CETUS",
         "timeAgo": "4 hours ago",
-        "timestamp": 1791385502655,
+        "timestamp": 1791386284491,
         "spentUsd": 12450,
         "spentAsset": "12,450 USDC",
         "boughtTokens": "45,820 CETUS",
@@ -2039,7 +2039,7 @@
         "protocol": "NAVI Protocol",
         "symbol": "NAVX",
         "timeAgo": "11 hours ago",
-        "timestamp": 1791360302655,
+        "timestamp": 1791361084491,
         "spentUsd": 18900,
         "spentAsset": "18,300 SUI",
         "boughtTokens": "198,500 NAVX",
@@ -2051,7 +2051,7 @@
         "protocol": "Turbos Finance",
         "symbol": "TURBOS",
         "timeAgo": "1 day ago",
-        "timestamp": 1791309902655,
+        "timestamp": 1791310684491,
         "spentUsd": 4200,
         "spentAsset": "4,100 SUI",
         "boughtTokens": "26,850,000 TURBOS",
@@ -2063,7 +2063,7 @@
         "protocol": "AlphaFi",
         "symbol": "ALPHA",
         "timeAgo": "2 days ago",
-        "timestamp": 1791223502655,
+        "timestamp": 1791224284491,
         "spentUsd": 3150,
         "spentAsset": "3,050 SUI",
         "boughtTokens": "38,200 ALPHA",
@@ -2075,7 +2075,7 @@
         "protocol": "Cetus Protocol",
         "symbol": "CETUS",
         "timeAgo": "3 days ago",
-        "timestamp": 1791140702655,
+        "timestamp": 1791141484491,
         "spentUsd": 15200,
         "spentAsset": "15,200 USDC",
         "boughtTokens": "56,100 CETUS",

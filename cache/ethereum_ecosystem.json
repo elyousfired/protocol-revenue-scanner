@@ -1,13 +1,13 @@
 {
   "success": true,
-  "lastUpdated": "2026-10-07T19:05:26.542Z",
+  "lastUpdated": "2026-10-07T19:18:21.321Z",
   "l1Chain": {
     "name": "Ethereum Mainnet (EVM)",
     "symbol": "ETH",
     "contractAddress": "0x0000000000000000000000000000000000000000",
     "explorerUrl": "https://etherscan.io",
-    "blockHeight": 26142485,
-    "gasPriceGwei": 0.54,
+    "blockHeight": 26142549,
+    "gasPriceGwei": 0.69,
     "activeValidators": 1068420,
     "totalSupply": 120520200,
     "totalBurnedEth": 4524800,
@@ -138,10 +138,10 @@
         "burnedPctOfMax": 11.3,
         "burnVelocity": 11.3,
         "explorerUrl": "https://etherscan.io/token/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
-        "burn24hTokens": 131907,
-        "burn7dTokens": 886415,
-        "burn30dTokens": 3640633,
-        "observedHourlyBurnRate": 1508,
+        "burn24hTokens": 131877,
+        "burn7dTokens": 886213,
+        "burn30dTokens": 3639805,
+        "observedHourlyBurnRate": 1506,
         "activeOnChainDays": 365,
         "source": "100% Direct On-Chain RPC Supply Contraction"
       },
@@ -438,15 +438,15 @@
         "name": "Bancor V2.1",
         "contract": "0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c",
         "initialSupply": 100000000,
-        "currentSupply": 99075665,
-        "burnedTokens": 924335,
-        "burnedPctOfMax": 0.92,
-        "burnVelocity": 0.92,
+        "currentSupply": 99304566,
+        "burnedTokens": 695434,
+        "burnedPctOfMax": 0.7,
+        "burnVelocity": 0.7,
         "explorerUrl": "https://etherscan.io/token/0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c",
-        "burn24hTokens": 21752,
-        "burn7dTokens": 146173,
-        "burn30dTokens": 600355,
-        "observedHourlyBurnRate": 1338,
+        "burn24hTokens": 1905,
+        "burn7dTokens": 12802,
+        "burn30dTokens": 52578,
+        "observedHourlyBurnRate": 0,
         "activeOnChainDays": 365,
         "source": "100% Direct On-Chain RPC Supply Contraction"
       },
@@ -8671,9 +8671,9 @@
       "contractAddress": "0x9813037ee2218799597d83d4a5b6f3b6778218d9",
       "logo": "https://icons.llamao.fi/icons/protocols/shibaswap-v1",
       "explorerUrl": "https://etherscan.io/token/0x9813037ee2218799597d83d4a5b6f3b6778218d9",
-      "mcap": 15770055,
-      "peRatio": 112.1,
-      "pfRatio": 24.7,
+      "mcap": 13168096,
+      "peRatio": 93.6,
+      "pfRatio": 20.6,
       "timeframeData": {
         "24h": {
           "fees": 438,
@@ -8683,7 +8683,7 @@
           "revSharePct": 22,
           "arr": 35195,
           "periodYield": 0,
-          "apy": 0.2,
+          "apy": 0.3,
           "delta": -56.63
         },
         "7d": {
@@ -8694,7 +8694,7 @@
           "revSharePct": 22,
           "arr": 140712,
           "periodYield": 0.02,
-          "apy": 0.9,
+          "apy": 1.1,
           "delta": -24.25
         },
         "30d": {
@@ -8704,8 +8704,8 @@
           "lpSharePct": 80.3,
           "revSharePct": 19.7,
           "arr": 136301,
-          "periodYield": 0.07,
-          "apy": 0.9,
+          "periodYield": 0.09,
+          "apy": 1,
           "delta": -24.25
         }
       },
@@ -8719,7 +8719,7 @@
       "lpSharePct": 78,
       "revSharePct": 22,
       "weeklyYieldMc": 0.02,
-      "annualizedYieldMc": 0.9,
+      "annualizedYieldMc": 1.1,
       "annualizedRevenue": 140712,
       "whaleRisk": {
         "holdersCount": 48500,
@@ -9976,9 +9976,9 @@
       "contractAddress": "0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c",
       "logo": "https://icons.llamao.fi/icons/protocols/bancor",
       "explorerUrl": "https://etherscan.io/token/0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c",
-      "mcap": 33129371,
-      "peRatio": 523.4,
-      "pfRatio": 115.1,
+      "mcap": 34470664,
+      "peRatio": 544.6,
+      "pfRatio": 119.8,
       "timeframeData": {
         "24h": {
           "fees": 949,
@@ -10009,7 +10009,7 @@
           "lpSharePct": 71.8,
           "revSharePct": 28.2,
           "arr": 61312,
-          "periodYield": 0.02,
+          "periodYield": 0.01,
           "apy": 0.2,
           "delta": -2.61
         }
@@ -10044,11 +10044,11 @@
         "treasuryAddress": "0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c",
         "treasuryNetWorthUsd": 21159,
         "treasuryHoldings": "ETH, USDC & $BNT DAO Reserve",
-        "burnedAmount": 924335,
-        "burnedPctOfMax": 0.92,
-        "burnVelocity": 0.92,
+        "burnedAmount": 695434,
+        "burnedPctOfMax": 0.7,
+        "burnVelocity": 0.7,
         "initialSupply": 100000000,
-        "currentSupply": 99075665
+        "currentSupply": 99304566
       }
     },
     {
@@ -11784,11 +11784,11 @@
         "treasuryAddress": "0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c",
         "treasuryNetWorthUsd": 15317,
         "treasuryHoldings": "ETH, USDC & $BNT DAO Reserve",
-        "burnedAmount": 924335,
-        "burnedPctOfMax": 0.92,
-        "burnVelocity": 0.92,
+        "burnedAmount": 695434,
+        "burnedPctOfMax": 0.7,
+        "burnVelocity": 0.7,
         "initialSupply": 100000000,
-        "currentSupply": 99075665
+        "currentSupply": 99304566
       }
     },
     {
@@ -31239,10 +31239,10 @@
       "retailSharePct": 67.2,
       "decentralizationScore": 67,
       "riskLevel": "LOW_RISK",
-      "burnedTokens": 924335,
-      "burnedPctOfMax": 0.92,
+      "burnedTokens": 695434,
+      "burnedPctOfMax": 0.7,
       "initialSupply": 100000000,
-      "currentSupply": 99075665,
+      "currentSupply": 99304566,
       "description": "Highly decentralized token distribution. Low vulnerability to systemic whale sell-offs."
     },
     {

@@ -8059,6 +8059,12 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
                       else if(lc.includes('arbitrum')) color = 'bg-cyan-600/15 text-cyan-300 border-cyan-600/30';
                       else if(lc.includes('optimism')) color = 'bg-red-600/15 text-red-300 border-red-600/30';
                       else if(lc.includes('mantle')) color = 'bg-emerald-600/15 text-emerald-300 border-emerald-600/30';
+                      else if(lc.includes('moonbeam') || lc.includes('glmr')) color = 'bg-pink-500/15 text-pink-300 border-pink-500/30';
+                      else if(lc.includes('beam')) color = 'bg-orange-500/15 text-orange-300 border-orange-500/30';
+                      else if(lc.includes('polygon')) color = 'bg-purple-600/15 text-purple-300 border-purple-600/30';
+                      else if(lc.includes('sonic')) color = 'bg-amber-600/15 text-amber-300 border-amber-600/30';
+                      else if(lc.includes('merlin')) color = 'bg-yellow-600/15 text-yellow-300 border-yellow-600/30';
+                      else if(lc.includes('rwa')) color = 'bg-emerald-400/15 text-emerald-300 border-emerald-400/30';
                       return `<span class="px-1.5 py-0.5 rounded border text-[9px] font-bold uppercase ${color}">${c}</span>`;
                     }).join('') + `</div>`
                   : `<span class="text-slate-600">—</span>`

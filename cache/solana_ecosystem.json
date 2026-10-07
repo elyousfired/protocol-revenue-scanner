@@ -1,18 +1,18 @@
 {
   "success": true,
-  "lastUpdated": "2026-10-07T19:05:26.592Z",
+  "lastUpdated": "2026-10-07T19:18:16.870Z",
   "l1Chain": {
     "name": "Solana Mainnet-Beta",
     "symbol": "SOL",
     "contractAddress": "So11111111111111111111111111111111111111112",
     "explorerUrl": "https://solscan.io",
     "epoch": 1051,
-    "slotIndex": 279408,
+    "slotIndex": 282240,
     "slotsInEpoch": 432000,
-    "epochProgressPct": 64.7,
-    "absoluteSlot": 454311408,
-    "blockHeight": 432348976,
-    "transactionCount": 557237477882,
+    "epochProgressPct": 65.3,
+    "absoluteSlot": 454314240,
+    "blockHeight": 432351804,
+    "transactionCount": 557241147578,
     "activeValidators": 1412,
     "totalSupply": 634685909,
     "circulatingSupply": 587653315,
@@ -94,8 +94,8 @@
         "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
         "programId": "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4",
         "initialSupply": 10000000000,
-        "currentSupply": 6861486312,
-        "burnedTokens": 3138513688,
+        "currentSupply": 6861486311,
+        "burnedTokens": 3138513689,
         "burnedPctOfMax": 31.39,
         "burnVelocity": 31.39,
         "explorerUrl": "https://solscan.io/token/JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
@@ -135,10 +135,10 @@
         "burnedPctOfMax": 12.01,
         "burnVelocity": 12.01,
         "explorerUrl": "https://solscan.io/token/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
-        "burn24hTokens": 11513124414,
-        "burn7dTokens": 77368196062,
-        "burn30dTokens": 317762233826,
-        "observedHourlyBurnRate": 56041,
+        "burn24hTokens": 11513123753,
+        "burn7dTokens": 77368191620,
+        "burn30dTokens": 317762215583,
+        "observedHourlyBurnRate": 55999,
         "activeOnChainDays": 365,
         "source": "100% Direct On-Chain RPC Supply Contraction"
       },
@@ -243,10 +243,10 @@
         "burnedPctOfMax": 25.93,
         "burnVelocity": 25.93,
         "explorerUrl": "https://solscan.io/token/CLoUDKc4Ane7HeQcPpE3YHnznRxhMimJ4MyaUqyHFzAu",
-        "burn24hTokens": 14554830,
-        "burn7dTokens": 97808458,
+        "burn24hTokens": 14544012,
+        "burn7dTokens": 97735761,
         "burn30dTokens": 259330438,
-        "observedHourlyBurnRate": 917061,
+        "observedHourlyBurnRate": 916368,
         "activeOnChainDays": 365,
         "source": "100% Direct On-Chain RPC Supply Contraction"
       },
@@ -274,14 +274,14 @@
         "mint": "rndrizKT3MK1iimdxRdWabcF7Zg7AR5T4nud4EkHBof",
         "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
         "initialSupply": 536870912,
-        "currentSupply": 486128979,
-        "burnedTokens": 50741933,
+        "currentSupply": 486128923,
+        "burnedTokens": 50741989,
         "burnedPctOfMax": 9.45,
         "burnVelocity": 9.45,
         "explorerUrl": "https://solscan.io/token/rndrizKT3MK1iimdxRdWabcF7Zg7AR5T4nud4EkHBof",
-        "burn24hTokens": 50819,
-        "burn7dTokens": 341504,
-        "burn30dTokens": 1402604,
+        "burn24hTokens": 50820,
+        "burn7dTokens": 341510,
+        "burn30dTokens": 1402632,
         "observedHourlyBurnRate": 139,
         "activeOnChainDays": 365,
         "source": "100% Direct On-Chain RPC Supply Contraction"
@@ -346,8 +346,8 @@
         "mint": "oreoU2P8bN6jkk3jbaiVxYnG1dCXcYxwhwyK9jSybcp",
         "programId": "oreV2ZymfyeXgNgBdqMkumTqqAprVqgBWQfoYkrtKWQ",
         "initialSupply": 681353,
-        "currentSupply": 502346,
-        "burnedTokens": 179007,
+        "currentSupply": 502351,
+        "burnedTokens": 179002,
         "burnedPctOfMax": 26.27,
         "burnVelocity": 26.27,
         "explorerUrl": "https://solscan.io/token/oreoU2P8bN6jkk3jbaiVxYnG1dCXcYxwhwyK9jSybcp",
@@ -382,15 +382,15 @@
         "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
         "programId": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
         "initialSupply": 1000000000,
-        "currentSupply": 798077790,
-        "burnedTokens": 201922210,
+        "currentSupply": 798070115,
+        "burnedTokens": 201929885,
         "burnedPctOfMax": 20.19,
         "burnVelocity": 20.19,
         "explorerUrl": "https://solscan.io/token/6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
-        "burn24hTokens": 2239187,
-        "burn7dTokens": 15047337,
-        "burn30dTokens": 61801561,
-        "observedHourlyBurnRate": 69270,
+        "burn24hTokens": 2238837,
+        "burn7dTokens": 15044985,
+        "burn30dTokens": 61791901,
+        "observedHourlyBurnRate": 69245,
         "activeOnChainDays": 61,
         "source": "100% Direct On-Chain RPC Supply Contraction"
       },
@@ -405,10 +405,10 @@
         "burnedPctOfMax": 1.29,
         "burnVelocity": 1.29,
         "explorerUrl": "https://solscan.io/token/CARDSccUMFKoPRZxt5vt3ksUbxEFEcnZ3H2pd3dKxYjp",
-        "burn24hTokens": 244029,
-        "burn7dTokens": 1639875,
-        "burn30dTokens": 6735200,
-        "observedHourlyBurnRate": 10811,
+        "burn24hTokens": 243901,
+        "burn7dTokens": 1639015,
+        "burn30dTokens": 6731668,
+        "observedHourlyBurnRate": 10803,
         "activeOnChainDays": 120,
         "source": "100% Direct On-Chain RPC Supply Contraction"
       },
@@ -613,11 +613,11 @@
         "treasuryAddress": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
         "treasuryNetWorthUsd": 18500000,
         "treasuryHoldings": "82K SOL, STONK Reserve",
-        "burnedAmount": 201922210,
+        "burnedAmount": 201929885,
         "burnedPctOfMax": 20.19,
         "burnVelocity": 20.19,
         "initialSupply": 1000000000,
-        "currentSupply": 798077790
+        "currentSupply": 798070115
       }
     },
     {
@@ -880,11 +880,11 @@
         "treasuryAddress": "oreoU2P8bN6jkk3jbaiVxYnG1dCXcYxwhwyK9jSybcp",
         "treasuryNetWorthUsd": 14200000,
         "treasuryHoldings": "SOL Mining Pool + Buried ORE Stakers",
-        "burnedAmount": 179007,
+        "burnedAmount": 179002,
         "burnedPctOfMax": 26.27,
         "burnVelocity": 26.27,
         "initialSupply": 681353,
-        "currentSupply": 502346
+        "currentSupply": 502351
       }
     },
     {
@@ -1236,11 +1236,11 @@
         "treasuryAddress": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
         "treasuryNetWorthUsd": 112000000,
         "treasuryHoldings": "50% Revenue Buyback in Litterbox Trust",
-        "burnedAmount": 3138513688,
+        "burnedAmount": 3138513689,
         "burnedPctOfMax": 31.39,
         "burnVelocity": 31.39,
         "initialSupply": 10000000000,
-        "currentSupply": 6861486312
+        "currentSupply": 6861486311
       }
     },
     {
@@ -1592,11 +1592,11 @@
         "treasuryAddress": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
         "treasuryNetWorthUsd": 168000000,
         "treasuryHoldings": "Litterbox Trust ($JUP Buyback Vault) + 3.14B JUP Burned",
-        "burnedAmount": 3138513688,
+        "burnedAmount": 3138513689,
         "burnedPctOfMax": 31.39,
         "burnVelocity": 31.39,
         "initialSupply": 10000000000,
-        "currentSupply": 6861486312
+        "currentSupply": 6861486311
       }
     },
     {
@@ -2304,11 +2304,11 @@
         "treasuryAddress": "rndrizKT3MK1iimdxRdWabcF7Zg7AR5T4nud4EkHBof",
         "treasuryNetWorthUsd": 78000000,
         "treasuryHoldings": "50.7M RENDER Burned via GPU Rendering Credits",
-        "burnedAmount": 50741933,
+        "burnedAmount": 50741989,
         "burnedPctOfMax": 9.45,
         "burnVelocity": 9.45,
         "initialSupply": 536870912,
-        "currentSupply": 486128979
+        "currentSupply": 486128923
       }
     },
     {
@@ -2749,11 +2749,11 @@
         "treasuryAddress": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
         "treasuryNetWorthUsd": 707536,
         "treasuryHoldings": "SOL, USDC & SPL Treasury Vaults",
-        "burnedAmount": 3138513688,
+        "burnedAmount": 3138513689,
         "burnedPctOfMax": 31.39,
         "burnVelocity": 31.39,
         "initialSupply": 10000000000,
-        "currentSupply": 6861486312
+        "currentSupply": 6861486311
       }
     },
     {
@@ -3016,11 +3016,11 @@
         "treasuryAddress": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
         "treasuryNetWorthUsd": 444192,
         "treasuryHoldings": "SOL, USDC & SPL Treasury Vaults",
-        "burnedAmount": 3138513688,
+        "burnedAmount": 3138513689,
         "burnedPctOfMax": 31.39,
         "burnVelocity": 31.39,
         "initialSupply": 10000000000,
-        "currentSupply": 6861486312
+        "currentSupply": 6861486311
       }
     },
     {
@@ -3461,11 +3461,11 @@
         "treasuryAddress": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
         "treasuryNetWorthUsd": 492384,
         "treasuryHoldings": "SOL, USDC & SPL Treasury Vaults",
-        "burnedAmount": 3138513688,
+        "burnedAmount": 3138513689,
         "burnedPctOfMax": 31.39,
         "burnVelocity": 31.39,
         "initialSupply": 10000000000,
-        "currentSupply": 6861486312
+        "currentSupply": 6861486311
       }
     },
     {
@@ -5953,11 +5953,11 @@
         "treasuryAddress": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
         "treasuryNetWorthUsd": 17665,
         "treasuryHoldings": "SOL, USDC & SPL Treasury Vaults",
-        "burnedAmount": 3138513688,
+        "burnedAmount": 3138513689,
         "burnedPctOfMax": 31.39,
         "burnVelocity": 31.39,
         "initialSupply": 10000000000,
-        "currentSupply": 6861486312
+        "currentSupply": 6861486311
       }
     },
     {
@@ -6042,11 +6042,11 @@
         "treasuryAddress": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
         "treasuryNetWorthUsd": 99873,
         "treasuryHoldings": "SOL, USDC & SPL Treasury Vaults",
-        "burnedAmount": 3138513688,
+        "burnedAmount": 3138513689,
         "burnedPctOfMax": 31.39,
         "burnVelocity": 31.39,
         "initialSupply": 10000000000,
-        "currentSupply": 6861486312
+        "currentSupply": 6861486311
       }
     },
     {
@@ -7021,11 +7021,11 @@
         "treasuryAddress": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
         "treasuryNetWorthUsd": 3675,
         "treasuryHoldings": "SOL, USDC & SPL Treasury Vaults",
-        "burnedAmount": 3138513688,
+        "burnedAmount": 3138513689,
         "burnedPctOfMax": 31.39,
         "burnVelocity": 31.39,
         "initialSupply": 10000000000,
-        "currentSupply": 6861486312
+        "currentSupply": 6861486311
       }
     },
     {
@@ -7377,11 +7377,11 @@
         "treasuryAddress": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
         "treasuryNetWorthUsd": 4408,
         "treasuryHoldings": "SOL, USDC & SPL Treasury Vaults",
-        "burnedAmount": 3138513688,
+        "burnedAmount": 3138513689,
         "burnedPctOfMax": 31.39,
         "burnVelocity": 31.39,
         "initialSupply": 10000000000,
-        "currentSupply": 6861486312
+        "currentSupply": 6861486311
       }
     },
     {
@@ -9691,11 +9691,11 @@
         "treasuryAddress": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
         "treasuryNetWorthUsd": 0,
         "treasuryHoldings": "SOL, USDC & SPL Treasury Vaults",
-        "burnedAmount": 3138513688,
+        "burnedAmount": 3138513689,
         "burnedPctOfMax": 31.39,
         "burnVelocity": 31.39,
         "initialSupply": 10000000000,
-        "currentSupply": 6861486312
+        "currentSupply": 6861486311
       }
     },
     {
@@ -11560,11 +11560,11 @@
         "treasuryAddress": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
         "treasuryNetWorthUsd": 0,
         "treasuryHoldings": "SOL, USDC & SPL Treasury Vaults",
-        "burnedAmount": 3138513688,
+        "burnedAmount": 3138513689,
         "burnedPctOfMax": 31.39,
         "burnVelocity": 31.39,
         "initialSupply": 10000000000,
-        "currentSupply": 6861486312
+        "currentSupply": 6861486311
       }
     },
     {
@@ -14633,10 +14633,10 @@
       "retailSharePct": 71.8,
       "decentralizationScore": 72,
       "riskLevel": "LOW_RISK",
-      "burnedTokens": 3138513688,
+      "burnedTokens": 3138513689,
       "burnedPctOfMax": 31.39,
       "initialSupply": 10000000000,
-      "currentSupply": 6861486312,
+      "currentSupply": 6861486311,
       "description": "Jupiter Ultra Swap & Routing Engine. 100% of platform routing fees accrue to Jupiter, with 50% committed to programmatic on-chain $JUP buybacks."
     },
     {
@@ -14699,10 +14699,10 @@
       "retailSharePct": 72.5,
       "decentralizationScore": 73,
       "riskLevel": "LOW_RISK",
-      "burnedTokens": 50741933,
+      "burnedTokens": 50741989,
       "burnedPctOfMax": 9.45,
       "initialSupply": 536870912,
-      "currentSupply": 486128979,
+      "currentSupply": 486128923,
       "description": "Decentralized GPU rendering network on Solana. 95% of rendering job payments in $RENDER are permanently burned under the Burn-and-Mint Equilibrium (BME) model."
     },
     {
@@ -14743,10 +14743,10 @@
       "retailSharePct": 77.6,
       "decentralizationScore": 78,
       "riskLevel": "LOW_RISK",
-      "burnedTokens": 179007,
+      "burnedTokens": 179002,
       "burnedPctOfMax": 26.27,
       "initialSupply": 681353,
-      "currentSupply": 502346,
+      "currentSupply": 502351,
       "description": "On-chain Proof-of-Work & gamified compute mining on Solana. Protocol fees buy back & bury/burn $ORE for stakers."
     },
     {
@@ -14809,10 +14809,10 @@
       "retailSharePct": 65.8,
       "decentralizationScore": 66,
       "riskLevel": "LOW_RISK",
-      "burnedTokens": 201922210,
+      "burnedTokens": 201929885,
       "burnedPctOfMax": 20.19,
       "initialSupply": 1000000000,
-      "currentSupply": 798077790,
+      "currentSupply": 798070115,
       "description": "Solana memecoin & social launchpad capturing 100% of bonding curve origination fees for protocol treasury & buybacks."
     },
     {
@@ -17307,7 +17307,7 @@
       "protocol": "Render Network",
       "symbol": "RENDER",
       "mint": "rndrizKT3MK1iimdxRdWabcF7Zg7AR5T4nud4EkHBof",
-      "totalBurnedTokens": 50741933,
+      "totalBurnedTokens": 50741989,
       "burnedPctOfSupply": 9.45,
       "burned7dUsd": 47942,
       "emitted7dUsd": 41200,
@@ -17366,7 +17366,7 @@
         "symbol": "JUP",
         "mechanism": "50% Protocol Fee Programmatic Buyback",
         "timeAgo": "18 mins ago",
-        "timestamp": 1791398822656,
+        "timestamp": 1791399604491,
         "spentUsd": 142500,
         "spentAsset": "142,500 USDC",
         "boughtTokens": "491,379 JUP",
@@ -17379,7 +17379,7 @@
         "symbol": "RAY",
         "mechanism": "12% Swap Fee Auto-Buyback & Burn 🔥",
         "timeAgo": "42 mins ago",
-        "timestamp": 1791397382656,
+        "timestamp": 1791398164491,
         "spentUsd": 86400,
         "spentAsset": "612 SOL",
         "boughtTokens": "48,813 RAY",
@@ -17392,7 +17392,7 @@
         "symbol": "BONK",
         "mechanism": "Launchpad + 10% Bot Fee Permanent Burn 🔥",
         "timeAgo": "1 hour ago",
-        "timestamp": 1791396002656,
+        "timestamp": 1791396784491,
         "spentUsd": 64200,
         "spentAsset": "455 SOL",
         "boughtTokens": "3,890,000,000 BONK",
@@ -17405,7 +17405,7 @@
         "symbol": "MPLX",
         "mechanism": "50% Token/NFT Mint Fee TWAP Buyback",
         "timeAgo": "4 hours ago",
-        "timestamp": 1791385502656,
+        "timestamp": 1791386284491,
         "spentUsd": 38900,
         "spentAsset": "275 SOL",
         "boughtTokens": "164,830 MPLX",
@@ -17418,7 +17418,7 @@
         "symbol": "RENDER",
         "mechanism": "95% GPU Compute Credit Burn (BME) 🔥",
         "timeAgo": "6 hours ago",
-        "timestamp": 1791378302656,
+        "timestamp": 1791379084491,
         "spentUsd": 47900,
         "spentAsset": "47,900 USDC Eq.",
         "boughtTokens": "7,852 RENDER",
@@ -17431,7 +17431,7 @@
         "symbol": "ORCA",
         "mechanism": "12% Whirlpool Fee xORCA Buyback",
         "timeAgo": "9 hours ago",
-        "timestamp": 1791367502656,
+        "timestamp": 1791368284491,
         "spentUsd": 29500,
         "spentAsset": "29,500 USDC",
         "boughtTokens": "11,943 ORCA",
@@ -17444,7 +17444,7 @@
         "symbol": "MNDE",
         "mechanism": "Validator Bid Cut MNDE Buyback",
         "timeAgo": "14 hours ago",
-        "timestamp": 1791349502656,
+        "timestamp": 1791350284491,
         "spentUsd": 18400,
         "spentAsset": "130 SOL",
         "boughtTokens": "206,741 MNDE",
