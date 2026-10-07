@@ -1,17 +1,17 @@
 {
   "success": true,
-  "lastUpdated": "2026-10-07T17:17:10.397Z",
+  "lastUpdated": "2026-10-07T19:09:32.934Z",
   "l2Chain": {
     "name": "Base Layer-2 (Optimism Superchain)",
     "chainId": 8453,
-    "blockNumber": 52302034,
+    "blockNumber": 52305407,
     "gasPriceGwei": 0.006,
     "grossFees24h": 1555101.1,
-    "grossFees7d": 11944241.059999973,
-    "grossFees30d": 65749386.44000003,
+    "grossFees7d": 11944259.129999973,
+    "grossFees30d": 65749702.88000004,
     "grossRevenue24h": 634825.7200000002,
-    "grossRevenue7d": 4098901.8399999924,
-    "grossRevenue30d": 27096044.810000144,
+    "grossRevenue7d": 4098919.909999992,
+    "grossRevenue30d": 27096361.25000015,
     "sequencerEconomics": {
       "24h": {
         "grossRevenueUsd": 404918,
@@ -27,12 +27,12 @@
         }
       },
       "7d": {
-        "grossRevenueUsd": 3024963,
+        "grossRevenueUsd": 3024967,
         "l1BlobCostUsd": 175448,
-        "netOperatingProfitUsd": 2849515,
+        "netOperatingProfitUsd": 2849519,
         "profitMarginPct": 94.2,
-        "opCollectiveShareUsd": 427427,
-        "coinbaseRetainedProfitUsd": 2422088,
+        "opCollectiveShareUsd": 427428,
+        "coinbaseRetainedProfitUsd": 2422091,
         "breakdown": {
           "l1SettlementPct": 5.8,
           "superchainCutPct": 14.1,
@@ -40,12 +40,12 @@
         }
       },
       "30d": {
-        "grossRevenueUsd": 15584890,
-        "l1BlobCostUsd": 903924,
-        "netOperatingProfitUsd": 14680966,
+        "grossRevenueUsd": 15584947,
+        "l1BlobCostUsd": 903927,
+        "netOperatingProfitUsd": 14681020,
         "profitMarginPct": 94.2,
-        "opCollectiveShareUsd": 2202145,
-        "coinbaseRetainedProfitUsd": 12478821,
+        "opCollectiveShareUsd": 2202153,
+        "coinbaseRetainedProfitUsd": 12478867,
         "breakdown": {
           "l1SettlementPct": 5.8,
           "superchainCutPct": 14.1,
@@ -439,25 +439,25 @@
       "label": "🔄 DEXs, DLMM & Liquidity Hubs",
       "badge": "DEX / AMM",
       "count": 50,
-      "fees24h": 818712,
-      "fees7d": 4559036,
-      "fees30d": 30610545,
-      "revenue24h": 483746,
-      "revenue7d": 2432968,
-      "revenue30d": 18651624,
-      "tvl": 54708432
+      "fees24h": 653180,
+      "fees7d": 4559575,
+      "fees30d": 30612808,
+      "revenue24h": 318543,
+      "revenue7d": 2433066,
+      "revenue30d": 18652035,
+      "tvl": 54714900
     },
     {
       "id": "lending",
       "label": "🏦 Lending, Money Markets & CDP",
       "badge": "LENDING / RWA",
       "count": 19,
-      "fees24h": 350925,
+      "fees24h": 350669,
       "fees7d": 2230432,
       "fees30d": 9216236,
-      "revenue24h": 132860,
-      "revenue7d": 918643,
-      "revenue30d": 3861726,
+      "revenue24h": 132809,
+      "revenue7d": 918118,
+      "revenue30d": 3859521,
       "tvl": 26765184
     },
     {
@@ -465,10 +465,10 @@
       "label": "📈 Perps & Derivatives",
       "badge": "PERPS",
       "count": 19,
-      "fees24h": 23375,
+      "fees24h": 24627,
       "fees7d": 125400,
       "fees30d": 586213,
-      "revenue24h": 13176,
+      "revenue24h": 14428,
       "revenue7d": 102299,
       "revenue30d": 442302,
       "tvl": 1504800
@@ -478,10 +478,10 @@
       "label": "🤖 Autonomous AI Agents & Terminal",
       "badge": "AI AGENTS",
       "count": 9,
-      "fees24h": 7816,
+      "fees24h": 7279,
       "fees7d": 95740,
       "fees30d": 319250,
-      "revenue24h": 2904,
+      "revenue24h": 2742,
       "revenue7d": 33335,
       "revenue30d": 116626,
       "tvl": 1148880
@@ -491,12 +491,12 @@
       "label": "🌾 Yield, Liquid Staking & Vaults",
       "badge": "YIELD / LST",
       "count": 14,
-      "fees24h": 8067,
+      "fees24h": 9109,
       "fees7d": 73219,
       "fees30d": 417209,
-      "revenue24h": 5835,
-      "revenue7d": 59606,
-      "revenue30d": 354742,
+      "revenue24h": 6981,
+      "revenue7d": 59403,
+      "revenue30d": 353890,
       "tvl": 878628
     },
     {
@@ -517,13 +517,13 @@
       "label": "🌉 Bridges, Interop & Infra",
       "badge": "BRIDGE / INFRA",
       "count": 85,
-      "fees24h": -45707,
-      "fees7d": -23440,
-      "fees30d": 5492227,
-      "revenue24h": -126845,
-      "revenue7d": 717211,
-      "revenue30d": 4041754,
-      "tvl": -281280
+      "fees24h": 367832,
+      "fees7d": -24119,
+      "fees30d": 5489403,
+      "revenue24h": 283488,
+      "revenue7d": 718450,
+      "revenue30d": 4046958,
+      "tvl": -289428
     }
   ],
   "protocols": [
@@ -543,22 +543,22 @@
       "explorerUrl": "https://basescan.org/token/0x940181a94A35A4569E4529A3CDfB74e38FD98631",
       "mcap": 1450000000,
       "tvl": 26394468,
-      "fees24h": 358742,
+      "fees24h": 297369,
       "fees7d": 2199539,
       "fees30d": 17256985,
-      "revenue24h": 250024,
+      "revenue24h": 192202,
       "revenue7d": 1445931,
       "revenue30d": 13896001,
       "timeframeData": {
         "24h": {
-          "fees": 358742,
-          "revenue": 250024,
-          "runRate": 91321266,
-          "peRatio": 15.9,
-          "psRatio": 11.1,
+          "fees": 297369,
+          "revenue": 192202,
+          "runRate": 70201780.5,
+          "peRatio": 20.7,
+          "psRatio": 13.4,
           "yieldPct": {
-            "periodYield": 0.02,
-            "apy": 6.3
+            "periodYield": 0.01,
+            "apy": 4.8
           }
         },
         "7d": {
@@ -620,17 +620,17 @@
       "explorerUrl": "https://basescan.org/token/0xBAa5CC21fd487B8Fcc2F632f3F4E8D37262a0842",
       "mcap": 680000000,
       "tvl": 22899900,
-      "fees24h": 296022,
+      "fees24h": 295843,
       "fees7d": 1908325,
       "fees30d": 7835047,
-      "revenue24h": 124329,
-      "revenue7d": 870303,
-      "revenue30d": 3655273,
+      "revenue24h": 124254,
+      "revenue7d": 869778,
+      "revenue30d": 3653068,
       "timeframeData": {
         "24h": {
-          "fees": 296022,
-          "revenue": 124329,
-          "runRate": 45411167.25,
+          "fees": 295843,
+          "revenue": 124254,
+          "runRate": 45383773.5,
           "peRatio": 15,
           "psRatio": 6.3,
           "yieldPct": {
@@ -640,8 +640,8 @@
         },
         "7d": {
           "fees": 1908325,
-          "revenue": 870303,
-          "runRate": 45377598.42,
+          "revenue": 869778,
+          "runRate": 45350224.92,
           "peRatio": 15,
           "psRatio": 6.8,
           "yieldPct": {
@@ -651,8 +651,8 @@
         },
         "30d": {
           "fees": 7835047,
-          "revenue": 3655273,
-          "runRate": 44484672.41,
+          "revenue": 3653068,
+          "runRate": 44457837.56,
           "peRatio": 15.3,
           "psRatio": 7.1,
           "yieldPct": {
@@ -667,7 +667,7 @@
         "burnedPct": 0.02,
         "burnUsdEstimate": 108809,
         "buyback": true,
-        "treasuryNetWorthUsd": 28952147,
+        "treasuryNetWorthUsd": 28942886,
         "stakingToken": "$MORPHO",
         "treasuryHoldings": "MORPHO Fee Vault & Liquidity Reserve"
       },
@@ -697,22 +697,22 @@
       "explorerUrl": "https://basescan.org/token/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
       "mcap": 5850000000,
       "tvl": 19900440,
-      "fees24h": 280343,
+      "fees24h": 268568,
       "fees7d": 1658370,
       "fees30d": 10168680,
-      "revenue24h": 65853,
+      "revenue24h": 48534,
       "revenue7d": 376688,
       "revenue30d": 2116222,
       "timeframeData": {
         "24h": {
-          "fees": 280343,
-          "revenue": 65853,
-          "runRate": 24052808.25,
-          "peRatio": 243.2,
-          "psRatio": 57.1,
+          "fees": 268568,
+          "revenue": 48534,
+          "runRate": 17727043.5,
+          "peRatio": 330,
+          "psRatio": 59.6,
           "yieldPct": {
             "periodYield": 0,
-            "apy": 0.4
+            "apy": 0.3
           }
         },
         "7d": {
@@ -773,18 +773,18 @@
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
       "mcap": 0,
-      "tvl": 7317576,
-      "fees24h": 87114,
-      "fees7d": 609798,
+      "tvl": 7317492,
+      "fees24h": 87113,
+      "fees7d": 609791,
       "fees30d": 0,
-      "revenue24h": 43558,
+      "revenue24h": 43557,
       "revenue7d": 303285,
       "revenue30d": 0,
       "timeframeData": {
         "24h": {
-          "fees": 87114,
-          "revenue": 43558,
-          "runRate": 15909559.5,
+          "fees": 87113,
+          "revenue": 43557,
+          "runRate": 15909194.25,
           "peRatio": null,
           "psRatio": null,
           "yieldPct": {
@@ -793,7 +793,7 @@
           }
         },
         "7d": {
-          "fees": 609798,
+          "fees": 609791,
           "revenue": 303285,
           "runRate": 15813279.9,
           "peRatio": null,
@@ -851,22 +851,22 @@
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
       "mcap": 74388735,
       "tvl": 4841952,
-      "fees24h": 56221,
+      "fees24h": 63915,
       "fees7d": 403496,
       "fees30d": 1653083,
-      "revenue24h": 56221,
+      "revenue24h": 63915,
       "revenue7d": 403496,
       "revenue30d": 1653083,
       "timeframeData": {
         "24h": {
-          "fees": 56221,
-          "revenue": 56221,
-          "runRate": 20534720.25,
-          "peRatio": 3.6,
-          "psRatio": 3.6,
+          "fees": 63915,
+          "revenue": 63915,
+          "runRate": 23344953.75,
+          "peRatio": 3.2,
+          "psRatio": 3.2,
           "yieldPct": {
-            "periodYield": 0.08,
-            "apy": 27.6
+            "periodYield": 0.09,
+            "apy": 31.4
           }
         },
         "7d": {
@@ -926,7 +926,7 @@
       ],
       "contractAddress": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
       "explorerUrl": "https://basescan.org/token/0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
-      "mcap": 36677610,
+      "mcap": 36423851,
       "tvl": 4295100,
       "fees24h": 40957,
       "fees7d": 357925,
@@ -940,10 +940,10 @@
           "revenue": 21346,
           "runRate": 7796626.5,
           "peRatio": 4.7,
-          "psRatio": 2.5,
+          "psRatio": 2.4,
           "yieldPct": {
             "periodYield": 0.06,
-            "apy": 21.3
+            "apy": 21.4
           }
         },
         "7d": {
@@ -954,7 +954,7 @@
           "psRatio": 2,
           "yieldPct": {
             "periodYield": 0.43,
-            "apy": 22.3
+            "apy": 22.4
           }
         },
         "30d": {
@@ -964,8 +964,8 @@
           "peRatio": 6.3,
           "psRatio": 3.1,
           "yieldPct": {
-            "periodYield": 1.3,
-            "apy": 15.9
+            "periodYield": 1.31,
+            "apy": 16
           }
         }
       },
@@ -973,9 +973,9 @@
         "burn": true,
         "burnedAmount": 1000000,
         "burnedPct": 1,
-        "burnUsdEstimate": 368619,
+        "burnUsdEstimate": 366069,
         "buyback": true,
-        "treasuryNetWorthUsd": 2741681,
+        "treasuryNetWorthUsd": 2736606,
         "stakingToken": "$BNKR",
         "treasuryHoldings": "BNKR Fee Vault & Liquidity Reserve"
       },
@@ -984,7 +984,7 @@
         "riskScore": 45,
         "decentralizationScore": 56,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 54898,
+        "holdersCount": 54783,
         "top10SharePct": 44.5
       },
       "burnVelocity": 1
@@ -1008,15 +1008,15 @@
       "fees24h": 38527,
       "fees7d": 231009,
       "fees30d": 986272,
-      "revenue24h": 4461,
+      "revenue24h": 4451,
       "revenue7d": 27381,
       "revenue30d": 117193,
       "timeframeData": {
         "24h": {
           "fees": 38527,
-          "revenue": 4461,
-          "runRate": 1629380.25,
-          "peRatio": 2608.4,
+          "revenue": 4451,
+          "runRate": 1625727.75,
+          "peRatio": 2614.2,
           "psRatio": 302,
           "yieldPct": {
             "periodYield": 0,
@@ -1080,32 +1080,32 @@
       ],
       "contractAddress": "0xacf0047385966a014902c38c82cb79a55428aa3d",
       "explorerUrl": "https://basescan.org/token/0xacf0047385966a014902c38c82cb79a55428aa3d",
-      "mcap": 1237181330,
+      "mcap": 1220525770,
       "tvl": 1608396,
-      "fees24h": 19008,
+      "fees24h": 427335,
       "fees7d": 134033,
       "fees30d": 855540,
-      "revenue24h": 19008,
+      "revenue24h": 427335,
       "revenue7d": 134033,
       "revenue30d": 855540,
       "timeframeData": {
         "24h": {
-          "fees": 19008,
-          "revenue": 19008,
-          "runRate": 6942672,
-          "peRatio": 178.2,
-          "psRatio": 178.2,
+          "fees": 427335,
+          "revenue": 427335,
+          "runRate": 156084108.75,
+          "peRatio": 7.8,
+          "psRatio": 7.8,
           "yieldPct": {
-            "periodYield": 0,
-            "apy": 0.6
+            "periodYield": 0.04,
+            "apy": 12.8
           }
         },
         "7d": {
           "fees": 134033,
           "revenue": 134033,
           "runRate": 6988480.62,
-          "peRatio": 177,
-          "psRatio": 177,
+          "peRatio": 174.6,
+          "psRatio": 174.6,
           "yieldPct": {
             "periodYield": 0.01,
             "apy": 0.6
@@ -1115,11 +1115,11 @@
           "fees": 855540,
           "revenue": 855540,
           "runRate": 10411921.8,
-          "peRatio": 118.8,
-          "psRatio": 118.8,
+          "peRatio": 117.2,
+          "psRatio": 117.2,
           "yieldPct": {
             "periodYield": 0.07,
-            "apy": 0.8
+            "apy": 0.9
           }
         }
       },
@@ -1127,9 +1127,9 @@
         "burn": true,
         "burnedAmount": 800000,
         "burnedPct": 0.8,
-        "burnUsdEstimate": 9937199,
+        "burnUsdEstimate": 9803420,
         "buyback": true,
-        "treasuryNetWorthUsd": 28336895,
+        "treasuryNetWorthUsd": 28003783,
         "stakingToken": "$VVV",
         "treasuryHoldings": "VVV Fee Vault & Liquidity Reserve"
       },
@@ -1138,7 +1138,7 @@
         "riskScore": 43,
         "decentralizationScore": 58,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 594185,
+        "holdersCount": 586614,
         "top10SharePct": 42.5
       },
       "burnVelocity": 0.8
@@ -1159,19 +1159,19 @@
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
       "mcap": 28923660,
       "tvl": 1590888,
-      "fees24h": 16740,
+      "fees24h": 18098,
       "fees7d": 132574,
       "fees30d": 1157364,
-      "revenue24h": 9214,
+      "revenue24h": 9148,
       "revenue7d": 70950,
       "revenue30d": 642748,
       "timeframeData": {
         "24h": {
-          "fees": 16740,
-          "revenue": 9214,
-          "runRate": 3365413.5,
-          "peRatio": 8.6,
-          "psRatio": 4.7,
+          "fees": 18098,
+          "revenue": 9148,
+          "runRate": 3341307,
+          "peRatio": 8.7,
+          "psRatio": 4.4,
           "yieldPct": {
             "periodYield": 0.03,
             "apy": 11.6
@@ -1236,22 +1236,22 @@
       "explorerUrl": "https://basescan.org/token/0x3216063cb4ff0a7cfcb7d7c6ee68087799343058",
       "mcap": 22000000,
       "tvl": 1410168,
-      "fees24h": 101579,
+      "fees24h": 2222,
       "fees7d": 117514,
       "fees30d": 495892,
-      "revenue24h": 101579,
+      "revenue24h": 2222,
       "revenue7d": 117514,
       "revenue30d": 495892,
       "timeframeData": {
         "24h": {
-          "fees": 101579,
-          "revenue": 101579,
-          "runRate": 37101729.75,
-          "peRatio": 0.6,
-          "psRatio": 0.6,
+          "fees": 2222,
+          "revenue": 2222,
+          "runRate": 811585.5,
+          "peRatio": 27.1,
+          "psRatio": 27.1,
           "yieldPct": {
-            "periodYield": 0.46,
-            "apy": 168.6
+            "periodYield": 0.01,
+            "apy": 3.7
           }
         },
         "7d": {
@@ -1311,7 +1311,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 6353788,
+      "mcap": 6373069,
       "tvl": 1195224,
       "fees24h": 7826,
       "fees7d": 99602,
@@ -1328,7 +1328,7 @@
           "psRatio": 2.2,
           "yieldPct": {
             "periodYield": 0.05,
-            "apy": 18.9
+            "apy": 18.8
           }
         },
         "7d": {
@@ -1339,7 +1339,7 @@
           "psRatio": 1.2,
           "yieldPct": {
             "periodYield": 0.36,
-            "apy": 18.9
+            "apy": 18.8
           }
         },
         "30d": {
@@ -1360,7 +1360,7 @@
         "burnedPct": 0,
         "burnUsdEstimate": 0,
         "buyback": true,
-        "treasuryNetWorthUsd": 532955,
+        "treasuryNetWorthUsd": 533341,
         "stakingToken": "$GROVE",
         "treasuryHoldings": "GROVE Fee Vault & Liquidity Reserve"
       },
@@ -1369,7 +1369,7 @@
         "riskScore": 43,
         "decentralizationScore": 58,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 33734,
+        "holdersCount": 33743,
         "top10SharePct": 42.5
       },
       "burnVelocity": 0
@@ -1465,21 +1465,21 @@
       ],
       "contractAddress": "0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
       "explorerUrl": "https://basescan.org/token/0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
-      "mcap": 504705380,
+      "mcap": 498981058,
       "tvl": 1014360,
-      "fees24h": 6644,
+      "fees24h": 6108,
       "fees7d": 84530,
       "fees30d": 261920,
-      "revenue24h": 2006,
+      "revenue24h": 1845,
       "revenue7d": 25479,
       "revenue30d": 79403,
       "timeframeData": {
         "24h": {
-          "fees": 6644,
-          "revenue": 2006,
-          "runRate": 732691.5,
-          "peRatio": 688.8,
-          "psRatio": 208,
+          "fees": 6108,
+          "revenue": 1845,
+          "runRate": 673886.25,
+          "peRatio": 740.5,
+          "psRatio": 223.7,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0.1
@@ -1489,8 +1489,8 @@
           "fees": 84530,
           "revenue": 25479,
           "runRate": 1328475.06,
-          "peRatio": 379.9,
-          "psRatio": 114.5,
+          "peRatio": 375.6,
+          "psRatio": 113.2,
           "yieldPct": {
             "periodYield": 0.01,
             "apy": 0.3
@@ -1500,8 +1500,8 @@
           "fees": 261920,
           "revenue": 79403,
           "runRate": 966334.51,
-          "peRatio": 522.3,
-          "psRatio": 158.3,
+          "peRatio": 516.4,
+          "psRatio": 156.5,
           "yieldPct": {
             "periodYield": 0.02,
             "apy": 0.2
@@ -1512,9 +1512,9 @@
         "burn": true,
         "burnedAmount": 515465140,
         "burnedPct": 51.55,
-        "burnUsdEstimate": 523420083,
+        "burnUsdEstimate": 517483501,
         "buyback": true,
-        "treasuryNetWorthUsd": 10427600,
+        "treasuryNetWorthUsd": 10313114,
         "stakingToken": "$VIRTUAL",
         "treasuryHoldings": "VIRTUAL Fee Vault & Liquidity Reserve"
       },
@@ -1523,7 +1523,7 @@
         "riskScore": 38,
         "decentralizationScore": 63,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 259827,
+        "holdersCount": 257225,
         "top10SharePct": 37.5
       },
       "burnVelocity": 51.55
@@ -1542,7 +1542,7 @@
       ],
       "contractAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
       "explorerUrl": "https://basescan.org/token/0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
-      "mcap": 43586727,
+      "mcap": 43325617,
       "tvl": 891360,
       "fees24h": 17476,
       "fees7d": 74280,
@@ -1555,7 +1555,7 @@
           "fees": 17476,
           "revenue": 7340,
           "runRate": 2680935,
-          "peRatio": 16.3,
+          "peRatio": 16.2,
           "psRatio": 6.8,
           "yieldPct": {
             "periodYield": 0.02,
@@ -1566,22 +1566,22 @@
           "fees": 74280,
           "revenue": 51380,
           "runRate": 2678953.2,
-          "peRatio": 16.3,
-          "psRatio": 11.3,
+          "peRatio": 16.2,
+          "psRatio": 11.2,
           "yieldPct": {
             "periodYield": 0.12,
-            "apy": 6.1
+            "apy": 6.2
           }
         },
         "30d": {
           "fees": 359083,
           "revenue": 215796,
           "runRate": 2626237.32,
-          "peRatio": 16.6,
-          "psRatio": 10,
+          "peRatio": 16.5,
+          "psRatio": 9.9,
           "yieldPct": {
             "periodYield": 0.5,
-            "apy": 6
+            "apy": 6.1
           }
         }
       },
@@ -1589,9 +1589,9 @@
         "burn": true,
         "burnedAmount": 100000,
         "burnedPct": 0.1,
-        "burnUsdEstimate": 43609,
+        "burnUsdEstimate": 43347,
         "buyback": true,
-        "treasuryNetWorthUsd": 1778078,
+        "treasuryNetWorthUsd": 1772856,
         "stakingToken": "$AVNT",
         "treasuryHoldings": "AVNT Fee Vault & Liquidity Reserve"
       },
@@ -1600,7 +1600,7 @@
         "riskScore": 30,
         "decentralizationScore": 71,
         "description": "Highly decentralized token distribution. Low vulnerability to systemic whale sell-offs.",
-        "holdersCount": 49934,
+        "holdersCount": 49816,
         "top10SharePct": 29.5
       },
       "burnVelocity": 0.1
@@ -1619,18 +1619,18 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 11345145,
+      "mcap": 11340942,
       "tvl": 624240,
-      "fees24h": -15734,
+      "fees24h": -12436,
       "fees7d": 52020,
       "fees30d": 157232,
-      "revenue24h": -15775,
+      "revenue24h": -12473,
       "revenue7d": 51941,
       "revenue30d": 157012,
       "timeframeData": {
         "24h": {
-          "fees": -15734,
-          "revenue": -15775,
+          "fees": -12436,
+          "revenue": -12473,
           "runRate": 0,
           "peRatio": null,
           "psRatio": null,
@@ -1668,7 +1668,7 @@
         "burnedPct": 0,
         "burnUsdEstimate": 0,
         "buyback": true,
-        "treasuryNetWorthUsd": 886353,
+        "treasuryNetWorthUsd": 886269,
         "stakingToken": "$OVER",
         "treasuryHoldings": "OVER Fee Vault & Liquidity Reserve"
       },
@@ -1677,7 +1677,7 @@
         "riskScore": 42,
         "decentralizationScore": 59,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 34643,
+        "holdersCount": 34641,
         "top10SharePct": 41.5
       },
       "burnVelocity": 0
@@ -1698,22 +1698,22 @@
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
       "mcap": 10142775,
       "tvl": 609060,
-      "fees24h": 5792,
+      "fees24h": 7044,
       "fees7d": 50755,
       "fees30d": 225395,
-      "revenue24h": 5792,
+      "revenue24h": 7044,
       "revenue7d": 50755,
       "revenue30d": 225395,
       "timeframeData": {
         "24h": {
-          "fees": 5792,
-          "revenue": 5792,
-          "runRate": 2115528,
-          "peRatio": 4.8,
-          "psRatio": 4.8,
+          "fees": 7044,
+          "revenue": 7044,
+          "runRate": 2572821,
+          "peRatio": 3.9,
+          "psRatio": 3.9,
           "yieldPct": {
-            "periodYield": 0.06,
-            "apy": 20.9
+            "periodYield": 0.07,
+            "apy": 25.4
           }
         },
         "7d": {
@@ -1773,24 +1773,24 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 4596917,
+      "mcap": 4591399,
       "tvl": 448656,
-      "fees24h": 828,
+      "fees24h": 1833,
       "fees7d": 37388,
       "fees30d": 269751,
-      "revenue24h": 828,
+      "revenue24h": 1833,
       "revenue7d": 37388,
       "revenue30d": 269751,
       "timeframeData": {
         "24h": {
-          "fees": 828,
-          "revenue": 828,
-          "runRate": 302427,
-          "peRatio": 15.2,
-          "psRatio": 15.2,
+          "fees": 1833,
+          "revenue": 1833,
+          "runRate": 669503.25,
+          "peRatio": 6.9,
+          "psRatio": 6.9,
           "yieldPct": {
-            "periodYield": 0.02,
-            "apy": 6.6
+            "periodYield": 0.04,
+            "apy": 14.6
           }
         },
         "7d": {
@@ -1801,7 +1801,7 @@
           "psRatio": 2.4,
           "yieldPct": {
             "periodYield": 0.81,
-            "apy": 42.4
+            "apy": 42.5
           }
         },
         "30d": {
@@ -1811,8 +1811,8 @@
           "peRatio": 1.4,
           "psRatio": 1.4,
           "yieldPct": {
-            "periodYield": 5.87,
-            "apy": 71.4
+            "periodYield": 5.88,
+            "apy": 71.5
           }
         }
       },
@@ -1822,7 +1822,7 @@
         "burnedPct": 0,
         "burnUsdEstimate": 0,
         "buyback": true,
-        "treasuryNetWorthUsd": 1224893,
+        "treasuryNetWorthUsd": 1224782,
         "stakingToken": "$MAMO",
         "treasuryHoldings": "MAMO Fee Vault & Liquidity Reserve"
       },
@@ -1831,7 +1831,7 @@
         "riskScore": 33,
         "decentralizationScore": 68,
         "description": "Highly decentralized token distribution. Low vulnerability to systemic whale sell-offs.",
-        "holdersCount": 31158,
+        "holdersCount": 31155,
         "top10SharePct": 32.5
       },
       "burnVelocity": 0
@@ -1850,43 +1850,43 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 300814230,
-      "tvl": 363216,
-      "fees24h": 4324,
-      "fees7d": 30268,
-      "fees30d": 127126,
-      "revenue24h": 4324,
+      "mcap": 300346838,
+      "tvl": 363384,
+      "fees24h": 4326,
+      "fees7d": 30282,
+      "fees30d": 127184,
+      "revenue24h": 4326,
       "revenue7d": 30677,
       "revenue30d": 142214,
       "timeframeData": {
         "24h": {
-          "fees": 4324,
-          "revenue": 4324,
-          "runRate": 1579341,
-          "peRatio": 190.5,
-          "psRatio": 190.5,
+          "fees": 4326,
+          "revenue": 4326,
+          "runRate": 1580071.5,
+          "peRatio": 190.1,
+          "psRatio": 190.1,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0.5
           }
         },
         "7d": {
-          "fees": 30268,
+          "fees": 30282,
           "revenue": 30677,
           "runRate": 1599498.78,
-          "peRatio": 188.1,
-          "psRatio": 190.6,
+          "peRatio": 187.8,
+          "psRatio": 190.2,
           "yieldPct": {
             "periodYield": 0.01,
             "apy": 0.5
           }
         },
         "30d": {
-          "fees": 127126,
+          "fees": 127184,
           "revenue": 142214,
           "runRate": 1730744.38,
-          "peRatio": 173.8,
-          "psRatio": 194.4,
+          "peRatio": 173.5,
+          "psRatio": 194,
           "yieldPct": {
             "periodYield": 0.05,
             "apy": 0.6
@@ -1899,7 +1899,7 @@
         "burnedPct": 0,
         "burnUsdEstimate": 0,
         "buyback": true,
-        "treasuryNetWorthUsd": 6613583,
+        "treasuryNetWorthUsd": 6604236,
         "stakingToken": "$OHM",
         "treasuryHoldings": "OHM Fee Vault & Liquidity Reserve"
       },
@@ -1908,7 +1908,7 @@
         "riskScore": 27,
         "decentralizationScore": 74,
         "description": "Highly decentralized token distribution. Low vulnerability to systemic whale sell-offs.",
-        "holdersCount": 165599,
+        "holdersCount": 165386,
         "top10SharePct": 26.5
       },
       "burnVelocity": 0
@@ -1927,24 +1927,24 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 3673236,
+      "mcap": 3669370,
       "tvl": 356112,
-      "fees24h": 5743,
+      "fees24h": 5714,
       "fees7d": 29676,
       "fees30d": 134648,
-      "revenue24h": 5743,
+      "revenue24h": 5714,
       "revenue7d": 29676,
       "revenue30d": 134648,
       "timeframeData": {
         "24h": {
-          "fees": 5743,
-          "revenue": 5743,
-          "runRate": 2097630.75,
+          "fees": 5714,
+          "revenue": 5714,
+          "runRate": 2087038.5,
           "peRatio": 1.8,
           "psRatio": 1.8,
           "yieldPct": {
             "periodYield": 0.16,
-            "apy": 57.1
+            "apy": 56.9
           }
         },
         "7d": {
@@ -1955,7 +1955,7 @@
           "psRatio": 2.4,
           "yieldPct": {
             "periodYield": 0.81,
-            "apy": 42.1
+            "apy": 42.2
           }
         },
         "30d": {
@@ -1966,7 +1966,7 @@
           "psRatio": 2.2,
           "yieldPct": {
             "periodYield": 3.67,
-            "apy": 44.6
+            "apy": 44.7
           }
         }
       },
@@ -1976,7 +1976,7 @@
         "burnedPct": 0,
         "burnUsdEstimate": 0,
         "buyback": true,
-        "treasuryNetWorthUsd": 638986,
+        "treasuryNetWorthUsd": 638909,
         "stakingToken": "$FUN",
         "treasuryHoldings": "FUN Fee Vault & Liquidity Reserve"
       },
@@ -1985,7 +1985,7 @@
         "riskScore": 44,
         "decentralizationScore": 57,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 30518,
+        "holdersCount": 30516,
         "top10SharePct": 43.5
       },
       "burnVelocity": 0
@@ -2006,19 +2006,19 @@
       "explorerUrl": "https://basescan.org/token/0xA88594D404727625A9437C3f886C7643872296AE",
       "mcap": 260000000,
       "tvl": 312660,
-      "fees24h": 3477,
+      "fees24h": 3425,
       "fees7d": 26055,
       "fees30d": 131433,
-      "revenue24h": 509,
+      "revenue24h": 502,
       "revenue7d": 4260,
       "revenue30d": 22086,
       "timeframeData": {
         "24h": {
-          "fees": 3477,
-          "revenue": 509,
-          "runRate": 185912.25,
-          "peRatio": 1398.5,
-          "psRatio": 204.7,
+          "fees": 3425,
+          "revenue": 502,
+          "runRate": 183355.5,
+          "peRatio": 1418,
+          "psRatio": 207.8,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0.1
@@ -2081,7 +2081,7 @@
       ],
       "contractAddress": "0xDEf1CA1fb7FBcDC777520aa7f396b4E015F497aB",
       "explorerUrl": "https://basescan.org/token/0xDEf1CA1fb7FBcDC777520aa7f396b4E015F497aB",
-      "mcap": 82999490,
+      "mcap": 82607193,
       "tvl": 293820,
       "fees24h": 1797,
       "fees7d": 24485,
@@ -2094,8 +2094,8 @@
           "fees": 1797,
           "revenue": 866,
           "runRate": 316306.5,
-          "peRatio": 262.4,
-          "psRatio": 126.5,
+          "peRatio": 261.2,
+          "psRatio": 125.9,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0.4
@@ -2105,10 +2105,10 @@
           "fees": 24485,
           "revenue": 12414,
           "runRate": 647265.96,
-          "peRatio": 128.2,
-          "psRatio": 65,
+          "peRatio": 127.6,
+          "psRatio": 64.7,
           "yieldPct": {
-            "periodYield": 0.01,
+            "periodYield": 0.02,
             "apy": 0.8
           }
         },
@@ -2116,10 +2116,10 @@
           "fees": 121400,
           "revenue": 70330,
           "runRate": 855916.1,
-          "peRatio": 97,
-          "psRatio": 56.2,
+          "peRatio": 96.5,
+          "psRatio": 55.9,
           "yieldPct": {
-            "periodYield": 0.08,
+            "periodYield": 0.09,
             "apy": 1
           }
         }
@@ -2128,9 +2128,9 @@
         "burn": true,
         "burnedAmount": 3000000,
         "burnedPct": 0.3,
-        "burnUsdEstimate": 249373,
+        "burnUsdEstimate": 248194,
         "buyback": true,
-        "treasuryNetWorthUsd": 1955376,
+        "treasuryNetWorthUsd": 1947530,
         "stakingToken": "$COW",
         "treasuryHoldings": "COW Fee Vault & Liquidity Reserve"
       },
@@ -2139,7 +2139,7 @@
         "riskScore": 27,
         "decentralizationScore": 74,
         "description": "Highly decentralized token distribution. Low vulnerability to systemic whale sell-offs.",
-        "holdersCount": 66427,
+        "holdersCount": 66248,
         "top10SharePct": 26.5
       },
       "burnVelocity": 0.3
@@ -2160,22 +2160,22 @@
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
       "mcap": 6018300,
       "tvl": 208644,
-      "fees24h": 2727,
+      "fees24h": 2914,
       "fees7d": 17387,
       "fees30d": 133740,
-      "revenue24h": 2727,
+      "revenue24h": 2914,
       "revenue7d": 17387,
       "revenue30d": 133740,
       "timeframeData": {
         "24h": {
-          "fees": 2727,
-          "revenue": 2727,
-          "runRate": 996036.75,
-          "peRatio": 6,
-          "psRatio": 6,
+          "fees": 2914,
+          "revenue": 2914,
+          "runRate": 1064338.5,
+          "peRatio": 5.7,
+          "psRatio": 5.7,
           "yieldPct": {
             "periodYield": 0.05,
-            "apy": 16.6
+            "apy": 17.7
           }
         },
         "7d": {
@@ -2312,46 +2312,46 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 1910490,
+      "mcap": 1695961,
       "tvl": 204528,
-      "fees24h": 2387,
+      "fees24h": 2484,
       "fees7d": 17044,
       "fees30d": 180025,
-      "revenue24h": 1673,
+      "revenue24h": 1836,
       "revenue7d": 9065,
       "revenue30d": 115934,
       "timeframeData": {
         "24h": {
-          "fees": 2387,
-          "revenue": 1673,
-          "runRate": 611063.25,
-          "peRatio": 3.1,
-          "psRatio": 2.2,
+          "fees": 2484,
+          "revenue": 1836,
+          "runRate": 670599,
+          "peRatio": 2.5,
+          "psRatio": 1.9,
           "yieldPct": {
-            "periodYield": 0.09,
-            "apy": 32
+            "periodYield": 0.11,
+            "apy": 39.5
           }
         },
         "7d": {
           "fees": 17044,
           "revenue": 9065,
           "runRate": 472649.1,
-          "peRatio": 4,
-          "psRatio": 2.1,
+          "peRatio": 3.6,
+          "psRatio": 1.9,
           "yieldPct": {
-            "periodYield": 0.47,
-            "apy": 24.7
+            "periodYield": 0.53,
+            "apy": 27.9
           }
         },
         "30d": {
           "fees": 180025,
           "revenue": 115934,
           "runRate": 1410916.78,
-          "peRatio": 1.4,
-          "psRatio": 0.9,
+          "peRatio": 1.2,
+          "psRatio": 0.8,
           "yieldPct": {
-            "periodYield": 6.07,
-            "apy": 73.9
+            "periodYield": 6.84,
+            "apy": 83.2
           }
         }
       },
@@ -2361,7 +2361,7 @@
         "burnedPct": 0,
         "burnUsdEstimate": 0,
         "buyback": true,
-        "treasuryNetWorthUsd": 525133,
+        "treasuryNetWorthUsd": 520842,
         "stakingToken": "$BSTONK",
         "treasuryHoldings": "BSTONK Fee Vault & Liquidity Reserve"
       },
@@ -2370,7 +2370,7 @@
         "riskScore": 27,
         "decentralizationScore": 74,
         "description": "Highly decentralized token distribution. Low vulnerability to systemic whale sell-offs.",
-        "holdersCount": 29355,
+        "holdersCount": 29258,
         "top10SharePct": 26.5
       },
       "burnVelocity": 0
@@ -2389,7 +2389,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 32790652,
+      "mcap": 32419485,
       "tvl": 193788,
       "fees24h": 1974,
       "fees7d": 16149,
@@ -2402,8 +2402,8 @@
           "fees": 1974,
           "revenue": 1974,
           "runRate": 721003.5,
-          "peRatio": 45.5,
-          "psRatio": 45.5,
+          "peRatio": 45,
+          "psRatio": 45,
           "yieldPct": {
             "periodYield": 0.01,
             "apy": 2.2
@@ -2413,8 +2413,8 @@
           "fees": 16149,
           "revenue": 16149,
           "runRate": 842008.86,
-          "peRatio": 38.9,
-          "psRatio": 38.9,
+          "peRatio": 38.5,
+          "psRatio": 38.5,
           "yieldPct": {
             "periodYield": 0.05,
             "apy": 2.6
@@ -2424,10 +2424,10 @@
           "fees": 118507,
           "revenue": 118507,
           "runRate": 1442230.19,
-          "peRatio": 22.7,
-          "psRatio": 22.7,
+          "peRatio": 22.5,
+          "psRatio": 22.5,
           "yieldPct": {
-            "periodYield": 0.36,
+            "periodYield": 0.37,
             "apy": 4.4
           }
         }
@@ -2438,7 +2438,7 @@
         "burnedPct": 0,
         "burnUsdEstimate": 0,
         "buyback": true,
-        "treasuryNetWorthUsd": 1153542,
+        "treasuryNetWorthUsd": 1146119,
         "stakingToken": "$EDGE",
         "treasuryHoldings": "EDGE Fee Vault & Liquidity Reserve"
       },
@@ -2447,7 +2447,7 @@
         "riskScore": 32,
         "decentralizationScore": 69,
         "description": "Highly decentralized token distribution. Low vulnerability to systemic whale sell-offs.",
-        "holdersCount": 43366,
+        "holdersCount": 43198,
         "top10SharePct": 31.5
       },
       "burnVelocity": 0
@@ -2466,7 +2466,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 6157878,
+      "mcap": 6398456,
       "tvl": 188328,
       "fees24h": 2242,
       "fees7d": 15694,
@@ -2479,33 +2479,33 @@
           "fees": 2242,
           "revenue": 2242,
           "runRate": 818890.5,
-          "peRatio": 7.5,
-          "psRatio": 7.5,
+          "peRatio": 7.8,
+          "psRatio": 7.8,
           "yieldPct": {
             "periodYield": 0.04,
-            "apy": 13.3
+            "apy": 12.8
           }
         },
         "7d": {
           "fees": 15694,
           "revenue": 12237,
           "runRate": 638037.18,
-          "peRatio": 9.7,
-          "psRatio": 7.5,
+          "peRatio": 10,
+          "psRatio": 7.8,
           "yieldPct": {
-            "periodYield": 0.2,
-            "apy": 10.4
+            "periodYield": 0.19,
+            "apy": 10
           }
         },
         "30d": {
           "fees": 65915,
           "revenue": 68345,
           "runRate": 831758.65,
-          "peRatio": 7.4,
-          "psRatio": 7.7,
+          "peRatio": 7.7,
+          "psRatio": 8,
           "yieldPct": {
-            "periodYield": 1.11,
-            "apy": 13.5
+            "periodYield": 1.07,
+            "apy": 13
           }
         }
       },
@@ -2515,7 +2515,7 @@
         "burnedPct": 0,
         "burnUsdEstimate": 0,
         "buyback": true,
-        "treasuryNetWorthUsd": 410207,
+        "treasuryNetWorthUsd": 415018,
         "stakingToken": "$DEXT",
         "treasuryHoldings": "DEXT Fee Vault & Liquidity Reserve"
       },
@@ -2524,7 +2524,7 @@
         "riskScore": 27,
         "decentralizationScore": 74,
         "description": "Highly decentralized token distribution. Low vulnerability to systemic whale sell-offs.",
-        "holdersCount": 31247,
+        "holdersCount": 31357,
         "top10SharePct": 26.5
       },
       "burnVelocity": 0
@@ -2699,22 +2699,22 @@
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
       "mcap": 3280950,
       "tvl": 177960,
-      "fees24h": 1494,
+      "fees24h": 1460,
       "fees7d": 14830,
       "fees30d": 72910,
-      "revenue24h": 1494,
+      "revenue24h": 1460,
       "revenue7d": 14830,
       "revenue30d": 72910,
       "timeframeData": {
         "24h": {
-          "fees": 1494,
-          "revenue": 1494,
-          "runRate": 545683.5,
-          "peRatio": 6,
-          "psRatio": 6,
+          "fees": 1460,
+          "revenue": 1460,
+          "runRate": 533265,
+          "peRatio": 6.2,
+          "psRatio": 6.2,
           "yieldPct": {
-            "periodYield": 0.05,
-            "apy": 16.6
+            "periodYield": 0.04,
+            "apy": 16.3
           }
         },
         "7d": {
@@ -2774,46 +2774,46 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 760728,
+      "mcap": 868528,
       "tvl": 164820,
-      "fees24h": 1553,
+      "fees24h": 1585,
       "fees7d": 13735,
       "fees30d": 50549,
-      "revenue24h": 305,
+      "revenue24h": 311,
       "revenue7d": 2438,
       "revenue30d": 9568,
       "timeframeData": {
         "24h": {
-          "fees": 1553,
-          "revenue": 305,
-          "runRate": 111401.25,
-          "peRatio": 6.8,
-          "psRatio": 1.3,
+          "fees": 1585,
+          "revenue": 311,
+          "runRate": 113592.75,
+          "peRatio": 7.6,
+          "psRatio": 1.5,
           "yieldPct": {
             "periodYield": 0.04,
-            "apy": 14.6
+            "apy": 13.1
           }
         },
         "7d": {
           "fees": 13735,
           "revenue": 2438,
           "runRate": 127117.32,
-          "peRatio": 6,
-          "psRatio": 1.1,
+          "peRatio": 6.8,
+          "psRatio": 1.2,
           "yieldPct": {
-            "periodYield": 0.32,
-            "apy": 16.7
+            "periodYield": 0.28,
+            "apy": 14.6
           }
         },
         "30d": {
           "fees": 50549,
           "revenue": 9568,
           "runRate": 116442.56,
-          "peRatio": 6.5,
-          "psRatio": 1.2,
+          "peRatio": 7.5,
+          "psRatio": 1.4,
           "yieldPct": {
-            "periodYield": 1.26,
-            "apy": 15.3
+            "periodYield": 1.1,
+            "apy": 13.4
           }
         }
       },
@@ -2832,7 +2832,7 @@
         "riskScore": 39,
         "decentralizationScore": 62,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 28738,
+        "holdersCount": 28787,
         "top10SharePct": 38.5
       },
       "burnVelocity": 0
@@ -2928,32 +2928,32 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 18988056,
+      "mcap": 18858755,
       "tvl": 156852,
-      "fees24h": 1294,
+      "fees24h": 1133,
       "fees7d": 13071,
       "fees30d": 64648,
-      "revenue24h": 1294,
+      "revenue24h": 1133,
       "revenue7d": 13071,
       "revenue30d": 64648,
       "timeframeData": {
         "24h": {
-          "fees": 1294,
-          "revenue": 1294,
-          "runRate": 472633.5,
-          "peRatio": 40.2,
-          "psRatio": 40.2,
+          "fees": 1133,
+          "revenue": 1133,
+          "runRate": 413828.25,
+          "peRatio": 45.6,
+          "psRatio": 45.6,
           "yieldPct": {
             "periodYield": 0.01,
-            "apy": 2.5
+            "apy": 2.2
           }
         },
         "7d": {
           "fees": 13071,
           "revenue": 13071,
           "runRate": 681521.9400000001,
-          "peRatio": 27.9,
-          "psRatio": 27.9,
+          "peRatio": 27.7,
+          "psRatio": 27.7,
           "yieldPct": {
             "periodYield": 0.07,
             "apy": 3.6
@@ -2963,11 +2963,11 @@
           "fees": 64648,
           "revenue": 64648,
           "runRate": 786766.16,
-          "peRatio": 24.1,
-          "psRatio": 24.1,
+          "peRatio": 24,
+          "psRatio": 24,
           "yieldPct": {
             "periodYield": 0.34,
-            "apy": 4.1
+            "apy": 4.2
           }
         }
       },
@@ -2977,7 +2977,7 @@
         "burnedPct": 0,
         "burnUsdEstimate": 0,
         "buyback": true,
-        "treasuryNetWorthUsd": 651283,
+        "treasuryNetWorthUsd": 648697,
         "stakingToken": "$UMIA",
         "treasuryHoldings": "UMIA Fee Vault & Liquidity Reserve"
       },
@@ -2986,7 +2986,7 @@
         "riskScore": 35,
         "decentralizationScore": 66,
         "description": "Highly decentralized token distribution. Low vulnerability to systemic whale sell-offs.",
-        "holdersCount": 37004,
+        "holdersCount": 36946,
         "top10SharePct": 34.5
       },
       "burnVelocity": 0
@@ -3007,22 +3007,22 @@
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
       "mcap": 170910,
       "tvl": 136416,
-      "fees24h": 2060,
+      "fees24h": 1972,
       "fees7d": 11368,
       "fees30d": 49930,
-      "revenue24h": 147,
+      "revenue24h": 137,
       "revenue7d": 852,
       "revenue30d": 3798,
       "timeframeData": {
         "24h": {
-          "fees": 2060,
-          "revenue": 147,
-          "runRate": 53691.75,
-          "peRatio": 3.2,
+          "fees": 1972,
+          "revenue": 137,
+          "runRate": 50039.25,
+          "peRatio": 3.4,
           "psRatio": 0.2,
           "yieldPct": {
-            "periodYield": 0.09,
-            "apy": 31.4
+            "periodYield": 0.08,
+            "apy": 29.3
           }
         },
         "7d": {
@@ -3082,19 +3082,19 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 936675,
+      "mcap": 898335,
       "tvl": 136368,
-      "fees24h": 1685,
+      "fees24h": 1616,
       "fees7d": 11364,
       "fees30d": 49433,
-      "revenue24h": 708,
-      "revenue7d": 4956,
-      "revenue30d": 20815,
+      "revenue24h": 679,
+      "revenue7d": 4753,
+      "revenue30d": 19963,
       "timeframeData": {
         "24h": {
-          "fees": 1685,
-          "revenue": 708,
-          "runRate": 258597,
+          "fees": 1616,
+          "revenue": 679,
+          "runRate": 248004.75,
           "peRatio": 3.6,
           "psRatio": 1.5,
           "yieldPct": {
@@ -3104,10 +3104,10 @@
         },
         "7d": {
           "fees": 11364,
-          "revenue": 4956,
-          "runRate": 258405.84,
+          "revenue": 4753,
+          "runRate": 247821.42,
           "peRatio": 3.6,
-          "psRatio": 1.6,
+          "psRatio": 1.5,
           "yieldPct": {
             "periodYield": 0.53,
             "apy": 27.6
@@ -3115,10 +3115,10 @@
         },
         "30d": {
           "fees": 49433,
-          "revenue": 20815,
-          "runRate": 253318.55,
+          "revenue": 19963,
+          "runRate": 242949.71,
           "peRatio": 3.7,
-          "psRatio": 1.6,
+          "psRatio": 1.5,
           "yieldPct": {
             "periodYield": 2.22,
             "apy": 27
@@ -3140,7 +3140,7 @@
         "riskScore": 40,
         "decentralizationScore": 61,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 28750,
+        "holdersCount": 28733,
         "top10SharePct": 39.5
       },
       "burnVelocity": 0
@@ -3159,24 +3159,24 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 2096291,
+      "mcap": 2087709,
       "tvl": 133524,
-      "fees24h": 888,
+      "fees24h": 1029,
       "fees7d": 11127,
       "fees30d": 42144,
-      "revenue24h": 508,
+      "revenue24h": 588,
       "revenue7d": 6339,
       "revenue30d": 24027,
       "timeframeData": {
         "24h": {
-          "fees": 888,
-          "revenue": 508,
-          "runRate": 185547,
-          "peRatio": 11.3,
-          "psRatio": 6.5,
+          "fees": 1029,
+          "revenue": 588,
+          "runRate": 214767,
+          "peRatio": 9.7,
+          "psRatio": 5.6,
           "yieldPct": {
-            "periodYield": 0.02,
-            "apy": 8.9
+            "periodYield": 0.03,
+            "apy": 10.3
           }
         },
         "7d": {
@@ -3194,11 +3194,11 @@
           "fees": 42144,
           "revenue": 24027,
           "runRate": 292408.59,
-          "peRatio": 7.2,
+          "peRatio": 7.1,
           "psRatio": 4.1,
           "yieldPct": {
             "periodYield": 1.15,
-            "apy": 13.9
+            "apy": 14
           }
         }
       },
@@ -3217,7 +3217,7 @@
         "riskScore": 26,
         "decentralizationScore": 75,
         "description": "Highly decentralized token distribution. Low vulnerability to systemic whale sell-offs.",
-        "holdersCount": 29271,
+        "holdersCount": 29267,
         "top10SharePct": 25.5
       },
       "burnVelocity": 0
@@ -3238,19 +3238,19 @@
       "explorerUrl": "https://basescan.org/token/0x26498a44cd62137bc39031d2797e59c162cfd35c",
       "mcap": 38000000,
       "tvl": 129384,
-      "fees24h": 1515,
+      "fees24h": 1568,
       "fees7d": 10782,
       "fees30d": 42812,
-      "revenue24h": 1217,
+      "revenue24h": 1274,
       "revenue7d": 8713,
       "revenue30d": 34375,
       "timeframeData": {
         "24h": {
-          "fees": 1515,
-          "revenue": 1217,
-          "runRate": 444509.25,
-          "peRatio": 85.5,
-          "psRatio": 68.7,
+          "fees": 1568,
+          "revenue": 1274,
+          "runRate": 465328.5,
+          "peRatio": 81.7,
+          "psRatio": 66.4,
           "yieldPct": {
             "periodYield": 0,
             "apy": 1.2
@@ -3315,22 +3315,22 @@
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
       "mcap": 747360,
       "tvl": 124416,
-      "fees24h": 1965,
+      "fees24h": 2026,
       "fees7d": 10368,
       "fees30d": 166058,
-      "revenue24h": 196,
+      "revenue24h": 203,
       "revenue7d": 1036,
       "revenue30d": 16608,
       "timeframeData": {
         "24h": {
-          "fees": 1965,
-          "revenue": 196,
-          "runRate": 71589,
-          "peRatio": 10.4,
+          "fees": 2026,
+          "revenue": 203,
+          "runRate": 74145.75,
+          "peRatio": 10.1,
           "psRatio": 1,
           "yieldPct": {
             "periodYield": 0.03,
-            "apy": 9.6
+            "apy": 9.9
           }
         },
         "7d": {
@@ -3392,22 +3392,22 @@
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
       "mcap": 1231470,
       "tvl": 119904,
-      "fees24h": 1388,
+      "fees24h": 1303,
       "fees7d": 9992,
       "fees30d": 44553,
-      "revenue24h": 771,
+      "revenue24h": 729,
       "revenue7d": 5577,
       "revenue30d": 27366,
       "timeframeData": {
         "24h": {
-          "fees": 1388,
-          "revenue": 771,
-          "runRate": 281607.75,
-          "peRatio": 4.4,
-          "psRatio": 2.4,
+          "fees": 1303,
+          "revenue": 729,
+          "runRate": 266267.25,
+          "peRatio": 4.6,
+          "psRatio": 2.6,
           "yieldPct": {
             "periodYield": 0.06,
-            "apy": 22.9
+            "apy": 21.6
           }
         },
         "7d": {
@@ -3467,7 +3467,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 4870458,
+      "mcap": 4870237,
       "tvl": 115536,
       "fees24h": 1463,
       "fees7d": 9628,
@@ -3516,7 +3516,7 @@
         "burnedPct": 0,
         "burnUsdEstimate": 0,
         "buyback": true,
-        "treasuryNetWorthUsd": 258202,
+        "treasuryNetWorthUsd": 258198,
         "stakingToken": "$P2P",
         "treasuryHoldings": "P2P Fee Vault & Liquidity Reserve"
       },
@@ -3544,7 +3544,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 5444354,
+      "mcap": 5388376,
       "tvl": 113016,
       "fees24h": 1130,
       "fees7d": 9418,
@@ -3557,8 +3557,8 @@
           "fees": 1130,
           "revenue": 1069,
           "runRate": 390452.25,
-          "peRatio": 13.9,
-          "psRatio": 13.2,
+          "peRatio": 13.8,
+          "psRatio": 13.1,
           "yieldPct": {
             "periodYield": 0.02,
             "apy": 7.2
@@ -3568,22 +3568,22 @@
           "fees": 9418,
           "revenue": 8914,
           "runRate": 464775.96,
-          "peRatio": 11.7,
-          "psRatio": 11.1,
+          "peRatio": 11.6,
+          "psRatio": 11,
           "yieldPct": {
-            "periodYield": 0.16,
-            "apy": 8.5
+            "periodYield": 0.17,
+            "apy": 8.6
           }
         },
         "30d": {
           "fees": 45666,
           "revenue": 43217,
           "runRate": 525950.89,
-          "peRatio": 10.4,
-          "psRatio": 9.8,
+          "peRatio": 10.2,
+          "psRatio": 9.7,
           "yieldPct": {
-            "periodYield": 0.79,
-            "apy": 9.7
+            "periodYield": 0.8,
+            "apy": 9.8
           }
         }
       },
@@ -3593,7 +3593,7 @@
         "burnedPct": 0,
         "burnUsdEstimate": 0,
         "buyback": true,
-        "treasuryNetWorthUsd": 290398,
+        "treasuryNetWorthUsd": 289279,
         "stakingToken": "$BIFI",
         "treasuryHoldings": "BIFI Fee Vault & Liquidity Reserve"
       },
@@ -3602,7 +3602,7 @@
         "riskScore": 42,
         "decentralizationScore": 59,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 30744,
+        "holdersCount": 30718,
         "top10SharePct": 41.5
       },
       "burnVelocity": 0
@@ -3621,7 +3621,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 107660609,
+      "mcap": 107524358,
       "tvl": 99504,
       "fees24h": 981,
       "fees7d": 8292,
@@ -3634,8 +3634,8 @@
           "fees": 981,
           "revenue": 981,
           "runRate": 358310.25,
-          "peRatio": 300.5,
-          "psRatio": 300.5,
+          "peRatio": 300.1,
+          "psRatio": 300.1,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0.3
@@ -3645,8 +3645,8 @@
           "fees": 8292,
           "revenue": 8292,
           "runRate": 432344.88,
-          "peRatio": 249,
-          "psRatio": 249,
+          "peRatio": 248.7,
+          "psRatio": 248.7,
           "yieldPct": {
             "periodYield": 0.01,
             "apy": 0.4
@@ -3656,8 +3656,8 @@
           "fees": 132452,
           "revenue": 132452,
           "runRate": 1611940.84,
-          "peRatio": 66.8,
-          "psRatio": 66.8,
+          "peRatio": 66.7,
+          "psRatio": 66.7,
           "yieldPct": {
             "periodYield": 0.12,
             "apy": 1.5
@@ -3670,7 +3670,7 @@
         "burnedPct": 0,
         "burnUsdEstimate": 0,
         "buyback": true,
-        "treasuryNetWorthUsd": 2709511,
+        "treasuryNetWorthUsd": 2706786,
         "stakingToken": "$DBR",
         "treasuryHoldings": "DBR Fee Vault & Liquidity Reserve"
       },
@@ -3679,7 +3679,7 @@
         "riskScore": 33,
         "decentralizationScore": 68,
         "description": "Highly decentralized token distribution. Low vulnerability to systemic whale sell-offs.",
-        "holdersCount": 77174,
+        "holdersCount": 77112,
         "top10SharePct": 32.5
       },
       "burnVelocity": 0
@@ -3700,22 +3700,22 @@
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
       "mcap": 1186380,
       "tvl": 96516,
-      "fees24h": 1166,
+      "fees24h": 1171,
       "fees7d": 8043,
       "fees30d": 26364,
-      "revenue24h": 1166,
+      "revenue24h": 1171,
       "revenue7d": 8043,
       "revenue30d": 26364,
       "timeframeData": {
         "24h": {
-          "fees": 1166,
-          "revenue": 1166,
-          "runRate": 425881.5,
+          "fees": 1171,
+          "revenue": 1171,
+          "runRate": 427707.75,
           "peRatio": 2.8,
           "psRatio": 2.8,
           "yieldPct": {
             "periodYield": 0.1,
-            "apy": 35.9
+            "apy": 36.1
           }
         },
         "7d": {
@@ -3775,7 +3775,7 @@
       ],
       "contractAddress": "0x18c11FD286C5EC11c3b683Caa813B77f51639807",
       "explorerUrl": "https://basescan.org/token/0x18c11FD286C5EC11c3b683Caa813B77f51639807",
-      "mcap": 9508257,
+      "mcap": 9382774,
       "tvl": 94068,
       "fees24h": 893,
       "fees7d": 7839,
@@ -3788,8 +3788,8 @@
           "fees": 893,
           "revenue": 667,
           "runRate": 243621.75,
-          "peRatio": 39,
-          "psRatio": 29.2,
+          "peRatio": 38.5,
+          "psRatio": 28.8,
           "yieldPct": {
             "periodYield": 0.01,
             "apy": 2.6
@@ -3799,8 +3799,8 @@
           "fees": 7839,
           "revenue": 4940,
           "runRate": 257571.6,
-          "peRatio": 36.9,
-          "psRatio": 23.3,
+          "peRatio": 36.4,
+          "psRatio": 23,
           "yieldPct": {
             "periodYield": 0.05,
             "apy": 2.7
@@ -3810,8 +3810,8 @@
           "fees": 38727,
           "revenue": 26488,
           "runRate": 322358.96,
-          "peRatio": 29.5,
-          "psRatio": 20.2,
+          "peRatio": 29.1,
+          "psRatio": 19.9,
           "yieldPct": {
             "periodYield": 0.28,
             "apy": 3.4
@@ -3822,9 +3822,9 @@
         "burn": true,
         "burnedAmount": 6200000,
         "burnedPct": 20.36,
-        "burnUsdEstimate": 1935770,
+        "burnUsdEstimate": 1910223,
         "buyback": true,
-        "treasuryNetWorthUsd": 301415,
+        "treasuryNetWorthUsd": 298905,
         "stakingToken": "$GNS",
         "treasuryHoldings": "GNS Fee Vault & Liquidity Reserve"
       },
@@ -3833,7 +3833,7 @@
         "riskScore": 36,
         "decentralizationScore": 65,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 32546,
+        "holdersCount": 32489,
         "top10SharePct": 35.5
       },
       "burnVelocity": 20.36
@@ -3993,83 +3993,6 @@
       "burnVelocity": 0
     },
     {
-      "name": "Smithii",
-      "slug": "smithii",
-      "tokenSymbol": "SHRIMP",
-      "category": "Launchpad",
-      "sectorId": "bridges_cross",
-      "sectorBadge": "BRIDGE / INFRA",
-      "sectorLabel": "🌉 Bridges, Interop & Infra",
-      "logo": "https://icons.llamao.fi/icons/protocols/smithii",
-      "chains": [
-        "Base"
-      ],
-      "contractAddress": "0x0000000000000000000000000000000000000000",
-      "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 1379835,
-      "tvl": 89628,
-      "fees24h": 1067,
-      "fees7d": 7469,
-      "fees30d": 31370,
-      "revenue24h": 1067,
-      "revenue7d": 6562,
-      "revenue30d": 30663,
-      "timeframeData": {
-        "24h": {
-          "fees": 1067,
-          "revenue": 1067,
-          "runRate": 389721.75,
-          "peRatio": 3.5,
-          "psRatio": 3.5,
-          "yieldPct": {
-            "periodYield": 0.08,
-            "apy": 28.2
-          }
-        },
-        "7d": {
-          "fees": 7469,
-          "revenue": 6562,
-          "runRate": 342142.68,
-          "peRatio": 4,
-          "psRatio": 3.5,
-          "yieldPct": {
-            "periodYield": 0.48,
-            "apy": 24.8
-          }
-        },
-        "30d": {
-          "fees": 31370,
-          "revenue": 30663,
-          "runRate": 373168.71,
-          "peRatio": 3.7,
-          "psRatio": 3.6,
-          "yieldPct": {
-            "periodYield": 2.22,
-            "apy": 27
-          }
-        }
-      },
-      "mechanism": {
-        "burn": false,
-        "burnedAmount": 0,
-        "burnedPct": 0,
-        "burnUsdEstimate": 0,
-        "buyback": true,
-        "treasuryNetWorthUsd": 156381,
-        "stakingToken": "$SHRIMP",
-        "treasuryHoldings": "SHRIMP Fee Vault & Liquidity Reserve"
-      },
-      "whaleRisk": {
-        "riskLevel": "MODERATE_RISK",
-        "riskScore": 36,
-        "decentralizationScore": 65,
-        "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 28841,
-        "top10SharePct": 35.5
-      },
-      "burnVelocity": 0
-    },
-    {
       "name": "LayerZero V2",
       "slug": "layerzero-v2",
       "tokenSymbol": "ZRO",
@@ -4083,19 +4006,19 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 857295,
+      "mcap": 887715,
       "tvl": 88428,
-      "fees24h": 1543,
+      "fees24h": 1598,
       "fees7d": 7369,
       "fees30d": 32745,
-      "revenue24h": 648,
-      "revenue7d": 4536,
-      "revenue30d": 19051,
+      "revenue24h": 671,
+      "revenue7d": 4697,
+      "revenue30d": 19727,
       "timeframeData": {
         "24h": {
-          "fees": 1543,
-          "revenue": 648,
-          "runRate": 236682,
+          "fees": 1598,
+          "revenue": 671,
+          "runRate": 245082.75,
           "peRatio": 3.6,
           "psRatio": 1.5,
           "yieldPct": {
@@ -4105,10 +4028,10 @@
         },
         "7d": {
           "fees": 7369,
-          "revenue": 4536,
-          "runRate": 236507.04,
+          "revenue": 4697,
+          "runRate": 244901.58000000002,
           "peRatio": 3.6,
-          "psRatio": 2.2,
+          "psRatio": 2.3,
           "yieldPct": {
             "periodYield": 0.53,
             "apy": 27.6
@@ -4116,8 +4039,8 @@
         },
         "30d": {
           "fees": 32745,
-          "revenue": 19051,
-          "runRate": 231850.67,
+          "revenue": 19727,
+          "runRate": 240077.59,
           "peRatio": 3.7,
           "psRatio": 2.2,
           "yieldPct": {
@@ -4141,7 +4064,7 @@
         "riskScore": 39,
         "decentralizationScore": 62,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 28600,
+        "holdersCount": 28614,
         "top10SharePct": 38.5
       },
       "burnVelocity": 0
@@ -4160,32 +4083,32 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 101800954,
+      "mcap": 100760070,
       "tvl": 79848,
-      "fees24h": 1169,
+      "fees24h": 265,
       "fees7d": 6654,
       "fees30d": 23342,
-      "revenue24h": 310,
+      "revenue24h": 1903,
       "revenue7d": 1550,
       "revenue30d": 4950,
       "timeframeData": {
         "24h": {
-          "fees": 1169,
-          "revenue": 310,
-          "runRate": 113227.5,
-          "peRatio": 899.1,
-          "psRatio": 238.4,
+          "fees": 265,
+          "revenue": 1903,
+          "runRate": 695070.75,
+          "peRatio": 145,
+          "psRatio": 1041,
           "yieldPct": {
             "periodYield": 0,
-            "apy": 0.1
+            "apy": 0.7
           }
         },
         "7d": {
           "fees": 6654,
           "revenue": 1550,
           "runRate": 80817,
-          "peRatio": 1259.6,
-          "psRatio": 293.4,
+          "peRatio": 1246.8,
+          "psRatio": 290.4,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0.1
@@ -4195,8 +4118,8 @@
           "fees": 23342,
           "revenue": 4950,
           "runRate": 60241.5,
-          "peRatio": 1689.9,
-          "psRatio": 358.4,
+          "peRatio": 1672.6,
+          "psRatio": 354.7,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0.1
@@ -4209,7 +4132,7 @@
         "burnedPct": 0,
         "burnUsdEstimate": 0,
         "buyback": false,
-        "treasuryNetWorthUsd": 2056809,
+        "treasuryNetWorthUsd": 2035991,
         "stakingToken": "$RSR",
         "treasuryHoldings": "RSR Fee Vault & Liquidity Reserve"
       },
@@ -4218,7 +4141,7 @@
         "riskScore": 44,
         "decentralizationScore": 57,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 74463,
+        "holdersCount": 73990,
         "top10SharePct": 43.5
       },
       "burnVelocity": 0
@@ -4297,6 +4220,83 @@
         "description": "Highly decentralized token distribution. Low vulnerability to systemic whale sell-offs.",
         "holdersCount": 35001,
         "top10SharePct": 30.5
+      },
+      "burnVelocity": 0
+    },
+    {
+      "name": "Smithii",
+      "slug": "smithii",
+      "tokenSymbol": "SHRIMP",
+      "category": "Launchpad",
+      "sectorId": "bridges_cross",
+      "sectorBadge": "BRIDGE / INFRA",
+      "sectorLabel": "🌉 Bridges, Interop & Infra",
+      "logo": "https://icons.llamao.fi/icons/protocols/smithii",
+      "chains": [
+        "Base"
+      ],
+      "contractAddress": "0x0000000000000000000000000000000000000000",
+      "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
+      "mcap": 1379835,
+      "tvl": 76272,
+      "fees24h": 908,
+      "fees7d": 6356,
+      "fees30d": 26695,
+      "revenue24h": 908,
+      "revenue7d": 6562,
+      "revenue30d": 30663,
+      "timeframeData": {
+        "24h": {
+          "fees": 908,
+          "revenue": 908,
+          "runRate": 331647,
+          "peRatio": 4.2,
+          "psRatio": 4.2,
+          "yieldPct": {
+            "periodYield": 0.07,
+            "apy": 24
+          }
+        },
+        "7d": {
+          "fees": 6356,
+          "revenue": 6562,
+          "runRate": 342142.68,
+          "peRatio": 4,
+          "psRatio": 4.2,
+          "yieldPct": {
+            "periodYield": 0.48,
+            "apy": 24.8
+          }
+        },
+        "30d": {
+          "fees": 26695,
+          "revenue": 30663,
+          "runRate": 373168.71,
+          "peRatio": 3.7,
+          "psRatio": 4.2,
+          "yieldPct": {
+            "periodYield": 2.22,
+            "apy": 27
+          }
+        }
+      },
+      "mechanism": {
+        "burn": false,
+        "burnedAmount": 0,
+        "burnedPct": 0,
+        "burnUsdEstimate": 0,
+        "buyback": true,
+        "treasuryNetWorthUsd": 156381,
+        "stakingToken": "$SHRIMP",
+        "treasuryHoldings": "SHRIMP Fee Vault & Liquidity Reserve"
+      },
+      "whaleRisk": {
+        "riskLevel": "MODERATE_RISK",
+        "riskScore": 36,
+        "decentralizationScore": 65,
+        "description": "Balanced distribution between institutional entities and community retail holders.",
+        "holdersCount": 28809,
+        "top10SharePct": 35.5
       },
       "burnVelocity": 0
     },
@@ -4468,7 +4468,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 3727061,
+      "mcap": 3670810,
       "tvl": 68712,
       "fees24h": 818,
       "fees7d": 5726,
@@ -4481,8 +4481,8 @@
           "fees": 818,
           "revenue": 344,
           "runRate": 125646,
-          "peRatio": 29.7,
-          "psRatio": 12.5,
+          "peRatio": 29.2,
+          "psRatio": 12.3,
           "yieldPct": {
             "periodYield": 0.01,
             "apy": 3.4
@@ -4492,21 +4492,21 @@
           "fees": 5726,
           "revenue": 5726,
           "runRate": 298553.64,
-          "peRatio": 12.5,
-          "psRatio": 12.5,
+          "peRatio": 12.3,
+          "psRatio": 12.3,
           "yieldPct": {
-            "periodYield": 0.15,
-            "apy": 8
+            "periodYield": 0.16,
+            "apy": 8.1
           }
         },
         "30d": {
           "fees": 5747,
           "revenue": 5747,
           "runRate": 69940.99,
-          "peRatio": 53.3,
-          "psRatio": 53.3,
+          "peRatio": 52.5,
+          "psRatio": 52.5,
           "yieldPct": {
-            "periodYield": 0.15,
+            "periodYield": 0.16,
             "apy": 1.9
           }
         }
@@ -4526,7 +4526,7 @@
         "riskScore": 40,
         "decentralizationScore": 61,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 29858,
+        "holdersCount": 29832,
         "top10SharePct": 39.5
       },
       "burnVelocity": 0
@@ -4545,24 +4545,24 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 49226,
+      "mcap": 56603,
       "tvl": 62148,
-      "fees24h": 676,
+      "fees24h": 682,
       "fees7d": 5179,
       "fees30d": 25150,
-      "revenue24h": 676,
+      "revenue24h": 682,
       "revenue7d": 5179,
       "revenue30d": 25150,
       "timeframeData": {
         "24h": {
-          "fees": 676,
-          "revenue": 676,
-          "runRate": 246909,
+          "fees": 682,
+          "revenue": 682,
+          "runRate": 249100.5,
           "peRatio": 0.2,
           "psRatio": 0.2,
           "yieldPct": {
-            "periodYield": 1.37,
-            "apy": 501.6
+            "periodYield": 1.2,
+            "apy": 440.1
           }
         },
         "7d": {
@@ -4572,8 +4572,8 @@
           "peRatio": 0.2,
           "psRatio": 0.2,
           "yieldPct": {
-            "periodYield": 10.52,
-            "apy": 548.6
+            "periodYield": 9.15,
+            "apy": 477.1
           }
         },
         "30d": {
@@ -4583,8 +4583,8 @@
           "peRatio": 0.2,
           "psRatio": 0.2,
           "yieldPct": {
-            "periodYield": 51.09,
-            "apy": 621.8
+            "periodYield": 44.43,
+            "apy": 540.7
           }
         }
       },
@@ -4603,7 +4603,7 @@
         "riskScore": 42,
         "decentralizationScore": 59,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 28170,
+        "holdersCount": 28174,
         "top10SharePct": 41.5
       },
       "burnVelocity": 0
@@ -4622,7 +4622,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 5433644,
+      "mcap": 5438588,
       "tvl": 56172,
       "fees24h": 366,
       "fees7d": 4681,
@@ -4635,8 +4635,8 @@
           "fees": 366,
           "revenue": 210,
           "runRate": 76702.5,
-          "peRatio": 70.8,
-          "psRatio": 40.6,
+          "peRatio": 70.9,
+          "psRatio": 40.7,
           "yieldPct": {
             "periodYield": 0,
             "apy": 1.4
@@ -4671,7 +4671,7 @@
         "burnedPct": 0,
         "burnUsdEstimate": 0,
         "buyback": true,
-        "treasuryNetWorthUsd": 290709,
+        "treasuryNetWorthUsd": 290808,
         "stakingToken": "$LMTS",
         "treasuryHoldings": "LMTS Fee Vault & Liquidity Reserve"
       },
@@ -4680,7 +4680,7 @@
         "riskScore": 39,
         "decentralizationScore": 62,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 30604,
+        "holdersCount": 30606,
         "top10SharePct": 38.5
       },
       "burnVelocity": 0
@@ -4778,7 +4778,7 @@
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
       "mcap": 405,
       "tvl": 40272,
-      "fees24h": 398,
+      "fees24h": 395,
       "fees7d": 3356,
       "fees30d": 11624,
       "revenue24h": 1,
@@ -4786,7 +4786,7 @@
       "revenue30d": 9,
       "timeframeData": {
         "24h": {
-          "fees": 398,
+          "fees": 395,
           "revenue": 1,
           "runRate": 365.25,
           "peRatio": 1.1,
@@ -4932,7 +4932,7 @@
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
       "mcap": -1,
       "tvl": 30276,
-      "fees24h": 669,
+      "fees24h": 747,
       "fees7d": 2523,
       "fees30d": 13903,
       "revenue24h": 0,
@@ -4940,7 +4940,7 @@
       "revenue30d": 8,
       "timeframeData": {
         "24h": {
-          "fees": 669,
+          "fees": 747,
           "revenue": 0,
           "runRate": 0,
           "peRatio": null,
@@ -5084,46 +5084,46 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 1354309,
+      "mcap": 1341013,
       "tvl": 28044,
-      "fees24h": 161,
+      "fees24h": 152,
       "fees7d": 2337,
       "fees30d": 5700,
-      "revenue24h": 161,
+      "revenue24h": 152,
       "revenue7d": 2337,
       "revenue30d": 5700,
       "timeframeData": {
         "24h": {
-          "fees": 161,
-          "revenue": 161,
-          "runRate": 58805.25,
-          "peRatio": 23,
-          "psRatio": 23,
+          "fees": 152,
+          "revenue": 152,
+          "runRate": 55518,
+          "peRatio": 24.2,
+          "psRatio": 24.2,
           "yieldPct": {
             "periodYield": 0.01,
-            "apy": 4.3
+            "apy": 4.1
           }
         },
         "7d": {
           "fees": 2337,
           "revenue": 2337,
           "runRate": 121851.18000000001,
-          "peRatio": 11.1,
-          "psRatio": 11.1,
+          "peRatio": 11,
+          "psRatio": 11,
           "yieldPct": {
             "periodYield": 0.17,
-            "apy": 9
+            "apy": 9.1
           }
         },
         "30d": {
           "fees": 5700,
           "revenue": 5700,
           "runRate": 69369,
-          "peRatio": 19.5,
-          "psRatio": 19.5,
+          "peRatio": 19.3,
+          "psRatio": 19.3,
           "yieldPct": {
-            "periodYield": 0.42,
-            "apy": 5.1
+            "periodYield": 0.43,
+            "apy": 5.2
           }
         }
       },
@@ -5142,8 +5142,85 @@
         "riskScore": 44,
         "decentralizationScore": 57,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 28682,
+        "holdersCount": 28676,
         "top10SharePct": 43.5
+      },
+      "burnVelocity": 0
+    },
+    {
+      "name": "Clutch Anvil AMM",
+      "slug": "clutch-anvil-amm",
+      "tokenSymbol": "CLUTCH",
+      "category": "Dexs",
+      "sectorId": "dex",
+      "sectorBadge": "DEX / AMM",
+      "sectorLabel": "🔄 DEXs, DLMM & Liquidity Hubs",
+      "logo": "https://icons.llamao.fi/icons/protocols/clutch-anvil-amm",
+      "chains": [
+        "Base"
+      ],
+      "contractAddress": "0x0000000000000000000000000000000000000000",
+      "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
+      "mcap": 302445,
+      "tvl": 27132,
+      "fees24h": 323,
+      "fees7d": 2261,
+      "fees30d": 9496,
+      "revenue24h": 98,
+      "revenue7d": 797,
+      "revenue30d": 6721,
+      "timeframeData": {
+        "24h": {
+          "fees": 323,
+          "revenue": 98,
+          "runRate": 35794.5,
+          "peRatio": 8.4,
+          "psRatio": 2.6,
+          "yieldPct": {
+            "periodYield": 0.03,
+            "apy": 11.8
+          }
+        },
+        "7d": {
+          "fees": 2261,
+          "revenue": 797,
+          "runRate": 41555.58,
+          "peRatio": 7.3,
+          "psRatio": 2.6,
+          "yieldPct": {
+            "periodYield": 0.26,
+            "apy": 13.7
+          }
+        },
+        "30d": {
+          "fees": 9496,
+          "revenue": 6721,
+          "runRate": 81794.56999999999,
+          "peRatio": 3.7,
+          "psRatio": 2.6,
+          "yieldPct": {
+            "periodYield": 2.22,
+            "apy": 27
+          }
+        }
+      },
+      "mechanism": {
+        "burn": false,
+        "burnedAmount": 0,
+        "burnedPct": 0,
+        "burnUsdEstimate": 0,
+        "buyback": true,
+        "treasuryNetWorthUsd": 150000,
+        "stakingToken": "$CLUTCH",
+        "treasuryHoldings": "CLUTCH Fee Vault & Liquidity Reserve"
+      },
+      "whaleRisk": {
+        "riskLevel": "LOW_RISK",
+        "riskScore": 27,
+        "decentralizationScore": 74,
+        "description": "Highly decentralized token distribution. Low vulnerability to systemic whale sell-offs.",
+        "holdersCount": 28202,
+        "top10SharePct": 26.5
       },
       "burnVelocity": 0
     },
@@ -5163,19 +5240,19 @@
       "explorerUrl": "https://basescan.org/token/0xD533a949740bb3306d119CC777fa900bA034cd52",
       "mcap": 840000000,
       "tvl": 26316,
-      "fees24h": 290,
+      "fees24h": 365,
       "fees7d": 2193,
       "fees30d": 13486,
-      "revenue24h": 145,
+      "revenue24h": 182,
       "revenue7d": 1095,
       "revenue30d": 6741,
       "timeframeData": {
         "24h": {
-          "fees": 290,
-          "revenue": 145,
-          "runRate": 52961.25,
-          "peRatio": 15860.7,
-          "psRatio": 7930.3,
+          "fees": 365,
+          "revenue": 182,
+          "runRate": 66475.5,
+          "peRatio": 12636.2,
+          "psRatio": 6300.8,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0
@@ -5238,24 +5315,24 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 91744,
+      "mcap": 91819,
       "tvl": 25008,
-      "fees24h": 152,
+      "fees24h": 176,
       "fees7d": 2084,
       "fees30d": 19218,
-      "revenue24h": 26,
+      "revenue24h": 23,
       "revenue7d": 1022,
       "revenue30d": 10943,
       "timeframeData": {
         "24h": {
-          "fees": 152,
-          "revenue": 26,
-          "runRate": 9496.5,
-          "peRatio": 9.7,
-          "psRatio": 1.7,
+          "fees": 176,
+          "revenue": 23,
+          "runRate": 8400.75,
+          "peRatio": 10.9,
+          "psRatio": 1.4,
           "yieldPct": {
             "periodYield": 0.03,
-            "apy": 10.4
+            "apy": 9.1
           }
         },
         "7d": {
@@ -5266,7 +5343,7 @@
           "psRatio": 0.8,
           "yieldPct": {
             "periodYield": 1.11,
-            "apy": 58.1
+            "apy": 58
           }
         },
         "30d": {
@@ -5276,8 +5353,8 @@
           "peRatio": 0.7,
           "psRatio": 0.4,
           "yieldPct": {
-            "periodYield": 11.93,
-            "apy": 145.2
+            "periodYield": 11.92,
+            "apy": 145
           }
         }
       },
@@ -5317,22 +5394,22 @@
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
       "mcap": 402210,
       "tvl": 21984,
-      "fees24h": 29,
+      "fees24h": 15,
       "fees7d": 1832,
       "fees30d": 8938,
-      "revenue24h": 29,
+      "revenue24h": 15,
       "revenue7d": 1832,
       "revenue30d": 8938,
       "timeframeData": {
         "24h": {
-          "fees": 29,
-          "revenue": 29,
-          "runRate": 10592.25,
-          "peRatio": 38,
-          "psRatio": 38,
+          "fees": 15,
+          "revenue": 15,
+          "runRate": 5478.75,
+          "peRatio": 73.4,
+          "psRatio": 73.4,
           "yieldPct": {
-            "periodYield": 0.01,
-            "apy": 2.6
+            "periodYield": 0,
+            "apy": 1.4
           }
         },
         "7d": {
@@ -5379,83 +5456,6 @@
       "burnVelocity": 0
     },
     {
-      "name": "Clutch Anvil AMM",
-      "slug": "clutch-anvil-amm",
-      "tokenSymbol": "CLUTCH",
-      "category": "Dexs",
-      "sectorId": "dex",
-      "sectorBadge": "DEX / AMM",
-      "sectorLabel": "🔄 DEXs, DLMM & Liquidity Hubs",
-      "logo": "https://icons.llamao.fi/icons/protocols/clutch-anvil-amm",
-      "chains": [
-        "Base"
-      ],
-      "contractAddress": "0x0000000000000000000000000000000000000000",
-      "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 302445,
-      "tvl": 20496,
-      "fees24h": 244,
-      "fees7d": 1708,
-      "fees30d": 7174,
-      "revenue24h": 103,
-      "revenue7d": 797,
-      "revenue30d": 6721,
-      "timeframeData": {
-        "24h": {
-          "fees": 244,
-          "revenue": 103,
-          "runRate": 37620.75,
-          "peRatio": 8,
-          "psRatio": 3.4,
-          "yieldPct": {
-            "periodYield": 0.03,
-            "apy": 12.4
-          }
-        },
-        "7d": {
-          "fees": 1708,
-          "revenue": 797,
-          "runRate": 41555.58,
-          "peRatio": 7.3,
-          "psRatio": 3.4,
-          "yieldPct": {
-            "periodYield": 0.26,
-            "apy": 13.7
-          }
-        },
-        "30d": {
-          "fees": 7174,
-          "revenue": 6721,
-          "runRate": 81794.56999999999,
-          "peRatio": 3.7,
-          "psRatio": 3.5,
-          "yieldPct": {
-            "periodYield": 2.22,
-            "apy": 27
-          }
-        }
-      },
-      "mechanism": {
-        "burn": false,
-        "burnedAmount": 0,
-        "burnedPct": 0,
-        "burnUsdEstimate": 0,
-        "buyback": true,
-        "treasuryNetWorthUsd": 150000,
-        "stakingToken": "$CLUTCH",
-        "treasuryHoldings": "CLUTCH Fee Vault & Liquidity Reserve"
-      },
-      "whaleRisk": {
-        "riskLevel": "LOW_RISK",
-        "riskScore": 27,
-        "decentralizationScore": 74,
-        "description": "Highly decentralized token distribution. Low vulnerability to systemic whale sell-offs.",
-        "holdersCount": 28186,
-        "top10SharePct": 26.5
-      },
-      "burnVelocity": 0
-    },
-    {
       "name": "Velora",
       "slug": "velora",
       "tokenSymbol": "VLR",
@@ -5469,7 +5469,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 764947,
+      "mcap": 749708,
       "tvl": 19032,
       "fees24h": 184,
       "fees7d": 1586,
@@ -5482,19 +5482,19 @@
           "fees": 184,
           "revenue": 45,
           "runRate": 16436.25,
-          "peRatio": 46.5,
-          "psRatio": 11.4,
+          "peRatio": 45.6,
+          "psRatio": 11.2,
           "yieldPct": {
             "periodYield": 0.01,
-            "apy": 2.1
+            "apy": 2.2
           }
         },
         "7d": {
           "fees": 1586,
           "revenue": 390,
           "runRate": 20334.6,
-          "peRatio": 37.6,
-          "psRatio": 9.3,
+          "peRatio": 36.9,
+          "psRatio": 9.1,
           "yieldPct": {
             "periodYield": 0.05,
             "apy": 2.7
@@ -5504,11 +5504,11 @@
           "fees": 12965,
           "revenue": 2930,
           "runRate": 35658.1,
-          "peRatio": 21.5,
+          "peRatio": 21,
           "psRatio": 4.8,
           "yieldPct": {
-            "periodYield": 0.38,
-            "apy": 4.7
+            "periodYield": 0.39,
+            "apy": 4.8
           }
         }
       },
@@ -5527,7 +5527,7 @@
         "riskScore": 36,
         "decentralizationScore": 65,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 28393,
+        "holdersCount": 28386,
         "top10SharePct": 35.5
       },
       "burnVelocity": 0
@@ -5548,22 +5548,22 @@
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
       "mcap": 369585,
       "tvl": 17040,
-      "fees24h": 123,
+      "fees24h": 130,
       "fees7d": 1420,
       "fees30d": 8213,
-      "revenue24h": 123,
+      "revenue24h": 130,
       "revenue7d": 1420,
       "revenue30d": 8213,
       "timeframeData": {
         "24h": {
-          "fees": 123,
-          "revenue": 123,
-          "runRate": 44925.75,
-          "peRatio": 8.2,
-          "psRatio": 8.2,
+          "fees": 130,
+          "revenue": 130,
+          "runRate": 47482.5,
+          "peRatio": 7.8,
+          "psRatio": 7.8,
           "yieldPct": {
-            "periodYield": 0.03,
-            "apy": 12.2
+            "periodYield": 0.04,
+            "apy": 12.8
           }
         },
         "7d": {
@@ -5702,22 +5702,22 @@
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
       "mcap": 12645,
       "tvl": 14688,
-      "fees24h": 170,
+      "fees24h": 139,
       "fees7d": 1224,
       "fees30d": 5627,
-      "revenue24h": 9,
+      "revenue24h": 7,
       "revenue7d": 61,
       "revenue30d": 281,
       "timeframeData": {
         "24h": {
-          "fees": 170,
-          "revenue": 9,
-          "runRate": 3287.25,
-          "peRatio": 3.8,
+          "fees": 139,
+          "revenue": 7,
+          "runRate": 2556.75,
+          "peRatio": 4.9,
           "psRatio": 0.2,
           "yieldPct": {
-            "periodYield": 0.07,
-            "apy": 26
+            "periodYield": 0.06,
+            "apy": 20.2
           }
         },
         "7d": {
@@ -5764,6 +5764,83 @@
       "burnVelocity": 0
     },
     {
+      "name": "Alchemix V3",
+      "slug": "alchemix-v3",
+      "tokenSymbol": "ALCX",
+      "category": "Synthetics",
+      "sectorId": "bridges_cross",
+      "sectorBadge": "BRIDGE / INFRA",
+      "sectorLabel": "🌉 Bridges, Interop & Infra",
+      "logo": "https://icons.llamao.fi/icons/protocols/alchemix-v3",
+      "chains": [
+        "Base"
+      ],
+      "contractAddress": "0x0000000000000000000000000000000000000000",
+      "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
+      "mcap": 2276010,
+      "tvl": 13944,
+      "fees24h": 166,
+      "fees7d": 1162,
+      "fees30d": 4880,
+      "revenue24h": 53,
+      "revenue7d": 11705,
+      "revenue30d": 50578,
+      "timeframeData": {
+        "24h": {
+          "fees": 166,
+          "revenue": 53,
+          "runRate": 19358.25,
+          "peRatio": 117.6,
+          "psRatio": 37.5,
+          "yieldPct": {
+            "periodYield": 0,
+            "apy": 0.9
+          }
+        },
+        "7d": {
+          "fees": 1162,
+          "revenue": 11705,
+          "runRate": 610298.7,
+          "peRatio": 3.7,
+          "psRatio": 37.6,
+          "yieldPct": {
+            "periodYield": 0.51,
+            "apy": 26.8
+          }
+        },
+        "30d": {
+          "fees": 4880,
+          "revenue": 50578,
+          "runRate": 615534.26,
+          "peRatio": 3.7,
+          "psRatio": 38.3,
+          "yieldPct": {
+            "periodYield": 2.22,
+            "apy": 27
+          }
+        }
+      },
+      "mechanism": {
+        "burn": false,
+        "burnedAmount": 0,
+        "burnedPct": 0,
+        "burnUsdEstimate": 0,
+        "buyback": true,
+        "treasuryNetWorthUsd": 257948,
+        "stakingToken": "$ALCX",
+        "treasuryHoldings": "ALCX Fee Vault & Liquidity Reserve"
+      },
+      "whaleRisk": {
+        "riskLevel": "LOW_RISK",
+        "riskScore": 26,
+        "decentralizationScore": 75,
+        "description": "Highly decentralized token distribution. Low vulnerability to systemic whale sell-offs.",
+        "holdersCount": 29068,
+        "top10SharePct": 25.5
+      },
+      "burnVelocity": 0
+    },
+    {
       "name": "AlfaClub",
       "slug": "alfaclub",
       "tokenSymbol": "ALFA",
@@ -5777,46 +5854,46 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 593983,
+      "mcap": 539219,
       "tvl": 13080,
-      "fees24h": 40,
+      "fees24h": 48,
       "fees7d": 1090,
       "fees30d": 4048,
-      "revenue24h": 7,
+      "revenue24h": 9,
       "revenue7d": 123,
       "revenue30d": 617,
       "timeframeData": {
         "24h": {
-          "fees": 40,
-          "revenue": 7,
-          "runRate": 2556.75,
-          "peRatio": 232.3,
-          "psRatio": 40.7,
+          "fees": 48,
+          "revenue": 9,
+          "runRate": 3287.25,
+          "peRatio": 164,
+          "psRatio": 30.8,
           "yieldPct": {
             "periodYield": 0,
-            "apy": 0.4
+            "apy": 0.6
           }
         },
         "7d": {
           "fees": 1090,
           "revenue": 123,
           "runRate": 6413.22,
-          "peRatio": 92.6,
-          "psRatio": 10.5,
+          "peRatio": 84.1,
+          "psRatio": 9.5,
           "yieldPct": {
             "periodYield": 0.02,
-            "apy": 1.1
+            "apy": 1.2
           }
         },
         "30d": {
           "fees": 4048,
           "revenue": 617,
           "runRate": 7508.89,
-          "peRatio": 79.1,
-          "psRatio": 12.1,
+          "peRatio": 71.8,
+          "psRatio": 10.9,
           "yieldPct": {
-            "periodYield": 0.1,
-            "apy": 1.3
+            "periodYield": 0.11,
+            "apy": 1.4
           }
         }
       },
@@ -5835,7 +5912,7 @@
         "riskScore": 37,
         "decentralizationScore": 64,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 28301,
+        "holdersCount": 28276,
         "top10SharePct": 36.5
       },
       "burnVelocity": 0
@@ -5854,46 +5931,46 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 30949685,
+      "mcap": 31281925,
       "tvl": 12792,
-      "fees24h": 103,
+      "fees24h": 474,
       "fees7d": 1066,
       "fees30d": 7205,
-      "revenue24h": 43,
-      "revenue7d": 301,
-      "revenue30d": 1264,
+      "revenue24h": 199,
+      "revenue7d": 1393,
+      "revenue30d": 5851,
       "timeframeData": {
         "24h": {
-          "fees": 103,
-          "revenue": 43,
-          "runRate": 15705.75,
-          "peRatio": 1970.6,
-          "psRatio": 822.7,
+          "fees": 474,
+          "revenue": 199,
+          "runRate": 72684.75,
+          "peRatio": 430.4,
+          "psRatio": 180.7,
           "yieldPct": {
             "periodYield": 0,
-            "apy": 0.1
+            "apy": 0.2
           }
         },
         "7d": {
           "fees": 1066,
-          "revenue": 301,
-          "runRate": 15694.14,
-          "peRatio": 1972.1,
-          "psRatio": 556.8,
+          "revenue": 1393,
+          "runRate": 72631.02,
+          "peRatio": 430.7,
+          "psRatio": 562.8,
           "yieldPct": {
             "periodYield": 0,
-            "apy": 0.1
+            "apy": 0.2
           }
         },
         "30d": {
           "fees": 7205,
-          "revenue": 1264,
-          "runRate": 15382.88,
-          "peRatio": 2012,
-          "psRatio": 353,
+          "revenue": 5851,
+          "runRate": 71206.67,
+          "peRatio": 439.3,
+          "psRatio": 356.8,
           "yieldPct": {
-            "periodYield": 0,
-            "apy": 0
+            "periodYield": 0.02,
+            "apy": 0.2
           }
         }
       },
@@ -5902,8 +5979,8 @@
         "burnedAmount": 0,
         "burnedPct": 0,
         "burnUsdEstimate": 0,
-        "buyback": false,
-        "treasuryNetWorthUsd": 624303,
+        "buyback": true,
+        "treasuryNetWorthUsd": 650213,
         "stakingToken": "$ACX",
         "treasuryHoldings": "ACX Fee Vault & Liquidity Reserve"
       },
@@ -5912,7 +5989,7 @@
         "riskScore": 38,
         "decentralizationScore": 63,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 42098,
+        "holdersCount": 42250,
         "top10SharePct": 37.5
       },
       "burnVelocity": 0
@@ -5936,19 +6013,19 @@
       "fees24h": 19,
       "fees7d": 1056,
       "fees30d": 8029,
-      "revenue24h": 1979,
+      "revenue24h": 2031,
       "revenue7d": 27073,
       "revenue30d": 596126,
       "timeframeData": {
         "24h": {
           "fees": 19,
-          "revenue": 1979,
-          "runRate": 722829.75,
-          "peRatio": 37.1,
+          "revenue": 2031,
+          "runRate": 741822.75,
+          "peRatio": 36.2,
           "psRatio": 3865.5,
           "yieldPct": {
             "periodYield": 0.01,
-            "apy": 2.7
+            "apy": 2.8
           }
         },
         "7d": {
@@ -6085,7 +6162,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 22631367,
+      "mcap": 22418509,
       "tvl": 9456,
       "fees24h": 94,
       "fees7d": 788,
@@ -6098,8 +6175,8 @@
           "fees": 94,
           "revenue": 94,
           "runRate": 34333.5,
-          "peRatio": 659.2,
-          "psRatio": 659.2,
+          "peRatio": 653,
+          "psRatio": 653,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0.2
@@ -6109,8 +6186,8 @@
           "fees": 788,
           "revenue": 788,
           "runRate": 41086.32,
-          "peRatio": 550.8,
-          "psRatio": 550.8,
+          "peRatio": 545.6,
+          "psRatio": 545.6,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0.2
@@ -6120,8 +6197,8 @@
           "fees": 5491,
           "revenue": 5491,
           "runRate": 66825.47,
-          "peRatio": 338.7,
-          "psRatio": 338.7,
+          "peRatio": 335.5,
+          "psRatio": 335.5,
           "yieldPct": {
             "periodYield": 0.02,
             "apy": 0.3
@@ -6134,7 +6211,7 @@
         "burnedPct": 0,
         "burnUsdEstimate": 0,
         "buyback": true,
-        "treasuryNetWorthUsd": 475690,
+        "treasuryNetWorthUsd": 471432,
         "stakingToken": "$HYPER",
         "treasuryHoldings": "HYPER Fee Vault & Liquidity Reserve"
       },
@@ -6143,7 +6220,7 @@
         "riskScore": 25,
         "decentralizationScore": 76,
         "description": "Highly decentralized token distribution. Low vulnerability to systemic whale sell-offs.",
-        "holdersCount": 38309,
+        "holdersCount": 38213,
         "top10SharePct": 24.5
       },
       "burnVelocity": 0
@@ -6164,22 +6241,22 @@
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
       "mcap": 24885,
       "tvl": 9276,
-      "fees24h": 84,
+      "fees24h": 96,
       "fees7d": 773,
       "fees30d": 3231,
-      "revenue24h": 14,
+      "revenue24h": 17,
       "revenue7d": 131,
       "revenue30d": 553,
       "timeframeData": {
         "24h": {
-          "fees": 84,
-          "revenue": 14,
-          "runRate": 5113.5,
-          "peRatio": 4.9,
-          "psRatio": 0.8,
+          "fees": 96,
+          "revenue": 17,
+          "runRate": 6209.25,
+          "peRatio": 4,
+          "psRatio": 0.7,
           "yieldPct": {
-            "periodYield": 0.06,
-            "apy": 20.5
+            "periodYield": 0.07,
+            "apy": 25
           }
         },
         "7d": {
@@ -6316,32 +6393,32 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 73603693,
+      "mcap": 72983979,
       "tvl": 8544,
       "fees24h": 102,
       "fees7d": 712,
       "fees30d": 2979,
-      "revenue24h": 1637,
+      "revenue24h": 43,
       "revenue7d": 3224,
       "revenue30d": 0,
       "timeframeData": {
         "24h": {
           "fees": 102,
-          "revenue": 1637,
-          "runRate": 597914.25,
-          "peRatio": 123.1,
-          "psRatio": 1975.6,
+          "revenue": 43,
+          "runRate": 15705.75,
+          "peRatio": 4647,
+          "psRatio": 1959,
           "yieldPct": {
             "periodYield": 0,
-            "apy": 0.8
+            "apy": 0
           }
         },
         "7d": {
           "fees": 712,
           "revenue": 3224,
           "runRate": 168099.36000000002,
-          "peRatio": 437.9,
-          "psRatio": 1982.7,
+          "peRatio": 434.2,
+          "psRatio": 1966,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0.2
@@ -6352,7 +6429,7 @@
           "revenue": 0,
           "runRate": 0,
           "peRatio": null,
-          "psRatio": 2030.2,
+          "psRatio": 2013.1,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0
@@ -6365,7 +6442,7 @@
         "burnedPct": 0,
         "burnUsdEstimate": 0,
         "buyback": false,
-        "treasuryNetWorthUsd": 1472074,
+        "treasuryNetWorthUsd": 1459680,
         "stakingToken": "$RE",
         "treasuryHoldings": "RE Fee Vault & Liquidity Reserve"
       },
@@ -6374,85 +6451,8 @@
         "riskScore": 42,
         "decentralizationScore": 59,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 61477,
+        "holdersCount": 61195,
         "top10SharePct": 41.5
-      },
-      "burnVelocity": 0
-    },
-    {
-      "name": "Alchemix V3",
-      "slug": "alchemix-v3",
-      "tokenSymbol": "ALCX",
-      "category": "Synthetics",
-      "sectorId": "bridges_cross",
-      "sectorBadge": "BRIDGE / INFRA",
-      "sectorLabel": "🌉 Bridges, Interop & Infra",
-      "logo": "https://icons.llamao.fi/icons/protocols/alchemix-v3",
-      "chains": [
-        "Base"
-      ],
-      "contractAddress": "0x0000000000000000000000000000000000000000",
-      "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 2276010,
-      "tvl": 8484,
-      "fees24h": 101,
-      "fees7d": 707,
-      "fees30d": 2969,
-      "revenue24h": 17,
-      "revenue7d": 11705,
-      "revenue30d": 50578,
-      "timeframeData": {
-        "24h": {
-          "fees": 101,
-          "revenue": 17,
-          "runRate": 6209.25,
-          "peRatio": 366.6,
-          "psRatio": 61.7,
-          "yieldPct": {
-            "periodYield": 0,
-            "apy": 0.3
-          }
-        },
-        "7d": {
-          "fees": 707,
-          "revenue": 11705,
-          "runRate": 610298.7,
-          "peRatio": 3.7,
-          "psRatio": 61.7,
-          "yieldPct": {
-            "periodYield": 0.51,
-            "apy": 26.8
-          }
-        },
-        "30d": {
-          "fees": 2969,
-          "revenue": 50578,
-          "runRate": 615534.26,
-          "peRatio": 3.7,
-          "psRatio": 63,
-          "yieldPct": {
-            "periodYield": 2.22,
-            "apy": 27
-          }
-        }
-      },
-      "mechanism": {
-        "burn": false,
-        "burnedAmount": 0,
-        "burnedPct": 0,
-        "burnUsdEstimate": 0,
-        "buyback": true,
-        "treasuryNetWorthUsd": 257948,
-        "stakingToken": "$ALCX",
-        "treasuryHoldings": "ALCX Fee Vault & Liquidity Reserve"
-      },
-      "whaleRisk": {
-        "riskLevel": "LOW_RISK",
-        "riskScore": 26,
-        "decentralizationScore": 75,
-        "description": "Highly decentralized token distribution. Low vulnerability to systemic whale sell-offs.",
-        "holdersCount": 29055,
-        "top10SharePct": 25.5
       },
       "burnVelocity": 0
     },
@@ -6470,7 +6470,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 234845632,
+      "mcap": 233200090,
       "tvl": 7716,
       "fees24h": 66,
       "fees7d": 643,
@@ -6483,8 +6483,8 @@
           "fees": 66,
           "revenue": 18,
           "runRate": 6574.5,
-          "peRatio": 35720.7,
-          "psRatio": 9742,
+          "peRatio": 35470.4,
+          "psRatio": 9673.7,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0
@@ -6494,8 +6494,8 @@
           "fees": 643,
           "revenue": 190,
           "runRate": 9906.6,
-          "peRatio": 23706,
-          "psRatio": 7004.9,
+          "peRatio": 23539.9,
+          "psRatio": 6955.8,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0
@@ -6505,8 +6505,8 @@
           "fees": 11503,
           "revenue": 3641,
           "runRate": 44310.97,
-          "peRatio": 5299.9,
-          "psRatio": 1677.6,
+          "peRatio": 5262.8,
+          "psRatio": 1665.8,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0
@@ -6519,7 +6519,7 @@
         "burnedPct": 0,
         "burnUsdEstimate": 0,
         "buyback": false,
-        "treasuryNetWorthUsd": 4712205,
+        "treasuryNetWorthUsd": 4679294,
         "stakingToken": "$RUNE",
         "treasuryHoldings": "RUNE Fee Vault & Liquidity Reserve"
       },
@@ -6528,7 +6528,7 @@
         "riskScore": 31,
         "decentralizationScore": 70,
         "description": "Highly decentralized token distribution. Low vulnerability to systemic whale sell-offs.",
-        "holdersCount": 134766,
+        "holdersCount": 134018,
         "top10SharePct": 30.5
       },
       "burnVelocity": 0
@@ -6703,22 +6703,22 @@
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
       "mcap": 180135,
       "tvl": 6144,
-      "fees24h": 11,
+      "fees24h": 36,
       "fees7d": 512,
       "fees30d": 4081,
-      "revenue24h": 9,
+      "revenue24h": 29,
       "revenue7d": 488,
       "revenue30d": 4003,
       "timeframeData": {
         "24h": {
-          "fees": 11,
-          "revenue": 9,
-          "runRate": 3287.25,
-          "peRatio": 54.8,
-          "psRatio": 44.8,
+          "fees": 36,
+          "revenue": 29,
+          "runRate": 10592.25,
+          "peRatio": 17,
+          "psRatio": 13.7,
           "yieldPct": {
-            "periodYield": 0,
-            "apy": 1.8
+            "periodYield": 0.02,
+            "apy": 5.9
           }
         },
         "7d": {
@@ -6780,22 +6780,22 @@
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
       "mcap": 82350,
       "tvl": 6096,
-      "fees24h": 54,
+      "fees24h": 66,
       "fees7d": 508,
       "fees30d": 3212,
-      "revenue24h": 31,
+      "revenue24h": 38,
       "revenue7d": 288,
       "revenue30d": 1830,
       "timeframeData": {
         "24h": {
-          "fees": 54,
-          "revenue": 31,
-          "runRate": 11322.75,
-          "peRatio": 7.3,
-          "psRatio": 4.2,
+          "fees": 66,
+          "revenue": 38,
+          "runRate": 13879.5,
+          "peRatio": 5.9,
+          "psRatio": 3.4,
           "yieldPct": {
-            "periodYield": 0.04,
-            "apy": 13.7
+            "periodYield": 0.05,
+            "apy": 16.9
           }
         },
         "7d": {
@@ -6932,19 +6932,19 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 403515,
+      "mcap": 427320,
       "tvl": 5460,
-      "fees24h": 726,
+      "fees24h": 769,
       "fees7d": 455,
       "fees30d": 2125,
-      "revenue24h": 305,
-      "revenue7d": 2135,
-      "revenue30d": 8967,
+      "revenue24h": 323,
+      "revenue7d": 2261,
+      "revenue30d": 9496,
       "timeframeData": {
         "24h": {
-          "fees": 726,
-          "revenue": 305,
-          "runRate": 111401.25,
+          "fees": 769,
+          "revenue": 323,
+          "runRate": 117975.75,
           "peRatio": 3.6,
           "psRatio": 1.5,
           "yieldPct": {
@@ -6954,10 +6954,10 @@
         },
         "7d": {
           "fees": 455,
-          "revenue": 2135,
-          "runRate": 111318.9,
+          "revenue": 2261,
+          "runRate": 117888.54000000001,
           "peRatio": 3.6,
-          "psRatio": 17,
+          "psRatio": 18,
           "yieldPct": {
             "periodYield": 0.53,
             "apy": 27.6
@@ -6965,10 +6965,10 @@
         },
         "30d": {
           "fees": 2125,
-          "revenue": 8967,
-          "runRate": 109128.39,
+          "revenue": 9496,
+          "runRate": 115566.31999999999,
           "peRatio": 3.7,
-          "psRatio": 15.6,
+          "psRatio": 16.5,
           "yieldPct": {
             "periodYield": 2.22,
             "apy": 27
@@ -6990,7 +6990,7 @@
         "riskScore": 40,
         "decentralizationScore": 61,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 28196,
+        "holdersCount": 28207,
         "top10SharePct": 39.5
       },
       "burnVelocity": 0
@@ -7009,7 +7009,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 15566084,
+      "mcap": 15605158,
       "tvl": 5292,
       "fees24h": 63,
       "fees7d": 441,
@@ -7022,8 +7022,8 @@
           "fees": 63,
           "revenue": 63,
           "runRate": 23010.75,
-          "peRatio": 676.5,
-          "psRatio": 676.5,
+          "peRatio": 678.2,
+          "psRatio": 678.2,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0.1
@@ -7033,8 +7033,8 @@
           "fees": 441,
           "revenue": 1077,
           "runRate": 56154.78,
-          "peRatio": 277.2,
-          "psRatio": 677,
+          "peRatio": 277.9,
+          "psRatio": 678.7,
           "yieldPct": {
             "periodYield": 0.01,
             "apy": 0.4
@@ -7044,8 +7044,8 @@
           "fees": 1852,
           "revenue": 5192,
           "runRate": 63186.64,
-          "peRatio": 246.4,
-          "psRatio": 690.6,
+          "peRatio": 247,
+          "psRatio": 692.4,
           "yieldPct": {
             "periodYield": 0.03,
             "apy": 0.4
@@ -7058,7 +7058,7 @@
         "burnedPct": 0,
         "burnUsdEstimate": 0,
         "buyback": true,
-        "treasuryNetWorthUsd": 333128,
+        "treasuryNetWorthUsd": 333910,
         "stakingToken": "$BANANA",
         "treasuryHoldings": "BANANA Fee Vault & Liquidity Reserve"
       },
@@ -7067,7 +7067,7 @@
         "riskScore": 41,
         "decentralizationScore": 60,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 35088,
+        "holdersCount": 35106,
         "top10SharePct": 40.5
       },
       "burnVelocity": 0
@@ -7240,32 +7240,32 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 1255219,
+      "mcap": 1235069,
       "tvl": 4668,
-      "fees24h": 12,
+      "fees24h": 14,
       "fees7d": 389,
       "fees30d": 1393,
-      "revenue24h": 12,
+      "revenue24h": 14,
       "revenue7d": 389,
       "revenue30d": 1393,
       "timeframeData": {
         "24h": {
-          "fees": 12,
-          "revenue": 12,
-          "runRate": 4383,
-          "peRatio": 286.4,
-          "psRatio": 286.4,
+          "fees": 14,
+          "revenue": 14,
+          "runRate": 5113.5,
+          "peRatio": 241.5,
+          "psRatio": 241.5,
           "yieldPct": {
             "periodYield": 0,
-            "apy": 0.3
+            "apy": 0.4
           }
         },
         "7d": {
           "fees": 389,
           "revenue": 389,
           "runRate": 20282.46,
-          "peRatio": 61.9,
-          "psRatio": 61.9,
+          "peRatio": 60.9,
+          "psRatio": 60.9,
           "yieldPct": {
             "periodYield": 0.03,
             "apy": 1.6
@@ -7275,8 +7275,8 @@
           "fees": 1393,
           "revenue": 1393,
           "runRate": 16952.81,
-          "peRatio": 74,
-          "psRatio": 74,
+          "peRatio": 72.9,
+          "psRatio": 72.9,
           "yieldPct": {
             "periodYield": 0.11,
             "apy": 1.4
@@ -7298,7 +7298,7 @@
         "riskScore": 32,
         "decentralizationScore": 69,
         "description": "Highly decentralized token distribution. Low vulnerability to systemic whale sell-offs.",
-        "holdersCount": 28582,
+        "holdersCount": 28573,
         "top10SharePct": 31.5
       },
       "burnVelocity": 0
@@ -7317,32 +7317,32 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 2297730,
+      "mcap": 2296643,
       "tvl": 4368,
-      "fees24h": 78,
+      "fees24h": 59,
       "fees7d": 364,
       "fees30d": 3680,
-      "revenue24h": 78,
+      "revenue24h": 59,
       "revenue7d": 364,
       "revenue30d": 3680,
       "timeframeData": {
         "24h": {
-          "fees": 78,
-          "revenue": 78,
-          "runRate": 28489.5,
-          "peRatio": 80.7,
-          "psRatio": 80.7,
+          "fees": 59,
+          "revenue": 59,
+          "runRate": 21549.75,
+          "peRatio": 106.6,
+          "psRatio": 106.6,
           "yieldPct": {
             "periodYield": 0,
-            "apy": 1.2
+            "apy": 0.9
           }
         },
         "7d": {
           "fees": 364,
           "revenue": 364,
           "runRate": 18978.96,
-          "peRatio": 121.1,
-          "psRatio": 121.1,
+          "peRatio": 121,
+          "psRatio": 121,
           "yieldPct": {
             "periodYield": 0.02,
             "apy": 0.8
@@ -7356,7 +7356,7 @@
           "psRatio": 51.3,
           "yieldPct": {
             "periodYield": 0.16,
-            "apy": 1.9
+            "apy": 2
           }
         }
       },
@@ -7375,7 +7375,7 @@
         "riskScore": 25,
         "decentralizationScore": 76,
         "description": "Highly decentralized token distribution. Low vulnerability to systemic whale sell-offs.",
-        "holdersCount": 29055,
+        "holdersCount": 29054,
         "top10SharePct": 24.5
       },
       "burnVelocity": 0
@@ -7396,22 +7396,22 @@
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
       "mcap": 80550,
       "tvl": 3984,
-      "fees24h": 35,
+      "fees24h": 18,
       "fees7d": 332,
       "fees30d": 1790,
-      "revenue24h": 35,
+      "revenue24h": 18,
       "revenue7d": 332,
       "revenue30d": 1790,
       "timeframeData": {
         "24h": {
-          "fees": 35,
-          "revenue": 35,
-          "runRate": 12783.75,
-          "peRatio": 6.3,
-          "psRatio": 6.3,
+          "fees": 18,
+          "revenue": 18,
+          "runRate": 6574.5,
+          "peRatio": 12.3,
+          "psRatio": 12.3,
           "yieldPct": {
-            "periodYield": 0.04,
-            "apy": 15.9
+            "periodYield": 0.02,
+            "apy": 8.2
           }
         },
         "7d": {
@@ -7471,7 +7471,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 5442875,
+      "mcap": 5394977,
       "tvl": 3132,
       "fees24h": 86,
       "fees7d": 261,
@@ -7484,8 +7484,8 @@
           "fees": 86,
           "revenue": 29,
           "runRate": 10592.25,
-          "peRatio": 513.9,
-          "psRatio": 173.3,
+          "peRatio": 509.3,
+          "psRatio": 171.8,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0.2
@@ -7495,8 +7495,8 @@
           "fees": 261,
           "revenue": 90,
           "runRate": 4692.6,
-          "peRatio": 1159.9,
-          "psRatio": 400,
+          "peRatio": 1149.7,
+          "psRatio": 396.4,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0.1
@@ -7506,8 +7506,8 @@
           "fees": 706,
           "revenue": 262,
           "runRate": 3188.54,
-          "peRatio": 1707,
-          "psRatio": 633.5,
+          "peRatio": 1692,
+          "psRatio": 627.9,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0.1
@@ -7529,7 +7529,7 @@
         "riskScore": 35,
         "decentralizationScore": 66,
         "description": "Highly decentralized token distribution. Low vulnerability to systemic whale sell-offs.",
-        "holdersCount": 30481,
+        "holdersCount": 30460,
         "top10SharePct": 34.5
       },
       "burnVelocity": 0
@@ -7548,7 +7548,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 803341,
+      "mcap": 554466,
       "tvl": 2940,
       "fees24h": 35,
       "fees7d": 245,
@@ -7561,33 +7561,33 @@
           "fees": 35,
           "revenue": 35,
           "runRate": 12783.75,
-          "peRatio": 62.8,
-          "psRatio": 62.8,
+          "peRatio": 43.4,
+          "psRatio": 43.4,
           "yieldPct": {
-            "periodYield": 0,
-            "apy": 1.6
+            "periodYield": 0.01,
+            "apy": 2.3
           }
         },
         "7d": {
           "fees": 245,
           "revenue": 817,
           "runRate": 42598.38,
-          "peRatio": 18.9,
-          "psRatio": 62.9,
+          "peRatio": 13,
+          "psRatio": 43.4,
           "yieldPct": {
-            "periodYield": 0.1,
-            "apy": 5.3
+            "periodYield": 0.15,
+            "apy": 7.7
           }
         },
         "30d": {
           "fees": 1029,
           "revenue": 6796,
           "runRate": 82707.31999999999,
-          "peRatio": 9.7,
-          "psRatio": 64.1,
+          "peRatio": 6.7,
+          "psRatio": 44.3,
           "yieldPct": {
-            "periodYield": 0.85,
-            "apy": 10.3
+            "periodYield": 1.23,
+            "apy": 14.9
           }
         }
       },
@@ -7606,7 +7606,7 @@
         "riskScore": 37,
         "decentralizationScore": 64,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 28372,
+        "holdersCount": 28259,
         "top10SharePct": 36.5
       },
       "burnVelocity": 0
@@ -7625,7 +7625,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 62238,
+      "mcap": 62063,
       "tvl": 2688,
       "fees24h": 32,
       "fees7d": 224,
@@ -7649,7 +7649,7 @@
           "fees": 224,
           "revenue": 17,
           "runRate": 886.38,
-          "peRatio": 70.2,
+          "peRatio": 70,
           "psRatio": 5.3,
           "yieldPct": {
             "periodYield": 0.03,
@@ -7660,7 +7660,7 @@
           "fees": 941,
           "revenue": 30,
           "runRate": 365.1,
-          "peRatio": 170.5,
+          "peRatio": 170,
           "psRatio": 5.4,
           "yieldPct": {
             "periodYield": 0.05,
@@ -7779,21 +7779,21 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 1636601,
+      "mcap": 1631443,
       "tvl": 2136,
-      "fees24h": 26,
+      "fees24h": 27,
       "fees7d": 178,
       "fees30d": 892,
-      "revenue24h": 26,
+      "revenue24h": 27,
       "revenue7d": 178,
       "revenue30d": 892,
       "timeframeData": {
         "24h": {
-          "fees": 26,
-          "revenue": 26,
-          "runRate": 9496.5,
-          "peRatio": 172.3,
-          "psRatio": 172.3,
+          "fees": 27,
+          "revenue": 27,
+          "runRate": 9861.75,
+          "peRatio": 165.4,
+          "psRatio": 165.4,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0.6
@@ -7803,8 +7803,8 @@
           "fees": 178,
           "revenue": 178,
           "runRate": 9280.92,
-          "peRatio": 176.3,
-          "psRatio": 176.3,
+          "peRatio": 175.8,
+          "psRatio": 175.8,
           "yieldPct": {
             "periodYield": 0.01,
             "apy": 0.6
@@ -7814,8 +7814,8 @@
           "fees": 892,
           "revenue": 892,
           "runRate": 10855.64,
-          "peRatio": 150.8,
-          "psRatio": 150.8,
+          "peRatio": 150.3,
+          "psRatio": 150.3,
           "yieldPct": {
             "periodYield": 0.05,
             "apy": 0.7
@@ -7837,7 +7837,7 @@
         "riskScore": 29,
         "decentralizationScore": 72,
         "description": "Highly decentralized token distribution. Low vulnerability to systemic whale sell-offs.",
-        "holdersCount": 28749,
+        "holdersCount": 28747,
         "top10SharePct": 28.5
       },
       "burnVelocity": 0
@@ -7861,19 +7861,19 @@
       "fees24h": 16,
       "fees7d": 172,
       "fees30d": 1762,
-      "revenue24h": 4,
+      "revenue24h": 3,
       "revenue7d": 90,
       "revenue30d": 1109,
       "timeframeData": {
         "24h": {
           "fees": 16,
-          "revenue": 4,
-          "runRate": 1461,
-          "peRatio": 34.2,
+          "revenue": 3,
+          "runRate": 1095.75,
+          "peRatio": 45.5,
           "psRatio": 8.5,
           "yieldPct": {
             "periodYield": 0.01,
-            "apy": 2.9
+            "apy": 2.2
           }
         },
         "7d": {
@@ -7935,22 +7935,22 @@
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
       "mcap": 3285,
       "tvl": 1908,
-      "fees24h": 23,
+      "fees24h": 2,
       "fees7d": 159,
       "fees30d": 731,
-      "revenue24h": 2,
+      "revenue24h": 0,
       "revenue7d": 16,
       "revenue30d": 73,
       "timeframeData": {
         "24h": {
-          "fees": 23,
-          "revenue": 2,
-          "runRate": 730.5,
-          "peRatio": 4.5,
-          "psRatio": 0.4,
+          "fees": 2,
+          "revenue": 0,
+          "runRate": 0,
+          "peRatio": null,
+          "psRatio": 4.5,
           "yieldPct": {
-            "periodYield": 0.06,
-            "apy": 22.2
+            "periodYield": 0,
+            "apy": 0
           }
         },
         "7d": {
@@ -8010,21 +8010,21 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 7180760,
+      "mcap": 7023348,
       "tvl": 1668,
-      "fees24h": 2,
+      "fees24h": 1,
       "fees7d": 139,
       "fees30d": 682,
-      "revenue24h": 2,
+      "revenue24h": 1,
       "revenue7d": 139,
       "revenue30d": 682,
       "timeframeData": {
         "24h": {
-          "fees": 2,
-          "revenue": 2,
-          "runRate": 730.5,
-          "peRatio": 9829.9,
-          "psRatio": 9829.9,
+          "fees": 1,
+          "revenue": 1,
+          "runRate": 365.25,
+          "peRatio": 19228.9,
+          "psRatio": 19228.9,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0
@@ -8034,8 +8034,8 @@
           "fees": 139,
           "revenue": 139,
           "runRate": 7247.46,
-          "peRatio": 990.8,
-          "psRatio": 990.8,
+          "peRatio": 969.1,
+          "psRatio": 969.1,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0.1
@@ -8045,8 +8045,8 @@
           "fees": 682,
           "revenue": 682,
           "runRate": 8299.94,
-          "peRatio": 865.2,
-          "psRatio": 865.2,
+          "peRatio": 846.2,
+          "psRatio": 846.2,
           "yieldPct": {
             "periodYield": 0.01,
             "apy": 0.1
@@ -8068,7 +8068,7 @@
         "riskScore": 34,
         "decentralizationScore": 67,
         "description": "Highly decentralized token distribution. Low vulnerability to systemic whale sell-offs.",
-        "holdersCount": 31268,
+        "holdersCount": 31196,
         "top10SharePct": 33.5
       },
       "burnVelocity": 0
@@ -8164,7 +8164,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 95271263,
+      "mcap": 92848658,
       "tvl": 1632,
       "fees24h": 42,
       "fees7d": 136,
@@ -8177,8 +8177,8 @@
           "fees": 42,
           "revenue": 18,
           "runRate": 6574.5,
-          "peRatio": 14491,
-          "psRatio": 6210.4,
+          "peRatio": 14122.5,
+          "psRatio": 6052.5,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0
@@ -8188,8 +8188,8 @@
           "fees": 136,
           "revenue": 126,
           "runRate": 6569.64,
-          "peRatio": 14501.7,
-          "psRatio": 13435.4,
+          "peRatio": 14133,
+          "psRatio": 13093.8,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0
@@ -8199,8 +8199,8 @@
           "fees": 720,
           "revenue": 529,
           "runRate": 6437.93,
-          "peRatio": 14798.4,
-          "psRatio": 10872.7,
+          "peRatio": 14422.1,
+          "psRatio": 10596.3,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0
@@ -8213,7 +8213,7 @@
         "burnedPct": 0,
         "burnUsdEstimate": 0,
         "buyback": false,
-        "treasuryNetWorthUsd": 1907647,
+        "treasuryNetWorthUsd": 1859195,
         "stakingToken": "$W",
         "treasuryHoldings": "W Fee Vault & Liquidity Reserve"
       },
@@ -8222,7 +8222,7 @@
         "riskScore": 45,
         "decentralizationScore": 56,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 71309,
+        "holdersCount": 70208,
         "top10SharePct": 44.5
       },
       "burnVelocity": 0
@@ -8242,42 +8242,42 @@
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
       "mcap": 104580,
-      "tvl": 1596,
-      "fees24h": 19,
-      "fees7d": 133,
-      "fees30d": 559,
-      "revenue24h": 19,
+      "tvl": 1428,
+      "fees24h": 17,
+      "fees7d": 119,
+      "fees30d": 500,
+      "revenue24h": 17,
       "revenue7d": 681,
       "revenue30d": 2324,
       "timeframeData": {
         "24h": {
-          "fees": 19,
-          "revenue": 19,
-          "runRate": 6939.75,
-          "peRatio": 15.1,
-          "psRatio": 15.1,
+          "fees": 17,
+          "revenue": 17,
+          "runRate": 6209.25,
+          "peRatio": 16.8,
+          "psRatio": 16.8,
           "yieldPct": {
             "periodYield": 0.02,
-            "apy": 6.6
+            "apy": 5.9
           }
         },
         "7d": {
-          "fees": 133,
+          "fees": 119,
           "revenue": 681,
           "runRate": 35507.340000000004,
           "peRatio": 2.9,
-          "psRatio": 15.1,
+          "psRatio": 16.9,
           "yieldPct": {
             "periodYield": 0.65,
             "apy": 34
           }
         },
         "30d": {
-          "fees": 559,
+          "fees": 500,
           "revenue": 2324,
           "runRate": 28283.079999999998,
           "peRatio": 3.7,
-          "psRatio": 15.4,
+          "psRatio": 17.2,
           "yieldPct": {
             "periodYield": 2.22,
             "apy": 27
@@ -8318,7 +8318,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 40013761,
+      "mcap": 40807604,
       "tvl": 1224,
       "fees24h": 75,
       "fees7d": 102,
@@ -8331,8 +8331,8 @@
           "fees": 75,
           "revenue": 75,
           "runRate": 27393.75,
-          "peRatio": 1460.7,
-          "psRatio": 1460.7,
+          "peRatio": 1489.7,
+          "psRatio": 1489.7,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0.1
@@ -8342,8 +8342,8 @@
           "fees": 102,
           "revenue": 102,
           "runRate": 5318.28,
-          "peRatio": 7523.8,
-          "psRatio": 7523.8,
+          "peRatio": 7673.1,
+          "psRatio": 7673.1,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0
@@ -8353,8 +8353,8 @@
           "fees": 3314,
           "revenue": 3314,
           "runRate": 40331.38,
-          "peRatio": 992.1,
-          "psRatio": 992.1,
+          "peRatio": 1011.8,
+          "psRatio": 1011.8,
           "yieldPct": {
             "periodYield": 0.01,
             "apy": 0.1
@@ -8367,7 +8367,7 @@
         "burnedPct": 0,
         "burnUsdEstimate": 0,
         "buyback": false,
-        "treasuryNetWorthUsd": 814194,
+        "treasuryNetWorthUsd": 830071,
         "stakingToken": "$AUKI",
         "treasuryHoldings": "AUKI Fee Vault & Liquidity Reserve"
       },
@@ -8376,7 +8376,7 @@
         "riskScore": 33,
         "decentralizationScore": 68,
         "description": "Highly decentralized token distribution. Low vulnerability to systemic whale sell-offs.",
-        "holdersCount": 46191,
+        "holdersCount": 46552,
         "top10SharePct": 32.5
       },
       "burnVelocity": 0
@@ -8395,7 +8395,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 694403,
+      "mcap": 687207,
       "tvl": 1212,
       "fees24h": 19,
       "fees7d": 101,
@@ -8408,8 +8408,8 @@
           "fees": 19,
           "revenue": 13,
           "runRate": 4748.25,
-          "peRatio": 146.2,
-          "psRatio": 100.1,
+          "peRatio": 144.7,
+          "psRatio": 99,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0.7
@@ -8419,8 +8419,8 @@
           "fees": 101,
           "revenue": 71,
           "runRate": 3701.94,
-          "peRatio": 187.6,
-          "psRatio": 131.9,
+          "peRatio": 185.6,
+          "psRatio": 130.5,
           "yieldPct": {
             "periodYield": 0.01,
             "apy": 0.5
@@ -8430,11 +8430,11 @@
           "fees": 605,
           "revenue": 425,
           "runRate": 5172.25,
-          "peRatio": 134.3,
-          "psRatio": 94.3,
+          "peRatio": 132.9,
+          "psRatio": 93.3,
           "yieldPct": {
             "periodYield": 0.06,
-            "apy": 0.7
+            "apy": 0.8
           }
         }
       },
@@ -8453,7 +8453,7 @@
         "riskScore": 39,
         "decentralizationScore": 62,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 28319,
+        "holdersCount": 28315,
         "top10SharePct": 38.5
       },
       "burnVelocity": 0
@@ -8551,22 +8551,22 @@
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
       "mcap": 6362,
       "tvl": 1128,
-      "fees24h": 14,
+      "fees24h": 15,
       "fees7d": 94,
       "fees30d": 336,
-      "revenue24h": 4,
+      "revenue24h": 5,
       "revenue7d": 28,
       "revenue30d": 101,
       "timeframeData": {
         "24h": {
-          "fees": 14,
-          "revenue": 4,
-          "runRate": 1461,
-          "peRatio": 4.4,
+          "fees": 15,
+          "revenue": 5,
+          "runRate": 1826.25,
+          "peRatio": 3.5,
           "psRatio": 1.2,
           "yieldPct": {
-            "periodYield": 0.06,
-            "apy": 23
+            "periodYield": 0.08,
+            "apy": 28.7
           }
         },
         "7d": {
@@ -8626,32 +8626,32 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 147961,
+      "mcap": 147320,
       "tvl": 972,
-      "fees24h": 41,
+      "fees24h": 43,
       "fees7d": 81,
       "fees30d": 628,
-      "revenue24h": 8,
+      "revenue24h": 9,
       "revenue7d": 16,
       "revenue30d": 124,
       "timeframeData": {
         "24h": {
-          "fees": 41,
-          "revenue": 8,
-          "runRate": 2922,
-          "peRatio": 50.6,
-          "psRatio": 9.9,
+          "fees": 43,
+          "revenue": 9,
+          "runRate": 3287.25,
+          "peRatio": 44.8,
+          "psRatio": 9.4,
           "yieldPct": {
             "periodYield": 0.01,
-            "apy": 2
+            "apy": 2.2
           }
         },
         "7d": {
           "fees": 81,
           "revenue": 16,
           "runRate": 834.24,
-          "peRatio": 177.4,
-          "psRatio": 35,
+          "peRatio": 176.6,
+          "psRatio": 34.9,
           "yieldPct": {
             "periodYield": 0.01,
             "apy": 0.6
@@ -8661,8 +8661,8 @@
           "fees": 628,
           "revenue": 124,
           "runRate": 1509.08,
-          "peRatio": 98,
-          "psRatio": 19.4,
+          "peRatio": 97.6,
+          "psRatio": 19.3,
           "yieldPct": {
             "periodYield": 0.08,
             "apy": 1
@@ -8684,7 +8684,7 @@
         "riskScore": 31,
         "decentralizationScore": 70,
         "description": "Highly decentralized token distribution. Low vulnerability to systemic whale sell-offs.",
-        "holdersCount": 28070,
+        "holdersCount": 28069,
         "top10SharePct": 30.5
       },
       "burnVelocity": 0
@@ -8703,7 +8703,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 59230,
+      "mcap": 49914,
       "tvl": 960,
       "fees24h": 11,
       "fees7d": 80,
@@ -8716,33 +8716,33 @@
           "fees": 11,
           "revenue": 5,
           "runRate": 1826.25,
-          "peRatio": 32.4,
-          "psRatio": 14.7,
+          "peRatio": 27.3,
+          "psRatio": 12.4,
           "yieldPct": {
             "periodYield": 0.01,
-            "apy": 3.1
+            "apy": 3.7
           }
         },
         "7d": {
           "fees": 80,
           "revenue": 21,
           "runRate": 1094.94,
-          "peRatio": 54.1,
-          "psRatio": 14.2,
+          "peRatio": 45.6,
+          "psRatio": 12,
           "yieldPct": {
             "periodYield": 0.04,
-            "apy": 1.8
+            "apy": 2.2
           }
         },
         "30d": {
           "fees": 846,
           "revenue": 225,
           "runRate": 2738.25,
-          "peRatio": 21.6,
-          "psRatio": 5.8,
+          "peRatio": 18.2,
+          "psRatio": 4.8,
           "yieldPct": {
-            "periodYield": 0.38,
-            "apy": 4.6
+            "periodYield": 0.45,
+            "apy": 5.5
           }
         }
       },
@@ -8761,7 +8761,7 @@
         "riskScore": 25,
         "decentralizationScore": 76,
         "description": "Highly decentralized token distribution. Low vulnerability to systemic whale sell-offs.",
-        "holdersCount": 28029,
+        "holdersCount": 28025,
         "top10SharePct": 24.5
       },
       "burnVelocity": 0
@@ -8780,21 +8780,21 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 10575,
+      "mcap": 9270,
       "tvl": 876,
-      "fees24h": 18,
+      "fees24h": 17,
       "fees7d": 73,
       "fees30d": 908,
-      "revenue24h": 8,
-      "revenue7d": 56,
-      "revenue30d": 235,
+      "revenue24h": 7,
+      "revenue7d": 49,
+      "revenue30d": 206,
       "timeframeData": {
         "24h": {
-          "fees": 18,
-          "revenue": 8,
-          "runRate": 2922,
+          "fees": 17,
+          "revenue": 7,
+          "runRate": 2556.75,
           "peRatio": 3.6,
-          "psRatio": 1.6,
+          "psRatio": 1.5,
           "yieldPct": {
             "periodYield": 0.08,
             "apy": 27.6
@@ -8802,10 +8802,10 @@
         },
         "7d": {
           "fees": 73,
-          "revenue": 56,
-          "runRate": 2919.84,
+          "revenue": 49,
+          "runRate": 2554.86,
           "peRatio": 3.6,
-          "psRatio": 2.8,
+          "psRatio": 2.4,
           "yieldPct": {
             "periodYield": 0.53,
             "apy": 27.6
@@ -8813,10 +8813,10 @@
         },
         "30d": {
           "fees": 908,
-          "revenue": 235,
-          "runRate": 2859.95,
+          "revenue": 206,
+          "runRate": 2507.02,
           "peRatio": 3.7,
-          "psRatio": 1,
+          "psRatio": 0.8,
           "yieldPct": {
             "periodYield": 2.22,
             "apy": 27
@@ -8838,7 +8838,7 @@
         "riskScore": 46,
         "decentralizationScore": 55,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 28007,
+        "holdersCount": 28006,
         "top10SharePct": 45.5
       },
       "burnVelocity": 0
@@ -8857,7 +8857,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 106155,
+      "mcap": 102246,
       "tvl": 840,
       "fees24h": 10,
       "fees7d": 70,
@@ -8870,30 +8870,30 @@
           "fees": 10,
           "revenue": 9,
           "runRate": 3287.25,
-          "peRatio": 32.3,
-          "psRatio": 29.1,
+          "peRatio": 31.1,
+          "psRatio": 28,
           "yieldPct": {
             "periodYield": 0.01,
-            "apy": 3.1
+            "apy": 3.2
           }
         },
         "7d": {
           "fees": 70,
           "revenue": 11,
           "runRate": 573.54,
-          "peRatio": 185.1,
-          "psRatio": 29.1,
+          "peRatio": 178.3,
+          "psRatio": 28,
           "yieldPct": {
             "periodYield": 0.01,
-            "apy": 0.5
+            "apy": 0.6
           }
         },
         "30d": {
           "fees": 294,
           "revenue": 61,
           "runRate": 742.37,
-          "peRatio": 143,
-          "psRatio": 29.7,
+          "peRatio": 137.7,
+          "psRatio": 28.6,
           "yieldPct": {
             "periodYield": 0.06,
             "apy": 0.7
@@ -8915,7 +8915,7 @@
         "riskScore": 37,
         "decentralizationScore": 64,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 28050,
+        "holdersCount": 28048,
         "top10SharePct": 36.5
       },
       "burnVelocity": 0
@@ -8934,9 +8934,9 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 138820442,
+      "mcap": 137514223,
       "tvl": 768,
-      "fees24h": 1,
+      "fees24h": 0,
       "fees7d": 64,
       "fees30d": 241,
       "revenue24h": 0,
@@ -8944,11 +8944,11 @@
       "revenue30d": 40,
       "timeframeData": {
         "24h": {
-          "fees": 1,
+          "fees": 0,
           "revenue": 0,
           "runRate": 0,
           "peRatio": null,
-          "psRatio": 380069.7,
+          "psRatio": null,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0
@@ -8958,8 +8958,8 @@
           "fees": 64,
           "revenue": 11,
           "runRate": 573.54,
-          "peRatio": 242041.4,
-          "psRatio": 41600.9,
+          "peRatio": 239764,
+          "psRatio": 41209.4,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0
@@ -8969,8 +8969,8 @@
           "fees": 241,
           "revenue": 40,
           "runRate": 486.8,
-          "peRatio": 285169.4,
-          "psRatio": 47331,
+          "peRatio": 282486.1,
+          "psRatio": 46885.7,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0
@@ -8983,7 +8983,7 @@
         "burnedPct": 0,
         "burnUsdEstimate": 0,
         "buyback": false,
-        "treasuryNetWorthUsd": 2776577,
+        "treasuryNetWorthUsd": 2750452,
         "stakingToken": "$1INCH",
         "treasuryHoldings": "1INCH Fee Vault & Liquidity Reserve"
       },
@@ -8992,7 +8992,7 @@
         "riskScore": 37,
         "decentralizationScore": 64,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 91102,
+        "holdersCount": 90508,
         "top10SharePct": 36.5
       },
       "burnVelocity": 0
@@ -9011,46 +9011,46 @@
       ],
       "contractAddress": "0x78a087d713be963bf307b18f5ff8122ef9a63ae9",
       "explorerUrl": "https://basescan.org/token/0x78a087d713be963bf307b18f5ff8122ef9a63ae9",
-      "mcap": 55221,
+      "mcap": 51642,
       "tvl": 672,
-      "fees24h": 7,
+      "fees24h": 8,
       "fees7d": 56,
       "fees30d": 269,
-      "revenue24h": 2,
+      "revenue24h": 3,
       "revenue7d": 18,
       "revenue30d": 20,
       "timeframeData": {
         "24h": {
-          "fees": 7,
-          "revenue": 2,
-          "runRate": 730.5,
-          "peRatio": 75.6,
-          "psRatio": 21.6,
+          "fees": 8,
+          "revenue": 3,
+          "runRate": 1095.75,
+          "peRatio": 47.1,
+          "psRatio": 17.7,
           "yieldPct": {
-            "periodYield": 0,
-            "apy": 1.3
+            "periodYield": 0.01,
+            "apy": 2.1
           }
         },
         "7d": {
           "fees": 56,
           "revenue": 18,
           "runRate": 938.52,
-          "peRatio": 58.8,
-          "psRatio": 18.9,
+          "peRatio": 55,
+          "psRatio": 17.7,
           "yieldPct": {
             "periodYield": 0.03,
-            "apy": 1.7
+            "apy": 1.8
           }
         },
         "30d": {
           "fees": 269,
           "revenue": 20,
           "runRate": 243.4,
-          "peRatio": 226.9,
-          "psRatio": 16.9,
+          "peRatio": 212.2,
+          "psRatio": 15.8,
           "yieldPct": {
             "periodYield": 0.04,
-            "apy": 0.4
+            "apy": 0.5
           }
         }
       },
@@ -9058,7 +9058,7 @@
         "burn": true,
         "burnedAmount": 12000000,
         "burnedPct": 12,
-        "burnUsdEstimate": 7049,
+        "burnUsdEstimate": 6593,
         "buyback": false,
         "treasuryNetWorthUsd": 150000,
         "stakingToken": "$BSWAP",
@@ -9069,7 +9069,7 @@
         "riskScore": 36,
         "decentralizationScore": 65,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 28027,
+        "holdersCount": 28025,
         "top10SharePct": 35.5
       },
       "burnVelocity": 12
@@ -9165,7 +9165,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 28594936,
+      "mcap": 28646281,
       "tvl": 504,
       "fees24h": 0,
       "fees7d": 42,
@@ -9189,8 +9189,8 @@
           "fees": 42,
           "revenue": 42,
           "runRate": 2189.88,
-          "peRatio": 13057.8,
-          "psRatio": 13057.8,
+          "peRatio": 13081.2,
+          "psRatio": 13081.2,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0
@@ -9200,8 +9200,8 @@
           "fees": 247,
           "revenue": 247,
           "runRate": 3005.99,
-          "peRatio": 9512.7,
-          "psRatio": 9512.7,
+          "peRatio": 9529.7,
+          "psRatio": 9529.7,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0
@@ -9214,7 +9214,7 @@
         "burnedPct": 0,
         "burnUsdEstimate": 0,
         "buyback": false,
-        "treasuryNetWorthUsd": 572936,
+        "treasuryNetWorthUsd": 573963,
         "stakingToken": "$FLOCK",
         "treasuryHoldings": "FLOCK Fee Vault & Liquidity Reserve"
       },
@@ -9223,7 +9223,7 @@
         "riskScore": 44,
         "decentralizationScore": 57,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 40999,
+        "holdersCount": 41022,
         "top10SharePct": 43.5
       },
       "burnVelocity": 0
@@ -9244,7 +9244,7 @@
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
       "mcap": 675,
       "tvl": 468,
-      "fees24h": 4,
+      "fees24h": 3,
       "fees7d": 39,
       "fees30d": 77,
       "revenue24h": 1,
@@ -9252,11 +9252,11 @@
       "revenue30d": 15,
       "timeframeData": {
         "24h": {
-          "fees": 4,
+          "fees": 3,
           "revenue": 1,
           "runRate": 365.25,
           "peRatio": 1.8,
-          "psRatio": 0.5,
+          "psRatio": 0.6,
           "yieldPct": {
             "periodYield": 0.15,
             "apy": 54.1
@@ -9379,83 +9379,6 @@
         "description": "Highly decentralized token distribution. Low vulnerability to systemic whale sell-offs.",
         "holdersCount": 28006,
         "top10SharePct": 29.5
-      },
-      "burnVelocity": 0
-    },
-    {
-      "name": "Infinite Trading Protocol",
-      "slug": "infinite-trading-protocol",
-      "tokenSymbol": "ITP",
-      "category": "AI Agents",
-      "sectorId": "bridges_cross",
-      "sectorBadge": "BRIDGE / INFRA",
-      "sectorLabel": "🌉 Bridges, Interop & Infra",
-      "logo": "https://icons.llamao.fi/icons/protocols/infinite-trading-protocol",
-      "chains": [
-        "Base"
-      ],
-      "contractAddress": "0x0000000000000000000000000000000000000000",
-      "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 25908,
-      "tvl": 420,
-      "fees24h": 5,
-      "fees7d": 35,
-      "fees30d": 147,
-      "revenue24h": 2,
-      "revenue7d": 14,
-      "revenue30d": 59,
-      "timeframeData": {
-        "24h": {
-          "fees": 5,
-          "revenue": 2,
-          "runRate": 730.5,
-          "peRatio": 35.5,
-          "psRatio": 14.2,
-          "yieldPct": {
-            "periodYield": 0.01,
-            "apy": 2.8
-          }
-        },
-        "7d": {
-          "fees": 35,
-          "revenue": 14,
-          "runRate": 729.96,
-          "peRatio": 35.5,
-          "psRatio": 14.2,
-          "yieldPct": {
-            "periodYield": 0.05,
-            "apy": 2.8
-          }
-        },
-        "30d": {
-          "fees": 147,
-          "revenue": 59,
-          "runRate": 718.03,
-          "peRatio": 36.1,
-          "psRatio": 14.5,
-          "yieldPct": {
-            "periodYield": 0.23,
-            "apy": 2.8
-          }
-        }
-      },
-      "mechanism": {
-        "burn": false,
-        "burnedAmount": 0,
-        "burnedPct": 0,
-        "burnUsdEstimate": 0,
-        "buyback": false,
-        "treasuryNetWorthUsd": 150000,
-        "stakingToken": "$ITP",
-        "treasuryHoldings": "ITP Fee Vault & Liquidity Reserve"
-      },
-      "whaleRisk": {
-        "riskLevel": "MODERATE_RISK",
-        "riskScore": 44,
-        "decentralizationScore": 57,
-        "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 28013,
-        "top10SharePct": 43.5
       },
       "burnVelocity": 0
     },
@@ -9627,7 +9550,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 71653,
+      "mcap": 71502,
       "tvl": 300,
       "fees24h": 4,
       "fees7d": 25,
@@ -9640,8 +9563,8 @@
           "fees": 4,
           "revenue": 2,
           "runRate": 730.5,
-          "peRatio": 98.1,
-          "psRatio": 49,
+          "peRatio": 97.9,
+          "psRatio": 48.9,
           "yieldPct": {
             "periodYield": 0,
             "apy": 1
@@ -9651,8 +9574,8 @@
           "fees": 25,
           "revenue": 14,
           "runRate": 729.96,
-          "peRatio": 98.2,
-          "psRatio": 55,
+          "peRatio": 98,
+          "psRatio": 54.9,
           "yieldPct": {
             "periodYield": 0.02,
             "apy": 1
@@ -9662,8 +9585,8 @@
           "fees": 109,
           "revenue": 59,
           "runRate": 718.03,
-          "peRatio": 99.8,
-          "psRatio": 54,
+          "peRatio": 99.6,
+          "psRatio": 53.9,
           "yieldPct": {
             "periodYield": 0.08,
             "apy": 1
@@ -9704,7 +9627,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 986978,
+      "mcap": 985411,
       "tvl": 264,
       "fees24h": 5,
       "fees7d": 22,
@@ -9717,8 +9640,8 @@
           "fees": 5,
           "revenue": 5,
           "runRate": 1826.25,
-          "peRatio": 540.4,
-          "psRatio": 540.4,
+          "peRatio": 539.6,
+          "psRatio": 539.6,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0.2
@@ -9728,8 +9651,8 @@
           "fees": 22,
           "revenue": 22,
           "runRate": 1147.08,
-          "peRatio": 860.4,
-          "psRatio": 860.4,
+          "peRatio": 859.1,
+          "psRatio": 859.1,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0.1
@@ -9739,8 +9662,8 @@
           "fees": 86,
           "revenue": 86,
           "runRate": 1046.62,
-          "peRatio": 943,
-          "psRatio": 943,
+          "peRatio": 941.5,
+          "psRatio": 941.5,
           "yieldPct": {
             "periodYield": 0.01,
             "apy": 0.1
@@ -9783,7 +9706,7 @@
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
       "mcap": 360,
       "tvl": 252,
-      "fees24h": 1,
+      "fees24h": 3,
       "fees7d": 21,
       "fees30d": 75,
       "revenue24h": 0,
@@ -9791,11 +9714,11 @@
       "revenue30d": 8,
       "timeframeData": {
         "24h": {
-          "fees": 1,
+          "fees": 3,
           "revenue": 0,
           "runRate": 0,
           "peRatio": null,
-          "psRatio": 1,
+          "psRatio": 0.3,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0
@@ -10014,22 +9937,22 @@
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
       "mcap": 7020,
       "tvl": 204,
-      "fees24h": 218,
+      "fees24h": 211,
       "fees7d": 17,
       "fees30d": 156,
-      "revenue24h": 218,
+      "revenue24h": 211,
       "revenue7d": 17,
       "revenue30d": 156,
       "timeframeData": {
         "24h": {
-          "fees": 218,
-          "revenue": 218,
-          "runRate": 79624.5,
+          "fees": 211,
+          "revenue": 211,
+          "runRate": 77067.75,
           "peRatio": 0.1,
           "psRatio": 0.1,
           "yieldPct": {
-            "periodYield": 3.11,
-            "apy": 1134.3
+            "periodYield": 3.01,
+            "apy": 1097.8
           }
         },
         "7d": {
@@ -10476,22 +10399,22 @@
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
       "mcap": 540,
       "tvl": 84,
-      "fees24h": 1,
+      "fees24h": 0,
       "fees7d": 7,
       "fees30d": 20,
-      "revenue24h": 1,
+      "revenue24h": 144,
       "revenue7d": 4,
       "revenue30d": 12,
       "timeframeData": {
         "24h": {
-          "fees": 1,
-          "revenue": 1,
-          "runRate": 365.25,
-          "peRatio": 1.5,
-          "psRatio": 1.5,
+          "fees": 0,
+          "revenue": 144,
+          "runRate": 52596,
+          "peRatio": 0,
+          "psRatio": null,
           "yieldPct": {
-            "periodYield": 0.19,
-            "apy": 67.6
+            "periodYield": 26.67,
+            "apy": 9740
           }
         },
         "7d": {
@@ -10615,6 +10538,83 @@
       "burnVelocity": 0
     },
     {
+      "name": "Infinite Trading Protocol",
+      "slug": "infinite-trading-protocol",
+      "tokenSymbol": "ITP",
+      "category": "AI Agents",
+      "sectorId": "bridges_cross",
+      "sectorBadge": "BRIDGE / INFRA",
+      "sectorLabel": "🌉 Bridges, Interop & Infra",
+      "logo": "https://icons.llamao.fi/icons/protocols/infinite-trading-protocol",
+      "chains": [
+        "Base"
+      ],
+      "contractAddress": "0x0000000000000000000000000000000000000000",
+      "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
+      "mcap": 28615,
+      "tvl": 84,
+      "fees24h": 1,
+      "fees7d": 7,
+      "fees30d": 29,
+      "revenue24h": 1,
+      "revenue7d": 7,
+      "revenue30d": 29,
+      "timeframeData": {
+        "24h": {
+          "fees": 1,
+          "revenue": 1,
+          "runRate": 365.25,
+          "peRatio": 78.3,
+          "psRatio": 78.3,
+          "yieldPct": {
+            "periodYield": 0,
+            "apy": 1.3
+          }
+        },
+        "7d": {
+          "fees": 7,
+          "revenue": 7,
+          "runRate": 364.98,
+          "peRatio": 78.4,
+          "psRatio": 78.4,
+          "yieldPct": {
+            "periodYield": 0.02,
+            "apy": 1.3
+          }
+        },
+        "30d": {
+          "fees": 29,
+          "revenue": 29,
+          "runRate": 352.93,
+          "peRatio": 81.1,
+          "psRatio": 81.1,
+          "yieldPct": {
+            "periodYield": 0.1,
+            "apy": 1.2
+          }
+        }
+      },
+      "mechanism": {
+        "burn": false,
+        "burnedAmount": 0,
+        "burnedPct": 0,
+        "burnUsdEstimate": 0,
+        "buyback": false,
+        "treasuryNetWorthUsd": 150000,
+        "stakingToken": "$ITP",
+        "treasuryHoldings": "ITP Fee Vault & Liquidity Reserve"
+      },
+      "whaleRisk": {
+        "riskLevel": "MODERATE_RISK",
+        "riskScore": 44,
+        "decentralizationScore": 57,
+        "description": "Balanced distribution between institutional entities and community retail holders.",
+        "holdersCount": 28013,
+        "top10SharePct": 43.5
+      },
+      "burnVelocity": 0
+    },
+    {
       "name": "Index Coop",
       "slug": "index-coop",
       "tokenSymbol": "INDEX",
@@ -10628,7 +10628,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 1852612,
+      "mcap": 1841087,
       "tvl": 72,
       "fees24h": 1,
       "fees7d": 6,
@@ -10642,7 +10642,7 @@
           "revenue": 0,
           "runRate": 0,
           "peRatio": null,
-          "psRatio": 5072.2,
+          "psRatio": 5040.6,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0
@@ -10652,8 +10652,8 @@
           "fees": 6,
           "revenue": 6,
           "runRate": 312.84000000000003,
-          "peRatio": 5921.9,
-          "psRatio": 5921.9,
+          "peRatio": 5885.1,
+          "psRatio": 5885.1,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0
@@ -10663,8 +10663,8 @@
           "fees": 57,
           "revenue": 57,
           "runRate": 693.6899999999999,
-          "peRatio": 2670.7,
-          "psRatio": 2670.7,
+          "peRatio": 2654,
+          "psRatio": 2654,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0
@@ -10686,7 +10686,7 @@
         "riskScore": 27,
         "decentralizationScore": 74,
         "description": "Highly decentralized token distribution. Low vulnerability to systemic whale sell-offs.",
-        "holdersCount": 28842,
+        "holdersCount": 28837,
         "top10SharePct": 26.5
       },
       "burnVelocity": 0
@@ -11013,7 +11013,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 521101,
+      "mcap": 520420,
       "tvl": 24,
       "fees24h": 1,
       "fees7d": 2,
@@ -11027,7 +11027,7 @@
           "revenue": 0,
           "runRate": 0,
           "peRatio": null,
-          "psRatio": 1426.7,
+          "psRatio": 1424.8,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0
@@ -11037,8 +11037,8 @@
           "fees": 2,
           "revenue": 1,
           "runRate": 52.14,
-          "peRatio": 9994.3,
-          "psRatio": 4997.1,
+          "peRatio": 9981.2,
+          "psRatio": 4990.6,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0
@@ -11048,8 +11048,8 @@
           "fees": 22,
           "revenue": 8,
           "runRate": 97.36,
-          "peRatio": 5352.3,
-          "psRatio": 1946.3,
+          "peRatio": 5345.3,
+          "psRatio": 1943.8,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0
@@ -11090,7 +11090,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 102707,
+      "mcap": 98228,
       "tvl": 12,
       "fees24h": 0,
       "fees7d": 1,
@@ -11115,7 +11115,7 @@
           "revenue": 0,
           "runRate": 0,
           "peRatio": null,
-          "psRatio": 1969.8,
+          "psRatio": 1883.9,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0
@@ -11125,8 +11125,8 @@
           "fees": 6,
           "revenue": 1,
           "runRate": 12.17,
-          "peRatio": 8439.4,
-          "psRatio": 1406.6,
+          "peRatio": 8071.3,
+          "psRatio": 1345.2,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0
@@ -11148,7 +11148,7 @@
         "riskScore": 44,
         "decentralizationScore": 57,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 28047,
+        "holdersCount": 28045,
         "top10SharePct": 43.5
       },
       "burnVelocity": 0
@@ -11244,7 +11244,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 151043,
+      "mcap": 150529,
       "tvl": 0,
       "fees24h": 0,
       "fees7d": 0,
@@ -11280,7 +11280,7 @@
           "revenue": 0,
           "runRate": 0,
           "peRatio": null,
-          "psRatio": 12411.1,
+          "psRatio": 12368.9,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0
@@ -11475,21 +11475,21 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 41478283,
+      "mcap": 41267424,
       "tvl": 0,
-      "fees24h": 40,
+      "fees24h": 46,
       "fees7d": 0,
       "fees30d": 0,
-      "revenue24h": 40,
+      "revenue24h": 46,
       "revenue7d": 0,
       "revenue30d": 0,
       "timeframeData": {
         "24h": {
-          "fees": 40,
-          "revenue": 40,
-          "runRate": 14610,
-          "peRatio": 2839,
-          "psRatio": 2839,
+          "fees": 46,
+          "revenue": 46,
+          "runRate": 16801.5,
+          "peRatio": 2456.2,
+          "psRatio": 2456.2,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0
@@ -11524,7 +11524,7 @@
         "burnedPct": 0,
         "burnUsdEstimate": 0,
         "buyback": false,
-        "treasuryNetWorthUsd": 829566,
+        "treasuryNetWorthUsd": 825348,
         "stakingToken": "$SYN",
         "treasuryHoldings": "SYN Fee Vault & Liquidity Reserve"
       },
@@ -11533,7 +11533,7 @@
         "riskScore": 25,
         "decentralizationScore": 76,
         "description": "Highly decentralized token distribution. Low vulnerability to systemic whale sell-offs.",
-        "holdersCount": 48282,
+        "holdersCount": 48186,
         "top10SharePct": 24.5
       },
       "burnVelocity": 0
@@ -11937,7 +11937,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 4159979,
+      "mcap": 4154160,
       "tvl": 0,
       "fees24h": 0,
       "fees7d": 0,
@@ -11972,8 +11972,8 @@
           "fees": 2,
           "revenue": 1,
           "runRate": 12.17,
-          "peRatio": 341822.4,
-          "psRatio": 170911.2,
+          "peRatio": 341344.3,
+          "psRatio": 170672.1,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0
@@ -11995,7 +11995,7 @@
         "riskScore": 41,
         "decentralizationScore": 60,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 31319,
+        "holdersCount": 31317,
         "top10SharePct": 40.5
       },
       "burnVelocity": 0
@@ -12014,46 +12014,46 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 799576,
+      "mcap": 803314,
       "tvl": 0,
-      "fees24h": 59,
+      "fees24h": 49,
       "fees7d": 0,
       "fees30d": 1,
-      "revenue24h": 25,
-      "revenue7d": 175,
-      "revenue30d": 735,
+      "revenue24h": 21,
+      "revenue7d": 147,
+      "revenue30d": 617,
       "timeframeData": {
         "24h": {
-          "fees": 59,
-          "revenue": 25,
-          "runRate": 9131.25,
-          "peRatio": 87.6,
-          "psRatio": 37.1,
+          "fees": 49,
+          "revenue": 21,
+          "runRate": 7670.25,
+          "peRatio": 104.7,
+          "psRatio": 44.9,
           "yieldPct": {
             "periodYield": 0,
-            "apy": 1.1
+            "apy": 1
           }
         },
         "7d": {
           "fees": 0,
-          "revenue": 175,
-          "runRate": 9124.5,
-          "peRatio": 87.6,
+          "revenue": 147,
+          "runRate": 7664.58,
+          "peRatio": 104.8,
           "psRatio": null,
           "yieldPct": {
             "periodYield": 0.02,
-            "apy": 1.1
+            "apy": 1
           }
         },
         "30d": {
           "fees": 1,
-          "revenue": 735,
-          "runRate": 8944.95,
-          "peRatio": 89.4,
-          "psRatio": 65700.6,
+          "revenue": 617,
+          "runRate": 7508.89,
+          "peRatio": 107,
+          "psRatio": 66007.7,
           "yieldPct": {
-            "periodYield": 0.09,
-            "apy": 1.1
+            "periodYield": 0.08,
+            "apy": 0.9
           }
         }
       },
@@ -12072,7 +12072,7 @@
         "riskScore": 30,
         "decentralizationScore": 71,
         "description": "Highly decentralized token distribution. Low vulnerability to systemic whale sell-offs.",
-        "holdersCount": 29792,
+        "holdersCount": 29794,
         "top10SharePct": 29.5
       },
       "burnVelocity": 0
@@ -13092,7 +13092,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 1340476,
+      "mcap": 1340500,
       "tvl": 0,
       "fees24h": 0,
       "fees7d": 0,
@@ -13323,7 +13323,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 20259044,
+      "mcap": 20256729,
       "tvl": 0,
       "fees24h": 0,
       "fees7d": 0,
@@ -13358,8 +13358,8 @@
           "fees": 1281,
           "revenue": 1281,
           "runRate": 15589.77,
-          "peRatio": 1299.5,
-          "psRatio": 1299.5,
+          "peRatio": 1299.4,
+          "psRatio": 1299.4,
           "yieldPct": {
             "periodYield": 0.01,
             "apy": 0.1
@@ -13372,7 +13372,7 @@
         "burnedPct": 0,
         "burnUsdEstimate": 0,
         "buyback": false,
-        "treasuryNetWorthUsd": 410561,
+        "treasuryNetWorthUsd": 410515,
         "stakingToken": "$PEAS",
         "treasuryHoldings": "PEAS Fee Vault & Liquidity Reserve"
       },
@@ -13381,7 +13381,7 @@
         "riskScore": 46,
         "decentralizationScore": 55,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 38637,
+        "holdersCount": 38636,
         "top10SharePct": 45.5
       },
       "burnVelocity": 0
@@ -13554,7 +13554,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 74086,
+      "mcap": 74077,
       "tvl": 0,
       "fees24h": 0,
       "fees7d": 0,
@@ -13787,17 +13787,17 @@
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
       "mcap": 0,
       "tvl": 0,
-      "fees24h": 3300,
+      "fees24h": 3283,
       "fees7d": 0,
       "fees30d": 0,
-      "revenue24h": 988,
+      "revenue24h": 983,
       "revenue7d": 0,
       "revenue30d": 0,
       "timeframeData": {
         "24h": {
-          "fees": 3300,
-          "revenue": 988,
-          "runRate": 360867,
+          "fees": 3283,
+          "revenue": 983,
+          "runRate": 359040.75,
           "peRatio": null,
           "psRatio": null,
           "yieldPct": {
@@ -13939,7 +13939,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 538257,
+      "mcap": 539790,
       "tvl": 0,
       "fees24h": 0,
       "fees7d": 0,
@@ -13974,8 +13974,8 @@
           "fees": 1,
           "revenue": 1,
           "runRate": 12.17,
-          "peRatio": 44228.2,
-          "psRatio": 44228.2,
+          "peRatio": 44354.1,
+          "psRatio": 44354.1,
           "yieldPct": {
             "periodYield": 0,
             "apy": 0
@@ -13997,7 +13997,7 @@
         "riskScore": 38,
         "decentralizationScore": 63,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 29673,
+        "holdersCount": 29674,
         "top10SharePct": 37.5
       },
       "burnVelocity": 0
@@ -14093,7 +14093,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 3416463,
+      "mcap": 3430876,
       "tvl": 0,
       "fees24h": 0,
       "fees7d": 0,
@@ -14151,7 +14151,7 @@
         "riskScore": 45,
         "decentralizationScore": 56,
         "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 30982,
+        "holdersCount": 30988,
         "top10SharePct": 44.5
       },
       "burnVelocity": 0
@@ -14786,7 +14786,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 372608,
+      "mcap": 352224,
       "tvl": 0,
       "fees24h": 0,
       "fees7d": 0,
@@ -14844,7 +14844,7 @@
         "riskScore": 34,
         "decentralizationScore": 67,
         "description": "Highly decentralized token distribution. Low vulnerability to systemic whale sell-offs.",
-        "holdersCount": 29598,
+        "holdersCount": 29589,
         "top10SharePct": 33.5
       },
       "burnVelocity": 0
@@ -15325,7 +15325,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 6853,
+      "mcap": 6849,
       "tvl": 0,
       "fees24h": 0,
       "fees7d": 0,
@@ -15479,24 +15479,24 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 35163,
+      "mcap": 34302,
       "tvl": 0,
-      "fees24h": 0,
+      "fees24h": 82,
       "fees7d": 0,
       "fees30d": 324,
-      "revenue24h": 0,
+      "revenue24h": 82,
       "revenue7d": 0,
       "revenue30d": 324,
       "timeframeData": {
         "24h": {
-          "fees": 0,
-          "revenue": 0,
-          "runRate": 0,
-          "peRatio": null,
-          "psRatio": null,
+          "fees": 82,
+          "revenue": 82,
+          "runRate": 29950.5,
+          "peRatio": 1.1,
+          "psRatio": 1.1,
           "yieldPct": {
-            "periodYield": 0,
-            "apy": 0
+            "periodYield": 0.24,
+            "apy": 87.3
           }
         },
         "7d": {
@@ -15514,11 +15514,11 @@
           "fees": 324,
           "revenue": 324,
           "runRate": 3943.08,
-          "peRatio": 8.9,
-          "psRatio": 8.9,
+          "peRatio": 8.7,
+          "psRatio": 8.7,
           "yieldPct": {
-            "periodYield": 0.92,
-            "apy": 11.2
+            "periodYield": 0.94,
+            "apy": 11.5
           }
         }
       },
@@ -15537,7 +15537,7 @@
         "riskScore": 33,
         "decentralizationScore": 68,
         "description": "Highly decentralized token distribution. Low vulnerability to systemic whale sell-offs.",
-        "holdersCount": 29445,
+        "holdersCount": 29444,
         "top10SharePct": 32.5
       },
       "burnVelocity": 0
@@ -15633,7 +15633,7 @@
       ],
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 307110,
+      "mcap": 293825,
       "tvl": -20186124,
       "fees24h": -240311,
       "fees7d": -1682177,
@@ -15668,11 +15668,11 @@
           "fees": 12462,
           "revenue": 12462,
           "runRate": 151662.54,
-          "peRatio": 2,
-          "psRatio": 2,
+          "peRatio": 1.9,
+          "psRatio": 1.9,
           "yieldPct": {
-            "periodYield": 4.06,
-            "apy": 49.4
+            "periodYield": 4.24,
+            "apy": 51.6
           }
         }
       },
@@ -15763,7 +15763,7 @@
       "slug": "bankr",
       "tokenSymbol": "BNKR",
       "logo": "https://icons.llamao.fi/icons/protocols/bankr",
-      "holdersCount": 54898,
+      "holdersCount": 54783,
       "top10SharePct": 44.5,
       "decentralizationScore": 56,
       "sectorBadge": "BRIDGE / INFRA",
@@ -15787,7 +15787,7 @@
       "slug": "venice",
       "tokenSymbol": "VVV",
       "logo": "https://icons.llamao.fi/icons/protocols/venice",
-      "holdersCount": 594185,
+      "holdersCount": 586614,
       "top10SharePct": 42.5,
       "decentralizationScore": 58,
       "sectorBadge": "BRIDGE / INFRA",
@@ -15823,7 +15823,7 @@
       "slug": "grove-finance",
       "tokenSymbol": "GROVE",
       "logo": "https://icons.llamao.fi/icons/protocols/grove-finance",
-      "holdersCount": 33734,
+      "holdersCount": 33743,
       "top10SharePct": 42.5,
       "decentralizationScore": 58,
       "sectorBadge": "BRIDGE / INFRA",
@@ -15847,7 +15847,7 @@
       "slug": "virtuals-protocol",
       "tokenSymbol": "VIRTUAL",
       "logo": "https://icons.llamao.fi/icons/protocols/virtuals-protocol",
-      "holdersCount": 259827,
+      "holdersCount": 257225,
       "top10SharePct": 37.5,
       "decentralizationScore": 63,
       "sectorBadge": "AI AGENTS",
@@ -15859,7 +15859,7 @@
       "slug": "veranta",
       "tokenSymbol": "AVNT",
       "logo": "https://icons.llamao.fi/icons/protocols/veranta",
-      "holdersCount": 49934,
+      "holdersCount": 49816,
       "top10SharePct": 29.5,
       "decentralizationScore": 71,
       "sectorBadge": "PERPS",
@@ -15871,7 +15871,7 @@
       "slug": "overtime",
       "tokenSymbol": "OVER",
       "logo": "https://icons.llamao.fi/icons/protocols/overtime",
-      "holdersCount": 34643,
+      "holdersCount": 34641,
       "top10SharePct": 41.5,
       "decentralizationScore": 59,
       "sectorBadge": "BRIDGE / INFRA",
@@ -15895,7 +15895,7 @@
       "slug": "mamo",
       "tokenSymbol": "MAMO",
       "logo": "https://icons.llamao.fi/icons/protocols/mamo",
-      "holdersCount": 31158,
+      "holdersCount": 31155,
       "top10SharePct": 32.5,
       "decentralizationScore": 68,
       "sectorBadge": "YIELD / LST",
@@ -15907,7 +15907,7 @@
       "slug": "olympus-dao",
       "tokenSymbol": "OHM",
       "logo": "https://icons.llamao.fi/icons/protocols/olympus-dao",
-      "holdersCount": 165599,
+      "holdersCount": 165386,
       "top10SharePct": 26.5,
       "decentralizationScore": 74,
       "sectorBadge": "BRIDGE / INFRA",
@@ -15919,7 +15919,7 @@
       "slug": "sport.fun",
       "tokenSymbol": "FUN",
       "logo": "https://icons.llamao.fi/icons/protocols/sport.fun",
-      "holdersCount": 30518,
+      "holdersCount": 30516,
       "top10SharePct": 43.5,
       "decentralizationScore": 57,
       "sectorBadge": "BRIDGE / INFRA",
@@ -15943,7 +15943,7 @@
       "slug": "cowswap",
       "tokenSymbol": "COW",
       "logo": "https://icons.llamao.fi/icons/protocols/cowswap",
-      "holdersCount": 66427,
+      "holdersCount": 66248,
       "top10SharePct": 26.5,
       "decentralizationScore": 74,
       "sectorBadge": "DEX / AMM",
@@ -15979,7 +15979,7 @@
       "slug": "basestonk",
       "tokenSymbol": "BSTONK",
       "logo": "https://icons.llamao.fi/icons/protocols/basestonk",
-      "holdersCount": 29355,
+      "holdersCount": 29258,
       "top10SharePct": 26.5,
       "decentralizationScore": 74,
       "sectorBadge": "BRIDGE / INFRA",
@@ -15991,7 +15991,7 @@
       "slug": "definitive",
       "tokenSymbol": "EDGE",
       "logo": "https://icons.llamao.fi/icons/protocols/definitive",
-      "holdersCount": 43366,
+      "holdersCount": 43198,
       "top10SharePct": 31.5,
       "decentralizationScore": 69,
       "sectorBadge": "DEX / AMM",
@@ -16003,7 +16003,7 @@
       "slug": "dextools",
       "tokenSymbol": "DEXT",
       "logo": "https://icons.llamao.fi/icons/protocols/dextools",
-      "holdersCount": 31247,
+      "holdersCount": 31357,
       "top10SharePct": 26.5,
       "decentralizationScore": 74,
       "sectorBadge": "BRIDGE / INFRA",
@@ -16051,7 +16051,7 @@
       "slug": "exactly",
       "tokenSymbol": "EXA",
       "logo": "https://icons.llamao.fi/icons/protocols/exactly",
-      "holdersCount": 28738,
+      "holdersCount": 28787,
       "top10SharePct": 38.5,
       "decentralizationScore": 62,
       "sectorBadge": "LENDING / RWA",
@@ -16088,7 +16088,7 @@
       "tokenSymbol": "BNKR",
       "logo": "https://icons.llamao.fi/icons/protocols/bankr",
       "burnedTokens": 1000000,
-      "burnedUsd": 368619,
+      "burnedUsd": 366069,
       "burnedPctOfMax": 1,
       "contractAddress": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
       "explorerUrl": "https://basescan.org/token/0x2260fac5e5542a773aa44fbcfedf7c193bc2c599"
@@ -16110,7 +16110,7 @@
       "tokenSymbol": "VVV",
       "logo": "https://icons.llamao.fi/icons/protocols/venice",
       "burnedTokens": 800000,
-      "burnedUsd": 9937199,
+      "burnedUsd": 9803420,
       "burnedPctOfMax": 0.8,
       "contractAddress": "0xacf0047385966a014902c38c82cb79a55428aa3d",
       "explorerUrl": "https://basescan.org/token/0xacf0047385966a014902c38c82cb79a55428aa3d"
@@ -16143,7 +16143,7 @@
       "tokenSymbol": "VIRTUAL",
       "logo": "https://icons.llamao.fi/icons/protocols/virtuals-protocol",
       "burnedTokens": 515465140,
-      "burnedUsd": 523420083,
+      "burnedUsd": 517483501,
       "burnedPctOfMax": 51.55,
       "contractAddress": "0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
       "explorerUrl": "https://basescan.org/token/0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b"
@@ -16154,7 +16154,7 @@
       "tokenSymbol": "AVNT",
       "logo": "https://icons.llamao.fi/icons/protocols/veranta",
       "burnedTokens": 100000,
-      "burnedUsd": 43609,
+      "burnedUsd": 43347,
       "burnedPctOfMax": 0.1,
       "contractAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
       "explorerUrl": "https://basescan.org/token/0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"
@@ -16176,7 +16176,7 @@
       "tokenSymbol": "COW",
       "logo": "https://icons.llamao.fi/icons/protocols/cowswap",
       "burnedTokens": 3000000,
-      "burnedUsd": 249373,
+      "burnedUsd": 248194,
       "burnedPctOfMax": 0.3,
       "contractAddress": "0xDEf1CA1fb7FBcDC777520aa7f396b4E015F497aB",
       "explorerUrl": "https://basescan.org/token/0xDEf1CA1fb7FBcDC777520aa7f396b4E015F497aB"
@@ -16198,7 +16198,7 @@
       "tokenSymbol": "GNS",
       "logo": "https://icons.llamao.fi/icons/protocols/gains-network",
       "burnedTokens": 6200000,
-      "burnedUsd": 1935770,
+      "burnedUsd": 1910223,
       "burnedPctOfMax": 20.36,
       "contractAddress": "0x18c11FD286C5EC11c3b683Caa813B77f51639807",
       "explorerUrl": "https://basescan.org/token/0x18c11FD286C5EC11c3b683Caa813B77f51639807"
@@ -16220,7 +16220,7 @@
       "tokenSymbol": "BSWAP",
       "logo": "https://icons.llamao.fi/icons/protocols/baseswap-v2",
       "burnedTokens": 12000000,
-      "burnedUsd": 7049,
+      "burnedUsd": 6593,
       "burnedPctOfMax": 12,
       "contractAddress": "0x78a087d713be963bf307b18f5ff8122ef9a63ae9",
       "explorerUrl": "https://basescan.org/token/0x78a087d713be963bf307b18f5ff8122ef9a63ae9"
@@ -16249,8 +16249,8 @@
     }
   ],
   "treasuryRadar": {
-    "totalTreasuryTrackedUsd": 498482101,
+    "totalTreasuryTrackedUsd": 497876492,
     "monitoredTreasuriesCount": 27,
-    "realizedBuybacksVolume30d": 39878568
+    "realizedBuybacksVolume30d": 39830119
   }
 }

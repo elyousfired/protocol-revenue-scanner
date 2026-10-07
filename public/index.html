@@ -8042,10 +8042,23 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
                 ${tok.onChainChains && tok.onChainChains.length > 0
                   ? `<div class="flex flex-wrap items-center gap-1">` + tok.onChainChains.map(c => {
                       let color = 'bg-slate-800 text-slate-300 border-slate-700';
-                      if(c.toLowerCase()==='ethereum') color = 'bg-indigo-500/15 text-indigo-400 border-indigo-500/30';
-                      if(c.toLowerCase()==='solana') color = 'bg-emerald-500/15 text-emerald-400 border-emerald-500/30';
-                      if(c.toLowerCase()==='sui') color = 'bg-cyan-500/15 text-cyan-400 border-cyan-500/30';
-                      if(c.toLowerCase()==='monad') color = 'bg-purple-500/15 text-purple-400 border-purple-500/30';
+                      const lc = c.toLowerCase();
+                      if(lc === 'ethereum') color = 'bg-indigo-500/15 text-indigo-400 border-indigo-500/30';
+                      else if(lc === 'solana') color = 'bg-emerald-500/15 text-emerald-400 border-emerald-500/30';
+                      else if(lc === 'sui') color = 'bg-cyan-500/15 text-cyan-400 border-cyan-500/30';
+                      else if(lc === 'monad') color = 'bg-purple-500/15 text-purple-400 border-purple-500/30';
+                      else if(lc === 'base') color = 'bg-blue-500/15 text-blue-400 border-blue-500/30';
+                      else if(lc.includes('hyperliquid')) color = 'bg-teal-500/15 text-teal-300 border-teal-500/30';
+                      else if(lc.includes('xrp')) color = 'bg-sky-500/15 text-sky-300 border-sky-500/30';
+                      else if(lc.includes('near')) color = 'bg-emerald-500/15 text-emerald-300 border-emerald-500/30';
+                      else if(lc.includes('bitcoin')) color = 'bg-amber-500/15 text-amber-300 border-amber-500/30';
+                      else if(lc.includes('avalanche')) color = 'bg-red-500/15 text-red-300 border-red-500/30';
+                      else if(lc.includes('bnb')) color = 'bg-yellow-500/15 text-yellow-300 border-yellow-500/30';
+                      else if(lc.includes('ton')) color = 'bg-blue-400/15 text-blue-300 border-blue-400/30';
+                      else if(lc.includes('tron')) color = 'bg-rose-500/15 text-rose-300 border-rose-500/30';
+                      else if(lc.includes('arbitrum')) color = 'bg-cyan-600/15 text-cyan-300 border-cyan-600/30';
+                      else if(lc.includes('optimism')) color = 'bg-red-600/15 text-red-300 border-red-600/30';
+                      else if(lc.includes('mantle')) color = 'bg-emerald-600/15 text-emerald-300 border-emerald-600/30';
                       return `<span class="px-1.5 py-0.5 rounded border text-[9px] font-bold uppercase ${color}">${c}</span>`;
                     }).join('') + `</div>`
                   : `<span class="text-slate-600">—</span>`

@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1791393418598,
+  "updatedAt": 1791400164648,
   "protocols": {
     "marginfi-lst": {
       "hasToken": false,
@@ -75,7 +75,7 @@
     },
     "aftermath-amm": {
       "hasToken": false,
-      "checkedAt": 1790792078768
+      "checkedAt": 1791399906537
     },
     "ondo-yield-assets": {
       "hasToken": true,
@@ -86,9 +86,9 @@
       "addressChain": "sui",
       "contractAddress": "0xfaba6f8e4a5e8ab82f62fe7c39859fa577269be3",
       "geckoId": null,
-      "mcap": 5037802685,
-      "priceUsd": 0.5037,
-      "liquidityUsd": 1405667.85,
+      "mcap": 2278164174,
+      "priceUsd": 0.4678,
+      "liquidityUsd": 1759403.9,
       "decimals": 9,
       "initialSupply": 0,
       "currentSupply": 0,
@@ -97,7 +97,7 @@
       "hasBuyback": true,
       "hasBurn": false,
       "cumulativeHoldersRevUsd": 6925433,
-      "checkedAt": 1790792078768
+      "checkedAt": 1791399906537
     },
     "portal": {
       "hasToken": true,
@@ -108,9 +108,9 @@
       "addressChain": "solana",
       "contractAddress": "85VBFQZC9TZkfaptBWjvUw7YbZjy52A6mjtPGjstQAmQ",
       "geckoId": "wormhole",
-      "mcap": 85470792,
-      "priceUsd": 0.01308,
-      "liquidityUsd": 118829.96,
+      "mcap": 94149750,
+      "priceUsd": 0.01428,
+      "liquidityUsd": 124453.94,
       "decimals": 9,
       "initialSupply": 0,
       "currentSupply": 0,
@@ -119,7 +119,7 @@
       "hasBuyback": false,
       "hasBurn": false,
       "cumulativeHoldersRevUsd": 0,
-      "checkedAt": 1790792078768
+      "checkedAt": 1791399906537
     },
     "haedal-protocol": {
       "hasToken": true,
@@ -130,9 +130,9 @@
       "addressChain": "sui",
       "contractAddress": "0x3a304c7feba2d819ea57c3542d68439ca2c386ba02159c740f7b406e592c62ea::haedal::HAEDAL",
       "geckoId": null,
-      "mcap": 3833409,
-      "priceUsd": 0.01965,
-      "liquidityUsd": 626879.65,
+      "mcap": 3644289,
+      "priceUsd": 0.01868,
+      "liquidityUsd": 612182.81,
       "decimals": 9,
       "initialSupply": 0,
       "currentSupply": 0,
@@ -141,7 +141,7 @@
       "hasBuyback": false,
       "hasBurn": false,
       "cumulativeHoldersRevUsd": 0,
-      "checkedAt": 1790792078768
+      "checkedAt": 1791399906537
     },
     "volo-vault": {
       "hasToken": true,
@@ -152,9 +152,9 @@
       "addressChain": "sui",
       "contractAddress": "0xa99b8952d4f7d947ea77fe0ecdcc9e5fc0bcab2841d6e2a5aa00c3044e5544b5::navx::NAVX",
       "geckoId": null,
-      "mcap": 903662,
-      "priceUsd": 0.01221,
-      "liquidityUsd": 236824.46,
+      "mcap": 959247,
+      "priceUsd": 0.01296,
+      "liquidityUsd": 243354.53,
       "decimals": 9,
       "initialSupply": 0,
       "currentSupply": 0,
@@ -163,15 +163,15 @@
       "hasBuyback": false,
       "hasBurn": false,
       "cumulativeHoldersRevUsd": 0,
-      "checkedAt": 1790792078768
+      "checkedAt": 1791399906537
     },
     "springsui-ecosystem": {
       "hasToken": false,
-      "checkedAt": 1790792078768
+      "checkedAt": 1791399906537
     },
     "springsui": {
       "hasToken": false,
-      "checkedAt": 1790792078768
+      "checkedAt": 1791399906537
     },
     "alphafi-stsui": {
       "hasToken": true,
@@ -182,9 +182,9 @@
       "addressChain": "sui",
       "contractAddress": "0xfe3afec26c59e874f3c1d60b8203cb3852d2bb2aa415df9548b8d688e6683f93::alpha::ALPHA",
       "geckoId": null,
-      "mcap": 45551,
-      "priceUsd": 0.004568,
-      "liquidityUsd": 47.11,
+      "mcap": 1974,
+      "priceUsd": 0.000198,
+      "liquidityUsd": 19.88,
       "decimals": 9,
       "initialSupply": 0,
       "currentSupply": 0,
@@ -193,7 +193,7 @@
       "hasBuyback": false,
       "hasBurn": false,
       "cumulativeHoldersRevUsd": 0,
-      "checkedAt": 1790792078768
+      "checkedAt": 1791399906537
     },
     "flowx-v3": {
       "hasToken": true,
@@ -204,9 +204,9 @@
       "addressChain": "sui",
       "contractAddress": "0x6dae8ca14311574fdfe555524ea48558e3d1360d1607d1c7f98af867e3b7976c::flx::FLX",
       "geckoId": null,
-      "mcap": 563575,
-      "priceUsd": 0.08489,
-      "liquidityUsd": 5600.6,
+      "mcap": 92960,
+      "priceUsd": 0.08168,
+      "liquidityUsd": 5385.37,
       "decimals": 9,
       "initialSupply": 0,
       "currentSupply": 0,
@@ -215,7 +215,7 @@
       "hasBuyback": false,
       "hasBurn": false,
       "cumulativeHoldersRevUsd": 0,
-      "checkedAt": 1790792078768
+      "checkedAt": 1791399906537
     },
     "sudo-perps": {
       "hasToken": true,
@@ -227,8 +227,8 @@
       "contractAddress": "0xc44d97a4bc4e5a33ca847b72b123172c88a6328196b71414f32c3070233604b2::slp::SLP",
       "geckoId": "slp",
       "mcap": 0,
-      "priceUsd": 1.46,
-      "liquidityUsd": 205.32,
+      "priceUsd": 0,
+      "liquidityUsd": 0,
       "decimals": 9,
       "initialSupply": 0,
       "currentSupply": 0,
@@ -237,19 +237,19 @@
       "hasBuyback": false,
       "hasBurn": false,
       "cumulativeHoldersRevUsd": 0,
-      "checkedAt": 1790792078768
+      "checkedAt": 1791399906537
     },
     "magma": {
       "hasToken": false,
-      "checkedAt": 1790792078768
+      "checkedAt": 1791399906537
     },
     "mayan-dex-aggregator": {
       "hasToken": false,
-      "checkedAt": 1790792078768
+      "checkedAt": 1791399906537
     },
     "zo-perps": {
       "hasToken": false,
-      "checkedAt": 1790792078768
+      "checkedAt": 1791399906537
     },
     "momentum": {
       "hasToken": true,
@@ -260,9 +260,9 @@
       "addressChain": "sui",
       "contractAddress": "0x35169bc93e1fddfcf3a82a9eae726d349689ed59e4b065369af8789fe59f8608::mmt::MMT",
       "geckoId": "momentum-3",
-      "mcap": 38706152,
-      "priceUsd": 0.1896,
-      "liquidityUsd": 158664.07,
+      "mcap": 34640224,
+      "priceUsd": 0.1697,
+      "liquidityUsd": 148275.8,
       "decimals": 9,
       "initialSupply": 1000000000,
       "currentSupply": 984999999,
@@ -271,7 +271,7 @@
       "hasBuyback": false,
       "hasBurn": true,
       "cumulativeHoldersRevUsd": 0,
-      "checkedAt": 1790792078768
+      "checkedAt": 1791399906537
     },
     "kaio": {
       "hasToken": true,
@@ -282,9 +282,9 @@
       "addressChain": "sui",
       "contractAddress": "0x00bac91fd8f5b4a0dc03c8021139b76f6549ee7e",
       "geckoId": "kaio",
-      "mcap": 278402113,
-      "priceUsd": 0.02784,
-      "liquidityUsd": 974.56,
+      "mcap": 15895971,
+      "priceUsd": 0.02333,
+      "liquidityUsd": 874.51,
       "decimals": 9,
       "initialSupply": 0,
       "currentSupply": 0,
@@ -293,11 +293,11 @@
       "hasBuyback": false,
       "hasBurn": false,
       "cumulativeHoldersRevUsd": 0,
-      "checkedAt": 1790792078768
+      "checkedAt": 1791399906537
     },
     "dipcoin-spot": {
       "hasToken": false,
-      "checkedAt": 1790792078768
+      "checkedAt": 1791399906537
     },
     "full-sail": {
       "hasToken": true,
@@ -330,9 +330,9 @@
       "addressChain": "sui",
       "contractAddress": "0x356a26eb9e012a68958082340d4c4116e7f55615cf27affcff209cf0ae544f59::wal::WAL",
       "geckoId": "walrus-2",
-      "mcap": 86943866,
-      "priceUsd": 0.03391,
-      "liquidityUsd": 147464.07,
+      "mcap": 94164277,
+      "priceUsd": 0.03672,
+      "liquidityUsd": 201583.01,
       "decimals": 9,
       "initialSupply": 0,
       "currentSupply": 0,
@@ -341,7 +341,7 @@
       "hasBuyback": false,
       "hasBurn": false,
       "cumulativeHoldersRevUsd": 0,
-      "checkedAt": 1790792078768
+      "checkedAt": 1791399906537
     },
     "ember-protocol": {
       "hasToken": false,
@@ -349,7 +349,7 @@
     },
     "bucket-protocol-v2": {
       "hasToken": false,
-      "checkedAt": 1790792078768
+      "checkedAt": 1791399906537
     },
     "dipcoin-perps": {
       "hasToken": false,
@@ -2660,6 +2660,372 @@
       "hasBurn": false,
       "cumulativeHoldersRevUsd": 0,
       "checkedAt": 1791393418598
+    },
+    "ave.ai": {
+      "hasToken": false,
+      "checkedAt": 1791399919471
+    },
+    "shiny": {
+      "hasToken": false,
+      "checkedAt": 1791399919471
+    },
+    "bloom-trading-bot": {
+      "hasToken": false,
+      "checkedAt": 1791399919471
+    },
+    "loopscale-lending": {
+      "hasToken": false,
+      "checkedAt": 1791399919471
+    },
+    "vectis-finance": {
+      "hasToken": false,
+      "checkedAt": 1791399919471
+    },
+    "kaching": {
+      "hasToken": false,
+      "checkedAt": 1791399919471
+    },
+    "aerodrome-v1": {
+      "hasToken": true,
+      "slug": "aerodrome-v1",
+      "name": "Aerodrome V1",
+      "symbol": "AERO",
+      "chain": "base",
+      "addressChain": "base",
+      "contractAddress": "0x940181a94A35A4569E4529A3CDfB74e38FD98631",
+      "geckoId": null,
+      "mcap": 1581070394,
+      "priceUsd": 0.7933,
+      "liquidityUsd": 43557213.27,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": true,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 203071087,
+      "checkedAt": 1791400164648
+    },
+    "swapbased-concentrated-liquidity": {
+      "hasToken": true,
+      "slug": "swapbased-concentrated-liquidity",
+      "name": "SwapBased Concentrated Liquidity",
+      "symbol": "BASE",
+      "chain": "base",
+      "addressChain": "base",
+      "contractAddress": "0xd07379a755A8f11B57610154861D694b2A0f615a",
+      "geckoId": null,
+      "mcap": 757721,
+      "priceUsd": 6.877e-7,
+      "liquidityUsd": 38501.81,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": false,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 0,
+      "checkedAt": 1791400164648
+    },
+    "solidly-v3": {
+      "hasToken": true,
+      "slug": "solidly-v3",
+      "name": "Solidly V3",
+      "symbol": "SOLID",
+      "chain": "base",
+      "addressChain": "base",
+      "contractAddress": "0x777172D858dC1599914a1C4c6c9fC48c99a60990",
+      "geckoId": null,
+      "mcap": 0,
+      "priceUsd": 0,
+      "liquidityUsd": 0,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": true,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 741252,
+      "checkedAt": 1791400164648
+    },
+    "backedfi": {
+      "hasToken": false,
+      "checkedAt": 1791400164648
+    },
+    "sharesgram": {
+      "hasToken": true,
+      "slug": "sharesgram",
+      "name": "SharesGram",
+      "symbol": "SG",
+      "chain": "base",
+      "addressChain": "base",
+      "contractAddress": "0xbe74a95d159e8e323b8c1a70f825efc85fed27c4",
+      "geckoId": "sharesgram",
+      "mcap": 0,
+      "priceUsd": 0,
+      "liquidityUsd": 0,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": false,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 0,
+      "checkedAt": 1791400164648
+    },
+    "basepaint": {
+      "hasToken": false,
+      "checkedAt": 1791400164648
+    },
+    "seamless-v1": {
+      "hasToken": true,
+      "slug": "seamless-v1",
+      "name": "Seamless V1",
+      "symbol": "SEAM",
+      "chain": "base",
+      "addressChain": "base",
+      "contractAddress": "0x1c7a460413dd4e964f96d8dfc56e7223ce88cd85",
+      "geckoId": null,
+      "mcap": 585037,
+      "priceUsd": 0.0118,
+      "liquidityUsd": 55097.96,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": false,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 0,
+      "checkedAt": 1791400164648
+    },
+    "dackieswap-v2": {
+      "hasToken": true,
+      "slug": "dackieswap-v2",
+      "name": "DackieSwap V2",
+      "symbol": "DACKIE",
+      "chain": "base",
+      "addressChain": "base",
+      "contractAddress": "0x73326b4d0225c429bed050c11c4422d91470aaf4",
+      "geckoId": null,
+      "mcap": 18404,
+      "priceUsd": 0.0001816,
+      "liquidityUsd": 6237.32,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": false,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 0,
+      "checkedAt": 1791400164648
+    },
+    "nether.fi": {
+      "hasToken": true,
+      "slug": "nether.fi",
+      "name": "Nether.Fi",
+      "symbol": "NFI",
+      "chain": "base",
+      "addressChain": "base",
+      "contractAddress": "0x60359A0DD148B18d5cF1Ddf8Aa1916221ED0cbCd",
+      "geckoId": "netherfi",
+      "mcap": 0,
+      "priceUsd": 0,
+      "liquidityUsd": 0,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": true,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 19728,
+      "checkedAt": 1791400164648
+    },
+    "basex": {
+      "hasToken": true,
+      "slug": "basex",
+      "name": "BaseX",
+      "symbol": "BSWAP",
+      "chain": "base",
+      "addressChain": "base",
+      "contractAddress": "0x78a087d713Be963Bf307b18F2Ff8122EF9A63ae9",
+      "geckoId": null,
+      "mcap": 50700,
+      "priceUsd": 0.00507,
+      "liquidityUsd": 23092.22,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": false,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 0,
+      "checkedAt": 1791400164648
+    },
+    "jumper-dex-aggregator": {
+      "hasToken": false,
+      "checkedAt": 1791400164648
+    },
+    "kinetix-amm-v2": {
+      "hasToken": true,
+      "slug": "kinetix-amm-v2",
+      "name": "Kinetix AMM V2",
+      "symbol": "KAI",
+      "chain": "base",
+      "addressChain": "kava",
+      "contractAddress": "0x52369B1539EA8F4e1eadEEF18D85462Dcf9a3658",
+      "geckoId": null,
+      "mcap": 26569,
+      "priceUsd": 0.0001191,
+      "liquidityUsd": 13351.61,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": false,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 0,
+      "checkedAt": 1791400164648
+    },
+    "kinetix-amm-v3": {
+      "hasToken": true,
+      "slug": "kinetix-amm-v3",
+      "name": "Kinetix AMM V3",
+      "symbol": "KAI",
+      "chain": "base",
+      "addressChain": "kava",
+      "contractAddress": "0x52369B1539EA8F4e1eadEEF18D85462Dcf9a3658",
+      "geckoId": null,
+      "mcap": 26569,
+      "priceUsd": 0.0001191,
+      "liquidityUsd": 13351.61,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": false,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 0,
+      "checkedAt": 1791400164648
+    },
+    "bmx-classic-perps": {
+      "hasToken": true,
+      "slug": "bmx-classic-perps",
+      "name": "BMX Classic Perps",
+      "symbol": "BMX",
+      "chain": "base",
+      "addressChain": "base",
+      "contractAddress": "0x548f93779fbc992010c07467cbaf329dd5f059b7",
+      "geckoId": null,
+      "mcap": 112473,
+      "priceUsd": 0.5543,
+      "liquidityUsd": 28256.38,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": true,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 1078860,
+      "checkedAt": 1791400164648
+    },
+    "blazebot": {
+      "hasToken": true,
+      "slug": "blazebot",
+      "name": "BlazeBot",
+      "symbol": "BLAZE",
+      "chain": "base",
+      "addressChain": "base",
+      "contractAddress": "0x37defbc399e5737d53dfb5533d9954572f5b19bf",
+      "geckoId": "blazebot",
+      "mcap": 0,
+      "priceUsd": 0,
+      "liquidityUsd": 0,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": false,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 0,
+      "checkedAt": 1791400164648
+    },
+    "scale": {
+      "hasToken": true,
+      "slug": "scale",
+      "name": "Scale",
+      "symbol": "SCALE",
+      "chain": "base",
+      "addressChain": "base",
+      "contractAddress": "0x54016a4848a38f257b6e96331f7404073fd9c32c",
+      "geckoId": null,
+      "mcap": 259516,
+      "priceUsd": 0.0107,
+      "liquidityUsd": 13444.63,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": true,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 1142353,
+      "checkedAt": 1791400164648
+    },
+    "basedmarkets": {
+      "hasToken": true,
+      "slug": "basedmarkets",
+      "name": "basedmarkets",
+      "symbol": "BASED",
+      "chain": "base",
+      "addressChain": "base",
+      "contractAddress": "0xba5e6fa2f33f3955f0cef50c63dcc84861eab663",
+      "geckoId": "based-markets",
+      "mcap": 0,
+      "priceUsd": 0,
+      "liquidityUsd": 0,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": true,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 139017,
+      "checkedAt": 1791400164648
+    },
+    "contango-v2": {
+      "hasToken": true,
+      "slug": "contango-v2",
+      "name": "Contango V2",
+      "symbol": "TANGO",
+      "chain": "base",
+      "addressChain": "arbitrum",
+      "contractAddress": "0xc760f9782f8cea5b06d862574464729537159966",
+      "geckoId": null,
+      "mcap": 0,
+      "priceUsd": 0,
+      "liquidityUsd": 0,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": true,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 1323350,
+      "checkedAt": 1791400164648
     }
   }
 }

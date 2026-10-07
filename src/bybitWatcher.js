@@ -5,6 +5,7 @@ import { getSuiEcosystem } from './suiWatcher.js';
 import { getSolanaEcosystem } from './solanaWatcher.js';
 import { getEthereumEcosystem } from './ethereumWatcher.js';
 import { getMonadEcosystem } from './monadWatcher.js';
+import { getBaseEcosystem } from './baseWatcher.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -236,6 +237,162 @@ const TOKEN_CATEGORY_MAP = {
   FORT: 'infra', GPS: 'infra', NS: 'infra', FIDA: 'infra', G: 'infra'
 };
 
+// Curated native and primary blockchains for tokens traded on Bybit Spot
+export const KNOWN_TOKEN_BLOCKCHAINS = {
+  // Layer 1 Chains
+  BTC: ['Bitcoin'],
+  ETH: ['Ethereum'],
+  SOL: ['Solana'],
+  SUI: ['Sui'],
+  MON: ['Monad'],
+  XRP: ['XRP Ledger'],
+  NEAR: ['NEAR Protocol'],
+  HYPE: ['Hyperliquid L1'],
+  AVAX: ['Avalanche'],
+  DOGE: ['Dogecoin'],
+  TON: ['TON Network'],
+  TRX: ['Tron'],
+  ADA: ['Cardano'],
+  BNB: ['BNB Chain'],
+  DOT: ['Polkadot'],
+  ATOM: ['Cosmos Hub'],
+  INJ: ['Injective'],
+  TIA: ['Celestia'],
+  SEI: ['Sei Network'],
+  APT: ['Aptos'],
+  FTM: ['Fantom'],
+  SONIC: ['Sonic'],
+  HBAR: ['Hedera'],
+  LTC: ['Litecoin'],
+  BCH: ['Bitcoin Cash'],
+  ETC: ['Ethereum Classic'],
+  XLM: ['Stellar'],
+  ALGO: ['Algorand'],
+  KAS: ['Kaspa'],
+  BERA: ['Berachain'],
+  IP: ['Story Protocol'],
+  KAIA: ['Kaia'],
+
+  // Layer 2 Rollups
+  ARB: ['Arbitrum'],
+  OP: ['Optimism'],
+  MNT: ['Mantle'],
+  STRK: ['Starknet'],
+  ZK: ['ZKsync'],
+  POL: ['Polygon'],
+  MATIC: ['Polygon'],
+  BLAST: ['Blast'],
+  SCROLL: ['Scroll'],
+  LINEA: ['Linea'],
+  TAIKO: ['Taiko'],
+  METIS: ['Metis'],
+  IMX: ['ImmutableX'],
+
+  // Base Native Tokens
+  AERO: ['Base'],
+  VIRTUAL: ['Base'],
+  BRETT: ['Base'],
+  DEGEN: ['Base'],
+  WELL: ['Base'],
+  SEAM: ['Base'],
+  EXTRA: ['Base'],
+  TOSHI: ['Base'],
+  CLANKER: ['Base'],
+  MIGGLES: ['Base'],
+  ALB: ['Base'],
+
+  // Top Solana Ecosystem Tokens
+  PUMP: ['Solana'],
+  BONK: ['Solana'],
+  WIF: ['Solana'],
+  JUP: ['Solana'],
+  RAY: ['Solana'],
+  MET: ['Solana'],
+  JTO: ['Solana'],
+  KMNO: ['Solana'],
+  DRIFT: ['Solana'],
+  ORCA: ['Solana'],
+  PENGU: ['Solana', 'Ethereum'],
+  TRUMP: ['Solana'],
+  MELANIA: ['Solana'],
+  FARTCOIN: ['Solana'],
+  AI16Z: ['Solana'],
+  GRASS: ['Solana'],
+  ACT: ['Solana'],
+  PNUT: ['Solana'],
+  GOAT: ['Solana'],
+  MOODENG: ['Solana'],
+  CHILLGUY: ['Solana'],
+  GIGA: ['Solana'],
+  BOME: ['Solana'],
+  POPCAT: ['Solana'],
+  MEW: ['Solana'],
+  HNT: ['Solana'],
+  MOBILE: ['Solana'],
+  HONEY: ['Solana'],
+  PRCL: ['Solana'],
+
+  // Top Ethereum Ecosystem Tokens
+  PEPE: ['Ethereum'],
+  SHIB: ['Ethereum'],
+  ENA: ['Ethereum'],
+  AAVE: ['Ethereum'],
+  UNI: ['Ethereum'],
+  LINK: ['Ethereum'],
+  MKR: ['Ethereum'],
+  SKY: ['Ethereum'],
+  LDO: ['Ethereum'],
+  PENDLE: ['Ethereum'],
+  CRV: ['Ethereum'],
+  CVX: ['Ethereum'],
+  MORPHO: ['Ethereum', 'Base'],
+  EIGEN: ['Ethereum'],
+  ETHFI: ['Ethereum'],
+  RNDR: ['Ethereum'],
+  QNT: ['Ethereum'],
+  XAUT: ['Ethereum'],
+  PAXG: ['Ethereum'],
+  DATA: ['Ethereum'],
+  SAND: ['Ethereum'],
+  MANA: ['Ethereum'],
+  GALA: ['Ethereum'],
+  LIT: ['Ethereum'],
+  NEIRO: ['Ethereum'],
+  TURBO: ['Ethereum'],
+  MOG: ['Ethereum'],
+  SPX: ['Ethereum', 'Solana'],
+  WLD: ['World Chain', 'Optimism'],
+
+  // TON Network
+  GRAM: ['TON Network'],
+  NOT: ['TON Network'],
+  DOGS: ['TON Network'],
+  CATI: ['TON Network'],
+  HMSTR: ['TON Network'],
+  MAJOR: ['TON Network'],
+
+  // Tron Ecosystem
+  SUNDOG: ['Tron'],
+  BTT: ['Tron'],
+
+  // BNB Chain Ecosystem
+  CAKE: ['BNB Chain'],
+  BAKE: ['BNB Chain'],
+  TKO: ['BNB Chain'],
+  FLOKI: ['BNB Chain', 'Ethereum'],
+  ASTER: ['BNB Chain'],
+
+  // Specialized L1s
+  TAO: ['Bittensor'],
+  ICP: ['Internet Computer'],
+  FIL: ['Filecoin'],
+  AR: ['Arweave'],
+  THETA: ['Theta Network'],
+  RON: ['Ronin'],
+  AXS: ['Ronin', 'Ethereum'],
+  PEAQ: ['Peaq Network']
+};
+
 function classifyTokenCategory(symbol, scannerMap) {
   const upper = symbol.toUpperCase();
   if (TOKEN_CATEGORY_MAP[upper]) {
@@ -286,7 +443,7 @@ export async function getBybitSpotEcosystem(force = false) {
 
   console.log('[BybitWatcher] Fetching live Bybit V5 Spot Tickers & computing Category Volume Flow...');
 
-  const [bybitRes, suiEco, solEco, ethEco, monEco, cgMap] = await Promise.all([
+  const [bybitRes, suiEco, solEco, ethEco, monEco, baseEco, cgMap] = await Promise.all([
     fetch('https://api.bybit.com/v5/market/tickers?category=spot', {
       signal: AbortSignal.timeout(15000)
     }).then(async r => {
@@ -301,6 +458,7 @@ export async function getBybitSpotEcosystem(force = false) {
     getSolanaEcosystem(false).catch(() => ({ protocols: [] })),
     getEthereumEcosystem(false).catch(() => ({ protocols: [] })),
     getMonadEcosystem(false).catch(() => ({ protocols: [] })),
+    getBaseEcosystem(false).catch(() => ({ protocols: [] })),
     (async () => {
       const CG_CACHE_FILE = './cache/cg_mcap.json';
       const TMP_CG_CACHE_FILE = '/tmp/cg_mcap.json';
@@ -351,7 +509,8 @@ export async function getBybitSpotEcosystem(force = false) {
     ...[...(suiEco.l1Chain ? [suiEco.l1Chain] : []), ...(suiEco.protocols || [])].map(p => ({ ...p, _injectedChain: 'sui' })),
     ...[...(solEco.l1Chain ? [solEco.l1Chain] : []), ...(solEco.protocols || [])].map(p => ({ ...p, _injectedChain: 'solana' })),
     ...[...(ethEco.l1Chain ? [ethEco.l1Chain] : []), ...(ethEco.protocols || [])].map(p => ({ ...p, _injectedChain: 'ethereum' })),
-    ...[...(monEco.l1Chain ? [monEco.l1Chain] : []), ...(monEco.protocols || [])].map(p => ({ ...p, _injectedChain: 'monad' }))
+    ...[...(monEco.l1Chain ? [monEco.l1Chain] : []), ...(monEco.protocols || [])].map(p => ({ ...p, _injectedChain: 'monad' })),
+    ...[...(baseEco.l2Chain ? [baseEco.l2Chain] : []), ...(baseEco.protocols || [])].map(p => ({ ...p, _injectedChain: 'base' }))
   ];
 
   for (const p of allProts) {
@@ -396,7 +555,7 @@ export async function getBybitSpotEcosystem(force = false) {
     let isOnOurChains = false;
     let onChainChains = [];
     if (matchedProtocol) {
-      const allowedChains = ['ethereum', 'sui', 'solana', 'monad'];
+      const allowedChains = ['ethereum', 'sui', 'solana', 'monad', 'base'];
       let protChains = (matchedProtocol.chains || [matchedProtocol.primaryChain || '']).map(c => c.toLowerCase());
       
       // Force native tokens to be recognized on their own chains
@@ -404,6 +563,7 @@ export async function getBybitSpotEcosystem(force = false) {
       if (baseSymbol === 'SOL') protChains.push('solana');
       if (baseSymbol === 'ETH' || baseSymbol === 'WETH') protChains.push('ethereum');
       if (baseSymbol === 'MON' || baseSymbol === 'WMON') protChains.push('monad');
+      if (baseSymbol === 'AERO' || baseSymbol === 'BRETT' || baseSymbol === 'VIRTUAL' || baseSymbol === 'DEGEN' || baseSymbol === 'WELL') protChains.push('base');
       
       if (matchedProtocol._injectedChain) protChains.push(matchedProtocol._injectedChain);
 
@@ -416,6 +576,11 @@ export async function getBybitSpotEcosystem(force = false) {
       if (!isOnOurChains) {
         matchedProtocol = null;
       }
+    }
+
+    // If still no blockchain assigned, fallback to our curated known token blockchains
+    if (onChainChains.length === 0 && KNOWN_TOKEN_BLOCKCHAINS[baseSymbol]) {
+      onChainChains = [...KNOWN_TOKEN_BLOCKCHAINS[baseSymbol]];
     }
 
     totalSpotVolume24hUsd += volume24hUsd;
