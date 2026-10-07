@@ -236,8 +236,8 @@ export async function autoDiscoverProtocolTokens(candidateSlugs = [], targetChai
   const isCacheFresh = cache.updatedAt && (now - cache.updatedAt < DISCOVERY_TTL_MS);
 
   // Filter only unknown slugs that are not blacklisted
-  const unknownSlugs = candidateSlugs.filter(slug => {
-    if (!slug) return false;
+  const unknownSlugs = candidateSlugs.map(item => (typeof item === 'object' && item !== null ? item.slug : item)).filter(slug => {
+    if (!slug || typeof slug !== 'string') return false;
     const s = slug.toLowerCase().trim();
     if (knownSlugsSet.has(s)) return false;
     if (EXCLUDE_SLUGS.has(s)) return false;

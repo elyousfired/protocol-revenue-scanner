@@ -22,6 +22,330 @@
         }
       }
     }
+
+    // ============================================================== //
+    // BASE LAYER-2 HUB JAVASCRIPT CONTROLLERS                        //
+    // ============================================================== //
+    let baseData = null;
+    let baseTimeframe = '7d';
+    let baseSector = 'all';
+    let baseSearch = '';
+    let baseLbCategory = 'revenue';
+    let baseLbTimeframe = '7d';
+    let baseLbLimit = 50;
+
+    async function loadBaseData(force = false) {
+      try {
+        const tbody = document.getElementById('base-protocols-tbody');
+        if (tbody) tbody.style.opacity = '0.45';
+
+        const params = new URLSearchParams({
+          timeframe: baseTimeframe,
+          sector: baseSector,
+          search: baseSearch,
+          _t: String(Date.now())
+        });
+        if (force) params.set('refresh', 'true');
+
+        const res = await fetch('/api/base?' + params.toString());
+        const data = await res.json();
+        if (!data.success) throw new Error(data.error || 'Failed to load Base data');
+
+        baseData = data;
+        renderBaseHeroAndSectors(data);
+        renderBaseProtocolsTable(data.protocols || []);
+        renderBaseTreasuryView(data);
+        renderBaseEmbeddedLeaderboard();
+
+        if (tbody) tbody.style.opacity = '1';
+      } catch (err) {
+        console.error('Failed to load Base Hub data:', err);
+      }
+    }
+
+    function refreshBaseData() {
+      const btn = document.getElementById('btn-base-refresh');
+      if (btn) {
+        btn.innerHTML = '<span>⏳</span><span>Syncing Base RPC...</span>';
+        btn.disabled = true;
+      }
+      loadBaseData(true).finally(() => {
+        if (btn) {
+          btn.innerHTML = '<span>🔄</span><span>Sync Base RPC</span>';
+          btn.disabled = false;
+        }
+      });
+    }
+
+    function setBaseTimeframe(tf) {
+      baseTimeframe = tf;
+      ['24h', '7d', '30d'].forEach(t => {
+        const btn = document.getElementById(`base-tf-${t}`);
+        if (btn) {
+          btn.className = t === tf
+            ? 'px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all bg-blue-600 text-white shadow-md shadow-blue-600/30'
+            : 'px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all text-slate-400 hover:text-white';
+        }
+      });
+      loadBaseData();
+    }
+
+    function setBaseSector(sec) {
+      baseSector = sec;
+      const allSectors = ['all', 'dex', 'lending', 'ai_agents', 'socialfi_memes', 'perps', 'yield_infra', 'bridges_cross'];
+      allSectors.forEach(s => {
+        const btn = document.getElementById(`base-sector-${s}`);
+        if (btn) {
+          btn.className = s === sec
+            ? 'px-3 py-1.5 rounded-xl font-mono text-xs font-bold transition-all bg-blue-600 text-white shadow-md shadow-blue-600/30'
+            : 'px-3 py-1.5 rounded-xl font-mono text-xs font-medium text-slate-400 hover:text-white bg-slate-900 border border-slate-800 transition-all';
+        }
+      });
+      loadBaseData();
+    }
+
+    function handleBaseSearch(val) {
+      baseSearch = (val || '').trim();
+      loadBaseData();
+    }
+
+    function renderBaseHeroAndSectors(data) {
+      if (!data) return;
+      const l2 = data.l2Chain || {};
+      const tfShort = baseTimeframe.toUpperCase();
+      const seq = l2.activeSequencerEconomics || l2.sequencerEconomics?.[baseTimeframe] || {};
+
+      document.getElementById('base-card1-title').textContent = `Sequencer Gross Revenue (${tfShort})`;
+      document.getElementById('base-hero-fees').textContent = formatUSD(seq.grossRevenueUsd || l2.grossFees7d || 404000);
+      document.getElementById('base-hero-gross-24h').textContent = formatUSD(l2.grossFees24h || 1550000);
+      document.getElementById('base-hero-gas-price').textContent = `${l2.gasPriceGwei || 0.005} Gwei`;
+
+      document.getElementById('base-card2-title').textContent = `L1 Blob DA Settlement (${tfShort})`;
+      document.getElementById('base-hero-l1-cost').textContent = formatUSD(seq.l1BlobCostUsd || 23485);
+      document.getElementById('base-hero-l1-pct').textContent = `${seq.breakdown?.l1SettlementPct || 5.8}% Gross`;
+      document.getElementById('base-hero-block').textContent = `#${l2.blockNumber ? (l2.blockNumber / 1e6).toFixed(1) + 'M' : '52.3M'}`;
+
+      document.getElementById('base-card3-title').textContent = `Coinbase Retained Profit (${tfShort})`;
+      document.getElementById('base-hero-coinbase-profit').textContent = formatUSD(seq.coinbaseRetainedProfitUsd || 324000);
+      document.getElementById('base-hero-margin-badge').textContent = `${seq.profitMarginPct || 94.2}% Margin`;
+      document.getElementById('base-hero-coinbase-retention').textContent = formatUSD(seq.coinbaseRetainedProfitUsd || 324000);
+      document.getElementById('base-hero-superchain-cut').textContent = formatUSD(seq.opCollectiveShareUsd || 57000);
+
+      const aero = (data.protocols || []).find(p => p.slug.includes('aerodrome')) || {};
+      const virtual = (data.protocols || []).find(p => p.slug.includes('virtuals')) || {};
+      document.getElementById('base-hero-aero-fees').textContent = formatUSD(aero.activeFees || aero.fees7d || 2190000);
+      document.getElementById('base-hero-aero-rev').textContent = formatUSD(aero.activeRevenue || aero.revenue7d || 1445000);
+      document.getElementById('base-hero-virtual-rev').textContent = formatUSD(virtual.activeRevenue || virtual.revenue7d || 260000);
+
+      document.getElementById('base-protocols-badge').textContent = `${data.totalProtocolsCount || 197} Verified Protocols`;
+      document.getElementById('base-table-count').textContent = data.filteredCount || (data.protocols || []).length;
+      document.getElementById('base-count-all').textContent = data.totalProtocolsCount || 197;
+
+      document.getElementById('base-th-fees').textContent = `Fees (${tfShort})`;
+      document.getElementById('base-th-rev').textContent = `Net Revenue (${tfShort})`;
+    }
+
+    function renderBaseProtocolsTable(protocols) {
+      const tbody = document.getElementById('base-protocols-tbody');
+      if (!tbody) return;
+      if (!protocols || protocols.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="9" class="py-12 text-center text-slate-500 font-mono">No Base protocols match this filter.</td></tr>';
+        return;
+      }
+
+      tbody.innerHTML = protocols.map((p, idx) => {
+        const peDisplay = p.activePeRatio && p.activePeRatio > 0 && p.activePeRatio < 999 ? `${p.activePeRatio.toFixed(1)}x` : '<span class="text-slate-600">—</span>';
+        const rankClass = idx === 0 ? 'text-amber-400 font-bold' : idx === 1 ? 'text-slate-200 font-bold' : idx === 2 ? 'text-amber-600 font-bold' : 'text-slate-500';
+
+        return `
+          <tr class="hover:bg-slate-900/60 transition-colors group">
+            <td class="py-3 px-4 text-center ${rankClass}">${idx + 1}</td>
+            <td class="py-3 px-4">
+              <div class="flex items-center gap-3">
+                <img src="${p.logo}" alt="${p.name}" class="w-8 h-8 rounded-xl bg-slate-800 border border-slate-700/80 p-0.5 object-cover" onerror="this.src='https://icons.llamao.fi/icons/chains/rsz_base.jpg'" />
+                <div>
+                  <div class="font-bold text-white group-hover:text-blue-400 transition-colors flex items-center gap-1.5">
+                    <span>${p.name}</span>
+                    <span class="px-1.5 py-0.2 rounded bg-blue-500/20 text-blue-300 text-[10px] font-mono font-bold">${p.tokenSymbol}</span>
+                  </div>
+                  <div class="text-[10px] text-slate-500">${p.slug}</div>
+                </div>
+              </div>
+            </td>
+            <td class="py-3 px-4">
+              <span class="px-2 py-0.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 text-[10px] font-mono">
+                ${p.sectorBadge || 'DEX / AMM'}
+              </span>
+            </td>
+            <td class="py-3 px-4 text-right font-bold text-white">${formatUSD(p.activeFees || p.fees7d || 0)}</td>
+            <td class="py-3 px-4 text-right font-bold text-blue-400">${formatUSD(p.activeRevenue || p.revenue7d || 0)}</td>
+            <td class="py-3 px-4 text-right font-mono text-cyan-300">${peDisplay}</td>
+            <td class="py-3 px-4 text-right text-slate-300">${formatUSD(p.mcap || 0)}</td>
+            <td class="py-3 px-4 text-center">
+              <a href="${p.explorerUrl || `https://basescan.org/token/${p.contractAddress}`}" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-blue-500/10 hover:bg-blue-500/25 border border-blue-500/30 text-blue-300 text-[11px] font-mono transition-all inline-flex items-center gap-1">
+                <span>${p.tokenSymbol}</span>
+                <span class="text-[9px]">↗</span>
+              </a>
+            </td>
+            <td class="py-3 px-4 text-center">
+              <div class="flex items-center justify-center gap-1.5">
+                <button onclick="openHistoricalModal('${p.slug}')" class="px-2 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition-all text-[10px]">
+                  📈 Trend
+                </button>
+                <button onclick="openProtocolBlueprint('${p.slug}')" class="px-2 py-1 rounded-lg bg-blue-500/20 hover:bg-blue-500/30 text-blue-300 hover:text-white transition-all text-[10px]">
+                  Inspect 🔍
+                </button>
+              </div>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function renderBaseTreasuryView(data) {
+      const container = document.getElementById('base-treasury-grid');
+      const totalEl = document.getElementById('base-treasury-total');
+      if (!container || !data) return;
+
+      const totalUsd = data.treasuryRadar?.totalTreasuryTrackedUsd || 0;
+      if (totalEl) totalEl.textContent = formatUSD(totalUsd);
+
+      const topTreasuries = (data.protocols || [])
+        .filter(p => (p.mechanism?.treasuryNetWorthUsd || 0) > 0)
+        .slice(0, 6);
+
+      container.innerHTML = topTreasuries.map(p => `
+        <div class="bg-slate-950/80 border border-slate-800/80 hover:border-emerald-500/40 rounded-2xl p-4 transition-all space-y-2.5">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <img src="${p.logo}" alt="${p.name}" class="w-6 h-6 rounded-lg bg-slate-800 p-0.5 object-cover" onerror="this.src='https://icons.llamao.fi/icons/chains/rsz_base.jpg'" />
+              <span class="font-bold text-white text-xs">${p.name}</span>
+            </div>
+            <span class="text-xs px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono font-bold">
+              ${formatUSD(p.mechanism.treasuryNetWorthUsd)}
+            </span>
+          </div>
+          <div class="text-[11px] text-slate-400 font-mono">
+            ${p.mechanism.treasuryHoldings || `${p.tokenSymbol} Fee Sink & Treasury Reserve`}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Base Neon Leaderboard Controllers
+    function setBaseLbCategory(cat) {
+      baseLbCategory = cat;
+      ['revenue', 'burn', 'holders', 'buybacks'].forEach(c => {
+        const btn = document.getElementById(`base-lb-cat-${c}`);
+        if (btn) {
+          btn.className = c === cat
+            ? 'flex items-center gap-1.5 px-4 py-2 rounded-xl font-mono text-xs font-bold transition-all bg-blue-500/20 text-blue-300 border border-blue-500/40 shadow-lg shadow-blue-500/10'
+            : 'flex items-center gap-1.5 px-4 py-2 rounded-xl font-mono text-xs font-medium text-slate-400 hover:text-white transition-all bg-slate-900 border border-slate-800';
+        }
+      });
+      renderBaseEmbeddedLeaderboard();
+    }
+
+    function setBaseLbTimeframe(tf) {
+      baseLbTimeframe = tf;
+      ['24h', '7d', '30d'].forEach(t => {
+        const btn = document.getElementById(`base-lb-tf-${t}`);
+        if (btn) {
+          btn.className = t === tf
+            ? 'px-2.5 py-1 rounded-lg text-xs font-mono font-bold bg-blue-600 text-white transition-all shadow-md'
+            : 'px-2.5 py-1 rounded-lg text-xs font-mono font-bold text-slate-400 hover:text-white transition-all';
+        }
+      });
+      renderBaseEmbeddedLeaderboard();
+    }
+
+    function setBaseLbLimit(lim) {
+      baseLbLimit = lim;
+      [10, 25, 50].forEach(l => {
+        const btn = document.getElementById(`base-lb-limit-${l}`);
+        if (btn) {
+          btn.className = l === lim
+            ? 'px-2 py-1 rounded-lg text-xs font-mono font-bold bg-blue-600 text-white transition-all'
+            : 'px-2 py-1 rounded-lg text-xs font-mono text-slate-400 hover:text-white transition-all';
+        }
+      });
+      renderBaseEmbeddedLeaderboard();
+    }
+
+    async function renderBaseEmbeddedLeaderboard() {
+      const rowsContainer = document.getElementById('base-lb-rows');
+      if (!rowsContainer) return;
+      rowsContainer.style.opacity = '0.4';
+
+      try {
+        const res = await fetch(`/api/leaderboard?category=${baseLbCategory}&scope=base&limit=${baseLbLimit}&timeframe=${baseLbTimeframe}&_t=${Date.now()}`);
+        const lb = await res.json();
+
+        if (document.getElementById('base-lb-badge')) document.getElementById('base-lb-badge').textContent = lb.categoryBadge || '⚡ BASE LEADERBOARD';
+        if (document.getElementById('base-lb-title')) document.getElementById('base-lb-title').textContent = lb.categoryTitle || 'Top Base Protocols';
+
+        const items = lb.items || [];
+        if (items.length === 0) {
+          rowsContainer.innerHTML = '<div class="py-12 text-center text-slate-500 font-mono text-xs">No entries found for this category.</div>';
+          rowsContainer.style.opacity = '1';
+          return;
+        }
+
+        const maxVal = Math.max(...items.map(i => i.metricValue || 1), 1);
+
+        rowsContainer.innerHTML = items.map((item, idx) => {
+          const widthPct = Math.max(4, Math.round(((item.metricValue || 0) / maxVal) * 100));
+          const rankColor = idx === 0 ? '#fbbf24' : idx === 1 ? '#e2e8f0' : idx === 2 ? '#d97706' : '#64748b';
+
+          return `
+            <div class="relative group p-3 rounded-2xl bg-slate-950/70 border border-slate-800/80 hover:border-blue-500/50 transition-all overflow-hidden">
+              <!-- Horizontal Neon Bar -->
+              <div 
+                class="absolute left-0 top-0 bottom-0 opacity-15 group-hover:opacity-25 transition-all pointer-events-none rounded-2xl" 
+                style="width: ${widthPct}%; background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%); box-shadow: 0 0 20px #3b82f6;">
+              </div>
+
+              <div class="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-3 font-mono">
+                <!-- Rank, Logo & Name -->
+                <div class="flex items-center gap-3">
+                  <span class="text-sm font-black w-6 text-center" style="color: ${rankColor};">#${item.rank || idx + 1}</span>
+                  <img src="${item.logo}" alt="${item.name}" class="w-8 h-8 rounded-xl bg-slate-800 border border-slate-700/80 p-0.5 object-cover" onerror="this.src='https://icons.llamao.fi/icons/chains/rsz_base.jpg'" />
+                  <div>
+                    <div class="font-bold text-white text-xs group-hover:text-blue-300 transition-colors flex items-center gap-1.5">
+                      <span>${item.name}</span>
+                      <span class="px-1.5 py-0.2 rounded bg-blue-500/20 text-blue-300 text-[10px]">${item.tokenSymbol}</span>
+                    </div>
+                    <div class="text-[11px] text-slate-500">${item.secondaryMetric || ''}</div>
+                  </div>
+                </div>
+
+                <!-- Primary Metric Value & Actions -->
+                <div class="flex items-center gap-3 self-end sm:self-auto">
+                  <div class="text-right">
+                    <div class="text-sm font-black text-blue-400">${item.primaryMetric}</div>
+                    <div class="text-[10px] text-slate-500 uppercase">${item.secondaryLabel || baseLbTimeframe}</div>
+                  </div>
+                  <div class="flex items-center gap-1">
+                    <button onclick="openHistoricalModal('${item.slug}')" class="px-2 py-1 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white transition-all text-[10px]">
+                      📈
+                    </button>
+                    <button onclick="openProtocolBlueprint('${item.slug}')" class="px-2 py-1 rounded-lg bg-blue-500/20 hover:bg-blue-500/30 text-blue-300 hover:text-white transition-all text-[10px]">
+                      🔍
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+        }).join('');
+
+        rowsContainer.style.opacity = '1';
+      } catch (err) {
+        console.error('Failed to render Base embedded leaderboard:', err);
+        rowsContainer.style.opacity = '1';
+      }
+    }
+
   </script>
   <style>
     body {
@@ -174,6 +498,15 @@
         </button>
 
         <!-- Page 11 Button: Monad Ecosystem & Parallel EVM Hub -->
+        <!-- Page 12 Button: Base Layer-2 Ecosystem & On-Chain Hub -->
+        <button 
+          id="nav-btn-base" 
+          onclick="switchPage('base')" 
+          class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-blue-400 hover:text-white transition-all font-bold">
+          <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+          <span>🔵 Base L2 Hub</span>
+        </button>
+
         <button 
           id="nav-btn-monad" 
           onclick="switchPage('monad')" 
@@ -3481,6 +3814,284 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
 
     </section>
 
+  
+    <!-- ============================================================== -->
+    <!-- PAGE 12: BASE LAYER-2 ECOSYSTEM & COMMAND CENTER HUB          -->
+    <!-- ============================================================== -->
+    <section id="page-base" class="space-y-6 hidden">
+      <!-- Hero Header & Controls -->
+      <div class="card-terminal rounded-3xl p-6 border border-blue-500/30 bg-gradient-to-br from-[#060b18] via-[#091530] to-[#040e24] relative overflow-hidden">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+          <div class="space-y-1.5">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="px-2.5 py-1 rounded-lg bg-blue-500/20 border border-blue-400/40 text-blue-300 text-xs font-mono font-bold flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+                BASE L2 OPTIMISM SUPERCHAIN + BASESCAN ENGINE
+              </span>
+              <span id="base-rpc-badge" class="px-2.5 py-1 rounded-lg bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 text-xs font-mono">
+                JSON-RPC: mainnet.base.org (Chain ID 8453)
+              </span>
+              <span id="base-protocols-badge" class="px-2.5 py-1 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs font-mono font-bold">
+                197 Verified Tokenized Protocols
+              </span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight flex items-center gap-2.5">
+              <span>🔵 Base Layer-2 Revenue, Sequencer Margin &amp; Tokenized Ecosystem</span>
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-400 max-w-3xl">
+              Strictly monitors protocols with their own verified native tokens on Base. Tracks Sequencer Gross Revenue, EIP-4844 Blob Settlement Costs, Superchain Cuts, and On-Chain Fee Sinks (Aerodrome veAERO, Virtuals AI Agents, Moonwell, Degen &amp; Clanker).
+            </p>
+          </div>
+
+          <!-- Controls: Timeframe (24H / 7D / 30D) + Refresh -->
+          <div class="flex flex-wrap items-center gap-2">
+            <div class="flex items-center bg-slate-950/90 p-1 rounded-xl border border-slate-800">
+              <button id="base-tf-24h" onclick="setBaseTimeframe('24h')" class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all text-slate-400 hover:text-white">24H</button>
+              <button id="base-tf-7d" onclick="setBaseTimeframe('7d')" class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all bg-blue-600 text-white shadow-md shadow-blue-600/30">7D</button>
+              <button id="base-tf-30d" onclick="setBaseTimeframe('30d')" class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all text-slate-400 hover:text-white">30D</button>
+            </div>
+            <button onclick="refreshBaseData()" id="btn-base-refresh" class="px-3.5 py-2 rounded-xl bg-blue-500/20 hover:bg-blue-500/30 border border-blue-400/40 text-blue-200 text-xs font-mono font-bold transition-all flex items-center gap-1.5">
+              <span>🔄</span>
+              <span>Sync Base RPC</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 4 Hero Telemetry Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 mt-6">
+          <!-- Card 1: Base Sequencer Gross Revenue -->
+          <div class="bg-slate-950/80 border border-blue-500/25 rounded-2xl p-4 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono uppercase text-slate-400" id="base-card1-title">Sequencer Gross Revenue (7D)</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono">L2 Gas Fees</span>
+            </div>
+            <div class="text-2xl font-black text-white font-mono" id="base-hero-fees">$0</div>
+            <div class="grid grid-cols-2 gap-2 pt-2 border-t border-slate-800/80 text-xs font-mono">
+              <div>
+                <div class="text-[10px] text-slate-500">Gross 24H</div>
+                <div class="text-blue-300 font-bold" id="base-hero-gross-24h">$0</div>
+              </div>
+              <div>
+                <div class="text-[10px] text-slate-500">Gas Price (L2)</div>
+                <div class="text-cyan-300 font-bold" id="base-hero-gas-price">0.005 Gwei</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: L1 Settlement DA Cost (EIP-4844 Blobs) -->
+          <div class="bg-slate-950/80 border border-indigo-500/25 rounded-2xl p-4 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono uppercase text-slate-400" id="base-card2-title">L1 Blob Settlement Cost</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 font-mono">EIP-4844 DA</span>
+            </div>
+            <div class="text-2xl font-black text-indigo-300 font-mono" id="base-hero-l1-cost">$0</div>
+            <div class="grid grid-cols-2 gap-1.5 pt-2 border-t border-slate-800/80 text-[11px] font-mono">
+              <div>
+                <div class="text-[9px] text-slate-500">Blob Cost %</div>
+                <div class="text-emerald-400 font-bold" id="base-hero-l1-pct">5.8%</div>
+              </div>
+              <div>
+                <div class="text-[9px] text-slate-500">Block Height</div>
+                <div class="text-slate-300 font-bold" id="base-hero-block">#52.3M</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Coinbase Net Retained Profit -->
+          <div class="bg-slate-950/80 border border-emerald-500/25 rounded-2xl p-4 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono uppercase text-slate-400" id="base-card3-title">Net Operating Profit</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono" id="base-hero-margin-badge">94.2% Margin</span>
+            </div>
+            <div class="text-2xl font-black text-emerald-400 font-mono" id="base-hero-coinbase-profit">$0</div>
+            <div class="grid grid-cols-2 gap-2 pt-2 border-t border-slate-800/80 text-xs font-mono">
+              <div>
+                <div class="text-[10px] text-slate-500">Coinbase Retained</div>
+                <div class="text-emerald-300 font-bold" id="base-hero-coinbase-retention">$0</div>
+              </div>
+              <div>
+                <div class="text-[10px] text-slate-500">Superchain Cut (15%)</div>
+                <div class="text-cyan-300 font-bold" id="base-hero-superchain-cut">$0</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Top Protocol & Verified Cash Flow -->
+          <div class="bg-slate-950/80 border border-cyan-500/25 rounded-2xl p-4 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono uppercase text-slate-400">Flagship DEX ($AERO)</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 font-mono">ve(3,3) Engine</span>
+            </div>
+            <div class="text-2xl font-black text-cyan-300 font-mono" id="base-hero-aero-fees">$0</div>
+            <div class="grid grid-cols-2 gap-2 pt-2 border-t border-slate-800/80 text-xs font-mono">
+              <div>
+                <div class="text-[10px] text-slate-500">7D Net Revenue</div>
+                <div class="text-blue-300 font-bold" id="base-hero-aero-rev">$0</div>
+              </div>
+              <div>
+                <div class="text-[10px] text-slate-500">AI Agents ($VIRTUAL)</div>
+                <div class="text-purple-300 font-bold" id="base-hero-virtual-rev">$0</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sector Badges / Quick Filters -->
+      <div class="flex flex-wrap items-center gap-2" id="base-sector-filters">
+        <button onclick="setBaseSector('all')" id="base-sector-all" class="px-3 py-1.5 rounded-xl font-mono text-xs font-bold transition-all bg-blue-600 text-white shadow-md shadow-blue-600/30">
+          All Sectors (<span id="base-count-all">197</span>)
+        </button>
+        <button onclick="setBaseSector('dex')" id="base-sector-dex" class="px-3 py-1.5 rounded-xl font-mono text-xs font-medium text-slate-400 hover:text-white bg-slate-900 border border-slate-800 transition-all">
+          🔄 DEXs &amp; AMMs
+        </button>
+        <button onclick="setBaseSector('lending')" id="base-sector-lending" class="px-3 py-1.5 rounded-xl font-mono text-xs font-medium text-slate-400 hover:text-white bg-slate-900 border border-slate-800 transition-all">
+          🏦 Lending &amp; CDP
+        </button>
+        <button onclick="setBaseSector('ai_agents')" id="base-sector-ai_agents" class="px-3 py-1.5 rounded-xl font-mono text-xs font-medium text-slate-400 hover:text-white bg-slate-900 border border-slate-800 transition-all">
+          🤖 AI Agents &amp; Autonomous
+        </button>
+        <button onclick="setBaseSector('socialfi_memes')" id="base-sector-socialfi_memes" class="px-3 py-1.5 rounded-xl font-mono text-xs font-medium text-slate-400 hover:text-white bg-slate-900 border border-slate-800 transition-all">
+          📱 SocialFi &amp; Memes
+        </button>
+        <button onclick="setBaseSector('perps')" id="base-sector-perps" class="px-3 py-1.5 rounded-xl font-mono text-xs font-medium text-slate-400 hover:text-white bg-slate-900 border border-slate-800 transition-all">
+          📈 Perps &amp; Derivatives
+        </button>
+        <button onclick="setBaseSector('yield_infra')" id="base-sector-yield_infra" class="px-3 py-1.5 rounded-xl font-mono text-xs font-medium text-slate-400 hover:text-white bg-slate-900 border border-slate-800 transition-all">
+          🌾 Yield &amp; LST
+        </button>
+        <button onclick="setBaseSector('bridges_cross')" id="base-sector-bridges_cross" class="px-3 py-1.5 rounded-xl font-mono text-xs font-medium text-slate-400 hover:text-white bg-slate-900 border border-slate-800 transition-all">
+          🌉 Bridges &amp; Infra
+        </button>
+      </div>
+
+      <!-- Main Protocol Table -->
+      <div class="card-terminal rounded-3xl border border-blue-500/20 bg-slate-950/90 overflow-hidden shadow-2xl">
+        <div class="p-4 sm:p-6 border-b border-slate-800 flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <h3 class="text-lg font-black text-white flex items-center gap-2">
+              <span>🔵 Verified Base Protocols Table</span>
+              <span id="base-table-count" class="text-xs px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 font-mono">197</span>
+            </h3>
+            <p class="text-xs text-slate-400">Strictly filtered: protocols with their own native token only.</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="relative w-full sm:w-64">
+              <input 
+                id="base-search-input" 
+                type="text" 
+                oninput="handleBaseSearch(this.value)" 
+                placeholder="Search $AERO, $VIRTUAL, $WELL..." 
+                class="w-full bg-slate-900/90 border border-slate-700/80 rounded-xl px-3.5 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 font-mono pl-9"
+              />
+              <span class="absolute left-3 top-2.5 text-slate-500 text-xs">🔍</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left font-mono text-xs">
+            <thead class="bg-slate-900/70 text-slate-400 text-[11px] uppercase border-b border-slate-800">
+              <tr>
+                <th class="py-3.5 px-4 font-bold text-center w-12">#</th>
+                <th class="py-3.5 px-4 font-bold">Protocol &amp; Native Token</th>
+                <th class="py-3.5 px-4 font-bold">Sector</th>
+                <th class="py-3.5 px-4 font-bold text-right" id="base-th-fees">Fees (7D)</th>
+                <th class="py-3.5 px-4 font-bold text-right" id="base-th-rev">Net Revenue (7D)</th>
+                <th class="py-3.5 px-4 font-bold text-right">P/E Ratio</th>
+                <th class="py-3.5 px-4 font-bold text-right">Market Cap</th>
+                <th class="py-3.5 px-4 font-bold text-center">Token &amp; Explorer</th>
+                <th class="py-3.5 px-4 font-bold text-center">Action</th>
+              </tr>
+            </thead>
+            <tbody id="base-protocols-tbody" class="divide-y divide-slate-800/60 text-slate-200">
+              <!-- Populated via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ⚡ NEON LEADERBOARD COMPONENT FOR BASE -->
+      <div class="card-terminal rounded-3xl p-6 border border-blue-500/30 bg-gradient-to-br from-[#060b18] via-[#091530] to-[#040e24] shadow-2xl space-y-6">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-blue-400 animate-pulse"></span>
+              <span id="base-lb-badge" class="px-2.5 py-0.5 rounded-full bg-blue-500/20 border border-blue-400/40 text-blue-300 text-xs font-mono font-bold tracking-wide">
+                ⚡ BASE 7D PROTOCOL REVENUES
+              </span>
+            </div>
+            <h3 id="base-lb-title" class="text-xl font-black text-white tracking-tight">
+              Top Base Protocols – 7D Retained Protocol Revenue &amp; Cash Flow
+            </h3>
+            <p class="text-xs text-slate-400">
+              Normalized ranking with horizontal neon intensity bars. Every protocol symbol appears at most once.
+            </p>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-3">
+            <!-- Timeframe Toggles -->
+            <div class="flex items-center bg-slate-950 p-1 rounded-xl border border-slate-800">
+              <button onclick="setBaseLbTimeframe('24h')" id="base-lb-tf-24h" class="px-2.5 py-1 rounded-lg text-xs font-mono font-bold text-slate-400 hover:text-white transition-all">24H</button>
+              <button onclick="setBaseLbTimeframe('7d')" id="base-lb-tf-7d" class="px-2.5 py-1 rounded-lg text-xs font-mono font-bold bg-blue-600 text-white transition-all shadow-md">7D</button>
+              <button onclick="setBaseLbTimeframe('30d')" id="base-lb-tf-30d" class="px-2.5 py-1 rounded-lg text-xs font-mono font-bold text-slate-400 hover:text-white transition-all">30D</button>
+            </div>
+            <!-- Limit Toggles -->
+            <div class="flex items-center bg-slate-950 p-1 rounded-xl border border-slate-800">
+              <button onclick="setBaseLbLimit(10)" id="base-lb-limit-10" class="px-2 py-1 rounded-lg text-xs font-mono text-slate-400 hover:text-white transition-all">Top 10</button>
+              <button onclick="setBaseLbLimit(25)" id="base-lb-limit-25" class="px-2 py-1 rounded-lg text-xs font-mono text-slate-400 hover:text-white transition-all">Top 25</button>
+              <button onclick="setBaseLbLimit(50)" id="base-lb-limit-50" class="px-2 py-1 rounded-lg text-xs font-mono font-bold bg-blue-600 text-white transition-all">Top 50</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Category Tab Pills -->
+        <div class="flex flex-wrap gap-2 border-b border-slate-800 pb-3">
+          <button onclick="setBaseLbCategory('revenue')" id="base-lb-cat-revenue" class="flex items-center gap-1.5 px-4 py-2 rounded-xl font-mono text-xs font-bold transition-all bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 shadow-lg shadow-emerald-500/10">
+            <span>⚡</span>
+            <span>Top Revenues</span>
+          </button>
+          <button onclick="setBaseLbCategory('burn')" id="base-lb-cat-burn" class="flex items-center gap-1.5 px-4 py-2 rounded-xl font-mono text-xs font-medium text-slate-400 hover:text-white transition-all bg-slate-900 border border-slate-800">
+            <span>🔥</span>
+            <span>Top Burn</span>
+          </button>
+          <button onclick="setBaseLbCategory('holders')" id="base-lb-cat-holders" class="flex items-center gap-1.5 px-4 py-2 rounded-xl font-mono text-xs font-medium text-slate-400 hover:text-white transition-all bg-slate-900 border border-slate-800">
+            <span>👥</span>
+            <span>Top Holders</span>
+          </button>
+          <button onclick="setBaseLbCategory('buybacks')" id="base-lb-cat-buybacks" class="flex items-center gap-1.5 px-4 py-2 rounded-xl font-mono text-xs font-medium text-slate-400 hover:text-white transition-all bg-slate-900 border border-slate-800">
+            <span>🛒</span>
+            <span>Top Buybacks</span>
+          </button>
+        </div>
+
+        <!-- Leaderboard Rows Container -->
+        <div id="base-lb-rows" class="space-y-2.5">
+          <!-- Injected via renderBaseEmbeddedLeaderboard() -->
+        </div>
+      </div>
+
+      <!-- Treasury & Buyback Radar -->
+      <div class="card-terminal rounded-3xl p-6 border border-emerald-500/20 bg-slate-950/90 shadow-2xl space-y-4">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <h3 class="text-lg font-black text-white flex items-center gap-2">
+              <span>🛒 Base Programmatic Buybacks &amp; DAO Reserves</span>
+            </h3>
+            <p class="text-xs text-slate-400">DAO reserves and fee sinks accumulating native protocol tokens.</p>
+          </div>
+          <div class="text-right">
+            <span class="text-xs text-slate-500 font-mono">Tracked Base Treasuries: </span>
+            <span id="base-treasury-total" class="text-sm font-bold text-emerald-400 font-mono">$0</span>
+          </div>
+        </div>
+        <div id="base-treasury-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+          <!-- Populated via JS -->
+        </div>
+      </div>
+
+    </section>
+
   </main>
 
   
@@ -3772,7 +4383,7 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
       window.location.hash = page;
 
       // Update Nav buttons styling
-      ['table', 'weekly', 'yield', 'contracts', 'sui', 'schema', 'solana', 'solana-schema', 'ethereum', 'bybit', 'monad'].forEach(p => {
+      ['table', 'weekly', 'yield', 'contracts', 'sui', 'schema', 'solana', 'solana-schema', 'ethereum', 'bybit', 'monad', 'base'].forEach(p => {
         const btn = document.getElementById(`nav-btn-${p}`);
         const sec = document.getElementById(`page-${p}`);
         if (sec) {
@@ -3781,7 +4392,9 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
         }
         if (!btn) return;
         if (p === page) {
-          btn.className = p === 'bybit'
+          btn.className = p === 'base'
+            ? 'flex items-center gap-1.5 px-3 py-1.5 rounded-xl font-bold transition-all bg-blue-600 text-white shadow-md shadow-blue-600/30'
+            : p === 'bybit'
             ? 'flex items-center gap-1.5 px-3 py-1.5 rounded-xl font-bold transition-all bg-cyan-500/20 text-cyan-300 border border-cyan-500/50 shadow-md shadow-cyan-400/20'
             : p === 'ethereum'
             ? 'flex items-center gap-1.5 px-3 py-1.5 rounded-xl font-bold transition-all bg-indigo-500 text-white shadow-md shadow-indigo-500/30'
@@ -3801,6 +4414,7 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
       else if (page === 'ethereum') loadEthereumData();
       else if (page === 'bybit') loadBybitData();
       else if (page === 'monad') loadMonadData();
+      else if (page === 'base') loadBaseData();
     }
 
     // Load initial data

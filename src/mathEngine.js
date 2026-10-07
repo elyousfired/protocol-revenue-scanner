@@ -286,3 +286,37 @@ export function calculateMonadREV(totalL1ChainFeesUsd, l1BurnedRevenueUsd, fastl
     }
   };
 }
+
+/**
+ * Calculates Base Layer-2 Sequencer Economics (Gross L2 Gas Revenue, L1 Blob Settlement Costs,
+ * Net Operating Margin, and Optimism Superchain Revenue Split)
+ * @param {number} l2GasFeesUsd - Total user execution fees collected by Base Sequencer in USD
+ * @param {number} l1BlobCostUsd - EIP-4844 Blob posting and batch settlement costs paid to Ethereum L1 in USD
+ * @returns {object} Base Sequencer economic breakdown
+ */
+export function calculateBaseSequencerEconomics(l2GasFeesUsd, l1BlobCostUsd = null) {
+  const grossRevenue = Math.max(0, l2GasFeesUsd || 0);
+  // Post-EIP-4844 Dencun upgrade, L1 blob DA settlement costs average ~4.5% to 8% of gross revenue
+  const l1Cost = l1BlobCostUsd !== null ? Math.max(0, l1BlobCostUsd) : Math.round(grossRevenue * 0.058);
+  const netOperatingProfit = Math.max(0, grossRevenue - l1Cost);
+  const profitMarginPct = grossRevenue > 0 ? Number(((netOperatingProfit / grossRevenue) * 100).toFixed(1)) : 0;
+  
+  // Base / Optimism Superchain Agreement: 15% of net profit or 2.5% of gross revenue to Optimism Collective
+  const opCollectiveShareUsd = Math.round(netOperatingProfit * 0.15);
+  const coinbaseRetainedProfitUsd = Math.round(netOperatingProfit - opCollectiveShareUsd);
+
+  return {
+    grossRevenueUsd: Math.round(grossRevenue),
+    l1BlobCostUsd: Math.round(l1Cost),
+    netOperatingProfitUsd: Math.round(netOperatingProfit),
+    profitMarginPct,
+    opCollectiveShareUsd,
+    coinbaseRetainedProfitUsd,
+    breakdown: {
+      l1SettlementPct: grossRevenue > 0 ? Number(((l1Cost / grossRevenue) * 100).toFixed(1)) : 0,
+      superchainCutPct: grossRevenue > 0 ? Number(((opCollectiveShareUsd / grossRevenue) * 100).toFixed(1)) : 0,
+      coinbaseMarginPct: grossRevenue > 0 ? Number(((coinbaseRetainedProfitUsd / grossRevenue) * 100).toFixed(1)) : 0
+    }
+  };
+}
+

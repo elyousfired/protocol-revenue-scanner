@@ -9,6 +9,7 @@ import { getSuiEcosystem } from './suiWatcher.js';
 import { getSolanaEcosystem } from './solanaWatcher.js';
 import { getEthereumEcosystem } from './ethereumWatcher.js';
 import { getMonadEcosystem } from './monadWatcher.js';
+import { getBaseEcosystem } from './baseWatcher.js';
 import { getProtocolHistorical, getMacroEcosystemHistorical } from './historicalEngine.js';
 import { getLeaderboard } from './leaderboardEngine.js';
 import { getBybitSpotEcosystem } from './bybitWatcher.js';
@@ -538,6 +539,80 @@ export async function handleRequest(req, res) {
       const monadData = await getMonadEcosystem(true);
       res.writeHead(200, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify({ success: true, message: 'Monad telemetry refreshed', data: monadData }));
+      return;
+    }
+
+    // -------------------------------------------------------------
+    // API 2i: Base Layer-2 Dedicated Ecosystem & On-Chain Hub
+    // -------------------------------------------------------------
+    if (pathname === '/api/base' && req.method === 'GET') {
+      const forceRefresh = reqUrl.searchParams.get('refresh') === 'true';
+      const timeframe = (reqUrl.searchParams.get('timeframe') || '7d').toLowerCase();
+      const validTf = ['24h', '7d', '30d'].includes(timeframe) ? timeframe : '7d';
+      const sectorFilter = reqUrl.searchParams.get('sector');
+      const search = (reqUrl.searchParams.get('search') || '').toLowerCase().trim();
+
+      const baseData = await getBaseEcosystem(forceRefresh);
+
+      let activeProtocols = (baseData.protocols || []).map(p => {
+        const tfData = p.timeframeData?.[validTf] || p.timeframeData?.['7d'] || {};
+        return {
+          ...p,
+          activeTimeframe: validTf,
+          activeFees: tfData.fees ?? p.fees7d ?? 0,
+          activeRevenue: tfData.revenue ?? p.revenue7d ?? 0,
+          activeArr: tfData.runRate ?? 0,
+          activeYield: tfData.yieldPct ?? 0,
+          activePeRatio: tfData.peRatio ?? null,
+          activePsRatio: tfData.psRatio ?? null
+        };
+      });
+
+      if (sectorFilter && sectorFilter !== 'all') {
+        activeProtocols = activeProtocols.filter(p => p.sectorId === sectorFilter);
+      }
+      if (search) {
+        activeProtocols = activeProtocols.filter(p =>
+          p.name.toLowerCase().includes(search) ||
+          (p.tokenSymbol && p.tokenSymbol.toLowerCase().includes(search)) ||
+          (p.sectorLabel && p.sectorLabel.toLowerCase().includes(search)) ||
+          (p.contractAddress && p.contractAddress.toLowerCase().includes(search))
+        );
+      }
+
+      activeProtocols.sort((a, b) => (b.activeRevenue || 0) - (a.activeRevenue || 0) || (b.activeFees || 0) - (a.activeFees || 0));
+
+      const activeSequencerEconomics = baseData.l2Chain?.sequencerEconomics?.[validTf] || baseData.l2Chain?.sequencerEconomics?.['7d'];
+
+      const responsePayload = {
+        success: true,
+        lastUpdated: baseData.lastUpdated,
+        timeframe: validTf,
+        totalProtocolsCount: (baseData.protocols || []).length,
+        filteredCount: activeProtocols.length,
+        l2Chain: {
+          ...baseData.l2Chain,
+          activeSequencerEconomics
+        },
+        sectors: baseData.sectors || [],
+        protocols: activeProtocols,
+        whaleAnalytics: baseData.whaleAnalytics || [],
+        burnEngines: baseData.burnEngines || [],
+        treasuryRadar: baseData.treasuryRadar || {}
+      };
+
+      res.writeHead(200, {
+        'Content-Type': 'application/json',
+        'Cache-Control': 'no-cache, no-store, must-revalidate'
+      });
+      res.end(JSON.stringify(responsePayload));
+      return;
+    }
+
+    if (pathname === '/api/base/refresh' && req.method === 'POST') {
+      const baseData = await getBaseEcosystem(true);
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ success: true, message: 'Base telemetry refreshed', data: baseData }));
       return;
     }
 
