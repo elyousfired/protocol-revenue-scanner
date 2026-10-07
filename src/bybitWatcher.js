@@ -110,7 +110,7 @@ export const BYBIT_CATEGORIES = {
 // Curated token-to-category mapping for Bybit Spot assets
 const TOKEN_CATEGORY_MAP = {
   // Layer 1
-  BTC: 'l1', ETH: 'l1', SOL: 'l1', SUI: 'l1', XRP: 'rwa', ADAVAX: 'l1',
+  BTC: 'l1', ETH: 'l1', SOL: 'l1', SUI: 'l1', HYPE: 'l1', XRP: 'rwa', ADAVAX: 'l1',
   TON: 'l1', DOT: 'l1', TRX: 'l1', APT: 'l1', SEI: 'l1', INJ: 'l1', TIA: 'l1',
   ATOM: 'l1', KAALGO: 'rwa', FTM: 'l1', SONIC: 'l1', BERA: 'l1',
   MON: 'l1', KAVEGLD: 'l1', MINFLOW: 'l1', XTZ: 'l1', EOS: 'l1',
@@ -141,6 +141,7 @@ const TOKEN_CATEGORY_MAP = {
   MEMEFI: 'memes', X: 'memes', PONK: 'memes', PUFF: 'memes',
   ORDI: 'memes', SATS: 'memes', RATS: 'memes', BILL: 'memes', BASED: 'memes',
   DOOD: 'memes', BIRB: 'memes', PYBOBO: 'memes', FIGHT: 'memes', FOGO: 'memes',
+  PURR: 'memes', HFUN: 'memes', JEFF: 'memes', POINTS: 'memes',
 
   // AI & Agents
   TAO: 'ai', FET: 'ai', NEAR: 'ai', ICP: 'ai', VIRTUAL: 'ai', AI16Z: 'ai',
@@ -185,7 +186,7 @@ const TOKEN_CATEGORY_MAP = {
   RPL: 'defi', FXS: 'defi', BAL: 'defi', YFI: 'defi', ZRX: 'defi',
   UMA: 'defi', LQTY: 'defi', SPELL: 'defi', JOE: 'defi', AERO: 'defi',
   THE: 'defi', COW: 'defi', KERNEL: 'defi', ORDER: 'defi', APEX: 'defi',
-  HYPE: 'defi', OSMO: 'defi', RUNE: 'defi', KNC: 'defi', PERP: 'defi',
+  HLP: 'defi', OSMO: 'defi', RUNE: 'defi', KNC: 'defi', PERP: 'defi',
   DODO: 'defi', MAV: 'defi', HFT: 'defi', QUICK: 'defi', RDNT: 'defi',
   VENUS: 'defi', XVS: 'defi', ALPACA: 'defi', BEL: 'defi', ALPHA: 'defi',
   STG: 'defi', SYN: 'defi', ACX: 'defi', FLUID: 'defi', EUL: 'defi',
@@ -235,7 +236,8 @@ const TOKEN_CATEGORY_MAP = {
   ARK: 'infra', RAD: 'infra', GTC: 'infra', C98: 'infra', TWT: 'infra',
   SFP: 'infra', BAT: 'infra', CVC: 'infra', CELR: 'infra', DBR: 'infra',
   RED: 'infra', LAVA: 'infra', SQD: 'infra', WCT: 'infra', TOWNS: 'infra',
-  FORT: 'infra', GPS: 'infra', NS: 'infra', FIDA: 'infra', G: 'infra'
+  FORT: 'infra', GPS: 'infra', NS: 'infra', FIDA: 'infra', G: 'infra',
+  HYPER: 'infra'
 };
 
 // Curated native and primary blockchains for tokens traded on Bybit Spot
@@ -248,7 +250,13 @@ export const KNOWN_TOKEN_BLOCKCHAINS = {
   MON: ['Monad'],
   XRP: ['XRP Ledger'],
   NEAR: ['NEAR Protocol'],
-  HYPE: ['Hyperliquid L1'],
+  HYPE: ['Hyperliquid L1', 'HyperEVM'],
+  HYPER: ['Hyperliquid L1', 'HyperEVM', 'Ethereum'],
+  PURR: ['Hyperliquid L1', 'HyperEVM'],
+  HLP: ['Hyperliquid L1'],
+  HFUN: ['Hyperliquid L1'],
+  JEFF: ['Hyperliquid L1'],
+  POINTS: ['Hyperliquid L1'],
   AVAX: ['Avalanche'],
   DOGE: ['Dogecoin'],
   TON: ['TON Network'],
@@ -855,11 +863,34 @@ export const SPECIAL_TOKEN_METRICS = {
     chains: ['Fantom']
   },
   HYPE: {
-    name: 'Hyperliquid L1',
+    name: 'Hyperliquid L1 & HyperEVM',
     slug: 'hyperliquid',
     isChain: true,
     chainKey: 'Hyperliquid',
-    revSlug: 'hyperliquid',
+    tvlFallback: 7077428990,
+    revFallback7d: 1580000,
+    revFallback24h: 225714,
+    chains: ['Hyperliquid L1', 'HyperEVM']
+  },
+  HYPER: {
+    name: 'Hyperlane (Hyperliquid Canonical Bridge)',
+    slug: 'hyperlane',
+    tvlFallback: 79627856,
+    revFallback7d: 3947,
+    chains: ['Hyperliquid L1', 'HyperEVM', 'Ethereum']
+  },
+  PURR: {
+    name: 'Purr (Hyperliquid Genesis HIP-1)',
+    slug: 'purr',
+    tvlFallback: 3858015,
+    revFallback7d: 18004,
+    chains: ['Hyperliquid L1', 'HyperEVM']
+  },
+  HLP: {
+    name: 'Hyperliquid HLP Vault',
+    slug: 'hyperliquid-hlp',
+    tvlFallback: 184013154,
+    revFallback7d: 869000,
     chains: ['Hyperliquid L1']
   }
 };
@@ -976,10 +1007,14 @@ function resolveLlamaMetrics(baseSymbol, llamaIndex) {
       const tp = protMap.get(spec.tvlProtocol.toLowerCase());
       if (tp && tp.tvl) tvl = tp.tvl;
     }
+    if (spec.revFallback7d) {
+      rev7d = spec.revFallback7d;
+      rev24h = spec.revFallback24h || (rev7d / 7);
+    }
     if (spec.revSlug) {
       const r = revMap.get(spec.revSlug.toLowerCase());
-      if (r) {
-        rev7d = r.total7d || 0;
+      if (r && (r.total7d || 0) > rev7d) {
+        rev7d = r.total7d;
         rev24h = r.total24h || 0;
       }
     }
@@ -1197,6 +1232,9 @@ export async function getBybitSpotEcosystem(force = false) {
       if (baseSymbol === 'ETH' || baseSymbol === 'WETH') protChains.push('ethereum');
       if (baseSymbol === 'MON' || baseSymbol === 'WMON') protChains.push('monad');
       if (baseSymbol === 'AERO' || baseSymbol === 'BRETT' || baseSymbol === 'VIRTUAL' || baseSymbol === 'DEGEN' || baseSymbol === 'WELL') protChains.push('base');
+      if (baseSymbol === 'HYPE') protChains.push('hyperliquid l1', 'hyperevm');
+      if (baseSymbol === 'HYPER') protChains.push('hyperliquid l1', 'hyperevm');
+      if (baseSymbol === 'PURR') protChains.push('hyperliquid l1', 'hyperevm');
       if (matchedProtocol._injectedChain) protChains.push(matchedProtocol._injectedChain);
       onChainChains = protChains.filter(c => c && c.length > 0);
     }
@@ -1213,7 +1251,7 @@ export async function getBybitSpotEcosystem(force = false) {
 
     // Deduplicate and clean up capitalization
     const knownList = KNOWN_TOKEN_BLOCKCHAINS[baseSymbol] || [];
-    const normalizedChains = [];
+    let normalizedChains = [];
     for (const rawC of onChainChains) {
       const c = String(rawC).trim();
       if (!c) continue;
@@ -1222,6 +1260,9 @@ export async function getBybitSpotEcosystem(force = false) {
       if (!normalizedChains.includes(finalC)) {
         normalizedChains.push(finalC);
       }
+    }
+    if (normalizedChains.includes('Hyperliquid L1')) {
+      normalizedChains = normalizedChains.filter(c => c !== 'Hyperliquid');
     }
 
     totalSpotVolume24hUsd += volume24hUsd;

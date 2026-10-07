@@ -1,17 +1,22 @@
 {
   "success": true,
-  "lastUpdated": "2026-10-07T19:58:51.494Z",
+  "lastUpdated": "2026-10-07T20:15:03.017Z",
   "l1Chain": {
     "name": "Hyperliquid L1 & HyperEVM",
     "symbol": "HYPE",
+    "tokenSymbol": "HYPE",
+    "chains": [
+      "Hyperliquid L1",
+      "HyperEVM"
+    ],
     "tvl": 7077428990,
-    "perpVolume24h": 6717822980,
-    "spotVolume24h": 171177478,
-    "totalVolume24h": 6889000458,
-    "openInterestUsd": 12765850656,
+    "perpVolume24h": 6748660622,
+    "spotVolume24h": 174291309,
+    "totalVolume24h": 6922951932,
+    "openInterestUsd": 12815268683,
     "hlpTvl": 184013154,
-    "hlpAprPct": 4.03,
-    "blockNumber": 47932292,
+    "hlpAprPct": 4.02,
+    "blockNumber": 47933284,
     "chainId": 999,
     "consensusEngine": "HyperBFT Tendermint",
     "tpsCapacity": "200,000 TPS",
@@ -25,10 +30,10 @@
   "summary": {
     "totalProtocolsCount": 56,
     "platformTvl": 7077428990,
-    "perpVolume24h": 6717822980,
-    "spotVolume24h": 171177478,
-    "openInterestUsd": 12765850656,
-    "hlpAprPct": 4.03,
+    "perpVolume24h": 6748660622,
+    "spotVolume24h": 174291309,
+    "openInterestUsd": 12815268683,
+    "hlpAprPct": 4.02,
     "platformRevenue7d": 1580000,
     "platformFees7d": 3476000
   },
@@ -54,7 +59,7 @@
       "label": "🔄 HyperEVM DEX & AMM Hubs",
       "badge": "DEX / AMM",
       "count": 22,
-      "totalTvl": 1494390295,
+      "totalTvl": 1494201023,
       "totalRevenue7d": 919710
     },
     "yield": {
@@ -70,15 +75,15 @@
       "label": "🌉 Cross-Chain, Oracles & Data",
       "badge": "INFRA / BRIDGES",
       "count": 5,
-      "totalTvl": 11776285024,
-      "totalRevenue7d": 7064951
+      "totalTvl": 11776188666,
+      "totalRevenue7d": 7064948
     },
     "lending": {
       "id": "lending",
       "label": "🏦 Money Markets & CDP",
       "badge": "LENDING / MONEY",
       "count": 5,
-      "totalTvl": 11541978176,
+      "totalTvl": 11541977959,
       "totalRevenue7d": 6750061
     },
     "hip1": {
@@ -86,8 +91,8 @@
       "label": "🐱 Native HIP-1 Spot Orderbooks",
       "badge": "HIP-1 SPOT",
       "count": 1,
-      "totalTvl": 3858015,
-      "totalRevenue7d": 18004
+      "totalTvl": 3873267,
+      "totalRevenue7d": 18075
     }
   },
   "protocols": [
@@ -198,17 +203,17 @@
       "sector": "dex",
       "sectorLabel": "🔄 HyperEVM DEX & AMM Hubs",
       "sectorBadge": "DEX / AMM",
-      "tvl": 1259530280,
-      "mcap": 1511436336,
-      "fees24h": 23076,
+      "tvl": 1258093003,
+      "mcap": 1509711604,
+      "fees24h": 25495,
       "fees7d": 405272,
       "fees30d": 1702142,
-      "revenue24h": 12820,
+      "revenue24h": 14164,
       "revenue7d": 225151,
       "revenue30d": 945634,
       "runRate": 11739373.14,
-      "peRatio": 128.7,
-      "psRatio": 71.5,
+      "peRatio": 128.6,
+      "psRatio": 71.4,
       "yieldPct": {
         "periodYield": 0.01,
         "apy": 0.8
@@ -232,10 +237,10 @@
       "sectorBadge": "YIELD / VAULTS",
       "tvl": 1256134775,
       "mcap": 1507361730,
-      "fees24h": 14155,
+      "fees24h": 13959,
       "fees7d": 174542,
       "fees30d": 733076,
-      "revenue24h": 7864,
+      "revenue24h": 7755,
       "revenue7d": 96968,
       "revenue30d": 407266,
       "runRate": 5055911.5200000005,
@@ -264,10 +269,10 @@
       "sectorBadge": "CORE L1",
       "tvl": 977362384,
       "mcap": 1172834861,
-      "fees24h": 10195,
+      "fees24h": 10201,
       "fees7d": 88234,
       "fees30d": 370583,
-      "revenue24h": 5664,
+      "revenue24h": 5667,
       "revenue7d": 49019,
       "revenue30d": 205880,
       "runRate": 2555850.66,
@@ -296,10 +301,10 @@
       "sectorBadge": "CORE L1",
       "tvl": 378668072,
       "mcap": 454401686,
-      "fees24h": 3299,
+      "fees24h": 3278,
       "fees7d": 28220,
       "fees30d": 118524,
-      "revenue24h": 1833,
+      "revenue24h": 1821,
       "revenue7d": 15678,
       "revenue30d": 65848,
       "runRate": 817450.92,
@@ -328,10 +333,10 @@
       "sectorBadge": "LENDING / MONEY",
       "tvl": 321886065,
       "mcap": 386263278,
-      "fees24h": 4585,
+      "fees24h": 4586,
       "fees7d": 32096,
       "fees30d": 134803,
-      "revenue24h": 2547,
+      "revenue24h": 2548,
       "revenue7d": 17831,
       "revenue30d": 74890,
       "runRate": 929708.34,
@@ -370,8 +375,8 @@
       "peRatio": 4.1,
       "psRatio": 1,
       "yieldPct": {
-        "periodYield": 0.0775,
-        "apy": 4.03
+        "periodYield": 0.0773076923076923,
+        "apy": 4.02
       },
       "takeRate": 100,
       "onChainChains": [
@@ -422,7 +427,7 @@
       "sectorLabel": "🌾 Automated Yield & Vaults",
       "sectorBadge": "YIELD / VAULTS",
       "tvl": 114101746,
-      "mcap": 5420276,
+      "mcap": 5426582,
       "fees24h": 3028,
       "fees7d": 37737,
       "fees30d": 158495,
@@ -434,7 +439,7 @@
       "psRatio": 2.8,
       "yieldPct": {
         "periodYield": 0.39,
-        "apy": 20.2
+        "apy": 20.1
       },
       "takeRate": 56,
       "onChainChains": [
@@ -486,7 +491,7 @@
       "sectorLabel": "⚡ Core L1 & CLOB Engine",
       "sectorBadge": "CORE L1",
       "tvl": 79627856,
-      "mcap": 22626899,
+      "mcap": 22569044,
       "fees24h": 952,
       "fees7d": 7105,
       "fees30d": 29841,
@@ -494,8 +499,8 @@
       "revenue7d": 3947,
       "revenue30d": 16577,
       "runRate": 205796.58000000002,
-      "peRatio": 109.9,
-      "psRatio": 61.1,
+      "peRatio": 109.7,
+      "psRatio": 60.9,
       "yieldPct": {
         "periodYield": 0.02,
         "apy": 0.9
@@ -517,19 +522,19 @@
       "sector": "infra",
       "sectorLabel": "🌉 Cross-Chain, Oracles & Data",
       "sectorBadge": "INFRA / BRIDGES",
-      "tvl": 70781825,
+      "tvl": 70776164,
       "mcap": 667221,
       "fees24h": 10921,
-      "fees7d": 76444,
-      "fees30d": 321065,
+      "fees7d": 76439,
+      "fees30d": 321044,
       "revenue24h": 6067,
-      "revenue7d": 42469,
-      "revenue30d": 178370,
-      "runRate": 2214333.66,
+      "revenue7d": 42466,
+      "revenue30d": 178357,
+      "runRate": 2214177.24,
       "peRatio": 0.3,
       "psRatio": 0.2,
       "yieldPct": {
-        "periodYield": 6.37,
+        "periodYield": 6.36,
         "apy": 331.9
       },
       "takeRate": 56,
@@ -551,10 +556,10 @@
       "sectorBadge": "YIELD / VAULTS",
       "tvl": 51874521,
       "mcap": 62249425,
-      "fees24h": 482,
+      "fees24h": 481,
       "fees7d": 3478,
       "fees30d": 14608,
-      "revenue24h": 268,
+      "revenue24h": 267,
       "revenue7d": 1932,
       "revenue30d": 8114,
       "runRate": 100734.48,
@@ -646,7 +651,7 @@
       "sectorLabel": "🌉 Cross-Chain, Oracles & Data",
       "sectorBadge": "INFRA / BRIDGES",
       "tvl": 26724640,
-      "mcap": 1914973,
+      "mcap": 1882461,
       "fees24h": 4,
       "fees7d": 31,
       "fees30d": 130,
@@ -654,8 +659,8 @@
       "revenue7d": 17,
       "revenue30d": 71,
       "runRate": 886.38,
-      "peRatio": 2160.4,
-      "psRatio": 1184.8,
+      "peRatio": 2123.8,
+      "psRatio": 1164.6,
       "yieldPct": {
         "periodYield": 0,
         "apy": 0
@@ -677,8 +682,8 @@
       "sector": "dex",
       "sectorLabel": "🔄 HyperEVM DEX & AMM Hubs",
       "sectorBadge": "DEX / AMM",
-      "tvl": 25344689,
-      "mcap": 30413627,
+      "tvl": 25362436,
+      "mcap": 30434923,
       "fees24h": 536,
       "fees7d": 2736,
       "fees30d": 11491,
@@ -686,8 +691,8 @@
       "revenue7d": 1520,
       "revenue30d": 6384,
       "runRate": 79252.8,
-      "peRatio": 383.8,
-      "psRatio": 213.2,
+      "peRatio": 384,
+      "psRatio": 213.3,
       "yieldPct": {
         "periodYield": 0,
         "apy": 0.3
@@ -709,8 +714,8 @@
       "sector": "dex",
       "sectorLabel": "🔄 HyperEVM DEX & AMM Hubs",
       "sectorBadge": "DEX / AMM",
-      "tvl": 23846818,
-      "mcap": 28616182,
+      "tvl": 24930295,
+      "mcap": 29916354,
       "fees24h": 27047,
       "fees7d": 302324,
       "fees30d": 1269761,
@@ -718,11 +723,11 @@
       "revenue7d": 167958,
       "revenue30d": 705424,
       "runRate": 8757330.12,
-      "peRatio": 3.3,
-      "psRatio": 1.8,
+      "peRatio": 3.4,
+      "psRatio": 1.9,
       "yieldPct": {
-        "periodYield": 0.59,
-        "apy": 30.6
+        "periodYield": 0.56,
+        "apy": 29.3
       },
       "takeRate": 56,
       "onChainChains": [
@@ -741,17 +746,17 @@
       "sector": "dex",
       "sectorLabel": "🔄 HyperEVM DEX & AMM Hubs",
       "sectorBadge": "DEX / AMM",
-      "tvl": 21220497,
-      "mcap": 25464596,
-      "fees24h": 443,
+      "tvl": 21267200,
+      "mcap": 25520640,
+      "fees24h": 455,
       "fees7d": 3926,
       "fees30d": 16489,
-      "revenue24h": 246,
+      "revenue24h": 253,
       "revenue7d": 2181,
       "revenue30d": 9160,
       "runRate": 113717.34,
-      "peRatio": 223.9,
-      "psRatio": 124.4,
+      "peRatio": 224.4,
+      "psRatio": 124.7,
       "yieldPct": {
         "periodYield": 0.01,
         "apy": 0.4
@@ -775,10 +780,10 @@
       "sectorBadge": "YIELD / VAULTS",
       "tvl": 15604745,
       "mcap": 18725694,
-      "fees24h": 259,
+      "fees24h": 72,
       "fees7d": 4738,
       "fees30d": 19900,
-      "revenue24h": 144,
+      "revenue24h": 40,
       "revenue7d": 2632,
       "revenue30d": 11054,
       "runRate": 137232.48,
@@ -806,7 +811,7 @@
       "sectorLabel": "🌾 Automated Yield & Vaults",
       "sectorBadge": "YIELD / VAULTS",
       "tvl": 13024635,
-      "mcap": 13289071,
+      "mcap": 13307405,
       "fees24h": 2009,
       "fees7d": 14067,
       "fees30d": 59081,
@@ -814,7 +819,7 @@
       "revenue7d": 7815,
       "revenue30d": 32823,
       "runRate": 407474.1,
-      "peRatio": 32.6,
+      "peRatio": 32.7,
       "psRatio": 18.1,
       "yieldPct": {
         "periodYield": 0.06,
@@ -837,8 +842,8 @@
       "sector": "dex",
       "sectorLabel": "🔄 HyperEVM DEX & AMM Hubs",
       "sectorBadge": "DEX / AMM",
-      "tvl": 12447261,
-      "mcap": 14936713,
+      "tvl": 12552644,
+      "mcap": 15063173,
       "fees24h": 20673,
       "fees7d": 141566,
       "fees30d": 594577,
@@ -846,11 +851,11 @@
       "revenue7d": 78648,
       "revenue30d": 330322,
       "runRate": 4100706.72,
-      "peRatio": 3.6,
+      "peRatio": 3.7,
       "psRatio": 2,
       "yieldPct": {
-        "periodYield": 0.53,
-        "apy": 27.5
+        "periodYield": 0.52,
+        "apy": 27.2
       },
       "takeRate": 56,
       "onChainChains": [
@@ -902,7 +907,7 @@
       "sectorLabel": "⚡ Core L1 & CLOB Engine",
       "sectorBadge": "CORE L1",
       "tvl": 7794332,
-      "mcap": 7794854,
+      "mcap": 7841360,
       "fees24h": 506,
       "fees7d": 572,
       "fees30d": 2402,
@@ -910,8 +915,8 @@
       "revenue7d": 318,
       "revenue30d": 1336,
       "runRate": 16580.52,
-      "peRatio": 470.1,
-      "psRatio": 261.4,
+      "peRatio": 472.9,
+      "psRatio": 262.9,
       "yieldPct": {
         "periodYield": 0,
         "apy": 0.2
@@ -934,7 +939,7 @@
       "sectorLabel": "📈 Perpetual DEX & Options",
       "sectorBadge": "PERPS / DERIVS",
       "tvl": 7768293,
-      "mcap": 2551781,
+      "mcap": 2551971,
       "fees24h": 1199,
       "fees7d": 8390,
       "fees30d": 35238,
@@ -965,12 +970,12 @@
       "sector": "infra",
       "sectorLabel": "🌉 Cross-Chain, Oracles & Data",
       "sectorBadge": "INFRA / BRIDGES",
-      "tvl": 6892926,
-      "mcap": 1635071,
-      "fees24h": 4347,
+      "tvl": 6802229,
+      "mcap": 1641768,
+      "fees24h": 4286,
       "fees7d": 34799,
       "fees30d": 146156,
-      "revenue24h": 2415,
+      "revenue24h": 2381,
       "revenue7d": 19333,
       "revenue30d": 81199,
       "runRate": 1008022.62,
@@ -978,7 +983,7 @@
       "psRatio": 0.9,
       "yieldPct": {
         "periodYield": 1.18,
-        "apy": 61.7
+        "apy": 61.4
       },
       "takeRate": 56,
       "onChainChains": [
@@ -998,16 +1003,16 @@
       "sectorLabel": "🌾 Automated Yield & Vaults",
       "sectorBadge": "YIELD / VAULTS",
       "tvl": 5809689,
-      "mcap": 3301523,
-      "fees24h": 2,
+      "mcap": 3306078,
+      "fees24h": 56,
       "fees7d": 43,
       "fees30d": 181,
-      "revenue24h": 1,
+      "revenue24h": 31,
       "revenue7d": 24,
       "revenue30d": 101,
       "runRate": 1251.3600000000001,
-      "peRatio": 2638.3,
-      "psRatio": 1472.6,
+      "peRatio": 2642,
+      "psRatio": 1474.6,
       "yieldPct": {
         "periodYield": 0,
         "apy": 0
@@ -1029,17 +1034,17 @@
       "sector": "hip1",
       "sectorLabel": "🐱 Native HIP-1 Spot Orderbooks",
       "sectorBadge": "HIP-1 SPOT",
-      "tvl": 3858015,
+      "tvl": 3873267,
       "mcap": 128000000,
-      "fees24h": 2572,
-      "fees7d": 18004,
-      "fees30d": 75616.8,
-      "revenue24h": 2572,
-      "revenue7d": 18004,
-      "revenue30d": 75616.8,
-      "runRate": 938728.56,
-      "peRatio": 136.4,
-      "psRatio": 136.4,
+      "fees24h": 2582,
+      "fees7d": 18075,
+      "fees30d": 75915,
+      "revenue24h": 2582,
+      "revenue7d": 18075,
+      "revenue30d": 75915,
+      "runRate": 942430.5,
+      "peRatio": 135.8,
+      "psRatio": 135.8,
       "yieldPct": {
         "periodYield": 0.01,
         "apy": 0.7
@@ -1092,8 +1097,8 @@
       "sector": "dex",
       "sectorLabel": "🔄 HyperEVM DEX & AMM Hubs",
       "sectorBadge": "DEX / AMM",
-      "tvl": 2194453,
-      "mcap": 2633344,
+      "tvl": 2190768,
+      "mcap": 2628922,
       "fees24h": 1372,
       "fees7d": 10075,
       "fees30d": 42315,
@@ -1125,7 +1130,7 @@
       "sectorLabel": "🔄 HyperEVM DEX & AMM Hubs",
       "sectorBadge": "DEX / AMM",
       "tvl": 2041533,
-      "mcap": 9876982,
+      "mcap": 9972699,
       "fees24h": 315,
       "fees7d": 2205,
       "fees30d": 9261,
@@ -1133,8 +1138,8 @@
       "revenue7d": 1225,
       "revenue30d": 5145,
       "runRate": 63871.5,
-      "peRatio": 154.6,
-      "psRatio": 85.9,
+      "peRatio": 156.1,
+      "psRatio": 86.7,
       "yieldPct": {
         "periodYield": 0.01,
         "apy": 0.6
@@ -1189,7 +1194,7 @@
       "sectorLabel": "⚡ Core L1 & CLOB Engine",
       "sectorBadge": "CORE L1",
       "tvl": 1367508,
-      "mcap": 1116803,
+      "mcap": 1116830,
       "fees24h": 20,
       "fees7d": 2,
       "fees30d": 8,
@@ -1197,8 +1202,8 @@
       "revenue7d": 1,
       "revenue30d": 4,
       "runRate": 52.14,
-      "peRatio": 21419.3,
-      "psRatio": 10709.7,
+      "peRatio": 21419.8,
+      "psRatio": 10709.9,
       "yieldPct": {
         "periodYield": 0,
         "apy": 0
@@ -1286,10 +1291,10 @@
       "sectorBadge": "DEX / AMM",
       "tvl": 841577,
       "mcap": 1009892,
-      "fees24h": 1303,
+      "fees24h": 1350,
       "fees7d": 10233,
       "fees30d": 42979,
-      "revenue24h": 724,
+      "revenue24h": 750,
       "revenue7d": 5685,
       "revenue30d": 23877,
       "runRate": 296415.9,
@@ -1316,8 +1321,8 @@
       "sector": "lending",
       "sectorLabel": "🏦 Money Markets & CDP",
       "sectorBadge": "LENDING / MONEY",
-      "tvl": 832637,
-      "mcap": 999164,
+      "tvl": 832420,
+      "mcap": 998904,
       "fees24h": 20,
       "fees7d": 133,
       "fees30d": 559,
@@ -1325,8 +1330,8 @@
       "revenue7d": 74,
       "revenue30d": 311,
       "runRate": 3858.36,
-      "peRatio": 259,
-      "psRatio": 144.1,
+      "peRatio": 258.9,
+      "psRatio": 144,
       "yieldPct": {
         "periodYield": 0.01,
         "apy": 0.4
@@ -1348,8 +1353,8 @@
       "sector": "dex",
       "sectorLabel": "🔄 HyperEVM DEX & AMM Hubs",
       "sectorBadge": "DEX / AMM",
-      "tvl": 596249,
-      "mcap": 715499,
+      "tvl": 595829,
+      "mcap": 714995,
       "fees24h": 0,
       "fees7d": 0,
       "fees30d": 0,
@@ -1412,8 +1417,8 @@
       "sector": "dex",
       "sectorLabel": "🔄 HyperEVM DEX & AMM Hubs",
       "sectorBadge": "DEX / AMM",
-      "tvl": 409235,
-      "mcap": 491082,
+      "tvl": 407372,
+      "mcap": 488846,
       "fees24h": 1514,
       "fees7d": 10699,
       "fees30d": 44936,
@@ -1424,8 +1429,8 @@
       "peRatio": 1.6,
       "psRatio": 0.9,
       "yieldPct": {
-        "periodYield": 1.21,
-        "apy": 63.1
+        "periodYield": 1.22,
+        "apy": 63.4
       },
       "takeRate": 56,
       "onChainChains": [
@@ -1508,8 +1513,8 @@
       "sector": "dex",
       "sectorLabel": "🔄 HyperEVM DEX & AMM Hubs",
       "sectorBadge": "DEX / AMM",
-      "tvl": 216146,
-      "mcap": 259375,
+      "tvl": 216809,
+      "mcap": 260171,
       "fees24h": 0,
       "fees7d": 0,
       "fees30d": 0,
@@ -1541,7 +1546,7 @@
       "sectorLabel": "📈 Perpetual DEX & Options",
       "sectorBadge": "PERPS / DERIVS",
       "tvl": 215612,
-      "mcap": 3086015,
+      "mcap": 3083559,
       "fees24h": 0,
       "fees7d": 0,
       "fees30d": 0,
@@ -1637,7 +1642,7 @@
       "sectorLabel": "🔄 HyperEVM DEX & AMM Hubs",
       "sectorBadge": "DEX / AMM",
       "tvl": 59040,
-      "mcap": 2459785,
+      "mcap": 2460174,
       "fees24h": 0,
       "fees7d": 0,
       "fees30d": 0,
@@ -1702,10 +1707,10 @@
       "sectorBadge": "DEX / AMM",
       "tvl": 39028,
       "mcap": 352079,
-      "fees24h": 20,
+      "fees24h": 25,
       "fees7d": 1332,
       "fees30d": 5594,
-      "revenue24h": 11,
+      "revenue24h": 14,
       "revenue7d": 740,
       "revenue30d": 3108,
       "runRate": 38583.6,
@@ -1887,144 +1892,144 @@
     {
       "name": "BTC",
       "pair": "BTC-PERP",
-      "markPrice": 83394,
+      "markPrice": 83524,
       "maxLeverage": 40,
-      "volume24hUsd": 2843615261,
-      "openInterestUsd": 3305012190,
+      "volume24hUsd": 2852431483,
+      "openInterestUsd": 3318528101,
       "fundingRate": 0.0000125
     },
     {
       "name": "ETH",
       "pair": "ETH-PERP",
-      "markPrice": 2569.6,
+      "markPrice": 2575.08,
       "maxLeverage": 25,
-      "volume24hUsd": 1410337442,
-      "openInterestUsd": 3069111071,
+      "volume24hUsd": 1412553891,
+      "openInterestUsd": 3072492626,
       "fundingRate": 0.0000125
     },
     {
       "name": "HYPE",
       "pair": "HYPE-PERP",
-      "markPrice": 87.382,
+      "markPrice": 87.859,
       "maxLeverage": 10,
-      "volume24hUsd": 554067453,
-      "openInterestUsd": 1734414621,
-      "fundingRate": -0.0000160024
+      "volume24hUsd": 558277992,
+      "openInterestUsd": 1745222617,
+      "fundingRate": 0.0000041735
     },
     {
       "name": "ZEC",
       "pair": "ZEC-PERP",
-      "markPrice": 1328.8,
+      "markPrice": 1330.2,
       "maxLeverage": 10,
-      "volume24hUsd": 350053838,
-      "openInterestUsd": 683810473,
+      "volume24hUsd": 352292180,
+      "openInterestUsd": 683017634,
       "fundingRate": 0.0000125
     },
     {
       "name": "SOL",
       "pair": "SOL-PERP",
-      "markPrice": 115.8,
+      "markPrice": 116.22,
       "maxLeverage": 20,
-      "volume24hUsd": 263680401,
-      "openInterestUsd": 667328032,
+      "volume24hUsd": 263919898,
+      "openInterestUsd": 669797867,
       "fundingRate": 0.0000125
     },
     {
       "name": "NEAR",
       "pair": "NEAR-PERP",
-      "markPrice": 5.34835,
+      "markPrice": 5.4168,
       "maxLeverage": 10,
-      "volume24hUsd": 217946414,
-      "openInterestUsd": 401006042,
-      "fundingRate": 0.0000521461
+      "volume24hUsd": 225688764,
+      "openInterestUsd": 410037981,
+      "fundingRate": 0.0000623583
     },
     {
       "name": "PUMP",
       "pair": "PUMP-PERP",
-      "markPrice": 0.006427,
+      "markPrice": 0.006486,
       "maxLeverage": 10,
-      "volume24hUsd": 213792104,
-      "openInterestUsd": 333236445,
+      "volume24hUsd": 215199381,
+      "openInterestUsd": 338276220,
       "fundingRate": 0.0000125
     },
     {
       "name": "XRP",
       "pair": "XRP-PERP",
-      "markPrice": 1.4196,
+      "markPrice": 1.4218,
       "maxLeverage": 20,
-      "volume24hUsd": 136461931,
-      "openInterestUsd": 279605714,
+      "volume24hUsd": 136918725,
+      "openInterestUsd": 280153485,
       "fundingRate": 0.0000125
     },
     {
       "name": "ENA",
       "pair": "ENA-PERP",
-      "markPrice": 0.22576,
+      "markPrice": 0.22707,
       "maxLeverage": 10,
-      "volume24hUsd": 64833091,
-      "openInterestUsd": 152142297,
+      "volume24hUsd": 65040703,
+      "openInterestUsd": 153161480,
       "fundingRate": 0.0000125
     },
     {
       "name": "UNI",
       "pair": "UNI-PERP",
-      "markPrice": 7.7864,
+      "markPrice": 7.8114,
       "maxLeverage": 10,
-      "volume24hUsd": 43237068,
-      "openInterestUsd": 80114745,
+      "volume24hUsd": 43218645,
+      "openInterestUsd": 80581028,
       "fundingRate": 0.0000125
     }
   ],
   "topSpotMarkets": [
     {
       "name": "@109",
-      "markPrice": 87.435,
-      "volume24hUsd": 63044813
+      "markPrice": 87.932,
+      "volume24hUsd": 65466817
     },
     {
       "name": "@144",
-      "markPrice": 83397,
-      "volume24hUsd": 34602133
+      "markPrice": 83515,
+      "volume24hUsd": 34709027
     },
     {
       "name": "@155",
-      "markPrice": 2570.4,
-      "volume24hUsd": 27747168
+      "markPrice": 2575.9,
+      "volume24hUsd": 28245953
     },
     {
       "name": "@160",
-      "markPrice": 115.8,
-      "volume24hUsd": 15906446
+      "markPrice": 116.21,
+      "volume24hUsd": 15995182
     },
     {
       "name": "@288",
-      "markPrice": 1329,
-      "volume24hUsd": 11170498
+      "markPrice": 1329.9,
+      "volume24hUsd": 11130734
     },
     {
       "name": "@198",
-      "markPrice": 0.0064252,
-      "volume24hUsd": 6148344
+      "markPrice": 0.006484,
+      "volume24hUsd": 6200759
     },
     {
       "name": "@276",
-      "markPrice": 547.2,
-      "volume24hUsd": 5109731
+      "markPrice": 548.75,
+      "volume24hUsd": 5128556
     },
     {
       "name": "PURR/USDC",
-      "markPrice": 0.12777,
-      "volume24hUsd": 2572010
+      "markPrice": 0.12863,
+      "volume24hUsd": 2582178
     },
     {
       "name": "@173",
-      "markPrice": 0.99973,
-      "volume24hUsd": 855711
+      "markPrice": 0.99968,
+      "volume24hUsd": 822847
     },
     {
       "name": "@258",
-      "markPrice": 0.025887,
-      "volume24hUsd": 771666
+      "markPrice": 0.0258,
+      "volume24hUsd": 774006
     }
   ]
 }

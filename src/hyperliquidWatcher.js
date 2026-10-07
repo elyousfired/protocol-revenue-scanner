@@ -442,6 +442,8 @@ export async function getHyperliquidEcosystem(force = false) {
     l1Chain: {
       name: 'Hyperliquid L1 & HyperEVM',
       symbol: 'HYPE',
+      tokenSymbol: 'HYPE',
+      chains: ['Hyperliquid L1', 'HyperEVM'],
       tvl: platformTvl,
       perpVolume24h: Math.round(totalPerpVolume24hUsd),
       spotVolume24h: Math.round(totalSpotVolume24hUsd),
