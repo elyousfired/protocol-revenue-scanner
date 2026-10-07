@@ -892,6 +892,89 @@ export const SPECIAL_TOKEN_METRICS = {
     tvlFallback: 184013154,
     revFallback7d: 869000,
     chains: ['Hyperliquid L1']
+  },
+  ONDO: {
+    name: 'Ondo Finance (USDY & OUSG)',
+    slug: 'ondo-finance',
+    tvlProtocol: 'ondo-finance',
+    tvlFallback: 654000000,
+    revFallback7d: 450000,
+    chains: ['Ethereum', 'Solana', 'Base']
+  },
+  GRT: {
+    name: 'The Graph Network',
+    slug: 'the-graph',
+    tvlProtocol: 'the-graph',
+    tvlFallback: 248000000,
+    revFallback7d: 145000,
+    chains: ['Ethereum', 'Arbitrum']
+  },
+  SHIB: {
+    name: 'ShibaSwap (SHIB)',
+    slug: 'shibaswap',
+    tvlProtocol: 'shibaswap',
+    tvlFallback: 25400000,
+    revFallback7d: 42000,
+    chains: ['Ethereum', 'Shibarium']
+  },
+  PEPE: {
+    name: 'Pepe (Uniswap DEX Liquidity)',
+    slug: 'pepe',
+    tvlFallback: 48500000,
+    revFallback7d: 0,
+    chains: ['Ethereum']
+  },
+  BONK: {
+    name: 'Bonk (BonkSwap & DEX Liquidity)',
+    slug: 'bonk',
+    tvlFallback: 18200000,
+    revFallback7d: 21000,
+    chains: ['Solana']
+  },
+  WIF: {
+    name: 'Dogwifhat (Raydium DEX Liquidity)',
+    slug: 'dogwifhat',
+    tvlFallback: 14800000,
+    revFallback7d: 0,
+    chains: ['Solana']
+  },
+  TIA: {
+    name: 'Celestia Network',
+    slug: 'celestia',
+    isChain: true,
+    chainKey: 'Celestia',
+    tvlFallback: 750000000,
+    revFallback7d: 85000,
+    chains: ['Celestia']
+  },
+  FIL: {
+    name: 'Filecoin FEVM',
+    slug: 'filecoin',
+    isChain: true,
+    chainKey: 'Filecoin',
+    tvlFallback: 28500000,
+    revFallback7d: 65000,
+    chains: ['Filecoin']
+  },
+  AR: {
+    name: 'Arweave Network (AO)',
+    slug: 'arweave',
+    isChain: true,
+    chainKey: 'Arweave',
+    tvlFallback: 42000000,
+    chains: ['Arweave']
+  },
+  PENGU: {
+    name: 'Pudgy Penguins (DEX Liquidity)',
+    slug: 'pudgy-penguins',
+    tvlFallback: 16500000,
+    chains: ['Solana', 'Ethereum']
+  },
+  TRUMP: {
+    name: 'Official Trump (DEX Liquidity)',
+    slug: 'official-trump',
+    tvlFallback: 35000000,
+    chains: ['Solana']
   }
 };
 
