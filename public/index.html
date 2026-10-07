@@ -3394,8 +3394,8 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
           </div>
         </div>
 
-        <!-- 4 Metric Cards / Tabs -->
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 font-mono text-xs">
+        <!-- 5 Metric Cards / Tabs -->
+        <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 font-mono text-xs">
           <!-- Tab 1: Top Revenue -->
           <button id="bybit-tab-revenue" onclick="setBybitLeaderboardMetric('revenue')" class="p-3.5 rounded-xl border transition-all text-left flex items-center gap-3 bg-cyan-500/15 border-cyan-400/60 shadow-lg shadow-cyan-500/10 text-white">
             <span class="text-2xl">💰</span>
@@ -3431,6 +3431,15 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
               <div class="text-[11px] text-slate-400 truncate">حرق المعروض (انكماش)</div>
             </div>
           </button>
+
+          <!-- Tab 5: No Protocol / Off-Chain -->
+          <button id="bybit-tab-no_protocol" onclick="setBybitLeaderboardMetric('no_protocol')" class="p-3.5 rounded-xl border transition-all text-left flex items-center gap-3 bg-slate-900/80 border-slate-800 hover:border-slate-700 text-slate-300">
+            <span class="text-2xl">⚠️</span>
+            <div class="min-w-0">
+              <div class="font-extrabold text-sm text-slate-200">Off-Chain / No Protocol</div>
+              <div class="text-[11px] text-slate-400 truncate">بدون بروتوكول (241 توكن)</div>
+            </div>
+          </button>
         </div>
 
         <!-- Leaderboard Table -->
@@ -3445,7 +3454,7 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
                 <th class="py-3 px-4 text-right">Spot Price</th>
                 <th class="py-3 px-4 text-right">24H Change</th>
                 <th class="py-3 px-4 text-right">On-Chain TVL</th>
-                <th class="py-3 px-4 w-36">Relative Share</th>
+                <th id="bybit-lead-share-th" class="py-3 px-4 w-44">Relative Share</th>
                 <th class="py-3 px-4 text-center w-36">Actions &amp; Diagram</th>
               </tr>
             </thead>
@@ -8408,19 +8417,38 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
       return Math.round(num).toLocaleString() + ' Wallets';
     }
 
+    function getNoProtoReasonBadge(cat) {
+      if (!cat) return '<span class="text-[10px] text-slate-400">Off-Chain</span>';
+      if (cat.includes('Memes')) return '<span class="text-[10px] text-pink-400 font-semibold">🐸 Memecoin (No Protocol)</span>';
+      if (cat.includes('Gaming')) return '<span class="text-[10px] text-purple-400 font-semibold">🎮 Off-Chain Gaming Sales</span>';
+      if (cat.includes('Layer 1')) return '<span class="text-[10px] text-amber-400 font-semibold">⛏️ L1 Miner Gas (No DAO Rev)</span>';
+      if (cat.includes('AI')) return '<span class="text-[10px] text-cyan-400 font-semibold">🧠 AI Compute / Incentive</span>';
+      if (cat.includes('RWA')) return '<span class="text-[10px] text-emerald-400 font-semibold">🏛️ RWA / TradFi Synthetic</span>';
+      if (cat.includes('Oracles') || cat.includes('Infra')) return '<span class="text-[10px] text-blue-400 font-semibold">🔌 Infra / Oracle Feed</span>';
+      if (cat.includes('DePIN')) return '<span class="text-[10px] text-orange-400 font-semibold">📡 DePIN Hardware Node</span>';
+      if (cat.includes('Layer 2')) return '<span class="text-[10px] text-indigo-400 font-semibold">⚡ L2 Gas / Rollup Post</span>';
+      if (cat.includes('DeFi')) return '<span class="text-[10px] text-yellow-400 font-semibold">🗳️ Governance / No Fee Switch</span>';
+      if (cat.includes('Launchpads') || cat.includes('Exchange')) return '<span class="text-[10px] text-rose-400 font-semibold">🏢 Centralized CEX Platform</span>';
+      return '<span class="text-[10px] text-slate-400">Off-Chain / No Revenue Contract</span>';
+    }
+
     function setBybitLeaderboardMetric(metric) {
       bybitLeadMetric = metric;
-      const tabs = ['revenue', 'holders', 'buyback', 'burn'];
+      const tabs = ['revenue', 'holders', 'buyback', 'burn', 'no_protocol'];
       tabs.forEach(t => {
         const el = document.getElementById(`bybit-tab-${t}`);
         if (!el) return;
         const isSel = t === metric;
         el.className = isSel
-          ? 'p-3.5 rounded-xl border transition-all text-left flex items-center gap-3 bg-cyan-500/15 border-cyan-400/60 shadow-lg shadow-cyan-500/10 text-white cursor-pointer'
+          ? (t === 'no_protocol'
+              ? 'p-3.5 rounded-xl border transition-all text-left flex items-center gap-3 bg-amber-500/15 border-amber-400/60 shadow-lg shadow-amber-500/10 text-white cursor-pointer'
+              : 'p-3.5 rounded-xl border transition-all text-left flex items-center gap-3 bg-cyan-500/15 border-cyan-400/60 shadow-lg shadow-cyan-500/10 text-white cursor-pointer')
           : 'p-3.5 rounded-xl border transition-all text-left flex items-center gap-3 bg-slate-900/80 border-slate-800 hover:border-slate-700 text-slate-300 cursor-pointer';
         const titleEl = el.querySelector('.font-extrabold');
         if (titleEl) {
-          titleEl.className = isSel ? 'font-extrabold text-sm text-cyan-300' : 'font-extrabold text-sm text-slate-200';
+          titleEl.className = isSel 
+            ? (t === 'no_protocol' ? 'font-extrabold text-sm text-amber-300' : 'font-extrabold text-sm text-cyan-300')
+            : 'font-extrabold text-sm text-slate-200';
         }
       });
       renderBybitLeaderboard();
@@ -8449,15 +8477,21 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
       if (!bybitDataStore) return;
       const tbody = document.getElementById('bybit-leaderboard-tbody');
       const thMetric = document.getElementById('bybit-lead-metric-th');
+      const thShare = document.getElementById('bybit-lead-share-th');
       const countBadge = document.getElementById('bybit-lead-active-count-badge');
       if (!tbody) return;
 
       const tfLabel = bybitLeadTimeframe.toUpperCase();
       let metricName = '7D Protocol Revenue';
+      if (thShare) {
+        thShare.textContent = bybitLeadMetric === 'no_protocol' ? 'Technical Reason' : 'Relative Share';
+      }
+
       if (bybitLeadMetric === 'revenue') metricName = `${tfLabel} Protocol Revenue`;
       else if (bybitLeadMetric === 'holders') metricName = `Total On-Chain Wallets`;
       else if (bybitLeadMetric === 'buyback') metricName = `${tfLabel} Token Buyback Cash Flow`;
       else if (bybitLeadMetric === 'burn') metricName = `${tfLabel} On-Chain Token Burn`;
+      else if (bybitLeadMetric === 'no_protocol') metricName = `24H Spot Volume (Off-Chain)`;
 
       if (thMetric) thMetric.textContent = metricName;
 
@@ -8474,6 +8508,10 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
           val = bybitLeadTimeframe === '24h' ? tok.buyback24h : (bybitLeadTimeframe === '30d' ? tok.buyback30d : tok.buyback7d);
         } else if (bybitLeadMetric === 'burn') {
           val = bybitLeadTimeframe === '24h' ? tok.burn24h : (bybitLeadTimeframe === '30d' ? tok.burn30d : tok.burn7d);
+        } else if (bybitLeadMetric === 'no_protocol') {
+          if (!tok.protocolRevenue24h || tok.protocolRevenue24h === 0) {
+            val = tok.volume24hUsd || 1;
+          }
         }
 
         if (val !== null && val !== undefined && val > 0) {
@@ -8494,7 +8532,9 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
       filtered.sort((a, b) => b._leadVal - a._leadVal);
 
       if (countBadge) {
-        countBadge.textContent = `${filtered.length} Active Protocols (Full List)`;
+        countBadge.textContent = bybitLeadMetric === 'no_protocol'
+          ? `${filtered.length} Off-Chain Tokens (No Protocol Rev)`
+          : `${filtered.length} Active Protocols (Full List)`;
       }
 
       if (filtered.length === 0) {
@@ -8516,6 +8556,8 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
         let formattedMetric = '—';
         if (bybitLeadMetric === 'holders') {
           formattedMetric = `<span class="text-cyan-300 font-extrabold">${formatHoldersCount(tok._leadVal)}</span>`;
+        } else if (bybitLeadMetric === 'no_protocol') {
+          formattedMetric = `<div class="text-amber-300 font-extrabold">${formatUSD(tok.volume24hUsd)}</div><div class="text-[9px] text-slate-500">Off-Chain Vol</div>`;
         } else {
           formattedMetric = `<span class="text-cyan-300 font-extrabold">${formatUSD(tok._leadVal)}</span>`;
         }
@@ -8530,6 +8572,23 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
         const chainBadges = chains.map(c => `
           <span class="px-1.5 py-0.5 rounded text-[9px] bg-slate-900 border border-slate-700/70 text-slate-300">${c}</span>
         `).join('');
+
+        let shareCell = '';
+        if (bybitLeadMetric === 'no_protocol') {
+          shareCell = `<div class="py-1">${getNoProtoReasonBadge(tok.categoryName)}</div>`;
+        } else {
+          shareCell = `
+            <div class="space-y-1">
+              <div class="flex justify-between text-[10px] text-slate-400">
+                <span>vs #1</span>
+                <span class="font-bold text-cyan-300">${barPct}%</span>
+              </div>
+              <div class="w-full h-1.5 rounded-full bg-slate-900 overflow-hidden">
+                <div class="h-full rounded-full bg-gradient-to-r from-cyan-400 to-blue-500" style="width: ${barPct}%"></div>
+              </div>
+            </div>
+          `;
+        }
 
         return `
           <tr class="hover:bg-cyan-500/5 transition-colors">
@@ -8560,15 +8619,7 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
             <td class="py-3 px-4 text-right font-bold ${changeColor}">${changeSign}${tok.change24hPct.toFixed(2)}%</td>
             <td class="py-3 px-4 text-right text-slate-300">${tvlDisplay}</td>
             <td class="py-3 px-4">
-              <div class="space-y-1">
-                <div class="flex justify-between text-[10px] text-slate-400">
-                  <span>vs #1</span>
-                  <span class="font-bold text-cyan-300">${barPct}%</span>
-                </div>
-                <div class="w-full h-1.5 rounded-full bg-slate-900 overflow-hidden">
-                  <div class="h-full rounded-full bg-gradient-to-r from-cyan-400 to-blue-500" style="width: ${barPct}%"></div>
-                </div>
-              </div>
+              ${shareCell}
             </td>
             <td class="py-3 px-4 text-center">
               <div class="flex items-center justify-center gap-1.5">
@@ -8584,7 +8635,6 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
             </td>
           </tr>
         `;
-      }).join('');
     }
 
     // ============================================================== //
