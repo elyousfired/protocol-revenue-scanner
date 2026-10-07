@@ -635,6 +635,408 @@ function classifyTokenCategory(symbol, scannerMap) {
   return 'infra';
 }
 
+export const SPECIAL_TOKEN_METRICS = {
+  STETH: {
+    name: 'Lido (stETH)',
+    slug: 'lido',
+    tvlProtocol: 'lido',
+    revSlug: 'lido',
+    chains: ['Ethereum']
+  },
+  LDO: {
+    name: 'Lido DAO',
+    slug: 'lido',
+    tvlProtocol: 'lido',
+    revSlug: 'lido',
+    chains: ['Ethereum']
+  },
+  MKR: {
+    name: 'Sky (MakerDAO)',
+    slug: 'sky-lending',
+    tvlProtocol: 'sky-lending',
+    revSlug: 'sky-lending',
+    chains: ['Ethereum']
+  },
+  SKY: {
+    name: 'Sky (MakerDAO)',
+    slug: 'sky-lending',
+    tvlProtocol: 'sky-lending',
+    revSlug: 'sky-lending',
+    chains: ['Ethereum']
+  },
+  WETH: {
+    name: 'Wrapped Ether',
+    slug: 'weth',
+    tvlFallback: 6500000000,
+    chains: ['Ethereum']
+  },
+  WBTC: {
+    name: 'Wrapped BTC',
+    slug: 'wrapped-bitcoin',
+    tvlFallback: 15000000000,
+    chains: ['Ethereum']
+  },
+  METH: {
+    name: 'Mantle Staked ETH',
+    slug: 'mantle-staked-eth',
+    tvlProtocol: 'mantle-staked-eth',
+    revSlug: 'mantle-staked-eth',
+    chains: ['Mantle', 'Ethereum']
+  },
+  BBSOL: {
+    name: 'Bybit Staked SOL',
+    slug: 'bybit-staked-sol',
+    tvlProtocol: 'bybit-staked-sol',
+    chains: ['Solana']
+  },
+  JITOSOL: {
+    name: 'JitoSOL',
+    slug: 'jito-liquid-staking',
+    tvlProtocol: 'jito-liquid-staking',
+    revSlug: 'jito',
+    chains: ['Solana']
+  },
+  GLMR: {
+    name: 'Moonbeam Network',
+    slug: 'moonbeam',
+    isChain: true,
+    chainKey: 'Moonbeam',
+    chains: ['Moonbeam']
+  },
+  BEAM: {
+    name: 'Beam Network',
+    slug: 'beam',
+    isChain: true,
+    chainKey: 'Beam',
+    chains: ['Avalanche', 'Beam', 'Ethereum']
+  },
+  SONIC: {
+    name: 'Sonic Network',
+    slug: 'sonic',
+    isChain: true,
+    chainKey: 'Sonic',
+    chains: ['Sonic']
+  },
+  S: {
+    name: 'Sonic Network',
+    slug: 'sonic',
+    isChain: true,
+    chainKey: 'Sonic',
+    chains: ['Sonic']
+  },
+  BTC: {
+    name: 'Bitcoin Network',
+    slug: 'bitcoin',
+    isChain: true,
+    chainKey: 'Bitcoin',
+    chains: ['Bitcoin']
+  },
+  ETH: {
+    name: 'Ethereum Network',
+    slug: 'ethereum',
+    isChain: true,
+    chainKey: 'Ethereum',
+    revSlug: 'ethereum',
+    chains: ['Ethereum']
+  },
+  SOL: {
+    name: 'Solana Network',
+    slug: 'solana',
+    isChain: true,
+    chainKey: 'Solana',
+    revSlug: 'solana',
+    chains: ['Solana']
+  },
+  SUI: {
+    name: 'Sui Network',
+    slug: 'sui',
+    isChain: true,
+    chainKey: 'Sui',
+    revSlug: 'sui',
+    chains: ['Sui']
+  },
+  TRX: {
+    name: 'Tron Network',
+    slug: 'tron',
+    isChain: true,
+    chainKey: 'Tron',
+    revSlug: 'tron',
+    chains: ['Tron']
+  },
+  BNB: {
+    name: 'BNB Smart Chain',
+    slug: 'bsc',
+    isChain: true,
+    chainKey: 'BSC',
+    revSlug: 'bsc',
+    chains: ['BNB Chain']
+  },
+  AVAX: {
+    name: 'Avalanche C-Chain',
+    slug: 'avalanche',
+    isChain: true,
+    chainKey: 'Avalanche',
+    revSlug: 'avalanche',
+    chains: ['Avalanche']
+  },
+  ARB: {
+    name: 'Arbitrum One',
+    slug: 'arbitrum',
+    isChain: true,
+    chainKey: 'Arbitrum',
+    revSlug: 'arbitrum',
+    chains: ['Arbitrum']
+  },
+  OP: {
+    name: 'OP Mainnet',
+    slug: 'optimism',
+    isChain: true,
+    chainKey: 'OP Mainnet',
+    revSlug: 'optimism',
+    chains: ['Optimism']
+  },
+  POL: {
+    name: 'Polygon PoS',
+    slug: 'polygon',
+    isChain: true,
+    chainKey: 'Polygon',
+    revSlug: 'polygon',
+    chains: ['Polygon']
+  },
+  MATIC: {
+    name: 'Polygon PoS',
+    slug: 'polygon',
+    isChain: true,
+    chainKey: 'Polygon',
+    revSlug: 'polygon',
+    chains: ['Polygon']
+  },
+  NEAR: {
+    name: 'NEAR Protocol',
+    slug: 'near',
+    isChain: true,
+    chainKey: 'Near',
+    chains: ['NEAR Protocol']
+  },
+  ADA: {
+    name: 'Cardano Network',
+    slug: 'cardano',
+    isChain: true,
+    chainKey: 'Cardano',
+    chains: ['Cardano']
+  },
+  APT: {
+    name: 'Aptos Network',
+    slug: 'aptos',
+    isChain: true,
+    chainKey: 'Aptos',
+    chains: ['Aptos']
+  },
+  TON: {
+    name: 'TON Network',
+    slug: 'ton',
+    isChain: true,
+    chainKey: 'TON',
+    chains: ['TON Network']
+  },
+  MNT: {
+    name: 'Mantle Network',
+    slug: 'mantle',
+    isChain: true,
+    chainKey: 'Mantle',
+    chains: ['Mantle']
+  },
+  FTM: {
+    name: 'Fantom Opera',
+    slug: 'fantom',
+    isChain: true,
+    chainKey: 'Fantom',
+    chains: ['Fantom']
+  },
+  HYPE: {
+    name: 'Hyperliquid L1',
+    slug: 'hyperliquid',
+    isChain: true,
+    chainKey: 'Hyperliquid',
+    revSlug: 'hyperliquid',
+    chains: ['Hyperliquid L1']
+  }
+};
+
+let memoryLlamaData = null;
+
+function buildLlamaIndex(chainsData, protsData, revData) {
+  const chainMap = new Map();
+  for (const c of (chainsData || [])) {
+    if (c.tokenSymbol) chainMap.set(c.tokenSymbol.toUpperCase().trim(), c);
+    if (c.name) chainMap.set(c.name.toUpperCase().trim(), c);
+  }
+
+  const revMap = new Map();
+  for (const r of (revData || [])) {
+    if (r.slug) revMap.set(r.slug.toLowerCase().trim(), r);
+    if (r.name) revMap.set(r.name.toLowerCase().trim(), r);
+    if (r.defillamaId) revMap.set(String(r.defillamaId), r);
+  }
+
+  const protMap = new Map();
+  for (const p of (protsData || [])) {
+    if (p.symbol) {
+      const sym = p.symbol.toUpperCase().trim();
+      const existing = protMap.get(sym);
+      if (!existing || (p.tvl || 0) > (existing.tvl || 0)) {
+        protMap.set(sym, p);
+      }
+    }
+    if (p.slug) {
+      protMap.set(p.slug.toLowerCase().trim(), p);
+    }
+  }
+
+  return { chainMap, protMap, revMap, timestamp: Date.now() };
+}
+
+async function fetchDefiLlamaComprehensiveData() {
+  if (memoryLlamaData?.timestamp && (Date.now() - memoryLlamaData.timestamp < 60 * 60 * 1000)) {
+    return memoryLlamaData;
+  }
+
+  for (const dir of [CACHE_DIR, '/tmp']) {
+    try {
+      const chainsRaw = await fs.readFile(path.join(dir, 'llama_chains.json'), 'utf-8');
+      const protsRaw = await fs.readFile(path.join(dir, 'llama_protocols.json'), 'utf-8');
+      const revRaw = await fs.readFile(path.join(dir, 'llama_revenue.json'), 'utf-8');
+
+      const chains = JSON.parse(chainsRaw);
+      const prots = JSON.parse(protsRaw);
+      const rev = JSON.parse(revRaw);
+
+      if (chains.timestamp && (Date.now() - chains.timestamp < 60 * 60 * 1000)) {
+        memoryLlamaData = buildLlamaIndex(chains.data, prots.data, rev.data);
+        return memoryLlamaData;
+      }
+    } catch {}
+  }
+
+  console.log('[BybitWatcher] Fetching fresh DefiLlama chains, protocols TVL & revenue data...');
+  try {
+    const [chainsRes, protsRes, revRes] = await Promise.all([
+      fetch('https://api.llama.fi/v2/chains', { signal: AbortSignal.timeout(15000) }).then(r => r.ok ? r.json() : []).catch(() => []),
+      fetch('https://api.llama.fi/protocols', { signal: AbortSignal.timeout(15000) }).then(r => r.ok ? r.json() : []).catch(() => []),
+      fetch('https://api.llama.fi/overview/fees?dataType=dailyRevenue&excludeTotalDataChart=true&excludeTotalDataChartBreakdown=true', { signal: AbortSignal.timeout(15000) }).then(r => r.ok ? r.json() : {}).catch(() => ({}))
+    ]);
+
+    const chainsData = Array.isArray(chainsRes) ? chainsRes : [];
+    const protsData = Array.isArray(protsRes) ? protsRes : [];
+    const revData = Array.isArray(revRes?.protocols) ? revRes.protocols : [];
+
+    const now = Date.now();
+    for (const dir of [CACHE_DIR, '/tmp']) {
+      try {
+        await fs.mkdir(dir, { recursive: true });
+        await fs.writeFile(path.join(dir, 'llama_chains.json'), JSON.stringify({ timestamp: now, data: chainsData }));
+        await fs.writeFile(path.join(dir, 'llama_protocols.json'), JSON.stringify({ timestamp: now, data: protsData }));
+        await fs.writeFile(path.join(dir, 'llama_revenue.json'), JSON.stringify({ timestamp: now, data: revData }));
+      } catch {}
+    }
+
+    memoryLlamaData = buildLlamaIndex(chainsData, protsData, revData);
+    return memoryLlamaData;
+  } catch (err) {
+    console.error('[BybitWatcher] DefiLlama comprehensive fetch error:', err.message);
+    return { chainMap: new Map(), protMap: new Map(), revMap: new Map(), timestamp: Date.now() };
+  }
+}
+
+function resolveLlamaMetrics(baseSymbol, llamaIndex) {
+  if (!llamaIndex) return null;
+  const sym = baseSymbol.toUpperCase();
+  const { chainMap, protMap, revMap } = llamaIndex;
+
+  let name = null;
+  let slug = null;
+  let tvl = 0;
+  let rev7d = 0;
+  let rev24h = 0;
+  let chains = [];
+
+  // 1. Check special token mappings
+  const spec = SPECIAL_TOKEN_METRICS[sym];
+  if (spec) {
+    name = spec.name;
+    slug = spec.slug;
+    if (spec.chains) chains = [...spec.chains];
+
+    if (spec.tvlFallback) tvl = spec.tvlFallback;
+    if (spec.chainKey && chainMap.has(spec.chainKey.toUpperCase())) {
+      tvl = chainMap.get(spec.chainKey.toUpperCase()).tvl || tvl;
+    }
+    if (spec.tvlProtocol) {
+      const tp = protMap.get(spec.tvlProtocol.toLowerCase());
+      if (tp && tp.tvl) tvl = tp.tvl;
+    }
+    if (spec.revSlug) {
+      const r = revMap.get(spec.revSlug.toLowerCase());
+      if (r) {
+        rev7d = r.total7d || 0;
+        rev24h = r.total24h || 0;
+      }
+    }
+  }
+
+  // 2. Check protocol TVL map by symbol
+  const p = protMap.get(sym);
+  if (p) {
+    if (!name) name = p.name;
+    if (!slug) slug = p.slug;
+    if (!tvl && p.tvl > 0) tvl = p.tvl;
+    if (Array.isArray(p.chains) && p.chains.length > 0 && chains.length === 0) {
+      chains = [...p.chains];
+    }
+
+    if (!rev7d) {
+      const r = (p.slug && revMap.get(p.slug.toLowerCase())) || (p.name && revMap.get(p.name.toLowerCase()));
+      if (r) {
+        rev7d = r.total7d || 0;
+        rev24h = r.total24h || 0;
+      }
+    }
+  }
+
+  // 3. Check chain TVL map by symbol or name
+  const c = chainMap.get(sym);
+  if (c) {
+    if (!name) name = c.name + ' L1';
+    if (!slug) slug = c.name?.toLowerCase();
+    if (!tvl && c.tvl > 0) tvl = c.tvl;
+    if (chains.length === 0 && c.name) chains = [c.name];
+
+    if (!rev7d && c.name) {
+      const r = revMap.get(c.name.toLowerCase()) || revMap.get(sym.toLowerCase());
+      if (r) {
+        rev7d = r.total7d || 0;
+        rev24h = r.total24h || 0;
+      }
+    }
+  }
+
+  // 4. Check revMap directly by symbol
+  if (!rev7d) {
+    const r = revMap.get(sym.toLowerCase());
+    if (r) {
+      rev7d = r.total7d || 0;
+      rev24h = r.total24h || 0;
+      if (!name) name = r.name;
+      if (!slug) slug = r.slug;
+    }
+  }
+
+  if (tvl > 0 || rev7d > 0) {
+    return { name, slug, tvl, rev7d, rev24h, chains };
+  }
+  return null;
+}
+
 export async function getBybitSpotEcosystem(force = false) {
   if (!force) {
     if (memoryBybitCache?.lastUpdated && (Date.now() - new Date(memoryBybitCache.lastUpdated).getTime() < CACHE_TTL_MS)) {
@@ -656,7 +1058,7 @@ export async function getBybitSpotEcosystem(force = false) {
 
   console.log('[BybitWatcher] Fetching live Bybit V5 Spot Tickers & computing Category Volume Flow...');
 
-  const [bybitRes, suiEco, solEco, ethEco, monEco, baseEco, cgMap] = await Promise.all([
+  const [bybitRes, suiEco, solEco, ethEco, monEco, baseEco, cgMap, llamaIndex] = await Promise.all([
     fetch('https://api.bybit.com/v5/market/tickers?category=spot', {
       signal: AbortSignal.timeout(15000)
     }).then(async r => {
@@ -708,7 +1110,8 @@ export async function getBybitSpotEcosystem(force = false) {
         }
       }
       return cgCache || {};
-    })()
+    })(),
+    fetchDefiLlamaComprehensiveData()
   ]);
 
   const rawTickers = bybitRes?.result?.list || [];
@@ -765,35 +1168,57 @@ export async function getBybitSpotEcosystem(force = false) {
     const catMeta = BYBIT_CATEGORIES[catId] || BYBIT_CATEGORIES.infra;
     let matchedProtocol = scannerMap.get(baseSymbol) || null;
 
-    let isOnOurChains = false;
+    let protoName = matchedProtocol?.name || null;
+    let protoSlug = matchedProtocol?.slug || null;
+    let tvl = matchedProtocol?.tvl || 0;
+    let rev7d = matchedProtocol?.revenue7d || 0;
+    let rev24h = matchedProtocol?.revenue24h || 0;
+
+    // Comprehensive enrichment from DefiLlama L1/L2 chains, protocols & liquid staking
+    const llamaEnrich = resolveLlamaMetrics(baseSymbol, llamaIndex);
+    if (llamaEnrich) {
+      if (!tvl && llamaEnrich.tvl > 0) tvl = llamaEnrich.tvl;
+      if (!rev7d && llamaEnrich.rev7d > 0) {
+        rev7d = llamaEnrich.rev7d;
+        rev24h = llamaEnrich.rev24h || (rev7d / 7);
+      }
+      if (!protoName && llamaEnrich.name) protoName = llamaEnrich.name;
+      if (!protoSlug && llamaEnrich.slug) protoSlug = llamaEnrich.slug;
+    }
+
     let onChainChains = [];
     if (matchedProtocol) {
-      const allowedChains = ['ethereum', 'sui', 'solana', 'monad', 'base'];
       let protChains = (matchedProtocol.chains || [matchedProtocol.primaryChain || '']).map(c => c.toLowerCase());
-      
-      // Force native tokens to be recognized on their own chains
       if (baseSymbol === 'SUI') protChains.push('sui');
       if (baseSymbol === 'SOL') protChains.push('solana');
       if (baseSymbol === 'ETH' || baseSymbol === 'WETH') protChains.push('ethereum');
       if (baseSymbol === 'MON' || baseSymbol === 'WMON') protChains.push('monad');
       if (baseSymbol === 'AERO' || baseSymbol === 'BRETT' || baseSymbol === 'VIRTUAL' || baseSymbol === 'DEGEN' || baseSymbol === 'WELL') protChains.push('base');
-      
       if (matchedProtocol._injectedChain) protChains.push(matchedProtocol._injectedChain);
-
-      isOnOurChains = protChains.some(c => allowedChains.includes(c));
-      onChainChains = protChains.filter(c => allowedChains.includes(c));
-      
-      // Deduplicate
-      onChainChains = [...new Set(onChainChains)];
-
-      if (!isOnOurChains) {
-        matchedProtocol = null;
-      }
+      onChainChains = protChains.filter(c => c && c.length > 0);
     }
 
-    // If still no blockchain assigned, fallback to our curated known token blockchains
+    // Fallback to our curated known token blockchains
     if (onChainChains.length === 0 && KNOWN_TOKEN_BLOCKCHAINS[baseSymbol]) {
       onChainChains = [...KNOWN_TOKEN_BLOCKCHAINS[baseSymbol]];
+    }
+
+    // If still empty, check llamaEnrich chains
+    if (onChainChains.length === 0 && llamaEnrich && llamaEnrich.chains && llamaEnrich.chains.length > 0) {
+      onChainChains = [...llamaEnrich.chains];
+    }
+
+    // Deduplicate and clean up capitalization
+    const knownList = KNOWN_TOKEN_BLOCKCHAINS[baseSymbol] || [];
+    const normalizedChains = [];
+    for (const rawC of onChainChains) {
+      const c = String(rawC).trim();
+      if (!c) continue;
+      const matchKnown = knownList.find(k => k.toLowerCase() === c.toLowerCase());
+      const finalC = matchKnown || (c.charAt(0).toUpperCase() + c.slice(1));
+      if (!normalizedChains.includes(finalC)) {
+        normalizedChains.push(finalC);
+      }
     }
 
     totalSpotVolume24hUsd += volume24hUsd;
@@ -814,13 +1239,13 @@ export async function getBybitSpotEcosystem(force = false) {
       volume24hUsd: Math.round(volume24hUsd),
       volume24hTokens: Math.round(volume24hTokens * 100) / 100,
       spreadPct,
-      hasProtocolRevenue: Boolean(matchedProtocol && (matchedProtocol.revenue7d > 0 || matchedProtocol.revenue24h > 0)),
-      protocolName: matchedProtocol?.name || null,
-      protocolSlug: matchedProtocol?.slug || null,
-      protocolRevenue7d: matchedProtocol?.revenue7d ? Math.round(matchedProtocol.revenue7d) : 0,
-      protocolRevenue24h: matchedProtocol?.revenue24h ? Math.round(matchedProtocol.revenue24h) : 0,
-      protocolTvl: matchedProtocol?.tvl || 0,
-      onChainChains: onChainChains.map(c => c.charAt(0).toUpperCase() + c.slice(1)), // Capitalize
+      hasProtocolRevenue: Boolean(rev7d > 0 || rev24h > 0),
+      protocolName: protoName,
+      protocolSlug: protoSlug,
+      protocolRevenue7d: Math.round(rev7d),
+      protocolRevenue24h: Math.round(rev24h),
+      protocolTvl: Math.round(tvl),
+      onChainChains: normalizedChains,
       mcap: matchedProtocol?.mcap || cgMap[baseSymbol] || 0,
       logo: matchedProtocol?.logo || `https://assets.coincap.io/assets/icons/${baseSymbol.toLowerCase()}@2x.png`
     });

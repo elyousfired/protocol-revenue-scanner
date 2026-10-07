@@ -1,10 +1,10 @@
 {
   "success": true,
-  "lastUpdated": "2026-10-07T19:21:34.078Z",
+  "lastUpdated": "2026-10-07T19:39:50.045Z",
   "l2Chain": {
     "name": "Base Layer-2 (Optimism Superchain)",
     "chainId": 8453,
-    "blockNumber": 52305759,
+    "blockNumber": 52306313,
     "gasPriceGwei": 0.006,
     "grossFees24h": 1555101.1,
     "grossFees7d": 11944259.129999973,
@@ -442,7 +442,7 @@
       "fees24h": 653180,
       "fees7d": 4559575,
       "fees30d": 30612808,
-      "revenue24h": 318543,
+      "revenue24h": 318522,
       "revenue7d": 2433066,
       "revenue30d": 18652035,
       "tvl": 54714900
@@ -455,7 +455,7 @@
       "fees24h": 350669,
       "fees7d": 2230432,
       "fees30d": 9216236,
-      "revenue24h": 132809,
+      "revenue24h": 132671,
       "revenue7d": 918118,
       "revenue30d": 3859521,
       "tvl": 26765184
@@ -494,7 +494,7 @@
       "fees24h": 9109,
       "fees7d": 73219,
       "fees30d": 417209,
-      "revenue24h": 6981,
+      "revenue24h": 7111,
       "revenue7d": 59403,
       "revenue30d": 353890,
       "tvl": 878628
@@ -517,13 +517,13 @@
       "label": "🌉 Bridges, Interop & Infra",
       "badge": "BRIDGE / INFRA",
       "count": 85,
-      "fees24h": 367832,
-      "fees7d": -24119,
-      "fees30d": 5489403,
-      "revenue24h": 283488,
+      "fees24h": 367761,
+      "fees7d": -25370,
+      "fees30d": 5484679,
+      "revenue24h": 283435,
       "revenue7d": 718450,
       "revenue30d": 4046958,
-      "tvl": -289428
+      "tvl": -304440
     }
   ],
   "protocols": [
@@ -1162,15 +1162,15 @@
       "fees24h": 18098,
       "fees7d": 132574,
       "fees30d": 1157364,
-      "revenue24h": 9148,
+      "revenue24h": 9178,
       "revenue7d": 70950,
       "revenue30d": 642748,
       "timeframeData": {
         "24h": {
           "fees": 18098,
-          "revenue": 9148,
-          "runRate": 3341307,
-          "peRatio": 8.7,
+          "revenue": 9178,
+          "runRate": 3352264.5,
+          "peRatio": 8.6,
           "psRatio": 4.4,
           "yieldPct": {
             "periodYield": 0.03,
@@ -1778,19 +1778,19 @@
       "fees24h": 1833,
       "fees7d": 37388,
       "fees30d": 269751,
-      "revenue24h": 1833,
+      "revenue24h": 1963,
       "revenue7d": 37388,
       "revenue30d": 269751,
       "timeframeData": {
         "24h": {
           "fees": 1833,
-          "revenue": 1833,
-          "runRate": 669503.25,
-          "peRatio": 6.8,
+          "revenue": 1963,
+          "runRate": 716985.75,
+          "peRatio": 6.4,
           "psRatio": 6.8,
           "yieldPct": {
             "periodYield": 0.04,
-            "apy": 14.6
+            "apy": 15.6
           }
         },
         "7d": {
@@ -2317,19 +2317,19 @@
       "fees24h": 2484,
       "fees7d": 17044,
       "fees30d": 180025,
-      "revenue24h": 1836,
+      "revenue24h": 1822,
       "revenue7d": 9065,
       "revenue30d": 115934,
       "timeframeData": {
         "24h": {
           "fees": 2484,
-          "revenue": 1836,
-          "runRate": 670599,
+          "revenue": 1822,
+          "runRate": 665485.5,
           "peRatio": 2.6,
           "psRatio": 1.9,
           "yieldPct": {
             "periodYield": 0.1,
-            "apy": 38.1
+            "apy": 37.8
           }
         },
         "7d": {
@@ -2779,19 +2779,19 @@
       "fees24h": 1585,
       "fees7d": 13735,
       "fees30d": 50549,
-      "revenue24h": 311,
+      "revenue24h": 173,
       "revenue7d": 2438,
       "revenue30d": 9568,
       "timeframeData": {
         "24h": {
           "fees": 1585,
-          "revenue": 311,
-          "runRate": 113592.75,
-          "peRatio": 7.6,
+          "revenue": 173,
+          "runRate": 63188.25,
+          "peRatio": 13.7,
           "psRatio": 1.5,
           "yieldPct": {
-            "periodYield": 0.04,
-            "apy": 13.1
+            "periodYield": 0.02,
+            "apy": 7.3
           }
         },
         "7d": {
@@ -3318,19 +3318,19 @@
       "fees24h": 2026,
       "fees7d": 10368,
       "fees30d": 166058,
-      "revenue24h": 203,
+      "revenue24h": 143,
       "revenue7d": 1036,
       "revenue30d": 16608,
       "timeframeData": {
         "24h": {
           "fees": 2026,
-          "revenue": 203,
-          "runRate": 74145.75,
-          "peRatio": 10.1,
+          "revenue": 143,
+          "runRate": 52230.75,
+          "peRatio": 14.3,
           "psRatio": 1,
           "yieldPct": {
-            "periodYield": 0.03,
-            "apy": 9.9
+            "periodYield": 0.02,
+            "apy": 7
           }
         },
         "7d": {
@@ -3703,19 +3703,19 @@
       "fees24h": 1171,
       "fees7d": 8043,
       "fees30d": 26364,
-      "revenue24h": 1171,
+      "revenue24h": 1211,
       "revenue7d": 8043,
       "revenue30d": 26364,
       "timeframeData": {
         "24h": {
           "fees": 1171,
-          "revenue": 1171,
-          "runRate": 427707.75,
-          "peRatio": 2.8,
+          "revenue": 1211,
+          "runRate": 442317.75,
+          "peRatio": 2.7,
           "psRatio": 2.8,
           "yieldPct": {
             "periodYield": 0.1,
-            "apy": 36.1
+            "apy": 37.3
           }
         },
         "7d": {
@@ -4224,83 +4224,6 @@
       "burnVelocity": 0
     },
     {
-      "name": "Smithii",
-      "slug": "smithii",
-      "tokenSymbol": "SHRIMP",
-      "category": "Launchpad",
-      "sectorId": "bridges_cross",
-      "sectorBadge": "BRIDGE / INFRA",
-      "sectorLabel": "🌉 Bridges, Interop & Infra",
-      "logo": "https://icons.llamao.fi/icons/protocols/smithii",
-      "chains": [
-        "Base"
-      ],
-      "contractAddress": "0x0000000000000000000000000000000000000000",
-      "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 1379835,
-      "tvl": 76272,
-      "fees24h": 908,
-      "fees7d": 6356,
-      "fees30d": 26695,
-      "revenue24h": 908,
-      "revenue7d": 6562,
-      "revenue30d": 30663,
-      "timeframeData": {
-        "24h": {
-          "fees": 908,
-          "revenue": 908,
-          "runRate": 331647,
-          "peRatio": 4.2,
-          "psRatio": 4.2,
-          "yieldPct": {
-            "periodYield": 0.07,
-            "apy": 24
-          }
-        },
-        "7d": {
-          "fees": 6356,
-          "revenue": 6562,
-          "runRate": 342142.68,
-          "peRatio": 4,
-          "psRatio": 4.2,
-          "yieldPct": {
-            "periodYield": 0.48,
-            "apy": 24.8
-          }
-        },
-        "30d": {
-          "fees": 26695,
-          "revenue": 30663,
-          "runRate": 373168.71,
-          "peRatio": 3.7,
-          "psRatio": 4.2,
-          "yieldPct": {
-            "periodYield": 2.22,
-            "apy": 27
-          }
-        }
-      },
-      "mechanism": {
-        "burn": false,
-        "burnedAmount": 0,
-        "burnedPct": 0,
-        "burnUsdEstimate": 0,
-        "buyback": true,
-        "treasuryNetWorthUsd": 156381,
-        "stakingToken": "$SHRIMP",
-        "treasuryHoldings": "SHRIMP Fee Vault & Liquidity Reserve"
-      },
-      "whaleRisk": {
-        "riskLevel": "MODERATE_RISK",
-        "riskScore": 36,
-        "decentralizationScore": 65,
-        "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 28809,
-        "top10SharePct": 35.5
-      },
-      "burnVelocity": 0
-    },
-    {
       "name": "BIM Yield",
       "slug": "bim-yield",
       "tokenSymbol": "BIM",
@@ -4455,6 +4378,83 @@
       "burnVelocity": 0
     },
     {
+      "name": "Smithii",
+      "slug": "smithii",
+      "tokenSymbol": "SHRIMP",
+      "category": "Launchpad",
+      "sectorId": "bridges_cross",
+      "sectorBadge": "BRIDGE / INFRA",
+      "sectorLabel": "🌉 Bridges, Interop & Infra",
+      "logo": "https://icons.llamao.fi/icons/protocols/smithii",
+      "chains": [
+        "Base"
+      ],
+      "contractAddress": "0x0000000000000000000000000000000000000000",
+      "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
+      "mcap": 1379835,
+      "tvl": 70308,
+      "fees24h": 837,
+      "fees7d": 5859,
+      "fees30d": 24608,
+      "revenue24h": 837,
+      "revenue7d": 6562,
+      "revenue30d": 30663,
+      "timeframeData": {
+        "24h": {
+          "fees": 837,
+          "revenue": 837,
+          "runRate": 305714.25,
+          "peRatio": 4.5,
+          "psRatio": 4.5,
+          "yieldPct": {
+            "periodYield": 0.06,
+            "apy": 22.2
+          }
+        },
+        "7d": {
+          "fees": 5859,
+          "revenue": 6562,
+          "runRate": 342142.68,
+          "peRatio": 4,
+          "psRatio": 4.5,
+          "yieldPct": {
+            "periodYield": 0.48,
+            "apy": 24.8
+          }
+        },
+        "30d": {
+          "fees": 24608,
+          "revenue": 30663,
+          "runRate": 373168.71,
+          "peRatio": 3.7,
+          "psRatio": 4.6,
+          "yieldPct": {
+            "periodYield": 2.22,
+            "apy": 27
+          }
+        }
+      },
+      "mechanism": {
+        "burn": false,
+        "burnedAmount": 0,
+        "burnedPct": 0,
+        "burnUsdEstimate": 0,
+        "buyback": true,
+        "treasuryNetWorthUsd": 156381,
+        "stakingToken": "$SHRIMP",
+        "treasuryHoldings": "SHRIMP Fee Vault & Liquidity Reserve"
+      },
+      "whaleRisk": {
+        "riskLevel": "MODERATE_RISK",
+        "riskScore": 36,
+        "decentralizationScore": 65,
+        "description": "Balanced distribution between institutional entities and community retail holders.",
+        "holdersCount": 28795,
+        "top10SharePct": 35.5
+      },
+      "burnVelocity": 0
+    },
+    {
       "name": "LienFi",
       "slug": "lienfi",
       "tokenSymbol": "LFI",
@@ -4550,19 +4550,19 @@
       "fees24h": 682,
       "fees7d": 5179,
       "fees30d": 25150,
-      "revenue24h": 682,
+      "revenue24h": 684,
       "revenue7d": 5179,
       "revenue30d": 25150,
       "timeframeData": {
         "24h": {
           "fees": 682,
-          "revenue": 682,
-          "runRate": 249100.5,
+          "revenue": 684,
+          "runRate": 249831,
           "peRatio": 0.2,
           "psRatio": 0.2,
           "yieldPct": {
-            "periodYield": 1.2,
-            "apy": 440.1
+            "periodYield": 1.21,
+            "apy": 441.4
           }
         },
         "7d": {
@@ -5837,83 +5837,6 @@
         "description": "Highly decentralized token distribution. Low vulnerability to systemic whale sell-offs.",
         "holdersCount": 29068,
         "top10SharePct": 25.5
-      },
-      "burnVelocity": 0
-    },
-    {
-      "name": "AlfaClub",
-      "slug": "alfaclub",
-      "tokenSymbol": "ALFA",
-      "category": "SoFi",
-      "sectorId": "bridges_cross",
-      "sectorBadge": "BRIDGE / INFRA",
-      "sectorLabel": "🌉 Bridges, Interop & Infra",
-      "logo": "https://icons.llamao.fi/icons/protocols/alfaclub",
-      "chains": [
-        "Base"
-      ],
-      "contractAddress": "0x0000000000000000000000000000000000000000",
-      "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
-      "mcap": 539219,
-      "tvl": 13080,
-      "fees24h": 48,
-      "fees7d": 1090,
-      "fees30d": 4048,
-      "revenue24h": 9,
-      "revenue7d": 123,
-      "revenue30d": 617,
-      "timeframeData": {
-        "24h": {
-          "fees": 48,
-          "revenue": 9,
-          "runRate": 3287.25,
-          "peRatio": 164,
-          "psRatio": 30.8,
-          "yieldPct": {
-            "periodYield": 0,
-            "apy": 0.6
-          }
-        },
-        "7d": {
-          "fees": 1090,
-          "revenue": 123,
-          "runRate": 6413.22,
-          "peRatio": 84.1,
-          "psRatio": 9.5,
-          "yieldPct": {
-            "periodYield": 0.02,
-            "apy": 1.2
-          }
-        },
-        "30d": {
-          "fees": 4048,
-          "revenue": 617,
-          "runRate": 7508.89,
-          "peRatio": 71.8,
-          "psRatio": 10.9,
-          "yieldPct": {
-            "periodYield": 0.11,
-            "apy": 1.4
-          }
-        }
-      },
-      "mechanism": {
-        "burn": false,
-        "burnedAmount": 0,
-        "burnedPct": 0,
-        "burnUsdEstimate": 0,
-        "buyback": false,
-        "treasuryNetWorthUsd": 150000,
-        "stakingToken": "$ALFA",
-        "treasuryHoldings": "ALFA Fee Vault & Liquidity Reserve"
-      },
-      "whaleRisk": {
-        "riskLevel": "MODERATE_RISK",
-        "riskScore": 37,
-        "decentralizationScore": 64,
-        "description": "Balanced distribution between institutional entities and community retail holders.",
-        "holdersCount": 28276,
-        "top10SharePct": 36.5
       },
       "burnVelocity": 0
     },
@@ -7381,6 +7304,83 @@
       "burnVelocity": 0
     },
     {
+      "name": "AlfaClub V1",
+      "slug": "alfaclub-v1",
+      "tokenSymbol": "ALFA",
+      "category": "SoFi",
+      "sectorId": "bridges_cross",
+      "sectorBadge": "BRIDGE / INFRA",
+      "sectorLabel": "🌉 Bridges, Interop & Infra",
+      "logo": "https://icons.llamao.fi/icons/protocols/alfaclub-v1",
+      "chains": [
+        "Base"
+      ],
+      "contractAddress": "0x0000000000000000000000000000000000000000",
+      "explorerUrl": "https://basescan.org/token/0x0000000000000000000000000000000000000000",
+      "mcap": 539219,
+      "tvl": 4032,
+      "fees24h": 48,
+      "fees7d": 336,
+      "fees30d": 1411,
+      "revenue24h": 9,
+      "revenue7d": 123,
+      "revenue30d": 617,
+      "timeframeData": {
+        "24h": {
+          "fees": 48,
+          "revenue": 9,
+          "runRate": 3287.25,
+          "peRatio": 164,
+          "psRatio": 30.8,
+          "yieldPct": {
+            "periodYield": 0,
+            "apy": 0.6
+          }
+        },
+        "7d": {
+          "fees": 336,
+          "revenue": 123,
+          "runRate": 6413.22,
+          "peRatio": 84.1,
+          "psRatio": 30.8,
+          "yieldPct": {
+            "periodYield": 0.02,
+            "apy": 1.2
+          }
+        },
+        "30d": {
+          "fees": 1411,
+          "revenue": 617,
+          "runRate": 7508.89,
+          "peRatio": 71.8,
+          "psRatio": 31.4,
+          "yieldPct": {
+            "periodYield": 0.11,
+            "apy": 1.4
+          }
+        }
+      },
+      "mechanism": {
+        "burn": false,
+        "burnedAmount": 0,
+        "burnedPct": 0,
+        "burnUsdEstimate": 0,
+        "buyback": false,
+        "treasuryNetWorthUsd": 150000,
+        "stakingToken": "$ALFA",
+        "treasuryHoldings": "ALFA Fee Vault & Liquidity Reserve"
+      },
+      "whaleRisk": {
+        "riskLevel": "LOW_RISK",
+        "riskScore": 29,
+        "decentralizationScore": 72,
+        "description": "Highly decentralized token distribution. Low vulnerability to systemic whale sell-offs.",
+        "holdersCount": 28255,
+        "top10SharePct": 28.5
+      },
+      "burnVelocity": 0
+    },
+    {
       "name": "Infinex Spot",
       "slug": "infinex-spot",
       "tokenSymbol": "INX",
@@ -8554,19 +8554,19 @@
       "fees24h": 15,
       "fees7d": 94,
       "fees30d": 336,
-      "revenue24h": 5,
+      "revenue24h": 4,
       "revenue7d": 28,
       "revenue30d": 101,
       "timeframeData": {
         "24h": {
           "fees": 15,
-          "revenue": 5,
-          "runRate": 1826.25,
-          "peRatio": 3.5,
+          "revenue": 4,
+          "runRate": 1461,
+          "peRatio": 4.4,
           "psRatio": 1.2,
           "yieldPct": {
-            "periodYield": 0.08,
-            "apy": 28.7
+            "periodYield": 0.06,
+            "apy": 23
           }
         },
         "7d": {

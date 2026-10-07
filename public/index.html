@@ -3124,6 +3124,7 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
               <option value="change_desc">Sort: 24H Gainers (% Up)</option>
               <option value="change_asc">Sort: 24H Losers (% Down)</option>
               <option value="rev_desc">Sort: Protocol 7D Revenue</option>
+              <option value="tvl_desc">Sort: On-Chain TVL (High → Low)</option>
             </select>
           </div>
         </div>
@@ -7964,6 +7965,8 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
         list.sort((a, b) => a.change24hPct - b.change24hPct);
       } else if (bybitSortMode === 'rev_desc') {
         list.sort((a, b) => (b.protocolRevenue7d || 0) - (a.protocolRevenue7d || 0) || b.volume24hUsd - a.volume24hUsd);
+      } else if (bybitSortMode === 'tvl_desc') {
+        list.sort((a, b) => (b.protocolTvl || 0) - (a.protocolTvl || 0) || b.volume24hUsd - a.volume24hUsd);
       } else {
         list.sort((a, b) => b.volume24hUsd - a.volume24hUsd);
       }

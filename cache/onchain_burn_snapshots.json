@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1791400871995,
+  "updatedAt": 1791401984085,
   "chains": {
     "solana": {
       "JUP": {
@@ -35,6 +35,11 @@
           },
           {
             "timestamp": 1791400696858,
+            "currentSupply": 6861486311,
+            "burnedTokens": 3138513689
+          },
+          {
+            "timestamp": 1791401984085,
             "currentSupply": 6861486311,
             "burnedTokens": 3138513689
           }
@@ -75,6 +80,11 @@
             "timestamp": 1791400696858,
             "currentSupply": 554997386,
             "burnedTokens": 54822614
+          },
+          {
+            "timestamp": 1791401984085,
+            "currentSupply": 554997386,
+            "burnedTokens": 54822614
           }
         ]
       },
@@ -111,6 +121,11 @@
           },
           {
             "timestamp": 1791400696858,
+            "currentSupply": 87994367678074,
+            "burnedTokens": 12005632321926
+          },
+          {
+            "timestamp": 1791401984085,
             "currentSupply": 87994367678074,
             "burnedTokens": 12005632321926
           }
@@ -151,6 +166,11 @@
             "timestamp": 1791400696858,
             "currentSupply": 74999518,
             "burnedTokens": 25000482
+          },
+          {
+            "timestamp": 1791401984085,
+            "currentSupply": 74999518,
+            "burnedTokens": 25000482
           }
         ]
       },
@@ -187,6 +207,11 @@
           },
           {
             "timestamp": 1791400696858,
+            "currentSupply": 999981363,
+            "burnedTokens": 42518637
+          },
+          {
+            "timestamp": 1791401984085,
             "currentSupply": 999981363,
             "burnedTokens": 42518637
           }
@@ -227,6 +252,11 @@
             "timestamp": 1791400696858,
             "currentSupply": 986522438,
             "burnedTokens": 13477562
+          },
+          {
+            "timestamp": 1791401984085,
+            "currentSupply": 986522438,
+            "burnedTokens": 13477562
           }
         ]
       },
@@ -263,6 +293,11 @@
           },
           {
             "timestamp": 1791400696858,
+            "currentSupply": 9999956753,
+            "burnedTokens": 43247
+          },
+          {
+            "timestamp": 1791401984085,
             "currentSupply": 9999956753,
             "burnedTokens": 43247
           }
@@ -303,6 +338,11 @@
             "timestamp": 1791400696858,
             "currentSupply": 699997046,
             "burnedTokens": 300002954
+          },
+          {
+            "timestamp": 1791401984085,
+            "currentSupply": 699997046,
+            "burnedTokens": 300002954
           }
         ]
       },
@@ -339,6 +379,11 @@
           },
           {
             "timestamp": 1791400696858,
+            "currentSupply": 740669562,
+            "burnedTokens": 259330438
+          },
+          {
+            "timestamp": 1791401984085,
             "currentSupply": 740669562,
             "burnedTokens": 259330438
           }
@@ -379,6 +424,11 @@
             "timestamp": 1791400696858,
             "currentSupply": 999998345,
             "burnedTokens": 1655
+          },
+          {
+            "timestamp": 1791401984085,
+            "currentSupply": 999998345,
+            "burnedTokens": 1655
           }
         ]
       },
@@ -417,6 +467,11 @@
             "timestamp": 1791400696858,
             "currentSupply": 486128923,
             "burnedTokens": 50741989
+          },
+          {
+            "timestamp": 1791401984085,
+            "currentSupply": 486128921,
+            "burnedTokens": 50741991
           }
         ]
       },
@@ -453,6 +508,11 @@
           },
           {
             "timestamp": 1791400696858,
+            "currentSupply": 194241995,
+            "burnedTokens": 28758005
+          },
+          {
+            "timestamp": 1791401984085,
             "currentSupply": 194241995,
             "burnedTokens": 28758005
           }
@@ -493,6 +553,11 @@
             "timestamp": 1791400696858,
             "currentSupply": 9999959211,
             "burnedTokens": 40789
+          },
+          {
+            "timestamp": 1791401984085,
+            "currentSupply": 9999959211,
+            "burnedTokens": 40789
           }
         ]
       },
@@ -529,6 +594,11 @@
           },
           {
             "timestamp": 1791400696858,
+            "currentSupply": 997732279,
+            "burnedTokens": 2267721
+          },
+          {
+            "timestamp": 1791401984085,
             "currentSupply": 997732279,
             "burnedTokens": 2267721
           }
@@ -569,6 +639,11 @@
             "timestamp": 1791400696858,
             "currentSupply": 502351,
             "burnedTokens": 179002
+          },
+          {
+            "timestamp": 1791401984085,
+            "currentSupply": 502359,
+            "burnedTokens": 178994
           }
         ]
       },
@@ -605,6 +680,11 @@
           },
           {
             "timestamp": 1791400696858,
+            "currentSupply": 9999946464,
+            "burnedTokens": 53536
+          },
+          {
+            "timestamp": 1791401984085,
             "currentSupply": 9999946464,
             "burnedTokens": 53536
           }
@@ -645,6 +725,11 @@
             "timestamp": 1791400696858,
             "currentSupply": 798070115,
             "burnedTokens": 201929885
+          },
+          {
+            "timestamp": 1791401984085,
+            "currentSupply": 798054605,
+            "burnedTokens": 201945395
           }
         ]
       },
@@ -683,6 +768,11 @@
             "timestamp": 1791400696858,
             "currentSupply": 1974158989,
             "burnedTokens": 25841011
+          },
+          {
+            "timestamp": 1791401984085,
+            "currentSupply": 1974158989,
+            "burnedTokens": 25841011
           }
         ]
       },
@@ -719,6 +809,11 @@
           },
           {
             "timestamp": 1791400696858,
+            "currentSupply": 58648953,
+            "burnedTokens": 6351047
+          },
+          {
+            "timestamp": 1791401984085,
             "currentSupply": 58648953,
             "burnedTokens": 6351047
           }
@@ -776,6 +871,11 @@
             "timestamp": 1791400695109,
             "currentSupply": 9965295568,
             "burnedTokens": 34704432
+          },
+          {
+            "timestamp": 1791401970299,
+            "currentSupply": 9965295568,
+            "burnedTokens": 34704432
           }
         ]
       },
@@ -827,6 +927,11 @@
           },
           {
             "timestamp": 1791400695114,
+            "currentSupply": 9815000000,
+            "burnedTokens": 185000000
+          },
+          {
+            "timestamp": 1791401970306,
             "currentSupply": 9815000000,
             "burnedTokens": 185000000
           }
@@ -882,6 +987,11 @@
             "timestamp": 1791400695119,
             "currentSupply": 10827068,
             "burnedTokens": 1
+          },
+          {
+            "timestamp": 1791401970324,
+            "currentSupply": 10827068,
+            "burnedTokens": 1
           }
         ]
       },
@@ -915,6 +1025,11 @@
             "timestamp": 1791400695116,
             "currentSupply": 984999999,
             "burnedTokens": 15000001
+          },
+          {
+            "timestamp": 1791401970314,
+            "currentSupply": 984999999,
+            "burnedTokens": 15000001
           }
         ]
       }
@@ -944,6 +1059,11 @@
             "timestamp": 1791400701306,
             "currentSupply": 120520200,
             "burnedTokens": 4524800
+          },
+          {
+            "timestamp": 1791401983115,
+            "currentSupply": 120520200,
+            "burnedTokens": 4524800
           }
         ]
       },
@@ -969,6 +1089,11 @@
           },
           {
             "timestamp": 1791400701306,
+            "currentSupply": 14240000,
+            "burnedTokens": 1760000
+          },
+          {
+            "timestamp": 1791401983115,
             "currentSupply": 14240000,
             "burnedTokens": 1760000
           }
@@ -998,6 +1123,11 @@
             "timestamp": 1791400701306,
             "currentSupply": 29810,
             "burnedTokens": 975767
+          },
+          {
+            "timestamp": 1791401983115,
+            "currentSupply": 29810,
+            "burnedTokens": 975767
           }
         ]
       },
@@ -1023,6 +1153,11 @@
           },
           {
             "timestamp": 1791400701306,
+            "currentSupply": 886966419,
+            "burnedTokens": 113033581
+          },
+          {
+            "timestamp": 1791401983115,
             "currentSupply": 886966419,
             "burnedTokens": 113033581
           }
@@ -1052,6 +1187,11 @@
             "timestamp": 1791400701306,
             "currentSupply": 14964800000,
             "burnedTokens": 35200000
+          },
+          {
+            "timestamp": 1791401983115,
+            "currentSupply": 14964800000,
+            "burnedTokens": 35200000
           }
         ]
       },
@@ -1077,6 +1217,11 @@
           },
           {
             "timestamp": 1791400701306,
+            "currentSupply": 997600000,
+            "burnedTokens": 2400000
+          },
+          {
+            "timestamp": 1791401983115,
             "currentSupply": 997600000,
             "burnedTokens": 2400000
           }
@@ -1106,6 +1251,11 @@
             "timestamp": 1791400701306,
             "currentSupply": 258446028,
             "burnedTokens": 23081420
+          },
+          {
+            "timestamp": 1791401983115,
+            "currentSupply": 258446028,
+            "burnedTokens": 23081420
           }
         ]
       },
@@ -1131,6 +1281,11 @@
           },
           {
             "timestamp": 1791400701306,
+            "currentSupply": 2215400000,
+            "burnedTokens": 814903031
+          },
+          {
+            "timestamp": 1791401983115,
             "currentSupply": 2215400000,
             "burnedTokens": 814903031
           }
@@ -1160,6 +1315,11 @@
             "timestamp": 1791400701306,
             "currentSupply": 999840000,
             "burnedTokens": 160000
+          },
+          {
+            "timestamp": 1791401983115,
+            "currentSupply": 999840000,
+            "burnedTokens": 160000
           }
         ]
       },
@@ -1185,6 +1345,11 @@
           },
           {
             "timestamp": 1791400701306,
+            "currentSupply": 968400000,
+            "burnedTokens": 31600000
+          },
+          {
+            "timestamp": 1791401983115,
             "currentSupply": 968400000,
             "burnedTokens": 31600000
           }
@@ -1214,6 +1379,11 @@
             "timestamp": 1791400701306,
             "currentSupply": 1673646668,
             "burnedTokens": 0
+          },
+          {
+            "timestamp": 1791401983115,
+            "currentSupply": 1673646668,
+            "burnedTokens": 0
           }
         ]
       },
@@ -1239,6 +1409,11 @@
           },
           {
             "timestamp": 1791400701306,
+            "currentSupply": 999980000,
+            "burnedTokens": 20000
+          },
+          {
+            "timestamp": 1791401983115,
             "currentSupply": 999980000,
             "burnedTokens": 20000
           }
@@ -1268,6 +1443,11 @@
             "timestamp": 1791400701306,
             "currentSupply": 99985000,
             "burnedTokens": 15000
+          },
+          {
+            "timestamp": 1791401983115,
+            "currentSupply": 99985000,
+            "burnedTokens": 15000
           }
         ]
       },
@@ -1293,6 +1473,11 @@
           },
           {
             "timestamp": 1791400701306,
+            "currentSupply": 311993104,
+            "burnedTokens": 16200000
+          },
+          {
+            "timestamp": 1791401983115,
             "currentSupply": 311993104,
             "burnedTokens": 16200000
           }
@@ -1322,6 +1507,11 @@
             "timestamp": 1791400701306,
             "currentSupply": 99360000,
             "burnedTokens": 640000
+          },
+          {
+            "timestamp": 1791401983115,
+            "currentSupply": 99360000,
+            "burnedTokens": 640000
           }
         ]
       },
@@ -1347,6 +1537,11 @@
           },
           {
             "timestamp": 1791400701306,
+            "currentSupply": 75300000,
+            "burnedTokens": 24700000
+          },
+          {
+            "timestamp": 1791401983115,
             "currentSupply": 75300000,
             "burnedTokens": 24700000
           }
@@ -1376,6 +1571,11 @@
             "timestamp": 1791400701306,
             "currentSupply": 982800000,
             "burnedTokens": 17200000
+          },
+          {
+            "timestamp": 1791401983115,
+            "currentSupply": 982800000,
+            "burnedTokens": 17200000
           }
         ]
       },
@@ -1401,6 +1601,11 @@
           },
           {
             "timestamp": 1791400701306,
+            "currentSupply": 8402893,
+            "burnedTokens": 1597107
+          },
+          {
+            "timestamp": 1791401983115,
             "currentSupply": 8402893,
             "burnedTokens": 1597107
           }
@@ -1430,6 +1635,11 @@
             "timestamp": 1791400701306,
             "currentSupply": 589255000000000,
             "burnedTokens": 410745000000000
+          },
+          {
+            "timestamp": 1791401983115,
+            "currentSupply": 589255000000000,
+            "burnedTokens": 410745000000000
           }
         ]
       },
@@ -1455,6 +1665,11 @@
           },
           {
             "timestamp": 1791400701306,
+            "currentSupply": 413772000000000,
+            "burnedTokens": 6918000000000
+          },
+          {
+            "timestamp": 1791401983115,
             "currentSupply": 413772000000000,
             "burnedTokens": 6918000000000
           }
@@ -1484,6 +1699,11 @@
             "timestamp": 1791400701306,
             "currentSupply": 99304566,
             "burnedTokens": 695434
+          },
+          {
+            "timestamp": 1791401983115,
+            "currentSupply": 99304566,
+            "burnedTokens": 695434
           }
         ]
       },
@@ -1509,6 +1729,11 @@
           },
           {
             "timestamp": 1791400701306,
+            "currentSupply": 249987646,
+            "burnedTokens": 12354
+          },
+          {
+            "timestamp": 1791401983115,
             "currentSupply": 249987646,
             "burnedTokens": 12354
           }
@@ -1550,6 +1775,11 @@
             "timestamp": 1791400686734,
             "currentSupply": 99834609499,
             "burnedTokens": 165390501
+          },
+          {
+            "timestamp": 1791401962261,
+            "currentSupply": 99911003807,
+            "burnedTokens": 88996193
           }
         ]
       },
@@ -1587,6 +1817,11 @@
             "timestamp": 1791400686734,
             "currentSupply": 5860606,
             "burnedTokens": 24139394
+          },
+          {
+            "timestamp": 1791401962261,
+            "currentSupply": 5831943,
+            "burnedTokens": 24168057
           }
         ]
       },
@@ -1622,6 +1857,11 @@
           },
           {
             "timestamp": 1791400686734,
+            "currentSupply": 66097977,
+            "burnedTokens": 15902023
+          },
+          {
+            "timestamp": 1791401962261,
             "currentSupply": 66097977,
             "burnedTokens": 15902023
           }
@@ -1661,6 +1901,11 @@
             "timestamp": 1791400686734,
             "currentSupply": 18888833,
             "burnedTokens": 6111167
+          },
+          {
+            "timestamp": 1791401962261,
+            "currentSupply": 18800755,
+            "burnedTokens": 6199245
           }
         ]
       },
@@ -1696,6 +1941,11 @@
           },
           {
             "timestamp": 1791400686734,
+            "currentSupply": 30560530,
+            "burnedTokens": 4439470
+          },
+          {
+            "timestamp": 1791401962261,
             "currentSupply": 30560530,
             "burnedTokens": 4439470
           }
@@ -1778,6 +2028,11 @@
             "timestamp": 1791400686734,
             "currentSupply": 173887720,
             "burnedTokens": 11112280
+          },
+          {
+            "timestamp": 1791401962261,
+            "currentSupply": 173701540,
+            "burnedTokens": 11298460
           }
         ]
       },
@@ -1810,6 +2065,11 @@
             "timestamp": 1791400686734,
             "currentSupply": 192526709,
             "burnedTokens": 7473291
+          },
+          {
+            "timestamp": 1791401962261,
+            "currentSupply": 192795834,
+            "burnedTokens": 7204166
           }
         ]
       },
@@ -1842,6 +2102,11 @@
             "timestamp": 1791400686734,
             "currentSupply": 186412135,
             "burnedTokens": 28587865
+          },
+          {
+            "timestamp": 1791401962261,
+            "currentSupply": 186412210,
+            "burnedTokens": 28587790
           }
         ]
       },
@@ -1873,6 +2138,11 @@
           {
             "timestamp": 1791400686734,
             "currentSupply": 5646402,
+            "burnedTokens": 0
+          },
+          {
+            "timestamp": 1791401962261,
+            "currentSupply": 5646409,
             "burnedTokens": 0
           }
         ]
@@ -1906,6 +2176,11 @@
             "timestamp": 1791400686734,
             "currentSupply": 16981512,
             "burnedTokens": 8018488
+          },
+          {
+            "timestamp": 1791401962261,
+            "currentSupply": 16981534,
+            "burnedTokens": 8018466
           }
         ]
       },
@@ -1938,6 +2213,11 @@
             "timestamp": 1791400686734,
             "currentSupply": 6813805,
             "burnedTokens": 3186195
+          },
+          {
+            "timestamp": 1791401962261,
+            "currentSupply": 6813995,
+            "burnedTokens": 3186005
           }
         ]
       },
@@ -1968,6 +2248,11 @@
           },
           {
             "timestamp": 1791400686734,
+            "currentSupply": 39736,
+            "burnedTokens": 4960264
+          },
+          {
+            "timestamp": 1791401962261,
             "currentSupply": 39736,
             "burnedTokens": 4960264
           }
@@ -2010,6 +2295,11 @@
             "timestamp": 1791400871995,
             "currentSupply": 1992844978,
             "burnedTokens": 0
+          },
+          {
+            "timestamp": 1791401979806,
+            "currentSupply": 1992844978,
+            "burnedTokens": 0
           }
         ]
       },
@@ -2036,6 +2326,11 @@
           },
           {
             "timestamp": 1791400871995,
+            "currentSupply": 497034863,
+            "burnedTokens": 515465140
+          },
+          {
+            "timestamp": 1791401979806,
             "currentSupply": 497034863,
             "burnedTokens": 515465140
           }
@@ -2076,6 +2371,11 @@
             "timestamp": 1791400871995,
             "currentSupply": 4537051853,
             "burnedTokens": 464748147
+          },
+          {
+            "timestamp": 1791401979806,
+            "currentSupply": 4537051853,
+            "burnedTokens": 464748147
           }
         ]
       },
@@ -2102,6 +2402,11 @@
           },
           {
             "timestamp": 1791400871995,
+            "currentSupply": 36043112049,
+            "burnedTokens": 923046905
+          },
+          {
+            "timestamp": 1791401979806,
             "currentSupply": 36043112049,
             "burnedTokens": 923046905
           }
@@ -2132,6 +2437,11 @@
             "timestamp": 1791400871995,
             "currentSupply": 9910000000,
             "burnedTokens": 180000000
+          },
+          {
+            "timestamp": 1791401979806,
+            "currentSupply": 9910000000,
+            "burnedTokens": 180000000
           }
         ]
       },
@@ -2158,6 +2468,11 @@
           },
           {
             "timestamp": 1791400871995,
+            "currentSupply": 99850000,
+            "burnedTokens": 300000
+          },
+          {
+            "timestamp": 1791401979806,
             "currentSupply": 99850000,
             "burnedTokens": 300000
           }
@@ -2188,6 +2503,11 @@
             "timestamp": 1791400871995,
             "currentSupply": 982000000,
             "burnedTokens": 36000000
+          },
+          {
+            "timestamp": 1791401979806,
+            "currentSupply": 982000000,
+            "burnedTokens": 36000000
           }
         ]
       },
@@ -2214,6 +2534,11 @@
           },
           {
             "timestamp": 1791400871995,
+            "currentSupply": 999920000,
+            "burnedTokens": 160000
+          },
+          {
+            "timestamp": 1791401979806,
             "currentSupply": 999920000,
             "burnedTokens": 160000
           }
@@ -2244,6 +2569,11 @@
             "timestamp": 1791400871995,
             "currentSupply": 420690000000,
             "burnedTokens": 0
+          },
+          {
+            "timestamp": 1791401979806,
+            "currentSupply": 420690000000,
+            "burnedTokens": 0
           }
         ]
       },
@@ -2270,6 +2600,11 @@
           },
           {
             "timestamp": 1791400871995,
+            "currentSupply": 994500,
+            "burnedTokens": 11000
+          },
+          {
+            "timestamp": 1791401979806,
             "currentSupply": 994500,
             "burnedTokens": 11000
           }
@@ -2300,6 +2635,11 @@
             "timestamp": 1791400871995,
             "currentSupply": 998400000,
             "burnedTokens": 3200000
+          },
+          {
+            "timestamp": 1791401979806,
+            "currentSupply": 998400000,
+            "burnedTokens": 3200000
           }
         ]
       },
@@ -2326,6 +2666,11 @@
           },
           {
             "timestamp": 1791400871995,
+            "currentSupply": 998200000,
+            "burnedTokens": 3600000
+          },
+          {
+            "timestamp": 1791401979806,
             "currentSupply": 998200000,
             "burnedTokens": 3600000
           }
@@ -2356,6 +2701,11 @@
             "timestamp": 1791400871995,
             "currentSupply": 99950000,
             "burnedTokens": 100000
+          },
+          {
+            "timestamp": 1791401979806,
+            "currentSupply": 99950000,
+            "burnedTokens": 100000
           }
         ]
       },
@@ -2382,6 +2732,11 @@
           },
           {
             "timestamp": 1791400871995,
+            "currentSupply": 512000000,
+            "burnedTokens": 56000000
+          },
+          {
+            "timestamp": 1791401979806,
             "currentSupply": 512000000,
             "burnedTokens": 56000000
           }
@@ -2412,6 +2767,11 @@
             "timestamp": 1791400871995,
             "currentSupply": 94000000,
             "burnedTokens": 12000000
+          },
+          {
+            "timestamp": 1791401979806,
+            "currentSupply": 94000000,
+            "burnedTokens": 12000000
           }
         ]
       },
@@ -2438,6 +2798,11 @@
           },
           {
             "timestamp": 1791400871995,
+            "currentSupply": 999650000,
+            "burnedTokens": 700000
+          },
+          {
+            "timestamp": 1791401979806,
             "currentSupply": 999650000,
             "burnedTokens": 700000
           }
@@ -2468,6 +2833,11 @@
             "timestamp": 1791400871995,
             "currentSupply": 15120000,
             "burnedTokens": 1760000
+          },
+          {
+            "timestamp": 1791401979806,
+            "currentSupply": 15120000,
+            "burnedTokens": 1760000
           }
         ]
       },
@@ -2494,6 +2864,11 @@
           },
           {
             "timestamp": 1791400871995,
+            "currentSupply": 260000000,
+            "burnedTokens": 380000000
+          },
+          {
+            "timestamp": 1791401979806,
             "currentSupply": 260000000,
             "burnedTokens": 380000000
           }
@@ -2524,6 +2899,11 @@
             "timestamp": 1791400871995,
             "currentSupply": 2215400000,
             "burnedTokens": 814903031
+          },
+          {
+            "timestamp": 1791401979806,
+            "currentSupply": 2215400000,
+            "burnedTokens": 814903031
           }
         ]
       },
@@ -2550,6 +2930,11 @@
           },
           {
             "timestamp": 1791400871995,
+            "currentSupply": 328193104,
+            "burnedTokens": 8100000
+          },
+          {
+            "timestamp": 1791401979806,
             "currentSupply": 328193104,
             "burnedTokens": 8100000
           }
@@ -2580,6 +2965,11 @@
             "timestamp": 1791400871995,
             "currentSupply": 30453619,
             "burnedTokens": 6200000
+          },
+          {
+            "timestamp": 1791401979806,
+            "currentSupply": 30453619,
+            "burnedTokens": 6200000
           }
         ]
       },
@@ -2606,6 +2996,11 @@
           },
           {
             "timestamp": 1791400871995,
+            "currentSupply": 998500000,
+            "burnedTokens": 3000000
+          },
+          {
+            "timestamp": 1791401979806,
             "currentSupply": 998500000,
             "burnedTokens": 3000000
           }
@@ -2636,6 +3031,11 @@
             "timestamp": 1791400871995,
             "currentSupply": 99800000,
             "burnedTokens": 400000
+          },
+          {
+            "timestamp": 1791401979806,
+            "currentSupply": 99800000,
+            "burnedTokens": 400000
           }
         ]
       },
@@ -2664,6 +3064,11 @@
             "timestamp": 1791400871995,
             "currentSupply": 99500000,
             "burnedTokens": 1000000
+          },
+          {
+            "timestamp": 1791401979806,
+            "currentSupply": 99500000,
+            "burnedTokens": 1000000
           }
         ]
       },
@@ -2690,6 +3095,11 @@
           },
           {
             "timestamp": 1791400871995,
+            "currentSupply": 99600000,
+            "burnedTokens": 800000
+          },
+          {
+            "timestamp": 1791401979806,
             "currentSupply": 99600000,
             "burnedTokens": 800000
           }
