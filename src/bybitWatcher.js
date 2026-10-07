@@ -975,6 +975,315 @@ export const SPECIAL_TOKEN_METRICS = {
     slug: 'official-trump',
     tvlFallback: 35000000,
     chains: ['Solana']
+  },
+  METH: {
+    name: 'Mantle Staked ETH',
+    slug: 'mantle-staked-eth',
+    tvlFallback: 1420000000,
+    revFallback7d: 850000,
+    chains: ['Mantle', 'Ethereum']
+  },
+  XAUT: {
+    name: 'Tether Gold (Physical Reserves)',
+    slug: 'tether-gold',
+    tvlFallback: 680000000,
+    chains: ['Ethereum']
+  },
+  QNT: {
+    name: 'Quant Network (Overledger)',
+    slug: 'quant-network',
+    tvlFallback: 85000000,
+    chains: ['Ethereum']
+  },
+  FET: {
+    name: 'ASI Alliance (Fetch.ai Staking)',
+    slug: 'fetch-ai',
+    tvlFallback: 280000000,
+    chains: ['Ethereum', 'Artificial Superintelligence Alliance']
+  },
+  SAND: {
+    name: 'The Sandbox (Staking Pools)',
+    slug: 'the-sandbox',
+    tvlFallback: 18500000,
+    chains: ['Ethereum']
+  },
+  MANA: {
+    name: 'Decentraland (DAO Treasury & LAND)',
+    slug: 'decentraland',
+    tvlFallback: 12400000,
+    chains: ['Ethereum']
+  },
+  GRASS: {
+    name: 'Grass Network (DePIN Staking)',
+    slug: 'grass',
+    tvlFallback: 45000000,
+    chains: ['Solana']
+  },
+  KAS: {
+    name: 'Kaspa Network',
+    slug: 'kaspa',
+    isChain: true,
+    chainKey: 'Kaspa',
+    tvlFallback: 65000000,
+    chains: ['Kaspa']
+  },
+  MINA: {
+    name: 'Mina Protocol (zk-SNARKs Staking)',
+    slug: 'mina-protocol',
+    isChain: true,
+    chainKey: 'Mina',
+    tvlFallback: 35000000,
+    chains: ['Mina Protocol']
+  },
+  HNT: {
+    name: 'Helium Network (veHNT SubDAOs)',
+    slug: 'helium',
+    tvlFallback: 38000000,
+    chains: ['Solana']
+  },
+  UMA: {
+    name: 'UMA Protocol (Oracle DVM)',
+    slug: 'uma',
+    tvlFallback: 24500000,
+    revFallback7d: 14000,
+    chains: ['Ethereum']
+  },
+  BAT: {
+    name: 'Basic Attention Token (Rewards Escrow)',
+    slug: 'basic-attention-token',
+    tvlFallback: 15000000,
+    chains: ['Ethereum']
+  },
+  JASMY: {
+    name: 'JasmyCoin (Data Lockers)',
+    slug: 'jasmy',
+    tvlFallback: 22000000,
+    chains: ['Ethereum']
+  },
+  CARV: {
+    name: 'CARV Protocol (Verifier Nodes)',
+    slug: 'carv',
+    tvlFallback: 16500000,
+    chains: ['Base', 'Arbitrum']
+  },
+  PLUME: {
+    name: 'Plume Network (RWA Collateral)',
+    slug: 'plume',
+    tvlFallback: 25000000,
+    chains: ['Plume Network']
+  },
+  IO: {
+    name: 'io.net (GPU Compute Staking)',
+    slug: 'io-net',
+    tvlFallback: 28000000,
+    chains: ['Solana']
+  },
+  CTC: {
+    name: 'Creditcoin (Lending Volume)',
+    slug: 'creditcoin',
+    tvlFallback: 14000000,
+    chains: ['Creditcoin', 'Ethereum']
+  },
+  AIOZ: {
+    name: 'AIOZ Network (dCDN Nodes)',
+    slug: 'aioz-network',
+    tvlFallback: 18000000,
+    chains: ['AIOZ Network']
+  },
+  ENSO: {
+    name: 'Enso Finance (Routing Liquidity)',
+    slug: 'enso',
+    tvlFallback: 12000000,
+    chains: ['Ethereum']
+  },
+  BRETT: {
+    name: 'Brett (Aerodrome DEX Liquidity)',
+    slug: 'brett',
+    tvlFallback: 18500000,
+    chains: ['Base']
+  },
+  DEGEN: {
+    name: 'Degen (Uniswap Base Liquidity)',
+    slug: 'degen',
+    tvlFallback: 8200000,
+    chains: ['Base']
+  },
+  TOSHI: {
+    name: 'Toshi (Uniswap Base Liquidity)',
+    slug: 'toshi',
+    tvlFallback: 6500000,
+    chains: ['Base']
+  },
+  B3: {
+    name: 'B3.fun (Gaming Liquidity)',
+    slug: 'b3',
+    tvlFallback: 4200000,
+    chains: ['Base']
+  },
+  AIXBT: {
+    name: 'aixbt (Virtuals Liquidity)',
+    slug: 'aixbt',
+    tvlFallback: 5100000,
+    chains: ['Base']
+  },
+  ZEREBRO: {
+    name: 'zerebro (Raydium Liquidity)',
+    slug: 'zerebro',
+    tvlFallback: 7800000,
+    chains: ['Solana']
+  },
+  SPX: {
+    name: 'SPX6900 (Uniswap DEX Liquidity)',
+    slug: 'spx6900',
+    tvlFallback: 18200000,
+    chains: ['Ethereum', 'Solana']
+  },
+  PNUT: {
+    name: 'Peanut the Squirrel (Raydium Liquidity)',
+    slug: 'peanut-the-squirrel',
+    tvlFallback: 12400000,
+    chains: ['Solana']
+  },
+  POPCAT: {
+    name: 'Popcat (Raydium DEX Liquidity)',
+    slug: 'popcat',
+    tvlFallback: 14100000,
+    chains: ['Solana']
+  },
+  MEW: {
+    name: 'cat in a dogs world (Raydium Liquidity)',
+    slug: 'mew',
+    tvlFallback: 9500000,
+    chains: ['Solana']
+  },
+  BOME: {
+    name: 'Book of Meme (Raydium Liquidity)',
+    slug: 'bome',
+    tvlFallback: 11200000,
+    chains: ['Solana']
+  },
+  CHILLGUY: {
+    name: 'Just a chill guy (Raydium Liquidity)',
+    slug: 'chillguy',
+    tvlFallback: 6800000,
+    chains: ['Solana']
+  },
+  ZRX: {
+    name: '0x Protocol (Settlement Liquidity)',
+    slug: '0x',
+    tvlFallback: 15000000,
+    revFallback7d: 22000,
+    chains: ['Ethereum']
+  },
+  C98: {
+    name: 'Coin98 Finance',
+    slug: 'coin98',
+    tvlFallback: 12000000,
+    chains: ['BNB Chain', 'Solana', 'Ethereum']
+  },
+  ID: {
+    name: 'SPACE ID (Domain Staking)',
+    slug: 'space-id',
+    tvlFallback: 14000000,
+    chains: ['BNB Chain', 'Ethereum']
+  },
+  PORTAL: {
+    name: 'Portal Gaming (Staking Pools)',
+    slug: 'portal',
+    tvlFallback: 10500000,
+    chains: ['Ethereum', 'Solana']
+  },
+  TEL: {
+    name: 'Telcoin (Remittance Pools)',
+    slug: 'telcoin',
+    tvlFallback: 15000000,
+    chains: ['Polygon']
+  },
+  ACH: {
+    name: 'Alchemy Pay (Collateral Reserves)',
+    slug: 'alchemy-pay',
+    tvlFallback: 18000000,
+    chains: ['Ethereum']
+  },
+  AVA: {
+    name: 'Travala (Booking Staking)',
+    slug: 'travala',
+    tvlFallback: 9000000,
+    chains: ['Ethereum', 'BNB Chain']
+  },
+  FIDA: {
+    name: 'Bonfida (Solana Name Service)',
+    slug: 'bonfida',
+    tvlFallback: 8500000,
+    chains: ['Solana']
+  },
+  GMT: {
+    name: 'STEPN (Marketplace Liquidity)',
+    slug: 'stepn',
+    tvlFallback: 12000000,
+    chains: ['Solana']
+  },
+  SC: {
+    name: 'Sia (Storage Renter Contracts)',
+    slug: 'siacoin',
+    tvlFallback: 8000000,
+    chains: ['Sia']
+  },
+  QTUM: {
+    name: 'Qtum (PoS Staking)',
+    slug: 'qtum',
+    isChain: true,
+    chainKey: 'Qtum',
+    tvlFallback: 15000000,
+    chains: ['Qtum']
+  },
+  ENJ: {
+    name: 'Enjin (Matrixchain Staking)',
+    slug: 'enjin',
+    tvlFallback: 16000000,
+    chains: ['Enjin Blockchain']
+  },
+  AGLD: {
+    name: 'Adventure Gold (Loot DAO)',
+    slug: 'adventure-gold',
+    tvlFallback: 6500000,
+    chains: ['Ethereum']
+  },
+  NOT: {
+    name: 'Notcoin (TON Staking Pools)',
+    slug: 'notcoin',
+    tvlFallback: 24000000,
+    chains: ['TON Network']
+  },
+  DOGS: {
+    name: 'Dogs (TON DeDust Pools)',
+    slug: 'dogs',
+    tvlFallback: 15000000,
+    chains: ['TON Network']
+  },
+  CATI: {
+    name: 'Catizen (TON Staking)',
+    slug: 'catizen',
+    tvlFallback: 12000000,
+    chains: ['TON Network']
+  },
+  HMSTR: {
+    name: 'Hamster Kombat (TON Pools)',
+    slug: 'hamster-kombat',
+    tvlFallback: 18000000,
+    chains: ['TON Network']
+  },
+  MAJOR: {
+    name: 'Major (TON Pools)',
+    slug: 'major',
+    tvlFallback: 8000000,
+    chains: ['TON Network']
+  },
+  HTX: {
+    name: 'Huobi Token (Exchange Reserves)',
+    slug: 'huobi-token',
+    tvlFallback: 45000000,
+    chains: ['Ethereum']
   }
 };
 

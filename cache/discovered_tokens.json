@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1791405178553,
+  "updatedAt": 1791406190117,
   "protocols": {
     "marginfi-lst": {
       "hasToken": false,
@@ -4304,6 +4304,240 @@
       "hasBurn": false,
       "cumulativeHoldersRevUsd": 0,
       "checkedAt": 1791405178553
+    },
+    "tangent-finance": {
+      "hasToken": false,
+      "checkedAt": 1791406186909
+    },
+    "loan-meme": {
+      "hasToken": false,
+      "checkedAt": 1791406186909
+    },
+    "propr": {
+      "hasToken": false,
+      "checkedAt": 1791406186909
+    },
+    "brix": {
+      "hasToken": false,
+      "checkedAt": 1791406186909
+    },
+    "pocket-universe": {
+      "hasToken": false,
+      "checkedAt": 1791406186909
+    },
+    "bungee-bridge-aggregator": {
+      "hasToken": false,
+      "checkedAt": 1791406186909
+    },
+    "socket-protocol": {
+      "hasToken": false,
+      "checkedAt": 1791406186909
+    },
+    "supernova-cl": {
+      "hasToken": false,
+      "checkedAt": 1791406186909
+    },
+    "debank-cloud": {
+      "hasToken": false,
+      "checkedAt": 1791406186909
+    },
+    "clober-v2": {
+      "hasToken": false,
+      "checkedAt": 1791406190117
+    },
+    "scoop": {
+      "hasToken": false,
+      "checkedAt": 1791406190117
+    },
+    "time.fun": {
+      "hasToken": false,
+      "checkedAt": 1791406190117
+    },
+    "maverick-v2": {
+      "hasToken": true,
+      "slug": "maverick-v2",
+      "name": "Maverick V2",
+      "symbol": "MAV",
+      "chain": "base",
+      "addressChain": "base",
+      "contractAddress": "0x7448c7456a97769f6cd04f1e83a4a23ccdc46abd",
+      "geckoId": null,
+      "mcap": 0,
+      "priceUsd": 0,
+      "liquidityUsd": 0,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": false,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 0,
+      "checkedAt": 1791406190117
+    },
+    "stargate-v2": {
+      "hasToken": true,
+      "slug": "stargate-v2",
+      "name": "Stargate V2",
+      "symbol": "STG",
+      "chain": "base",
+      "addressChain": "base",
+      "contractAddress": "0xaf5191b0de278c7286d6c7cc6ab6bb8a73ba2cd6",
+      "geckoId": null,
+      "mcap": 0,
+      "priceUsd": 0,
+      "liquidityUsd": 0,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": false,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 0,
+      "checkedAt": 1791406190117
+    },
+    "bmx-freestyle": {
+      "hasToken": false,
+      "checkedAt": 1791406190117
+    },
+    "d2-finance": {
+      "hasToken": false,
+      "checkedAt": 1791406190117
+    },
+    "layerzero-v2": {
+      "hasToken": true,
+      "slug": "layerzero-v2",
+      "name": "LayerZero V2",
+      "symbol": "ZRO",
+      "chain": "base",
+      "addressChain": "ethereum",
+      "contractAddress": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
+      "geckoId": null,
+      "mcap": 0,
+      "priceUsd": 0,
+      "liquidityUsd": 0,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": true,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 3391193,
+      "checkedAt": 1791406190117
+    },
+    "rheo": {
+      "hasToken": false,
+      "checkedAt": 1791406190117
+    },
+    "napier": {
+      "hasToken": false,
+      "checkedAt": 1791406190117
+    },
+    "boson-protocol": {
+      "hasToken": true,
+      "slug": "boson-protocol",
+      "name": "Boson Protocol",
+      "symbol": "BOSON",
+      "chain": "base",
+      "addressChain": "base",
+      "contractAddress": "0xc477d038d5420c6a9e0b031712f61c5120090de9",
+      "geckoId": "boson-protocol",
+      "mcap": 0,
+      "priceUsd": 0,
+      "liquidityUsd": 0,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": false,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 0,
+      "checkedAt": 1791406190117
+    },
+    "zns-connect": {
+      "hasToken": false,
+      "checkedAt": 1791406190117
+    },
+    "bitfi-btc": {
+      "hasToken": false,
+      "checkedAt": 1791406190117
+    },
+    "manifold.xyz": {
+      "hasToken": false,
+      "checkedAt": 1791406190117
+    },
+    "fwx-dex": {
+      "hasToken": true,
+      "slug": "fwx-dex",
+      "name": "FWX DEX",
+      "symbol": "B4FWX",
+      "chain": "base",
+      "addressChain": "avax",
+      "contractAddress": "0x13b1f0579bc895b2ffb835f295fd9b63fef36da0",
+      "geckoId": null,
+      "mcap": 0,
+      "priceUsd": 0,
+      "liquidityUsd": 0,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": false,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 0,
+      "checkedAt": 1791406190117
+    },
+    "dextools": {
+      "hasToken": true,
+      "slug": "dextools",
+      "name": "DEXTools",
+      "symbol": "DEXT",
+      "chain": "base",
+      "addressChain": "base",
+      "contractAddress": "0xfb7b4564402e5500db5bb6d63ae671302777c75a",
+      "geckoId": "dextools",
+      "mcap": 0,
+      "priceUsd": 0,
+      "liquidityUsd": 0,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": true,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 454287,
+      "checkedAt": 1791406190117
+    },
+    "euler-v2": {
+      "hasToken": true,
+      "slug": "euler-v2",
+      "name": "Euler V2",
+      "symbol": "EUL",
+      "chain": "base",
+      "addressChain": "base",
+      "contractAddress": "0xd9fcd98c322942075a5c3860693e9f4f03aae07b",
+      "geckoId": null,
+      "mcap": 0,
+      "priceUsd": 0,
+      "liquidityUsd": 0,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": true,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 3199881,
+      "checkedAt": 1791406190117
+    },
+    "bcraft": {
+      "hasToken": false,
+      "checkedAt": 1791406190117
     }
   }
 }

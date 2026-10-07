@@ -1,13 +1,13 @@
 {
   "success": true,
-  "lastUpdated": "2026-10-07T20:33:03.993Z",
+  "lastUpdated": "2026-10-07T20:49:47.786Z",
   "l1Chain": {
     "name": "Ethereum Mainnet (EVM)",
     "symbol": "ETH",
     "contractAddress": "0x0000000000000000000000000000000000000000",
     "explorerUrl": "https://etherscan.io",
-    "blockHeight": 26142923,
-    "gasPriceGwei": 0.3,
+    "blockHeight": 26143006,
+    "gasPriceGwei": 0.21,
     "activeValidators": 1068420,
     "totalSupply": 120520200,
     "totalBurnedEth": 4524800,
@@ -138,10 +138,10 @@
         "burnedPctOfMax": 11.3,
         "burnVelocity": 11.3,
         "explorerUrl": "https://etherscan.io/token/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
-        "burn24hTokens": 131708,
-        "burn7dTokens": 885078,
-        "burn30dTokens": 3635141,
-        "observedHourlyBurnRate": 1495,
+        "burn24hTokens": 131670,
+        "burn7dTokens": 884822,
+        "burn30dTokens": 3634092,
+        "observedHourlyBurnRate": 1492,
         "activeOnChainDays": 365,
         "source": "100% Direct On-Chain RPC Supply Contraction"
       },
@@ -928,7 +928,7 @@
       "contractAddress": "0x5A98FcBEA516Cf06857215779Fd812CA3beF1B32",
       "logo": "https://icons.llamao.fi/icons/protocols/lido",
       "explorerUrl": "https://etherscan.io/token/0x5A98FcBEA516Cf06857215779Fd812CA3beF1B32",
-      "mcap": 360597963.3912839,
+      "mcap": 360692288.5553498,
       "peRatio": 9,
       "pfRatio": 0.6,
       "timeframeData": {
@@ -1189,7 +1189,7 @@
       "contractAddress": "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
       "logo": "https://icons.llamao.fi/icons/protocols/convex-finance",
       "explorerUrl": "https://etherscan.io/token/0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
-      "mcap": 196728898.2345919,
+      "mcap": 196412190.9496486,
       "peRatio": 9.5,
       "pfRatio": 5,
       "timeframeData": {
@@ -1711,8 +1711,8 @@
       "contractAddress": "0xDEf1CA1fb7FBcDC777520aa7f396b4E015F497aB",
       "logo": "https://icons.llamao.fi/icons/protocols/cowswap",
       "explorerUrl": "https://etherscan.io/token/0xDEf1CA1fb7FBcDC777520aa7f396b4E015F497aB",
-      "mcap": 83165715.51848076,
-      "peRatio": 14.4,
+      "mcap": 83431905.06866917,
+      "peRatio": 14.5,
       "pfRatio": 8.6,
       "timeframeData": {
         "24h": {
@@ -1798,7 +1798,7 @@
       "contractAddress": "0xa5f2211b9b8170f694421f2046281775e8468044",
       "logo": "https://icons.llamao.fi/icons/protocols/thorswap",
       "explorerUrl": "https://etherscan.io/token/0xa5f2211b9b8170f694421f2046281775e8468044",
-      "mcap": 8892782.400218232,
+      "mcap": 8912474.984345095,
       "peRatio": 2,
       "pfRatio": 2,
       "timeframeData": {
@@ -1810,7 +1810,7 @@
           "revSharePct": 100,
           "arr": 5564949,
           "periodYield": 0.17,
-          "apy": 62.6,
+          "apy": 62.4,
           "delta": -42.94
         },
         "7d": {
@@ -1821,7 +1821,7 @@
           "revSharePct": 100,
           "arr": 4463862,
           "periodYield": 0.96,
-          "apy": 50.2,
+          "apy": 50.1,
           "delta": 18.83
         },
         "30d": {
@@ -1831,8 +1831,8 @@
           "lpSharePct": 0,
           "revSharePct": 100,
           "arr": 2940077,
-          "periodYield": 2.72,
-          "apy": 33.1,
+          "periodYield": 2.71,
+          "apy": 33,
           "delta": 18.83
         }
       },
@@ -1846,7 +1846,7 @@
       "lpSharePct": 0,
       "revSharePct": 100,
       "weeklyYieldMc": 0.96,
-      "annualizedYieldMc": 50.2,
+      "annualizedYieldMc": 50.1,
       "annualizedRevenue": 4463862,
       "whaleRisk": {
         "holdersCount": 48500,
@@ -1972,8 +1972,8 @@
       "contractAddress": "0x9D65fF81a3c488d585bBfb0Bfe3c7707c7917f54",
       "logo": "https://icons.llamao.fi/icons/protocols/ssv-network",
       "explorerUrl": "https://etherscan.io/token/0x9D65fF81a3c488d585bBfb0Bfe3c7707c7917f54",
-      "mcap": 42353307.72290234,
-      "peRatio": 11.1,
+      "mcap": 42433388.38487792,
+      "peRatio": 11.2,
       "pfRatio": 11,
       "timeframeData": {
         "24h": {
@@ -2059,9 +2059,9 @@
       "contractAddress": "0x41d5d79431a913c4ae7d69a668ecdfe5ff9dfb68",
       "logo": "https://icons.llamao.fi/icons/protocols/inverse-finance-firm",
       "explorerUrl": "https://etherscan.io/token/0x41d5d79431a913c4ae7d69a668ecdfe5ff9dfb68",
-      "mcap": 7219947.913894737,
-      "peRatio": 2.1,
-      "pfRatio": 2.1,
+      "mcap": 6999111.1309103,
+      "peRatio": 2,
+      "pfRatio": 2,
       "timeframeData": {
         "24h": {
           "fees": 9707,
@@ -2070,8 +2070,8 @@
           "lpSharePct": 0,
           "revSharePct": 100,
           "arr": 3545482,
-          "periodYield": 0.13,
-          "apy": 49.1,
+          "periodYield": 0.14,
+          "apy": 50.7,
           "delta": 0.97
         },
         "7d": {
@@ -2081,8 +2081,8 @@
           "lpSharePct": 0,
           "revSharePct": 100,
           "arr": 3504121,
-          "periodYield": 0.93,
-          "apy": 48.5,
+          "periodYield": 0.96,
+          "apy": 50.1,
           "delta": 3.02
         },
         "30d": {
@@ -2092,8 +2092,8 @@
           "lpSharePct": 0.2,
           "revSharePct": 99.8,
           "arr": 3318783,
-          "periodYield": 3.78,
-          "apy": 46,
+          "periodYield": 3.9,
+          "apy": 47.4,
           "delta": 3.02
         }
       },
@@ -2106,8 +2106,8 @@
       "lpShare7d": 0,
       "lpSharePct": 0,
       "revSharePct": 100,
-      "weeklyYieldMc": 0.93,
-      "annualizedYieldMc": 48.5,
+      "weeklyYieldMc": 0.96,
+      "annualizedYieldMc": 50.1,
       "annualizedRevenue": 3504121,
       "whaleRisk": {
         "holdersCount": 48500,
@@ -2146,8 +2146,8 @@
       "contractAddress": "0x0f81001ef0a83ecce5ccebf63eb302c70a39a654",
       "logo": "https://icons.llamao.fi/icons/protocols/dolomite",
       "explorerUrl": "https://etherscan.io/token/0x0f81001ef0a83ecce5ccebf63eb302c70a39a654",
-      "mcap": 14729511.525484376,
-      "peRatio": 4.5,
+      "mcap": 14761481.448710106,
+      "peRatio": 4.6,
       "pfRatio": 0.9,
       "timeframeData": {
         "24h": {
@@ -2158,7 +2158,7 @@
           "revSharePct": 20,
           "arr": 3297112,
           "periodYield": 0.06,
-          "apy": 22.4,
+          "apy": 22.3,
           "delta": -2.6
         },
         "7d": {
@@ -2169,7 +2169,7 @@
           "revSharePct": 20,
           "arr": 3237738,
           "periodYield": 0.42,
-          "apy": 22,
+          "apy": 21.9,
           "delta": 5.88
         },
         "30d": {
@@ -2179,7 +2179,7 @@
           "lpSharePct": 80,
           "revSharePct": 20,
           "arr": 2937181,
-          "periodYield": 1.64,
+          "periodYield": 1.63,
           "apy": 19.9,
           "delta": 5.88
         }
@@ -2194,7 +2194,7 @@
       "lpSharePct": 80,
       "revSharePct": 20,
       "weeklyYieldMc": 0.42,
-      "annualizedYieldMc": 22,
+      "annualizedYieldMc": 21.9,
       "annualizedRevenue": 3237738,
       "whaleRisk": {
         "holdersCount": 48500,
@@ -2233,9 +2233,9 @@
       "contractAddress": "0xe76c6c83af64e4c60245d8c7de953df673a7a33d",
       "logo": "https://icons.llamao.fi/icons/protocols/railgun",
       "explorerUrl": "https://etherscan.io/token/0xe76c6c83af64e4c60245d8c7de953df673a7a33d",
-      "mcap": 140010045.1842393,
-      "peRatio": 44.9,
-      "pfRatio": 44.9,
+      "mcap": 140582582.97574496,
+      "peRatio": 45.1,
+      "pfRatio": 45.1,
       "timeframeData": {
         "24h": {
           "fees": 12161,
@@ -2267,7 +2267,7 @@
           "revSharePct": 100,
           "arr": 3864790,
           "periodYield": 0.23,
-          "apy": 2.8,
+          "apy": 2.7,
           "delta": -44.78
         }
       },
@@ -2320,9 +2320,9 @@
       "contractAddress": "0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72",
       "logo": "https://icons.llamao.fi/icons/protocols/ens",
       "explorerUrl": "https://etherscan.io/token/0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72",
-      "mcap": 271763832.548678,
-      "peRatio": 89.5,
-      "pfRatio": 89.5,
+      "mcap": 272587526.99583197,
+      "peRatio": 89.8,
+      "pfRatio": 89.8,
       "timeframeData": {
         "24h": {
           "fees": 8832,
@@ -2494,7 +2494,7 @@
       "contractAddress": "0x365accfca291e7d3914637abf1f7635db165bb09",
       "logo": "https://icons.llamao.fi/icons/protocols/fx-protocol",
       "explorerUrl": "https://etherscan.io/token/0x365accfca291e7d3914637abf1f7635db165bb09",
-      "mcap": 5099072.389694195,
+      "mcap": 5110973.114082648,
       "peRatio": 1.8,
       "pfRatio": 0.6,
       "timeframeData": {
@@ -2517,7 +2517,7 @@
           "revSharePct": 35.8,
           "arr": 2877711,
           "periodYield": 1.08,
-          "apy": 56.4,
+          "apy": 56.3,
           "delta": -1.92
         },
         "30d": {
@@ -2527,8 +2527,8 @@
           "lpSharePct": 66.5,
           "revSharePct": 33.5,
           "arr": 2511365,
-          "periodYield": 4.05,
-          "apy": 49.3,
+          "periodYield": 4.04,
+          "apy": 49.1,
           "delta": -1.92
         }
       },
@@ -2542,7 +2542,7 @@
       "lpSharePct": 64.2,
       "revSharePct": 35.8,
       "weeklyYieldMc": 1.08,
-      "annualizedYieldMc": 56.4,
+      "annualizedYieldMc": 56.3,
       "annualizedRevenue": 2877711,
       "whaleRisk": {
         "holdersCount": 48500,
@@ -2929,7 +2929,7 @@
       "contractAddress": "0xC4441c2BE5d8fA8126822B9929CA0b81Ea0DE38E",
       "logo": "https://icons.llamao.fi/icons/protocols/usual-usd0",
       "explorerUrl": "https://etherscan.io/token/0xC4441c2BE5d8fA8126822B9929CA0b81Ea0DE38E",
-      "mcap": 23709601.721949685,
+      "mcap": 23714672.576309446,
       "peRatio": 10.6,
       "pfRatio": 10.1,
       "timeframeData": {
@@ -3364,9 +3364,9 @@
       "contractAddress": "0xbb0e17ef65f82ab018d8edd776e8dd940327b28b",
       "logo": "https://icons.llamao.fi/icons/protocols/axie-infinity",
       "explorerUrl": "https://etherscan.io/token/0xbb0e17ef65f82ab018d8edd776e8dd940327b28b",
-      "mcap": 212808742.73646504,
-      "peRatio": 126.8,
-      "pfRatio": 126.8,
+      "mcap": 213511112.19911397,
+      "peRatio": 127.3,
+      "pfRatio": 127.3,
       "timeframeData": {
         "24h": {
           "fees": 3132,
@@ -3625,9 +3625,9 @@
       "contractAddress": "0xd7c49cee7e9188cca6ad8ff264c1da2e69d4cf3b",
       "logo": "https://icons.llamao.fi/icons/protocols/nexus-mutual",
       "explorerUrl": "https://etherscan.io/token/0xd7c49cee7e9188cca6ad8ff264c1da2e69d4cf3b",
-      "mcap": 108270578.3176491,
-      "peRatio": 66.1,
-      "pfRatio": 33,
+      "mcap": 108576704.75627826,
+      "peRatio": 66.3,
+      "pfRatio": 33.1,
       "timeframeData": {
         "24h": {
           "fees": 33804,
@@ -3799,9 +3799,9 @@
       "contractAddress": "0x64aa3364F17a4D01c6f1751Fd97C2BD3D7e7f1D5",
       "logo": "https://icons.llamao.fi/icons/protocols/olympus-dao",
       "explorerUrl": "https://etherscan.io/token/0x64aa3364F17a4D01c6f1751Fd97C2BD3D7e7f1D5",
-      "mcap": 301246967.9151391,
-      "peRatio": 188.8,
-      "pfRatio": 188.8,
+      "mcap": 300887220.28322786,
+      "peRatio": 188.5,
+      "pfRatio": 188.5,
       "timeframeData": {
         "24h": {
           "fees": 4318,
@@ -3886,7 +3886,7 @@
       "contractAddress": "0x9f0c013016e8656bc256f948cd4b79ab25c7b94d",
       "logo": "https://icons.llamao.fi/icons/protocols/meth-protocol",
       "explorerUrl": "https://etherscan.io/token/0x9f0c013016e8656bc256f948cd4b79ab25c7b94d",
-      "mcap": 1956199.5421868654,
+      "mcap": 1956178.430541234,
       "peRatio": 1.2,
       "pfRatio": 0.1,
       "timeframeData": {
@@ -4060,7 +4060,7 @@
       "contractAddress": "0xda2ffa104356688e74d9340519b8c17f00d7752e",
       "logo": "https://icons.llamao.fi/icons/protocols/blackrock-buidl",
       "explorerUrl": "https://etherscan.io/token/0xda2ffa104356688e74d9340519b8c17f00d7752e",
-      "mcap": 4209132.527489713,
+      "mcap": 4209246.404696032,
       "peRatio": 2.8,
       "pfRatio": 0.2,
       "timeframeData": {
@@ -4321,9 +4321,9 @@
       "contractAddress": "DBRiDgJAMsM95moTzJs7M9LnkGErpbv9v6CUR1DXnUu5",
       "logo": "https://icons.llamao.fi/icons/protocols/debridge",
       "explorerUrl": "https://etherscan.io/token/DBRiDgJAMsM95moTzJs7M9LnkGErpbv9v6CUR1DXnUu5",
-      "mcap": 109707304.19855413,
-      "peRatio": 81.4,
-      "pfRatio": 81.4,
+      "mcap": 109800022.37651806,
+      "peRatio": 81.5,
+      "pfRatio": 81.5,
       "timeframeData": {
         "24h": {
           "fees": 2513,
@@ -4582,9 +4582,9 @@
       "contractAddress": "0x0000000000000000000000000000000000000000",
       "logo": "https://icons.llamao.fi/icons/protocols/thorchain-dex",
       "explorerUrl": "https://etherscan.io/token/0x0000000000000000000000000000000000000000",
-      "mcap": 236163650.31314048,
-      "peRatio": 223.3,
-      "pfRatio": 66.3,
+      "mcap": 236774538.9233487,
+      "peRatio": 223.9,
+      "pfRatio": 66.5,
       "timeframeData": {
         "24h": {
           "fees": 8117,
@@ -4756,9 +4756,9 @@
       "contractAddress": "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9",
       "logo": "https://icons.llamao.fi/icons/protocols/aave-v2",
       "explorerUrl": "https://etherscan.io/token/0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9",
-      "mcap": 2660233334.945646,
-      "peRatio": 2697.4,
-      "pfRatio": 2298.8,
+      "mcap": 2662145711.6114554,
+      "peRatio": 2699.3,
+      "pfRatio": 2300.4,
       "timeframeData": {
         "24h": {
           "fees": 2106,
@@ -4930,7 +4930,7 @@
       "contractAddress": "0xED6E000dEF95780fb89734c07EE2ce9F6dcAf110",
       "logo": "https://icons.llamao.fi/icons/protocols/definitive",
       "explorerUrl": "https://etherscan.io/token/0xED6E000dEF95780fb89734c07EE2ce9F6dcAf110",
-      "mcap": 32442972.272054672,
+      "mcap": 32391517.144253384,
       "peRatio": 34.2,
       "pfRatio": 34.2,
       "timeframeData": {
@@ -5017,7 +5017,7 @@
       "contractAddress": "0x419905009e4656fdc02418c7df35b1e61ed5f726",
       "logo": "https://icons.llamao.fi/icons/protocols/resupply",
       "explorerUrl": "https://etherscan.io/token/0x419905009e4656fdc02418c7df35b1e61ed5f726",
-      "mcap": 3333769.1256149295,
+      "mcap": 3341580.7899149857,
       "peRatio": 3.5,
       "pfRatio": 2.6,
       "timeframeData": {
@@ -5029,7 +5029,7 @@
           "revSharePct": 75,
           "arr": 1745165,
           "periodYield": 0.14,
-          "apy": 52.3,
+          "apy": 52.2,
           "delta": 89.75
         },
         "7d": {
@@ -5039,7 +5039,7 @@
           "lpSharePct": 25,
           "revSharePct": 75,
           "arr": 947488,
-          "periodYield": 0.55,
+          "periodYield": 0.54,
           "apy": 28.4,
           "delta": -6.28
         },
@@ -5050,7 +5050,7 @@
           "lpSharePct": 25,
           "revSharePct": 75,
           "arr": 968221,
-          "periodYield": 2.39,
+          "periodYield": 2.38,
           "apy": 29,
           "delta": -6.28
         }
@@ -5064,7 +5064,7 @@
       "lpShare7d": 6055,
       "lpSharePct": 25,
       "revSharePct": 75,
-      "weeklyYieldMc": 0.55,
+      "weeklyYieldMc": 0.54,
       "annualizedYieldMc": 28.4,
       "annualizedRevenue": 947488,
       "whaleRisk": {
@@ -5278,7 +5278,7 @@
       "contractAddress": "0xb48c6b24f36307c7a1f2a9281e978a9ef2902ba5",
       "logo": "https://icons.llamao.fi/icons/protocols/immunefi",
       "explorerUrl": "https://etherscan.io/token/0xb48c6b24f36307c7a1f2a9281e978a9ef2902ba5",
-      "mcap": 2032490.3834548572,
+      "mcap": 2031999.35059183,
       "peRatio": 2.5,
       "pfRatio": 2.5,
       "timeframeData": {
@@ -5378,7 +5378,7 @@
           "arr": 0,
           "periodYield": 0,
           "apy": 0,
-          "delta": 79445.16
+          "delta": 80048.39
         },
         "7d": {
           "fees": 14805,
@@ -5452,9 +5452,9 @@
       "contractAddress": "0x5afe3855358e112b5647b952709e6165e1c1eeee",
       "logo": "https://icons.llamao.fi/icons/protocols/safe",
       "explorerUrl": "https://etherscan.io/token/0x5afe3855358e112b5647b952709e6165e1c1eeee",
-      "mcap": 83921040.39783494,
-      "peRatio": 114.7,
-      "pfRatio": 114.7,
+      "mcap": 84576787.6557351,
+      "peRatio": 115.6,
+      "pfRatio": 115.6,
       "timeframeData": {
         "24h": {
           "fees": 0,
@@ -5626,9 +5626,9 @@
       "contractAddress": "0x4e67db19044549ff420860834c91b45bad298722",
       "logo": "https://icons.llamao.fi/icons/protocols/zipcoin",
       "explorerUrl": "https://etherscan.io/token/0x4e67db19044549ff420860834c91b45bad298722",
-      "mcap": 13784987.824981699,
-      "peRatio": 22.1,
-      "pfRatio": 22.1,
+      "mcap": 14427888.444490433,
+      "peRatio": 23.1,
+      "pfRatio": 23.1,
       "timeframeData": {
         "24h": {
           "fees": 442,
@@ -5638,7 +5638,7 @@
           "revSharePct": 100,
           "arr": 161441,
           "periodYield": 0,
-          "apy": 1.2,
+          "apy": 1.1,
           "delta": 174.53
         },
         "7d": {
@@ -5648,8 +5648,8 @@
           "lpSharePct": 0,
           "revSharePct": 100,
           "arr": 623438,
-          "periodYield": 0.09,
-          "apy": 4.5,
+          "periodYield": 0.08,
+          "apy": 4.3,
           "delta": 3175.89
         },
         "30d": {
@@ -5660,7 +5660,7 @@
           "revSharePct": 100,
           "arr": 149959,
           "periodYield": 0.09,
-          "apy": 1.1,
+          "apy": 1,
           "delta": 3175.89
         }
       },
@@ -5673,8 +5673,8 @@
       "lpShare7d": 0,
       "lpSharePct": 0,
       "revSharePct": 100,
-      "weeklyYieldMc": 0.09,
-      "annualizedYieldMc": 4.5,
+      "weeklyYieldMc": 0.08,
+      "annualizedYieldMc": 4.3,
       "annualizedRevenue": 623438,
       "whaleRisk": {
         "holdersCount": 48500,
@@ -5713,7 +5713,7 @@
       "contractAddress": "0x092baadb7def4c3981454dd9c0a0d7ff07bcfc86",
       "logo": "https://icons.llamao.fi/icons/protocols/morpheusai",
       "explorerUrl": "https://etherscan.io/token/0x092baadb7def4c3981454dd9c0a0d7ff07bcfc86",
-      "mcap": 11578156.816170355,
+      "mcap": 11585778.768534238,
       "peRatio": 19.7,
       "pfRatio": 19.7,
       "timeframeData": {
@@ -5887,9 +5887,9 @@
       "contractAddress": "0x320623b8e4ff03373931769a31fc52a4e78b5d70",
       "logo": "https://icons.llamao.fi/icons/protocols/reserve",
       "explorerUrl": "https://etherscan.io/token/0x320623b8e4ff03373931769a31fc52a4e78b5d70",
-      "mcap": 101585593.08108796,
-      "peRatio": 190.8,
-      "pfRatio": 112.5,
+      "mcap": 101679471.47077532,
+      "peRatio": 191,
+      "pfRatio": 112.6,
       "timeframeData": {
         "24h": {
           "fees": 3420,
@@ -6322,8 +6322,8 @@
       "contractAddress": "0x3b50805453023a91a8bf641e279401a0b23fa6f9",
       "logo": "https://icons.llamao.fi/icons/protocols/renzo",
       "explorerUrl": "https://etherscan.io/token/0x3b50805453023a91a8bf641e279401a0b23fa6f9",
-      "mcap": 34673806.30239209,
-      "peRatio": 75.2,
+      "mcap": 34650850.500533886,
+      "peRatio": 75.1,
       "pfRatio": 11.7,
       "timeframeData": {
         "24h": {
@@ -6409,8 +6409,8 @@
       "contractAddress": "0xc19d38925f9f645337b1d1f37baf3c0647a48e50",
       "logo": "https://icons.llamao.fi/icons/protocols/gaib",
       "explorerUrl": "https://etherscan.io/token/0xc19d38925f9f645337b1d1f37baf3c0647a48e50",
-      "mcap": 5178921.695911995,
-      "peRatio": 11.7,
+      "mcap": 5162026.957445368,
+      "peRatio": 11.6,
       "pfRatio": 2.3,
       "timeframeData": {
         "24h": {
@@ -6670,7 +6670,7 @@
       "contractAddress": "0x0954906da0Bf32d5479e25f46056d22f08464cab",
       "logo": "https://icons.llamao.fi/icons/protocols/index-coop",
       "explorerUrl": "https://etherscan.io/token/0x0954906da0Bf32d5479e25f46056d22f08464cab",
-      "mcap": 1841199.1733501018,
+      "mcap": 1859342.2116106288,
       "peRatio": 4.9,
       "pfRatio": 4.9,
       "timeframeData": {
@@ -6693,7 +6693,7 @@
           "revSharePct": 100,
           "arr": 376712,
           "periodYield": 0.39,
-          "apy": 20.5,
+          "apy": 20.3,
           "delta": -1.7
         },
         "30d": {
@@ -6703,8 +6703,8 @@
           "lpSharePct": 0,
           "revSharePct": 100,
           "arr": 401780,
-          "periodYield": 1.79,
-          "apy": 21.8,
+          "periodYield": 1.78,
+          "apy": 21.6,
           "delta": -1.7
         }
       },
@@ -6718,7 +6718,7 @@
       "lpSharePct": 0,
       "revSharePct": 100,
       "weeklyYieldMc": 0.39,
-      "annualizedYieldMc": 20.5,
+      "annualizedYieldMc": 20.3,
       "annualizedRevenue": 376712,
       "whaleRisk": {
         "holdersCount": 48500,
@@ -7018,7 +7018,7 @@
       "contractAddress": "0xda2ffa104356688e74d9340519b8c17f00d7752e",
       "logo": "https://icons.llamao.fi/icons/protocols/securitize-tokenized-aaa-clo-fund",
       "explorerUrl": "https://etherscan.io/token/0xda2ffa104356688e74d9340519b8c17f00d7752e",
-      "mcap": 4209132.527489713,
+      "mcap": 4209246.404696032,
       "peRatio": 13.5,
       "pfRatio": 0.8,
       "timeframeData": {
@@ -7105,7 +7105,7 @@
       "contractAddress": "0x890a5122aa1da30fec4286de7904ff808f0bd74a",
       "logo": "https://icons.llamao.fi/icons/protocols/mainstreet",
       "explorerUrl": "https://etherscan.io/token/0x890a5122aa1da30fec4286de7904ff808f0bd74a",
-      "mcap": 39519777.850327976,
+      "mcap": 39518361.64747052,
       "peRatio": 129.3,
       "pfRatio": 12.9,
       "timeframeData": {
@@ -7192,9 +7192,9 @@
       "contractAddress": "0x111111111117dc0aa78b770fa6a738034120c302",
       "logo": "https://icons.llamao.fi/icons/protocols/1inch-aqua",
       "explorerUrl": "https://etherscan.io/token/0x111111111117dc0aa78b770fa6a738034120c302",
-      "mcap": 138290162.90504354,
-      "peRatio": 491,
-      "pfRatio": 122,
+      "mcap": 138500919.10039952,
+      "peRatio": 491.7,
+      "pfRatio": 122.2,
       "timeframeData": {
         "24h": {
           "fees": 132,
@@ -7279,8 +7279,8 @@
       "contractAddress": "0x30d20208d987713f46dfd34ef128bb16c404d10f",
       "logo": "https://icons.llamao.fi/icons/protocols/stader",
       "explorerUrl": "https://etherscan.io/token/0x30d20208d987713f46dfd34ef128bb16c404d10f",
-      "mcap": 8651357.923740694,
-      "peRatio": 31.1,
+      "mcap": 8659687.91501911,
+      "peRatio": 31.2,
       "pfRatio": 1.7,
       "timeframeData": {
         "24h": {
@@ -7453,7 +7453,7 @@
       "contractAddress": "0x00bac91fd8f5b4a0dc03c8021139b76f6549ee7e",
       "logo": "https://icons.llamao.fi/icons/protocols/kaio",
       "explorerUrl": "https://etherscan.io/token/0x00bac91fd8f5b4a0dc03c8021139b76f6549ee7e",
-      "mcap": 13845390.186362447,
+      "mcap": 13858297.94526781,
       "peRatio": 54.6,
       "pfRatio": 54.6,
       "timeframeData": {
@@ -8062,8 +8062,8 @@
       "contractAddress": "0x01791f726b4103694969820be083196cc7c045ff",
       "logo": "https://icons.llamao.fi/icons/protocols/yield-basis",
       "explorerUrl": "https://etherscan.io/token/0x01791f726b4103694969820be083196cc7c045ff",
-      "mcap": 20765001.969591387,
-      "peRatio": 110.5,
+      "mcap": 20849090.860718686,
+      "peRatio": 111,
       "pfRatio": 11.2,
       "timeframeData": {
         "24h": {
@@ -8149,9 +8149,9 @@
       "contractAddress": "0xfb7b4564402e5500db5bb6d63ae671302777c75a",
       "logo": "https://icons.llamao.fi/icons/protocols/dextools",
       "explorerUrl": "https://etherscan.io/token/0xfb7b4564402e5500db5bb6d63ae671302777c75a",
-      "mcap": 6353801.240597043,
-      "peRatio": 34.1,
-      "pfRatio": 34.1,
+      "mcap": 6368329.333633279,
+      "peRatio": 34.2,
+      "pfRatio": 34.2,
       "timeframeData": {
         "24h": {
           "fees": 388,
@@ -8182,7 +8182,7 @@
           "lpSharePct": 0,
           "revSharePct": 100,
           "arr": 204992,
-          "periodYield": 0.27,
+          "periodYield": 0.26,
           "apy": 3.2,
           "delta": -25.78
         }
@@ -8236,9 +8236,9 @@
       "contractAddress": "0xB1F1ee126e9c96231Cc3d3fAD7C08b4cf873b1f1",
       "logo": "https://icons.llamao.fi/icons/protocols/beefy",
       "explorerUrl": "https://etherscan.io/token/0xB1F1ee126e9c96231Cc3d3fAD7C08b4cf873b1f1",
-      "mcap": 5426581.903884291,
-      "peRatio": 29.9,
-      "pfRatio": 28.3,
+      "mcap": 5408344.254708203,
+      "peRatio": 29.8,
+      "pfRatio": 28.2,
       "timeframeData": {
         "24h": {
           "fees": 0,
@@ -8259,7 +8259,7 @@
           "revSharePct": 94.6,
           "arr": 181395,
           "periodYield": 0.06,
-          "apy": 3.3,
+          "apy": 3.4,
           "delta": 4.29
         },
         "30d": {
@@ -8284,7 +8284,7 @@
       "lpSharePct": 5.4,
       "revSharePct": 94.6,
       "weeklyYieldMc": 0.06,
-      "annualizedYieldMc": 3.3,
+      "annualizedYieldMc": 3.4,
       "annualizedRevenue": 181395,
       "whaleRisk": {
         "holdersCount": 48500,
@@ -8323,8 +8323,8 @@
       "contractAddress": "0x526526528f35ac738177003b8773b402b8df8143",
       "logo": "https://icons.llamao.fi/icons/protocols/re",
       "explorerUrl": "https://etherscan.io/token/0x526526528f35ac738177003b8773b402b8df8143",
-      "mcap": 73761643.01523116,
-      "peRatio": 438.8,
+      "mcap": 73687780.70644297,
+      "peRatio": 438.4,
       "pfRatio": 3.3,
       "timeframeData": {
         "24h": {
@@ -8497,7 +8497,7 @@
       "contractAddress": "0xda2ffa104356688e74d9340519b8c17f00d7752e",
       "logo": "https://icons.llamao.fi/icons/protocols/apollo-diversified-credit-securitize-fund",
       "explorerUrl": "https://etherscan.io/token/0xda2ffa104356688e74d9340519b8c17f00d7752e",
-      "mcap": 4209132.527489713,
+      "mcap": 4209246.404696032,
       "peRatio": 29.3,
       "pfRatio": 8,
       "timeframeData": {
@@ -9367,9 +9367,9 @@
       "contractAddress": "0x6b3595068778dd592e39a122f4f5a5cf09c90fe2",
       "logo": "https://icons.llamao.fi/icons/protocols/sushiswap",
       "explorerUrl": "https://etherscan.io/token/0x6b3595068778dd592e39a122f4f5a5cf09c90fe2",
-      "mcap": 66833805.859878995,
-      "peRatio": 718.9,
-      "pfRatio": 119.7,
+      "mcap": 67090166.00375724,
+      "peRatio": 721.7,
+      "pfRatio": 120.2,
       "timeframeData": {
         "24h": {
           "fees": 1152,
@@ -9715,9 +9715,9 @@
       "contractAddress": "0xc9d23ed2adb0f551369946bd377f8644ce1ca5c4",
       "logo": "https://icons.llamao.fi/icons/protocols/hyperlane",
       "explorerUrl": "https://etherscan.io/token/0xc9d23ed2adb0f551369946bd377f8644ce1ca5c4",
-      "mcap": 22569044.33317649,
-      "peRatio": 331.7,
-      "pfRatio": 331.7,
+      "mcap": 22621451.32796749,
+      "peRatio": 332.5,
+      "pfRatio": 332.5,
       "timeframeData": {
         "24h": {
           "fees": 195,
@@ -9802,9 +9802,9 @@
       "contractAddress": "0x8290333cef9e6d528dd5618fb97a76f268f3edd4",
       "logo": "https://icons.llamao.fi/icons/protocols/ankr",
       "explorerUrl": "https://etherscan.io/token/0x8290333cef9e6d528dd5618fb97a76f268f3edd4",
-      "mcap": 46055478.27877679,
-      "peRatio": 681,
-      "pfRatio": 68.1,
+      "mcap": 46202777.34578684,
+      "peRatio": 683.2,
+      "pfRatio": 68.4,
       "timeframeData": {
         "24h": {
           "fees": 2567,
@@ -9889,9 +9889,9 @@
       "contractAddress": "0x0b38210ea11411557c13457d4da7dc6ea731b88a",
       "logo": "https://icons.llamao.fi/icons/protocols/api3",
       "explorerUrl": "https://etherscan.io/token/0x0b38210ea11411557c13457d4da7dc6ea731b88a",
-      "mcap": 45187486.17249396,
-      "peRatio": 669.2,
-      "pfRatio": 33.5,
+      "mcap": 45703582.246731,
+      "peRatio": 676.9,
+      "pfRatio": 33.8,
       "timeframeData": {
         "24h": {
           "fees": 3573,
@@ -10411,9 +10411,9 @@
       "contractAddress": "0xd38bb40815d2b0c2d2c866e0c72c5728ffc76dd9",
       "logo": "https://icons.llamao.fi/icons/protocols/symbiosis",
       "explorerUrl": "https://etherscan.io/token/0xd38bb40815d2b0c2d2c866e0c72c5728ffc76dd9",
-      "mcap": 1641768.2815966117,
-      "peRatio": 29.4,
-      "pfRatio": 29.4,
+      "mcap": 1635536.4990503273,
+      "peRatio": 29.3,
+      "pfRatio": 29.3,
       "timeframeData": {
         "24h": {
           "fees": 223,
@@ -10444,8 +10444,8 @@
           "lpSharePct": 77.7,
           "revSharePct": 22.3,
           "arr": 64812,
-          "periodYield": 0.32,
-          "apy": 3.9,
+          "periodYield": 0.33,
+          "apy": 4,
           "delta": -49.32
         }
       },
@@ -10585,8 +10585,8 @@
       "contractAddress": "0x77146784315ba81904d654466968e3a7c196d1f3",
       "logo": "https://icons.llamao.fi/icons/protocols/treehouse-protocol",
       "explorerUrl": "https://etherscan.io/token/0x77146784315ba81904d654466968e3a7c196d1f3",
-      "mcap": 7303004.356185656,
-      "peRatio": 147.9,
+      "mcap": 7297480.172536559,
+      "peRatio": 147.8,
       "pfRatio": 29.6,
       "timeframeData": {
         "24h": {
@@ -11107,9 +11107,9 @@
       "contractAddress": "0x57b96d4af698605563a4653d882635da59bf11af",
       "logo": "https://icons.llamao.fi/icons/protocols/sofa.org",
       "explorerUrl": "https://etherscan.io/token/0x57b96d4af698605563a4653d882635da59bf11af",
-      "mcap": 4365804.720410202,
-      "peRatio": 102.3,
-      "pfRatio": 102.3,
+      "mcap": 4375994.071480489,
+      "peRatio": 102.5,
+      "pfRatio": 102.5,
       "timeframeData": {
         "24h": {
           "fees": 24,
@@ -11194,7 +11194,7 @@
       "contractAddress": "BANKJmvhT8tiJRsBSS1n2HryMBPvT5Ze4HU95DUAmeta",
       "logo": "https://icons.llamao.fi/icons/protocols/avici",
       "explorerUrl": "https://etherscan.io/token/BANKJmvhT8tiJRsBSS1n2HryMBPvT5Ze4HU95DUAmeta",
-      "mcap": 3520526.1690563494,
+      "mcap": 3520786.231332005,
       "peRatio": 84.5,
       "pfRatio": 84.5,
       "timeframeData": {
@@ -11281,7 +11281,7 @@
       "contractAddress": "0xda2ffa104356688e74d9340519b8c17f00d7752e",
       "logo": "https://icons.llamao.fi/icons/protocols/vaneck-treasury-fund",
       "explorerUrl": "https://etherscan.io/token/0xda2ffa104356688e74d9340519b8c17f00d7752e",
-      "mcap": 4209132.527489713,
+      "mcap": 4209246.404696032,
       "peRatio": 102.7,
       "pfRatio": 5.3,
       "timeframeData": {
@@ -11368,9 +11368,9 @@
       "contractAddress": "0xec67005c4e498ec7f55e092bd1d35cbc47c91892",
       "logo": "https://icons.llamao.fi/icons/protocols/enzyme-finance",
       "explorerUrl": "https://etherscan.io/token/0xec67005c4e498ec7f55e092bd1d35cbc47c91892",
-      "mcap": 4658118.359073348,
-      "peRatio": 124.9,
-      "pfRatio": 124.9,
+      "mcap": 4678521.532401884,
+      "peRatio": 125.5,
+      "pfRatio": 125.5,
       "timeframeData": {
         "24h": {
           "fees": 100,
@@ -11401,8 +11401,8 @@
           "lpSharePct": 0,
           "revSharePct": 100,
           "arr": 292400,
-          "periodYield": 0.52,
-          "apy": 6.3,
+          "periodYield": 0.51,
+          "apy": 6.2,
           "delta": -96.07
         }
       },
@@ -11803,9 +11803,9 @@
       "contractAddress": "0xdab396ccf3d84cf2d07c4454e10c8a6f5b008d2b",
       "logo": "https://icons.llamao.fi/icons/protocols/goldfinch",
       "explorerUrl": "https://etherscan.io/token/0xdab396ccf3d84cf2d07c4454e10c8a6f5b008d2b",
-      "mcap": 3692338.005260415,
-      "peRatio": 129.3,
-      "pfRatio": 129.3,
+      "mcap": 3711670.147977428,
+      "peRatio": 130,
+      "pfRatio": 130,
       "timeframeData": {
         "24h": {
           "fees": 42,
@@ -12151,9 +12151,9 @@
       "contractAddress": "0x5DD1A7A369e8273371d2DBf9d83356057088082c",
       "logo": "https://icons.llamao.fi/icons/protocols/flying-tulip-ftusd",
       "explorerUrl": "https://etherscan.io/token/0x5DD1A7A369e8273371d2DBf9d83356057088082c",
-      "mcap": 71709646.83057912,
-      "peRatio": 2883.1,
-      "pfRatio": 2883.1,
+      "mcap": 71409586.51142536,
+      "peRatio": 2871,
+      "pfRatio": 2871,
       "timeframeData": {
         "24h": {
           "fees": 38,
@@ -12238,9 +12238,9 @@
       "contractAddress": "0x75afe6402ad5a5c20dd25e10ec3b3986acaa647b77e4ae24b0cbc9a54a27a87",
       "logo": "https://icons.llamao.fi/icons/protocols/ekubo",
       "explorerUrl": "https://etherscan.io/token/0x75afe6402ad5a5c20dd25e10ec3b3986acaa647b77e4ae24b0cbc9a54a27a87",
-      "mcap": 10444978.720822647,
-      "peRatio": 437.4,
-      "pfRatio": 21.2,
+      "mcap": 10476223.825621624,
+      "peRatio": 438.7,
+      "pfRatio": 21.3,
       "timeframeData": {
         "24h": {
           "fees": 948,
@@ -12760,9 +12760,9 @@
       "contractAddress": "0x0f2d719407fdbeff09d87557abb7232601fd9f29",
       "logo": "https://icons.llamao.fi/icons/protocols/synapse-cross-chain-bridge",
       "explorerUrl": "https://etherscan.io/token/0x0f2d719407fdbeff09d87557abb7232601fd9f29",
-      "mcap": 40783255.07531231,
-      "peRatio": 2861.6,
-      "pfRatio": 2861.6,
+      "mcap": 40793655.89138552,
+      "peRatio": 2862.3,
+      "pfRatio": 2862.3,
       "timeframeData": {
         "24h": {
           "fees": 42,
@@ -13456,9 +13456,9 @@
       "contractAddress": "0x14fee680690900ba0cccfc76ad70fd1b95d10e16",
       "logo": "https://icons.llamao.fi/icons/protocols/paal-ai",
       "explorerUrl": "https://etherscan.io/token/0x14fee680690900ba0cccfc76ad70fd1b95d10e16",
-      "mcap": 9718359.523662359,
-      "peRatio": 1312.6,
-      "pfRatio": 1312.6,
+      "mcap": 9701459.178199228,
+      "peRatio": 1310.3,
+      "pfRatio": 1310.3,
       "timeframeData": {
         "24h": {
           "fees": 0,
@@ -13804,8 +13804,8 @@
       "contractAddress": "0x99991c6aabba5a096f24f250b73580f5179b9999",
       "logo": "https://icons.llamao.fi/icons/protocols/cap",
       "explorerUrl": "https://etherscan.io/token/0x99991c6aabba5a096f24f250b73580f5179b9999",
-      "mcap": 114375143.81157602,
-      "peRatio": 26071,
+      "mcap": 114257577.38996542,
+      "peRatio": 26044.2,
       "pfRatio": 13.7,
       "timeframeData": {
         "24h": {
@@ -13978,7 +13978,7 @@
       "contractAddress": "0xda2ffa104356688e74d9340519b8c17f00d7752e",
       "logo": "https://icons.llamao.fi/icons/protocols/hamilton-lane-senior-credit-opportunities-securitize-fund",
       "explorerUrl": "https://etherscan.io/token/0xda2ffa104356688e74d9340519b8c17f00d7752e",
-      "mcap": 4209132.527489713,
+      "mcap": 4209246.404696032,
       "peRatio": 1153.3,
       "pfRatio": 438.7,
       "timeframeData": {
@@ -14065,9 +14065,9 @@
       "contractAddress": "0x38E68A37E401F7271568CecaAc63c6B1e19130B4",
       "logo": "https://icons.llamao.fi/icons/protocols/banana-gun",
       "explorerUrl": "https://etherscan.io/token/0x38E68A37E401F7271568CecaAc63c6B1e19130B4",
-      "mcap": 15652738.334070059,
-      "peRatio": 4690.7,
-      "pfRatio": 4690.7,
+      "mcap": 15693921.538123159,
+      "peRatio": 4703.1,
+      "pfRatio": 4703.1,
       "timeframeData": {
         "24h": {
           "fees": 0,
@@ -14587,9 +14587,9 @@
       "contractAddress": "0xba3335588d9403515223f109edc4eb7269a9ab5d",
       "logo": "https://icons.llamao.fi/icons/protocols/gearbox",
       "explorerUrl": "https://etherscan.io/token/0xba3335588d9403515223f109edc4eb7269a9ab5d",
-      "mcap": 5891268.820071393,
-      "peRatio": 4122.2,
-      "pfRatio": 173.1,
+      "mcap": 5905018.451605875,
+      "peRatio": 4131.8,
+      "pfRatio": 173.5,
       "timeframeData": {
         "24h": {
           "fees": 86,
@@ -15544,9 +15544,9 @@
       "contractAddress": "0xfca59cd816ab1ead66534d82bc21e7515ce441cf",
       "logo": "https://icons.llamao.fi/icons/protocols/rarible",
       "explorerUrl": "https://etherscan.io/token/0xfca59cd816ab1ead66534d82bc21e7515ce441cf",
-      "mcap": 3253556.9589814157,
-      "peRatio": 8051.7,
-      "pfRatio": 3900,
+      "mcap": 3302819.6329072826,
+      "peRatio": 8173.6,
+      "pfRatio": 3959.1,
       "timeframeData": {
         "24h": {
           "fees": 16,
@@ -16327,9 +16327,9 @@
       "contractAddress": "0x02f92800f57bcd74066f5709f1daa1a4302df875",
       "logo": "https://icons.llamao.fi/icons/protocols/peapods-finance",
       "explorerUrl": "https://etherscan.io/token/0x02f92800f57bcd74066f5709f1daa1a4302df875",
-      "mcap": 20248400.044026114,
-      "peRatio": 238249.5,
-      "pfRatio": 238249.5,
+      "mcap": 20249061.283809107,
+      "peRatio": 238257.3,
+      "pfRatio": 238257.3,
       "timeframeData": {
         "24h": {
           "fees": 2,
@@ -16414,9 +16414,9 @@
       "contractAddress": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
       "logo": "https://icons.llamao.fi/icons/protocols/badger-dao",
       "explorerUrl": "https://etherscan.io/token/0x3472A5A71965499acd81997a54BBA8D852C6E53d",
-      "mcap": 6382664.614922246,
-      "peRatio": 66169.7,
-      "pfRatio": 66169.7,
+      "mcap": 6381397.565165605,
+      "peRatio": 66156.6,
+      "pfRatio": 66156.6,
       "timeframeData": {
         "24h": {
           "fees": 0,
@@ -16762,9 +16762,9 @@
       "contractAddress": "0x5de8ab7e27f6e7a1fff3e5b337584aa43961beef",
       "logo": "https://icons.llamao.fi/icons/protocols/smardex-amm",
       "explorerUrl": "https://etherscan.io/token/0x5de8ab7e27f6e7a1fff3e5b337584aa43961beef",
-      "mcap": 4167196.004892613,
-      "peRatio": 63938.6,
-      "pfRatio": 18247.3,
+      "mcap": 4157787.9060216155,
+      "peRatio": 63794.2,
+      "pfRatio": 18206.1,
       "timeframeData": {
         "24h": {
           "fees": 1,
@@ -17110,7 +17110,7 @@
       "contractAddress": "0xd33526068d116ce69f19a9ee46f0bd304f21a51f",
       "logo": "https://icons.llamao.fi/icons/protocols/rocket-pool",
       "explorerUrl": "https://etherscan.io/token/0xd33526068d116ce69f19a9ee46f0bd304f21a51f",
-      "mcap": 40860293.510003835,
+      "mcap": 40975932.93301911,
       "peRatio": null,
       "pfRatio": 1.3,
       "timeframeData": {
@@ -17197,7 +17197,7 @@
       "contractAddress": "0xb30fe1cf884b48a22a50d22a9282004f2c5e9406",
       "logo": "https://icons.llamao.fi/icons/protocols/grove-finance",
       "explorerUrl": "https://etherscan.io/token/0xb30fe1cf884b48a22a50d22a9282004f2c5e9406",
-      "mcap": 6411757.643393479,
+      "mcap": 6445370.547819487,
       "peRatio": null,
       "pfRatio": 0.3,
       "timeframeData": {
@@ -17458,7 +17458,7 @@
       "contractAddress": "0x77777feddddffc19ff86db637967013e6c6a116c",
       "logo": "https://icons.llamao.fi/icons/protocols/tornado-cash",
       "explorerUrl": "https://etherscan.io/token/0x77777feddddffc19ff86db637967013e6c6a116c",
-      "mcap": 32612692.005821638,
+      "mcap": 32659788.165926594,
       "peRatio": null,
       "pfRatio": 6.2,
       "timeframeData": {
@@ -17632,9 +17632,9 @@
       "contractAddress": "0xec53bF9167f50cDEB3Ae105f56099aaaB9061F83",
       "logo": "https://icons.llamao.fi/icons/protocols/eigencloud",
       "explorerUrl": "https://etherscan.io/token/0xec53bF9167f50cDEB3Ae105f56099aaaB9061F83",
-      "mcap": 227380401.60017785,
+      "mcap": 227724956.9682162,
       "peRatio": null,
-      "pfRatio": 85.5,
+      "pfRatio": 85.6,
       "timeframeData": {
         "24h": {
           "fees": 18260,
@@ -17719,9 +17719,9 @@
       "contractAddress": "0xfa1c09fc8b491b6a4d3ff53a10cad29381b3f949",
       "logo": "https://icons.llamao.fi/icons/protocols/falcon-finance",
       "explorerUrl": "https://etherscan.io/token/0xfa1c09fc8b491b6a4d3ff53a10cad29381b3f949",
-      "mcap": 369720399.52168334,
+      "mcap": 368801123.44097626,
       "peRatio": null,
-      "pfRatio": 144.8,
+      "pfRatio": 144.5,
       "timeframeData": {
         "24h": {
           "fees": 478,
@@ -18154,7 +18154,7 @@
       "contractAddress": "0x44108f0223A3C3028F5Fe7AEC7f9bb2E66beF82F",
       "logo": "https://icons.llamao.fi/icons/protocols/across",
       "explorerUrl": "https://etherscan.io/token/0x44108f0223A3C3028F5Fe7AEC7f9bb2E66beF82F",
-      "mcap": 31267126.000868957,
+      "mcap": 31272463.325539194,
       "peRatio": null,
       "pfRatio": 76.8,
       "timeframeData": {
@@ -18328,9 +18328,9 @@
       "contractAddress": "0x5DD1A7A369e8273371d2DBf9d83356057088082c",
       "logo": "https://icons.llamao.fi/icons/protocols/flying-tulip-lend",
       "explorerUrl": "https://etherscan.io/token/0x5DD1A7A369e8273371d2DBf9d83356057088082c",
-      "mcap": 71709646.83057912,
+      "mcap": 71409586.51142536,
       "peRatio": null,
-      "pfRatio": 590.5,
+      "pfRatio": 588.1,
       "timeframeData": {
         "24h": {
           "fees": 336,
@@ -19111,9 +19111,9 @@
       "contractAddress": "85VBFQZC9TZkfaptBWjvUw7YbZjy52A6mjtPGjstQAmQ",
       "logo": "https://icons.llamao.fi/icons/protocols/portal",
       "explorerUrl": "https://etherscan.io/token/85VBFQZC9TZkfaptBWjvUw7YbZjy52A6mjtPGjstQAmQ",
-      "mcap": 94493417.99160641,
+      "mcap": 94755476.6364964,
       "peRatio": null,
-      "pfRatio": 5681.2,
+      "pfRatio": 5697,
       "timeframeData": {
         "24h": {
           "fees": 50,
@@ -19372,9 +19372,9 @@
       "contractAddress": "0x66a0f676479cee1d7373f3dc2e2952778bff5bd6",
       "logo": "https://icons.llamao.fi/icons/protocols/wise-token",
       "explorerUrl": "https://etherscan.io/token/0x66a0f676479cee1d7373f3dc2e2952778bff5bd6",
-      "mcap": 12080493.16391771,
+      "mcap": 12108687.82534494,
       "peRatio": null,
-      "pfRatio": 2973.9,
+      "pfRatio": 2980.8,
       "timeframeData": {
         "24h": {
           "fees": 9,
@@ -20068,9 +20068,9 @@
       "contractAddress": "0x7dedbce5a2e31e4c75f87fea60bf796c17718715",
       "logo": "https://icons.llamao.fi/icons/protocols/penpie",
       "explorerUrl": "https://etherscan.io/token/0x7dedbce5a2e31e4c75f87fea60bf796c17718715",
-      "mcap": 3306078.1112242583,
-      "peRatio": 150970.7,
-      "pfRatio": 30484.5,
+      "mcap": 3310780.2693226035,
+      "peRatio": 151185.5,
+      "pfRatio": 30527.8,
       "timeframeData": {
         "24h": {
           "fees": 5,
@@ -20242,7 +20242,7 @@
       "contractAddress": "0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
       "logo": "https://icons.llamao.fi/icons/protocols/virtuals-protocol",
       "explorerUrl": "https://etherscan.io/token/0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
-      "mcap": 504069316.9184919,
+      "mcap": 505839996.0368379,
       "peRatio": null,
       "pfRatio": null,
       "timeframeData": {
@@ -20677,7 +20677,7 @@
       "contractAddress": "0x767fe9edc9e0df98e07454847909b5e959d7ca0e",
       "logo": "https://icons.llamao.fi/icons/protocols/illuvium",
       "explorerUrl": "https://etherscan.io/token/0x767fe9edc9e0df98e07454847909b5e959d7ca0e",
-      "mcap": 31732900.459406342,
+      "mcap": 31903826.802991692,
       "peRatio": null,
       "pfRatio": null,
       "timeframeData": {
@@ -21895,7 +21895,7 @@
       "contractAddress": "0x3c2f61f2e27c865981d2e7aaf6b2cdf823030039",
       "logo": "https://icons.llamao.fi/icons/protocols/termmax",
       "explorerUrl": "https://etherscan.io/token/0x3c2f61f2e27c865981d2e7aaf6b2cdf823030039",
-      "mcap": 1882461.0262999574,
+      "mcap": 1820715.5460260715,
       "peRatio": null,
       "pfRatio": null,
       "timeframeData": {
@@ -21928,8 +21928,8 @@
           "lpSharePct": 0,
           "revSharePct": 100,
           "arr": 77672,
-          "periodYield": 0.34,
-          "apy": 4.1,
+          "periodYield": 0.35,
+          "apy": 4.3,
           "delta": 0
         }
       },
@@ -22430,7 +22430,7 @@
           "arr": 0,
           "periodYield": 0,
           "apy": 0,
-          "delta": -71.01
+          "delta": -73.91
         },
         "7d": {
           "fees": 0,
@@ -22441,7 +22441,7 @@
           "arr": 0,
           "periodYield": 0,
           "apy": 0,
-          "delta": -70.15
+          "delta": -73.13
         },
         "30d": {
           "fees": 0,
@@ -22452,7 +22452,7 @@
           "arr": 0,
           "periodYield": 0,
           "apy": 0,
-          "delta": -70.15
+          "delta": -73.13
         }
       },
       "fees24h": 0,
@@ -23026,9 +23026,9 @@
       "contractAddress": "0xc2544a32872a91f4a553b404c6950e89de901fdb",
       "logo": "https://icons.llamao.fi/icons/protocols/frax-fpi",
       "explorerUrl": "https://etherscan.io/token/0xc2544a32872a91f4a553b404c6950e89de901fdb",
-      "mcap": 2727812.9797318815,
-      "peRatio": 5231708.8,
-      "pfRatio": 5231708.8,
+      "mcap": 2733908.7659775848,
+      "peRatio": 5243400,
+      "pfRatio": 5243400,
       "timeframeData": {
         "24h": {
           "fees": 0,
@@ -25114,7 +25114,7 @@
       "contractAddress": "0x93ed3fbe21207ec2e8f2d3c3de6e058cb73bc04d",
       "logo": "https://icons.llamao.fi/icons/protocols/kleros",
       "explorerUrl": "https://etherscan.io/token/0x93ed3fbe21207ec2e8f2d3c3de6e058cb73bc04d",
-      "mcap": 7525200.301662654,
+      "mcap": 7509330.276082238,
       "peRatio": null,
       "pfRatio": null,
       "timeframeData": {
@@ -25549,7 +25549,7 @@
       "contractAddress": "0xc0c293ce456ff0ed870add98a0828dd4d2903dbf",
       "logo": "https://icons.llamao.fi/icons/protocols/aura",
       "explorerUrl": "https://etherscan.io/token/0xc0c293ce456ff0ed870add98a0828dd4d2903dbf",
-      "mcap": 1503981.3352042295,
+      "mcap": 1501771.8538371127,
       "peRatio": null,
       "pfRatio": null,
       "timeframeData": {
@@ -25723,7 +25723,7 @@
       "contractAddress": "0x5283d291dbcf85356a21ba090e6db59121208b44",
       "logo": "https://icons.llamao.fi/icons/protocols/blur-bids",
       "explorerUrl": "https://etherscan.io/token/0x5283d291dbcf85356a21ba090e6db59121208b44",
-      "mcap": 54889669.072399214,
+      "mcap": 55242770.58135833,
       "peRatio": null,
       "pfRatio": null,
       "timeframeData": {
@@ -26245,7 +26245,7 @@
       "contractAddress": "0x27054b13b1b798b345b591a4d22e6562d47ea75a",
       "logo": "https://icons.llamao.fi/icons/protocols/airswap",
       "explorerUrl": "https://etherscan.io/token/0x27054b13b1b798b345b591a4d22e6562d47ea75a",
-      "mcap": 1816132.371134056,
+      "mcap": 1815588.4210088034,
       "peRatio": null,
       "pfRatio": null,
       "timeframeData": {
@@ -26419,7 +26419,7 @@
       "contractAddress": "0xbfbcfe8873fe28dfa25f1099282b088d52bbad9c",
       "logo": "https://icons.llamao.fi/icons/protocols/equilibria",
       "explorerUrl": "https://etherscan.io/token/0xbfbcfe8873fe28dfa25f1099282b088d52bbad9c",
-      "mcap": 13307405.340495879,
+      "mcap": 13326332.15398444,
       "peRatio": null,
       "pfRatio": null,
       "timeframeData": {
@@ -26680,7 +26680,7 @@
       "contractAddress": "0x5a3e6A77ba2f983eC0d371ea3B475F8Bc0811AD5",
       "logo": "https://icons.llamao.fi/icons/protocols/0x0.ai",
       "explorerUrl": "https://etherscan.io/token/0x5a3e6A77ba2f983eC0d371ea3B475F8Bc0811AD5",
-      "mcap": 1788221.9638466118,
+      "mcap": 1792279.0583898902,
       "peRatio": null,
       "pfRatio": null,
       "timeframeData": {
@@ -27376,7 +27376,7 @@
       "contractAddress": "0xca73ed1815e5915489570014e024b7ebe65de679",
       "logo": "https://icons.llamao.fi/icons/protocols/odos",
       "explorerUrl": "https://etherscan.io/token/0xca73ed1815e5915489570014e024b7ebe65de679",
-      "mcap": 1350171.9193969588,
+      "mcap": 1340530.852375421,
       "peRatio": null,
       "pfRatio": null,
       "timeframeData": {
@@ -27550,7 +27550,7 @@
       "contractAddress": "0x2b5d9adea07b590b638ffc165792b2c610eda649",
       "logo": "https://icons.llamao.fi/icons/protocols/cakepie",
       "explorerUrl": "https://etherscan.io/token/0x2b5d9adea07b590b638ffc165792b2c610eda649",
-      "mcap": 1844000.8222174488,
+      "mcap": 1843411.079275772,
       "peRatio": null,
       "pfRatio": null,
       "timeframeData": {
@@ -28333,7 +28333,7 @@
       "contractAddress": "0xc477d038d5420c6a9e0b031712f61c5120090de9",
       "logo": "https://icons.llamao.fi/icons/protocols/boson-protocol",
       "explorerUrl": "https://etherscan.io/token/0xc477d038d5420c6a9e0b031712f61c5120090de9",
-      "mcap": 3431126.11964949,
+      "mcap": 3457123.0371913263,
       "peRatio": null,
       "pfRatio": null,
       "timeframeData": {
@@ -28768,7 +28768,7 @@
       "contractAddress": "0x259338656198ec7a76c729514d3cb45dfbf768a1",
       "logo": "https://icons.llamao.fi/icons/protocols/resolv-usr",
       "explorerUrl": "https://etherscan.io/token/0x259338656198ec7a76c729514d3cb45dfbf768a1",
-      "mcap": 9776786.404152568,
+      "mcap": 9815646.737175658,
       "peRatio": null,
       "pfRatio": null,
       "timeframeData": {
@@ -29029,7 +29029,7 @@
       "contractAddress": "0x5de8ab7e27f6e7a1fff3e5b337584aa43961beef",
       "logo": "https://icons.llamao.fi/icons/protocols/smardex-p2p-lending",
       "explorerUrl": "https://etherscan.io/token/0x5de8ab7e27f6e7a1fff3e5b337584aa43961beef",
-      "mcap": 4167196.004892613,
+      "mcap": 4157787.9060216155,
       "peRatio": null,
       "pfRatio": null,
       "timeframeData": {
@@ -29464,7 +29464,7 @@
       "contractAddress": "6HHzBVkxtoz86Bjy2duaUw77hVfJzQkuoLizWeEMBLEM",
       "logo": "https://icons.llamao.fi/icons/protocols/migrate.fun",
       "explorerUrl": "https://etherscan.io/token/6HHzBVkxtoz86Bjy2duaUw77hVfJzQkuoLizWeEMBLEM",
-      "mcap": 3435150.985390607,
+      "mcap": 3416802.1631308533,
       "peRatio": null,
       "pfRatio": null,
       "timeframeData": {
@@ -30073,7 +30073,7 @@
       "contractAddress": "0xbf59dbc154421a7b37f4f2841e11f4ed2a1dee7c",
       "logo": "https://icons.llamao.fi/icons/protocols/edel",
       "explorerUrl": "https://etherscan.io/token/0xbf59dbc154421a7b37f4f2841e11f4ed2a1dee7c",
-      "mcap": 27604179.0900494,
+      "mcap": 27687119.003158946,
       "peRatio": null,
       "pfRatio": null,
       "timeframeData": {

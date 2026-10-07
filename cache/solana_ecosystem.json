@@ -1,18 +1,18 @@
 {
   "success": true,
-  "lastUpdated": "2026-10-07T20:33:03.517Z",
+  "lastUpdated": "2026-10-07T20:49:53.198Z",
   "l1Chain": {
     "name": "Solana Mainnet-Beta",
     "symbol": "SOL",
     "contractAddress": "So11111111111111111111111111111111111111112",
     "explorerUrl": "https://solscan.io",
     "epoch": 1051,
-    "slotIndex": 298821,
+    "slotIndex": 302586,
     "slotsInEpoch": 432000,
-    "epochProgressPct": 69.2,
-    "absoluteSlot": 454330821,
-    "blockHeight": 432368352,
-    "transactionCount": 557264501719,
+    "epochProgressPct": 70,
+    "absoluteSlot": 454334586,
+    "blockHeight": 432372113,
+    "transactionCount": 557269761491,
     "activeValidators": 1412,
     "totalSupply": 634685909,
     "circulatingSupply": 587653315,
@@ -135,10 +135,10 @@
         "burnedPctOfMax": 12.01,
         "burnVelocity": 12.01,
         "explorerUrl": "https://solscan.io/token/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
-        "burn24hTokens": 11513119933,
-        "burn7dTokens": 77368165950,
-        "burn30dTokens": 317762110151,
-        "observedHourlyBurnRate": 55754,
+        "burn24hTokens": 11513119075,
+        "burn7dTokens": 77368160184,
+        "burn30dTokens": 317762086470,
+        "observedHourlyBurnRate": 55699,
         "activeOnChainDays": 365,
         "source": "100% Direct On-Chain RPC Supply Contraction"
       },
@@ -166,8 +166,8 @@
         "mint": "METAewgxyPbgwsseH8T16a39CQ5VyVxZi9zXiDPY18m",
         "programId": "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
         "initialSupply": 1000000000,
-        "currentSupply": 999981363,
-        "burnedTokens": 42518637,
+        "currentSupply": 999981361,
+        "burnedTokens": 42518639,
         "burnedPctOfMax": 4.25,
         "burnVelocity": 4.25,
         "explorerUrl": "https://solscan.io/token/METAewgxyPbgwsseH8T16a39CQ5VyVxZi9zXiDPY18m",
@@ -243,10 +243,10 @@
         "burnedPctOfMax": 25.93,
         "burnVelocity": 25.93,
         "explorerUrl": "https://solscan.io/token/CLoUDKc4Ane7HeQcPpE3YHnznRxhMimJ4MyaUqyHFzAu",
-        "burn24hTokens": 14481331,
-        "burn7dTokens": 97314544,
+        "burn24hTokens": 14467301,
+        "burn7dTokens": 97220263,
         "burn30dTokens": 259330438,
-        "observedHourlyBurnRate": 912350,
+        "observedHourlyBurnRate": 911450,
         "activeOnChainDays": 365,
         "source": "100% Direct On-Chain RPC Supply Contraction"
       },
@@ -274,15 +274,15 @@
         "mint": "rndrizKT3MK1iimdxRdWabcF7Zg7AR5T4nud4EkHBof",
         "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
         "initialSupply": 536870912,
-        "currentSupply": 486168333,
-        "burnedTokens": 50702579,
-        "burnedPctOfMax": 9.44,
-        "burnVelocity": 9.44,
+        "currentSupply": 486128851,
+        "burnedTokens": 50742061,
+        "burnedPctOfMax": 9.45,
+        "burnVelocity": 9.45,
         "explorerUrl": "https://solscan.io/token/rndrizKT3MK1iimdxRdWabcF7Zg7AR5T4nud4EkHBof",
-        "burn24hTokens": 138911,
-        "burn7dTokens": 933482,
-        "burn30dTokens": 3833944,
-        "observedHourlyBurnRate": 0,
+        "burn24hTokens": 50813,
+        "burn7dTokens": 341463,
+        "burn30dTokens": 1402439,
+        "observedHourlyBurnRate": 138,
         "activeOnChainDays": 365,
         "source": "100% Direct On-Chain RPC Supply Contraction"
       },
@@ -292,15 +292,15 @@
         "mint": "hntyVP6YFm1Hg25TN9WGLqM12b8TQmcknKrdu1oxWux",
         "programId": "hemjuPXBpNvggtaUnN1MwT3wrdhttKEfosTcc2P9Pg8",
         "initialSupply": 223000000,
-        "currentSupply": 191628430,
-        "burnedTokens": 31371570,
-        "burnedPctOfMax": 14.07,
-        "burnVelocity": 14.07,
+        "currentSupply": 194241989,
+        "burnedTokens": 28758011,
+        "burnedPctOfMax": 12.9,
+        "burnVelocity": 12.9,
         "explorerUrl": "https://solscan.io/token/hntyVP6YFm1Hg25TN9WGLqM12b8TQmcknKrdu1oxWux",
-        "burn24hTokens": 42046,
-        "burn7dTokens": 282549,
-        "burn30dTokens": 1160470,
-        "observedHourlyBurnRate": 767,
+        "burn24hTokens": 78789,
+        "burn7dTokens": 529462,
+        "burn30dTokens": 2174576,
+        "observedHourlyBurnRate": 0,
         "activeOnChainDays": 365,
         "source": "100% Direct On-Chain RPC Supply Contraction"
       },
@@ -310,15 +310,15 @@
         "mint": "HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3",
         "programId": "FsJ3A3u2vn5cTVofAjvy6y5kwABJAqYWpe4975bi2epH",
         "initialSupply": 10000000000,
-        "currentSupply": 9999959386,
-        "burnedTokens": 40614,
+        "currentSupply": 9999959211,
+        "burnedTokens": 40789,
         "burnedPctOfMax": 0,
         "burnVelocity": 0,
         "explorerUrl": "https://solscan.io/token/HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3",
-        "burn24hTokens": 111,
-        "burn7dTokens": 746,
-        "burn30dTokens": 3064,
-        "observedHourlyBurnRate": 0,
+        "burn24hTokens": 49,
+        "burn7dTokens": 329,
+        "burn30dTokens": 1352,
+        "observedHourlyBurnRate": 1,
         "activeOnChainDays": 365,
         "source": "100% Direct On-Chain RPC Supply Contraction"
       },
@@ -328,15 +328,15 @@
         "mint": "METvsvVRapdj9cFLzq4Tr43xK4tAjQfwX76z3n6mWQL",
         "programId": "LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo",
         "initialSupply": 1000000000,
-        "currentSupply": 997732516,
-        "burnedTokens": 2267484,
+        "currentSupply": 997732278,
+        "burnedTokens": 2267722,
         "burnedPctOfMax": 0.23,
         "burnVelocity": 0.23,
         "explorerUrl": "https://solscan.io/token/METvsvVRapdj9cFLzq4Tr43xK4tAjQfwX76z3n6mWQL",
-        "burn24hTokens": 6212,
-        "burn7dTokens": 41745,
-        "burn30dTokens": 171451,
-        "observedHourlyBurnRate": 0,
+        "burn24hTokens": 2188,
+        "burn7dTokens": 14703,
+        "burn30dTokens": 60389,
+        "observedHourlyBurnRate": 1,
         "activeOnChainDays": 365,
         "source": "100% Direct On-Chain RPC Supply Contraction"
       },
@@ -346,14 +346,14 @@
         "mint": "oreoU2P8bN6jkk3jbaiVxYnG1dCXcYxwhwyK9jSybcp",
         "programId": "oreV2ZymfyeXgNgBdqMkumTqqAprVqgBWQfoYkrtKWQ",
         "initialSupply": 681353,
-        "currentSupply": 496853,
-        "burnedTokens": 184500,
-        "burnedPctOfMax": 27.08,
-        "burnVelocity": 27.08,
+        "currentSupply": 502385,
+        "burnedTokens": 178968,
+        "burnedPctOfMax": 26.27,
+        "burnVelocity": 26.27,
         "explorerUrl": "https://solscan.io/token/oreoU2P8bN6jkk3jbaiVxYnG1dCXcYxwhwyK9jSybcp",
-        "burn24hTokens": 272,
-        "burn7dTokens": 1828,
-        "burn30dTokens": 7507,
+        "burn24hTokens": 746,
+        "burn7dTokens": 5013,
+        "burn30dTokens": 20590,
         "observedHourlyBurnRate": 0,
         "activeOnChainDays": 240,
         "source": "100% Direct On-Chain RPC Supply Contraction"
@@ -364,15 +364,15 @@
         "mint": "DBRiDgJAMsM95moTzJs7M9LnkGErpbv9v6CUR1DXnUu5",
         "programId": "src5qyZHqTqecJV4aY6Cb6zDZLMDzrDKKezs22MPHr4",
         "initialSupply": 10000000000,
-        "currentSupply": 9999946813,
-        "burnedTokens": 53187,
+        "currentSupply": 9999946461,
+        "burnedTokens": 53539,
         "burnedPctOfMax": 0,
         "burnVelocity": 0,
         "explorerUrl": "https://solscan.io/token/DBRiDgJAMsM95moTzJs7M9LnkGErpbv9v6CUR1DXnUu5",
-        "burn24hTokens": 146,
-        "burn7dTokens": 981,
-        "burn30dTokens": 4030,
-        "observedHourlyBurnRate": 0,
+        "burn24hTokens": 71,
+        "burn7dTokens": 477,
+        "burn30dTokens": 1960,
+        "observedHourlyBurnRate": 1,
         "activeOnChainDays": 365,
         "source": "100% Direct On-Chain RPC Supply Contraction"
       },
@@ -382,15 +382,15 @@
         "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
         "programId": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
         "initialSupply": 1000000000,
-        "currentSupply": 817957727,
-        "burnedTokens": 182042273,
-        "burnedPctOfMax": 18.2,
-        "burnVelocity": 18.2,
+        "currentSupply": 797994118,
+        "burnedTokens": 202005882,
+        "burnedPctOfMax": 20.2,
+        "burnVelocity": 20.2,
         "explorerUrl": "https://solscan.io/token/6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
-        "burn24hTokens": 2984300,
-        "burn7dTokens": 20054496,
-        "burn30dTokens": 82366680,
-        "observedHourlyBurnRate": 0,
+        "burn24hTokens": 2237643,
+        "burn7dTokens": 15036961,
+        "burn30dTokens": 61758947,
+        "observedHourlyBurnRate": 69141,
         "activeOnChainDays": 61,
         "source": "100% Direct On-Chain RPC Supply Contraction"
       },
@@ -400,15 +400,15 @@
         "mint": "CARDSccUMFKoPRZxt5vt3ksUbxEFEcnZ3H2pd3dKxYjp",
         "programId": "CARDSccUMFKoPRZxt5vt3ksUbxEFEcnZ3H2pd3dKxYjp",
         "initialSupply": 2000000000,
-        "currentSupply": 1977216214,
-        "burnedTokens": 22783786,
-        "burnedPctOfMax": 1.14,
-        "burnVelocity": 1.14,
+        "currentSupply": 1974158987,
+        "burnedTokens": 25841013,
+        "burnedPctOfMax": 1.29,
+        "burnVelocity": 1.29,
         "explorerUrl": "https://solscan.io/token/CARDSccUMFKoPRZxt5vt3ksUbxEFEcnZ3H2pd3dKxYjp",
-        "burn24hTokens": 189865,
-        "burn7dTokens": 1275893,
-        "burn30dTokens": 5240274,
-        "observedHourlyBurnRate": 0,
+        "burn24hTokens": 242997,
+        "burn7dTokens": 1632940,
+        "burn30dTokens": 6706717,
+        "observedHourlyBurnRate": 10745,
         "activeOnChainDays": 120,
         "source": "100% Direct On-Chain RPC Supply Contraction"
       },
@@ -545,9 +545,9 @@
       "logo": "https://icons.llamao.fi/icons/protocols/stonkfun",
       "explorerUrl": "https://solscan.io/account/6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
       "programExplorerUrl": "https://solscan.io/account/6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
-      "mcap": 138228107.62273657,
-      "peRatio": 0.6,
-      "pfRatio": 0.6,
+      "mcap": 140383543.2598639,
+      "peRatio": 0.7,
+      "pfRatio": 0.7,
       "timeframeData": {
         "24h": {
           "fees": 433044,
@@ -557,7 +557,7 @@
           "revSharePct": 100,
           "arr": 158169321,
           "periodYield": 0.31,
-          "apy": 114.4,
+          "apy": 112.7,
           "delta": 1.15
         },
         "7d": {
@@ -567,8 +567,8 @@
           "lpSharePct": 0,
           "revSharePct": 100,
           "arr": 214932447,
-          "periodYield": 2.98,
-          "apy": 155.5,
+          "periodYield": 2.94,
+          "apy": 153.1,
           "delta": -35.55
         },
         "30d": {
@@ -578,8 +578,8 @@
           "lpSharePct": 0,
           "revSharePct": 100,
           "arr": 348910042,
-          "periodYield": 20.74,
-          "apy": 252.4,
+          "periodYield": 20.42,
+          "apy": 248.5,
           "delta": -35.55
         }
       },
@@ -592,8 +592,8 @@
       "lpShare7d": 0,
       "lpSharePct": 0,
       "revSharePct": 100,
-      "weeklyYieldMc": 2.98,
-      "annualizedYieldMc": 155.5,
+      "weeklyYieldMc": 2.94,
+      "annualizedYieldMc": 153.1,
       "annualizedRevenue": 214932447,
       "whaleRisk": {
         "holdersCount": 64200,
@@ -613,11 +613,11 @@
         "treasuryAddress": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
         "treasuryNetWorthUsd": 18500000,
         "treasuryHoldings": "82K SOL, STONK Reserve",
-        "burnedAmount": 182042273,
-        "burnedPctOfMax": 18.2,
-        "burnVelocity": 18.2,
+        "burnedAmount": 202005882,
+        "burnedPctOfMax": 20.2,
+        "burnVelocity": 20.2,
         "initialSupply": 1000000000,
-        "currentSupply": 817957727
+        "currentSupply": 797994118
       }
     },
     {
@@ -634,7 +634,7 @@
       "logo": "https://icons.llamao.fi/icons/protocols/collector-crypt",
       "explorerUrl": "https://solscan.io/account/CARDSccUMFKoPRZxt5vt3ksUbxEFEcnZ3H2pd3dKxYjp",
       "programExplorerUrl": "https://solscan.io/account/CARDSccUMFKoPRZxt5vt3ksUbxEFEcnZ3H2pd3dKxYjp",
-      "mcap": 247153347.94119266,
+      "mcap": 250532570.5305306,
       "peRatio": 1.2,
       "pfRatio": 1.2,
       "timeframeData": {
@@ -646,7 +646,7 @@
           "revSharePct": 100,
           "arr": 160292154,
           "periodYield": 0.18,
-          "apy": 64.9,
+          "apy": 64,
           "delta": 10.27
         },
         "7d": {
@@ -656,8 +656,8 @@
           "lpSharePct": 0,
           "revSharePct": 100,
           "arr": 213570289,
-          "periodYield": 1.66,
-          "apy": 86.4,
+          "periodYield": 1.63,
+          "apy": 85.2,
           "delta": 19.78
         },
         "30d": {
@@ -667,8 +667,8 @@
           "lpSharePct": 0,
           "revSharePct": 100,
           "arr": 171306405,
-          "periodYield": 5.7,
-          "apy": 69.3,
+          "periodYield": 5.62,
+          "apy": 68.4,
           "delta": 19.78
         }
       },
@@ -681,8 +681,8 @@
       "lpShare7d": 0,
       "lpSharePct": 0,
       "revSharePct": 100,
-      "weeklyYieldMc": 1.66,
-      "annualizedYieldMc": 86.4,
+      "weeklyYieldMc": 1.63,
+      "annualizedYieldMc": 85.2,
       "annualizedRevenue": 213570289,
       "whaleRisk": {
         "holdersCount": 28500,
@@ -702,11 +702,11 @@
         "treasuryAddress": "CARDSccUMFKoPRZxt5vt3ksUbxEFEcnZ3H2pd3dKxYjp",
         "treasuryNetWorthUsd": 19200000,
         "treasuryHoldings": "Vaulted Graded Physical TCG Cards + USDC Reserves",
-        "burnedAmount": 22783786,
-        "burnedPctOfMax": 1.14,
-        "burnVelocity": 1.14,
+        "burnedAmount": 25841013,
+        "burnedPctOfMax": 1.29,
+        "burnVelocity": 1.29,
         "initialSupply": 2000000000,
-        "currentSupply": 1977216214
+        "currentSupply": 1974158987
       }
     },
     {
@@ -812,9 +812,9 @@
       "logo": "https://icons.llamao.fi/icons/protocols/ore-protocol",
       "explorerUrl": "https://solscan.io/account/oreoU2P8bN6jkk3jbaiVxYnG1dCXcYxwhwyK9jSybcp",
       "programExplorerUrl": "https://solscan.io/account/oreV2ZymfyeXgNgBdqMkumTqqAprVqgBWQfoYkrtKWQ",
-      "mcap": 56889012.20165963,
-      "peRatio": 1.2,
-      "pfRatio": 1.2,
+      "mcap": 57671894.79437445,
+      "peRatio": 1.3,
+      "pfRatio": 1.3,
       "timeframeData": {
         "24h": {
           "fees": 127730,
@@ -824,7 +824,7 @@
           "revSharePct": 100,
           "arr": 46653383,
           "periodYield": 0.22,
-          "apy": 82,
+          "apy": 80.9,
           "delta": -21.05
         },
         "7d": {
@@ -834,8 +834,8 @@
           "lpSharePct": 0,
           "revSharePct": 100,
           "arr": 46056305,
-          "periodYield": 1.55,
-          "apy": 81,
+          "periodYield": 1.53,
+          "apy": 79.9,
           "delta": 31.61
         },
         "30d": {
@@ -845,8 +845,8 @@
           "lpSharePct": 0,
           "revSharePct": 100,
           "arr": 33381677,
-          "periodYield": 4.82,
-          "apy": 58.7,
+          "periodYield": 4.76,
+          "apy": 57.9,
           "delta": 31.61
         }
       },
@@ -859,8 +859,8 @@
       "lpShare7d": 0,
       "lpSharePct": 0,
       "revSharePct": 100,
-      "weeklyYieldMc": 1.55,
-      "annualizedYieldMc": 81,
+      "weeklyYieldMc": 1.53,
+      "annualizedYieldMc": 79.9,
       "annualizedRevenue": 46056305,
       "whaleRisk": {
         "holdersCount": 88300,
@@ -880,11 +880,11 @@
         "treasuryAddress": "oreoU2P8bN6jkk3jbaiVxYnG1dCXcYxwhwyK9jSybcp",
         "treasuryNetWorthUsd": 14200000,
         "treasuryHoldings": "SOL Mining Pool + Buried ORE Stakers",
-        "burnedAmount": 184500,
-        "burnedPctOfMax": 27.08,
-        "burnVelocity": 27.08,
+        "burnedAmount": 178968,
+        "burnedPctOfMax": 26.27,
+        "burnVelocity": 26.27,
         "initialSupply": 681353,
-        "currentSupply": 496853
+        "currentSupply": 502385
       }
     },
     {
@@ -990,7 +990,7 @@
       "logo": "https://icons.llamao.fi/icons/protocols/graphite-protocol",
       "explorerUrl": "https://solscan.io/account/31k88G5Mq7ptbRDf3AM13HAq6wRQHXHikR8hik7wPygk",
       "programExplorerUrl": "https://solscan.io/account/31k88G5Mq7ptbRDf3AM13HAq6wRQHXHikR8hik7wPygk",
-      "mcap": 18761955.347182635,
+      "mcap": 18796003.107352246,
       "peRatio": 0.5,
       "pfRatio": 0.5,
       "timeframeData": {
@@ -1002,7 +1002,7 @@
           "revSharePct": 100,
           "arr": 22583042,
           "periodYield": 0.33,
-          "apy": 120.4,
+          "apy": 120.1,
           "delta": -17.78
         },
         "7d": {
@@ -1012,8 +1012,8 @@
           "lpSharePct": 0,
           "revSharePct": 100,
           "arr": 36288710,
-          "periodYield": 3.71,
-          "apy": 193.4,
+          "periodYield": 3.7,
+          "apy": 193.1,
           "delta": -33.02
         },
         "30d": {
@@ -1023,8 +1023,8 @@
           "lpSharePct": 0,
           "revSharePct": 100,
           "arr": 46707121,
-          "periodYield": 20.46,
-          "apy": 248.9,
+          "periodYield": 20.42,
+          "apy": 248.5,
           "delta": -33.02
         }
       },
@@ -1037,8 +1037,8 @@
       "lpShare7d": 0,
       "lpSharePct": 0,
       "revSharePct": 100,
-      "weeklyYieldMc": 3.71,
-      "annualizedYieldMc": 193.4,
+      "weeklyYieldMc": 3.7,
+      "annualizedYieldMc": 193.1,
       "annualizedRevenue": 36288710,
       "whaleRisk": {
         "holdersCount": 31400,
@@ -1168,9 +1168,9 @@
       "logo": "https://icons.llamao.fi/icons/protocols/jupiter-aggregator",
       "explorerUrl": "https://solscan.io/account/JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
       "programExplorerUrl": "https://solscan.io/account/JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4",
-      "mcap": 1078187807.3926585,
-      "peRatio": 34.6,
-      "pfRatio": 34.6,
+      "mcap": 1083823154.2532954,
+      "peRatio": 34.8,
+      "pfRatio": 34.8,
       "timeframeData": {
         "24h": {
           "fees": 75644,
@@ -1180,7 +1180,7 @@
           "revSharePct": 100,
           "arr": 27628971,
           "periodYield": 0.01,
-          "apy": 2.6,
+          "apy": 2.5,
           "delta": 13.1
         },
         "7d": {
@@ -1202,7 +1202,7 @@
           "revSharePct": 100,
           "arr": 44748299,
           "periodYield": 0.34,
-          "apy": 4.2,
+          "apy": 4.1,
           "delta": -23.66
         }
       },
@@ -1325,11 +1325,11 @@
         "treasuryAddress": "Eo7WjKq67rjJQSZxS6z3YkapzY3eMj6Xy8X5EQVn5UaB",
         "treasuryNetWorthUsd": 54000000,
         "treasuryHoldings": "MET Reserve, 180K SOL, 19M USDC",
-        "burnedAmount": 2267484,
+        "burnedAmount": 2267722,
         "burnedPctOfMax": 0.23,
         "burnVelocity": 0.23,
         "initialSupply": 1000000000,
-        "currentSupply": 997732516
+        "currentSupply": 997732278
       }
     },
     {
@@ -1770,11 +1770,11 @@
         "treasuryAddress": "METvsvVRapdj9cFLzq4Tr43xK4tAjQfwX76z3n6mWQL",
         "treasuryNetWorthUsd": 1584492,
         "treasuryHoldings": "SOL, USDC & SPL Treasury Vaults",
-        "burnedAmount": 2267484,
+        "burnedAmount": 2267722,
         "burnedPctOfMax": 0.23,
         "burnVelocity": 0.23,
         "initialSupply": 1000000000,
-        "currentSupply": 997732516
+        "currentSupply": 997732278
       }
     },
     {
@@ -1859,11 +1859,11 @@
         "treasuryAddress": "Eo7WjKq67rjJQSZxS6z3YkapzY3eMj6Xy8X5EQVn5UaB",
         "treasuryNetWorthUsd": 16500000,
         "treasuryHoldings": "Dynamic Vault SOL/USDC LP Reserves",
-        "burnedAmount": 2267484,
+        "burnedAmount": 2267722,
         "burnedPctOfMax": 0.23,
         "burnVelocity": 0.23,
         "initialSupply": 1000000000,
-        "currentSupply": 997732516
+        "currentSupply": 997732278
       }
     },
     {
@@ -1969,7 +1969,7 @@
       "logo": "https://icons.llamao.fi/icons/protocols/geodnet",
       "explorerUrl": "https://etherscan.io/token/0xac0f66379a6d7801d7726d5a943356a172549adb",
       "programExplorerUrl": "https://solscan.io/account/0xac0f66379a6d7801d7726d5a943356a172549adb",
-      "mcap": 137830953.44583654,
+      "mcap": 138119066.25330764,
       "peRatio": 19,
       "pfRatio": 19,
       "timeframeData": {
@@ -2002,7 +2002,7 @@
           "lpSharePct": 0,
           "revSharePct": 100,
           "arr": 7143133,
-          "periodYield": 0.43,
+          "periodYield": 0.42,
           "apy": 5.2,
           "delta": -3.4
         }
@@ -2236,9 +2236,9 @@
       "logo": "https://icons.llamao.fi/icons/protocols/render-network-bme",
       "explorerUrl": "https://solscan.io/account/rndrizKT3MK1iimdxRdWabcF7Zg7AR5T4nud4EkHBof",
       "programExplorerUrl": "https://solscan.io/account/rndrizKT3MK1iimdxRdWabcF7Zg7AR5T4nud4EkHBof",
-      "mcap": 1062428852.0054339,
-      "peRatio": 238.4,
-      "pfRatio": 238.4,
+      "mcap": 1059687995.5456213,
+      "peRatio": 237.8,
+      "pfRatio": 237.8,
       "timeframeData": {
         "24h": {
           "fees": 5762,
@@ -2304,11 +2304,11 @@
         "treasuryAddress": "rndrizKT3MK1iimdxRdWabcF7Zg7AR5T4nud4EkHBof",
         "treasuryNetWorthUsd": 78000000,
         "treasuryHoldings": "50.7M RENDER Burned via GPU Rendering Credits",
-        "burnedAmount": 50702579,
-        "burnedPctOfMax": 9.44,
-        "burnVelocity": 9.44,
+        "burnedAmount": 50742061,
+        "burnedPctOfMax": 9.45,
+        "burnVelocity": 9.45,
         "initialSupply": 536870912,
-        "currentSupply": 486168333
+        "currentSupply": 486128851
       }
     },
     {
@@ -2592,8 +2592,8 @@
       "logo": "https://icons.llamao.fi/icons/protocols/sat-rush",
       "explorerUrl": "https://solscan.io/account/SATqS9DYpLQsM2z51P4QCoqJRHa5wboV4qjJerJRUSH",
       "programExplorerUrl": "https://solscan.io/account/SATqS9DYpLQsM2z51P4QCoqJRHa5wboV4qjJerJRUSH",
-      "mcap": 2190536.386316759,
-      "peRatio": 0.8,
+      "mcap": 2339608.7356894175,
+      "peRatio": 0.9,
       "pfRatio": 0.3,
       "timeframeData": {
         "24h": {
@@ -2603,8 +2603,8 @@
           "lpSharePct": 63.3,
           "revSharePct": 36.7,
           "arr": 1315631,
-          "periodYield": 0.16,
-          "apy": 60.1,
+          "periodYield": 0.15,
+          "apy": 56.2,
           "delta": -37.5
         },
         "7d": {
@@ -2614,8 +2614,8 @@
           "lpSharePct": 63.4,
           "revSharePct": 36.6,
           "arr": 2688651,
-          "periodYield": 2.35,
-          "apy": 122.7,
+          "periodYield": 2.2,
+          "apy": 114.9,
           "delta": 4.14
         },
         "30d": {
@@ -2625,8 +2625,8 @@
           "lpSharePct": 70.2,
           "revSharePct": 29.8,
           "arr": 2230603,
-          "periodYield": 8.37,
-          "apy": 101.8,
+          "periodYield": 7.83,
+          "apy": 95.3,
           "delta": 4.14
         }
       },
@@ -2639,8 +2639,8 @@
       "lpShare7d": 89364,
       "lpSharePct": 63.4,
       "revSharePct": 36.6,
-      "weeklyYieldMc": 2.35,
-      "annualizedYieldMc": 122.7,
+      "weeklyYieldMc": 2.2,
+      "annualizedYieldMc": 114.9,
       "annualizedRevenue": 2688651,
       "whaleRisk": {
         "holdersCount": 32400,
@@ -2770,7 +2770,7 @@
       "logo": "https://icons.llamao.fi/icons/protocols/blackrock-buidl",
       "explorerUrl": "https://etherscan.io/token/0xda2ffa104356688e74d9340519b8c17f00d7752e",
       "programExplorerUrl": "https://solscan.io/account/0xda2ffa104356688e74d9340519b8c17f00d7752e",
-      "mcap": 4209132.527489713,
+      "mcap": 4209246.404696032,
       "peRatio": 2.2,
       "pfRatio": 0.1,
       "timeframeData": {
@@ -2804,7 +2804,7 @@
           "revSharePct": 4.9,
           "arr": 1967779,
           "periodYield": 3.84,
-          "apy": 46.8,
+          "apy": 46.7,
           "delta": -1.8
         }
       },
@@ -2859,7 +2859,7 @@
       "logo": "https://icons.llamao.fi/icons/protocols/streamflow",
       "explorerUrl": "https://solscan.io/account/STREAMribRwybYpMmSYoCsQUdr6MZNXEqHgm7p1gu9M",
       "programExplorerUrl": "https://solscan.io/account/STREAMribRwybYpMmSYoCsQUdr6MZNXEqHgm7p1gu9M",
-      "mcap": 1434339.6581266245,
+      "mcap": 1434324.4707068803,
       "peRatio": 0.8,
       "pfRatio": 0.8,
       "timeframeData": {
@@ -3215,9 +3215,9 @@
       "logo": "https://icons.llamao.fi/icons/protocols/debridge",
       "explorerUrl": "https://solscan.io/account/DBRiDgJAMsM95moTzJs7M9LnkGErpbv9v6CUR1DXnUu5",
       "programExplorerUrl": "https://solscan.io/account/src5qyZHqTqecJV4aY6Cb6zDZLMDzrDKKezs22MPHr4",
-      "mcap": 109707304.19855413,
-      "peRatio": 84.4,
-      "pfRatio": 84.4,
+      "mcap": 109800022.37651806,
+      "peRatio": 84.5,
+      "pfRatio": 84.5,
       "timeframeData": {
         "24h": {
           "fees": 2898,
@@ -3283,11 +3283,11 @@
         "treasuryAddress": "DBRiDgJAMsM95moTzJs7M9LnkGErpbv9v6CUR1DXnUu5",
         "treasuryNetWorthUsd": 29400000,
         "treasuryHoldings": "SOL, USDC, ETH Cross-Chain Fee Vaults",
-        "burnedAmount": 53187,
+        "burnedAmount": 53539,
         "burnedPctOfMax": 0,
         "burnVelocity": 0,
         "initialSupply": 10000000000,
-        "currentSupply": 9999946813
+        "currentSupply": 9999946461
       }
     },
     {
@@ -3571,9 +3571,9 @@
       "logo": "https://icons.llamao.fi/icons/protocols/definitive",
       "explorerUrl": "https://etherscan.io/token/0xED6E000dEF95780fb89734c07EE2ce9F6dcAf110",
       "programExplorerUrl": "https://solscan.io/account/0xED6E000dEF95780fb89734c07EE2ce9F6dcAf110",
-      "mcap": 32442972.272054672,
-      "peRatio": 30.8,
-      "pfRatio": 30.8,
+      "mcap": 32391517.144253384,
+      "peRatio": 30.7,
+      "pfRatio": 30.7,
       "timeframeData": {
         "24h": {
           "fees": 3680,
@@ -3604,7 +3604,7 @@
           "lpSharePct": 0,
           "revSharePct": 100,
           "arr": 1597020,
-          "periodYield": 0.4,
+          "periodYield": 0.41,
           "apy": 4.9,
           "delta": -9.75
         }
@@ -3749,7 +3749,7 @@
       "logo": "https://icons.llamao.fi/icons/protocols/humidifi",
       "explorerUrl": "https://solscan.io/account/WETZjtprkDMCcUxPi9PfWnowMRZkiGGHDb9rABuRZ2U",
       "programExplorerUrl": "https://solscan.io/account/WETZjtprkDMCcUxPi9PfWnowMRZkiGGHDb9rABuRZ2U",
-      "mcap": 13973416.103977777,
+      "mcap": 14035740.475579966,
       "peRatio": 14.2,
       "pfRatio": 14.2,
       "timeframeData": {
@@ -3771,7 +3771,7 @@
           "lpSharePct": 0,
           "revSharePct": 100,
           "arr": 984977,
-          "periodYield": 0.14,
+          "periodYield": 0.13,
           "apy": 7,
           "delta": 226.33
         },
@@ -3782,8 +3782,8 @@
           "lpSharePct": 0,
           "revSharePct": 100,
           "arr": 1437167,
-          "periodYield": 0.85,
-          "apy": 10.3,
+          "periodYield": 0.84,
+          "apy": 10.2,
           "delta": 226.33
         }
       },
@@ -3796,7 +3796,7 @@
       "lpShare7d": 0,
       "lpSharePct": 0,
       "revSharePct": 100,
-      "weeklyYieldMc": 0.14,
+      "weeklyYieldMc": 0.13,
       "annualizedYieldMc": 7,
       "annualizedRevenue": 984977,
       "whaleRisk": {
@@ -4016,7 +4016,7 @@
       "logo": "https://icons.llamao.fi/icons/protocols/securitize-tokenized-aaa-clo-fund",
       "explorerUrl": "https://etherscan.io/token/0xda2ffa104356688e74d9340519b8c17f00d7752e",
       "programExplorerUrl": "https://solscan.io/account/0xda2ffa104356688e74d9340519b8c17f00d7752e",
-      "mcap": 4209132.527489713,
+      "mcap": 4209246.404696032,
       "peRatio": 7.9,
       "pfRatio": 0.5,
       "timeframeData": {
@@ -4262,11 +4262,11 @@
         "treasuryAddress": "METvsvVRapdj9cFLzq4Tr43xK4tAjQfwX76z3n6mWQL",
         "treasuryNetWorthUsd": 150217,
         "treasuryHoldings": "SOL, USDC & SPL Treasury Vaults",
-        "burnedAmount": 2267484,
+        "burnedAmount": 2267722,
         "burnedPctOfMax": 0.23,
         "burnVelocity": 0.23,
         "initialSupply": 1000000000,
-        "currentSupply": 997732516
+        "currentSupply": 997732278
       }
     },
     {
@@ -4372,7 +4372,7 @@
       "logo": "https://icons.llamao.fi/icons/protocols/dextools",
       "explorerUrl": "https://etherscan.io/token/0xfb7b4564402e5500db5bb6d63ae671302777c75a",
       "programExplorerUrl": "https://solscan.io/account/0xfb7b4564402e5500db5bb6d63ae671302777c75a",
-      "mcap": 6353801.240597043,
+      "mcap": 6368329.333633279,
       "peRatio": 14.1,
       "pfRatio": 14.1,
       "timeframeData": {
@@ -4384,7 +4384,7 @@
           "revSharePct": 100,
           "arr": 677174,
           "periodYield": 0.03,
-          "apy": 10.7,
+          "apy": 10.6,
           "delta": 123.37
         },
         "7d": {
@@ -4406,7 +4406,7 @@
           "revSharePct": 100,
           "arr": 626767,
           "periodYield": 0.81,
-          "apy": 9.9,
+          "apy": 9.8,
           "delta": -20.44
         }
       },
@@ -5262,9 +5262,9 @@
       "logo": "https://icons.llamao.fi/icons/protocols/solana-name-service",
       "explorerUrl": "https://solscan.io/account/SNS8DJbHc34nKySHVhLGMUUE72ho6igvJaxtq9T3cX3",
       "programExplorerUrl": "https://solscan.io/account/SNS8DJbHc34nKySHVhLGMUUE72ho6igvJaxtq9T3cX3",
-      "mcap": 1822342.0163400366,
-      "peRatio": 9.6,
-      "pfRatio": 9.6,
+      "mcap": 1816967.2878227485,
+      "peRatio": 9.5,
+      "pfRatio": 9.5,
       "timeframeData": {
         "24h": {
           "fees": 404,
@@ -5440,7 +5440,7 @@
       "logo": "https://icons.llamao.fi/icons/protocols/metaplex",
       "explorerUrl": "https://solscan.io/account/METAewgxyPbgwsseH8T16a39CQ5VyVxZi9zXiDPY18m",
       "programExplorerUrl": "https://solscan.io/account/metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
-      "mcap": 25222610.06424139,
+      "mcap": 25212248.81981891,
       "peRatio": 147.5,
       "pfRatio": 147.5,
       "timeframeData": {
@@ -5508,11 +5508,11 @@
         "treasuryAddress": "METAewgxyPbgwsseH8T16a39CQ5VyVxZi9zXiDPY18m",
         "treasuryNetWorthUsd": 38500000,
         "treasuryHoldings": "42.5M MPLX Repurchased + SOL Minting Fees",
-        "burnedAmount": 42518637,
+        "burnedAmount": 42518639,
         "burnedPctOfMax": 4.25,
         "burnVelocity": 4.25,
         "initialSupply": 1000000000,
-        "currentSupply": 999981363
+        "currentSupply": 999981361
       }
     },
     {
@@ -5796,7 +5796,7 @@
       "logo": "https://icons.llamao.fi/icons/protocols/apollo-diversified-credit-securitize-fund",
       "explorerUrl": "https://etherscan.io/token/0xda2ffa104356688e74d9340519b8c17f00d7752e",
       "programExplorerUrl": "https://solscan.io/account/0xda2ffa104356688e74d9340519b8c17f00d7752e",
-      "mcap": 4209132.527489713,
+      "mcap": 4209246.404696032,
       "peRatio": 45.9,
       "pfRatio": 12.6,
       "timeframeData": {
@@ -6241,9 +6241,9 @@
       "logo": "https://icons.llamao.fi/icons/protocols/kaio",
       "explorerUrl": "https://etherscan.io/token/0x00bac91fd8f5b4a0dc03c8021139b76f6549ee7e",
       "programExplorerUrl": "https://solscan.io/account/0x00bac91fd8f5b4a0dc03c8021139b76f6549ee7e",
-      "mcap": 13845390.186362447,
-      "peRatio": 249.6,
-      "pfRatio": 249.6,
+      "mcap": 13858297.94526781,
+      "peRatio": 249.8,
+      "pfRatio": 249.8,
       "timeframeData": {
         "24h": {
           "fees": 152,
@@ -6330,9 +6330,9 @@
       "logo": "https://icons.llamao.fi/icons/protocols/ready-cards",
       "explorerUrl": "https://solscan.io/account/HKJHsYJHMVK5VRyHHk5GhvzY9tBAAtPvDkZfDH6RLDTd",
       "programExplorerUrl": "https://solscan.io/account/HKJHsYJHMVK5VRyHHk5GhvzY9tBAAtPvDkZfDH6RLDTd",
-      "mcap": 5298022.059391972,
-      "peRatio": 97.7,
-      "pfRatio": 97.7,
+      "mcap": 5285017.376569756,
+      "peRatio": 97.5,
+      "pfRatio": 97.5,
       "timeframeData": {
         "24h": {
           "fees": 50,
@@ -6419,9 +6419,9 @@
       "logo": "https://icons.llamao.fi/icons/protocols/banana-gun",
       "explorerUrl": "https://etherscan.io/token/0x38e68a37e401f7271568cecaac63c6b1e19130b4",
       "programExplorerUrl": "https://solscan.io/account/0x38e68a37e401f7271568cecaac63c6b1e19130b4",
-      "mcap": 15652738.334070059,
-      "peRatio": 296.4,
-      "pfRatio": 296.4,
+      "mcap": 15693921.538123159,
+      "peRatio": 297.1,
+      "pfRatio": 297.1,
       "timeframeData": {
         "24h": {
           "fees": 63,
@@ -6864,7 +6864,7 @@
       "logo": "https://icons.llamao.fi/icons/protocols/vaneck-treasury-fund",
       "explorerUrl": "https://etherscan.io/token/0xda2ffa104356688e74d9340519b8c17f00d7752e",
       "programExplorerUrl": "https://solscan.io/account/0xda2ffa104356688e74d9340519b8c17f00d7752e",
-      "mcap": 4209132.527489713,
+      "mcap": 4209246.404696032,
       "peRatio": 144.2,
       "pfRatio": 7.5,
       "timeframeData": {
@@ -7665,9 +7665,9 @@
       "logo": "https://icons.llamao.fi/icons/protocols/virtuals-protocol",
       "explorerUrl": "https://etherscan.io/token/0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
       "programExplorerUrl": "https://solscan.io/account/0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
-      "mcap": 504069316.9184919,
-      "peRatio": 68081.8,
-      "pfRatio": 20558,
+      "mcap": 505839996.0368379,
+      "peRatio": 68320.9,
+      "pfRatio": 20630.2,
       "timeframeData": {
         "24h": {
           "fees": 7,
@@ -7754,9 +7754,9 @@
       "logo": "https://icons.llamao.fi/icons/protocols/ansem.io",
       "explorerUrl": "https://solscan.io/account/9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump",
       "programExplorerUrl": "https://solscan.io/account/9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump",
-      "mcap": 59928153.169286095,
-      "peRatio": 10680.9,
-      "pfRatio": 10680.9,
+      "mcap": 59966909.59681748,
+      "peRatio": 10687.8,
+      "pfRatio": 10687.8,
       "timeframeData": {
         "24h": {
           "fees": 20,
@@ -7843,9 +7843,9 @@
       "logo": "https://icons.llamao.fi/icons/protocols/omnipair",
       "explorerUrl": "https://solscan.io/account/omfgRBnxHsNJh6YeGbGAmWenNkenzsXyBXm3WDhmeta",
       "programExplorerUrl": "https://solscan.io/account/omfgRBnxHsNJh6YeGbGAmWenNkenzsXyBXm3WDhmeta",
-      "mcap": 3227311.8786659543,
-      "peRatio": 580.4,
-      "pfRatio": 58.5,
+      "mcap": 3230955.306390481,
+      "peRatio": 581.1,
+      "pfRatio": 58.6,
       "timeframeData": {
         "24h": {
           "fees": 152,
@@ -8288,9 +8288,9 @@
       "logo": "https://icons.llamao.fi/icons/protocols/anoncoin",
       "explorerUrl": "https://solscan.io/account/D25bi7oHQjqkVrzbfuM6k2gzVNHTSpBLhtakDCzCCDUB",
       "programExplorerUrl": "https://solscan.io/account/D25bi7oHQjqkVrzbfuM6k2gzVNHTSpBLhtakDCzCCDUB",
-      "mcap": 2037714.6530046768,
-      "peRatio": 697.9,
-      "pfRatio": 697.9,
+      "mcap": 2008971.7941466903,
+      "peRatio": 688,
+      "pfRatio": 688,
       "timeframeData": {
         "24h": {
           "fees": 12,
@@ -8555,9 +8555,9 @@
       "logo": "https://icons.llamao.fi/icons/protocols/launch-coin-on-believe",
       "explorerUrl": "https://solscan.io/account/Ey59PH7Z4BFU4HjyKnyMdWt5GGN76KazTAwQihoUXRnk",
       "programExplorerUrl": "https://solscan.io/account/Ey59PH7Z4BFU4HjyKnyMdWt5GGN76KazTAwQihoUXRnk",
-      "mcap": 1696631.1908374892,
-      "peRatio": 2869.5,
-      "pfRatio": 2837,
+      "mcap": 1678995.1121648855,
+      "peRatio": 2839.7,
+      "pfRatio": 2807.5,
       "timeframeData": {
         "24h": {
           "fees": 0,
@@ -9445,7 +9445,7 @@
       "logo": "https://icons.llamao.fi/icons/protocols/huma",
       "explorerUrl": "https://solscan.io/account/So11111111111111111111111111111111111111112",
       "programExplorerUrl": "https://solscan.io/account/So11111111111111111111111111111111111111112",
-      "mcap": 52202252.13390377,
+      "mcap": 52559304.381710544,
       "peRatio": null,
       "pfRatio": 1.5,
       "timeframeData": {
@@ -9801,9 +9801,9 @@
       "logo": "https://icons.llamao.fi/icons/protocols/solstice",
       "explorerUrl": "https://solscan.io/account/SLXdx4BUt2v9uJQNzWqSfzTJ9UKLUDsvxHFMEEdrfgq",
       "programExplorerUrl": "https://solscan.io/account/SLXdx4BUt2v9uJQNzWqSfzTJ9UKLUDsvxHFMEEdrfgq",
-      "mcap": 14373839.929835757,
+      "mcap": 14405232.297647988,
       "peRatio": null,
-      "pfRatio": 34.4,
+      "pfRatio": 34.5,
       "timeframeData": {
         "24h": {
           "fees": 1253,
@@ -9979,9 +9979,9 @@
       "logo": "https://icons.llamao.fi/icons/protocols/portal",
       "explorerUrl": "https://solscan.io/account/85VBFQZC9TZkfaptBWjvUw7YbZjy52A6mjtPGjstQAmQ",
       "programExplorerUrl": "https://solscan.io/account/85VBFQZC9TZkfaptBWjvUw7YbZjy52A6mjtPGjstQAmQ",
-      "mcap": 94493417.99160641,
+      "mcap": 94755476.6364964,
       "peRatio": null,
-      "pfRatio": 795.2,
+      "pfRatio": 797.4,
       "timeframeData": {
         "24h": {
           "fees": 412,
@@ -10157,7 +10157,7 @@
       "logo": "https://icons.llamao.fi/icons/protocols/thorchain-dex",
       "explorerUrl": "https://etherscan.io/token/0x0000000000000000000000000000000000000000",
       "programExplorerUrl": "https://solscan.io/account/0x0000000000000000000000000000000000000000",
-      "mcap": 236163650.31314048,
+      "mcap": 236774538.9233487,
       "peRatio": null,
       "pfRatio": null,
       "timeframeData": {
@@ -10424,9 +10424,9 @@
       "logo": "https://icons.llamao.fi/icons/protocols/hivemapper",
       "explorerUrl": "https://solscan.io/account/4vMsoUT2BWatFweudnQM1xedRLfJgJ7hswhcpz4xgBTy",
       "programExplorerUrl": "https://solscan.io/account/4vMsoUT2BWatFweudnQM1xedRLfJgJ7hswhcpz4xgBTy",
-      "mcap": 18954189.471759655,
-      "peRatio": 4039165.8,
-      "pfRatio": 3304772,
+      "mcap": 19897196.727377,
+      "peRatio": 4240122,
+      "pfRatio": 3469190.8,
       "timeframeData": {
         "24h": {
           "fees": 0,
@@ -10780,7 +10780,7 @@
       "logo": "https://icons.llamao.fi/icons/protocols/across",
       "explorerUrl": "https://etherscan.io/token/0x44108f0223A3C3028F5Fe7AEC7f9bb2E66beF82F",
       "programExplorerUrl": "https://solscan.io/account/0x44108f0223A3C3028F5Fe7AEC7f9bb2E66beF82F",
-      "mcap": 31267126.000868957,
+      "mcap": 31272463.325539194,
       "peRatio": null,
       "pfRatio": null,
       "timeframeData": {
@@ -11937,7 +11937,7 @@
       "logo": "https://icons.llamao.fi/icons/protocols/solomon-usdv",
       "explorerUrl": "https://solscan.io/account/SoLo9oxzLDpcq1dpqAgMwgce5WqkRDtNXK7EPnbmeta",
       "programExplorerUrl": "https://solscan.io/account/SoLo9oxzLDpcq1dpqAgMwgce5WqkRDtNXK7EPnbmeta",
-      "mcap": 10649693.130355936,
+      "mcap": 10650869.915771104,
       "peRatio": null,
       "pfRatio": null,
       "timeframeData": {
@@ -12026,7 +12026,7 @@
       "logo": "https://icons.llamao.fi/icons/protocols/boop.fun",
       "explorerUrl": "https://solscan.io/account/boopkpWqe68MSxLqBGogs8ZbUDN4GXaLhFwNP7mpP1i",
       "programExplorerUrl": "https://solscan.io/account/boopkpWqe68MSxLqBGogs8ZbUDN4GXaLhFwNP7mpP1i",
-      "mcap": 1405852.4566043757,
+      "mcap": 1405529.4075409467,
       "peRatio": null,
       "pfRatio": null,
       "timeframeData": {
@@ -12471,7 +12471,7 @@
       "logo": "https://icons.llamao.fi/icons/protocols/helium-network",
       "explorerUrl": "https://solscan.io/account/hntyVP6YFm1Hg25TN9WGLqM12b8TQmcknKrdu1oxWux",
       "programExplorerUrl": "https://solscan.io/account/hemjuPXBpNvggtaUnN1MwT3wrdhttKEfosTcc2P9Pg8",
-      "mcap": 102264870.83618984,
+      "mcap": 102983227.63709486,
       "peRatio": null,
       "pfRatio": null,
       "timeframeData": {
@@ -12539,11 +12539,11 @@
         "treasuryAddress": "hntyVP6YFm1Hg25TN9WGLqM12b8TQmcknKrdu1oxWux",
         "treasuryNetWorthUsd": 0,
         "treasuryHoldings": "SOL, USDC & SPL Treasury Vaults",
-        "burnedAmount": 31371570,
-        "burnedPctOfMax": 14.07,
-        "burnVelocity": 14.07,
+        "burnedAmount": 28758011,
+        "burnedPctOfMax": 12.9,
+        "burnVelocity": 12.9,
         "initialSupply": 223000000,
-        "currentSupply": 191628430
+        "currentSupply": 194241989
       }
     },
     {
@@ -12738,7 +12738,7 @@
       "logo": "https://icons.llamao.fi/icons/protocols/migrate.fun",
       "explorerUrl": "https://solscan.io/account/6HHzBVkxtoz86Bjy2duaUw77hVfJzQkuoLizWeEMBLEM",
       "programExplorerUrl": "https://solscan.io/account/6HHzBVkxtoz86Bjy2duaUw77hVfJzQkuoLizWeEMBLEM",
-      "mcap": 3435150.985390607,
+      "mcap": 3416802.1631308533,
       "peRatio": null,
       "pfRatio": null,
       "timeframeData": {
@@ -13963,11 +13963,11 @@
         "treasuryAddress": "HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3",
         "treasuryNetWorthUsd": 0,
         "treasuryHoldings": "SOL, USDC & SPL Treasury Vaults",
-        "burnedAmount": 40614,
+        "burnedAmount": 40789,
         "burnedPctOfMax": 0,
         "burnVelocity": 0,
         "initialSupply": 10000000000,
-        "currentSupply": 9999959386
+        "currentSupply": 9999959211
       }
     },
     {
@@ -14052,11 +14052,11 @@
         "treasuryAddress": "HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3",
         "treasuryNetWorthUsd": 0,
         "treasuryHoldings": "SOL, USDC & SPL Treasury Vaults",
-        "burnedAmount": 40614,
+        "burnedAmount": 40789,
         "burnedPctOfMax": 0,
         "burnVelocity": 0,
         "initialSupply": 10000000000,
-        "currentSupply": 9999959386
+        "currentSupply": 9999959211
       }
     },
     {
@@ -14141,11 +14141,11 @@
         "treasuryAddress": "HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3",
         "treasuryNetWorthUsd": 1518083,
         "treasuryHoldings": "SOL, USDC & SPL Treasury Vaults",
-        "burnedAmount": 40614,
+        "burnedAmount": 40789,
         "burnedPctOfMax": 0,
         "burnVelocity": 0,
         "initialSupply": 10000000000,
-        "currentSupply": 9999959386
+        "currentSupply": 9999959211
       }
     },
     {
@@ -14699,10 +14699,10 @@
       "retailSharePct": 72.5,
       "decentralizationScore": 73,
       "riskLevel": "LOW_RISK",
-      "burnedTokens": 50702579,
-      "burnedPctOfMax": 9.44,
+      "burnedTokens": 50742061,
+      "burnedPctOfMax": 9.45,
       "initialSupply": 536870912,
-      "currentSupply": 486168333,
+      "currentSupply": 486128851,
       "description": "Decentralized GPU rendering network on Solana. 95% of rendering job payments in $RENDER are permanently burned under the Burn-and-Mint Equilibrium (BME) model."
     },
     {
@@ -14743,10 +14743,10 @@
       "retailSharePct": 77.6,
       "decentralizationScore": 78,
       "riskLevel": "LOW_RISK",
-      "burnedTokens": 184500,
-      "burnedPctOfMax": 27.08,
+      "burnedTokens": 178968,
+      "burnedPctOfMax": 26.27,
       "initialSupply": 681353,
-      "currentSupply": 496853,
+      "currentSupply": 502385,
       "description": "On-chain Proof-of-Work & gamified compute mining on Solana. Protocol fees buy back & bury/burn $ORE for stakers."
     },
     {
@@ -14787,10 +14787,10 @@
       "retailSharePct": 63.9,
       "decentralizationScore": 64,
       "riskLevel": "MODERATE_RISK",
-      "burnedTokens": 53187,
+      "burnedTokens": 53539,
       "burnedPctOfMax": 0,
       "initialSupply": 10000000000,
-      "currentSupply": 9999946813,
+      "currentSupply": 9999946461,
       "description": "Zero-TVL intent-based cross-chain bridge connecting Solana with EVM chains. Charges flat bps + solver spread fees."
     },
     {
@@ -14809,10 +14809,10 @@
       "retailSharePct": 65.8,
       "decentralizationScore": 66,
       "riskLevel": "LOW_RISK",
-      "burnedTokens": 182042273,
-      "burnedPctOfMax": 18.2,
+      "burnedTokens": 202005882,
+      "burnedPctOfMax": 20.2,
       "initialSupply": 1000000000,
-      "currentSupply": 817957727,
+      "currentSupply": 797994118,
       "description": "Solana memecoin & social launchpad capturing 100% of bonding curve origination fees for protocol treasury & buybacks."
     },
     {
@@ -14831,10 +14831,10 @@
       "retailSharePct": 65.4,
       "decentralizationScore": 65,
       "riskLevel": "LOW_RISK",
-      "burnedTokens": 42518637,
+      "burnedTokens": 42518639,
       "burnedPctOfMax": 4.25,
       "initialSupply": 1000000000,
-      "currentSupply": 999981363,
+      "currentSupply": 999981361,
       "description": "Powers 99.9% of all token metadata, Pump.fun mints, Core NFTs, and Bubblegum cNFTs on Solana. 50% of all protocol fees buy back $MPLX monthly for the DAO."
     },
     {
@@ -14853,10 +14853,10 @@
       "retailSharePct": 63.5,
       "decentralizationScore": 64,
       "riskLevel": "MODERATE_RISK",
-      "burnedTokens": 2267484,
+      "burnedTokens": 2267722,
       "burnedPctOfMax": 0.23,
       "initialSupply": 1000000000,
-      "currentSupply": 997732516,
+      "currentSupply": 997732278,
       "description": "Balanced distribution between institutional entities and community retail holders."
     },
     {
@@ -16855,10 +16855,10 @@
       "retailSharePct": 63.5,
       "decentralizationScore": 64,
       "riskLevel": "MODERATE_RISK",
-      "burnedTokens": 31371570,
-      "burnedPctOfMax": 14.07,
+      "burnedTokens": 28758011,
+      "burnedPctOfMax": 12.9,
       "initialSupply": 223000000,
-      "currentSupply": 191628430,
+      "currentSupply": 194241989,
       "description": "Balanced distribution between institutional entities and community retail holders."
     },
     {
@@ -17163,10 +17163,10 @@
       "retailSharePct": 63.5,
       "decentralizationScore": 64,
       "riskLevel": "MODERATE_RISK",
-      "burnedTokens": 40614,
+      "burnedTokens": 40789,
       "burnedPctOfMax": 0,
       "initialSupply": 10000000000,
-      "currentSupply": 9999959386,
+      "currentSupply": 9999959211,
       "description": "Balanced distribution between institutional entities and community retail holders."
     },
     {
@@ -17295,10 +17295,10 @@
       "retailSharePct": 64,
       "decentralizationScore": 64,
       "riskLevel": "MODERATE_RISK",
-      "burnedTokens": 22783786,
-      "burnedPctOfMax": 1.14,
+      "burnedTokens": 25841013,
+      "burnedPctOfMax": 1.29,
       "initialSupply": 2000000000,
-      "currentSupply": 1977216214,
+      "currentSupply": 1974158987,
       "description": "Tokenized physical trading cards (Pokemon/Sports RWA) & on-chain gacha packs on Solana."
     }
   ],
@@ -17307,8 +17307,8 @@
       "protocol": "Render Network",
       "symbol": "RENDER",
       "mint": "rndrizKT3MK1iimdxRdWabcF7Zg7AR5T4nud4EkHBof",
-      "totalBurnedTokens": 50702579,
-      "burnedPctOfSupply": 9.44,
+      "totalBurnedTokens": 50742061,
+      "burnedPctOfSupply": 9.45,
       "burned7dUsd": 47942,
       "emitted7dUsd": 41200,
       "bmeRatio": 1.16,
@@ -17320,8 +17320,8 @@
       "protocol": "Helium Network",
       "symbol": "HNT",
       "mint": "hntyVP6YFm1Hg25TN9WGLqM12b8TQmcknKrdu1oxWux",
-      "totalBurnedTokens": 31371570,
-      "burnedPctOfSupply": 14.07,
+      "totalBurnedTokens": 28758011,
+      "burnedPctOfSupply": 12.9,
       "burned7dUsd": 68400,
       "emitted7dUsd": 59500,
       "bmeRatio": 1.15,
@@ -17366,7 +17366,7 @@
         "symbol": "JUP",
         "mechanism": "50% Protocol Fee Programmatic Buyback",
         "timeAgo": "18 mins ago",
-        "timestamp": 1791404062817,
+        "timestamp": 1791405090793,
         "spentUsd": 142500,
         "spentAsset": "142,500 USDC",
         "boughtTokens": "491,379 JUP",
@@ -17379,7 +17379,7 @@
         "symbol": "RAY",
         "mechanism": "12% Swap Fee Auto-Buyback & Burn 🔥",
         "timeAgo": "42 mins ago",
-        "timestamp": 1791402622817,
+        "timestamp": 1791403650793,
         "spentUsd": 86400,
         "spentAsset": "612 SOL",
         "boughtTokens": "48,813 RAY",
@@ -17392,7 +17392,7 @@
         "symbol": "BONK",
         "mechanism": "Launchpad + 10% Bot Fee Permanent Burn 🔥",
         "timeAgo": "1 hour ago",
-        "timestamp": 1791401242817,
+        "timestamp": 1791402270793,
         "spentUsd": 64200,
         "spentAsset": "455 SOL",
         "boughtTokens": "3,890,000,000 BONK",
@@ -17405,7 +17405,7 @@
         "symbol": "MPLX",
         "mechanism": "50% Token/NFT Mint Fee TWAP Buyback",
         "timeAgo": "4 hours ago",
-        "timestamp": 1791390742817,
+        "timestamp": 1791391770793,
         "spentUsd": 38900,
         "spentAsset": "275 SOL",
         "boughtTokens": "164,830 MPLX",
@@ -17418,7 +17418,7 @@
         "symbol": "RENDER",
         "mechanism": "95% GPU Compute Credit Burn (BME) 🔥",
         "timeAgo": "6 hours ago",
-        "timestamp": 1791383542817,
+        "timestamp": 1791384570793,
         "spentUsd": 47900,
         "spentAsset": "47,900 USDC Eq.",
         "boughtTokens": "7,852 RENDER",
@@ -17431,7 +17431,7 @@
         "symbol": "ORCA",
         "mechanism": "12% Whirlpool Fee xORCA Buyback",
         "timeAgo": "9 hours ago",
-        "timestamp": 1791372742817,
+        "timestamp": 1791373770793,
         "spentUsd": 29500,
         "spentAsset": "29,500 USDC",
         "boughtTokens": "11,943 ORCA",
@@ -17444,7 +17444,7 @@
         "symbol": "MNDE",
         "mechanism": "Validator Bid Cut MNDE Buyback",
         "timeAgo": "14 hours ago",
-        "timestamp": 1791354742817,
+        "timestamp": 1791355770793,
         "spentUsd": 18400,
         "spentAsset": "130 SOL",
         "boughtTokens": "206,741 MNDE",
