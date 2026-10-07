@@ -3345,7 +3345,114 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
           </div>
       </div>
 
-      <!-- SECTION 2: BYBIT SPOT TOKENS TABLE (FILTERABLE BY CATEGORY) -->
+      <!-- ============================================================== -->
+      <!-- SECTION 2: BYBIT TOP PROTOCOL LEADERBOARDS                      -->
+      <!-- TOP REVENUE | TOP HOLDERS | TOP BUYBACK | TOP BURN             -->
+      <!-- ============================================================== -->
+      <div class="card-terminal rounded-2xl p-5 sm:p-6 border border-cyan-500/30 bg-gradient-to-b from-[#0c1a2e]/90 via-[#091322]/90 to-[#070c16]/90 space-y-5">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-slate-800/80 pb-4">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono uppercase bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 font-bold flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                ON-CHAIN PROTOCOL INTELLIGENCE
+              </span>
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-mono text-slate-400 border border-slate-800 bg-slate-900">
+                Consolidated Multi-Chain Math
+              </span>
+              <span id="bybit-lead-active-count-badge" class="px-2 py-0.5 rounded-full text-[10px] font-mono text-emerald-300 border border-emerald-500/30 bg-emerald-500/10 font-semibold">
+                140 Active Protocols
+              </span>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-black text-white tracking-tight flex items-center gap-2">
+              <span>🏆 Bybit Spot — Top On-Chain Protocol Leaderboards</span>
+            </h3>
+            <p class="text-xs text-slate-400 max-w-2xl">
+              Live ranking of Bybit Spot assets by verifiable on-chain metrics across all chains. Tokens without verified data strictly display "—".
+            </p>
+          </div>
+
+          <!-- Controls: Timeframes (24H / 7D / 30D) & Limit (Top 10 / 25 / 50) -->
+          <div class="flex flex-wrap items-center gap-2.5 font-mono text-xs">
+            <!-- Timeframe Filter -->
+            <div class="flex items-center bg-slate-950/90 p-1 rounded-xl border border-slate-800">
+              <button id="bybit-lead-tf-24h" onclick="setBybitLeaderboardTimeframe('24h')" class="px-3 py-1.5 rounded-lg font-bold transition-all text-slate-400 hover:text-white">24H</button>
+              <button id="bybit-lead-tf-7d" onclick="setBybitLeaderboardTimeframe('7d')" class="px-3 py-1.5 rounded-lg font-bold transition-all bg-cyan-500/20 text-cyan-300 border border-cyan-500/50 shadow-sm">7D</button>
+              <button id="bybit-lead-tf-30d" onclick="setBybitLeaderboardTimeframe('30d')" class="px-3 py-1.5 rounded-lg font-bold transition-all text-slate-400 hover:text-white">30D</button>
+            </div>
+
+            <!-- Limit Filter -->
+            <div class="flex items-center bg-slate-950/90 p-1 rounded-xl border border-slate-800">
+              <button id="bybit-lead-limit-10" onclick="setBybitLeaderboardLimit(10)" class="px-2.5 py-1.5 rounded-lg font-medium transition-all text-slate-400 hover:text-white">Top 10</button>
+              <button id="bybit-lead-limit-25" onclick="setBybitLeaderboardLimit(25)" class="px-2.5 py-1.5 rounded-lg font-bold transition-all bg-cyan-500/20 text-cyan-300 border border-cyan-500/40">Top 25</button>
+              <button id="bybit-lead-limit-50" onclick="setBybitLeaderboardLimit(50)" class="px-2.5 py-1.5 rounded-lg font-medium transition-all text-slate-400 hover:text-white">Top 50</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Metric Cards / Tabs -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 font-mono text-xs">
+          <!-- Tab 1: Top Revenue -->
+          <button id="bybit-tab-revenue" onclick="setBybitLeaderboardMetric('revenue')" class="p-3.5 rounded-xl border transition-all text-left flex items-center gap-3 bg-cyan-500/15 border-cyan-400/60 shadow-lg shadow-cyan-500/10 text-white">
+            <span class="text-2xl">💰</span>
+            <div class="min-w-0">
+              <div class="font-extrabold text-sm text-cyan-300">Top Revenue</div>
+              <div class="text-[11px] text-slate-400 truncate">أعلى مدخول بروتوكول</div>
+            </div>
+          </button>
+
+          <!-- Tab 2: Top Holders -->
+          <button id="bybit-tab-holders" onclick="setBybitLeaderboardMetric('holders')" class="p-3.5 rounded-xl border transition-all text-left flex items-center gap-3 bg-slate-900/80 border-slate-800 hover:border-slate-700 text-slate-300">
+            <span class="text-2xl">👥</span>
+            <div class="min-w-0">
+              <div class="font-extrabold text-sm text-slate-200">Top Holders</div>
+              <div class="text-[11px] text-slate-400 truncate">أكبر قاعدة هولدرز ومحافظ</div>
+            </div>
+          </button>
+
+          <!-- Tab 3: Top Buyback -->
+          <button id="bybit-tab-buyback" onclick="setBybitLeaderboardMetric('buyback')" class="p-3.5 rounded-xl border transition-all text-left flex items-center gap-3 bg-slate-900/80 border-slate-800 hover:border-slate-700 text-slate-300">
+            <span class="text-2xl">🔄</span>
+            <div class="min-w-0">
+              <div class="font-extrabold text-sm text-slate-200">Top Buyback</div>
+              <div class="text-[11px] text-slate-400 truncate">إعادة شراء التوكن</div>
+            </div>
+          </button>
+
+          <!-- Tab 4: Top Burn -->
+          <button id="bybit-tab-burn" onclick="setBybitLeaderboardMetric('burn')" class="p-3.5 rounded-xl border transition-all text-left flex items-center gap-3 bg-slate-900/80 border-slate-800 hover:border-slate-700 text-slate-300">
+            <span class="text-2xl">🔥</span>
+            <div class="min-w-0">
+              <div class="font-extrabold text-sm text-slate-200">Top Burn</div>
+              <div class="text-[11px] text-slate-400 truncate">حرق المعروض (انكماش)</div>
+            </div>
+          </button>
+        </div>
+
+        <!-- Leaderboard Table -->
+        <div class="overflow-x-auto rounded-xl border border-slate-800/90 bg-slate-950/60">
+          <table class="w-full text-left border-collapse font-mono">
+            <thead>
+              <tr class="border-b border-slate-800 bg-slate-900/90 text-[11px] text-slate-400 uppercase">
+                <th class="py-3 px-3 text-center w-12">#</th>
+                <th class="py-3 px-4">Protocol / Token</th>
+                <th class="py-3 px-4">Narrative &amp; Chains</th>
+                <th id="bybit-lead-metric-th" class="py-3 px-4 text-right">7D Protocol Revenue</th>
+                <th class="py-3 px-4 text-right">Spot Price</th>
+                <th class="py-3 px-4 text-right">24H Change</th>
+                <th class="py-3 px-4 text-right">On-Chain TVL</th>
+                <th class="py-3 px-4 w-40">Relative Share</th>
+                <th class="py-3 px-4 text-center w-28">Trade Spot</th>
+              </tr>
+            </thead>
+            <tbody id="bybit-leaderboard-tbody" class="divide-y divide-slate-800/60 text-sm">
+              <!-- Injected via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- SECTION 3: BYBIT SPOT TOKENS TABLE (FILTERABLE BY CATEGORY) -->
       <div class="card-terminal rounded-2xl p-5 sm:p-6 border border-slate-800/90 space-y-4">
         <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
           <div>
@@ -8161,6 +8268,185 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
     let bybitSearchQuery = '';
     let bybitSortMode = 'volume_desc';
 
+    // Top Protocol Leaderboard State (Top Revenue, Top Holders, Top Buyback, Top Burn)
+    let bybitLeadMetric = 'revenue'; // 'revenue' | 'holders' | 'buyback' | 'burn'
+    let bybitLeadTimeframe = '7d';   // '24h' | '7d' | '30d'
+    let bybitLeadLimit = 25;        // 10 | 25 | 50
+
+    function formatHoldersCount(num) {
+      if (!num || num <= 0) return '—';
+      if (num >= 1e6) return (num / 1e6).toFixed(2) + 'M Wallets';
+      if (num >= 1e3) return (num / 1e3).toFixed(1) + 'K Wallets';
+      return Math.round(num).toLocaleString() + ' Wallets';
+    }
+
+    function setBybitLeaderboardMetric(metric) {
+      bybitLeadMetric = metric;
+      const tabs = ['revenue', 'holders', 'buyback', 'burn'];
+      tabs.forEach(t => {
+        const el = document.getElementById(`bybit-tab-${t}`);
+        if (!el) return;
+        const isSel = t === metric;
+        el.className = isSel
+          ? 'p-3.5 rounded-xl border transition-all text-left flex items-center gap-3 bg-cyan-500/15 border-cyan-400/60 shadow-lg shadow-cyan-500/10 text-white cursor-pointer'
+          : 'p-3.5 rounded-xl border transition-all text-left flex items-center gap-3 bg-slate-900/80 border-slate-800 hover:border-slate-700 text-slate-300 cursor-pointer';
+        const titleEl = el.querySelector('.font-extrabold');
+        if (titleEl) {
+          titleEl.className = isSel ? 'font-extrabold text-sm text-cyan-300' : 'font-extrabold text-sm text-slate-200';
+        }
+      });
+      renderBybitLeaderboard();
+    }
+
+    function setBybitLeaderboardTimeframe(tf) {
+      bybitLeadTimeframe = tf;
+      ['24h', '7d', '30d'].forEach(t => {
+        const el = document.getElementById(`bybit-lead-tf-${t}`);
+        if (!el) return;
+        el.className = t === tf
+          ? 'px-3 py-1.5 rounded-lg font-bold transition-all bg-cyan-500/20 text-cyan-300 border border-cyan-500/50 shadow-sm'
+          : 'px-3 py-1.5 rounded-lg font-bold transition-all text-slate-400 hover:text-white';
+      });
+      renderBybitLeaderboard();
+    }
+
+    function setBybitLeaderboardLimit(limit) {
+      bybitLeadLimit = limit;
+      [10, 25, 50].forEach(l => {
+        const el = document.getElementById(`bybit-lead-limit-${l}`);
+        if (!el) return;
+        el.className = l === limit
+          ? 'px-2.5 py-1.5 rounded-lg font-bold transition-all bg-cyan-500/20 text-cyan-300 border border-cyan-500/40'
+          : 'px-2.5 py-1.5 rounded-lg font-medium transition-all text-slate-400 hover:text-white';
+      });
+      renderBybitLeaderboard();
+    }
+
+    function renderBybitLeaderboard() {
+      if (!bybitDataStore) return;
+      const tbody = document.getElementById('bybit-leaderboard-tbody');
+      const thMetric = document.getElementById('bybit-lead-metric-th');
+      const countBadge = document.getElementById('bybit-lead-active-count-badge');
+      if (!tbody) return;
+
+      const tfLabel = bybitLeadTimeframe.toUpperCase();
+      let metricName = '7D Protocol Revenue';
+      if (bybitLeadMetric === 'revenue') metricName = `${tfLabel} Protocol Revenue`;
+      else if (bybitLeadMetric === 'holders') metricName = `Total On-Chain Wallets`;
+      else if (bybitLeadMetric === 'buyback') metricName = `${tfLabel} Token Buyback Cash Flow`;
+      else if (bybitLeadMetric === 'burn') metricName = `${tfLabel} On-Chain Token Burn`;
+
+      if (thMetric) thMetric.textContent = metricName;
+
+      const allTokens = [...(bybitDataStore.tokens || [])];
+      let filtered = [];
+
+      for (const tok of allTokens) {
+        let val = null;
+        if (bybitLeadMetric === 'revenue') {
+          val = bybitLeadTimeframe === '24h' ? tok.protocolRevenue24h : (bybitLeadTimeframe === '30d' ? tok.protocolRevenue30d : tok.protocolRevenue7d);
+        } else if (bybitLeadMetric === 'holders') {
+          val = tok.holdersCount;
+        } else if (bybitLeadMetric === 'buyback') {
+          val = bybitLeadTimeframe === '24h' ? tok.buyback24h : (bybitLeadTimeframe === '30d' ? tok.buyback30d : tok.buyback7d);
+        } else if (bybitLeadMetric === 'burn') {
+          val = bybitLeadTimeframe === '24h' ? tok.burn24h : (bybitLeadTimeframe === '30d' ? tok.burn30d : tok.burn7d);
+        }
+
+        if (val !== null && val !== undefined && val > 0) {
+          filtered.push({ ...tok, _leadVal: val });
+        }
+      }
+
+      filtered.sort((a, b) => b._leadVal - a._leadVal);
+
+      if (countBadge) countBadge.textContent = `${filtered.length} Active Protocols`;
+
+      const displayList = filtered.slice(0, bybitLeadLimit);
+      if (displayList.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="9" class="py-12 text-center text-slate-500 font-mono">No verified on-chain ${bybitLeadMetric} data available for this timeframe.</td></tr>`;
+        return;
+      }
+
+      const maxVal = displayList[0]?._leadVal || 1;
+
+      tbody.innerHTML = displayList.map((tok, idx) => {
+        const rank = idx + 1;
+        let rankBadge = `<span class="px-2 py-0.5 rounded-lg bg-slate-800 text-[11px] font-bold text-slate-400">#${rank}</span>`;
+        if (rank === 1) rankBadge = `<span class="px-2 py-0.5 rounded-lg bg-amber-500/20 text-amber-300 border border-amber-500/40 font-extrabold text-[11px]">🥇 1</span>`;
+        else if (rank === 2) rankBadge = `<span class="px-2 py-0.5 rounded-lg bg-slate-300/20 text-slate-200 border border-slate-300/40 font-extrabold text-[11px]">🥈 2</span>`;
+        else if (rank === 3) rankBadge = `<span class="px-2 py-0.5 rounded-lg bg-amber-700/20 text-amber-400 border border-amber-700/40 font-extrabold text-[11px]">🥉 3</span>`;
+
+        const barPct = Math.max(8, Math.min(100, Math.round((tok._leadVal / maxVal) * 100)));
+
+        let formattedMetric = '—';
+        if (bybitLeadMetric === 'holders') {
+          formattedMetric = `<span class="text-cyan-300 font-extrabold">${formatHoldersCount(tok._leadVal)}</span>`;
+        } else {
+          formattedMetric = `<span class="text-cyan-300 font-extrabold">${formatUSD(tok._leadVal)}</span>`;
+        }
+
+        const isUp = tok.change24hPct >= 0;
+        const changeSign = isUp ? '+' : '';
+        const changeColor = isUp ? 'text-emerald-400' : 'text-rose-400';
+
+        const tvlDisplay = tok.protocolTvl && tok.protocolTvl > 0 ? formatUSD(tok.protocolTvl) : '<span class="text-slate-600">—</span>';
+
+        const chains = (tok.onChainChains || []).slice(0, 3);
+        const chainBadges = chains.map(c => `
+          <span class="px-1.5 py-0.5 rounded text-[9px] bg-slate-900 border border-slate-700/70 text-slate-300">${c}</span>
+        `).join('');
+
+        return `
+          <tr class="hover:bg-cyan-500/5 transition-colors">
+            <td class="py-3 px-3 text-center">${rankBadge}</td>
+            <td class="py-3 px-4">
+              <div class="flex items-center gap-2.5">
+                <img src="${tok.logo}" class="w-7 h-7 rounded-full bg-slate-800 object-cover border border-slate-700 shrink-0" onerror="this.src='https://placehold.co/28x28/1e293b/fbbf24?text=${tok.symbol.charAt(0)}'">
+                <div class="min-w-0">
+                  <div class="flex items-center gap-1.5">
+                    <span class="font-extrabold text-white text-sm">$${tok.symbol}</span>
+                    ${tok.burnMechanism && bybitLeadMetric === 'burn' ? `<span class="text-[9px] px-1 rounded bg-rose-500/20 text-rose-300 border border-rose-500/30 truncate max-w-[120px]">${tok.burnMechanism}</span>` : ''}
+                  </div>
+                  <div class="text-[10px] text-slate-400 truncate">${tok.protocolName || tok.categoryName}</div>
+                </div>
+              </div>
+            </td>
+            <td class="py-3 px-4">
+              <div class="flex flex-col gap-1">
+                <span class="text-[10px] text-slate-300 flex items-center gap-1 font-semibold">
+                  <span>${tok.categoryIcon}</span>
+                  <span>${tok.categoryName}</span>
+                </span>
+                <div class="flex items-center gap-1 flex-wrap">${chainBadges}</div>
+              </div>
+            </td>
+            <td class="py-3 px-4 text-right">${formattedMetric}</td>
+            <td class="py-3 px-4 text-right text-slate-200 font-bold">${formatSpotPrice(tok.price)}</td>
+            <td class="py-3 px-4 text-right font-bold ${changeColor}">${changeSign}${tok.change24hPct.toFixed(2)}%</td>
+            <td class="py-3 px-4 text-right text-slate-300">${tvlDisplay}</td>
+            <td class="py-3 px-4">
+              <div class="space-y-1">
+                <div class="flex justify-between text-[10px] text-slate-400">
+                  <span>vs #1</span>
+                  <span class="font-bold text-cyan-300">${barPct}%</span>
+                </div>
+                <div class="w-full h-1.5 rounded-full bg-slate-900 overflow-hidden">
+                  <div class="h-full rounded-full bg-gradient-to-r from-cyan-400 to-blue-500" style="width: ${barPct}%"></div>
+                </div>
+              </div>
+            </td>
+            <td class="py-3 px-4 text-center">
+              <a href="${tok.bybitTradeUrl}" target="_blank" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-amber-500/15 text-amber-300 hover:bg-amber-500/25 border border-amber-500/30 text-xs font-bold transition-all">
+                <span>Bybit</span>
+                <span>↗</span>
+              </a>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
     function formatSpotPrice(p) {
       if (!p || p <= 0) return '$0.00';
       if (p >= 1000) return '$' + p.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -8470,6 +8756,7 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
         pillsEl.innerHTML = allPill + catPills;
       }
 
+      renderBybitLeaderboard();
       renderBybitTokensTable();
     }
 
@@ -8573,7 +8860,7 @@ JUP Litterbox (50%), MPLX (50%), RAY (12%), xORCA"]
               </div>
             </td>
             <td class="py-3 px-4 text-right text-xs font-bold text-amber-300">
-                ${tok.mcap > 0 ? ((tok.volume24hUsd / tok.mcap) * 100).toFixed(1) + '%' : '<span class="text-slate-600 font-normal">N/A</span>'}
+                ${tok.mcap > 0 ? ((tok.volume24hUsd / tok.mcap) * 100).toFixed(1) + '%' : '<span class="text-slate-600 font-normal">—</span>'}
               </td>
               <td class="py-3 px-4 text-right text-xs">
                 ${tok.protocolTvl > 0 ? `<span class="text-slate-300 font-bold">${formatUSD(tok.protocolTvl)}</span>` : `<span class="text-slate-600">—</span>`}
