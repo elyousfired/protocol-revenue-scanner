@@ -1,36 +1,53 @@
 {
-  "active": false,
+  "active": true,
   "intervalMs": 900000,
   "intervalLabel": "15 Minutes (Real-Time On-Chain)",
   "isThrottled": false,
   "consecutiveRateLimits": 0,
-  "lastSyncStartedAt": "2026-10-07T20:32:22.828Z",
-  "lastSyncFinishedAt": "2026-10-07T20:33:13.168Z",
-  "nextSyncExpectedAt": "2026-10-07T20:48:13.168Z",
-  "lastCycleDurationMs": 50340,
-  "revenueIncreases": [],
+  "lastSyncStartedAt": "2026-10-08T01:28:02.279Z",
+  "lastSyncFinishedAt": "2026-10-08T01:29:18.083Z",
+  "nextSyncExpectedAt": "2026-10-08T01:44:18.083Z",
+  "lastCycleDurationMs": 75803,
+  "revenueIncreases": [
+    {
+      "chain": "Hyperliquid",
+      "metric": "7D Revenue",
+      "diff": 75845,
+      "current": 7389718,
+      "type": "increase",
+      "timestamp": "2026-10-08T01:29:18.082Z"
+    }
+  ],
   "chainSummaries": {
     "hyperliquid": {
       "name": "Hyperliquid L1 & HyperEVM",
       "tvl": 7077428990,
-      "revenue7d": 7313873,
-      "revenue24h": 1044839,
-      "fees7d": 17413984,
-      "volume24h": 6932918766,
-      "hlpApr": 4.01,
-      "blockNumber": 47934352
+      "revenue7d": 7389718,
+      "revenue24h": 1055674,
+      "fees7d": 17594563,
+      "volume24h": 7003977216,
+      "hlpApr": 3.79,
+      "blockNumber": 47952383
     },
     "base": {
       "name": "Base L2",
-      "blockNumber": 52307913
+      "blockNumber": 52316792
     },
     "monad": {
       "name": "Monad L1 (Chain ID 143)",
-      "tvl": 444396358,
-      "blockNumber": 111420103
+      "tvl": 437467460,
+      "blockNumber": 111478840
     }
   },
   "history": [
+    {
+      "timestamp": "2026-10-08T01:29:18.083Z",
+      "durationMs": 75803,
+      "status": "success",
+      "rateLimited": false,
+      "deltasCount": 1,
+      "triggerReason": "startup_refresh"
+    },
     {
       "timestamp": "2026-10-07T20:33:13.168Z",
       "durationMs": 50340,

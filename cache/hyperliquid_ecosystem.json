@@ -1,6 +1,6 @@
 {
   "success": true,
-  "lastUpdated": "2026-10-07T21:45:11.732Z",
+  "lastUpdated": "2026-10-08T01:28:59.551Z",
   "l1Chain": {
     "name": "Hyperliquid L1 & HyperEVM",
     "symbol": "HYPE",
@@ -10,156 +10,92 @@
       "HyperEVM"
     ],
     "tvl": 7077428990,
-    "perpVolume24h": 6799338370,
-    "spotVolume24h": 175846513,
-    "totalVolume24h": 6975184883,
-    "openInterestUsd": 12682183744,
+    "perpVolume24h": 6826518757,
+    "spotVolume24h": 177478588,
+    "totalVolume24h": 7003997345,
+    "openInterestUsd": 12789649492,
     "hlpTvl": 184013154,
-    "hlpAprPct": 4.03,
-    "blockNumber": 47938785,
+    "hlpAprPct": 3.79,
+    "blockNumber": 47952386,
     "chainId": 999,
     "consensusEngine": "HyperBFT Tendermint",
     "tpsCapacity": "200,000 TPS",
     "finalityTime": "<0.2s Instant Finality",
-    "revenue7d": 7358414,
-    "revenue24h": 1051202,
-    "fees7d": 17520027,
+    "revenue7d": 7389739,
+    "revenue24h": 1055677,
+    "fees7d": 17594619,
     "mcap": 8500000000,
     "circulatingSupply": 1000000000
   },
   "summary": {
-    "totalProtocolsCount": 56,
+    "totalProtocolsCount": 3,
     "platformTvl": 7077428990,
-    "perpVolume24h": 6799338370,
-    "spotVolume24h": 175846513,
-    "openInterestUsd": 12682183744,
-    "hlpAprPct": 4.03,
-    "platformRevenue7d": 7358414,
-    "platformFees7d": 17520027
+    "perpVolume24h": 6826518757,
+    "spotVolume24h": 177478588,
+    "openInterestUsd": 12789649492,
+    "hlpAprPct": 3.79,
+    "platformRevenue7d": 7389739,
+    "platformFees7d": 17594619
   },
   "sectors": {
     "core": {
       "id": "core",
       "label": "⚡ Core L1 & CLOB Engine",
       "badge": "CORE L1",
-      "count": 10,
-      "totalTvl": 8722372187,
-      "totalRevenue7d": 11481148
+      "count": 2,
+      "totalTvl": 7261442144,
+      "totalRevenue7d": 11454095
     },
     "perps": {
       "id": "perps",
       "label": "📈 Perpetual DEX & Options",
       "badge": "PERPS / DERIVS",
-      "count": 4,
-      "totalTvl": 125212334,
-      "totalRevenue7d": 24591
+      "count": 0,
+      "totalTvl": 0,
+      "totalRevenue7d": 0
     },
     "dex": {
       "id": "dex",
       "label": "🔄 HyperEVM DEX & AMM Hubs",
       "badge": "DEX / AMM",
-      "count": 22,
-      "totalTvl": 1495477781,
-      "totalRevenue7d": 919765
+      "count": 0,
+      "totalTvl": 0,
+      "totalRevenue7d": 0
     },
     "yield": {
       "id": "yield",
       "label": "🌾 Automated Yield & Vaults",
       "badge": "YIELD / VAULTS",
-      "count": 9,
-      "totalTvl": 1462952429,
-      "totalRevenue7d": 136766
+      "count": 0,
+      "totalTvl": 0,
+      "totalRevenue7d": 0
     },
     "infra": {
       "id": "infra",
       "label": "🌉 Cross-Chain, Oracles & Data",
       "badge": "INFRA / BRIDGES",
-      "count": 5,
-      "totalTvl": 11859278411,
-      "totalRevenue7d": 7114753
+      "count": 0,
+      "totalTvl": 0,
+      "totalRevenue7d": 0
     },
     "lending": {
       "id": "lending",
       "label": "🏦 Money Markets & CDP",
       "badge": "LENDING / MONEY",
-      "count": 5,
-      "totalTvl": 11566826344,
-      "totalRevenue7d": 6764852
+      "count": 0,
+      "totalTvl": 0,
+      "totalRevenue7d": 0
     },
     "hip1": {
       "id": "hip1",
       "label": "🐱 Native HIP-1 Spot Orderbooks",
       "badge": "HIP-1 SPOT",
       "count": 1,
-      "totalTvl": 3792801,
-      "totalRevenue7d": 17700
+      "totalTvl": 3786590,
+      "totalRevenue7d": 17671
     }
   },
   "protocols": [
-    {
-      "id": "4867",
-      "slug": "layerzero-v2",
-      "name": "LayerZero V2",
-      "tokenSymbol": "ZRO",
-      "logo": "https://icons.llamao.fi/icons/protocols/layerzero-v2",
-      "category": "Bridge",
-      "sector": "infra",
-      "sectorLabel": "🌉 Cross-Chain, Oracles & Data",
-      "sectorBadge": "INFRA / BRIDGES",
-      "tvl": 11722389441,
-      "mcap": 14066867329,
-      "fees24h": 1808597,
-      "fees7d": 12660181,
-      "fees30d": 53172760,
-      "revenue24h": 1004776,
-      "revenue7d": 7033434,
-      "revenue30d": 29540423,
-      "runRate": 366723248.76,
-      "peRatio": 38.4,
-      "psRatio": 21.3,
-      "yieldPct": {
-        "periodYield": 0.05,
-        "apy": 2.6
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "Counts assets escrowed in LayerZero OFT Adapter / ProxyOFT lockboxes on each chain, discovered from the LayerZero metadata API. Pure mint-and-burn OFTs hold no collateral and are not counted. Destination-chain escrows that hold a LayerZero-minted wrapper are excluded, since the collateral backing them is already counted at its canonical lockbox, escrows holding natively-issued assets are counted even where the metadata annotates them as pegged to another chain."
-    },
-    {
-      "id": "4025",
-      "slug": "morpho-blue",
-      "name": "Morpho Blue",
-      "tokenSymbol": "MORPHO",
-      "logo": "https://icons.llamao.fi/icons/protocols/morpho-blue",
-      "category": "Lending",
-      "sector": "lending",
-      "sectorLabel": "🏦 Money Markets & CDP",
-      "sectorBadge": "LENDING / MONEY",
-      "tvl": 11243908842,
-      "mcap": 13492690610,
-      "fees24h": 1734775,
-      "fees7d": 12143421,
-      "fees30d": 51002368,
-      "revenue24h": 963764,
-      "revenue7d": 6746345,
-      "revenue30d": 28334649,
-      "runRate": 351754428.3,
-      "peRatio": 38.4,
-      "psRatio": 21.3,
-      "yieldPct": {
-        "periodYield": 0.05,
-        "apy": 2.6
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "HyperEVM smart contract protocol revenue and liquidity fees."
-    },
     {
       "id": "hyperliquid-core",
       "slug": "hyperliquid",
@@ -172,14 +108,14 @@
       "sectorBadge": "CORE L1",
       "tvl": 7077428990,
       "mcap": 8500000000,
-      "fees24h": 2502861,
-      "fees7d": 17520027,
-      "fees30d": 73584113.4,
-      "revenue24h": 1051202,
-      "revenue7d": 7358414,
-      "revenue30d": 30905338.8,
-      "runRate": 383667705.96,
-      "peRatio": 22.2,
+      "fees24h": 2513517,
+      "fees7d": 17594619,
+      "fees30d": 73897399.8,
+      "revenue24h": 1055677,
+      "revenue7d": 7389739,
+      "revenue30d": 31036903.8,
+      "runRate": 385300991.46,
+      "peRatio": 22.1,
       "psRatio": 9.3,
       "yieldPct": {
         "periodYield": 0.09,
@@ -194,166 +130,6 @@
       "methodology": "Native CLOB perpetual orderbook trading fees, liquidation spreads, and HyperEVM gas execution fees."
     },
     {
-      "id": "3",
-      "slug": "curve-dex",
-      "name": "Curve DEX",
-      "tokenSymbol": "CRV",
-      "logo": "https://icons.llamao.fi/icons/protocols/curve",
-      "category": "Dexs",
-      "sector": "dex",
-      "sectorLabel": "🔄 HyperEVM DEX & AMM Hubs",
-      "sectorBadge": "DEX / AMM",
-      "tvl": 1258913160,
-      "mcap": 1510695792,
-      "fees24h": 25765,
-      "fees7d": 405272,
-      "fees30d": 1702142,
-      "revenue24h": 14314,
-      "revenue7d": 225151,
-      "revenue30d": 945634,
-      "runRate": 11739373.14,
-      "peRatio": 128.7,
-      "psRatio": 71.5,
-      "yieldPct": {
-        "periodYield": 0.01,
-        "apy": 0.8
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "HyperEVM smart contract protocol revenue and liquidity fees."
-    },
-    {
-      "id": "382",
-      "slug": "pendle-v2",
-      "name": "Pendle V2",
-      "tokenSymbol": "PENDLE",
-      "logo": "https://icons.llamao.fi/icons/protocols/pendle-v2",
-      "category": "Yield",
-      "sector": "yield",
-      "sectorLabel": "🌾 Automated Yield & Vaults",
-      "sectorBadge": "YIELD / VAULTS",
-      "tvl": 1254293287,
-      "mcap": 1505151944,
-      "fees24h": 14717,
-      "fees7d": 174542,
-      "fees30d": 733076,
-      "revenue24h": 8176,
-      "revenue7d": 96968,
-      "revenue30d": 407266,
-      "runRate": 5055911.5200000005,
-      "peRatio": 297.7,
-      "psRatio": 165.4,
-      "yieldPct": {
-        "periodYield": 0.01,
-        "apy": 0.3
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "V1 TVL counts the collateral backing the yield tokens and USDC in the pendle markets, plus staked OT liquidity, and SLP/JLP staked in masterchef. Staking TVL is just staked PENDLE on 0x07282F2CEEbD7a65451Fcd268b364300D9e6D7f5. Pool2 refers to the Pe,P pool on mainnet, and Pa,P pool on avax."
-    },
-    {
-      "id": "6447",
-      "slug": "kinetiq-khype",
-      "name": "Kinetiq kHYPE",
-      "tokenSymbol": "KNTQ",
-      "logo": "https://icons.llamao.fi/icons/protocols/kinetiq-khype",
-      "category": "Liquid Staking",
-      "sector": "core",
-      "sectorLabel": "⚡ Core L1 & CLOB Engine",
-      "sectorBadge": "CORE L1",
-      "tvl": 978770539,
-      "mcap": 1174524647,
-      "fees24h": 10174,
-      "fees7d": 88234,
-      "fees30d": 370583,
-      "revenue24h": 5652,
-      "revenue7d": 49019,
-      "revenue30d": 205880,
-      "runRate": 2555850.66,
-      "peRatio": 459.5,
-      "psRatio": 255.3,
-      "yieldPct": {
-        "periodYield": 0,
-        "apy": 0.2
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "HyperEVM smart contract protocol revenue and liquidity fees."
-    },
-    {
-      "id": "5940",
-      "slug": "hyperlend-pooled",
-      "name": "HyperLend Pooled",
-      "tokenSymbol": "HPL",
-      "logo": "https://icons.llamao.fi/icons/protocols/hyperlend",
-      "category": "Lending",
-      "sector": "core",
-      "sectorLabel": "⚡ Core L1 & CLOB Engine",
-      "sectorBadge": "CORE L1",
-      "tvl": 381672539,
-      "mcap": 458007047,
-      "fees24h": 3278,
-      "fees7d": 28220,
-      "fees30d": 118524,
-      "revenue24h": 1821,
-      "revenue7d": 15678,
-      "revenue30d": 65848,
-      "runRate": 817450.92,
-      "peRatio": 560.3,
-      "psRatio": 311.3,
-      "yieldPct": {
-        "periodYield": 0,
-        "apy": 0.2
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "HyperEVM smart contract protocol revenue and liquidity fees."
-    },
-    {
-      "id": "5044",
-      "slug": "euler-v2",
-      "name": "Euler V2",
-      "tokenSymbol": "EUL",
-      "logo": "https://icons.llamao.fi/icons/protocols/euler-v2",
-      "category": "Lending",
-      "sector": "lending",
-      "sectorLabel": "🏦 Money Markets & CDP",
-      "sectorBadge": "LENDING / MONEY",
-      "tvl": 322081771,
-      "mcap": 386498125,
-      "fees24h": 4586,
-      "fees7d": 32096,
-      "fees30d": 134803,
-      "revenue24h": 2548,
-      "revenue7d": 17831,
-      "revenue30d": 74890,
-      "runRate": 929708.34,
-      "peRatio": 415.7,
-      "psRatio": 231,
-      "yieldPct": {
-        "periodYield": 0,
-        "apy": 0.2
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "TVL is supply balance minus borrows the euler contract. Borrowed excludes vaults whose underlying or whose accepted collateral vaults' underlyings have no price in coins.llama.fi (treated as worthless/insolvent)."
-    },
-    {
       "id": "hyperliquid-hlp",
       "slug": "hyperliquid-hlp",
       "name": "Hyperliquid HLP Vault",
@@ -365,664 +141,24 @@
       "sectorBadge": "CORE L1",
       "tvl": 184013154,
       "mcap": 184013154,
-      "fees24h": 1376574,
-      "fees7d": 9636015,
-      "fees30d": 40471262,
-      "revenue24h": 578161,
-      "revenue7d": 4047128,
-      "revenue30d": 16997938,
-      "runRate": 211017253.92000002,
+      "fees24h": 1382434,
+      "fees7d": 9677040,
+      "fees30d": 40643570,
+      "revenue24h": 580622,
+      "revenue7d": 4064356,
+      "revenue30d": 17070295,
+      "runRate": 211915521.84,
       "peRatio": 0.9,
       "psRatio": 1,
       "yieldPct": {
-        "periodYield": 0.0775,
-        "apy": 4.03
+        "periodYield": 0.07288461538461538,
+        "apy": 3.79
       },
       "takeRate": 100,
       "onChainChains": [
         "Hyperliquid L1"
       ],
       "methodology": "Automated on-chain market making vault capturing bid-ask spreads, funding payments, and liquidation volume."
-    },
-    {
-      "id": "3923",
-      "slug": "derive-v2",
-      "name": "Derive V2",
-      "tokenSymbol": "DRV",
-      "logo": "https://icons.llamao.fi/icons/protocols/derive",
-      "category": "Derivatives",
-      "sector": "perps",
-      "sectorLabel": "📈 Perpetual DEX & Options",
-      "sectorBadge": "PERPS / DERIVS",
-      "tvl": 115988050,
-      "mcap": 139185660,
-      "fees24h": 4091,
-      "fees7d": 34535,
-      "fees30d": 145047,
-      "revenue24h": 2273,
-      "revenue7d": 19186,
-      "revenue30d": 80581,
-      "runRate": 1000358.04,
-      "peRatio": 139.1,
-      "psRatio": 77.3,
-      "yieldPct": {
-        "periodYield": 0.01,
-        "apy": 0.7
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "HyperEVM smart contract protocol revenue and liquidity fees."
-    },
-    {
-      "id": "326",
-      "slug": "beefy",
-      "name": "Beefy",
-      "tokenSymbol": "BIFI",
-      "logo": "https://icons.llamao.fi/icons/protocols/beefy",
-      "category": "Yield Aggregator",
-      "sector": "yield",
-      "sectorLabel": "🌾 Automated Yield & Vaults",
-      "sectorBadge": "YIELD / VAULTS",
-      "tvl": 114230935,
-      "mcap": 5426918,
-      "fees24h": 3028,
-      "fees7d": 37737,
-      "fees30d": 158495,
-      "revenue24h": 1682,
-      "revenue7d": 20965,
-      "revenue30d": 88053,
-      "runRate": 1093115.1,
-      "peRatio": 5,
-      "psRatio": 2.8,
-      "yieldPct": {
-        "periodYield": 0.39,
-        "apy": 20.1
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "Provides the current and live total value locked of each Beefy vault, which is the sum of the current market capitalisation of all of the assets currently held by the relevant vault, denominated in $USD. Fetches vault addresses from Beefy API, then queries actual onchain balances of underlying tokens in each vault contract."
-    },
-    {
-      "id": "5619",
-      "slug": "sosovalue-indexes",
-      "name": "SoSoValue Indexes",
-      "tokenSymbol": "SOSO",
-      "logo": "https://icons.llamao.fi/icons/protocols/ssi",
-      "category": "Indexes",
-      "sector": "dex",
-      "sectorLabel": "🔄 HyperEVM DEX & AMM Hubs",
-      "sectorBadge": "DEX / AMM",
-      "tvl": 107831592,
-      "mcap": 129397910,
-      "fees24h": 115047,
-      "fees7d": 726293,
-      "fees30d": 3050431,
-      "revenue24h": 63915,
-      "revenue7d": 403496,
-      "revenue30d": 1694683,
-      "runRate": 21038281.44,
-      "peRatio": 6.2,
-      "psRatio": 3.4,
-      "yieldPct": {
-        "periodYield": 0.31,
-        "apy": 16.3
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "TVL counts the underlying tokens in the baskets of the SSI tokens."
-    },
-    {
-      "id": "7468",
-      "slug": "hyperlane",
-      "name": "Hyperlane",
-      "tokenSymbol": "HYPER",
-      "logo": "https://icons.llamao.fi/icons/protocols/hyperlane",
-      "category": "Cross Chain Bridge",
-      "sector": "core",
-      "sectorLabel": "⚡ Core L1 & CLOB Engine",
-      "sectorBadge": "CORE L1",
-      "tvl": 79603552,
-      "mcap": 22653815,
-      "fees24h": 952,
-      "fees7d": 7105,
-      "fees30d": 29841,
-      "revenue24h": 529,
-      "revenue7d": 3947,
-      "revenue30d": 16577,
-      "runRate": 205796.58000000002,
-      "peRatio": 110.1,
-      "psRatio": 61.2,
-      "yieldPct": {
-        "periodYield": 0.02,
-        "apy": 0.9
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "TVL counts the tokens locked in Hyperlane Warp Route collateral contracts, fetched dynamically from the Hyperlane registry."
-    },
-    {
-      "id": "5343",
-      "slug": "reservoir-protocol",
-      "name": "Reservoir Protocol",
-      "tokenSymbol": "DAM",
-      "logo": "https://icons.llamao.fi/icons/protocols/reservoir-protocol",
-      "category": "CDP",
-      "sector": "infra",
-      "sectorLabel": "🌉 Cross-Chain, Oracles & Data",
-      "sectorBadge": "INFRA / BRIDGES",
-      "tvl": 70777335,
-      "mcap": 667221,
-      "fees24h": 10921,
-      "fees7d": 76439,
-      "fees30d": 321044,
-      "revenue24h": 6067,
-      "revenue7d": 42466,
-      "revenue30d": 178357,
-      "runRate": 2214177.24,
-      "peRatio": 0.3,
-      "psRatio": 0.2,
-      "yieldPct": {
-        "periodYield": 6.36,
-        "apy": 331.9
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "HyperEVM smart contract protocol revenue and liquidity fees."
-    },
-    {
-      "id": "6251",
-      "slug": "yearn-curating",
-      "name": "Yearn Curating",
-      "tokenSymbol": "YFI",
-      "logo": "https://icons.llamao.fi/icons/protocols/yearn-curating",
-      "category": "Risk Curators",
-      "sector": "yield",
-      "sectorLabel": "🌾 Automated Yield & Vaults",
-      "sectorBadge": "YIELD / VAULTS",
-      "tvl": 51762869,
-      "mcap": 62115443,
-      "fees24h": 482,
-      "fees7d": 3478,
-      "fees30d": 14608,
-      "revenue24h": 268,
-      "revenue7d": 1932,
-      "revenue30d": 8114,
-      "runRate": 100734.48,
-      "peRatio": 616.6,
-      "psRatio": 342.5,
-      "yieldPct": {
-        "periodYield": 0,
-        "apy": 0.2
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "Counts all assets that are deposited in all vaults curated by Yearn."
-    },
-    {
-      "id": "3208",
-      "slug": "uncx-network-v3",
-      "name": "UNCX Network V3",
-      "tokenSymbol": "UNCX",
-      "logo": "https://icons.llamao.fi/icons/protocols/uncx-network-v3",
-      "category": "Token Locker",
-      "sector": "infra",
-      "sectorLabel": "🌉 Cross-Chain, Oracles & Data",
-      "sectorBadge": "INFRA / BRIDGES",
-      "tvl": 32504331,
-      "mcap": 39005197,
-      "fees24h": 5015,
-      "fees7d": 35105,
-      "fees30d": 147441,
-      "revenue24h": 2786,
-      "revenue7d": 19503,
-      "revenue30d": 81913,
-      "runRate": 1016886.42,
-      "peRatio": 38.4,
-      "psRatio": 21.3,
-      "yieldPct": {
-        "periodYield": 0.05,
-        "apy": 2.6
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "HyperEVM smart contract protocol revenue and liquidity fees."
-    },
-    {
-      "id": "7300",
-      "slug": "altura",
-      "name": "Altura",
-      "tokenSymbol": "AVLT",
-      "logo": "https://icons.llamao.fi/icons/protocols/altura",
-      "category": "Liquidity Manager",
-      "sector": "dex",
-      "sectorLabel": "🔄 HyperEVM DEX & AMM Hubs",
-      "sectorBadge": "DEX / AMM",
-      "tvl": 32420166,
-      "mcap": 638661,
-      "fees24h": 5002,
-      "fees7d": 35014,
-      "fees30d": 147059,
-      "revenue24h": 2779,
-      "revenue7d": 19452,
-      "revenue30d": 81698,
-      "runRate": 1014227.28,
-      "peRatio": 0.6,
-      "psRatio": 0.3,
-      "yieldPct": {
-        "periodYield": 3.05,
-        "apy": 158.8
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "HyperEVM smart contract protocol revenue and liquidity fees."
-    },
-    {
-      "id": "4799",
-      "slug": "termmax",
-      "name": "TermMax",
-      "tokenSymbol": "TMX",
-      "logo": "https://icons.llamao.fi/icons/protocols/termmax",
-      "category": "Lending",
-      "sector": "infra",
-      "sectorLabel": "🌉 Cross-Chain, Oracles & Data",
-      "sectorBadge": "INFRA / BRIDGES",
-      "tvl": 26726096,
-      "mcap": 1814678,
-      "fees24h": 4,
-      "fees7d": 31,
-      "fees30d": 130,
-      "revenue24h": 2,
-      "revenue7d": 17,
-      "revenue30d": 71,
-      "runRate": 886.38,
-      "peRatio": 2047.3,
-      "psRatio": 1122.7,
-      "yieldPct": {
-        "periodYield": 0,
-        "apy": 0
-      },
-      "takeRate": 55,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "HyperEVM smart contract protocol revenue and liquidity fees."
-    },
-    {
-      "id": "190",
-      "slug": "chamber-vaults",
-      "name": "Chamber Vaults",
-      "tokenSymbol": "DHT",
-      "logo": "https://icons.llamao.fi/icons/protocols/chamber-vaults",
-      "category": "Indexes",
-      "sector": "dex",
-      "sectorLabel": "🔄 HyperEVM DEX & AMM Hubs",
-      "sectorBadge": "DEX / AMM",
-      "tvl": 25422826,
-      "mcap": 30507391,
-      "fees24h": 536,
-      "fees7d": 2736,
-      "fees30d": 11491,
-      "revenue24h": 298,
-      "revenue7d": 1520,
-      "revenue30d": 6384,
-      "runRate": 79252.8,
-      "peRatio": 384.9,
-      "psRatio": 213.9,
-      "yieldPct": {
-        "periodYield": 0,
-        "apy": 0.3
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "Aggregates total value of each dHEDGE vault ever created"
-    },
-    {
-      "id": "7209",
-      "slug": "nest-cl",
-      "name": "nest CL",
-      "tokenSymbol": "NEST",
-      "logo": "https://icons.llamao.fi/icons/protocols/nest-cl",
-      "category": "Dexs",
-      "sector": "dex",
-      "sectorLabel": "🔄 HyperEVM DEX & AMM Hubs",
-      "sectorBadge": "DEX / AMM",
-      "tvl": 25042392,
-      "mcap": 30050870,
-      "fees24h": 27047,
-      "fees7d": 302324,
-      "fees30d": 1269761,
-      "revenue24h": 15026,
-      "revenue7d": 167958,
-      "revenue30d": 705424,
-      "runRate": 8757330.12,
-      "peRatio": 3.4,
-      "psRatio": 1.9,
-      "yieldPct": {
-        "periodYield": 0.56,
-        "apy": 29.1
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "HyperEVM smart contract protocol revenue and liquidity fees."
-    },
-    {
-      "id": "4725",
-      "slug": "spectra-v2",
-      "name": "Spectra V2",
-      "tokenSymbol": "SPECTRA",
-      "logo": "https://icons.llamao.fi/icons/protocols/spectra-v2",
-      "category": "Yield",
-      "sector": "yield",
-      "sectorLabel": "🌾 Automated Yield & Vaults",
-      "sectorBadge": "YIELD / VAULTS",
-      "tvl": 22044833,
-      "mcap": 26453800,
-      "fees24h": 72,
-      "fees7d": 4738,
-      "fees30d": 19900,
-      "revenue24h": 40,
-      "revenue7d": 2632,
-      "revenue30d": 11054,
-      "runRate": 137232.48,
-      "peRatio": 192.8,
-      "psRatio": 107.1,
-      "yieldPct": {
-        "periodYield": 0.01,
-        "apy": 0.5
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "All deposited underlying in Spectra Principal Tokens and all underlying supplied as liquidity in Spectra Markets. On Stellar, sum each registered Principal Token's total_assets in its declared underlying asset. This measures the contracts' underlying-denominated collateral value; non-custodial orders and PT/YT supplies are not added separately."
-    },
-    {
-      "id": "5491",
-      "slug": "balancer-v3",
-      "name": "Balancer V3",
-      "tokenSymbol": "BAL",
-      "logo": "https://icons.llamao.fi/icons/protocols/balancer-v3",
-      "category": "Dexs",
-      "sector": "dex",
-      "sectorLabel": "🔄 HyperEVM DEX & AMM Hubs",
-      "sectorBadge": "DEX / AMM",
-      "tvl": 21328979,
-      "mcap": 25594775,
-      "fees24h": 459,
-      "fees7d": 3926,
-      "fees30d": 16489,
-      "revenue24h": 255,
-      "revenue7d": 2181,
-      "revenue30d": 9160,
-      "runRate": 113717.34,
-      "peRatio": 225.1,
-      "psRatio": 125,
-      "yieldPct": {
-        "periodYield": 0.01,
-        "apy": 0.4
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "HyperEVM smart contract protocol revenue and liquidity fees."
-    },
-    {
-      "id": "3091",
-      "slug": "equilibria",
-      "name": "Equilibria",
-      "tokenSymbol": "EQB",
-      "logo": "https://icons.llamao.fi/icons/protocols/equilibria",
-      "category": "Yield",
-      "sector": "yield",
-      "sectorLabel": "🌾 Automated Yield & Vaults",
-      "sectorBadge": "YIELD / VAULTS",
-      "tvl": 13106834,
-      "mcap": 13368177,
-      "fees24h": 2021,
-      "fees7d": 14155,
-      "fees30d": 59451,
-      "revenue24h": 1123,
-      "revenue7d": 7864,
-      "revenue30d": 33029,
-      "runRate": 410028.96,
-      "peRatio": 32.6,
-      "psRatio": 18.1,
-      "yieldPct": {
-        "periodYield": 0.06,
-        "apy": 3.1
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "HyperEVM smart contract protocol revenue and liquidity fees."
-    },
-    {
-      "id": "8058",
-      "slug": "ramses-cl-v2",
-      "name": "Ramses CL V2",
-      "tokenSymbol": "RAM",
-      "logo": "https://icons.llamao.fi/icons/protocols/ramses-cl-v2",
-      "category": "Dexs",
-      "sector": "dex",
-      "sectorLabel": "🔄 HyperEVM DEX & AMM Hubs",
-      "sectorBadge": "DEX / AMM",
-      "tvl": 12573399,
-      "mcap": 15088079,
-      "fees24h": 20831,
-      "fees7d": 141566,
-      "fees30d": 594577,
-      "revenue24h": 11573,
-      "revenue7d": 78648,
-      "revenue30d": 330322,
-      "runRate": 4100706.72,
-      "peRatio": 3.7,
-      "psRatio": 2,
-      "yieldPct": {
-        "periodYield": 0.52,
-        "apy": 27.2
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "HyperEVM smart contract protocol revenue and liquidity fees."
-    },
-    {
-      "id": "5837",
-      "slug": "hyperswap-v3",
-      "name": "HyperSwap V3",
-      "tokenSymbol": "SWAP",
-      "logo": "https://icons.llamao.fi/icons/protocols/hyperswap-v3",
-      "category": "Dexs",
-      "sector": "core",
-      "sectorLabel": "⚡ Core L1 & CLOB Engine",
-      "sectorBadge": "CORE L1",
-      "tvl": 11483134,
-      "mcap": 13779761,
-      "fees24h": 911,
-      "fees7d": 11957,
-      "fees30d": 50219,
-      "revenue24h": 506,
-      "revenue7d": 6643,
-      "revenue30d": 27901,
-      "runRate": 346366.02,
-      "peRatio": 39.8,
-      "psRatio": 22.1,
-      "yieldPct": {
-        "periodYield": 0.05,
-        "apy": 2.5
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "HyperEVM smart contract protocol revenue and liquidity fees."
-    },
-    {
-      "id": "5871",
-      "slug": "looped-hype",
-      "name": "Looped Hype",
-      "tokenSymbol": "LHYPE",
-      "logo": "https://icons.llamao.fi/icons/protocols/looped-hype",
-      "category": "Yield",
-      "sector": "core",
-      "sectorLabel": "⚡ Core L1 & CLOB Engine",
-      "sectorBadge": "CORE L1",
-      "tvl": 7840808,
-      "mcap": 7845246,
-      "fees24h": 504,
-      "fees7d": 572,
-      "fees30d": 2402,
-      "revenue24h": 280,
-      "revenue7d": 318,
-      "revenue30d": 1336,
-      "runRate": 16580.52,
-      "peRatio": 473.2,
-      "psRatio": 263.1,
-      "yieldPct": {
-        "periodYield": 0,
-        "apy": 0.2
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "The total value of assets deployed across all LHYPE and WHLP strategies."
-    },
-    {
-      "id": "4856",
-      "slug": "harmonix-finance",
-      "name": "Harmonix Finance",
-      "tokenSymbol": "HAR",
-      "logo": "https://icons.llamao.fi/icons/protocols/harmonix-finance",
-      "category": "Yield",
-      "sector": "perps",
-      "sectorLabel": "📈 Perpetual DEX & Options",
-      "sectorBadge": "PERPS / DERIVS",
-      "tvl": 7766470,
-      "mcap": 2560015,
-      "fees24h": 1199,
-      "fees7d": 8388,
-      "fees30d": 35230,
-      "revenue24h": 666,
-      "revenue7d": 4660,
-      "revenue30d": 19572,
-      "runRate": 242972.4,
-      "peRatio": 10.5,
-      "psRatio": 5.9,
-      "yieldPct": {
-        "periodYield": 0.18,
-        "apy": 9.5
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "Aggregates total value of each Harmonix vault"
-    },
-    {
-      "id": "1594",
-      "slug": "symbiosis",
-      "name": "Symbiosis",
-      "tokenSymbol": "SIS",
-      "logo": "https://icons.llamao.fi/icons/protocols/symbiosis",
-      "category": "Cross Chain Bridge",
-      "sector": "infra",
-      "sectorLabel": "🌉 Cross-Chain, Oracles & Data",
-      "sectorBadge": "INFRA / BRIDGES",
-      "tvl": 6881208,
-      "mcap": 1635244,
-      "fees24h": 4295,
-      "fees7d": 34799,
-      "fees30d": 146156,
-      "revenue24h": 2386,
-      "revenue7d": 19333,
-      "revenue30d": 81199,
-      "runRate": 1008022.62,
-      "peRatio": 1.6,
-      "psRatio": 0.9,
-      "yieldPct": {
-        "periodYield": 1.18,
-        "apy": 61.6
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "Counts the amount of stables locked in Symbiosis protocol contracts: Portals V2"
-    },
-    {
-      "id": "3083",
-      "slug": "penpie",
-      "name": "Penpie",
-      "tokenSymbol": "PNP",
-      "logo": "https://icons.llamao.fi/icons/protocols/penpie",
-      "category": "Yield",
-      "sector": "yield",
-      "sectorLabel": "🌾 Automated Yield & Vaults",
-      "sectorBadge": "YIELD / VAULTS",
-      "tvl": 5813766,
-      "mcap": 3321254,
-      "fees24h": 56,
-      "fees7d": 43,
-      "fees30d": 181,
-      "revenue24h": 31,
-      "revenue7d": 24,
-      "revenue30d": 101,
-      "runRate": 1251.3600000000001,
-      "peRatio": 2654.1,
-      "psRatio": 1481.4,
-      "yieldPct": {
-        "periodYield": 0,
-        "apy": 0
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "HyperEVM smart contract protocol revenue and liquidity fees."
     },
     {
       "id": "hip1-purr",
@@ -1034,17 +170,17 @@
       "sector": "hip1",
       "sectorLabel": "🐱 Native HIP-1 Spot Orderbooks",
       "sectorBadge": "HIP-1 SPOT",
-      "tvl": 3792801,
+      "tvl": 3786590,
       "mcap": 128000000,
-      "fees24h": 2529,
-      "fees7d": 17700,
-      "fees30d": 74340,
-      "revenue24h": 2529,
-      "revenue7d": 17700,
-      "revenue30d": 74340,
-      "runRate": 922878,
-      "peRatio": 138.7,
-      "psRatio": 138.7,
+      "fees24h": 2524,
+      "fees7d": 17671,
+      "fees30d": 74218.2,
+      "revenue24h": 2524,
+      "revenue7d": 17671,
+      "revenue30d": 74218.2,
+      "runRate": 921365.9400000001,
+      "peRatio": 138.9,
+      "psRatio": 138.9,
       "yieldPct": {
         "periodYield": 0.01,
         "apy": 0.7
@@ -1054,982 +190,150 @@
         "Hyperliquid L1"
       ],
       "methodology": "First native community HIP-1 token with spot orderbook trading on Hyperliquid L1."
-    },
-    {
-      "id": "1461",
-      "slug": "woofi-swap",
-      "name": "WOOFi Swap",
-      "tokenSymbol": "WOO",
-      "logo": "https://icons.llamao.fi/icons/protocols/woofi",
-      "category": "Dexs",
-      "sector": "dex",
-      "sectorLabel": "🔄 HyperEVM DEX & AMM Hubs",
-      "sectorBadge": "DEX / AMM",
-      "tvl": 3577153,
-      "mcap": 4292584,
-      "fees24h": 553,
-      "fees7d": 3863,
-      "fees30d": 16225,
-      "revenue24h": 307,
-      "revenue7d": 2146,
-      "revenue30d": 9013,
-      "runRate": 111892.44,
-      "peRatio": 38.4,
-      "psRatio": 21.3,
-      "yieldPct": {
-        "periodYield": 0.05,
-        "apy": 2.6
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "HyperEVM smart contract protocol revenue and liquidity fees."
-    },
-    {
-      "id": "6622",
-      "slug": "kittenswap-algebra",
-      "name": "Kittenswap Algebra",
-      "tokenSymbol": "KITTEN",
-      "logo": "https://icons.llamao.fi/icons/protocols/kittenswap-algebra",
-      "category": "Dexs",
-      "sector": "dex",
-      "sectorLabel": "🔄 HyperEVM DEX & AMM Hubs",
-      "sectorBadge": "DEX / AMM",
-      "tvl": 2187819,
-      "mcap": 2625383,
-      "fees24h": 1390,
-      "fees7d": 10075,
-      "fees30d": 42315,
-      "revenue24h": 772,
-      "revenue7d": 5597,
-      "revenue30d": 23507,
-      "runRate": 291827.58,
-      "peRatio": 9,
-      "psRatio": 5,
-      "yieldPct": {
-        "periodYield": 0.21,
-        "apy": 11.1
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "Counts the tokens held by every Kittenswap Algebra pool, standard and custom, discovered from the factory Pool and CustomPool events."
-    },
-    {
-      "id": "8398",
-      "slug": "sodax",
-      "name": "SODAX",
-      "tokenSymbol": "SODA",
-      "logo": "https://icons.llamao.fi/icons/protocols/sodax",
-      "category": "Bridge",
-      "sector": "dex",
-      "sectorLabel": "🔄 HyperEVM DEX & AMM Hubs",
-      "sectorBadge": "DEX / AMM",
-      "tvl": 2051944,
-      "mcap": 10410380,
-      "fees24h": 317,
-      "fees7d": 2216,
-      "fees30d": 9307,
-      "revenue24h": 176,
-      "revenue7d": 1231,
-      "revenue30d": 5170,
-      "runRate": 64184.340000000004,
-      "peRatio": 162.2,
-      "psRatio": 90.1,
-      "yieldPct": {
-        "periodYield": 0.01,
-        "apy": 0.6
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "TVL sums assets custodied by the SODAX AssetManager on each supported blockchain network plus the Sonic-native assets held in the hub-side sodaVariants (sodaUSDC, sodaUSDT, sodaETH, sodaS). Per-network AssetManager addresses and supported-token sets are pulled live from the SODAX spoke config API. Money-market supplied collateral is not counted separately because it is the same wrapped representation of assets already locked on the AssetManagers. Independent solver inventory is external and excluded. Staked SODA is reported under staking as the xSODA vault totalAssets (the SDK-canonical \"totalStaked\" figure). SODAX is live on 21 blockchain networks total; this adapter currently covers the 12 EVM networks. Non-EVM networks (Solana, Bitcoin, Stellar, Sui, ICON, NEAR, Stacks, Injective) and Redbelly will be added in follow-up PRs."
-    },
-    {
-      "id": "6919",
-      "slug": "wrapped-hlp",
-      "name": "Wrapped HLP",
-      "tokenSymbol": "WHLP",
-      "logo": "https://icons.llamao.fi/icons/protocols/wrapped-hlp",
-      "category": "Yield",
-      "sector": "yield",
-      "sectorLabel": "🌾 Automated Yield & Vaults",
-      "sectorBadge": "YIELD / VAULTS",
-      "tvl": 1403220,
-      "mcap": 1390122,
-      "fees24h": 38,
-      "fees7d": 112,
-      "fees30d": 470,
-      "revenue24h": 21,
-      "revenue7d": 62,
-      "revenue30d": 260,
-      "runRate": 3232.68,
-      "peRatio": 430,
-      "psRatio": 238,
-      "yieldPct": {
-        "periodYield": 0,
-        "apy": 0.2
-      },
-      "takeRate": 55,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "The total USD value of assets in strategy positions held by the wHLP vault."
-    },
-    {
-      "id": "6407",
-      "slug": "hyperwave",
-      "name": "HyperWave",
-      "tokenSymbol": "HWAVE",
-      "logo": "https://icons.llamao.fi/icons/protocols/hyperwave",
-      "category": "Yield",
-      "sector": "core",
-      "sectorLabel": "⚡ Core L1 & CLOB Engine",
-      "sectorBadge": "CORE L1",
-      "tvl": 1397262,
-      "mcap": 1116785,
-      "fees24h": 20,
-      "fees7d": 2,
-      "fees30d": 8,
-      "revenue24h": 11,
-      "revenue7d": 1,
-      "revenue30d": 4,
-      "runRate": 52.14,
-      "peRatio": 21419,
-      "psRatio": 10709.5,
-      "yieldPct": {
-        "periodYield": 0,
-        "apy": 0
-      },
-      "takeRate": 50,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "TVL represents the sum of tokens deposited in the vault + HLP positions + HyperCore Spot positions."
-    },
-    {
-      "id": "4080",
-      "slug": "blueberry",
-      "name": "Blueberry",
-      "tokenSymbol": "BLB",
-      "logo": "https://icons.llamao.fi/icons/protocols/blueberry-lend",
-      "category": "Yield",
-      "sector": "perps",
-      "sectorLabel": "📈 Perpetual DEX & Options",
-      "sectorBadge": "PERPS / DERIVS",
-      "tvl": 1242218,
-      "mcap": 193364,
-      "fees24h": 191,
-      "fees7d": 1341,
-      "fees30d": 5632,
-      "revenue24h": 106,
-      "revenue7d": 745,
-      "revenue30d": 3129,
-      "runRate": 38844.3,
-      "peRatio": 5,
-      "psRatio": 2.8,
-      "yieldPct": {
-        "periodYield": 0.39,
-        "apy": 20.1
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "V2: TVL is calculated from deposits in the vault and on Hyperliquid. V1: token value in ethereum lending market"
-    },
-    {
-      "id": "1700",
-      "slug": "wombat-exchange",
-      "name": "Wombat Exchange",
-      "tokenSymbol": "WOM",
-      "logo": "https://icons.llamao.fi/icons/protocols/wombat-exchange",
-      "category": "Dexs",
-      "sector": "dex",
-      "sectorLabel": "🔄 HyperEVM DEX & AMM Hubs",
-      "sectorBadge": "DEX / AMM",
-      "tvl": 1059250,
-      "mcap": 102246,
-      "fees24h": 16,
-      "fees7d": 20,
-      "fees30d": 84,
-      "revenue24h": 9,
-      "revenue7d": 11,
-      "revenue30d": 46,
-      "runRate": 573.54,
-      "peRatio": 178.3,
-      "psRatio": 98,
-      "yieldPct": {
-        "periodYield": 0.01,
-        "apy": 0.6
-      },
-      "takeRate": 55,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "HyperEVM smart contract protocol revenue and liquidity fees."
-    },
-    {
-      "id": "6889",
-      "slug": "hybra-v4",
-      "name": "Hybra V4",
-      "tokenSymbol": "HYBR",
-      "logo": "https://icons.llamao.fi/icons/protocols/hybra-v4",
-      "category": "Dexs",
-      "sector": "dex",
-      "sectorLabel": "🔄 HyperEVM DEX & AMM Hubs",
-      "sectorBadge": "DEX / AMM",
-      "tvl": 841577,
-      "mcap": 1009892,
-      "fees24h": 1393,
-      "fees7d": 10233,
-      "fees30d": 42979,
-      "revenue24h": 774,
-      "revenue7d": 5685,
-      "revenue30d": 23877,
-      "runRate": 296415.9,
-      "peRatio": 3.4,
-      "psRatio": 1.9,
-      "yieldPct": {
-        "periodYield": 0.56,
-        "apy": 29.4
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "HyperEVM smart contract protocol revenue and liquidity fees."
-    },
-    {
-      "id": "6500",
-      "slug": "parallel-protocol-v3",
-      "name": "Parallel Protocol V3",
-      "tokenSymbol": "PRL",
-      "logo": "https://icons.llamao.fi/icons/protocols/parallel-protocol-v3",
-      "category": "CDP",
-      "sector": "lending",
-      "sectorLabel": "🏦 Money Markets & CDP",
-      "sectorBadge": "LENDING / MONEY",
-      "tvl": 832497,
-      "mcap": 998996,
-      "fees24h": 20,
-      "fees7d": 133,
-      "fees30d": 559,
-      "revenue24h": 11,
-      "revenue7d": 74,
-      "revenue30d": 311,
-      "runRate": 3858.36,
-      "peRatio": 258.9,
-      "psRatio": 144.1,
-      "yieldPct": {
-        "periodYield": 0.01,
-        "apy": 0.4
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "TVL is retrieved on-chain by getting the total assets managed by the Parallelizer contracts"
-    },
-    {
-      "id": "6300",
-      "slug": "rezerve-money",
-      "name": "Rezerve Money",
-      "tokenSymbol": "RZR",
-      "logo": "https://icons.llamao.fi/icons/protocols/rezerve-money",
-      "category": "Reserve Currency",
-      "sector": "dex",
-      "sectorLabel": "🔄 HyperEVM DEX & AMM Hubs",
-      "sectorBadge": "DEX / AMM",
-      "tvl": 595839,
-      "mcap": 715007,
-      "fees24h": 0,
-      "fees7d": 0,
-      "fees30d": 0,
-      "revenue24h": 0,
-      "revenue7d": 0,
-      "revenue30d": 0,
-      "runRate": 0,
-      "peRatio": null,
-      "psRatio": null,
-      "yieldPct": {
-        "periodYield": 0,
-        "apy": 0
-      },
-      "takeRate": 100,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "HyperEVM smart contract protocol revenue and liquidity fees."
-    },
-    {
-      "id": "6633",
-      "slug": "upheaval-v3",
-      "name": "Upheaval V3",
-      "tokenSymbol": "UPHL",
-      "logo": "https://icons.llamao.fi/icons/protocols/upheaval-v3",
-      "category": "Dexs",
-      "sector": "dex",
-      "sectorLabel": "🔄 HyperEVM DEX & AMM Hubs",
-      "sectorBadge": "DEX / AMM",
-      "tvl": 445022,
-      "mcap": 534026,
-      "fees24h": 0,
-      "fees7d": 5,
-      "fees30d": 21,
-      "revenue24h": 0,
-      "revenue7d": 3,
-      "revenue30d": 13,
-      "runRate": 156.42000000000002,
-      "peRatio": 3414.1,
-      "psRatio": 2048.4,
-      "yieldPct": {
-        "periodYield": 0,
-        "apy": 0
-      },
-      "takeRate": 60,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "HyperEVM smart contract protocol revenue and liquidity fees."
-    },
-    {
-      "id": "7104",
-      "slug": "liquidcore",
-      "name": "LiquidCore",
-      "tokenSymbol": "LIQD",
-      "logo": "https://icons.llamao.fi/icons/protocols/liquidcore",
-      "category": "Dexs",
-      "sector": "dex",
-      "sectorLabel": "🔄 HyperEVM DEX & AMM Hubs",
-      "sectorBadge": "DEX / AMM",
-      "tvl": 408316,
-      "mcap": 489979,
-      "fees24h": 1534,
-      "fees7d": 10699,
-      "fees30d": 44936,
-      "revenue24h": 852,
-      "revenue7d": 5944,
-      "revenue30d": 24965,
-      "runRate": 309920.16,
-      "peRatio": 1.6,
-      "psRatio": 0.9,
-      "yieldPct": {
-        "periodYield": 1.21,
-        "apy": 63.3
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "Total value of all coins held in the LiquidCore pool contracts."
-    },
-    {
-      "id": "2567",
-      "slug": "timeswap-v2",
-      "name": "Timeswap V2",
-      "tokenSymbol": "TIME",
-      "logo": "https://icons.llamao.fi/icons/protocols/timeswap-v2",
-      "category": "Lending",
-      "sector": "dex",
-      "sectorLabel": "🔄 HyperEVM DEX & AMM Hubs",
-      "sectorBadge": "DEX / AMM",
-      "tvl": 335366,
-      "mcap": 402439,
-      "fees24h": 0,
-      "fees7d": 0,
-      "fees30d": 0,
-      "revenue24h": 0,
-      "revenue7d": 0,
-      "revenue30d": 0,
-      "runRate": 0,
-      "peRatio": null,
-      "psRatio": null,
-      "yieldPct": {
-        "periodYield": 0,
-        "apy": 0
-      },
-      "takeRate": 100,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "HyperEVM smart contract protocol revenue and liquidity fees."
-    },
-    {
-      "id": "6402",
-      "slug": "bim-yield",
-      "name": "BIM Yield",
-      "tokenSymbol": "BIM",
-      "logo": "https://icons.llamao.fi/icons/protocols/bim-yield",
-      "category": "Yield Aggregator",
-      "sector": "yield",
-      "sectorLabel": "🌾 Automated Yield & Vaults",
-      "sectorBadge": "YIELD / VAULTS",
-      "tvl": 295458,
-      "mcap": 354550,
-      "fees24h": 5510,
-      "fees7d": 11374,
-      "fees30d": 47771,
-      "revenue24h": 3061,
-      "revenue7d": 6319,
-      "revenue30d": 26540,
-      "runRate": 329472.66000000003,
-      "peRatio": 1.1,
-      "psRatio": 0.6,
-      "yieldPct": {
-        "periodYield": 1.78,
-        "apy": 92.9
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "HyperEVM smart contract protocol revenue and liquidity fees."
-    },
-    {
-      "id": "6722",
-      "slug": "ultrasolid-v3",
-      "name": "Ultrasolid V3",
-      "tokenSymbol": "US",
-      "logo": "https://icons.llamao.fi/icons/protocols/ultrasolid-v3",
-      "category": "Dexs",
-      "sector": "dex",
-      "sectorLabel": "🔄 HyperEVM DEX & AMM Hubs",
-      "sectorBadge": "DEX / AMM",
-      "tvl": 219921,
-      "mcap": 263905,
-      "fees24h": 0,
-      "fees7d": 0,
-      "fees30d": 0,
-      "revenue24h": 0,
-      "revenue7d": 0,
-      "revenue30d": 0,
-      "runRate": 0,
-      "peRatio": null,
-      "psRatio": null,
-      "yieldPct": {
-        "periodYield": 0,
-        "apy": 0
-      },
-      "takeRate": 100,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "HyperEVM smart contract protocol revenue and liquidity fees."
-    },
-    {
-      "id": "1085",
-      "slug": "thetanuts-finance",
-      "name": "Thetanuts Finance",
-      "tokenSymbol": "NUTS",
-      "logo": "https://icons.llamao.fi/icons/protocols/thetanuts-finance",
-      "category": "Options",
-      "sector": "perps",
-      "sectorLabel": "📈 Perpetual DEX & Options",
-      "sectorBadge": "PERPS / DERIVS",
-      "tvl": 215596,
-      "mcap": 3084265,
-      "fees24h": 0,
-      "fees7d": 0,
-      "fees30d": 0,
-      "revenue24h": 0,
-      "revenue7d": 0,
-      "revenue30d": 0,
-      "runRate": 0,
-      "peRatio": null,
-      "psRatio": null,
-      "yieldPct": {
-        "periodYield": 0,
-        "apy": 0
-      },
-      "takeRate": 100,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "Funds deposited into Thetanuts Finance via the Basic Vaults, Lending Market, AMM and the WheelVaults (base and quote tokens held by each vault, including its Uniswap V3 positions and Aave deposits) are calculated as TVL. WheelVaults pairing the NUTS token are counted under pool2."
-    },
-    {
-      "id": "6186",
-      "slug": "hyperstable-cdp",
-      "name": "Hyperstable CDP",
-      "tokenSymbol": "PEG",
-      "logo": "https://icons.llamao.fi/icons/protocols/hyperstable",
-      "category": "CDP",
-      "sector": "core",
-      "sectorLabel": "⚡ Core L1 & CLOB Engine",
-      "sectorBadge": "CORE L1",
-      "tvl": 162179,
-      "mcap": 194615,
-      "fees24h": 0,
-      "fees7d": 0,
-      "fees30d": 0,
-      "revenue24h": 0,
-      "revenue7d": 0,
-      "revenue30d": 0,
-      "runRate": 0,
-      "peRatio": null,
-      "psRatio": null,
-      "yieldPct": {
-        "periodYield": 0,
-        "apy": 0
-      },
-      "takeRate": 100,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "Counts the total assets posted as collateral for TVL. For borrowed, calculates USH total supply × USH price from the protocol's price oracle (Pyth). Pool2 includes Curve LP positions staked in the protocol's staking contracts."
-    },
-    {
-      "id": "8501",
-      "slug": "perpme",
-      "name": "PerpMe",
-      "tokenSymbol": "PERPME",
-      "logo": "https://icons.llamao.fi/icons/protocols/perpme",
-      "category": "Launchpad",
-      "sector": "dex",
-      "sectorLabel": "🔄 HyperEVM DEX & AMM Hubs",
-      "sectorBadge": "DEX / AMM",
-      "tvl": 64849,
-      "mcap": 77819,
-      "fees24h": 0,
-      "fees7d": 0,
-      "fees30d": 0,
-      "revenue24h": 0,
-      "revenue7d": 0,
-      "revenue30d": 0,
-      "runRate": 0,
-      "peRatio": null,
-      "psRatio": null,
-      "yieldPct": {
-        "periodYield": 0,
-        "apy": 0
-      },
-      "takeRate": 100,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "TVL is the quote side (HYPE, USDC, USD₮0 or PURR) of the Uniswap V3 liquidity positions locked in the PerpMe locker. Every launch mints its whole supply as a single-sided PRJX position and sends the LP NFT to the locker, which has no function to decrease liquidity or move the position. PerpMe-launched coins are excluded: each one's only market is the very pool being measured. Liquidity lives in PRJX (Uniswap V3) pools, so this is flagged doublecounted."
-    },
-    {
-      "id": "3002",
-      "slug": "rigoblock",
-      "name": "Rigoblock",
-      "tokenSymbol": "GRG",
-      "logo": "https://icons.llamao.fi/icons/protocols/rigoblock",
-      "category": "Onchain Capital Allocator",
-      "sector": "dex",
-      "sectorLabel": "🔄 HyperEVM DEX & AMM Hubs",
-      "sectorBadge": "DEX / AMM",
-      "tvl": 59040,
-      "mcap": 2394658,
-      "fees24h": 0,
-      "fees7d": 0,
-      "fees30d": 0,
-      "revenue24h": 0,
-      "revenue7d": 0,
-      "revenue30d": 0,
-      "runRate": 0,
-      "peRatio": null,
-      "psRatio": null,
-      "yieldPct": {
-        "periodYield": 0,
-        "apy": 0
-      },
-      "takeRate": 100,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "RigoBlock TVL on Ethereum, Arbitrum, Optimism, BSC, Base, Unichain and HyperEvm pulled from onchain data, including Uniswap V4 liquidity position balances, HyperCore spot and HyperCore perps account values, excluding GRG balances. Staking TVL includes staked GRG, plus GRG balances in Uniswap V4 liquidity positions, and GRG balances held by smart pool contracts."
-    },
-    {
-      "id": "5309",
-      "slug": "nabla-finance",
-      "name": "Nabla Finance",
-      "tokenSymbol": "NABLA",
-      "logo": "https://icons.llamao.fi/icons/protocols/nabla-finance",
-      "category": "Dexs",
-      "sector": "dex",
-      "sectorLabel": "🔄 HyperEVM DEX & AMM Hubs",
-      "sectorBadge": "DEX / AMM",
-      "tvl": 47368,
-      "mcap": 771772,
-      "fees24h": 0,
-      "fees7d": 4,
-      "fees30d": 17,
-      "revenue24h": 0,
-      "revenue7d": 2,
-      "revenue30d": 8,
-      "runRate": 104.28,
-      "peRatio": 7401,
-      "psRatio": 3700.5,
-      "yieldPct": {
-        "periodYield": 0,
-        "apy": 0
-      },
-      "takeRate": 50,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "HyperEVM smart contract protocol revenue and liquidity fees."
-    },
-    {
-      "id": "7910",
-      "slug": "alt-fun",
-      "name": "Alt Fun",
-      "tokenSymbol": "ALT",
-      "logo": "https://icons.llamao.fi/icons/protocols/alt-fun",
-      "category": "Launchpad",
-      "sector": "dex",
-      "sectorLabel": "🔄 HyperEVM DEX & AMM Hubs",
-      "sectorBadge": "DEX / AMM",
-      "tvl": 39028,
-      "mcap": 352079,
-      "fees24h": 31,
-      "fees7d": 1332,
-      "fees30d": 5594,
-      "revenue24h": 17,
-      "revenue7d": 740,
-      "revenue30d": 3108,
-      "runRate": 38583.6,
-      "peRatio": 9.1,
-      "psRatio": 5.1,
-      "yieldPct": {
-        "periodYield": 0.21,
-        "apy": 11
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "Counts the total value of LT tokens in alt.fun bonding curves."
-    },
-    {
-      "id": "6821",
-      "slug": "giza",
-      "name": "Giza",
-      "tokenSymbol": "GIZA",
-      "logo": "https://icons.llamao.fi/icons/protocols/giza",
-      "category": "AI Agents",
-      "sector": "dex",
-      "sectorLabel": "🔄 HyperEVM DEX & AMM Hubs",
-      "sectorBadge": "DEX / AMM",
-      "tvl": 12775,
-      "mcap": 352224,
-      "fees24h": 0,
-      "fees7d": 0,
-      "fees30d": 0,
-      "revenue24h": 0,
-      "revenue7d": 0,
-      "revenue30d": 0,
-      "runRate": 0,
-      "peRatio": null,
-      "psRatio": null,
-      "yieldPct": {
-        "periodYield": 0,
-        "apy": 0
-      },
-      "takeRate": 100,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "TVL is calculated by querying onchain balances of Giza smart wallet accounts across DeFi lending protocols for the Arma product, and Pendle PT token holdings for the Pulse product."
-    },
-    {
-      "id": "5981",
-      "slug": "impermax-v3",
-      "name": "Impermax V3",
-      "tokenSymbol": "IBEX",
-      "logo": "https://icons.llamao.fi/icons/protocols/impermax-v3",
-      "category": "Lending",
-      "sector": "lending",
-      "sectorLabel": "🏦 Money Markets & CDP",
-      "sectorBadge": "LENDING / MONEY",
-      "tvl": 2379,
-      "mcap": 2855,
-      "fees24h": 0,
-      "fees7d": 0,
-      "fees30d": 0,
-      "revenue24h": 0,
-      "revenue7d": 0,
-      "revenue30d": 0,
-      "runRate": 0,
-      "peRatio": null,
-      "psRatio": null,
-      "yieldPct": {
-        "periodYield": 0,
-        "apy": 0
-      },
-      "takeRate": 100,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "HyperEVM smart contract protocol revenue and liquidity fees."
-    },
-    {
-      "id": "5796",
-      "slug": "lazy-summer-protocol",
-      "name": "Lazy Summer Protocol",
-      "tokenSymbol": "SUMR",
-      "logo": "https://icons.llamao.fi/icons/protocols/lazy-summer-protocol",
-      "category": "Yield Aggregator",
-      "sector": "yield",
-      "sectorLabel": "🌾 Automated Yield & Vaults",
-      "sectorBadge": "YIELD / VAULTS",
-      "tvl": 1227,
-      "mcap": 1472,
-      "fees24h": 0,
-      "fees7d": 0,
-      "fees30d": 0,
-      "revenue24h": 0,
-      "revenue7d": 0,
-      "revenue30d": 0,
-      "runRate": 0,
-      "peRatio": null,
-      "psRatio": null,
-      "yieldPct": {
-        "periodYield": 0,
-        "apy": 0
-      },
-      "takeRate": 100,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "HyperEVM smart contract protocol revenue and liquidity fees."
-    },
-    {
-      "id": "6892",
-      "slug": "primefi",
-      "name": "PrimeFi",
-      "tokenSymbol": "PRFI",
-      "logo": "https://icons.llamao.fi/icons/protocols/primefi",
-      "category": "Lending",
-      "sector": "lending",
-      "sectorLabel": "🏦 Money Markets & CDP",
-      "sectorBadge": "LENDING / MONEY",
-      "tvl": 855,
-      "mcap": 49914,
-      "fees24h": 155,
-      "fees7d": 1084,
-      "fees30d": 4553,
-      "revenue24h": 86,
-      "revenue7d": 602,
-      "revenue30d": 2528,
-      "runRate": 31388.28,
-      "peRatio": 1.6,
-      "psRatio": 0.9,
-      "yieldPct": {
-        "periodYield": 1.21,
-        "apy": 62.9
-      },
-      "takeRate": 56,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "PRFI/wrapped-native LP staked in PrimeFi staking contracts on each chain."
-    },
-    {
-      "id": "8021",
-      "slug": "hyperdrome",
-      "name": "Hyperdrome",
-      "tokenSymbol": "HDROME",
-      "logo": "https://icons.llamao.fi/icons/protocols/hyperdrome",
-      "category": "Dexs",
-      "sector": "core",
-      "sectorLabel": "⚡ Core L1 & CLOB Engine",
-      "sectorBadge": "CORE L1",
-      "tvl": 30,
-      "mcap": 36,
-      "fees24h": 0,
-      "fees7d": 0,
-      "fees30d": 0,
-      "revenue24h": 0,
-      "revenue7d": 0,
-      "revenue30d": 0,
-      "runRate": 0,
-      "peRatio": null,
-      "psRatio": null,
-      "yieldPct": {
-        "periodYield": 0,
-        "apy": 0
-      },
-      "takeRate": 100,
-      "onChainChains": [
-        "Hyperliquid L1",
-        "HyperEVM"
-      ],
-      "methodology": "Value of the tokens locked in the liquidity pools."
     }
   ],
   "topPerpMarkets": [
     {
       "name": "BTC",
       "pair": "BTC-PERP",
-      "markPrice": 83183,
+      "markPrice": 83229,
       "maxLeverage": 40,
-      "volume24hUsd": 2852158023,
-      "openInterestUsd": 3307985589,
+      "volume24hUsd": 2817803007,
+      "openInterestUsd": 3301712309,
       "fundingRate": 0.0000125
     },
     {
       "name": "ETH",
       "pair": "ETH-PERP",
-      "markPrice": 2565.6,
+      "markPrice": 2579.2,
       "maxLeverage": 25,
-      "volume24hUsd": 1403943415,
-      "openInterestUsd": 3051401160,
+      "volume24hUsd": 1440701140,
+      "openInterestUsd": 3063107230,
       "fundingRate": 0.0000125
     },
     {
       "name": "HYPE",
       "pair": "HYPE-PERP",
-      "markPrice": 87.369,
+      "markPrice": 88.753,
       "maxLeverage": 10,
-      "volume24hUsd": 564976363,
-      "openInterestUsd": 1732938186,
-      "fundingRate": -0.0000187592
+      "volume24hUsd": 574617135,
+      "openInterestUsd": 1762173063,
+      "fundingRate": 0.0000125
     },
     {
       "name": "ZEC",
       "pair": "ZEC-PERP",
-      "markPrice": 1306.7,
+      "markPrice": 1329.1,
       "maxLeverage": 10,
-      "volume24hUsd": 357554556,
-      "openInterestUsd": 663704317,
-      "fundingRate": 0.0000125
-    },
-    {
-      "name": "SOL",
-      "pair": "SOL-PERP",
-      "markPrice": 115.4,
-      "maxLeverage": 20,
-      "volume24hUsd": 268803244,
-      "openInterestUsd": 665901584,
+      "volume24hUsd": 357959997,
+      "openInterestUsd": 673079898,
       "fundingRate": 0.0000125
     },
     {
       "name": "NEAR",
       "pair": "NEAR-PERP",
-      "markPrice": 5.2622,
+      "markPrice": 5.3828,
       "maxLeverage": 10,
-      "volume24hUsd": 244533641,
-      "openInterestUsd": 394237189,
+      "volume24hUsd": 269100423,
+      "openInterestUsd": 406177889,
+      "fundingRate": 0.0000315594
+    },
+    {
+      "name": "SOL",
+      "pair": "SOL-PERP",
+      "markPrice": 116.35,
+      "maxLeverage": 20,
+      "volume24hUsd": 265208246,
+      "openInterestUsd": 672892170,
       "fundingRate": 0.0000125
     },
     {
       "name": "PUMP",
       "pair": "PUMP-PERP",
-      "markPrice": 0.006089,
+      "markPrice": 0.006252,
       "maxLeverage": 10,
-      "volume24hUsd": 227697286,
-      "openInterestUsd": 312271433,
+      "volume24hUsd": 242540173,
+      "openInterestUsd": 314701576,
       "fundingRate": 0.0000125
     },
     {
       "name": "XRP",
       "pair": "XRP-PERP",
-      "markPrice": 1.4125,
+      "markPrice": 1.4245,
       "maxLeverage": 20,
-      "volume24hUsd": 139284104,
-      "openInterestUsd": 277254608,
+      "volume24hUsd": 130705239,
+      "openInterestUsd": 280663155,
       "fundingRate": 0.0000125
     },
     {
       "name": "ENA",
       "pair": "ENA-PERP",
-      "markPrice": 0.22397,
+      "markPrice": 0.22605,
       "maxLeverage": 10,
-      "volume24hUsd": 65196217,
-      "openInterestUsd": 150933555,
+      "volume24hUsd": 64467412,
+      "openInterestUsd": 152094768,
       "fundingRate": 0.0000125
     },
     {
       "name": "UNI",
       "pair": "UNI-PERP",
-      "markPrice": 7.7447,
+      "markPrice": 7.9939,
       "maxLeverage": 10,
-      "volume24hUsd": 42082565,
-      "openInterestUsd": 79866728,
+      "volume24hUsd": 38293548,
+      "openInterestUsd": 82492471,
       "fundingRate": 0.0000125
     }
   ],
   "topSpotMarkets": [
     {
       "name": "@109",
-      "markPrice": 87.436,
-      "volume24hUsd": 67040815
+      "markPrice": 88.766,
+      "volume24hUsd": 69240047
     },
     {
       "name": "@144",
-      "markPrice": 83179,
-      "volume24hUsd": 34984805
+      "markPrice": 83202,
+      "volume24hUsd": 32419055
     },
     {
       "name": "@155",
-      "markPrice": 2566.3,
-      "volume24hUsd": 28384622
+      "markPrice": 2579.5,
+      "volume24hUsd": 31351765
     },
     {
       "name": "@160",
-      "markPrice": 115.4,
-      "volume24hUsd": 16029355
+      "markPrice": 116.33,
+      "volume24hUsd": 15920501
     },
     {
       "name": "@288",
-      "markPrice": 1308,
-      "volume24hUsd": 11385881
+      "markPrice": 1328.4,
+      "volume24hUsd": 10902742
     },
     {
       "name": "@198",
-      "markPrice": 0.0060945,
-      "volume24hUsd": 6001116
+      "markPrice": 0.0062508,
+      "volume24hUsd": 5792607
     },
     {
       "name": "@276",
-      "markPrice": 546.92,
-      "volume24hUsd": 5011766
+      "markPrice": 557.96,
+      "volume24hUsd": 4918293
     },
     {
       "name": "PURR/USDC",
-      "markPrice": 0.12394,
-      "volume24hUsd": 2528534
+      "markPrice": 0.12878,
+      "volume24hUsd": 2524393
     },
     {
       "name": "@258",
-      "markPrice": 0.025401,
-      "volume24hUsd": 777640
+      "markPrice": 0.025605,
+      "volume24hUsd": 682431
     },
     {
       "name": "@216",
-      "markPrice": 0.22405,
-      "volume24hUsd": 628155
+      "markPrice": 0.22603,
+      "volume24hUsd": 634826
     }
   ]
 }

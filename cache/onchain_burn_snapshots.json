@@ -1,70 +1,25 @@
 {
-  "updatedAt": 1791409122545,
+  "updatedAt": 1791422947656,
   "chains": {
     "solana": {
       "JUP": {
         "symbol": "JUP",
         "mintOrCoinType": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
         "initialSupply": 10000000000,
-        "firstSeenAt": 1790381937053,
+        "firstSeenAt": 1791422942206,
         "snapshots": [
           {
-            "timestamp": 1790381937053,
-            "currentSupply": 6861486573,
-            "burnedTokens": 3138513427
-          },
-          {
-            "timestamp": 1790383353458,
-            "currentSupply": 6861486573,
-            "burnedTokens": 3138513427
-          },
-          {
-            "timestamp": 1790416315703,
-            "currentSupply": 6861486571,
-            "burnedTokens": 3138513429
-          },
-          {
-            "timestamp": 1790802745580,
-            "currentSupply": 6861486429,
-            "burnedTokens": 3138513571
-          },
-          {
-            "timestamp": 1791399926488,
-            "currentSupply": 6861486312,
-            "burnedTokens": 3138513688
-          },
-          {
-            "timestamp": 1791400696858,
+            "timestamp": 1791422942206,
             "currentSupply": 6861486311,
             "burnedTokens": 3138513689
           },
           {
-            "timestamp": 1791401984085,
-            "currentSupply": 6861486311,
-            "burnedTokens": 3138513689
+            "timestamp": 1791422945885,
+            "currentSupply": 6861486575,
+            "burnedTokens": 3138513425
           },
           {
-            "timestamp": 1791403729536,
-            "currentSupply": 6861486311,
-            "burnedTokens": 3138513689
-          },
-          {
-            "timestamp": 1791405182708,
-            "currentSupply": 6861486311,
-            "burnedTokens": 3138513689
-          },
-          {
-            "timestamp": 1791406193194,
-            "currentSupply": 6861486311,
-            "burnedTokens": 3138513689
-          },
-          {
-            "timestamp": 1791407511106,
-            "currentSupply": 6861486311,
-            "burnedTokens": 3138513689
-          },
-          {
-            "timestamp": 1791409122545,
+            "timestamp": 1791422947656,
             "currentSupply": 6861486311,
             "burnedTokens": 3138513689
           }
@@ -74,65 +29,20 @@
         "symbol": "RAY",
         "mintOrCoinType": "4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R",
         "initialSupply": 555000000,
-        "firstSeenAt": 1790381937053,
+        "firstSeenAt": 1791422942206,
         "snapshots": [
           {
-            "timestamp": 1790381937053,
-            "currentSupply": 554997439,
-            "burnedTokens": 54822561
-          },
-          {
-            "timestamp": 1790383353458,
-            "currentSupply": 554997438,
-            "burnedTokens": 54822562
-          },
-          {
-            "timestamp": 1790416315703,
-            "currentSupply": 554997438,
-            "burnedTokens": 54822562
-          },
-          {
-            "timestamp": 1790802745580,
-            "currentSupply": 554997393,
-            "burnedTokens": 54822607
-          },
-          {
-            "timestamp": 1791399926488,
+            "timestamp": 1791422942206,
             "currentSupply": 554997386,
             "burnedTokens": 54822614
           },
           {
-            "timestamp": 1791400696858,
-            "currentSupply": 554997386,
-            "burnedTokens": 54822614
+            "timestamp": 1791422945885,
+            "currentSupply": 554997441,
+            "burnedTokens": 54822559
           },
           {
-            "timestamp": 1791401984085,
-            "currentSupply": 554997386,
-            "burnedTokens": 54822614
-          },
-          {
-            "timestamp": 1791403729536,
-            "currentSupply": 554997386,
-            "burnedTokens": 54822614
-          },
-          {
-            "timestamp": 1791405182708,
-            "currentSupply": 554997386,
-            "burnedTokens": 54822614
-          },
-          {
-            "timestamp": 1791406193194,
-            "currentSupply": 554997386,
-            "burnedTokens": 54822614
-          },
-          {
-            "timestamp": 1791407511106,
-            "currentSupply": 554997386,
-            "burnedTokens": 54822614
-          },
-          {
-            "timestamp": 1791409122545,
+            "timestamp": 1791422947656,
             "currentSupply": 554997386,
             "burnedTokens": 54822614
           }
@@ -142,67 +52,17 @@
         "symbol": "BONK",
         "mintOrCoinType": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
         "initialSupply": 100000000000000,
-        "firstSeenAt": 1790381937053,
+        "firstSeenAt": 1791422942206,
         "snapshots": [
           {
-            "timestamp": 1790381937053,
-            "currentSupply": 87994383525104,
-            "burnedTokens": 12005616474896
+            "timestamp": 1791422942206,
+            "currentSupply": 87994367509176,
+            "burnedTokens": 12005632490824
           },
           {
-            "timestamp": 1790383353458,
-            "currentSupply": 87994383514345,
-            "burnedTokens": 12005616485655
-          },
-          {
-            "timestamp": 1790416315703,
-            "currentSupply": 87994382970864,
-            "burnedTokens": 12005617029136
-          },
-          {
-            "timestamp": 1790802745580,
-            "currentSupply": 87994377630360,
-            "burnedTokens": 12005622369640
-          },
-          {
-            "timestamp": 1791399926488,
-            "currentSupply": 87994367678074,
-            "burnedTokens": 12005632321926
-          },
-          {
-            "timestamp": 1791400696858,
-            "currentSupply": 87994367678074,
-            "burnedTokens": 12005632321926
-          },
-          {
-            "timestamp": 1791401984085,
-            "currentSupply": 87994367678074,
-            "burnedTokens": 12005632321926
-          },
-          {
-            "timestamp": 1791403729536,
-            "currentSupply": 87994367678074,
-            "burnedTokens": 12005632321926
-          },
-          {
-            "timestamp": 1791405182708,
-            "currentSupply": 87994367677885,
-            "burnedTokens": 12005632322115
-          },
-          {
-            "timestamp": 1791406193194,
-            "currentSupply": 87994367677885,
-            "burnedTokens": 12005632322115
-          },
-          {
-            "timestamp": 1791407511106,
-            "currentSupply": 87994367647912,
-            "burnedTokens": 12005632352088
-          },
-          {
-            "timestamp": 1791409122545,
-            "currentSupply": 87994367647911,
-            "burnedTokens": 12005632352089
+            "timestamp": 1791422945751,
+            "currentSupply": 87994383727404,
+            "burnedTokens": 12005616272596
           }
         ]
       },
@@ -210,67 +70,17 @@
         "symbol": "ORCA",
         "mintOrCoinType": "orcaEKTdK7LKz57vaAYr9QeNsVEPfiu6QeMU1kektZE",
         "initialSupply": 100000000,
-        "firstSeenAt": 1790381937053,
+        "firstSeenAt": 1791422942206,
         "snapshots": [
           {
-            "timestamp": 1790381937053,
+            "timestamp": 1791422942206,
+            "currentSupply": 74999516,
+            "burnedTokens": 25000484
+          },
+          {
+            "timestamp": 1791422945751,
             "currentSupply": 74999534,
             "burnedTokens": 25000466
-          },
-          {
-            "timestamp": 1790383353458,
-            "currentSupply": 74999534,
-            "burnedTokens": 25000466
-          },
-          {
-            "timestamp": 1790416315703,
-            "currentSupply": 74999534,
-            "burnedTokens": 25000466
-          },
-          {
-            "timestamp": 1790802745580,
-            "currentSupply": 74999530,
-            "burnedTokens": 25000470
-          },
-          {
-            "timestamp": 1791399926488,
-            "currentSupply": 74999518,
-            "burnedTokens": 25000482
-          },
-          {
-            "timestamp": 1791400696858,
-            "currentSupply": 74999518,
-            "burnedTokens": 25000482
-          },
-          {
-            "timestamp": 1791401984085,
-            "currentSupply": 74999518,
-            "burnedTokens": 25000482
-          },
-          {
-            "timestamp": 1791403729536,
-            "currentSupply": 74999518,
-            "burnedTokens": 25000482
-          },
-          {
-            "timestamp": 1791405182708,
-            "currentSupply": 74999517,
-            "burnedTokens": 25000483
-          },
-          {
-            "timestamp": 1791406193194,
-            "currentSupply": 74999517,
-            "burnedTokens": 25000483
-          },
-          {
-            "timestamp": 1791407511106,
-            "currentSupply": 74999517,
-            "burnedTokens": 25000483
-          },
-          {
-            "timestamp": 1791409122545,
-            "currentSupply": 74999517,
-            "burnedTokens": 25000483
           }
         ]
       },
@@ -278,67 +88,17 @@
         "symbol": "MPLX",
         "mintOrCoinType": "METAewgxyPbgwsseH8T16a39CQ5VyVxZi9zXiDPY18m",
         "initialSupply": 1000000000,
-        "firstSeenAt": 1790381937053,
+        "firstSeenAt": 1791422942206,
         "snapshots": [
           {
-            "timestamp": 1790381937053,
+            "timestamp": 1791422942206,
+            "currentSupply": 999981348,
+            "burnedTokens": 42518652
+          },
+          {
+            "timestamp": 1791422945751,
             "currentSupply": 999981374,
             "burnedTokens": 42518626
-          },
-          {
-            "timestamp": 1790383353458,
-            "currentSupply": 999981374,
-            "burnedTokens": 42518626
-          },
-          {
-            "timestamp": 1790416315703,
-            "currentSupply": 999981374,
-            "burnedTokens": 42518626
-          },
-          {
-            "timestamp": 1790802745580,
-            "currentSupply": 999981369,
-            "burnedTokens": 42518631
-          },
-          {
-            "timestamp": 1791399926488,
-            "currentSupply": 999981363,
-            "burnedTokens": 42518637
-          },
-          {
-            "timestamp": 1791400696858,
-            "currentSupply": 999981363,
-            "burnedTokens": 42518637
-          },
-          {
-            "timestamp": 1791401984085,
-            "currentSupply": 999981363,
-            "burnedTokens": 42518637
-          },
-          {
-            "timestamp": 1791403729536,
-            "currentSupply": 999981363,
-            "burnedTokens": 42518637
-          },
-          {
-            "timestamp": 1791405182708,
-            "currentSupply": 999981363,
-            "burnedTokens": 42518637
-          },
-          {
-            "timestamp": 1791406193194,
-            "currentSupply": 999981361,
-            "burnedTokens": 42518639
-          },
-          {
-            "timestamp": 1791407511106,
-            "currentSupply": 999981360,
-            "burnedTokens": 42518640
-          },
-          {
-            "timestamp": 1791409122545,
-            "currentSupply": 999981352,
-            "burnedTokens": 42518648
           }
         ]
       },
@@ -346,67 +106,17 @@
         "symbol": "JTO",
         "mintOrCoinType": "jtojtomepa8beP8AuQc6eXt5FriJwfFMwQx2v2f9mCL",
         "initialSupply": 1000000000,
-        "firstSeenAt": 1790381937053,
+        "firstSeenAt": 1791422942206,
         "snapshots": [
           {
-            "timestamp": 1790381937053,
-            "currentSupply": 986522479,
-            "burnedTokens": 13477521
+            "timestamp": 1791422942206,
+            "currentSupply": 986522437,
+            "burnedTokens": 13477563
           },
           {
-            "timestamp": 1790383353458,
-            "currentSupply": 986522479,
-            "burnedTokens": 13477521
-          },
-          {
-            "timestamp": 1790416315703,
-            "currentSupply": 986522478,
-            "burnedTokens": 13477522
-          },
-          {
-            "timestamp": 1790802745580,
-            "currentSupply": 986522459,
-            "burnedTokens": 13477541
-          },
-          {
-            "timestamp": 1791399926488,
-            "currentSupply": 986522438,
-            "burnedTokens": 13477562
-          },
-          {
-            "timestamp": 1791400696858,
-            "currentSupply": 986522438,
-            "burnedTokens": 13477562
-          },
-          {
-            "timestamp": 1791401984085,
-            "currentSupply": 986522438,
-            "burnedTokens": 13477562
-          },
-          {
-            "timestamp": 1791403729536,
-            "currentSupply": 986522438,
-            "burnedTokens": 13477562
-          },
-          {
-            "timestamp": 1791405182708,
-            "currentSupply": 986522438,
-            "burnedTokens": 13477562
-          },
-          {
-            "timestamp": 1791406193194,
-            "currentSupply": 986522438,
-            "burnedTokens": 13477562
-          },
-          {
-            "timestamp": 1791407511106,
-            "currentSupply": 986522438,
-            "burnedTokens": 13477562
-          },
-          {
-            "timestamp": 1791409122545,
-            "currentSupply": 986522438,
-            "burnedTokens": 13477562
+            "timestamp": 1791422945751,
+            "currentSupply": 986522480,
+            "burnedTokens": 13477520
           }
         ]
       },
@@ -414,67 +124,17 @@
         "symbol": "KMNO",
         "mintOrCoinType": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
         "initialSupply": 10000000000,
-        "firstSeenAt": 1790381937053,
+        "firstSeenAt": 1791422942206,
         "snapshots": [
           {
-            "timestamp": 1790381937053,
-            "currentSupply": 9999956793,
-            "burnedTokens": 43207
-          },
-          {
-            "timestamp": 1790383353458,
-            "currentSupply": 9999956793,
-            "burnedTokens": 43207
-          },
-          {
-            "timestamp": 1790416315703,
-            "currentSupply": 9999956792,
-            "burnedTokens": 43208
-          },
-          {
-            "timestamp": 1790802745580,
-            "currentSupply": 9999956785,
-            "burnedTokens": 43215
-          },
-          {
-            "timestamp": 1791399926488,
-            "currentSupply": 9999956753,
-            "burnedTokens": 43247
-          },
-          {
-            "timestamp": 1791400696858,
-            "currentSupply": 9999956753,
-            "burnedTokens": 43247
-          },
-          {
-            "timestamp": 1791401984085,
-            "currentSupply": 9999956753,
-            "burnedTokens": 43247
-          },
-          {
-            "timestamp": 1791403729536,
-            "currentSupply": 9999956753,
-            "burnedTokens": 43247
-          },
-          {
-            "timestamp": 1791405182708,
-            "currentSupply": 9999956753,
-            "burnedTokens": 43247
-          },
-          {
-            "timestamp": 1791406193194,
-            "currentSupply": 9999956753,
-            "burnedTokens": 43247
-          },
-          {
-            "timestamp": 1791407511106,
+            "timestamp": 1791422942206,
             "currentSupply": 9999956751,
             "burnedTokens": 43249
           },
           {
-            "timestamp": 1791409122545,
-            "currentSupply": 9999956751,
-            "burnedTokens": 43249
+            "timestamp": 1791422945751,
+            "currentSupply": 9999956793,
+            "burnedTokens": 43207
           }
         ]
       },
@@ -482,67 +142,17 @@
         "symbol": "MNDE",
         "mintOrCoinType": "MNDEFzGvMt87ueuHvVU9VcTqsAP5b3fTGPsHuuPA5ey",
         "initialSupply": 1000000000,
-        "firstSeenAt": 1790381937053,
+        "firstSeenAt": 1791422942206,
         "snapshots": [
           {
-            "timestamp": 1790381937053,
-            "currentSupply": 699997226,
-            "burnedTokens": 300002774
+            "timestamp": 1791422942206,
+            "currentSupply": 699997030,
+            "burnedTokens": 300002970
           },
           {
-            "timestamp": 1790383353458,
-            "currentSupply": 699997226,
-            "burnedTokens": 300002774
-          },
-          {
-            "timestamp": 1790416315703,
-            "currentSupply": 699997226,
-            "burnedTokens": 300002774
-          },
-          {
-            "timestamp": 1790802745580,
-            "currentSupply": 699997137,
-            "burnedTokens": 300002863
-          },
-          {
-            "timestamp": 1791399926488,
-            "currentSupply": 699997046,
-            "burnedTokens": 300002954
-          },
-          {
-            "timestamp": 1791400696858,
-            "currentSupply": 699997046,
-            "burnedTokens": 300002954
-          },
-          {
-            "timestamp": 1791401984085,
-            "currentSupply": 699997046,
-            "burnedTokens": 300002954
-          },
-          {
-            "timestamp": 1791403729536,
-            "currentSupply": 699997046,
-            "burnedTokens": 300002954
-          },
-          {
-            "timestamp": 1791405182708,
-            "currentSupply": 699997046,
-            "burnedTokens": 300002954
-          },
-          {
-            "timestamp": 1791406193194,
-            "currentSupply": 699997046,
-            "burnedTokens": 300002954
-          },
-          {
-            "timestamp": 1791407511106,
-            "currentSupply": 699997046,
-            "burnedTokens": 300002954
-          },
-          {
-            "timestamp": 1791409122545,
-            "currentSupply": 699997046,
-            "burnedTokens": 300002954
+            "timestamp": 1791422945751,
+            "currentSupply": 699997242,
+            "burnedTokens": 300002758
           }
         ]
       },
@@ -550,67 +160,17 @@
         "symbol": "CLOUD",
         "mintOrCoinType": "CLoUDKc4Ane7HeQcPpE3YHnznRxhMimJ4MyaUqyHFzAu",
         "initialSupply": 1000000000,
-        "firstSeenAt": 1790381937053,
+        "firstSeenAt": 1791422942206,
         "snapshots": [
           {
-            "timestamp": 1790381937053,
+            "timestamp": 1791422942206,
+            "currentSupply": 740669562,
+            "burnedTokens": 259330438
+          },
+          {
+            "timestamp": 1791422945751,
             "currentSupply": 999991440,
             "burnedTokens": 8560
-          },
-          {
-            "timestamp": 1790383353458,
-            "currentSupply": 999991440,
-            "burnedTokens": 8560
-          },
-          {
-            "timestamp": 1790416315703,
-            "currentSupply": 999991440,
-            "burnedTokens": 8560
-          },
-          {
-            "timestamp": 1790802745580,
-            "currentSupply": 999991425,
-            "burnedTokens": 8575
-          },
-          {
-            "timestamp": 1791399926488,
-            "currentSupply": 740669562,
-            "burnedTokens": 259330438
-          },
-          {
-            "timestamp": 1791400696858,
-            "currentSupply": 740669562,
-            "burnedTokens": 259330438
-          },
-          {
-            "timestamp": 1791401984085,
-            "currentSupply": 740669562,
-            "burnedTokens": 259330438
-          },
-          {
-            "timestamp": 1791403729536,
-            "currentSupply": 740669562,
-            "burnedTokens": 259330438
-          },
-          {
-            "timestamp": 1791405182708,
-            "currentSupply": 740669562,
-            "burnedTokens": 259330438
-          },
-          {
-            "timestamp": 1791406193194,
-            "currentSupply": 740669562,
-            "burnedTokens": 259330438
-          },
-          {
-            "timestamp": 1791407511106,
-            "currentSupply": 740669562,
-            "burnedTokens": 259330438
-          },
-          {
-            "timestamp": 1791409122545,
-            "currentSupply": 740669562,
-            "burnedTokens": 259330438
           }
         ]
       },
@@ -618,67 +178,17 @@
         "symbol": "DRIFT",
         "mintOrCoinType": "DriFtupJYLTosbwoN8koMbEYSx54aFAVLddWsbksjwg7",
         "initialSupply": 1000000000,
-        "firstSeenAt": 1790381937053,
+        "firstSeenAt": 1791422942206,
         "snapshots": [
           {
-            "timestamp": 1790381937053,
-            "currentSupply": 999998363,
-            "burnedTokens": 1637
-          },
-          {
-            "timestamp": 1790383353458,
-            "currentSupply": 999998363,
-            "burnedTokens": 1637
-          },
-          {
-            "timestamp": 1790416315703,
-            "currentSupply": 999998363,
-            "burnedTokens": 1637
-          },
-          {
-            "timestamp": 1790802745580,
-            "currentSupply": 999998354,
-            "burnedTokens": 1646
-          },
-          {
-            "timestamp": 1791399926488,
-            "currentSupply": 999998345,
-            "burnedTokens": 1655
-          },
-          {
-            "timestamp": 1791400696858,
-            "currentSupply": 999998345,
-            "burnedTokens": 1655
-          },
-          {
-            "timestamp": 1791401984085,
-            "currentSupply": 999998345,
-            "burnedTokens": 1655
-          },
-          {
-            "timestamp": 1791403729536,
-            "currentSupply": 999998345,
-            "burnedTokens": 1655
-          },
-          {
-            "timestamp": 1791405182708,
-            "currentSupply": 999998345,
-            "burnedTokens": 1655
-          },
-          {
-            "timestamp": 1791406193194,
-            "currentSupply": 999998345,
-            "burnedTokens": 1655
-          },
-          {
-            "timestamp": 1791407511106,
-            "currentSupply": 999998345,
-            "burnedTokens": 1655
-          },
-          {
-            "timestamp": 1791409122545,
+            "timestamp": 1791422942206,
             "currentSupply": 999998344,
             "burnedTokens": 1656
+          },
+          {
+            "timestamp": 1791422942391,
+            "currentSupply": 999998363,
+            "burnedTokens": 1637
           }
         ]
       },
@@ -686,72 +196,12 @@
         "symbol": "RENDER",
         "mintOrCoinType": "rndrizKT3MK1iimdxRdWabcF7Zg7AR5T4nud4EkHBof",
         "initialSupply": 536870912,
-        "firstSeenAt": 1790381937053,
+        "firstSeenAt": 1791422942206,
         "snapshots": [
           {
-            "timestamp": 1790381937053,
-            "currentSupply": 486168174,
-            "burnedTokens": 50702738
-          },
-          {
-            "timestamp": 1790383353458,
-            "currentSupply": 486167971,
-            "burnedTokens": 50702941
-          },
-          {
-            "timestamp": 1790416315703,
-            "currentSupply": 486167831,
-            "burnedTokens": 50703081
-          },
-          {
-            "timestamp": 1790802745580,
-            "currentSupply": 486150843,
-            "burnedTokens": 50720069
-          },
-          {
-            "timestamp": 1791399926488,
-            "currentSupply": 486128979,
-            "burnedTokens": 50741933
-          },
-          {
-            "timestamp": 1791400696858,
-            "currentSupply": 486128923,
-            "burnedTokens": 50741989
-          },
-          {
-            "timestamp": 1791401984085,
-            "currentSupply": 486128921,
-            "burnedTokens": 50741991
-          },
-          {
-            "timestamp": 1791403729536,
-            "currentSupply": 486128911,
-            "burnedTokens": 50742001
-          },
-          {
-            "timestamp": 1791405182708,
-            "currentSupply": 486128855,
-            "burnedTokens": 50742057
-          },
-          {
-            "timestamp": 1791405183499,
+            "timestamp": 1791422942206,
             "currentSupply": 486168333,
             "burnedTokens": 50702579
-          },
-          {
-            "timestamp": 1791406193194,
-            "currentSupply": 486128851,
-            "burnedTokens": 50742061
-          },
-          {
-            "timestamp": 1791407511106,
-            "currentSupply": 486128819,
-            "burnedTokens": 50742093
-          },
-          {
-            "timestamp": 1791409122545,
-            "currentSupply": 486128806,
-            "burnedTokens": 50742106
           }
         ]
       },
@@ -759,72 +209,12 @@
         "symbol": "HNT",
         "mintOrCoinType": "hntyVP6YFm1Hg25TN9WGLqM12b8TQmcknKrdu1oxWux",
         "initialSupply": 223000000,
-        "firstSeenAt": 1790381937053,
+        "firstSeenAt": 1791422942206,
         "snapshots": [
           {
-            "timestamp": 1790381937053,
-            "currentSupply": 191846407,
-            "burnedTokens": 31153593
-          },
-          {
-            "timestamp": 1790383353458,
-            "currentSupply": 191846407,
-            "burnedTokens": 31153593
-          },
-          {
-            "timestamp": 1790416315703,
-            "currentSupply": 191846403,
-            "burnedTokens": 31153597
-          },
-          {
-            "timestamp": 1790802745580,
-            "currentSupply": 192717497,
-            "burnedTokens": 30282503
-          },
-          {
-            "timestamp": 1791399926488,
-            "currentSupply": 194241995,
-            "burnedTokens": 28758005
-          },
-          {
-            "timestamp": 1791400696858,
-            "currentSupply": 194241995,
-            "burnedTokens": 28758005
-          },
-          {
-            "timestamp": 1791401984085,
-            "currentSupply": 194241995,
-            "burnedTokens": 28758005
-          },
-          {
-            "timestamp": 1791403729536,
-            "currentSupply": 194241989,
-            "burnedTokens": 28758011
-          },
-          {
-            "timestamp": 1791405182708,
-            "currentSupply": 194241989,
-            "burnedTokens": 28758011
-          },
-          {
-            "timestamp": 1791405183499,
+            "timestamp": 1791422942206,
             "currentSupply": 191628430,
             "burnedTokens": 31371570
-          },
-          {
-            "timestamp": 1791406193194,
-            "currentSupply": 194241989,
-            "burnedTokens": 28758011
-          },
-          {
-            "timestamp": 1791407511106,
-            "currentSupply": 194241989,
-            "burnedTokens": 28758011
-          },
-          {
-            "timestamp": 1791409122545,
-            "currentSupply": 194241989,
-            "burnedTokens": 28758011
           }
         ]
       },
@@ -832,72 +222,12 @@
         "symbol": "PYTH",
         "mintOrCoinType": "HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3",
         "initialSupply": 10000000000,
-        "firstSeenAt": 1790381937053,
+        "firstSeenAt": 1791422942206,
         "snapshots": [
           {
-            "timestamp": 1790381937053,
+            "timestamp": 1791422942206,
             "currentSupply": 9999959386,
             "burnedTokens": 40614
-          },
-          {
-            "timestamp": 1790383353458,
-            "currentSupply": 9999959386,
-            "burnedTokens": 40614
-          },
-          {
-            "timestamp": 1790416315703,
-            "currentSupply": 9999959378,
-            "burnedTokens": 40622
-          },
-          {
-            "timestamp": 1790802745580,
-            "currentSupply": 9999959289,
-            "burnedTokens": 40711
-          },
-          {
-            "timestamp": 1791399926488,
-            "currentSupply": 9999959211,
-            "burnedTokens": 40789
-          },
-          {
-            "timestamp": 1791400696858,
-            "currentSupply": 9999959211,
-            "burnedTokens": 40789
-          },
-          {
-            "timestamp": 1791401984085,
-            "currentSupply": 9999959211,
-            "burnedTokens": 40789
-          },
-          {
-            "timestamp": 1791403729536,
-            "currentSupply": 9999959211,
-            "burnedTokens": 40789
-          },
-          {
-            "timestamp": 1791405182708,
-            "currentSupply": 9999959211,
-            "burnedTokens": 40789
-          },
-          {
-            "timestamp": 1791405183499,
-            "currentSupply": 9999959386,
-            "burnedTokens": 40614
-          },
-          {
-            "timestamp": 1791406193194,
-            "currentSupply": 9999959211,
-            "burnedTokens": 40789
-          },
-          {
-            "timestamp": 1791407511106,
-            "currentSupply": 9999959210,
-            "burnedTokens": 40790
-          },
-          {
-            "timestamp": 1791409122545,
-            "currentSupply": 9999959210,
-            "burnedTokens": 40790
           }
         ]
       },
@@ -905,72 +235,12 @@
         "symbol": "MET",
         "mintOrCoinType": "METvsvVRapdj9cFLzq4Tr43xK4tAjQfwX76z3n6mWQL",
         "initialSupply": 1000000000,
-        "firstSeenAt": 1790381937053,
+        "firstSeenAt": 1791422942206,
         "snapshots": [
           {
-            "timestamp": 1790381937053,
+            "timestamp": 1791422942206,
             "currentSupply": 997732516,
             "burnedTokens": 2267484
-          },
-          {
-            "timestamp": 1790383353458,
-            "currentSupply": 997732516,
-            "burnedTokens": 2267484
-          },
-          {
-            "timestamp": 1790416315703,
-            "currentSupply": 997732505,
-            "burnedTokens": 2267495
-          },
-          {
-            "timestamp": 1790802745580,
-            "currentSupply": 997732365,
-            "burnedTokens": 2267635
-          },
-          {
-            "timestamp": 1791399926488,
-            "currentSupply": 997732279,
-            "burnedTokens": 2267721
-          },
-          {
-            "timestamp": 1791400696858,
-            "currentSupply": 997732279,
-            "burnedTokens": 2267721
-          },
-          {
-            "timestamp": 1791401984085,
-            "currentSupply": 997732279,
-            "burnedTokens": 2267721
-          },
-          {
-            "timestamp": 1791403729536,
-            "currentSupply": 997732279,
-            "burnedTokens": 2267721
-          },
-          {
-            "timestamp": 1791405182708,
-            "currentSupply": 997732279,
-            "burnedTokens": 2267721
-          },
-          {
-            "timestamp": 1791405183499,
-            "currentSupply": 997732516,
-            "burnedTokens": 2267484
-          },
-          {
-            "timestamp": 1791406193194,
-            "currentSupply": 997732278,
-            "burnedTokens": 2267722
-          },
-          {
-            "timestamp": 1791407511106,
-            "currentSupply": 997732278,
-            "burnedTokens": 2267722
-          },
-          {
-            "timestamp": 1791409122545,
-            "currentSupply": 997732278,
-            "burnedTokens": 2267722
           }
         ]
       },
@@ -978,72 +248,12 @@
         "symbol": "ORE",
         "mintOrCoinType": "oreoU2P8bN6jkk3jbaiVxYnG1dCXcYxwhwyK9jSybcp",
         "initialSupply": 681353,
-        "firstSeenAt": 1790381937053,
+        "firstSeenAt": 1791422942206,
         "snapshots": [
           {
-            "timestamp": 1790381937053,
-            "currentSupply": 496912,
-            "burnedTokens": 184441
-          },
-          {
-            "timestamp": 1790383353458,
-            "currentSupply": 496921,
-            "burnedTokens": 184432
-          },
-          {
-            "timestamp": 1790416315703,
-            "currentSupply": 497092,
-            "burnedTokens": 184261
-          },
-          {
-            "timestamp": 1790802745580,
-            "currentSupply": 498984,
-            "burnedTokens": 182369
-          },
-          {
-            "timestamp": 1791399926488,
-            "currentSupply": 502346,
-            "burnedTokens": 179007
-          },
-          {
-            "timestamp": 1791400696858,
-            "currentSupply": 502351,
-            "burnedTokens": 179002
-          },
-          {
-            "timestamp": 1791401984085,
-            "currentSupply": 502359,
-            "burnedTokens": 178994
-          },
-          {
-            "timestamp": 1791403729536,
-            "currentSupply": 502366,
-            "burnedTokens": 178987
-          },
-          {
-            "timestamp": 1791405182708,
-            "currentSupply": 502377,
-            "burnedTokens": 178976
-          },
-          {
-            "timestamp": 1791405183499,
+            "timestamp": 1791422942206,
             "currentSupply": 496853,
             "burnedTokens": 184500
-          },
-          {
-            "timestamp": 1791406193194,
-            "currentSupply": 502385,
-            "burnedTokens": 178968
-          },
-          {
-            "timestamp": 1791407511106,
-            "currentSupply": 502390,
-            "burnedTokens": 178963
-          },
-          {
-            "timestamp": 1791409122545,
-            "currentSupply": 502403,
-            "burnedTokens": 178950
           }
         ]
       },
@@ -1051,72 +261,12 @@
         "symbol": "DBR",
         "mintOrCoinType": "DBRiDgJAMsM95moTzJs7M9LnkGErpbv9v6CUR1DXnUu5",
         "initialSupply": 10000000000,
-        "firstSeenAt": 1790381937053,
+        "firstSeenAt": 1791422942206,
         "snapshots": [
           {
-            "timestamp": 1790381937053,
-            "currentSupply": 9999946812,
-            "burnedTokens": 53188
-          },
-          {
-            "timestamp": 1790383353458,
-            "currentSupply": 9999946812,
-            "burnedTokens": 53188
-          },
-          {
-            "timestamp": 1790416315703,
-            "currentSupply": 9999946809,
-            "burnedTokens": 53191
-          },
-          {
-            "timestamp": 1790802745580,
-            "currentSupply": 9999946587,
-            "burnedTokens": 53413
-          },
-          {
-            "timestamp": 1791399926488,
-            "currentSupply": 9999946464,
-            "burnedTokens": 53536
-          },
-          {
-            "timestamp": 1791400696858,
-            "currentSupply": 9999946464,
-            "burnedTokens": 53536
-          },
-          {
-            "timestamp": 1791401984085,
-            "currentSupply": 9999946464,
-            "burnedTokens": 53536
-          },
-          {
-            "timestamp": 1791403729536,
-            "currentSupply": 9999946464,
-            "burnedTokens": 53536
-          },
-          {
-            "timestamp": 1791405182708,
-            "currentSupply": 9999946461,
-            "burnedTokens": 53539
-          },
-          {
-            "timestamp": 1791405183499,
+            "timestamp": 1791422942206,
             "currentSupply": 9999946813,
             "burnedTokens": 53187
-          },
-          {
-            "timestamp": 1791406193194,
-            "currentSupply": 9999946461,
-            "burnedTokens": 53539
-          },
-          {
-            "timestamp": 1791407511106,
-            "currentSupply": 9999946461,
-            "burnedTokens": 53539
-          },
-          {
-            "timestamp": 1791409122545,
-            "currentSupply": 9999946461,
-            "burnedTokens": 53539
           }
         ]
       },
@@ -1124,72 +274,12 @@
         "symbol": "STONK",
         "mintOrCoinType": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
         "initialSupply": 1000000000,
-        "firstSeenAt": 1790381937053,
+        "firstSeenAt": 1791422942206,
         "snapshots": [
           {
-            "timestamp": 1790381937053,
-            "currentSupply": 817665695,
-            "burnedTokens": 182334305
-          },
-          {
-            "timestamp": 1790383353458,
-            "currentSupply": 817647248,
-            "burnedTokens": 182352752
-          },
-          {
-            "timestamp": 1790416315703,
-            "currentSupply": 817144219,
-            "burnedTokens": 182855781
-          },
-          {
-            "timestamp": 1790802745580,
-            "currentSupply": 808721686,
-            "burnedTokens": 191278314
-          },
-          {
-            "timestamp": 1791399926488,
-            "currentSupply": 798077790,
-            "burnedTokens": 201922210
-          },
-          {
-            "timestamp": 1791400696858,
-            "currentSupply": 798070115,
-            "burnedTokens": 201929885
-          },
-          {
-            "timestamp": 1791401984085,
-            "currentSupply": 798054605,
-            "burnedTokens": 201945395
-          },
-          {
-            "timestamp": 1791403729536,
-            "currentSupply": 798034009,
-            "burnedTokens": 201965991
-          },
-          {
-            "timestamp": 1791405182708,
-            "currentSupply": 798013742,
-            "burnedTokens": 201986258
-          },
-          {
-            "timestamp": 1791405183499,
+            "timestamp": 1791422942206,
             "currentSupply": 817957727,
             "burnedTokens": 182042273
-          },
-          {
-            "timestamp": 1791406193194,
-            "currentSupply": 797994118,
-            "burnedTokens": 202005882
-          },
-          {
-            "timestamp": 1791407511106,
-            "currentSupply": 797977513,
-            "burnedTokens": 202022487
-          },
-          {
-            "timestamp": 1791409122545,
-            "currentSupply": 797946696,
-            "burnedTokens": 202053304
           }
         ]
       },
@@ -1197,72 +287,12 @@
         "symbol": "CARDS",
         "mintOrCoinType": "CARDSccUMFKoPRZxt5vt3ksUbxEFEcnZ3H2pd3dKxYjp",
         "initialSupply": 2000000000,
-        "firstSeenAt": 1790381937053,
+        "firstSeenAt": 1791422942206,
         "snapshots": [
           {
-            "timestamp": 1790381937053,
-            "currentSupply": 1977216207,
-            "burnedTokens": 22783793
-          },
-          {
-            "timestamp": 1790383353458,
-            "currentSupply": 1977216207,
-            "burnedTokens": 22783793
-          },
-          {
-            "timestamp": 1790416315703,
-            "currentSupply": 1977216174,
-            "burnedTokens": 22783826
-          },
-          {
-            "timestamp": 1790802745580,
-            "currentSupply": 1977215653,
-            "burnedTokens": 22784347
-          },
-          {
-            "timestamp": 1791399926488,
-            "currentSupply": 1974158989,
-            "burnedTokens": 25841011
-          },
-          {
-            "timestamp": 1791400696858,
-            "currentSupply": 1974158989,
-            "burnedTokens": 25841011
-          },
-          {
-            "timestamp": 1791401984085,
-            "currentSupply": 1974158989,
-            "burnedTokens": 25841011
-          },
-          {
-            "timestamp": 1791403729536,
-            "currentSupply": 1974158989,
-            "burnedTokens": 25841011
-          },
-          {
-            "timestamp": 1791405182708,
-            "currentSupply": 1974158987,
-            "burnedTokens": 25841013
-          },
-          {
-            "timestamp": 1791405183499,
+            "timestamp": 1791422942206,
             "currentSupply": 1977216214,
             "burnedTokens": 22783786
-          },
-          {
-            "timestamp": 1791406193194,
-            "currentSupply": 1974158987,
-            "burnedTokens": 25841013
-          },
-          {
-            "timestamp": 1791407511106,
-            "currentSupply": 1974158987,
-            "burnedTokens": 25841013
-          },
-          {
-            "timestamp": 1791409122545,
-            "currentSupply": 1974158983,
-            "burnedTokens": 25841017
           }
         ]
       },
@@ -1270,65 +300,10 @@
         "symbol": "GP",
         "mintOrCoinType": "31k88G5Mq7ptbRDf3AM13HAq6wRQHXHikR8hik7wPygk",
         "initialSupply": 65000000,
-        "firstSeenAt": 1790381937053,
+        "firstSeenAt": 1791422942206,
         "snapshots": [
           {
-            "timestamp": 1790381937053,
-            "currentSupply": 58648953,
-            "burnedTokens": 6351047
-          },
-          {
-            "timestamp": 1790383353458,
-            "currentSupply": 58648953,
-            "burnedTokens": 6351047
-          },
-          {
-            "timestamp": 1790416315703,
-            "currentSupply": 58648953,
-            "burnedTokens": 6351047
-          },
-          {
-            "timestamp": 1790802745580,
-            "currentSupply": 58648953,
-            "burnedTokens": 6351047
-          },
-          {
-            "timestamp": 1791399926488,
-            "currentSupply": 58648953,
-            "burnedTokens": 6351047
-          },
-          {
-            "timestamp": 1791400696858,
-            "currentSupply": 58648953,
-            "burnedTokens": 6351047
-          },
-          {
-            "timestamp": 1791401984085,
-            "currentSupply": 58648953,
-            "burnedTokens": 6351047
-          },
-          {
-            "timestamp": 1791403729536,
-            "currentSupply": 58648953,
-            "burnedTokens": 6351047
-          },
-          {
-            "timestamp": 1791405182708,
-            "currentSupply": 58648953,
-            "burnedTokens": 6351047
-          },
-          {
-            "timestamp": 1791406193194,
-            "currentSupply": 58648953,
-            "burnedTokens": 6351047
-          },
-          {
-            "timestamp": 1791407511106,
-            "currentSupply": 58648953,
-            "burnedTokens": 6351047
-          },
-          {
-            "timestamp": 1791409122545,
+            "timestamp": 1791422942206,
             "currentSupply": 58648953,
             "burnedTokens": 6351047
           }
@@ -1336,252 +311,16 @@
       }
     },
     "sui": {
-      "DEEP": {
-        "symbol": "DEEP",
-        "mintOrCoinType": "0xdeeb7a4662eec9f2f3def03fb937a663dddaa2e215b8078a284d026b7946c270::deep::DEEP",
-        "initialSupply": 10000000000,
-        "firstSeenAt": 1790381933063,
-        "snapshots": [
-          {
-            "timestamp": 1790381933063,
-            "currentSupply": 9965231046,
-            "burnedTokens": 34768954
-          },
-          {
-            "timestamp": 1790383371361,
-            "currentSupply": 9965295568,
-            "burnedTokens": 34704432
-          },
-          {
-            "timestamp": 1790416327745,
-            "currentSupply": 9965231046,
-            "burnedTokens": 34768954
-          },
-          {
-            "timestamp": 1790784917489,
-            "currentSupply": 9965295568,
-            "burnedTokens": 34704432
-          },
-          {
-            "timestamp": 1790792086631,
-            "currentSupply": 9965295568,
-            "burnedTokens": 34704432
-          },
-          {
-            "timestamp": 1790802839286,
-            "currentSupply": 9965295568,
-            "burnedTokens": 34704432
-          },
-          {
-            "timestamp": 1791393315343,
-            "currentSupply": 9965295568,
-            "burnedTokens": 34704432
-          },
-          {
-            "timestamp": 1791399925485,
-            "currentSupply": 9965295568,
-            "burnedTokens": 34704432
-          },
-          {
-            "timestamp": 1791400695109,
-            "currentSupply": 9965295568,
-            "burnedTokens": 34704432
-          },
-          {
-            "timestamp": 1791401970299,
-            "currentSupply": 9965295568,
-            "burnedTokens": 34704432
-          },
-          {
-            "timestamp": 1791403726338,
-            "currentSupply": 9965295568,
-            "burnedTokens": 34704432
-          },
-          {
-            "timestamp": 1791405164116,
-            "currentSupply": 9965295568,
-            "burnedTokens": 34704432
-          },
-          {
-            "timestamp": 1791406181879,
-            "currentSupply": 9965295568,
-            "burnedTokens": 34704432
-          },
-          {
-            "timestamp": 1791407501499,
-            "currentSupply": 9965295568,
-            "burnedTokens": 34704432
-          },
-          {
-            "timestamp": 1791409106439,
-            "currentSupply": 9965295568,
-            "burnedTokens": 34704432
-          }
-        ]
-      },
       "TURBOS": {
         "symbol": "TURBOS",
         "mintOrCoinType": "0x5d1f47ea69bb0de31c313d7acf89b890dbb8991ea8e03c6c355171f84bb1ba4a::turbos::TURBOS",
         "initialSupply": 10000000000,
-        "firstSeenAt": 1790381933065,
+        "firstSeenAt": 1791422925584,
         "snapshots": [
           {
-            "timestamp": 1790381933065,
+            "timestamp": 1791422925584,
             "currentSupply": 9815000000,
             "burnedTokens": 185000000
-          },
-          {
-            "timestamp": 1790383371368,
-            "currentSupply": 9815000000,
-            "burnedTokens": 185000000
-          },
-          {
-            "timestamp": 1790416327748,
-            "currentSupply": 9815000000,
-            "burnedTokens": 185000000
-          },
-          {
-            "timestamp": 1790784917524,
-            "currentSupply": 9815000000,
-            "burnedTokens": 185000000
-          },
-          {
-            "timestamp": 1790792086634,
-            "currentSupply": 9815000000,
-            "burnedTokens": 185000000
-          },
-          {
-            "timestamp": 1790802839291,
-            "currentSupply": 9815000000,
-            "burnedTokens": 185000000
-          },
-          {
-            "timestamp": 1791393315347,
-            "currentSupply": 9815000000,
-            "burnedTokens": 185000000
-          },
-          {
-            "timestamp": 1791399925492,
-            "currentSupply": 9815000000,
-            "burnedTokens": 185000000
-          },
-          {
-            "timestamp": 1791400695114,
-            "currentSupply": 9815000000,
-            "burnedTokens": 185000000
-          },
-          {
-            "timestamp": 1791401970306,
-            "currentSupply": 9815000000,
-            "burnedTokens": 185000000
-          },
-          {
-            "timestamp": 1791403726346,
-            "currentSupply": 9815000000,
-            "burnedTokens": 185000000
-          },
-          {
-            "timestamp": 1791405164126,
-            "currentSupply": 9815000000,
-            "burnedTokens": 185000000
-          },
-          {
-            "timestamp": 1791406181887,
-            "currentSupply": 9815000000,
-            "burnedTokens": 185000000
-          },
-          {
-            "timestamp": 1791407501505,
-            "currentSupply": 9815000000,
-            "burnedTokens": 185000000
-          },
-          {
-            "timestamp": 1791409106463,
-            "currentSupply": 9815000000,
-            "burnedTokens": 185000000
-          }
-        ]
-      },
-      "FAITH": {
-        "symbol": "FAITH",
-        "mintOrCoinType": "0x965c6cb391f2e240cea5f43a10de3495004c78c057d4c233159205c40c7e03e3::faith::FAITH",
-        "initialSupply": 10827069,
-        "firstSeenAt": 1790381933069,
-        "snapshots": [
-          {
-            "timestamp": 1790381933069,
-            "currentSupply": 10827068,
-            "burnedTokens": 1
-          },
-          {
-            "timestamp": 1790383371374,
-            "currentSupply": 10827068,
-            "burnedTokens": 1
-          },
-          {
-            "timestamp": 1790416327749,
-            "currentSupply": 10827068,
-            "burnedTokens": 1
-          },
-          {
-            "timestamp": 1790784917552,
-            "currentSupply": 10827068,
-            "burnedTokens": 1
-          },
-          {
-            "timestamp": 1790792086639,
-            "currentSupply": 10827068,
-            "burnedTokens": 1
-          },
-          {
-            "timestamp": 1790802839317,
-            "currentSupply": 10827068,
-            "burnedTokens": 1
-          },
-          {
-            "timestamp": 1791393315365,
-            "currentSupply": 10827068,
-            "burnedTokens": 1
-          },
-          {
-            "timestamp": 1791399925508,
-            "currentSupply": 10827068,
-            "burnedTokens": 1
-          },
-          {
-            "timestamp": 1791400695119,
-            "currentSupply": 10827068,
-            "burnedTokens": 1
-          },
-          {
-            "timestamp": 1791401970324,
-            "currentSupply": 10827068,
-            "burnedTokens": 1
-          },
-          {
-            "timestamp": 1791403726355,
-            "currentSupply": 10827068,
-            "burnedTokens": 1
-          },
-          {
-            "timestamp": 1791405164145,
-            "currentSupply": 10827068,
-            "burnedTokens": 1
-          },
-          {
-            "timestamp": 1791406182039,
-            "currentSupply": 10827068,
-            "burnedTokens": 1
-          },
-          {
-            "timestamp": 1791407501522,
-            "currentSupply": 10827068,
-            "burnedTokens": 1
-          },
-          {
-            "timestamp": 1791409106539,
-            "currentSupply": 10827068,
-            "burnedTokens": 1
           }
         ]
       },
@@ -1589,62 +328,25 @@
         "symbol": "MMT",
         "mintOrCoinType": "0x35169bc93e1fddfcf3a82a9eae726d349689ed59e4b065369af8789fe59f8608::mmt::MMT",
         "initialSupply": 1000000000,
-        "firstSeenAt": 1790792086637,
+        "firstSeenAt": 1791422925637,
         "snapshots": [
           {
-            "timestamp": 1790792086637,
+            "timestamp": 1791422925637,
             "currentSupply": 984999999,
             "burnedTokens": 15000001
-          },
+          }
+        ]
+      },
+      "FAITH": {
+        "symbol": "FAITH",
+        "mintOrCoinType": "0x965c6cb391f2e240cea5f43a10de3495004c78c057d4c233159205c40c7e03e3::faith::FAITH",
+        "initialSupply": 10827069,
+        "firstSeenAt": 1791422925663,
+        "snapshots": [
           {
-            "timestamp": 1790802839303,
-            "currentSupply": 984999999,
-            "burnedTokens": 15000001
-          },
-          {
-            "timestamp": 1791393315352,
-            "currentSupply": 984999999,
-            "burnedTokens": 15000001
-          },
-          {
-            "timestamp": 1791399925502,
-            "currentSupply": 984999999,
-            "burnedTokens": 15000001
-          },
-          {
-            "timestamp": 1791400695116,
-            "currentSupply": 984999999,
-            "burnedTokens": 15000001
-          },
-          {
-            "timestamp": 1791401970314,
-            "currentSupply": 984999999,
-            "burnedTokens": 15000001
-          },
-          {
-            "timestamp": 1791403726351,
-            "currentSupply": 984999999,
-            "burnedTokens": 15000001
-          },
-          {
-            "timestamp": 1791405164135,
-            "currentSupply": 984999999,
-            "burnedTokens": 15000001
-          },
-          {
-            "timestamp": 1791406181894,
-            "currentSupply": 984999999,
-            "burnedTokens": 15000001
-          },
-          {
-            "timestamp": 1791407501514,
-            "currentSupply": 984999999,
-            "burnedTokens": 15000001
-          },
-          {
-            "timestamp": 1791409106500,
-            "currentSupply": 984999999,
-            "burnedTokens": 15000001
+            "timestamp": 1791422925663,
+            "currentSupply": 10827068,
+            "burnedTokens": 1
           }
         ]
       }
@@ -1653,55 +355,10 @@
       "ETH": {
         "symbol": "ETH",
         "initialSupply": 125045000,
-        "firstSeenAt": 1790783837890,
+        "firstSeenAt": 1791422934061,
         "snapshots": [
           {
-            "timestamp": 1790783837890,
-            "currentSupply": 120520200,
-            "burnedTokens": 4524800
-          },
-          {
-            "timestamp": 1790784644712,
-            "currentSupply": 120520200,
-            "burnedTokens": 4524800
-          },
-          {
-            "timestamp": 1790802771496,
-            "currentSupply": 120520200,
-            "burnedTokens": 4524800
-          },
-          {
-            "timestamp": 1791400701306,
-            "currentSupply": 120520200,
-            "burnedTokens": 4524800
-          },
-          {
-            "timestamp": 1791401983115,
-            "currentSupply": 120520200,
-            "burnedTokens": 4524800
-          },
-          {
-            "timestamp": 1791403731991,
-            "currentSupply": 120520200,
-            "burnedTokens": 4524800
-          },
-          {
-            "timestamp": 1791405178928,
-            "currentSupply": 120520200,
-            "burnedTokens": 4524800
-          },
-          {
-            "timestamp": 1791406187776,
-            "currentSupply": 120520200,
-            "burnedTokens": 4524800
-          },
-          {
-            "timestamp": 1791407504769,
-            "currentSupply": 120520200,
-            "burnedTokens": 4524800
-          },
-          {
-            "timestamp": 1791409116451,
+            "timestamp": 1791422934061,
             "currentSupply": 120520200,
             "burnedTokens": 4524800
           }
@@ -1710,55 +367,10 @@
       "AAVE": {
         "symbol": "AAVE",
         "initialSupply": 16000000,
-        "firstSeenAt": 1790783837890,
+        "firstSeenAt": 1791422934061,
         "snapshots": [
           {
-            "timestamp": 1790783837890,
-            "currentSupply": 14240000,
-            "burnedTokens": 1760000
-          },
-          {
-            "timestamp": 1790784644712,
-            "currentSupply": 14240000,
-            "burnedTokens": 1760000
-          },
-          {
-            "timestamp": 1790802771496,
-            "currentSupply": 14240000,
-            "burnedTokens": 1760000
-          },
-          {
-            "timestamp": 1791400701306,
-            "currentSupply": 14240000,
-            "burnedTokens": 1760000
-          },
-          {
-            "timestamp": 1791401983115,
-            "currentSupply": 14240000,
-            "burnedTokens": 1760000
-          },
-          {
-            "timestamp": 1791403731991,
-            "currentSupply": 14240000,
-            "burnedTokens": 1760000
-          },
-          {
-            "timestamp": 1791405178928,
-            "currentSupply": 14240000,
-            "burnedTokens": 1760000
-          },
-          {
-            "timestamp": 1791406187776,
-            "currentSupply": 14240000,
-            "burnedTokens": 1760000
-          },
-          {
-            "timestamp": 1791407504769,
-            "currentSupply": 14240000,
-            "burnedTokens": 1760000
-          },
-          {
-            "timestamp": 1791409116451,
+            "timestamp": 1791422934061,
             "currentSupply": 14240000,
             "burnedTokens": 1760000
           }
@@ -1767,55 +379,10 @@
       "SKY": {
         "symbol": "SKY",
         "initialSupply": 1005577,
-        "firstSeenAt": 1790783837890,
+        "firstSeenAt": 1791422934061,
         "snapshots": [
           {
-            "timestamp": 1790783837890,
-            "currentSupply": 30201,
-            "burnedTokens": 975376
-          },
-          {
-            "timestamp": 1790784644712,
-            "currentSupply": 30201,
-            "burnedTokens": 975376
-          },
-          {
-            "timestamp": 1790802771496,
-            "currentSupply": 30201,
-            "burnedTokens": 975376
-          },
-          {
-            "timestamp": 1791400701306,
-            "currentSupply": 29810,
-            "burnedTokens": 975767
-          },
-          {
-            "timestamp": 1791401983115,
-            "currentSupply": 29810,
-            "burnedTokens": 975767
-          },
-          {
-            "timestamp": 1791403731991,
-            "currentSupply": 29810,
-            "burnedTokens": 975767
-          },
-          {
-            "timestamp": 1791405178928,
-            "currentSupply": 29810,
-            "burnedTokens": 975767
-          },
-          {
-            "timestamp": 1791406187776,
-            "currentSupply": 29810,
-            "burnedTokens": 975767
-          },
-          {
-            "timestamp": 1791407504769,
-            "currentSupply": 29810,
-            "burnedTokens": 975767
-          },
-          {
-            "timestamp": 1791409116451,
+            "timestamp": 1791422934061,
             "currentSupply": 29810,
             "burnedTokens": 975767
           }
@@ -1824,55 +391,10 @@
       "UNI": {
         "symbol": "UNI",
         "initialSupply": 1000000000,
-        "firstSeenAt": 1790783837890,
+        "firstSeenAt": 1791422934061,
         "snapshots": [
           {
-            "timestamp": 1790783837890,
-            "currentSupply": 887224419,
-            "burnedTokens": 112775581
-          },
-          {
-            "timestamp": 1790784644712,
-            "currentSupply": 887224419,
-            "burnedTokens": 112775581
-          },
-          {
-            "timestamp": 1790802771496,
-            "currentSupply": 887220419,
-            "burnedTokens": 112779581
-          },
-          {
-            "timestamp": 1791400701306,
-            "currentSupply": 886966419,
-            "burnedTokens": 113033581
-          },
-          {
-            "timestamp": 1791401983115,
-            "currentSupply": 886966419,
-            "burnedTokens": 113033581
-          },
-          {
-            "timestamp": 1791403731991,
-            "currentSupply": 886966419,
-            "burnedTokens": 113033581
-          },
-          {
-            "timestamp": 1791405178928,
-            "currentSupply": 886966419,
-            "burnedTokens": 113033581
-          },
-          {
-            "timestamp": 1791406187776,
-            "currentSupply": 886966419,
-            "burnedTokens": 113033581
-          },
-          {
-            "timestamp": 1791407504769,
-            "currentSupply": 886966419,
-            "burnedTokens": 113033581
-          },
-          {
-            "timestamp": 1791409116451,
+            "timestamp": 1791422934061,
             "currentSupply": 886966419,
             "burnedTokens": 113033581
           }
@@ -1881,55 +403,10 @@
       "ENA": {
         "symbol": "ENA",
         "initialSupply": 15000000000,
-        "firstSeenAt": 1790783837890,
+        "firstSeenAt": 1791422934061,
         "snapshots": [
           {
-            "timestamp": 1790783837890,
-            "currentSupply": 14964800000,
-            "burnedTokens": 35200000
-          },
-          {
-            "timestamp": 1790784644712,
-            "currentSupply": 14964800000,
-            "burnedTokens": 35200000
-          },
-          {
-            "timestamp": 1790802771496,
-            "currentSupply": 14964800000,
-            "burnedTokens": 35200000
-          },
-          {
-            "timestamp": 1791400701306,
-            "currentSupply": 14964800000,
-            "burnedTokens": 35200000
-          },
-          {
-            "timestamp": 1791401983115,
-            "currentSupply": 14964800000,
-            "burnedTokens": 35200000
-          },
-          {
-            "timestamp": 1791403731991,
-            "currentSupply": 14964800000,
-            "burnedTokens": 35200000
-          },
-          {
-            "timestamp": 1791405178928,
-            "currentSupply": 14964800000,
-            "burnedTokens": 35200000
-          },
-          {
-            "timestamp": 1791406187776,
-            "currentSupply": 14964800000,
-            "burnedTokens": 35200000
-          },
-          {
-            "timestamp": 1791407504769,
-            "currentSupply": 14964800000,
-            "burnedTokens": 35200000
-          },
-          {
-            "timestamp": 1791409116451,
+            "timestamp": 1791422934061,
             "currentSupply": 14964800000,
             "burnedTokens": 35200000
           }
@@ -1938,55 +415,10 @@
       "LDO": {
         "symbol": "LDO",
         "initialSupply": 1000000000,
-        "firstSeenAt": 1790783837890,
+        "firstSeenAt": 1791422934061,
         "snapshots": [
           {
-            "timestamp": 1790783837890,
-            "currentSupply": 997600000,
-            "burnedTokens": 2400000
-          },
-          {
-            "timestamp": 1790784644712,
-            "currentSupply": 997600000,
-            "burnedTokens": 2400000
-          },
-          {
-            "timestamp": 1790802771496,
-            "currentSupply": 997600000,
-            "burnedTokens": 2400000
-          },
-          {
-            "timestamp": 1791400701306,
-            "currentSupply": 997600000,
-            "burnedTokens": 2400000
-          },
-          {
-            "timestamp": 1791401983115,
-            "currentSupply": 997600000,
-            "burnedTokens": 2400000
-          },
-          {
-            "timestamp": 1791403731991,
-            "currentSupply": 997600000,
-            "burnedTokens": 2400000
-          },
-          {
-            "timestamp": 1791405178928,
-            "currentSupply": 997600000,
-            "burnedTokens": 2400000
-          },
-          {
-            "timestamp": 1791406187776,
-            "currentSupply": 997600000,
-            "burnedTokens": 2400000
-          },
-          {
-            "timestamp": 1791407504769,
-            "currentSupply": 997600000,
-            "burnedTokens": 2400000
-          },
-          {
-            "timestamp": 1791409116451,
+            "timestamp": 1791422934061,
             "currentSupply": 997600000,
             "burnedTokens": 2400000
           }
@@ -1995,55 +427,10 @@
       "PENDLE": {
         "symbol": "PENDLE",
         "initialSupply": 281527448,
-        "firstSeenAt": 1790783837890,
+        "firstSeenAt": 1791422934061,
         "snapshots": [
           {
-            "timestamp": 1790783837890,
-            "currentSupply": 258446028,
-            "burnedTokens": 23081420
-          },
-          {
-            "timestamp": 1790784644712,
-            "currentSupply": 258446028,
-            "burnedTokens": 23081420
-          },
-          {
-            "timestamp": 1790802771496,
-            "currentSupply": 258446028,
-            "burnedTokens": 23081420
-          },
-          {
-            "timestamp": 1791400701306,
-            "currentSupply": 258446028,
-            "burnedTokens": 23081420
-          },
-          {
-            "timestamp": 1791401983115,
-            "currentSupply": 258446028,
-            "burnedTokens": 23081420
-          },
-          {
-            "timestamp": 1791403731991,
-            "currentSupply": 258446028,
-            "burnedTokens": 23081420
-          },
-          {
-            "timestamp": 1791405178928,
-            "currentSupply": 258446028,
-            "burnedTokens": 23081420
-          },
-          {
-            "timestamp": 1791406187776,
-            "currentSupply": 258446028,
-            "burnedTokens": 23081420
-          },
-          {
-            "timestamp": 1791407504769,
-            "currentSupply": 258446028,
-            "burnedTokens": 23081420
-          },
-          {
-            "timestamp": 1791409116451,
+            "timestamp": 1791422934061,
             "currentSupply": 258446028,
             "burnedTokens": 23081420
           }
@@ -2052,55 +439,10 @@
       "CRV": {
         "symbol": "CRV",
         "initialSupply": 3030303031,
-        "firstSeenAt": 1790783837890,
+        "firstSeenAt": 1791422934061,
         "snapshots": [
           {
-            "timestamp": 1790783837890,
-            "currentSupply": 2215400000,
-            "burnedTokens": 814903031
-          },
-          {
-            "timestamp": 1790784644712,
-            "currentSupply": 2215400000,
-            "burnedTokens": 814903031
-          },
-          {
-            "timestamp": 1790802771496,
-            "currentSupply": 2215400000,
-            "burnedTokens": 814903031
-          },
-          {
-            "timestamp": 1791400701306,
-            "currentSupply": 2215400000,
-            "burnedTokens": 814903031
-          },
-          {
-            "timestamp": 1791401983115,
-            "currentSupply": 2215400000,
-            "burnedTokens": 814903031
-          },
-          {
-            "timestamp": 1791403731991,
-            "currentSupply": 2215400000,
-            "burnedTokens": 814903031
-          },
-          {
-            "timestamp": 1791405178928,
-            "currentSupply": 2215400000,
-            "burnedTokens": 814903031
-          },
-          {
-            "timestamp": 1791406187776,
-            "currentSupply": 2215400000,
-            "burnedTokens": 814903031
-          },
-          {
-            "timestamp": 1791407504769,
-            "currentSupply": 2215400000,
-            "burnedTokens": 814903031
-          },
-          {
-            "timestamp": 1791409116451,
+            "timestamp": 1791422934061,
             "currentSupply": 2215400000,
             "burnedTokens": 814903031
           }
@@ -2109,55 +451,10 @@
       "MORPHO": {
         "symbol": "MORPHO",
         "initialSupply": 1000000000,
-        "firstSeenAt": 1790783837890,
+        "firstSeenAt": 1791422934061,
         "snapshots": [
           {
-            "timestamp": 1790783837890,
-            "currentSupply": 999840000,
-            "burnedTokens": 160000
-          },
-          {
-            "timestamp": 1790784644712,
-            "currentSupply": 999840000,
-            "burnedTokens": 160000
-          },
-          {
-            "timestamp": 1790802771496,
-            "currentSupply": 999840000,
-            "burnedTokens": 160000
-          },
-          {
-            "timestamp": 1791400701306,
-            "currentSupply": 999840000,
-            "burnedTokens": 160000
-          },
-          {
-            "timestamp": 1791401983115,
-            "currentSupply": 999840000,
-            "burnedTokens": 160000
-          },
-          {
-            "timestamp": 1791403731991,
-            "currentSupply": 999840000,
-            "burnedTokens": 160000
-          },
-          {
-            "timestamp": 1791405178928,
-            "currentSupply": 999840000,
-            "burnedTokens": 160000
-          },
-          {
-            "timestamp": 1791406187776,
-            "currentSupply": 999840000,
-            "burnedTokens": 160000
-          },
-          {
-            "timestamp": 1791407504769,
-            "currentSupply": 999840000,
-            "burnedTokens": 160000
-          },
-          {
-            "timestamp": 1791409116451,
+            "timestamp": 1791422934061,
             "currentSupply": 999840000,
             "burnedTokens": 160000
           }
@@ -2166,55 +463,10 @@
       "ETHFI": {
         "symbol": "ETHFI",
         "initialSupply": 1000000000,
-        "firstSeenAt": 1790783837890,
+        "firstSeenAt": 1791422934061,
         "snapshots": [
           {
-            "timestamp": 1790783837890,
-            "currentSupply": 968400000,
-            "burnedTokens": 31600000
-          },
-          {
-            "timestamp": 1790784644712,
-            "currentSupply": 968400000,
-            "burnedTokens": 31600000
-          },
-          {
-            "timestamp": 1790802771496,
-            "currentSupply": 968400000,
-            "burnedTokens": 31600000
-          },
-          {
-            "timestamp": 1791400701306,
-            "currentSupply": 968400000,
-            "burnedTokens": 31600000
-          },
-          {
-            "timestamp": 1791401983115,
-            "currentSupply": 968400000,
-            "burnedTokens": 31600000
-          },
-          {
-            "timestamp": 1791403731991,
-            "currentSupply": 968400000,
-            "burnedTokens": 31600000
-          },
-          {
-            "timestamp": 1791405178928,
-            "currentSupply": 968400000,
-            "burnedTokens": 31600000
-          },
-          {
-            "timestamp": 1791406187776,
-            "currentSupply": 968400000,
-            "burnedTokens": 31600000
-          },
-          {
-            "timestamp": 1791407504769,
-            "currentSupply": 968400000,
-            "burnedTokens": 31600000
-          },
-          {
-            "timestamp": 1791409116451,
+            "timestamp": 1791422934061,
             "currentSupply": 968400000,
             "burnedTokens": 31600000
           }
@@ -2223,55 +475,10 @@
       "EIGEN": {
         "symbol": "EIGEN",
         "initialSupply": 1673646668,
-        "firstSeenAt": 1790783837890,
+        "firstSeenAt": 1791422934061,
         "snapshots": [
           {
-            "timestamp": 1790783837890,
-            "currentSupply": 1673646668,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1790784644712,
-            "currentSupply": 1673646668,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1790802771496,
-            "currentSupply": 1673646668,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1791400701306,
-            "currentSupply": 1673646668,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1791401983115,
-            "currentSupply": 1673646668,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1791403731991,
-            "currentSupply": 1673646668,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1791405178928,
-            "currentSupply": 1673646668,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1791406187776,
-            "currentSupply": 1673646668,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1791407504769,
-            "currentSupply": 1673646668,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1791409116451,
+            "timestamp": 1791422934061,
             "currentSupply": 1673646668,
             "burnedTokens": 0
           }
@@ -2280,55 +487,10 @@
       "LINK": {
         "symbol": "LINK",
         "initialSupply": 1000000000,
-        "firstSeenAt": 1790783837890,
+        "firstSeenAt": 1791422934061,
         "snapshots": [
           {
-            "timestamp": 1790783837890,
-            "currentSupply": 999980000,
-            "burnedTokens": 20000
-          },
-          {
-            "timestamp": 1790784644712,
-            "currentSupply": 999980000,
-            "burnedTokens": 20000
-          },
-          {
-            "timestamp": 1790802771496,
-            "currentSupply": 999980000,
-            "burnedTokens": 20000
-          },
-          {
-            "timestamp": 1791400701306,
-            "currentSupply": 999980000,
-            "burnedTokens": 20000
-          },
-          {
-            "timestamp": 1791401983115,
-            "currentSupply": 999980000,
-            "burnedTokens": 20000
-          },
-          {
-            "timestamp": 1791403731991,
-            "currentSupply": 999980000,
-            "burnedTokens": 20000
-          },
-          {
-            "timestamp": 1791405178928,
-            "currentSupply": 999980000,
-            "burnedTokens": 20000
-          },
-          {
-            "timestamp": 1791406187776,
-            "currentSupply": 999980000,
-            "burnedTokens": 20000
-          },
-          {
-            "timestamp": 1791407504769,
-            "currentSupply": 999980000,
-            "burnedTokens": 20000
-          },
-          {
-            "timestamp": 1791409116451,
+            "timestamp": 1791422934061,
             "currentSupply": 999980000,
             "burnedTokens": 20000
           }
@@ -2337,55 +499,10 @@
       "ENS": {
         "symbol": "ENS",
         "initialSupply": 100000000,
-        "firstSeenAt": 1790783837890,
+        "firstSeenAt": 1791422934061,
         "snapshots": [
           {
-            "timestamp": 1790783837890,
-            "currentSupply": 99985000,
-            "burnedTokens": 15000
-          },
-          {
-            "timestamp": 1790784644712,
-            "currentSupply": 99985000,
-            "burnedTokens": 15000
-          },
-          {
-            "timestamp": 1790802771496,
-            "currentSupply": 99985000,
-            "burnedTokens": 15000
-          },
-          {
-            "timestamp": 1791400701306,
-            "currentSupply": 99985000,
-            "burnedTokens": 15000
-          },
-          {
-            "timestamp": 1791401983115,
-            "currentSupply": 99985000,
-            "burnedTokens": 15000
-          },
-          {
-            "timestamp": 1791403731991,
-            "currentSupply": 99985000,
-            "burnedTokens": 15000
-          },
-          {
-            "timestamp": 1791405178928,
-            "currentSupply": 99985000,
-            "burnedTokens": 15000
-          },
-          {
-            "timestamp": 1791406187776,
-            "currentSupply": 99985000,
-            "burnedTokens": 15000
-          },
-          {
-            "timestamp": 1791407504769,
-            "currentSupply": 99985000,
-            "burnedTokens": 15000
-          },
-          {
-            "timestamp": 1791409116451,
+            "timestamp": 1791422934061,
             "currentSupply": 99985000,
             "burnedTokens": 15000
           }
@@ -2394,55 +511,10 @@
       "SNX": {
         "symbol": "SNX",
         "initialSupply": 328193104,
-        "firstSeenAt": 1790783837890,
+        "firstSeenAt": 1791422934061,
         "snapshots": [
           {
-            "timestamp": 1790783837890,
-            "currentSupply": 311993104,
-            "burnedTokens": 16200000
-          },
-          {
-            "timestamp": 1790784644712,
-            "currentSupply": 311993104,
-            "burnedTokens": 16200000
-          },
-          {
-            "timestamp": 1790802771496,
-            "currentSupply": 311993104,
-            "burnedTokens": 16200000
-          },
-          {
-            "timestamp": 1791400701306,
-            "currentSupply": 311993104,
-            "burnedTokens": 16200000
-          },
-          {
-            "timestamp": 1791401983115,
-            "currentSupply": 311993104,
-            "burnedTokens": 16200000
-          },
-          {
-            "timestamp": 1791403731991,
-            "currentSupply": 311993104,
-            "burnedTokens": 16200000
-          },
-          {
-            "timestamp": 1791405178928,
-            "currentSupply": 311993104,
-            "burnedTokens": 16200000
-          },
-          {
-            "timestamp": 1791406187776,
-            "currentSupply": 311993104,
-            "burnedTokens": 16200000
-          },
-          {
-            "timestamp": 1791407504769,
-            "currentSupply": 311993104,
-            "burnedTokens": 16200000
-          },
-          {
-            "timestamp": 1791409116451,
+            "timestamp": 1791422934061,
             "currentSupply": 311993104,
             "burnedTokens": 16200000
           }
@@ -2451,55 +523,10 @@
       "CVX": {
         "symbol": "CVX",
         "initialSupply": 100000000,
-        "firstSeenAt": 1790783837890,
+        "firstSeenAt": 1791422934061,
         "snapshots": [
           {
-            "timestamp": 1790783837890,
-            "currentSupply": 99360000,
-            "burnedTokens": 640000
-          },
-          {
-            "timestamp": 1790784644712,
-            "currentSupply": 99360000,
-            "burnedTokens": 640000
-          },
-          {
-            "timestamp": 1790802771496,
-            "currentSupply": 99360000,
-            "burnedTokens": 640000
-          },
-          {
-            "timestamp": 1791400701306,
-            "currentSupply": 99360000,
-            "burnedTokens": 640000
-          },
-          {
-            "timestamp": 1791401983115,
-            "currentSupply": 99360000,
-            "burnedTokens": 640000
-          },
-          {
-            "timestamp": 1791403731991,
-            "currentSupply": 99360000,
-            "burnedTokens": 640000
-          },
-          {
-            "timestamp": 1791405178928,
-            "currentSupply": 99360000,
-            "burnedTokens": 640000
-          },
-          {
-            "timestamp": 1791406187776,
-            "currentSupply": 99360000,
-            "burnedTokens": 640000
-          },
-          {
-            "timestamp": 1791407504769,
-            "currentSupply": 99360000,
-            "burnedTokens": 640000
-          },
-          {
-            "timestamp": 1791409116451,
+            "timestamp": 1791422934061,
             "currentSupply": 99360000,
             "burnedTokens": 640000
           }
@@ -2508,55 +535,10 @@
       "FXS": {
         "symbol": "FXS",
         "initialSupply": 100000000,
-        "firstSeenAt": 1790783837890,
+        "firstSeenAt": 1791422934061,
         "snapshots": [
           {
-            "timestamp": 1790783837890,
-            "currentSupply": 75300000,
-            "burnedTokens": 24700000
-          },
-          {
-            "timestamp": 1790784644712,
-            "currentSupply": 75300000,
-            "burnedTokens": 24700000
-          },
-          {
-            "timestamp": 1790802771496,
-            "currentSupply": 75300000,
-            "burnedTokens": 24700000
-          },
-          {
-            "timestamp": 1791400701306,
-            "currentSupply": 75300000,
-            "burnedTokens": 24700000
-          },
-          {
-            "timestamp": 1791401983115,
-            "currentSupply": 75300000,
-            "burnedTokens": 24700000
-          },
-          {
-            "timestamp": 1791403731991,
-            "currentSupply": 75300000,
-            "burnedTokens": 24700000
-          },
-          {
-            "timestamp": 1791405178928,
-            "currentSupply": 75300000,
-            "burnedTokens": 24700000
-          },
-          {
-            "timestamp": 1791406187776,
-            "currentSupply": 75300000,
-            "burnedTokens": 24700000
-          },
-          {
-            "timestamp": 1791407504769,
-            "currentSupply": 75300000,
-            "burnedTokens": 24700000
-          },
-          {
-            "timestamp": 1791409116451,
+            "timestamp": 1791422934061,
             "currentSupply": 75300000,
             "burnedTokens": 24700000
           }
@@ -2565,55 +547,10 @@
       "COW": {
         "symbol": "COW",
         "initialSupply": 1000000000,
-        "firstSeenAt": 1790783837890,
+        "firstSeenAt": 1791422934061,
         "snapshots": [
           {
-            "timestamp": 1790783837890,
-            "currentSupply": 982800000,
-            "burnedTokens": 17200000
-          },
-          {
-            "timestamp": 1790784644712,
-            "currentSupply": 982800000,
-            "burnedTokens": 17200000
-          },
-          {
-            "timestamp": 1790802771496,
-            "currentSupply": 982800000,
-            "burnedTokens": 17200000
-          },
-          {
-            "timestamp": 1791400701306,
-            "currentSupply": 982800000,
-            "burnedTokens": 17200000
-          },
-          {
-            "timestamp": 1791401983115,
-            "currentSupply": 982800000,
-            "burnedTokens": 17200000
-          },
-          {
-            "timestamp": 1791403731991,
-            "currentSupply": 982800000,
-            "burnedTokens": 17200000
-          },
-          {
-            "timestamp": 1791405178928,
-            "currentSupply": 982800000,
-            "burnedTokens": 17200000
-          },
-          {
-            "timestamp": 1791406187776,
-            "currentSupply": 982800000,
-            "burnedTokens": 17200000
-          },
-          {
-            "timestamp": 1791407504769,
-            "currentSupply": 982800000,
-            "burnedTokens": 17200000
-          },
-          {
-            "timestamp": 1791409116451,
+            "timestamp": 1791422934061,
             "currentSupply": 982800000,
             "burnedTokens": 17200000
           }
@@ -2622,55 +559,10 @@
       "BANANA": {
         "symbol": "BANANA",
         "initialSupply": 10000000,
-        "firstSeenAt": 1790783837890,
+        "firstSeenAt": 1791422934061,
         "snapshots": [
           {
-            "timestamp": 1790783837890,
-            "currentSupply": 8402893,
-            "burnedTokens": 1597107
-          },
-          {
-            "timestamp": 1790784644712,
-            "currentSupply": 8402893,
-            "burnedTokens": 1597107
-          },
-          {
-            "timestamp": 1790802771496,
-            "currentSupply": 8402893,
-            "burnedTokens": 1597107
-          },
-          {
-            "timestamp": 1791400701306,
-            "currentSupply": 8402893,
-            "burnedTokens": 1597107
-          },
-          {
-            "timestamp": 1791401983115,
-            "currentSupply": 8402893,
-            "burnedTokens": 1597107
-          },
-          {
-            "timestamp": 1791403731991,
-            "currentSupply": 8402893,
-            "burnedTokens": 1597107
-          },
-          {
-            "timestamp": 1791405178928,
-            "currentSupply": 8402893,
-            "burnedTokens": 1597107
-          },
-          {
-            "timestamp": 1791406187776,
-            "currentSupply": 8402893,
-            "burnedTokens": 1597107
-          },
-          {
-            "timestamp": 1791407504769,
-            "currentSupply": 8402893,
-            "burnedTokens": 1597107
-          },
-          {
-            "timestamp": 1791409116451,
+            "timestamp": 1791422934061,
             "currentSupply": 8402893,
             "burnedTokens": 1597107
           }
@@ -2679,55 +571,10 @@
       "SHIB": {
         "symbol": "SHIB",
         "initialSupply": 1000000000000000,
-        "firstSeenAt": 1790783837890,
+        "firstSeenAt": 1791422934061,
         "snapshots": [
           {
-            "timestamp": 1790783837890,
-            "currentSupply": 589255000000000,
-            "burnedTokens": 410745000000000
-          },
-          {
-            "timestamp": 1790784644712,
-            "currentSupply": 589255000000000,
-            "burnedTokens": 410745000000000
-          },
-          {
-            "timestamp": 1790802771496,
-            "currentSupply": 589255000000000,
-            "burnedTokens": 410745000000000
-          },
-          {
-            "timestamp": 1791400701306,
-            "currentSupply": 589255000000000,
-            "burnedTokens": 410745000000000
-          },
-          {
-            "timestamp": 1791401983115,
-            "currentSupply": 589255000000000,
-            "burnedTokens": 410745000000000
-          },
-          {
-            "timestamp": 1791403731991,
-            "currentSupply": 589255000000000,
-            "burnedTokens": 410745000000000
-          },
-          {
-            "timestamp": 1791405178928,
-            "currentSupply": 589255000000000,
-            "burnedTokens": 410745000000000
-          },
-          {
-            "timestamp": 1791406187776,
-            "currentSupply": 589255000000000,
-            "burnedTokens": 410745000000000
-          },
-          {
-            "timestamp": 1791407504769,
-            "currentSupply": 589255000000000,
-            "burnedTokens": 410745000000000
-          },
-          {
-            "timestamp": 1791409116451,
+            "timestamp": 1791422934061,
             "currentSupply": 589255000000000,
             "burnedTokens": 410745000000000
           }
@@ -2736,55 +583,10 @@
       "PEPE": {
         "symbol": "PEPE",
         "initialSupply": 420690000000000,
-        "firstSeenAt": 1790783837890,
+        "firstSeenAt": 1791422934061,
         "snapshots": [
           {
-            "timestamp": 1790783837890,
-            "currentSupply": 413772000000000,
-            "burnedTokens": 6918000000000
-          },
-          {
-            "timestamp": 1790784644712,
-            "currentSupply": 413772000000000,
-            "burnedTokens": 6918000000000
-          },
-          {
-            "timestamp": 1790802771496,
-            "currentSupply": 413772000000000,
-            "burnedTokens": 6918000000000
-          },
-          {
-            "timestamp": 1791400701306,
-            "currentSupply": 413772000000000,
-            "burnedTokens": 6918000000000
-          },
-          {
-            "timestamp": 1791401983115,
-            "currentSupply": 413772000000000,
-            "burnedTokens": 6918000000000
-          },
-          {
-            "timestamp": 1791403731991,
-            "currentSupply": 413772000000000,
-            "burnedTokens": 6918000000000
-          },
-          {
-            "timestamp": 1791405178928,
-            "currentSupply": 413772000000000,
-            "burnedTokens": 6918000000000
-          },
-          {
-            "timestamp": 1791406187776,
-            "currentSupply": 413772000000000,
-            "burnedTokens": 6918000000000
-          },
-          {
-            "timestamp": 1791407504769,
-            "currentSupply": 413772000000000,
-            "burnedTokens": 6918000000000
-          },
-          {
-            "timestamp": 1791409116451,
+            "timestamp": 1791422934061,
             "currentSupply": 413772000000000,
             "burnedTokens": 6918000000000
           }
@@ -2793,55 +595,10 @@
       "BNT": {
         "symbol": "BNT",
         "initialSupply": 100000000,
-        "firstSeenAt": 1790783837890,
+        "firstSeenAt": 1791422934061,
         "snapshots": [
           {
-            "timestamp": 1790783837890,
-            "currentSupply": 99304566,
-            "burnedTokens": 695434
-          },
-          {
-            "timestamp": 1790784644712,
-            "currentSupply": 99304566,
-            "burnedTokens": 695434
-          },
-          {
-            "timestamp": 1790802771496,
-            "currentSupply": 99304566,
-            "burnedTokens": 695434
-          },
-          {
-            "timestamp": 1791400701306,
-            "currentSupply": 99304566,
-            "burnedTokens": 695434
-          },
-          {
-            "timestamp": 1791401983115,
-            "currentSupply": 99304566,
-            "burnedTokens": 695434
-          },
-          {
-            "timestamp": 1791403731991,
-            "currentSupply": 99304566,
-            "burnedTokens": 695434
-          },
-          {
-            "timestamp": 1791405178928,
-            "currentSupply": 99304566,
-            "burnedTokens": 695434
-          },
-          {
-            "timestamp": 1791406187776,
-            "currentSupply": 99304566,
-            "burnedTokens": 695434
-          },
-          {
-            "timestamp": 1791407504769,
-            "currentSupply": 99304566,
-            "burnedTokens": 695434
-          },
-          {
-            "timestamp": 1791409116451,
+            "timestamp": 1791422934061,
             "currentSupply": 99304566,
             "burnedTokens": 695434
           }
@@ -2850,950 +607,37 @@
       "BONE": {
         "symbol": "BONE",
         "initialSupply": 250000000,
-        "firstSeenAt": 1790783837890,
+        "firstSeenAt": 1791422934061,
         "snapshots": [
           {
-            "timestamp": 1790783837890,
-            "currentSupply": 249987646,
-            "burnedTokens": 12354
-          },
-          {
-            "timestamp": 1790784644712,
-            "currentSupply": 249987646,
-            "burnedTokens": 12354
-          },
-          {
-            "timestamp": 1790802771496,
-            "currentSupply": 249987646,
-            "burnedTokens": 12354
-          },
-          {
-            "timestamp": 1791400701306,
-            "currentSupply": 249987646,
-            "burnedTokens": 12354
-          },
-          {
-            "timestamp": 1791401983115,
-            "currentSupply": 249987646,
-            "burnedTokens": 12354
-          },
-          {
-            "timestamp": 1791403731991,
-            "currentSupply": 249987646,
-            "burnedTokens": 12354
-          },
-          {
-            "timestamp": 1791405178928,
-            "currentSupply": 249987646,
-            "burnedTokens": 12354
-          },
-          {
-            "timestamp": 1791406187776,
-            "currentSupply": 249987646,
-            "burnedTokens": 12354
-          },
-          {
-            "timestamp": 1791407504769,
-            "currentSupply": 249987646,
-            "burnedTokens": 12354
-          },
-          {
-            "timestamp": 1791409116451,
+            "timestamp": 1791422934061,
             "currentSupply": 249987646,
             "burnedTokens": 12354
           }
         ]
       }
     },
-    "monad": {
-      "MON": {
-        "symbol": "MON",
-        "initialSupply": 100000000000,
-        "firstSeenAt": 1790792064976,
-        "snapshots": [
-          {
-            "timestamp": 1790792064976,
-            "currentSupply": 99885400000,
-            "burnedTokens": 114600000
-          },
-          {
-            "timestamp": 1790799842211,
-            "currentSupply": 99746389369,
-            "burnedTokens": 253610631
-          },
-          {
-            "timestamp": 1790802213665,
-            "currentSupply": 99699502526,
-            "burnedTokens": 300497474
-          },
-          {
-            "timestamp": 1790802835695,
-            "currentSupply": 99740378037,
-            "burnedTokens": 259621963
-          },
-          {
-            "timestamp": 1791399904195,
-            "currentSupply": 99855250568,
-            "burnedTokens": 144749432
-          },
-          {
-            "timestamp": 1791400686734,
-            "currentSupply": 99834609499,
-            "burnedTokens": 165390501
-          },
-          {
-            "timestamp": 1791401962261,
-            "currentSupply": 99911003807,
-            "burnedTokens": 88996193
-          },
-          {
-            "timestamp": 1791403721712,
-            "currentSupply": 99877061370,
-            "burnedTokens": 122938630
-          },
-          {
-            "timestamp": 1791405152899,
-            "currentSupply": 99879409564,
-            "burnedTokens": 120590436
-          },
-          {
-            "timestamp": 1791406174293,
-            "currentSupply": 99868564541,
-            "burnedTokens": 131435459
-          },
-          {
-            "timestamp": 1791407489595,
-            "currentSupply": 99873243516,
-            "burnedTokens": 126756484
-          },
-          {
-            "timestamp": 1791409098372,
-            "currentSupply": 99776724906,
-            "burnedTokens": 223275094
-          }
-        ]
-      },
-      "KURU": {
-        "symbol": "KURU",
-        "initialSupply": 1000000000,
-        "firstSeenAt": 1790792064976,
-        "snapshots": [
-          {
-            "timestamp": 1790792064976,
-            "currentSupply": 974300000,
-            "burnedTokens": 25700000
-          },
-          {
-            "timestamp": 1790799842211,
-            "currentSupply": 5814193,
-            "burnedTokens": 24185807
-          },
-          {
-            "timestamp": 1790802213665,
-            "currentSupply": 5565354,
-            "burnedTokens": 24434646
-          },
-          {
-            "timestamp": 1790802835695,
-            "currentSupply": 5282104,
-            "burnedTokens": 24717896
-          },
-          {
-            "timestamp": 1791399904195,
-            "currentSupply": 5877673,
-            "burnedTokens": 24122327
-          },
-          {
-            "timestamp": 1791400686734,
-            "currentSupply": 5860606,
-            "burnedTokens": 24139394
-          },
-          {
-            "timestamp": 1791401962261,
-            "currentSupply": 5831943,
-            "burnedTokens": 24168057
-          },
-          {
-            "timestamp": 1791403721712,
-            "currentSupply": 5648389,
-            "burnedTokens": 24351611
-          },
-          {
-            "timestamp": 1791405152899,
-            "currentSupply": 5647720,
-            "burnedTokens": 24352280
-          },
-          {
-            "timestamp": 1791406174293,
-            "currentSupply": 5637323,
-            "burnedTokens": 24362677
-          },
-          {
-            "timestamp": 1791407489595,
-            "currentSupply": 5635722,
-            "burnedTokens": 24364278
-          },
-          {
-            "timestamp": 1791409098372,
-            "currentSupply": 5954552,
-            "burnedTokens": 24045448
-          }
-        ]
-      },
-      "sMON": {
-        "symbol": "sMON",
-        "initialSupply": 500000000,
-        "firstSeenAt": 1790792064976,
-        "snapshots": [
-          {
-            "timestamp": 1790792064976,
-            "currentSupply": 489200000,
-            "burnedTokens": 10800000
-          },
-          {
-            "timestamp": 1790799842211,
-            "currentSupply": 77025760,
-            "burnedTokens": 4974240
-          },
-          {
-            "timestamp": 1790802213665,
-            "currentSupply": 77025760,
-            "burnedTokens": 4974240
-          },
-          {
-            "timestamp": 1790802835695,
-            "currentSupply": 77025760,
-            "burnedTokens": 4974240
-          },
-          {
-            "timestamp": 1791399904195,
-            "currentSupply": 66097977,
-            "burnedTokens": 15902023
-          },
-          {
-            "timestamp": 1791400686734,
-            "currentSupply": 66097977,
-            "burnedTokens": 15902023
-          },
-          {
-            "timestamp": 1791401962261,
-            "currentSupply": 66097977,
-            "burnedTokens": 15902023
-          },
-          {
-            "timestamp": 1791403721712,
-            "currentSupply": 66097977,
-            "burnedTokens": 15902023
-          },
-          {
-            "timestamp": 1791405152899,
-            "currentSupply": 66097977,
-            "burnedTokens": 15902023
-          },
-          {
-            "timestamp": 1791406174293,
-            "currentSupply": 66097977,
-            "burnedTokens": 15902023
-          },
-          {
-            "timestamp": 1791407489595,
-            "currentSupply": 66097977,
-            "burnedTokens": 15902023
-          },
-          {
-            "timestamp": 1791409098372,
-            "currentSupply": 66097977,
-            "burnedTokens": 15902023
-          }
-        ]
-      },
-      "aprMON": {
-        "symbol": "aprMON",
-        "initialSupply": 1000000000,
-        "firstSeenAt": 1790792064976,
-        "snapshots": [
-          {
-            "timestamp": 1790792064976,
-            "currentSupply": 988200000,
-            "burnedTokens": 11800000
-          },
-          {
-            "timestamp": 1790799842211,
-            "currentSupply": 22981784,
-            "burnedTokens": 2018216
-          },
-          {
-            "timestamp": 1790802213665,
-            "currentSupply": 22981933,
-            "burnedTokens": 2018067
-          },
-          {
-            "timestamp": 1790802835695,
-            "currentSupply": 22982016,
-            "burnedTokens": 2017984
-          },
-          {
-            "timestamp": 1791399904195,
-            "currentSupply": 18888833,
-            "burnedTokens": 6111167
-          },
-          {
-            "timestamp": 1791400686734,
-            "currentSupply": 18888833,
-            "burnedTokens": 6111167
-          },
-          {
-            "timestamp": 1791401962261,
-            "currentSupply": 18800755,
-            "burnedTokens": 6199245
-          },
-          {
-            "timestamp": 1791403721712,
-            "currentSupply": 18789457,
-            "burnedTokens": 6210543
-          },
-          {
-            "timestamp": 1791405152899,
-            "currentSupply": 18789457,
-            "burnedTokens": 6210543
-          },
-          {
-            "timestamp": 1791406174293,
-            "currentSupply": 18789457,
-            "burnedTokens": 6210543
-          },
-          {
-            "timestamp": 1791407489595,
-            "currentSupply": 18789457,
-            "burnedTokens": 6210543
-          },
-          {
-            "timestamp": 1791409098372,
-            "currentSupply": 18789457,
-            "burnedTokens": 6210543
-          }
-        ]
-      },
-      "gMON": {
-        "symbol": "gMON",
-        "initialSupply": 500000000,
-        "firstSeenAt": 1790792064976,
-        "snapshots": [
-          {
-            "timestamp": 1790792064976,
-            "currentSupply": 496800000,
-            "burnedTokens": 3200000
-          },
-          {
-            "timestamp": 1790799842211,
-            "currentSupply": 32187094,
-            "burnedTokens": 2812906
-          },
-          {
-            "timestamp": 1790802213665,
-            "currentSupply": 32187094,
-            "burnedTokens": 2812906
-          },
-          {
-            "timestamp": 1790802835695,
-            "currentSupply": 32187094,
-            "burnedTokens": 2812906
-          },
-          {
-            "timestamp": 1791399904195,
-            "currentSupply": 30560530,
-            "burnedTokens": 4439470
-          },
-          {
-            "timestamp": 1791400686734,
-            "currentSupply": 30560530,
-            "burnedTokens": 4439470
-          },
-          {
-            "timestamp": 1791401962261,
-            "currentSupply": 30560530,
-            "burnedTokens": 4439470
-          },
-          {
-            "timestamp": 1791403721712,
-            "currentSupply": 30560530,
-            "burnedTokens": 4439470
-          },
-          {
-            "timestamp": 1791405152899,
-            "currentSupply": 30560530,
-            "burnedTokens": 4439470
-          },
-          {
-            "timestamp": 1791406174293,
-            "currentSupply": 30560530,
-            "burnedTokens": 4439470
-          },
-          {
-            "timestamp": 1791407489595,
-            "currentSupply": 30560530,
-            "burnedTokens": 4439470
-          },
-          {
-            "timestamp": 1791409098372,
-            "currentSupply": 30560530,
-            "burnedTokens": 4439470
-          }
-        ]
-      },
-      "BEAN": {
-        "symbol": "BEAN",
-        "initialSupply": 1000000000,
-        "firstSeenAt": 1790792064976,
-        "snapshots": [
-          {
-            "timestamp": 1790792064976,
-            "currentSupply": 956900000,
-            "burnedTokens": 43100000
-          }
-        ]
-      },
-      "CVE": {
-        "symbol": "CVE",
-        "initialSupply": 1000000000,
-        "firstSeenAt": 1790792064976,
-        "snapshots": [
-          {
-            "timestamp": 1790792064976,
-            "currentSupply": 988400000,
-            "burnedTokens": 11600000
-          }
-        ]
-      },
-      "NAD": {
-        "symbol": "NAD",
-        "initialSupply": 10000000000,
-        "firstSeenAt": 1790792064976,
-        "snapshots": [
-          {
-            "timestamp": 1790792064976,
-            "currentSupply": 9565000000,
-            "burnedTokens": 435000000
-          }
-        ]
-      },
-      "FLN": {
-        "symbol": "FLN",
-        "initialSupply": 1000000000,
-        "firstSeenAt": 1790792064976,
-        "snapshots": [
-          {
-            "timestamp": 1790792064976,
-            "currentSupply": 976000000,
-            "burnedTokens": 24000000
-          }
-        ]
-      },
-      "aMonUSDC": {
-        "symbol": "aMonUSDC",
-        "initialSupply": 185000000,
-        "firstSeenAt": 1790799842211,
-        "snapshots": [
-          {
-            "timestamp": 1790799842211,
-            "currentSupply": 169906322,
-            "burnedTokens": 15093678
-          },
-          {
-            "timestamp": 1790802213665,
-            "currentSupply": 169940082,
-            "burnedTokens": 15059918
-          },
-          {
-            "timestamp": 1790802835695,
-            "currentSupply": 169876538,
-            "burnedTokens": 15123462
-          },
-          {
-            "timestamp": 1791399904195,
-            "currentSupply": 173707131,
-            "burnedTokens": 11292869
-          },
-          {
-            "timestamp": 1791400686734,
-            "currentSupply": 173887720,
-            "burnedTokens": 11112280
-          },
-          {
-            "timestamp": 1791401962261,
-            "currentSupply": 173701540,
-            "burnedTokens": 11298460
-          },
-          {
-            "timestamp": 1791403721712,
-            "currentSupply": 174452088,
-            "burnedTokens": 10547912
-          },
-          {
-            "timestamp": 1791405152899,
-            "currentSupply": 174206733,
-            "burnedTokens": 10793267
-          },
-          {
-            "timestamp": 1791406174293,
-            "currentSupply": 173996781,
-            "burnedTokens": 11003219
-          },
-          {
-            "timestamp": 1791407489595,
-            "currentSupply": 174173564,
-            "burnedTokens": 10826436
-          },
-          {
-            "timestamp": 1791409098372,
-            "currentSupply": 174204143,
-            "burnedTokens": 10795857
-          }
-        ]
-      },
-      "UNIV4": {
-        "symbol": "UNIV4",
-        "initialSupply": 200000000,
-        "firstSeenAt": 1790799842211,
-        "snapshots": [
-          {
-            "timestamp": 1790799842211,
-            "currentSupply": 177481377,
-            "burnedTokens": 22518623
-          },
-          {
-            "timestamp": 1790802213665,
-            "currentSupply": 178882592,
-            "burnedTokens": 21117408
-          },
-          {
-            "timestamp": 1790802835695,
-            "currentSupply": 176866901,
-            "burnedTokens": 23133099
-          },
-          {
-            "timestamp": 1791399904195,
-            "currentSupply": 191964397,
-            "burnedTokens": 8035603
-          },
-          {
-            "timestamp": 1791400686734,
-            "currentSupply": 192526709,
-            "burnedTokens": 7473291
-          },
-          {
-            "timestamp": 1791401962261,
-            "currentSupply": 192795834,
-            "burnedTokens": 7204166
-          },
-          {
-            "timestamp": 1791403721712,
-            "currentSupply": 192870413,
-            "burnedTokens": 7129587
-          },
-          {
-            "timestamp": 1791405152899,
-            "currentSupply": 192750455,
-            "burnedTokens": 7249545
-          },
-          {
-            "timestamp": 1791406174293,
-            "currentSupply": 194415413,
-            "burnedTokens": 5584587
-          },
-          {
-            "timestamp": 1791407489595,
-            "currentSupply": 194388995,
-            "burnedTokens": 5611005
-          },
-          {
-            "timestamp": 1791409098372,
-            "currentSupply": 195640159,
-            "burnedTokens": 4359841
-          }
-        ]
-      },
-      "shMON": {
-        "symbol": "shMON",
-        "initialSupply": 215000000,
-        "firstSeenAt": 1790799842211,
-        "snapshots": [
-          {
-            "timestamp": 1790799842211,
-            "currentSupply": 205562209,
-            "burnedTokens": 9437791
-          },
-          {
-            "timestamp": 1790802213665,
-            "currentSupply": 205562209,
-            "burnedTokens": 9437791
-          },
-          {
-            "timestamp": 1790802835695,
-            "currentSupply": 205562209,
-            "burnedTokens": 9437791
-          },
-          {
-            "timestamp": 1791399904195,
-            "currentSupply": 186412135,
-            "burnedTokens": 28587865
-          },
-          {
-            "timestamp": 1791400686734,
-            "currentSupply": 186412135,
-            "burnedTokens": 28587865
-          },
-          {
-            "timestamp": 1791401962261,
-            "currentSupply": 186412210,
-            "burnedTokens": 28587790
-          },
-          {
-            "timestamp": 1791403721712,
-            "currentSupply": 186412575,
-            "burnedTokens": 28587425
-          },
-          {
-            "timestamp": 1791405152899,
-            "currentSupply": 186412575,
-            "burnedTokens": 28587425
-          },
-          {
-            "timestamp": 1791406174293,
-            "currentSupply": 186412633,
-            "burnedTokens": 28587367
-          },
-          {
-            "timestamp": 1791407489595,
-            "currentSupply": 186412633,
-            "burnedTokens": 28587367
-          },
-          {
-            "timestamp": 1791409098372,
-            "currentSupply": 186412918,
-            "burnedTokens": 28587082
-          }
-        ]
-      },
-      "nUSDC": {
-        "symbol": "nUSDC",
-        "initialSupply": 5000000,
-        "firstSeenAt": 1790799842211,
-        "snapshots": [
-          {
-            "timestamp": 1790799842211,
-            "currentSupply": 2917749,
-            "burnedTokens": 2082251
-          },
-          {
-            "timestamp": 1790802213665,
-            "currentSupply": 2910233,
-            "burnedTokens": 2089767
-          },
-          {
-            "timestamp": 1790802835695,
-            "currentSupply": 2910552,
-            "burnedTokens": 2089448
-          },
-          {
-            "timestamp": 1791399904195,
-            "currentSupply": 5613902,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1791400686734,
-            "currentSupply": 5646402,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1791401962261,
-            "currentSupply": 5646409,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1791403721712,
-            "currentSupply": 5645794,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1791405152899,
-            "currentSupply": 5536678,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1791406174293,
-            "currentSupply": 5536684,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1791407489595,
-            "currentSupply": 5536673,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1791409098372,
-            "currentSupply": 5536509,
-            "burnedTokens": 0
-          }
-        ]
-      },
-      "hMON": {
-        "symbol": "hMON",
-        "initialSupply": 25000000,
-        "firstSeenAt": 1790799842211,
-        "snapshots": [
-          {
-            "timestamp": 1790799842211,
-            "currentSupply": 23001440,
-            "burnedTokens": 1998560
-          },
-          {
-            "timestamp": 1790802213665,
-            "currentSupply": 23041466,
-            "burnedTokens": 1958534
-          },
-          {
-            "timestamp": 1790802835695,
-            "currentSupply": 23041476,
-            "burnedTokens": 1958524
-          },
-          {
-            "timestamp": 1791399904195,
-            "currentSupply": 16980610,
-            "burnedTokens": 8019390
-          },
-          {
-            "timestamp": 1791400686734,
-            "currentSupply": 16981512,
-            "burnedTokens": 8018488
-          },
-          {
-            "timestamp": 1791401962261,
-            "currentSupply": 16981534,
-            "burnedTokens": 8018466
-          },
-          {
-            "timestamp": 1791403721712,
-            "currentSupply": 16981580,
-            "burnedTokens": 8018420
-          },
-          {
-            "timestamp": 1791405152899,
-            "currentSupply": 16981618,
-            "burnedTokens": 8018382
-          },
-          {
-            "timestamp": 1791406174293,
-            "currentSupply": 16981648,
-            "burnedTokens": 8018352
-          },
-          {
-            "timestamp": 1791407489595,
-            "currentSupply": 16981845,
-            "burnedTokens": 8018155
-          },
-          {
-            "timestamp": 1791409098372,
-            "currentSupply": 16981921,
-            "burnedTokens": 8018079
-          }
-        ]
-      },
-      "NADLP": {
-        "symbol": "NADLP",
-        "initialSupply": 10000000,
-        "firstSeenAt": 1790799842211,
-        "snapshots": [
-          {
-            "timestamp": 1790799842211,
-            "currentSupply": 6855197,
-            "burnedTokens": 3144803
-          },
-          {
-            "timestamp": 1790802213665,
-            "currentSupply": 6855387,
-            "burnedTokens": 3144613
-          },
-          {
-            "timestamp": 1790802835695,
-            "currentSupply": 6855547,
-            "burnedTokens": 3144453
-          },
-          {
-            "timestamp": 1791399904195,
-            "currentSupply": 6813816,
-            "burnedTokens": 3186184
-          },
-          {
-            "timestamp": 1791400686734,
-            "currentSupply": 6813805,
-            "burnedTokens": 3186195
-          },
-          {
-            "timestamp": 1791401962261,
-            "currentSupply": 6813995,
-            "burnedTokens": 3186005
-          },
-          {
-            "timestamp": 1791403721712,
-            "currentSupply": 6814122,
-            "burnedTokens": 3185878
-          },
-          {
-            "timestamp": 1791405152899,
-            "currentSupply": 6814246,
-            "burnedTokens": 3185754
-          },
-          {
-            "timestamp": 1791406174293,
-            "currentSupply": 6814304,
-            "burnedTokens": 3185696
-          },
-          {
-            "timestamp": 1791407489595,
-            "currentSupply": 6814503,
-            "burnedTokens": 3185497
-          },
-          {
-            "timestamp": 1791409098372,
-            "currentSupply": 6814667,
-            "burnedTokens": 3185333
-          }
-        ]
-      },
-      "CAKE": {
-        "symbol": "CAKE",
-        "initialSupply": 5000000,
-        "firstSeenAt": 1790799842211,
-        "snapshots": [
-          {
-            "timestamp": 1790799842211,
-            "currentSupply": 32678,
-            "burnedTokens": 4967322
-          },
-          {
-            "timestamp": 1790802213665,
-            "currentSupply": 32678,
-            "burnedTokens": 4967322
-          },
-          {
-            "timestamp": 1790802835695,
-            "currentSupply": 32678,
-            "burnedTokens": 4967322
-          },
-          {
-            "timestamp": 1791399904195,
-            "currentSupply": 39736,
-            "burnedTokens": 4960264
-          },
-          {
-            "timestamp": 1791400686734,
-            "currentSupply": 39736,
-            "burnedTokens": 4960264
-          },
-          {
-            "timestamp": 1791401962261,
-            "currentSupply": 39736,
-            "burnedTokens": 4960264
-          },
-          {
-            "timestamp": 1791403721712,
-            "currentSupply": 39736,
-            "burnedTokens": 4960264
-          },
-          {
-            "timestamp": 1791405152899,
-            "currentSupply": 39736,
-            "burnedTokens": 4960264
-          },
-          {
-            "timestamp": 1791406174293,
-            "currentSupply": 39736,
-            "burnedTokens": 4960264
-          },
-          {
-            "timestamp": 1791407489595,
-            "currentSupply": 39736,
-            "burnedTokens": 4960264
-          },
-          {
-            "timestamp": 1791409098372,
-            "currentSupply": 39736,
-            "burnedTokens": 4960264
-          }
-        ]
-      }
-    },
+    "monad": {},
     "base": {
       "AERO": {
         "symbol": "AERO",
         "mintOrCoinType": "0x940181a94A35A4569E4529A3CDfB74e38FD98631",
         "initialSupply": 500000000,
-        "firstSeenAt": 1791393027663,
+        "firstSeenAt": 1791422937503,
         "snapshots": [
           {
-            "timestamp": 1791393027663,
-            "currentSupply": 1992844978,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1791393396830,
-            "currentSupply": 1992844978,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1791393409532,
+            "timestamp": 1791422937503,
             "currentSupply": 1992800000,
             "burnedTokens": 0
           },
           {
-            "timestamp": 1791393418591,
-            "currentSupply": 1992844978,
+            "timestamp": 1791422943906,
+            "currentSupply": 1997645621,
             "burnedTokens": 0
           },
           {
-            "timestamp": 1791400164628,
-            "currentSupply": 1992844978,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1791400871995,
-            "currentSupply": 1992844978,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1791401979806,
-            "currentSupply": 1992844978,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1791403728125,
-            "currentSupply": 1992844978,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1791405178533,
-            "currentSupply": 1992844978,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1791405179693,
+            "timestamp": 1791422944718,
             "currentSupply": 1992800000,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1791406190111,
-            "currentSupply": 1992844978,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1791407506952,
-            "currentSupply": 1992844978,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1791409116388,
-            "currentSupply": 1992844978,
             "burnedTokens": 0
           }
         ]
@@ -3802,57 +646,12 @@
         "symbol": "VIRTUAL",
         "mintOrCoinType": "0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
         "initialSupply": 1000000000,
-        "firstSeenAt": 1791393027663,
+        "firstSeenAt": 1791422937503,
         "snapshots": [
           {
-            "timestamp": 1791393027663,
+            "timestamp": 1791422937503,
             "currentSupply": 497034863,
-            "burnedTokens": 515465140
-          },
-          {
-            "timestamp": 1791393396830,
-            "currentSupply": 497034863,
-            "burnedTokens": 515465140
-          },
-          {
-            "timestamp": 1791400164628,
-            "currentSupply": 497034863,
-            "burnedTokens": 515465140
-          },
-          {
-            "timestamp": 1791400871995,
-            "currentSupply": 497034863,
-            "burnedTokens": 515465140
-          },
-          {
-            "timestamp": 1791401979806,
-            "currentSupply": 497034863,
-            "burnedTokens": 515465140
-          },
-          {
-            "timestamp": 1791403728125,
-            "currentSupply": 497034863,
-            "burnedTokens": 515465140
-          },
-          {
-            "timestamp": 1791405178533,
-            "currentSupply": 497034863,
-            "burnedTokens": 515465140
-          },
-          {
-            "timestamp": 1791406190111,
-            "currentSupply": 497034863,
-            "burnedTokens": 515465140
-          },
-          {
-            "timestamp": 1791407506952,
-            "currentSupply": 497034863,
-            "burnedTokens": 515465140
-          },
-          {
-            "timestamp": 1791409116388,
-            "currentSupply": 497034863,
-            "burnedTokens": 515465140
+            "burnedTokens": 515465137
           }
         ]
       },
@@ -3860,72 +659,22 @@
         "symbol": "WELL",
         "mintOrCoinType": "0xA88594D404727625A9437C3f886C7643872296AE",
         "initialSupply": 5000000000,
-        "firstSeenAt": 1791393027663,
+        "firstSeenAt": 1791422937503,
         "snapshots": [
           {
-            "timestamp": 1791393027663,
-            "currentSupply": 4537051853,
-            "burnedTokens": 464748147
-          },
-          {
-            "timestamp": 1791393396830,
-            "currentSupply": 4537051853,
-            "burnedTokens": 464748147
-          },
-          {
-            "timestamp": 1791393409532,
+            "timestamp": 1791422937503,
             "currentSupply": 4998200000,
             "burnedTokens": 3600000
           },
           {
-            "timestamp": 1791393418591,
+            "timestamp": 1791422943906,
             "currentSupply": 4537051853,
             "burnedTokens": 464748147
           },
           {
-            "timestamp": 1791400164628,
-            "currentSupply": 4537051853,
-            "burnedTokens": 464748147
-          },
-          {
-            "timestamp": 1791400871995,
-            "currentSupply": 4537051853,
-            "burnedTokens": 464748147
-          },
-          {
-            "timestamp": 1791401979806,
-            "currentSupply": 4537051853,
-            "burnedTokens": 464748147
-          },
-          {
-            "timestamp": 1791403728125,
-            "currentSupply": 4537051853,
-            "burnedTokens": 464748147
-          },
-          {
-            "timestamp": 1791405178533,
-            "currentSupply": 4537051853,
-            "burnedTokens": 464748147
-          },
-          {
-            "timestamp": 1791405179693,
+            "timestamp": 1791422944718,
             "currentSupply": 4998200000,
             "burnedTokens": 3600000
-          },
-          {
-            "timestamp": 1791406190111,
-            "currentSupply": 4537051853,
-            "burnedTokens": 464748147
-          },
-          {
-            "timestamp": 1791407506952,
-            "currentSupply": 4537051853,
-            "burnedTokens": 464748147
-          },
-          {
-            "timestamp": 1791409116388,
-            "currentSupply": 4537051853,
-            "burnedTokens": 464748147
           }
         ]
       },
@@ -3933,55 +682,10 @@
         "symbol": "DEGEN",
         "mintOrCoinType": "0x4ed4E862860beD51a9570b96d89aF5E1B0Efefed",
         "initialSupply": 36965935954,
-        "firstSeenAt": 1791393027663,
+        "firstSeenAt": 1791422937503,
         "snapshots": [
           {
-            "timestamp": 1791393027663,
-            "currentSupply": 36043112049,
-            "burnedTokens": 923046905
-          },
-          {
-            "timestamp": 1791393396830,
-            "currentSupply": 36043112049,
-            "burnedTokens": 923046905
-          },
-          {
-            "timestamp": 1791400164628,
-            "currentSupply": 36043112049,
-            "burnedTokens": 923046905
-          },
-          {
-            "timestamp": 1791400871995,
-            "currentSupply": 36043112049,
-            "burnedTokens": 923046905
-          },
-          {
-            "timestamp": 1791401979806,
-            "currentSupply": 36043112049,
-            "burnedTokens": 923046905
-          },
-          {
-            "timestamp": 1791403728125,
-            "currentSupply": 36043112049,
-            "burnedTokens": 923046905
-          },
-          {
-            "timestamp": 1791405178533,
-            "currentSupply": 36043112049,
-            "burnedTokens": 923046905
-          },
-          {
-            "timestamp": 1791406190111,
-            "currentSupply": 36043112049,
-            "burnedTokens": 923046905
-          },
-          {
-            "timestamp": 1791407506952,
-            "currentSupply": 36043112049,
-            "burnedTokens": 923046905
-          },
-          {
-            "timestamp": 1791409116388,
+            "timestamp": 1791422937503,
             "currentSupply": 36043112049,
             "burnedTokens": 923046905
           }
@@ -3991,55 +695,10 @@
         "symbol": "BRETT",
         "mintOrCoinType": "0x532f27101965dd16442E59d40670FaF5eBB142E4",
         "initialSupply": 10000000000,
-        "firstSeenAt": 1791393027663,
+        "firstSeenAt": 1791422937503,
         "snapshots": [
           {
-            "timestamp": 1791393027663,
-            "currentSupply": 9910000000,
-            "burnedTokens": 180000000
-          },
-          {
-            "timestamp": 1791393396830,
-            "currentSupply": 9910000000,
-            "burnedTokens": 180000000
-          },
-          {
-            "timestamp": 1791400164628,
-            "currentSupply": 9910000000,
-            "burnedTokens": 180000000
-          },
-          {
-            "timestamp": 1791400871995,
-            "currentSupply": 9910000000,
-            "burnedTokens": 180000000
-          },
-          {
-            "timestamp": 1791401979806,
-            "currentSupply": 9910000000,
-            "burnedTokens": 180000000
-          },
-          {
-            "timestamp": 1791403728125,
-            "currentSupply": 9910000000,
-            "burnedTokens": 180000000
-          },
-          {
-            "timestamp": 1791405178533,
-            "currentSupply": 9910000000,
-            "burnedTokens": 180000000
-          },
-          {
-            "timestamp": 1791406190111,
-            "currentSupply": 9910000000,
-            "burnedTokens": 180000000
-          },
-          {
-            "timestamp": 1791407506952,
-            "currentSupply": 9910000000,
-            "burnedTokens": 180000000
-          },
-          {
-            "timestamp": 1791409116388,
+            "timestamp": 1791422937503,
             "currentSupply": 9910000000,
             "burnedTokens": 180000000
           }
@@ -4049,55 +708,10 @@
         "symbol": "SEAM",
         "mintOrCoinType": "0x1C7a48332d21c931754b202F4e221872b3309aC0",
         "initialSupply": 100000000,
-        "firstSeenAt": 1791393027663,
+        "firstSeenAt": 1791422937503,
         "snapshots": [
           {
-            "timestamp": 1791393027663,
-            "currentSupply": 99850000,
-            "burnedTokens": 300000
-          },
-          {
-            "timestamp": 1791393396830,
-            "currentSupply": 99850000,
-            "burnedTokens": 300000
-          },
-          {
-            "timestamp": 1791400164628,
-            "currentSupply": 99850000,
-            "burnedTokens": 300000
-          },
-          {
-            "timestamp": 1791400871995,
-            "currentSupply": 99850000,
-            "burnedTokens": 300000
-          },
-          {
-            "timestamp": 1791401979806,
-            "currentSupply": 99850000,
-            "burnedTokens": 300000
-          },
-          {
-            "timestamp": 1791403728125,
-            "currentSupply": 99850000,
-            "burnedTokens": 300000
-          },
-          {
-            "timestamp": 1791405178533,
-            "currentSupply": 99850000,
-            "burnedTokens": 300000
-          },
-          {
-            "timestamp": 1791406190111,
-            "currentSupply": 99850000,
-            "burnedTokens": 300000
-          },
-          {
-            "timestamp": 1791407506952,
-            "currentSupply": 99850000,
-            "burnedTokens": 300000
-          },
-          {
-            "timestamp": 1791409116388,
+            "timestamp": 1791422937503,
             "currentSupply": 99850000,
             "burnedTokens": 300000
           }
@@ -4107,55 +721,10 @@
         "symbol": "EXTRA",
         "mintOrCoinType": "0x26498a44cd62137bc39031d2797e59c162cfd35c",
         "initialSupply": 1000000000,
-        "firstSeenAt": 1791393027663,
+        "firstSeenAt": 1791422937503,
         "snapshots": [
           {
-            "timestamp": 1791393027663,
-            "currentSupply": 982000000,
-            "burnedTokens": 36000000
-          },
-          {
-            "timestamp": 1791393396830,
-            "currentSupply": 982000000,
-            "burnedTokens": 36000000
-          },
-          {
-            "timestamp": 1791400164628,
-            "currentSupply": 982000000,
-            "burnedTokens": 36000000
-          },
-          {
-            "timestamp": 1791400871995,
-            "currentSupply": 982000000,
-            "burnedTokens": 36000000
-          },
-          {
-            "timestamp": 1791401979806,
-            "currentSupply": 982000000,
-            "burnedTokens": 36000000
-          },
-          {
-            "timestamp": 1791403728125,
-            "currentSupply": 982000000,
-            "burnedTokens": 36000000
-          },
-          {
-            "timestamp": 1791405178533,
-            "currentSupply": 982000000,
-            "burnedTokens": 36000000
-          },
-          {
-            "timestamp": 1791406190111,
-            "currentSupply": 982000000,
-            "burnedTokens": 36000000
-          },
-          {
-            "timestamp": 1791407506952,
-            "currentSupply": 982000000,
-            "burnedTokens": 36000000
-          },
-          {
-            "timestamp": 1791409116388,
+            "timestamp": 1791422937503,
             "currentSupply": 982000000,
             "burnedTokens": 36000000
           }
@@ -4165,55 +734,10 @@
         "symbol": "MORPHO",
         "mintOrCoinType": "0xBAa5CC21fd487B8Fcc2F632f3F4E8D37262a0842",
         "initialSupply": 1000000000,
-        "firstSeenAt": 1791393027663,
+        "firstSeenAt": 1791422937503,
         "snapshots": [
           {
-            "timestamp": 1791393027663,
-            "currentSupply": 999920000,
-            "burnedTokens": 160000
-          },
-          {
-            "timestamp": 1791393396830,
-            "currentSupply": 999920000,
-            "burnedTokens": 160000
-          },
-          {
-            "timestamp": 1791400164628,
-            "currentSupply": 999920000,
-            "burnedTokens": 160000
-          },
-          {
-            "timestamp": 1791400871995,
-            "currentSupply": 999920000,
-            "burnedTokens": 160000
-          },
-          {
-            "timestamp": 1791401979806,
-            "currentSupply": 999920000,
-            "burnedTokens": 160000
-          },
-          {
-            "timestamp": 1791403728125,
-            "currentSupply": 999920000,
-            "burnedTokens": 160000
-          },
-          {
-            "timestamp": 1791405178533,
-            "currentSupply": 999920000,
-            "burnedTokens": 160000
-          },
-          {
-            "timestamp": 1791406190111,
-            "currentSupply": 999920000,
-            "burnedTokens": 160000
-          },
-          {
-            "timestamp": 1791407506952,
-            "currentSupply": 999920000,
-            "burnedTokens": 160000
-          },
-          {
-            "timestamp": 1791409116388,
+            "timestamp": 1791422937503,
             "currentSupply": 999920000,
             "burnedTokens": 160000
           }
@@ -4223,55 +747,10 @@
         "symbol": "TOSHI",
         "mintOrCoinType": "0xAC1Bd2486aAf3B5C0fc3Fd868558b082a531B2B4",
         "initialSupply": 420690000000,
-        "firstSeenAt": 1791393027663,
+        "firstSeenAt": 1791422937503,
         "snapshots": [
           {
-            "timestamp": 1791393027663,
-            "currentSupply": 420690000000,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1791393396830,
-            "currentSupply": 420690000000,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1791400164628,
-            "currentSupply": 420690000000,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1791400871995,
-            "currentSupply": 420690000000,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1791401979806,
-            "currentSupply": 420690000000,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1791403728125,
-            "currentSupply": 420690000000,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1791405178533,
-            "currentSupply": 420690000000,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1791406190111,
-            "currentSupply": 420690000000,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1791407506952,
-            "currentSupply": 420690000000,
-            "burnedTokens": 0
-          },
-          {
-            "timestamp": 1791409116388,
+            "timestamp": 1791422937503,
             "currentSupply": 420690000000,
             "burnedTokens": 0
           }
@@ -4281,55 +760,10 @@
         "symbol": "CLANKER",
         "mintOrCoinType": "0x1bc0c42215582d5A085795f4baDbaC3ff36d1Bcb",
         "initialSupply": 1000000,
-        "firstSeenAt": 1791393027663,
+        "firstSeenAt": 1791422937503,
         "snapshots": [
           {
-            "timestamp": 1791393027663,
-            "currentSupply": 994500,
-            "burnedTokens": 11000
-          },
-          {
-            "timestamp": 1791393396830,
-            "currentSupply": 994500,
-            "burnedTokens": 11000
-          },
-          {
-            "timestamp": 1791400164628,
-            "currentSupply": 994500,
-            "burnedTokens": 11000
-          },
-          {
-            "timestamp": 1791400871995,
-            "currentSupply": 994500,
-            "burnedTokens": 11000
-          },
-          {
-            "timestamp": 1791401979806,
-            "currentSupply": 994500,
-            "burnedTokens": 11000
-          },
-          {
-            "timestamp": 1791403728125,
-            "currentSupply": 994500,
-            "burnedTokens": 11000
-          },
-          {
-            "timestamp": 1791405178533,
-            "currentSupply": 994500,
-            "burnedTokens": 11000
-          },
-          {
-            "timestamp": 1791406190111,
-            "currentSupply": 994500,
-            "burnedTokens": 11000
-          },
-          {
-            "timestamp": 1791407506952,
-            "currentSupply": 994500,
-            "burnedTokens": 11000
-          },
-          {
-            "timestamp": 1791409116388,
+            "timestamp": 1791422937503,
             "currentSupply": 994500,
             "burnedTokens": 11000
           }
@@ -4339,55 +773,10 @@
         "symbol": "HIGHER",
         "mintOrCoinType": "0x0578d8A44db98B23BF096A382e016e29a5Ce0ffe",
         "initialSupply": 1000000000,
-        "firstSeenAt": 1791393027663,
+        "firstSeenAt": 1791422937503,
         "snapshots": [
           {
-            "timestamp": 1791393027663,
-            "currentSupply": 998400000,
-            "burnedTokens": 3200000
-          },
-          {
-            "timestamp": 1791393396830,
-            "currentSupply": 998400000,
-            "burnedTokens": 3200000
-          },
-          {
-            "timestamp": 1791400164628,
-            "currentSupply": 998400000,
-            "burnedTokens": 3200000
-          },
-          {
-            "timestamp": 1791400871995,
-            "currentSupply": 998400000,
-            "burnedTokens": 3200000
-          },
-          {
-            "timestamp": 1791401979806,
-            "currentSupply": 998400000,
-            "burnedTokens": 3200000
-          },
-          {
-            "timestamp": 1791403728125,
-            "currentSupply": 998400000,
-            "burnedTokens": 3200000
-          },
-          {
-            "timestamp": 1791405178533,
-            "currentSupply": 998400000,
-            "burnedTokens": 3200000
-          },
-          {
-            "timestamp": 1791406190111,
-            "currentSupply": 998400000,
-            "burnedTokens": 3200000
-          },
-          {
-            "timestamp": 1791407506952,
-            "currentSupply": 998400000,
-            "burnedTokens": 3200000
-          },
-          {
-            "timestamp": 1791409116388,
+            "timestamp": 1791422937503,
             "currentSupply": 998400000,
             "burnedTokens": 3200000
           }
@@ -4397,55 +786,10 @@
         "symbol": "MIGGLES",
         "mintOrCoinType": "0xBbcA5314a34b281f6927B5eD6489370783DcfF2B",
         "initialSupply": 1000000000,
-        "firstSeenAt": 1791393027663,
+        "firstSeenAt": 1791422937503,
         "snapshots": [
           {
-            "timestamp": 1791393027663,
-            "currentSupply": 998200000,
-            "burnedTokens": 3600000
-          },
-          {
-            "timestamp": 1791393396830,
-            "currentSupply": 998200000,
-            "burnedTokens": 3600000
-          },
-          {
-            "timestamp": 1791400164628,
-            "currentSupply": 998200000,
-            "burnedTokens": 3600000
-          },
-          {
-            "timestamp": 1791400871995,
-            "currentSupply": 998200000,
-            "burnedTokens": 3600000
-          },
-          {
-            "timestamp": 1791401979806,
-            "currentSupply": 998200000,
-            "burnedTokens": 3600000
-          },
-          {
-            "timestamp": 1791403728125,
-            "currentSupply": 998200000,
-            "burnedTokens": 3600000
-          },
-          {
-            "timestamp": 1791405178533,
-            "currentSupply": 998200000,
-            "burnedTokens": 3600000
-          },
-          {
-            "timestamp": 1791406190111,
-            "currentSupply": 998200000,
-            "burnedTokens": 3600000
-          },
-          {
-            "timestamp": 1791407506952,
-            "currentSupply": 998200000,
-            "burnedTokens": 3600000
-          },
-          {
-            "timestamp": 1791409116388,
+            "timestamp": 1791422937503,
             "currentSupply": 998200000,
             "burnedTokens": 3600000
           }
@@ -4455,55 +799,10 @@
         "symbol": "AVNT",
         "mintOrCoinType": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
         "initialSupply": 100000000,
-        "firstSeenAt": 1791393027663,
+        "firstSeenAt": 1791422937503,
         "snapshots": [
           {
-            "timestamp": 1791393027663,
-            "currentSupply": 99950000,
-            "burnedTokens": 100000
-          },
-          {
-            "timestamp": 1791393396830,
-            "currentSupply": 99950000,
-            "burnedTokens": 100000
-          },
-          {
-            "timestamp": 1791400164628,
-            "currentSupply": 99950000,
-            "burnedTokens": 100000
-          },
-          {
-            "timestamp": 1791400871995,
-            "currentSupply": 99950000,
-            "burnedTokens": 100000
-          },
-          {
-            "timestamp": 1791401979806,
-            "currentSupply": 99950000,
-            "burnedTokens": 100000
-          },
-          {
-            "timestamp": 1791403728125,
-            "currentSupply": 99950000,
-            "burnedTokens": 100000
-          },
-          {
-            "timestamp": 1791405178533,
-            "currentSupply": 99950000,
-            "burnedTokens": 100000
-          },
-          {
-            "timestamp": 1791406190111,
-            "currentSupply": 99950000,
-            "burnedTokens": 100000
-          },
-          {
-            "timestamp": 1791407506952,
-            "currentSupply": 99950000,
-            "burnedTokens": 100000
-          },
-          {
-            "timestamp": 1791409116388,
+            "timestamp": 1791422937503,
             "currentSupply": 99950000,
             "burnedTokens": 100000
           }
@@ -4513,55 +812,10 @@
         "symbol": "ALB",
         "mintOrCoinType": "0x1cd4f40f2526cf572390be4dfad503d2e95f6ef2",
         "initialSupply": 540000000,
-        "firstSeenAt": 1791393027663,
+        "firstSeenAt": 1791422937503,
         "snapshots": [
           {
-            "timestamp": 1791393027663,
-            "currentSupply": 512000000,
-            "burnedTokens": 56000000
-          },
-          {
-            "timestamp": 1791393396830,
-            "currentSupply": 512000000,
-            "burnedTokens": 56000000
-          },
-          {
-            "timestamp": 1791400164628,
-            "currentSupply": 512000000,
-            "burnedTokens": 56000000
-          },
-          {
-            "timestamp": 1791400871995,
-            "currentSupply": 512000000,
-            "burnedTokens": 56000000
-          },
-          {
-            "timestamp": 1791401979806,
-            "currentSupply": 512000000,
-            "burnedTokens": 56000000
-          },
-          {
-            "timestamp": 1791403728125,
-            "currentSupply": 512000000,
-            "burnedTokens": 56000000
-          },
-          {
-            "timestamp": 1791405178533,
-            "currentSupply": 512000000,
-            "burnedTokens": 56000000
-          },
-          {
-            "timestamp": 1791406190111,
-            "currentSupply": 512000000,
-            "burnedTokens": 56000000
-          },
-          {
-            "timestamp": 1791407506952,
-            "currentSupply": 512000000,
-            "burnedTokens": 56000000
-          },
-          {
-            "timestamp": 1791409116388,
+            "timestamp": 1791422937503,
             "currentSupply": 512000000,
             "burnedTokens": 56000000
           }
@@ -4571,55 +825,10 @@
         "symbol": "BSWAP",
         "mintOrCoinType": "0x78a087d713be963bf307b18f5ff8122ef9a63ae9",
         "initialSupply": 100000000,
-        "firstSeenAt": 1791393027663,
+        "firstSeenAt": 1791422937503,
         "snapshots": [
           {
-            "timestamp": 1791393027663,
-            "currentSupply": 94000000,
-            "burnedTokens": 12000000
-          },
-          {
-            "timestamp": 1791393396830,
-            "currentSupply": 94000000,
-            "burnedTokens": 12000000
-          },
-          {
-            "timestamp": 1791400164628,
-            "currentSupply": 94000000,
-            "burnedTokens": 12000000
-          },
-          {
-            "timestamp": 1791400871995,
-            "currentSupply": 94000000,
-            "burnedTokens": 12000000
-          },
-          {
-            "timestamp": 1791401979806,
-            "currentSupply": 94000000,
-            "burnedTokens": 12000000
-          },
-          {
-            "timestamp": 1791403728125,
-            "currentSupply": 94000000,
-            "burnedTokens": 12000000
-          },
-          {
-            "timestamp": 1791405178533,
-            "currentSupply": 94000000,
-            "burnedTokens": 12000000
-          },
-          {
-            "timestamp": 1791406190111,
-            "currentSupply": 94000000,
-            "burnedTokens": 12000000
-          },
-          {
-            "timestamp": 1791407506952,
-            "currentSupply": 94000000,
-            "burnedTokens": 12000000
-          },
-          {
-            "timestamp": 1791409116388,
+            "timestamp": 1791422937503,
             "currentSupply": 94000000,
             "burnedTokens": 12000000
           }
@@ -4629,55 +838,10 @@
         "symbol": "UNI",
         "mintOrCoinType": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
         "initialSupply": 1000000000,
-        "firstSeenAt": 1791393027663,
+        "firstSeenAt": 1791422937503,
         "snapshots": [
           {
-            "timestamp": 1791393027663,
-            "currentSupply": 999650000,
-            "burnedTokens": 700000
-          },
-          {
-            "timestamp": 1791393396830,
-            "currentSupply": 999650000,
-            "burnedTokens": 700000
-          },
-          {
-            "timestamp": 1791400164628,
-            "currentSupply": 999650000,
-            "burnedTokens": 700000
-          },
-          {
-            "timestamp": 1791400871995,
-            "currentSupply": 999650000,
-            "burnedTokens": 700000
-          },
-          {
-            "timestamp": 1791401979806,
-            "currentSupply": 999650000,
-            "burnedTokens": 700000
-          },
-          {
-            "timestamp": 1791403728125,
-            "currentSupply": 999650000,
-            "burnedTokens": 700000
-          },
-          {
-            "timestamp": 1791405178533,
-            "currentSupply": 999650000,
-            "burnedTokens": 700000
-          },
-          {
-            "timestamp": 1791406190111,
-            "currentSupply": 999650000,
-            "burnedTokens": 700000
-          },
-          {
-            "timestamp": 1791407506952,
-            "currentSupply": 999650000,
-            "burnedTokens": 700000
-          },
-          {
-            "timestamp": 1791409116388,
+            "timestamp": 1791422937503,
             "currentSupply": 999650000,
             "burnedTokens": 700000
           }
@@ -4687,55 +851,10 @@
         "symbol": "AAVE",
         "mintOrCoinType": "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9",
         "initialSupply": 16000000,
-        "firstSeenAt": 1791393027663,
+        "firstSeenAt": 1791422937503,
         "snapshots": [
           {
-            "timestamp": 1791393027663,
-            "currentSupply": 15120000,
-            "burnedTokens": 1760000
-          },
-          {
-            "timestamp": 1791393396830,
-            "currentSupply": 15120000,
-            "burnedTokens": 1760000
-          },
-          {
-            "timestamp": 1791400164628,
-            "currentSupply": 15120000,
-            "burnedTokens": 1760000
-          },
-          {
-            "timestamp": 1791400871995,
-            "currentSupply": 15120000,
-            "burnedTokens": 1760000
-          },
-          {
-            "timestamp": 1791401979806,
-            "currentSupply": 15120000,
-            "burnedTokens": 1760000
-          },
-          {
-            "timestamp": 1791403728125,
-            "currentSupply": 15120000,
-            "burnedTokens": 1760000
-          },
-          {
-            "timestamp": 1791405178533,
-            "currentSupply": 15120000,
-            "burnedTokens": 1760000
-          },
-          {
-            "timestamp": 1791406190111,
-            "currentSupply": 15120000,
-            "burnedTokens": 1760000
-          },
-          {
-            "timestamp": 1791407506952,
-            "currentSupply": 15120000,
-            "burnedTokens": 1760000
-          },
-          {
-            "timestamp": 1791409116388,
+            "timestamp": 1791422937503,
             "currentSupply": 15120000,
             "burnedTokens": 1760000
           }
@@ -4745,55 +864,10 @@
         "symbol": "CAKE",
         "mintOrCoinType": "0xf59d81cd43f620e722e07f9cb3f6e41b031017a3",
         "initialSupply": 450000000,
-        "firstSeenAt": 1791393027663,
+        "firstSeenAt": 1791422937503,
         "snapshots": [
           {
-            "timestamp": 1791393027663,
-            "currentSupply": 260000000,
-            "burnedTokens": 380000000
-          },
-          {
-            "timestamp": 1791393396830,
-            "currentSupply": 260000000,
-            "burnedTokens": 380000000
-          },
-          {
-            "timestamp": 1791400164628,
-            "currentSupply": 260000000,
-            "burnedTokens": 380000000
-          },
-          {
-            "timestamp": 1791400871995,
-            "currentSupply": 260000000,
-            "burnedTokens": 380000000
-          },
-          {
-            "timestamp": 1791401979806,
-            "currentSupply": 260000000,
-            "burnedTokens": 380000000
-          },
-          {
-            "timestamp": 1791403728125,
-            "currentSupply": 260000000,
-            "burnedTokens": 380000000
-          },
-          {
-            "timestamp": 1791405178533,
-            "currentSupply": 260000000,
-            "burnedTokens": 380000000
-          },
-          {
-            "timestamp": 1791406190111,
-            "currentSupply": 260000000,
-            "burnedTokens": 380000000
-          },
-          {
-            "timestamp": 1791407506952,
-            "currentSupply": 260000000,
-            "burnedTokens": 380000000
-          },
-          {
-            "timestamp": 1791409116388,
+            "timestamp": 1791422937503,
             "currentSupply": 260000000,
             "burnedTokens": 380000000
           }
@@ -4803,55 +877,10 @@
         "symbol": "CRV",
         "mintOrCoinType": "0xD533a949740bb3306d119CC777fa900bA034cd52",
         "initialSupply": 3030303031,
-        "firstSeenAt": 1791393027663,
+        "firstSeenAt": 1791422937503,
         "snapshots": [
           {
-            "timestamp": 1791393027663,
-            "currentSupply": 2215400000,
-            "burnedTokens": 814903031
-          },
-          {
-            "timestamp": 1791393396830,
-            "currentSupply": 2215400000,
-            "burnedTokens": 814903031
-          },
-          {
-            "timestamp": 1791400164628,
-            "currentSupply": 2215400000,
-            "burnedTokens": 814903031
-          },
-          {
-            "timestamp": 1791400871995,
-            "currentSupply": 2215400000,
-            "burnedTokens": 814903031
-          },
-          {
-            "timestamp": 1791401979806,
-            "currentSupply": 2215400000,
-            "burnedTokens": 814903031
-          },
-          {
-            "timestamp": 1791403728125,
-            "currentSupply": 2215400000,
-            "burnedTokens": 814903031
-          },
-          {
-            "timestamp": 1791405178533,
-            "currentSupply": 2215400000,
-            "burnedTokens": 814903031
-          },
-          {
-            "timestamp": 1791406190111,
-            "currentSupply": 2215400000,
-            "burnedTokens": 814903031
-          },
-          {
-            "timestamp": 1791407506952,
-            "currentSupply": 2215400000,
-            "burnedTokens": 814903031
-          },
-          {
-            "timestamp": 1791409116388,
+            "timestamp": 1791422937503,
             "currentSupply": 2215400000,
             "burnedTokens": 814903031
           }
@@ -4861,55 +890,10 @@
         "symbol": "SNX",
         "mintOrCoinType": "0xC011a73ee8576Fb46F5E1c5751cA3B9Fe0af2a6F",
         "initialSupply": 328193104,
-        "firstSeenAt": 1791393027663,
+        "firstSeenAt": 1791422937503,
         "snapshots": [
           {
-            "timestamp": 1791393027663,
-            "currentSupply": 328193104,
-            "burnedTokens": 8100000
-          },
-          {
-            "timestamp": 1791393396830,
-            "currentSupply": 328193104,
-            "burnedTokens": 8100000
-          },
-          {
-            "timestamp": 1791400164628,
-            "currentSupply": 328193104,
-            "burnedTokens": 8100000
-          },
-          {
-            "timestamp": 1791400871995,
-            "currentSupply": 328193104,
-            "burnedTokens": 8100000
-          },
-          {
-            "timestamp": 1791401979806,
-            "currentSupply": 328193104,
-            "burnedTokens": 8100000
-          },
-          {
-            "timestamp": 1791403728125,
-            "currentSupply": 328193104,
-            "burnedTokens": 8100000
-          },
-          {
-            "timestamp": 1791405178533,
-            "currentSupply": 328193104,
-            "burnedTokens": 8100000
-          },
-          {
-            "timestamp": 1791406190111,
-            "currentSupply": 328193104,
-            "burnedTokens": 8100000
-          },
-          {
-            "timestamp": 1791407506952,
-            "currentSupply": 328193104,
-            "burnedTokens": 8100000
-          },
-          {
-            "timestamp": 1791409116388,
+            "timestamp": 1791422937503,
             "currentSupply": 328193104,
             "burnedTokens": 8100000
           }
@@ -4919,55 +903,10 @@
         "symbol": "GNS",
         "mintOrCoinType": "0x18c11FD286C5EC11c3b683Caa813B77f51639807",
         "initialSupply": 30453619,
-        "firstSeenAt": 1791393027663,
+        "firstSeenAt": 1791422937503,
         "snapshots": [
           {
-            "timestamp": 1791393027663,
-            "currentSupply": 30453619,
-            "burnedTokens": 6200000
-          },
-          {
-            "timestamp": 1791393396830,
-            "currentSupply": 30453619,
-            "burnedTokens": 6200000
-          },
-          {
-            "timestamp": 1791400164628,
-            "currentSupply": 30453619,
-            "burnedTokens": 6200000
-          },
-          {
-            "timestamp": 1791400871995,
-            "currentSupply": 30453619,
-            "burnedTokens": 6200000
-          },
-          {
-            "timestamp": 1791401979806,
-            "currentSupply": 30453619,
-            "burnedTokens": 6200000
-          },
-          {
-            "timestamp": 1791403728125,
-            "currentSupply": 30453619,
-            "burnedTokens": 6200000
-          },
-          {
-            "timestamp": 1791405178533,
-            "currentSupply": 30453619,
-            "burnedTokens": 6200000
-          },
-          {
-            "timestamp": 1791406190111,
-            "currentSupply": 30453619,
-            "burnedTokens": 6200000
-          },
-          {
-            "timestamp": 1791407506952,
-            "currentSupply": 30453619,
-            "burnedTokens": 6200000
-          },
-          {
-            "timestamp": 1791409116388,
+            "timestamp": 1791422937503,
             "currentSupply": 30453619,
             "burnedTokens": 6200000
           }
@@ -4977,55 +916,10 @@
         "symbol": "COW",
         "mintOrCoinType": "0xDEf1CA1fb7FBcDC777520aa7f396b4E015F497aB",
         "initialSupply": 1000000000,
-        "firstSeenAt": 1791393027663,
+        "firstSeenAt": 1791422937503,
         "snapshots": [
           {
-            "timestamp": 1791393027663,
-            "currentSupply": 998500000,
-            "burnedTokens": 3000000
-          },
-          {
-            "timestamp": 1791393396830,
-            "currentSupply": 998500000,
-            "burnedTokens": 3000000
-          },
-          {
-            "timestamp": 1791400164628,
-            "currentSupply": 998500000,
-            "burnedTokens": 3000000
-          },
-          {
-            "timestamp": 1791400871995,
-            "currentSupply": 998500000,
-            "burnedTokens": 3000000
-          },
-          {
-            "timestamp": 1791401979806,
-            "currentSupply": 998500000,
-            "burnedTokens": 3000000
-          },
-          {
-            "timestamp": 1791403728125,
-            "currentSupply": 998500000,
-            "burnedTokens": 3000000
-          },
-          {
-            "timestamp": 1791405178533,
-            "currentSupply": 998500000,
-            "burnedTokens": 3000000
-          },
-          {
-            "timestamp": 1791406190111,
-            "currentSupply": 998500000,
-            "burnedTokens": 3000000
-          },
-          {
-            "timestamp": 1791407506952,
-            "currentSupply": 998500000,
-            "burnedTokens": 3000000
-          },
-          {
-            "timestamp": 1791409116388,
+            "timestamp": 1791422937503,
             "currentSupply": 998500000,
             "burnedTokens": 3000000
           }
@@ -5035,55 +929,10 @@
         "symbol": "HYDX",
         "mintOrCoinType": "0x3216063cb4ff0a7cfcb7d7c6ee68087799343058",
         "initialSupply": 100000000,
-        "firstSeenAt": 1791393027663,
+        "firstSeenAt": 1791422937503,
         "snapshots": [
           {
-            "timestamp": 1791393027663,
-            "currentSupply": 99800000,
-            "burnedTokens": 400000
-          },
-          {
-            "timestamp": 1791393396830,
-            "currentSupply": 99800000,
-            "burnedTokens": 400000
-          },
-          {
-            "timestamp": 1791400164628,
-            "currentSupply": 99800000,
-            "burnedTokens": 400000
-          },
-          {
-            "timestamp": 1791400871995,
-            "currentSupply": 99800000,
-            "burnedTokens": 400000
-          },
-          {
-            "timestamp": 1791401979806,
-            "currentSupply": 99800000,
-            "burnedTokens": 400000
-          },
-          {
-            "timestamp": 1791403728125,
-            "currentSupply": 99800000,
-            "burnedTokens": 400000
-          },
-          {
-            "timestamp": 1791405178533,
-            "currentSupply": 99800000,
-            "burnedTokens": 400000
-          },
-          {
-            "timestamp": 1791406190111,
-            "currentSupply": 99800000,
-            "burnedTokens": 400000
-          },
-          {
-            "timestamp": 1791407506952,
-            "currentSupply": 99800000,
-            "burnedTokens": 400000
-          },
-          {
-            "timestamp": 1791409116388,
+            "timestamp": 1791422937503,
             "currentSupply": 99800000,
             "burnedTokens": 400000
           }
@@ -5093,55 +942,10 @@
         "symbol": "BNKR",
         "mintOrCoinType": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
         "initialSupply": 100000000,
-        "firstSeenAt": 1791393027663,
+        "firstSeenAt": 1791422937503,
         "snapshots": [
           {
-            "timestamp": 1791393027663,
-            "currentSupply": 99500000,
-            "burnedTokens": 1000000
-          },
-          {
-            "timestamp": 1791393396830,
-            "currentSupply": 99500000,
-            "burnedTokens": 1000000
-          },
-          {
-            "timestamp": 1791400164628,
-            "currentSupply": 99500000,
-            "burnedTokens": 1000000
-          },
-          {
-            "timestamp": 1791400871995,
-            "currentSupply": 99500000,
-            "burnedTokens": 1000000
-          },
-          {
-            "timestamp": 1791401979806,
-            "currentSupply": 99500000,
-            "burnedTokens": 1000000
-          },
-          {
-            "timestamp": 1791403728125,
-            "currentSupply": 99500000,
-            "burnedTokens": 1000000
-          },
-          {
-            "timestamp": 1791405178533,
-            "currentSupply": 99500000,
-            "burnedTokens": 1000000
-          },
-          {
-            "timestamp": 1791406190111,
-            "currentSupply": 99500000,
-            "burnedTokens": 1000000
-          },
-          {
-            "timestamp": 1791407506952,
-            "currentSupply": 99500000,
-            "burnedTokens": 1000000
-          },
-          {
-            "timestamp": 1791409116388,
+            "timestamp": 1791422937503,
             "currentSupply": 99500000,
             "burnedTokens": 1000000
           }
@@ -5151,55 +955,10 @@
         "symbol": "VVV",
         "mintOrCoinType": "0xacf0047385966a014902c38c82cb79a55428aa3d",
         "initialSupply": 100000000,
-        "firstSeenAt": 1791393027663,
+        "firstSeenAt": 1791422937503,
         "snapshots": [
           {
-            "timestamp": 1791393027663,
-            "currentSupply": 99600000,
-            "burnedTokens": 800000
-          },
-          {
-            "timestamp": 1791393396830,
-            "currentSupply": 99600000,
-            "burnedTokens": 800000
-          },
-          {
-            "timestamp": 1791400164628,
-            "currentSupply": 99600000,
-            "burnedTokens": 800000
-          },
-          {
-            "timestamp": 1791400871995,
-            "currentSupply": 99600000,
-            "burnedTokens": 800000
-          },
-          {
-            "timestamp": 1791401979806,
-            "currentSupply": 99600000,
-            "burnedTokens": 800000
-          },
-          {
-            "timestamp": 1791403728125,
-            "currentSupply": 99600000,
-            "burnedTokens": 800000
-          },
-          {
-            "timestamp": 1791405178533,
-            "currentSupply": 99600000,
-            "burnedTokens": 800000
-          },
-          {
-            "timestamp": 1791406190111,
-            "currentSupply": 99600000,
-            "burnedTokens": 800000
-          },
-          {
-            "timestamp": 1791407506952,
-            "currentSupply": 99600000,
-            "burnedTokens": 800000
-          },
-          {
-            "timestamp": 1791409116388,
+            "timestamp": 1791422937503,
             "currentSupply": 99600000,
             "burnedTokens": 800000
           }

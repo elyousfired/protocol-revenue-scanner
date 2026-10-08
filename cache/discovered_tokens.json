@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1791409116410,
+  "updatedAt": 1791422937529,
   "protocols": {
     "marginfi-lst": {
       "hasToken": false,
@@ -75,7 +75,7 @@
     },
     "aftermath-amm": {
       "hasToken": false,
-      "checkedAt": 1791399906537
+      "checkedAt": 1791422898551
     },
     "ondo-yield-assets": {
       "hasToken": true,
@@ -86,9 +86,9 @@
       "addressChain": "sui",
       "contractAddress": "0xfaba6f8e4a5e8ab82f62fe7c39859fa577269be3",
       "geckoId": null,
-      "mcap": 2278164174,
-      "priceUsd": 0.4678,
-      "liquidityUsd": 1759403.9,
+      "mcap": 2296061753,
+      "priceUsd": 0.4715,
+      "liquidityUsd": 1789174.51,
       "decimals": 9,
       "initialSupply": 0,
       "currentSupply": 0,
@@ -97,7 +97,7 @@
       "hasBuyback": true,
       "hasBurn": false,
       "cumulativeHoldersRevUsd": 6925433,
-      "checkedAt": 1791399906537
+      "checkedAt": 1791422898551
     },
     "portal": {
       "hasToken": true,
@@ -122,26 +122,8 @@
       "checkedAt": 1791399906537
     },
     "haedal-protocol": {
-      "hasToken": true,
-      "slug": "haedal-protocol",
-      "name": "Haedal Protocol",
-      "symbol": "HAEDAL",
-      "chain": "sui",
-      "addressChain": "sui",
-      "contractAddress": "0x3a304c7feba2d819ea57c3542d68439ca2c386ba02159c740f7b406e592c62ea::haedal::HAEDAL",
-      "geckoId": null,
-      "mcap": 3644289,
-      "priceUsd": 0.01868,
-      "liquidityUsd": 612182.81,
-      "decimals": 9,
-      "initialSupply": 0,
-      "currentSupply": 0,
-      "burnedTokens": 0,
-      "burnedPctOfMax": 0,
-      "hasBuyback": false,
-      "hasBurn": false,
-      "cumulativeHoldersRevUsd": 0,
-      "checkedAt": 1791399906537
+      "hasToken": false,
+      "checkedAt": 1791422898551
     },
     "volo-vault": {
       "hasToken": true,
@@ -152,9 +134,9 @@
       "addressChain": "sui",
       "contractAddress": "0xa99b8952d4f7d947ea77fe0ecdcc9e5fc0bcab2841d6e2a5aa00c3044e5544b5::navx::NAVX",
       "geckoId": null,
-      "mcap": 959247,
-      "priceUsd": 0.01296,
-      "liquidityUsd": 243354.53,
+      "mcap": 978463,
+      "priceUsd": 0.01322,
+      "liquidityUsd": 247419.48,
       "decimals": 9,
       "initialSupply": 0,
       "currentSupply": 0,
@@ -163,15 +145,15 @@
       "hasBuyback": false,
       "hasBurn": false,
       "cumulativeHoldersRevUsd": 0,
-      "checkedAt": 1791399906537
+      "checkedAt": 1791422898551
     },
     "springsui-ecosystem": {
       "hasToken": false,
-      "checkedAt": 1791399906537
+      "checkedAt": 1791422898551
     },
     "springsui": {
       "hasToken": false,
-      "checkedAt": 1791399906537
+      "checkedAt": 1791422898551
     },
     "alphafi-stsui": {
       "hasToken": true,
@@ -193,7 +175,7 @@
       "hasBuyback": false,
       "hasBurn": false,
       "cumulativeHoldersRevUsd": 0,
-      "checkedAt": 1791399906537
+      "checkedAt": 1791422898551
     },
     "flowx-v3": {
       "hasToken": true,
@@ -237,15 +219,15 @@
       "hasBuyback": false,
       "hasBurn": false,
       "cumulativeHoldersRevUsd": 0,
-      "checkedAt": 1791399906537
+      "checkedAt": 1791422898551
     },
     "magma": {
       "hasToken": false,
-      "checkedAt": 1791399906537
+      "checkedAt": 1791422898551
     },
     "mayan-dex-aggregator": {
       "hasToken": false,
-      "checkedAt": 1791399906537
+      "checkedAt": 1791422898551
     },
     "zo-perps": {
       "hasToken": false,
@@ -260,9 +242,9 @@
       "addressChain": "sui",
       "contractAddress": "0x35169bc93e1fddfcf3a82a9eae726d349689ed59e4b065369af8789fe59f8608::mmt::MMT",
       "geckoId": "momentum-3",
-      "mcap": 34640224,
-      "priceUsd": 0.1697,
-      "liquidityUsd": 148275.8,
+      "mcap": 36281999,
+      "priceUsd": 0.1777,
+      "liquidityUsd": 152675.43,
       "decimals": 9,
       "initialSupply": 1000000000,
       "currentSupply": 984999999,
@@ -271,7 +253,7 @@
       "hasBuyback": false,
       "hasBurn": true,
       "cumulativeHoldersRevUsd": 0,
-      "checkedAt": 1791399906537
+      "checkedAt": 1791422898551
     },
     "kaio": {
       "hasToken": true,
@@ -293,11 +275,11 @@
       "hasBuyback": false,
       "hasBurn": false,
       "cumulativeHoldersRevUsd": 0,
-      "checkedAt": 1791399906537
+      "checkedAt": 1791422898551
     },
     "dipcoin-spot": {
       "hasToken": false,
-      "checkedAt": 1791399906537
+      "checkedAt": 1791422898551
     },
     "full-sail": {
       "hasToken": true,
@@ -330,9 +312,9 @@
       "addressChain": "sui",
       "contractAddress": "0x356a26eb9e012a68958082340d4c4116e7f55615cf27affcff209cf0ae544f59::wal::WAL",
       "geckoId": "walrus-2",
-      "mcap": 94164277,
-      "priceUsd": 0.03672,
-      "liquidityUsd": 201583.01,
+      "mcap": 93345785,
+      "priceUsd": 0.0364,
+      "liquidityUsd": 210512.38,
       "decimals": 9,
       "initialSupply": 0,
       "currentSupply": 0,
@@ -341,15 +323,15 @@
       "hasBuyback": false,
       "hasBurn": false,
       "cumulativeHoldersRevUsd": 0,
-      "checkedAt": 1791399906537
+      "checkedAt": 1791422898551
     },
     "ember-protocol": {
       "hasToken": false,
-      "checkedAt": 1790373448800
+      "checkedAt": 1791422898551
     },
     "bucket-protocol-v2": {
       "hasToken": false,
-      "checkedAt": 1791399906537
+      "checkedAt": 1791422898551
     },
     "dipcoin-perps": {
       "hasToken": false,
@@ -364,18 +346,18 @@
       "addressChain": "sui",
       "contractAddress": "0x6864a6f921804860930db6ddbe2e16acdf8504495ea7481637a1c8b9a8fe54b::cetus::CETUS",
       "geckoId": null,
-      "mcap": 29601600,
-      "priceUsd": 0.0296,
-      "liquidityUsd": 1119.87,
+      "mcap": 26017728,
+      "priceUsd": 0.02601,
+      "liquidityUsd": 997.09,
       "decimals": 9,
-      "initialSupply": 1000000000,
-      "currentSupply": 1000000000,
+      "initialSupply": 0,
+      "currentSupply": 0,
       "burnedTokens": 0,
       "burnedPctOfMax": 0,
       "hasBuyback": false,
       "hasBurn": false,
       "cumulativeHoldersRevUsd": 0,
-      "checkedAt": 1790373448800
+      "checkedAt": 1791422898551
     },
     "volo-lst": {
       "hasToken": true,
@@ -386,18 +368,18 @@
       "addressChain": "sui",
       "contractAddress": "0xa99b8952d4f7d947ea77fe0ecdcc9e5fc0bcab2841d6e2a5aa00c3044e5544b5::navx::NAVX",
       "geckoId": null,
-      "mcap": 912769,
-      "priceUsd": 0.01233,
-      "liquidityUsd": 236755.91,
+      "mcap": 978463,
+      "priceUsd": 0.01322,
+      "liquidityUsd": 247419.48,
       "decimals": 9,
-      "initialSupply": 1000000000,
-      "currentSupply": 1000000000,
+      "initialSupply": 0,
+      "currentSupply": 0,
       "burnedTokens": 0,
       "burnedPctOfMax": 0,
       "hasBuyback": false,
       "hasBurn": false,
       "cumulativeHoldersRevUsd": 0,
-      "checkedAt": 1790373448800
+      "checkedAt": 1791422898551
     },
     "astros-perp": {
       "hasToken": false,
@@ -5078,6 +5060,276 @@
       "hasBurn": false,
       "cumulativeHoldersRevUsd": 0,
       "checkedAt": 1791409116410
+    },
+    "gmx-solana": {
+      "hasToken": false,
+      "checkedAt": 1791422937529
+    },
+    "edgex-v2": {
+      "hasToken": true,
+      "slug": "edgex-v2",
+      "name": "edgeX V2",
+      "symbol": "EDGE",
+      "chain": "base",
+      "addressChain": "base",
+      "contractAddress": "0xb0076de78dc50581770bba1d211ddc0ad4f2a241",
+      "geckoId": null,
+      "mcap": 352464505,
+      "priceUsd": 0.3706,
+      "liquidityUsd": 5629.38,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": false,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 0,
+      "checkedAt": 1791422937529
+    },
+    "pharaoh-dlmm": {
+      "hasToken": true,
+      "slug": "pharaoh-dlmm",
+      "name": "Pharaoh DLMM",
+      "symbol": "PHAR",
+      "chain": "base",
+      "addressChain": "avax",
+      "contractAddress": "0x13A466998Ce03Db73aBc2d4DF3bBD845Ed1f28E7",
+      "geckoId": null,
+      "mcap": 61334853,
+      "priceUsd": 0.1148,
+      "liquidityUsd": 738935.76,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": true,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 2823606,
+      "checkedAt": 1791422937529
+    },
+    "jupiter-perpetual-exchange": {
+      "hasToken": true,
+      "slug": "jupiter-perpetual-exchange",
+      "name": "Jupiter Perpetual Exchange",
+      "symbol": "JUP",
+      "chain": "base",
+      "addressChain": "solana",
+      "contractAddress": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+      "geckoId": null,
+      "mcap": 1220135873,
+      "priceUsd": 0.3675,
+      "liquidityUsd": 2331458.86,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": true,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 58046957,
+      "checkedAt": 1791422937529
+    },
+    "venice": {
+      "hasToken": true,
+      "slug": "venice",
+      "name": "Venice",
+      "symbol": "VVV",
+      "chain": "base",
+      "addressChain": "base",
+      "contractAddress": "0xacfe6019ed1a7dc6f7b508c02d1b04ec88cc21bf",
+      "geckoId": "venice-token",
+      "mcap": 1245807136,
+      "priceUsd": 25.63,
+      "liquidityUsd": 17195127.32,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": false,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 0,
+      "checkedAt": 1791422937529
+    },
+    "usd-ai": {
+      "hasToken": true,
+      "slug": "usd-ai",
+      "name": "USD AI",
+      "symbol": "CHIP",
+      "chain": "base",
+      "addressChain": "arbitrum",
+      "contractAddress": "0x0c1c1c109fe34733fca54b82d7b46b75cfb71f6e",
+      "geckoId": "chip-2",
+      "mcap": 103742541,
+      "priceUsd": 0.05187,
+      "liquidityUsd": 110177.69,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": false,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 0,
+      "checkedAt": 1791422937529
+    },
+    "hyperliquid-spot-orderbook": {
+      "hasToken": true,
+      "slug": "hyperliquid-spot-orderbook",
+      "name": "Hyperliquid Spot Orderbook",
+      "symbol": "HYPE",
+      "chain": "base",
+      "addressChain": "hyperliquid",
+      "contractAddress": "0x0d01dc56dcaaca66ad901c959b4011ec",
+      "geckoId": null,
+      "mcap": 29633434676,
+      "priceUsd": 88.74,
+      "liquidityUsd": 0,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": true,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 52337891,
+      "checkedAt": 1791422937529
+    },
+    "pharaoh-v3": {
+      "hasToken": false,
+      "checkedAt": 1791422937529
+    },
+    "fake-world-assets-v2": {
+      "hasToken": false,
+      "checkedAt": 1791422937529
+    },
+    "trust-wallet-perps": {
+      "hasToken": true,
+      "slug": "trust-wallet-perps",
+      "name": "Trust Wallet Perps",
+      "symbol": "TWT",
+      "chain": "base",
+      "addressChain": "bsc",
+      "contractAddress": "0x4b0f1812e5df2a09796481ff14017e6005508003",
+      "geckoId": null,
+      "mcap": 227158520,
+      "priceUsd": 0.5452,
+      "liquidityUsd": 579673.82,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": false,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 0,
+      "checkedAt": 1791422937529
+    },
+    "orca-dex": {
+      "hasToken": true,
+      "slug": "orca-dex",
+      "name": "Orca DEX",
+      "symbol": "ORCA",
+      "chain": "base",
+      "addressChain": "solana",
+      "contractAddress": "orcaEKTdK7LKz57vaAYr9QeNsVEPfiu6QeMU1kektZE",
+      "geckoId": null,
+      "mcap": 177160219,
+      "priceUsd": 2.91,
+      "liquidityUsd": 1600275.59,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": true,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 5292591,
+      "checkedAt": 1791422937529
+    },
+    "meteora-dynamic-bonding-curve": {
+      "hasToken": true,
+      "slug": "meteora-dynamic-bonding-curve",
+      "name": "Meteora Dynamic Bonding Curve",
+      "symbol": "MET",
+      "chain": "base",
+      "addressChain": "solana",
+      "contractAddress": "METvsvVRapdj9cFLzq4Tr43xK4tAjQfwX76z3n6mWQL",
+      "geckoId": null,
+      "mcap": 253831028,
+      "priceUsd": 0.4551,
+      "liquidityUsd": 3615030.7,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": true,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 13675094,
+      "checkedAt": 1791422937529
+    },
+    "maple": {
+      "hasToken": false,
+      "checkedAt": 1791422937529
+    },
+    "geodnet": {
+      "hasToken": false,
+      "checkedAt": 1791422937529
+    },
+    "slvr": {
+      "hasToken": false,
+      "checkedAt": 1791422937529
+    },
+    "sundaeswap-v2": {
+      "hasToken": true,
+      "slug": "sundaeswap-v2",
+      "name": "SundaeSwap V2",
+      "symbol": "SUNDAE",
+      "chain": "base",
+      "addressChain": "cardano",
+      "contractAddress": "9a9693a9a37912a5097918f97918d15240c92ab729a0b7c4aa144d7753554e444145",
+      "geckoId": null,
+      "mcap": 1238203,
+      "priceUsd": 0.001125,
+      "liquidityUsd": 557589.59,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": true,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 64599,
+      "checkedAt": 1791422937529
+    },
+    "meteora-damm-v2": {
+      "hasToken": true,
+      "slug": "meteora-damm-v2",
+      "name": "Meteora DAMM V2",
+      "symbol": "MET",
+      "chain": "base",
+      "addressChain": "solana",
+      "contractAddress": "METvsvVRapdj9cFLzq4Tr43xK4tAjQfwX76z3n6mWQL",
+      "geckoId": null,
+      "mcap": 253831028,
+      "priceUsd": 0.4551,
+      "liquidityUsd": 3615030.7,
+      "decimals": 6,
+      "initialSupply": 0,
+      "currentSupply": 0,
+      "burnedTokens": 0,
+      "burnedPctOfMax": 0,
+      "hasBuyback": false,
+      "hasBurn": false,
+      "cumulativeHoldersRevUsd": 0,
+      "checkedAt": 1791422937529
+    },
+    "nest-cl": {
+      "hasToken": false,
+      "checkedAt": 1791422937529
     }
   }
 }
